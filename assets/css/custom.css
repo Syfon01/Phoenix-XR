@@ -1,0 +1,79 @@
+.header-link{
+    font-size: 16px!important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color:rgba(18, 38, 63, 1)!important ;
+}
+.nav-item.active{
+    border-bottom:2px solid #DB4C3F;
+}
+.nav-item.active .header-link{
+    font-weight: 700!important;
+}
+
+.btn-outline{
+    border: 2px solid rgba(110, 132, 163, 1)!important;
+    box-shadow: 0px 2px 2px 0px rgba(152, 162, 179, 0.15);
+}
+
+/* =====================================================
+Topography
+===================================================== */
+.p-14{
+    font-size: 14px;
+}
+.p-13{
+    font-size: 13px;
+}
+.text-gray-500{
+    color: #B1C2D9;
+}
+.text-gray-700{
+    color: #6E84A3;
+}
+.text-title{
+    color:rgb(18,38,63,1);
+}
+.subtitle{
+color: rgb(110,132,163,1);
+}
+.p-mar{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+
+
+.btn-primary-outline{
+    background-color: #fff!important;
+    border: 1px solid #DB4C3F!important;
+    color: #DB4C3F!important;
+    font-weight:700!important;
+}
+.btn-primary-outline:hover{
+    background-color: #DB4C3F!important;
+    border: 1px solid #fff!important;
+    color: #fff!important;
+    font-weight:700!important;
+}
+.self-service{
+    background: #f5f7fc;
+    border-top: 1px solid #E3EBF6;;
+}
+.btn-module{
+    border: 1px solid #E7E9F1!important;
+}
+.btn-module:hover{
+    border: 1px solid #DB4C3F!important;
+    color: #DB4C3F!important;
+}
+.btn-module .row .text-title:hover{
+    color: #DB4C3F!important;
+}
+
+
+.custom-border{
+
+}
