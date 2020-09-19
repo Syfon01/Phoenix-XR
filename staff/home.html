@@ -131,38 +131,38 @@
             </div>
             <div class="row mt-3">
               <div class="col-md-6 my-2">
-                <a href="/" class="btn btn-module bg-white rounded-pill d-block">
+                <button class="btn btn-module bg-white rounded-pill w-100">
                   <div class="row px-3 py-2">
                     <img src="../assets/img/leave.svg" alt="leave">
-                    <p class="mb-0 ml-3 mt-2 font-weight-bold text-title">Leave Application</p>
+                    <p class="mb-0 ml-3 mt-2 font-weight-bold text-title pr-5">Leave Application</p>
                   </div>
-                </a>
+                </button>
               </div>
               <div class="col-md-6 my-2">
-                <a href="/" class="btn btn-module bg-white rounded-pill d-block">
+                <button class="btn btn-module bg-white rounded-pill w-100">
                   <div class="row px-3 py-2">
                     <img src="../assets/img/ethics.svg" alt="ethics">
-                    <p class="mb-0 ml-3 mt-2 font-weight-bold text-title">Work Ethics</p>
+                    <p class="mb-0 ml-3 mt-2 font-weight-bold text-title pr-5">Work Ethics</p>
                   </div>
-                </a>
+                </button>
               </div>
             </div>
             <div class="row mt-2">
               <div class="col-md-6 my-2">
-                <a href="/" class="btn btn-module bg-white rounded-pill d-block">
+                <button class="btn btn-module bg-white rounded-pill w-100">
                   <div class="row px-3 py-2">
                     <img src="../assets/img/benefit.svg" alt="benefit">
-                    <p class="mb-0 ml-3 mt-2 font-weight-bold text-title">Benefits</p>
+                    <p class="mb-0 ml-3 mt-2 font-weight-bold text-title pr-5">Benefits</p>
                   </div>
-                </a>
+                </button>
               </div>
               <div class="col-md-6 my-2">
-                <a href="/" class="btn btn-module bg-white rounded-pill d-block">
+                <button class="btn btn-module bg-white rounded-pill w-100" data-toggle="modal" data-target="#exitModal">
                   <div class="row px-3 py-2">
                     <img src="../assets/img/exit.svg" alt="exit">
-                    <p class="mb-0 ml-3 mt-2 font-weight-bold text-title">Exit</p>
+                    <p class="mb-0 ml-3 mt-2 font-weight-bold text-title pr-5">Exit</p>
                   </div>
-                </a>
+                </button>
               </div>
             </div>
 
@@ -284,6 +284,28 @@
               
             </div>
           </div>
+  
+        <!-- Modal -->
+            <div class="modal fade" id="exitModal" tabindex="-1" role="dialog" aria-labelledby="exitModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <p class="p-14 font-weight-bold my-0" id="exitModalLabel">Warning</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <h5 class="font-weight-bold text-title">You are about to begin a process that terminates your employment with the bank upon approval</h5>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+   
         </div>
         
       </div>

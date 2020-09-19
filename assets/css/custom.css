@@ -85,5 +85,8 @@ color: rgb(110,132,163,1);
         margin-left: 0.5rem!important;
     }
 }
+.modal-sm{
+    max-width: 400px!important;
+}
 
 
