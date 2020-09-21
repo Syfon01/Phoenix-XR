@@ -132,6 +132,13 @@ color: rgb(110,132,163,1);
     .modal-sm{
         max-width: 450px!important;
     }
+    .mobile-margin.ml-auto{
+        margin-left: 0!important;
+        padding: 0!important;
+    }
+    .remove-pad{
+        padding: 0!important;
+    }
     
     
 }
