@@ -78,7 +78,7 @@ color: rgb(110,132,163,1);
     font-weight:700!important;
 }
 .secondary-bg{
-    background: #f5f7fc;
+    background: #FAFBFD;;
     border-top: 1px solid #E3EBF6;
     padding-bottom: 3rem;
 }
@@ -116,7 +116,7 @@ color: rgb(110,132,163,1);
         padding-bottom: 7px!important;
     }
     .secondary-bg{
-        background: #f5f7fc;
+        background: #FAFBFD;;
         border-top: 1px solid #E3EBF6;
         padding-bottom: 1rem;
     }
