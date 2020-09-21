@@ -79,7 +79,8 @@ color: rgb(110,132,163,1);
 }
 .secondary-bg{
     background: #f5f7fc;
-    border-top: 1px solid #E3EBF6;;
+    border-top: 1px solid #E3EBF6;
+    padding-bottom: 3rem;
 }
 .btn-module{
     border: 1px solid #E7E9F1!important;
@@ -114,6 +115,14 @@ color: rgb(110,132,163,1);
         padding-top: 8px!important;
         padding-bottom: 7px!important;
     }
+    .secondary-bg{
+        background: #f5f7fc;
+        border-top: 1px solid #E3EBF6;
+        padding-bottom: 1rem;
+    }
+    .footer{
+        display: block!important;
+    }
     
     
 }
@@ -122,4 +131,8 @@ color: rgb(110,132,163,1);
 }
 .avatar img{
     border:none!important;
-  }
+ }
+
+.footer{
+background-color: #000!important;
+}
