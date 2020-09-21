@@ -136,3 +136,6 @@ color: rgb(110,132,163,1);
 .footer{
 background-color: #000!important;
 }
+.avatar-online::after{
+    background-color: #DB4C3F!important;
+}
