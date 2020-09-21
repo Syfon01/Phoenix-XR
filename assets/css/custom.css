@@ -120,5 +120,6 @@ color: rgb(110,132,163,1);
 .modal-sm{
     max-width: 400px!important;
 }
-
-
+.avatar img{
+    border:none!important;
+  }
