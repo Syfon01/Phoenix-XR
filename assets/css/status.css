@@ -1,8 +1,14 @@
 .badge-warning{
   background: rgba(245, 167, 0, 1)!important;
+  font-weight: 700!important;
 }
 .border-b{
   border: 1px solid rgba(227, 235, 246, 1)
+}
+.badge.badge-resign{
+  background: rgba(172, 11, 108, 1);
+  color: #fff;
+  font-size: 14px!important;
 }
 @media (max-width: 575.98px) { 
   .upload-pad.mr-3{
