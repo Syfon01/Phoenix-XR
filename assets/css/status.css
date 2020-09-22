@@ -1,3 +1,12 @@
 .badge-warning{
   background: rgba(245, 167, 0, 1)!important;
 }
+.border-b{
+  border: 1px solid rgba(227, 235, 246, 1)
+}
+@media (max-width: 575.98px) { 
+  .upload-pad.mr-3{
+    margin-right: 0rem!important;
+  }
+}
+
