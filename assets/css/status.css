@@ -2,6 +2,11 @@
   background: rgba(245, 167, 0, 1)!important;
   font-weight: 700!important;
 }
+.badge-blue{
+  background: rgba(110, 132, 163, 0.1)!important;
+  font-weight: 700!important;
+  font-size: 14px!important;
+}
 .border-b{
   border: 1px solid rgba(227, 235, 246, 1)
 }
@@ -15,4 +20,28 @@
     margin-right: 0rem!important;
   }
 }
-
+.collapse-btn:hover{
+  cursor: pointer;
+}
+.panel-title>a, .panel-title>a:active{
+	display:block;
+	padding:15px;
+  color:#555;
+  font-size:16px;
+  font-weight:bold;
+	text-transform:uppercase;
+	letter-spacing:1px;
+  word-spacing:3px;
+	text-decoration:none;
+}
+.panel-heading  a:before {
+   font-family: 'Glyphicons Halflings';
+   content: "\e114";
+   float: right;
+   transition: all 0.5s;
+}
+.panel-heading.active a:before {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+} 
