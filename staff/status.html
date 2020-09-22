@@ -16,7 +16,7 @@
 
     <!-- Page CSS -->
     <link rel="stylesheet" href="../assets/css/custom.css">
-    <link rel="stylesheet" href="../assets/css/started.css">
+    <link rel="stylesheet" href="../assets/css/status.css">
     <link rel="stylesheet" href="../assets/css/dashforge.css">
     
   </head>
@@ -88,7 +88,7 @@
                       </div>
                     </div>
                   </div>
-                    <div class="details pd-x-30">
+                    <div class="details pd-x-30 d-none d-sm-none d-lg-block d-xl-block">
                       <div class="row pt-3">
                         <div class="col-2 pt-2">
                           <img src="../assets/img/icon/person.svg" alt="person">
@@ -129,90 +129,47 @@
                         </div>
                       </div>
                     </div>
-              </div>
             </div>
+          </div>
           <div class="col-md-8 col-lg-8 col-xl-8 col-12">
-            <div class="media-body">
-              <p class="p-14 font-weight-bold text-gray-700">Step 1 of 2</p>
-              <h3 class="font-weight-bold">Provide your details and upload the required files</h3>
-              <p>You are required to provide the following information below to initaite your exit process. All the information you provide will be confidential and used only for HR Evalutaion.</p>
-              <form class="my-4">
-                <div class="form-row">
-                  <div class="form-group col-md-6 col-12">
-                    <p class="p-14 font-weight-bold my-0">Your personal email address</p>
-                    <label for="email " class="p-12 text-gray-700 ">Your post-exit information will be send here, so ensure it works</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="">
-                  </div>
-                  <div class="form-group col-md-6 col-12">
-                    <p class="p-14 font-weight-bold my-0">Your personal email address</p>
-                    <label for="phone" class="p-12 text-gray-700">Your post-exit information will be send here, so ensure it works</label>
-                    <input type="text" class=" form-control" id="inputPassword4" placeholder="">
-                  </div>
+            <div class="media-body card p-3">
+              <h2><span class="align-top">Your exit request has been received</span> <span class="badge badge-warning">STATUS: PENDING</span></h2>
+              <p>Your application has been received and is undergoing processing. Find additional information below and the status.</p>
+              <div class="row px-4">
+                <div class="col-6 col-md-6 bd bd-r rounded-left py-3" type="button">
+                  <label for="employee-id" class="p-14 my-0 text-title">Your effective exit date <img src="../assets/img/icon/info.svg" data-toggle="tooltip" data-placement="top" title="This is the last day you would officially work
+                    for the bank (last day at work)">                 
+                  </label>
+                  <h5 class="font-weight-bold">5th Dec, 2020</h5>
                 </div>
-                <div class="form-row">
-                  <div class="form-group col-md-6 col-12">
-                    <p class="p-14 font-weight-bold my-0">Effective exit date</p>
-                    <label for="exit-date " class="p-12 text-gray-700 ">Is the next working day after your last day at work when you stop being a staff of the bank.(the day stop coming to work)</label>
-                    <input type="date" class="form-control" id="inputEmail4" placeholder="">
-                  </div>
-                  <div class="form-group col-md-6 col-12">
-                    <p class="p-14 font-weight-bold my-0">Last working date</p>
-                    <label for="last-date" class="p-12 text-gray-700">Is the last day you would officially work for the bank (last day at work)</label>
-                    <input type="date" class=" form-control" id="inputPassword4" placeholder="">
-                  </div>
+                <div class="col-6 col-md bd rounded-right py-3">
+                  <label for="employee-id" class="p-14 my-0 text-title">Your last working date <img src="../assets/img/icon/info.svg" data-toggle="tooltip" data-placement="top" title="This is the last day you would officially work
+                    for the bank (last day at work)"></label>
+                  <h5 class="font-weight-bold">5th Dec, 2020</h5>
                 </div>
-                <div class="form-group">
-                  <p class="p-14 font-weight-bold my-0">Upload handover note</p>
-                  <label for="last-date" class="p-12 text-gray-700">Please use a pdf or image no larger than 1MB</label>
-                  <form action="" class="form-drop">
-                    <div class="drop-zone pd-20">
-                      <div class="cell"> 
-                        <div class="drop-zone__prompt">
-                          <p class="p-14 my-0 text-gray-700">Drag and drop or click to upload</p>
-                        </div>
-                        <input type="file" name="myFile" class="drop-zone__input">
-                      </div>
-                    </div>
-                  </form>
+              </div>
+              <div>
+                <p class="font-weight-bold mt-4">Here are list of things we are checking to process your exit request.</p>
+                <div class="d-flex justify-content-between">
+                  <p class="p-14 mb-0">Request received</p>
+                  <p class="p-14 mb-0">Checked <img src="../assets/img/icon/Check.svg" alt=""></p>
                 </div>
-
-                <div class="form-group">
-                  <p class="p-14 font-weight-bold my-0">Upload resignation letter</p>
-                  <label for="last-date" class="p-12 text-gray-700">Please use a pdf or image no larger than 1MB</label>
-                  <form action="" class="form-drop">
-                    <div class="drop-zone pd-20">
-                      <div class="cell"> 
-                        <div class="drop-zone__prompt">
-                          <p class="p-14 my-0 text-gray-700">Drag and drop or click to upload</p>
-                        </div>
-                        <input type="file" name="myFile" class="drop-zone__input">
-                      </div>
-                    </div>
-                  </form>
+                <hr class="my-3"/>
+                <div class="d-flex justify-content-between">
+                  <p class="p-14 mb-0">Assets handover completed</p>
+                  <p class="p-14 mb-0">Pending <img src="../assets/img/icon/pending.svg" alt=""></p>
                 </div>
-
-                <div class="form-group pb-5">
-                  <p class="p-14 font-weight-bold my-0">Additional uploads</p>
-                  <label for="last-date" class="p-12 text-gray-700">Please use a pdf or image no larger than 1MB</label>
-                  <form action="" class="form-drop">
-                    <div class="drop-zone pd-20">
-                      <div class="cell"> 
-                        <div class="drop-zone__prompt">
-                          <p class="p-14 my-0 text-gray-700">Drag and drop or click to upload</p>
-                        </div>
-                        <input type="file" name="myFile" class="drop-zone__input">
-                      </div>
-                    </div>
-                  </form>
+                <hr class="my-3"/>
+                <div class="d-flex justify-content-between">
+                  <p class="p-14 mb-0">Clearance processed</p>
+                  <p class="p-14 mb-0">Pending <img src="../assets/img/icon/pending.svg" alt=""></p>
                 </div>
-              </form>
-            </div>
-            <hr class="mt-5"/>
-            <div class="d-flex justify-content-between">
-              <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
-              <div class="p-14 font-weight-bold text-gray-700 mb-0 pt-2">Step 1 of 2</div>
-              <a href="/staff/started2.html" type="button" class="btn btn-primary">Contine</a>
-            </div>
+                <hr class="my-3"/>
+                <div class="d-flex justify-content-between">
+                  <p class="p-14 mb-0">Exit letters issued</p>
+                  <p class="p-14 mb-0">Pending <img src="../assets/img/icon/pending.svg" alt=""></p>
+                </div>
+              </div>
           </div>
         </div>
       </div>
@@ -232,6 +189,11 @@
     <script src="../assets/js/dashforge.settings.js"></script>
     <script src="../assets/js/drop.js"></script>
     <script src="../assets/js/dropzone.js"></script>
+    <script>
+      $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+          })
+    </script>
 
 
   </body>
