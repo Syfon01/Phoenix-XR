@@ -7,7 +7,7 @@ body { -webkit-font-smoothing: antialiased; }
 
 .sidebar-fix {
   /* height: 100%; */
-  width: 21.5rem;
+  width: 21.0rem;
   position: fixed!important;
   z-index: 1;
   top: 0;
@@ -16,6 +16,20 @@ body { -webkit-font-smoothing: antialiased; }
   overflow: hidden;
   margin-top: 8.25rem;
 }
+
+@media (max-width: 1025px) {
+  .sidebar-fix {
+    width: 19rem;
+    position: fixed!important;
+    z-index: 1;
+    top: 0;
+    left: auto !important;
+    right: inherit !important;
+    overflow: hidden;
+    padding-top: 6.25rem;
+  }
+}
+
 
 @media (max-width: 768px) {
   .sidebar-fix {
