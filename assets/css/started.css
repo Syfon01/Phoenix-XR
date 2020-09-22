@@ -1,4 +1,10 @@
 
+*{
+-webkit-font-smoothing: antialiased !important;
+-moz-osx-font-smoothing: grayscale !important;
+}
+body { -webkit-font-smoothing: antialiased; }
+
 .sidebar-fix {
   /* height: 100%; */
   width: 21.5rem;
@@ -111,4 +117,7 @@
 }
 .form-drop{
   height: 100%;
+}
+.bg-warningg{
+  background: rgba(249, 242, 227, 1)!important;
 }

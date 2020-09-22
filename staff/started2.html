@@ -88,7 +88,7 @@
                       </div>
                     </div>
                   </div>
-                    <div class="details pd-x-30">
+                    <div class="details pd-x-30 d-none d-sm-none d-lg-block d-xl-block">
                       <div class="row pt-3">
                         <div class="col-2 pt-2">
                           <img src="../assets/img/icon/person.svg" alt="person">
@@ -200,10 +200,6 @@
                       <input type="checkbox" class="custom-control-input" id="dissactisfaction-work">
                       <label class="custom-control-label p-14" for="dissactisfaction-work">Dissatisfaction with work environments</label>
                     </div>
-                    <div class="custom-control custom-checkbox py-1">
-                      <input type="checkbox" class="custom-control-input" id="others" checked>
-                      <label class="custom-control-label p-14" for="others">Others</label>
-                    </div>
                   </div>
                   <div class="col-md-6 col-12">
                     <div class="custom-control custom-checkbox py-1">
@@ -236,7 +232,10 @@
                     </div>
                   </div>
                 </div>
-
+                <div class="custom-control custom-checkbox py-1">
+                  <input type="checkbox" class="custom-control-input" id="others" checked>
+                  <label class="custom-control-label p-14" for="others">Others</label>
+                </div>
                 <textarea class="form-control col-md-10 col-12 mt-2" rows="2" placeholder="Enter here"></textarea>
               </form>
               </div>
@@ -244,12 +243,54 @@
 
               <div>
                 <p class="font-weight-bold mb-0 mt-4">Have you secured another job?</p>
+                <div class="row">
+                  <div class="col-md-1 col-3 mt-3">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                      <label class="custom-control-label" for="customRadio1">Yes</label>
+                    </div>  
+                  </div>
+                  <div class="col-md-2 col-3 mt-3">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadio2">No</label>
+                    </div>
+                  </div>                
+                </div>
+
+                <form class="my-4">
+                  <div class="form-row">
+                    <div class="form-group col-md-6 col-12">
+                      <label for="employer " class="p-14 font-weight-bold my-0">Name of employer</label>
+                      <input type="text" class="form-control" id="employer" placeholder="Name of employer">
+                    </div>
+                    <div class="form-group col-md-6 col-12">
+                      <label for="title " class="p-14 font-weight-bold my-0">Job title</label>
+                      <input type="text" class=" form-control" id="title" placeholder="Job title">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6 col-12">
+                      <label for="location " class="p-14 font-weight-bold my-0">Location</label>
+                      <input type="text" class="form-control" id="location" placeholder="Location">
+                    </div>
+                    <div class="form-group col-md-6 col-12">
+                      <label for="employer " class="p-14 font-weight-bold my-0">Pay</label>
+                      <input type="text" class=" form-control" id="pay" placeholder="Pay">
+                    </div>
+                  </div>
+                </form>
+
+                <div class="bg-warningg p-3 rounded">
+                  <h5 class="font-weight-bold"><img src="../assets/img/icon/alert.svg" class="mr-1 pd-b-4"/> Warning</h5>
+                  <p>Once you submit this request and it is approved by the exit team, it cannot be reverted.</p>
+                </div>
               </div>
             </div>
             <hr class="mt-5"/>
             <div class="d-flex justify-content-between">
               <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
-              <div class="p-14 font-weight-bold text-gray-700 mb-0 pt-2">Step 1 of 2</div>
+              <div class="p-14 font-weight-bold text-gray-700 mb-0 pt-2">Step 2 of 2</div>
               <a href="/staff/started2.html" type="button" class="btn btn-primary">Contine</a>
             </div>
           </div>
