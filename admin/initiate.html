@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Exit Module</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/dashforge.css">
+
+    
+
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-7000">Exit Admin</p>
+            </div>
+          </div>
+          
+          <div class="collapse" id="loggedinMenu">
+            <ul class="nav nav-aside mg-b-0">
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="edit"></i> <span>Edit Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="user"></i> <span>View Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="settings"></i> <span>Account Settings</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="help-circle"></i> <span>Help Center</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="log-out"></i> <span>Sign Out</span></a></li>
+            </ul>
+          </div>
+        </div><!-- aside-loggedin -->
+        <ul class="nav nav-aside">
+         
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link p-14"><i data-feather="log-out"></i> <span>Exit Management</span></a>
+            <ul>
+              <li><a href="" class="nav-inner">New Exits</a></li>
+              <li><a href="" class="nav-inner">Completed Exits</a></li>
+              <li><a href=""class="nav-inner">Initiate Exits</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item p-14"><a href="" class="nav-link text-gray-700"><i data-feather="settings"></i> <span>Settings & Templates</span></a></li>
+          <li class="nav-item p-14"><a href="" class="nav-link text-gray-700"><i data-feather="layers"></i> <span>Process logs</span></a></li>
+          <li class="nav-item p-14"><a href="" class="nav-link text-gray-700"><img src="../assets/img/icon/Reports.svg" class="pd-r-15"/> <span>Reports</span></a></li>
+        
+        </ul>
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <div class="col-lg-10 col-xl-8 mx-auto col-12 col-md-12">
+            <div class="d-flex justify-content-between mt-5">
+              <h2 class="tx-bold">Exit management</h2>
+              <div>
+                <a href="" class="btn btn-outline">Cancel process</a>
+              </div>
+            </div>
+            <hr/>
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6 col-12 mt-3">
+                  <label class="p-14 font-weight-bold my-0" for="initiating">Main reason for initiating</label>
+                  <select class="custom-select">
+                    <option selected></option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6 col-12 mt-3">
+                  <label class="p-14 font-weight-bold my-0" for="sub-reason">Sub reason</label>
+                  <select class="custom-select">
+                    <option selected></option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6 col-12 mt-3">
+                  <label class="p-14 font-weight-bold my-0" for="initiating">Source of initiation</label>
+                  <select class="custom-select">
+                    <option selected></option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6 col-12 mt-3">
+                  <label class="p-14 font-weight-bold my-0" for="sub-reason">Sub reason</label>
+                  <input type="date" class="form-control">
+                </div>
+              </div>
+              <hr/>  
+              <div class="form-group">
+                <p class="p-14 font-weight-bold my-0">Add affected employee(s)</p>
+                <label for="csv" class="p-12 ">Upload CSV containing employees or enter employee IDs
+                </label>
+                <div class="form-drop">
+                  <div class="drop-zone pd-20">
+                    <div class="cell"> 
+                      <div class="drop-zone__prompt">
+                        <p class="p-14 my-0 text-gray-700">Drag and drop or click to upload csv</p>
+                      </div>
+                      <input type="file" name="myFile" class="drop-zone__input">
+                    </div>
+                  </div>
+                </div>
+                <p class="text-center mb-0 py-2">or</p>
+                <input type="text" class="form-control" placeholder="Type an employee’s ID here">
+              </div>
+            </form>
+
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <p class="p-14">Employees added</p>
+                  <p class="btn btn-head py-1">4 added</p>
+                </div>
+                <div class="d-flex justify-content-between bd-b py-1">
+                 <div class="row pl-3">
+                 <div class="avatar avatar-xs mr-2"><img src="../assets/img/team1.png" class="rounded-circle" alt=""></div>
+                   <p class="p-14 mb-0 pt-1">Bada Dafe</p>
+                 </div> 
+                  <p class="text-right p-14 mb-0 pt-1"> <i data-feather="x" class="x-btn mr-2"></i>Remove</p>
+                </div>
+                <div class="d-flex justify-content-between bd-b py-1">
+                  <div class="row pl-3">
+                  <div class="avatar avatar-xs mr-2"><img src="../assets/img/team2.png" class="rounded-circle" alt=""></div>
+                    <p class="p-14 mb-0 pt-1">Bada Dafe</p>
+                  </div> 
+                   <p class="text-right p-14 mb-0 pt-1"> <i data-feather="x" class="x-btn mr-2"></i>Remove</p>
+                 </div>
+                 <div class="d-flex justify-content-between bd-b py-1">
+                  <div class="row pl-3">
+                  <div class="avatar avatar-xs mr-2"><img src="../assets/img/team3.png" class="rounded-circle" alt=""></div>
+                    <p class="p-14 mb-0 pt-1">Bada Dafe</p>
+                  </div> 
+                   <p class="text-right p-14 mb-0 pt-1"> <i data-feather="x" class="x-btn mr-2"></i>Remove</p>
+                 </div>
+                 <div class="d-flex justify-content-between py-1">
+                  <div class="row pl-3">
+                  <div class="avatar avatar-xs mr-2"><img src="../assets/img/team4.png" class="rounded-circle" alt=""></div>
+                    <p class="p-14 mb-0 pt-1">Bada Dafe</p>
+                  </div> 
+                   <p class="text-right p-14 mb-0 pt-1"> <i data-feather="x" class="x-btn mr-2"></i>Remove</p>
+                 </div> 
+                </div>
+              </div>
+              <hr/>
+              <div class="form-group mt-5">
+                <p class="p-14 font-weight-bold my-0">Upload proof of exit request</p>
+                <label for="csv" class="p-12 ">Please use a pdf or image no larger than 1mb
+                </label>
+                <div class="form-drop">
+                  <div class="drop-zone pd-20">
+                    <div class="cell"> 
+                      <div class="drop-zone__prompt">
+                        <p class="p-14 my-0 text-gray-700">Drag and drop or click to upload csv</p>
+                      </div>
+                      <input type="file" name="myFile" class="drop-zone__input">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group py-3">
+                <div class="d-flex justify-content-between">
+                  <label for="" class="p-14 font-weight-bold mb-0">Additional comments</label>
+                  <label for="" class="text-gray-700 p-12 mb-0">Optional</label>
+                </div>
+                <textarea name="" id="" rows="4" class="form-control"></textarea>
+              </div>
+
+              <hr class="mt-5"/>             
+              <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel process</button>
+                <a href="/staff/started2.html" type="button" class="btn btn-primary">Submit for processing</a>
+              </div>
+
+            </div>
+            
+          </div>         
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/js/dashforge.aside.js"></script>
+    <script src="../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../assets/js/dashforge.settings.js"></script>
+    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="../assets/js/drop.js"></script>
+    <script src="../assets/js/dropzone.js"></script>
+    <script>
+      $('#tableData,#completed').DataTable({
+        responsive: true,
+        language: {
+          searchPlaceholder: 'Search...',
+          sSearch: '',
+          lengthMenu: '_MENU_ items/page',
+        }
+      });
+    </script>
+
+  </body>
+</html>
