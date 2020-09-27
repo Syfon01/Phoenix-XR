@@ -116,3 +116,37 @@
 .nav-aside svg{
   color: #6E84A3!important;
 }
+.btn-review{
+    background: rgba(227, 235, 246, 1)!important;
+}
+.btn-pending{
+    background: rgba(245, 167, 0, 1)!important;
+}
+.btn-cleared{
+    background: rgba(6, 95, 212, 1)!important;
+    color: #fff!important;
+}
+.btn-completed{
+    background: rgba(1, 125, 115, 1)!important;
+    color: #fff!important;
+}
+.table tbody th{
+font-weight: 400!important;
+}
+.nav-link.active{
+    color: #000!important;
+    font-weight: 700!important;
+}
+.nav-link.active.bg{
+    background-color: #DB4C3F!important;
+    font-weight: 700!important;
+}
+.table{
+    width:100%!important;
+}
+
+@media (min-width: 1460px){
+    .container{
+        max-width: 1380px!important;
+    }
+}
