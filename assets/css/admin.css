@@ -217,4 +217,8 @@ font-weight: 400!important;
     font-weight: 700!important;
     font-size: 14px!important;
   }
-  
+.badge-green{
+    background: rgba(1, 125, 115, 1)!important;
+    font-weight: 700!important;
+    color:white!important;
+}  
