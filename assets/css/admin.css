@@ -203,3 +203,18 @@ font-weight: 400!important;
   .btn-head{
     background: rgba(110, 132, 163, 0.1)!important;
   }
+  .badge.badge-resign{
+    background: rgba(172, 11, 108, 1);
+    color: #fff;
+    font-size: 14px!important;
+  }
+  .badge-warning{
+    background: rgba(245, 167, 0, 1)!important;
+    font-weight: 700!important;
+  }
+  .badge-blue{
+    background: rgba(110, 132, 163, 0.1)!important;
+    font-weight: 700!important;
+    font-size: 14px!important;
+  }
+  
