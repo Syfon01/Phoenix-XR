@@ -87,10 +87,10 @@
           </div>
         </div>
       </div>
-
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
           <div class="">
+            <a href="" onclick="history.go(-1)" class="btn btn-back p-10 font-weight-bold mb-0"><i class="fas fa-arrow-left mr-2"></i>GO BACK</a>
             <h2><span class="align-top">Exit Request: James Yuri</span> <span class="badge badge-resign pd-y-5 p-14 text-uppercase font-weight-bold">Termination</span></h2>
             <hr/>
           </div>
@@ -422,6 +422,20 @@
 
     <script src="../assets/js/drop.js"></script>
     <script src="../assets/js/dropzone.js"></script>
-    
+    <script>
+      $(document).ready(function(){
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.show").each(function(){
+          $(this).prev(".card-header").find(".fas").addClass("fa-angle-up").removeClass("fa-angle-down");
+        });
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+          $(this).prev(".card-header").find(".fas").removeClass("fa-angle-down").addClass("fa-angle-up");
+        }).on('hide.bs.collapse', function(){
+          $(this).prev(".card-header").find(".fas").removeClass("fa-angle-up").addClass("fa-angle-down");
+        });
+      });
+      </script>
+
   </body>
 </html>

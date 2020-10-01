@@ -10,6 +10,12 @@
       box-shadow: 0px 2px 2px 0px rgba(152, 162, 179, 0.15);
       font-weight: 700!important;
   }
+  .btn-back{
+    font-size:10px!important;
+    padding: 0rem!important;
+    border: 0;
+    color:#000!important;
+  }
   .btn-outline-dark{
       border: 1px solid #fff!important;
       box-shadow: 0px 2px 2px 0px rgba(152, 162, 179, 0.15);
