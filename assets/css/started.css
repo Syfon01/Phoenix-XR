@@ -54,3 +54,8 @@ body { -webkit-font-smoothing: antialiased; }
 .bg-warningg{
   background: rgba(249, 242, 227, 1)!important;
 }
+.wizard > .content > .title{
+  color:#6E84A3!important;
+  font-weight: 400!important;
+  font-size: 14px!important;
+}

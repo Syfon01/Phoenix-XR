@@ -132,87 +132,276 @@
               </div>
             </div>
           <div class="col-md-8 col-lg-8 col-xl-8 col-12">
-            <div class="media-body">
-              <p class="p-14 font-weight-bold text-gray-700">Step 1 of 2</p>
-              <h3 class="font-weight-bold">Provide your details and upload the required files</h3>
-              <p>You are required to provide the following information below to initaite your exit process. All the information you provide will be confidential and used only for HR Evalutaion.</p>
-              <form class="my-4">
-                <div class="form-row">
-                  <div class="form-group col-md-6 col-12">
-                    <p class="p-14 font-weight-bold my-0">Your personal email address</p>
-                    <label for="email " class="p-12 text-gray-700 ">Your post-exit information will be send here, so ensure it works</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="">
-                  </div>
-                  <div class="form-group col-md-6 col-12">
-                    <p class="p-14 font-weight-bold my-0">Your personal email address</p>
-                    <label for="phone" class="p-12 text-gray-700">Your post-exit information will be send here, so ensure it works</label>
-                    <input type="text" class=" form-control" id="inputPassword4" placeholder="">
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-group col-md-6 col-12">
-                    <p class="p-14 font-weight-bold my-0">Effective exit date</p>
-                    <label for="exit-date " class="p-12 text-gray-700 ">Is the next working day after your last day at work when you stop being a staff of the bank.(the day stop coming to work)</label>
-                    <input type="date" class="form-control" id="inputEmail4" placeholder="">
-                  </div>
-                  <div class="form-group col-md-6 col-12">
-                    <p class="p-14 font-weight-bold my-0">Last working date</p>
-                    <label for="last-date" class="p-12 text-gray-700">Is the last day you would officially work for the bank (last day at work)</label>
-                    <input type="date" class=" form-control" id="inputPassword4" placeholder="">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <p class="p-14 font-weight-bold my-0">Upload handover note</p>
-                  <label for="last-date" class="p-12 text-gray-700">Please use a pdf or image no larger than 1MB</label>
-                  <form action="" class="form-drop">
-                    <div class="drop-zone pd-20">
-                      <div class="cell"> 
-                        <div class="drop-zone__prompt">
-                          <p class="p-14 my-0 text-gray-700">Drag and drop or click to upload</p>
+            <div id="wizard1">
+              <h5 class="p-14 font-weight-bold text-gray-700">Step 1 of 2</h5>
+              <section>
+                <div class="media-body">
+                  <h3 class="font-weight-bold">Provide your details and upload the required files</h3>
+                  <p>You are required to provide the following information below to initaite your exit process. All the information you provide will be confidential and used only for HR Evalutaion.</p>
+                  <form class="my-4">
+                    <div class="form-row">
+                      <div class="form-group col-md-6 col-12">
+                        <p class="p-14 font-weight-bold my-0">Your personal email address</p>
+                        <label for="email " class="p-12 text-gray-700 ">Your post-exit information will be send here, so ensure it works</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="">
+                      </div>
+                      <div class="form-group col-md-6 col-12">
+                        <p class="p-14 font-weight-bold my-0">Your personal email address</p>
+                        <label for="phone" class="p-12 text-gray-700">Your post-exit information will be send here, so ensure it works</label>
+                        <input type="text" class=" form-control" id="inputPassword4" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6 col-12">
+                        <p class="p-14 font-weight-bold my-0">Effective exit date</p>
+                        <label for="exit-date " class="p-12 text-gray-700 ">Is the next working day after your last day at work when you stop being a staff of the bank.(the day stop coming to work)</label>
+                        <input type="date" class="form-control" id="inputEmail4" placeholder="">
+                      </div>
+                      <div class="form-group col-md-6 col-12">
+                        <p class="p-14 font-weight-bold my-0">Last working date</p>
+                        <label for="last-date" class="p-12 text-gray-700">Is the last day you would officially work for the bank (last day at work)</label>
+                        <input type="date" class=" form-control" id="inputPassword4" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <p class="p-14 font-weight-bold my-0">Upload handover note</p>
+                      <label for="last-date" class="p-12 text-gray-700">Please use a pdf or image no larger than 1MB</label>
+                      <div class="form-drop">
+                        <div class="drop-zone pd-20">
+                          <div class="cell"> 
+                            <div class="drop-zone__prompt">
+                              <p class="p-14 my-0 text-gray-700">Drag and drop or click to upload</p>
+                            </div>
+                            <input type="file" name="myFile" class="drop-zone__input">
+                          </div>
                         </div>
-                        <input type="file" name="myFile" class="drop-zone__input">
+                      </div>
+                    </div>
+    
+                    <div class="form-group">
+                      <p class="p-14 font-weight-bold my-0">Upload resignation letter</p>
+                      <label for="last-date" class="p-12 text-gray-700">Please use a pdf or image no larger than 1MB</label>
+                      <div action="" class="form-drop">
+                        <div class="drop-zone pd-20">
+                          <div class="cell"> 
+                            <div class="drop-zone__prompt">
+                              <p class="p-14 my-0 text-gray-700">Drag and drop or click to upload</p>
+                            </div>
+                            <input type="file" name="myFile" class="drop-zone__input">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="form-group pb-5">
+                      <p class="p-14 font-weight-bold my-0">Additional uploads</p>
+                      <label for="last-date" class="p-12 text-gray-700">Please use a pdf or image no larger than 1MB</label>
+                      <div class="form-drop">
+                        <div class="drop-zone pd-20">
+                          <div class="cell"> 
+                            <div class="drop-zone__prompt">
+                              <p class="p-14 my-0 text-gray-700">Drag and drop or click to upload</p>
+                            </div>
+                            <input type="file" name="myFile" class="drop-zone__input">
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </form>
                 </div>
+                <!-- <div class="d-flex justify-content-between">
+                  <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+                  <div class="p-14 font-weight-bold text-gray-700 mb-0 pt-2">Step 1 of 2</div>
+                  <a href="/staff/started2.html" type="button" class="btn btn-primary">Contine</a>
+                </div> -->
+              </section>
+              
+              <h5>Step 2 of 2</h5>
+              <section>
+                <div class="media-body">
+                  <!-- <p class="p-14 font-weight-bold text-gray-700">Step 2 of 2</p> -->
+                  <h2 class="font-weight-bold">Exit Interview </h2>
+                  <p>You are required to provide the following information below to initaite your exit process. All the information you provide will be confidential and used only for HR Evalutaion.</p>
+                  <p class="font-weight-bold mt-4">Working in UBA</p>
+                  <form class="">
+                    <div class="form-group">
+                      <label for="formGroupExampleInput" class="d-block p-14 font-weight-bold">Why did you choose to join UBA?</label>
+                      <textarea class="form-control" rows="2" placeholder="Enter here"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="formGroupExampleInput" class="d-block p-14 font-weight-bold">Why are you now leaving?</label>
+                      <textarea class="form-control" rows="2" placeholder="Enter here"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput" class="d-block p-14 font-weight-bold">What if anything will encourage you to stay?</label>
+                      <textarea class="form-control" rows="2" placeholder="Enter here"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput" class="d-block p-14 font-weight-bold">What has been your best and worst experiences?</label>
+                      <textarea class="form-control" rows="2" placeholder="Enter here"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput" class="d-block p-14 font-weight-bold">Given the chance, what would you like to change and why?</label>
+                      <textarea class="form-control" rows="2" placeholder="Enter here"></textarea>
+                    </div>
+                  <hr/>
+    
+                  <div>
+                    <p class="font-weight-bold mb-0 mt-4">Reasons for leaving</p>
+                    <label for="reason" class="p-12 text-gray-700">Please indicate your main reason(s) for leaving</label>
+                    <div class="row">
+                      <div class="col-md-6 col-12">
+                        <div class="custom-control custom-checkbox py-1">
+                          <input type="checkbox" class="custom-control-input" id="induction">
+                          <label class="custom-control-label p-14 mb-0" for="induction">Inadequate induction</label>
+                        </div>
+                        <div class="custom-control custom-checkbox py-1">
+                          <input type="checkbox" class="custom-control-input" id="higher-pay">
+                          <label class="custom-control-label p-14" for="higher-pay">Higher pay</label>
+                        </div>
+                        <div class="custom-control custom-checkbox py-1">
+                          <input type="checkbox" class="custom-control-input" id="training">
+                          <label class="custom-control-label p-14" for="training">Lack of training & development</label>
+                        </div>
+                        <div class="custom-control custom-checkbox py-1">
+                          <input type="checkbox" class="custom-control-input" id="dissactisfaction-pay">
+                          <label class="custom-control-label p-14" for="dissactisfaction-pay">Dissactisfaction with pay</label>
+                        </div>
+                        <div class="custom-control custom-checkbox py-1">
+                          <input type="checkbox" class="custom-control-input" id="dissactisfaction-supervisor">
+                          <label class="custom-control-label p-14" for="dissactisfaction-supervisor">Dissactisfaction with supervisor</label>
+                        </div>
+                        <div class="custom-control custom-checkbox py-1">
+                          <input type="checkbox" class="custom-control-input" id="personal">
+                          <label class="custom-control-label p-14" for="personal">Change in personal circumstances</label>
+                        </div>
+                        <div class="custom-control custom-checkbox py-1">
+                          <input type="checkbox" class="custom-control-input" id="travelling">
+                          <label class="custom-control-label p-14" for="travelling">Travelling difficulties</label>
+                        </div>
+                        <div class="custom-control custom-checkbox py-1">
+                          <input type="checkbox" class="custom-control-input" id="dissactisfaction-work">
+                          <label class="custom-control-label p-14" for="dissactisfaction-work">Dissatisfaction with work environments</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-12">
+                        <div class="custom-control custom-checkbox py-1">
+                          <input type="checkbox" class="custom-control-input" id="insufficient">
+                          <label class="custom-control-label p-14 mb-0" for="insufficient">Insufficient challenge</label>
+                        </div>
+                        <div class="custom-control custom-checkbox py-1">
+                          <input type="checkbox" class="custom-control-input" id="promotion">
+                          <label class="custom-control-label p-14" for="promotion">Promotion/Higher grade</label>
+                        </div>
+                        <div class="custom-control custom-checkbox py-1">
+                          <input type="checkbox" class="custom-control-input" id="lack-promotion">
+                          <label class="custom-control-label p-14" for="lack-promotion">Lack of promotion opportunites</label>
+                        </div>
+                        <div class="custom-control custom-checkbox py-1">
+                          <input type="checkbox" class="custom-control-input" id="dissactisfaction-benefits">
+                          <label class="custom-control-label p-14" for="dissactisfaction-benefits">Dissatisfaction with benefits</label>
+                        </div>
+                        <div class="custom-control custom-checkbox py-1">
+                          <input type="checkbox" class="custom-control-input" id="dissactisfaction-colleague">
+                          <label class="custom-control-label p-14" for="dissactisfaction-colleague">Dissatisfaction with colleagues</label>
+                        </div>
+                        <div class="custom-control custom-checkbox py-1">
+                          <input type="checkbox" class="custom-control-input" id="family">
+                          <label class="custom-control-label p-14" for="family">Family responsibilities</label>
+                        </div>
+                        <div class="custom-control custom-checkbox py-1">
+                          <input type="checkbox" class="custom-control-input" id="workload">
+                          <label class="custom-control-label p-14" for="workload">Workload/Stress</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="custom-control custom-checkbox py-1">
+                      <input type="checkbox" class="custom-control-input" id="others" checked>
+                      <label class="custom-control-label p-14" for="others">Others</label>
+                    </div>
+                    <textarea class="form-control mt-2" rows="2" placeholder="Enter here"></textarea>
+                  </div>
+                  <hr/>    
+                  <div>
+                    <p class="font-weight-bold mb-0 mt-4">Have you secured another job?</p>
+                    <div class="row">
+                      <div class="col-md-1 col-3 mt-3">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                          <label class="custom-control-label" for="customRadio1">Yes</label>
+                        </div>  
+                      </div>
+                      <div class="col-md-2 col-3 mt-3">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                          <label class="custom-control-label" for="customRadio2">No</label>
+                        </div>
+                      </div>                
+                    </div>
+    
+                    <div class="my-4">
+                      <div class="form-row">
+                        <div class="form-group col-md-6 col-12">
+                          <label for="employer " class="p-14 font-weight-bold my-0">Name of employer</label>
+                          <input type="text" class="form-control" id="employer" placeholder="Name of employer">
+                        </div>
+                        <div class="form-group col-md-6 col-12">
+                          <label for="title " class="p-14 font-weight-bold my-0">Job title</label>
+                          <input type="text" class=" form-control" id="title" placeholder="Job title">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6 col-12">
+                          <label for="location " class="p-14 font-weight-bold my-0">Location</label>
+                          <input type="text" class="form-control" id="location" placeholder="Location">
+                        </div>
+                        <div class="form-group col-md-6 col-12">
+                          <label for="employer " class="p-14 font-weight-bold my-0">Pay</label>
+                          <input type="text" class=" form-control" id="pay" placeholder="Pay">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                    
+                    <div class="bg-warningg p-3 rounded">
+                      <h5 class="font-weight-bold"><img src="../assets/img/icon/alert.svg" class="mr-1 pd-b-4"/> Warning</h5>
+                      <p>Once you submit this request and it is approved by the exit team, it cannot be reverted.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="d-flex justify-content-between">
+                  <a href="/staff/started.html" type="button" class="btn btn-outline">Go back</a>
+                  <div class="p-14 font-weight-bold text-gray-700 mb-0 pt-2">Step 2 of 2</div>
+                  <button class="btn btn-primary" data-toggle="modal" data-target="#submitModal">Submit request</button>
+                </div>
+              </section> -->                
+            </div> 
 
-                <div class="form-group">
-                  <p class="p-14 font-weight-bold my-0">Upload resignation letter</p>
-                  <label for="last-date" class="p-12 text-gray-700">Please use a pdf or image no larger than 1MB</label>
-                  <form action="" class="form-drop">
-                    <div class="drop-zone pd-20">
-                      <div class="cell"> 
-                        <div class="drop-zone__prompt">
-                          <p class="p-14 my-0 text-gray-700">Drag and drop or click to upload</p>
-                        </div>
-                        <input type="file" name="myFile" class="drop-zone__input">
-                      </div>
-                    </div>
-                  </form>
-                </div>
+            <!-- Modal -->
+        <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="submitModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <p class="p-14 font-weight-bold my-0" id="submitModalLabel">Do you want to proceed?</p>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5 class="text-title font-weight-normal">You are about to submit your exit request to begin your resignation process. 
+                  Do you want to proceed?
+                </h5>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+                <a href="/staff/status.html" type="button" class="btn btn-primary">Yes, Proceed</a>
+              </div>
+            </div>
+          </div>
+        </div>           
+          </div>
 
-                <div class="form-group pb-5">
-                  <p class="p-14 font-weight-bold my-0">Additional uploads</p>
-                  <label for="last-date" class="p-12 text-gray-700">Please use a pdf or image no larger than 1MB</label>
-                  <form action="" class="form-drop">
-                    <div class="drop-zone pd-20">
-                      <div class="cell"> 
-                        <div class="drop-zone__prompt">
-                          <p class="p-14 my-0 text-gray-700">Drag and drop or click to upload</p>
-                        </div>
-                        <input type="file" name="myFile" class="drop-zone__input">
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </form>
-            </div>
-            <hr class="mt-5"/>
-            <div class="d-flex justify-content-between">
-              <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
-              <div class="p-14 font-weight-bold text-gray-700 mb-0 pt-2">Step 1 of 2</div>
-              <a href="/staff/started2.html" type="button" class="btn btn-primary">Contine</a>
-            </div>
           </div>
         </div>
       </div>
@@ -226,14 +415,23 @@
     <script src="../assets/lib/jquery/jquery.min.js"></script>
     <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/lib/parsleyjs/parsley.min.js"></script>
+    <script src="../assets/lib/jquery-steps/build/jquery.steps.min.js"></script>
     <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="../assets/js/dashforge.js"></script>
     <script src="../assets/lib/js-cookie/js.cookie.js"></script>
     <script src="../assets/js/dashforge.settings.js"></script>
     <script src="../assets/js/drop.js"></script>
     <script src="../assets/js/dropzone.js"></script>
+    
 
     <script>
+      $('#wizard1').steps({
+          headerTag: 'h5',
+          bodyTag: 'section',
+          autoFocus: true,
+          titleTemplate: '<span class="number">#index#</span> <span class="title">#title#</span>'
+        });
       document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
           const dropZoneElement = inputElement.closest(".drop-zone");
 
