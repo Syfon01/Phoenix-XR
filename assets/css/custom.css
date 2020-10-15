@@ -249,7 +249,12 @@ p{
     }
   }
 
-  @media (min-width: 1460px){
+  @media (min-width: 1240px) and (max-width: 1560px) {
+    .container{
+        max-width: auto;
+    }
+}
+    @media (min-width: 1600px) {
     .container{
         max-width: 1380px!important;
     }
