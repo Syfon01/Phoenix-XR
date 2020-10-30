@@ -23,3 +23,6 @@
     border-top-left-radius: 0!important;
     border-bottom-left-radius: 0!important;
 }
+.search-form .form-control:focus{
+  border-color:#c0ccda!important;
+}

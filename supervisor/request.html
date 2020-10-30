@@ -13,6 +13,8 @@
     <!-- Required External CSS -->
     <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
 
     <!-- Page CSS -->
     <link rel="stylesheet" href="../assets/css/custom.css">
@@ -68,13 +70,12 @@
           <input type="search" class="form-control" placeholder="Search">
         </div>
 
-        <div class="pt-5 pb-2">
+        <div class="pt-5 pb-4">
           <h4 class="font-weight-bolder">Exit <span>(1)</span></h4>
           <div class="table-responsive">
             <table class="table" id="exitTable">
               <thead>
                 <tr>
-                  <th scope="col">S/N</th>
                   <th scope="col">Type</th>
                   <th scope="col">Name</th>
                   <th scope="col">Job Title</th>
@@ -84,7 +85,6 @@
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">1</th>
                   <td> <p class="font-weight-bolder">Exit</p></td>
                   <td>
                     <div class="row">
@@ -101,7 +101,6 @@
                   <td><a href="./employee-request.html" class="btn btn-sm btn-primary pd-y-2">View</a></td>
                 </tr>
                 <tr>
-                  <th scope="row">1</th>
                   <td> <p class="font-weight-bolder">Exit</p></td>
                   <td>
                     <div class="row">
@@ -122,13 +121,12 @@
           </div>
         </div>
 
-        <div class="py-3">
+        <div class="pt-5 pb-3">
           <h4 class="font-weight-bolder">Leave <span>(2)</span></h4>
           <div class="table-responsive">
             <table class="table" id="leaveTable">
               <thead>
                 <tr>
-                  <th scope="col">S/N</th>
                   <th scope="col">Type</th>
                   <th scope="col">Name</th>
                   <th scope="col">Job Title</th>
@@ -138,7 +136,6 @@
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">1</th>
                   <td><p class="font-weight-bolder">Maternity Leave</p></td>
                   
                   <td><div class="row">
@@ -156,7 +153,6 @@
                 </tr>
 
                 <tr>
-                  <th scope="row">2</th>
                   <td><p class="font-weight-bolder">Annual Leave</p></td>
                   
                   <td><div class="row">
@@ -190,16 +186,18 @@
     <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/lib/feather-icons/feather.min.js"></script>
     <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="../assets/js/dashforge.js"></script>
-    <script src="../assets/lib/js-cookie/js.cookie.js"></script>
-    <script src="../assets/js/dashforge.settings.js"></script>
-    <script src="../assets/js/drop.js"></script>
-    <script src="../assets/js/dropzone.js"></script>
+
+
     <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
     <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
-
+    
+    
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/lib/js-cookie/js.cookie.js"></script>
+    <!-- <script src="../assets/js/dashforge.settings.js"></script> -->
+    
     <script>
       $('#exitTable,#leaveTable').DataTable({
         responsive: true,
