@@ -338,26 +338,23 @@
 
 
           <!--Confirm Modal -->
-          <div class="modal fade" id="validateModal" tabindex="-1" role="dialog" aria-labelledby="validateModalLabel" aria-hidden="true">
+          <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <p class="modal-title p-14 font-weight-bold" id="validateModalLabel">Confirmation</p>
+                  <p class="modal-title p-14 font-weight-bold" id="confirmModalLabel">Confirmation</p>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  <h2 class="font-weight-bold">Update Validation</h2>
+                  <h3 class="font-weight-bold">Confirm verification?</h3>
 
-                  <div class="form-group">
-                    <div class="d-flex justify-content-between">
-                      <p class="p-14 font-weight-bold my-0">Upload proof of response</p>
+                  <div class="form-group mt-4">
+                    <p class="p-14 font-weight-bold my-0">Upload proof of response</p>
                     <label for="csv" class="p-12 text-gray-700">Size not greater than 1mb
                     </label>
-                    </div>
-                    
-                    <div class="form-drop">
+                    <div class="form-drop mt-2">
                       <div class="drop-zone pd-20">
                         <div class="cell"> 
                           <div class="drop-zone__prompt">
@@ -369,22 +366,51 @@
                     </div>
                   </div>
 
-                  <div class="card">
-                    <div class="card-body py-0">
-                      <div class="row">
-                        <div class="col-lg-6 bd-r py-3">
-                          <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
-                            <label class="custom-control-label p-16 font-weight-bold" for="customRadio1">Cleared</label>
+                  <div class="mt-3 mb-4 col-lg-6 col-12 px-0">
+                    <label for="comment" class="p-14 font-weight-bold">When was proof of response recieved?</label>
+                    <input placeholder="Choose date" class="form-control" type="text" onfocus="(this.type='date')" id="datepicker">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+                    <a href="./confirm" type="button" class="btn btn-primary">Yes, Proceed</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- flag modal  -->
+          <div class="modal fade" id="flagModal" tabindex="-1" role="dialog" aria-labelledby="flagModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <p class="modal-title p-14 font-weight-bold" id="confirmModalLabel">Confirmation</p>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-2 col-lg-1">
+                    <img src="../../assets/img/icon/flag.svg" class="img-fluid"/>
+                    </div>
+                    <div class="col-10 col-lg-10 px-0">
+                      <h5 class="font-weight-bold">Flag confirmation?</h5>
+                      <p class="p-14">This staff will be placed in the issue listing pending rectification. And sanctions team will be notified for due process.</p>
+                    </div>
+                  </div>
+
+                  <div class="form-group mt-4">
+                    <p class="p-14 font-weight-bold my-0">Upload proof of response</p>
+                    <label for="csv" class="p-12 text-gray-700">Size not greater than 1mb
+                    </label>
+                    <div class="form-drop mt-2">
+                      <div class="drop-zone pd-20">
+                        <div class="cell"> 
+                          <div class="drop-zone__prompt">
+                            <p class="p-14 my-0 text-gray-700">Drag and drop or click to upload</p>
                           </div>
-                          <p class="p-12 mb-0">This confirms the validation for this staff</p>
-                        </div>
-                        <div class="col-lg-6 py-3">
-                          <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label p-16 font-weight-bold" for="customRadio2">Uncleared and archive</label>
-                          </div>
-                          <p class="p-12 mb-0">This moves the staff from active issue list to the archive</p>
+                          <input type="file" name="myFile" class="drop-zone__input">
                         </div>
                       </div>
                     </div>
@@ -395,14 +421,15 @@
                     <textarea class="form-control" rows="3"></textarea>
                   </div>
 
-                  <div class="modal-foot">
-                    <button class="btn btn-validate form-control font-weight-bold mt-4" data-dismiss="modal">
-                      Update
-                     </button>
+                  <div class="mt-3 mb-5 col-lg-6 col-12 px-0">
+                    <label for="comment" class="p-14 font-weight-bold">When was proof of response recieved?</label>
+                    <input placeholder="10/10/2020" class="form-control" type="text" disabled>
                   </div>
-
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+                    <a href="./confirm" type="button" class="btn btn-primary">Yes, Proceed</a>
+                  </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -426,6 +453,8 @@
 
     <script src="../../assets/js/drop.js"></script>
     <script src="../../assets/js/dropzone.js"></script>
-   
+    <script>
+      $('#datepicker').datepicker();
+    </script>
   </body>
 </html>
