@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Confirmation Module</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/confirmation.css">
+    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+
+    
+
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-700">Confirmation Team Lead </p>
+            </div>
+          </div>
+          
+          </div><!-- aside-loggedin -->
+        <ul class="nav nav-aside">
+         
+          <li class="nav-item p-14"><a href="../validation-request/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/requests.png" class="pd-r-15"/> <span>Validation Requests</span></a></li>
+          <li class="nav-item p-14"><a href="../validation-updates/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/updates.png" class="pd-r-15"/> <span>Validation Updates</span></a></li>
+          <li class="nav-item active p-14"><a href="../validation-issues/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Validation Issues</span></a></li>
+          <li class="nav-item p-14"><a href="../management-confirmation/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/Manager.png" class="pd-r-15"/> <span>Management Confirmation</span></a></li>
+          <li class="nav-item p-14"><a href="../confirmation-approval/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/confirmation.png" class="pd-r-15"/> <span>Confirmation Appraisal</span></a></li>
+          <li class="nav-item p-14"><a href="../manage-contact/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/contacts.png" class="pd-r-15"/> <span>Manage Contacts</span></a></li>
+        
+        </ul>
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <p class="p-14 mb-0 pt-2">Validation Updates</p>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/new.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <div class="mt-2">
+            <p class="p-32 tx-bold">Validation Updates</p>
+          </div>
+          <div>
+            <ul class="nav nav-line" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link tab active" id="Academic-tab" data-toggle="tab" href="#Academic" role="tab" aria-controls="Academic" aria-selected="true">Academic validation <span class="tx-13 pd-l-5 rounded-circle badge">(7)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tab" id="Employer-tab" data-toggle="tab" href="#Employer" role="tab" aria-controls="Employer" aria-selected="false">Employer validation <span class="tx-13 pd-l-5">(7)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tab" id="Cbn-tab" data-toggle="tab" href="#Cbn" role="tab" aria-controls="Cbn" aria-selected="false">CBN validation <span class="tx-13 pd-l-5">(27)</span></a>
+              </li>
+            </ul>
+            <div class="tab-content bd-t-0 pd-t-20" id="myTabContent">
+              <div class="tab-pane fade show active" id="Academic" role="tabpanel" aria-labelledby="Academic-tab">
+                <div class="card p-3">
+                  <div class="table-responsive">
+                    <table class="table" id="tableData">
+                      <thead>
+                        <tr>
+                          <th scope="col">SN</th>
+                          <th scope="col">NAME</th>
+                          <th scope="col">GRADE</th>
+                          <th scope="col">STAFF ID</th>
+                          <th scope="col">BATCH NUMBER</th>
+                          <th scope="col">TYPE OF HIRE</th>
+                          <th scope="col">SCHOOL</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck1">
+                              <label class="custom-control-label" for="customCheck1">1</label>
+                            </div>
+                            </th>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td>R/HCM/CONF/CBN001</td>
+                          <td>New</td>
+                          <td>Ahmadu Bello University, Zaria</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck2">
+                              <label class="custom-control-label" for="customCheck2">2</label>
+                            </div>
+                            </th>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td >R/HCM/CONF/CBN001</td>
+                          <td>New</td>
+                          <td>Ahmadu Bello University, Zaria</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck3">
+                              <label class="custom-control-label" for="customCheck3">3</label>
+                            </div>
+                            </th>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td>R/HCM/CONF/CBN001</td>
+                          <td>New</td>
+                          <td>Ahmadu Bello University, Zaria</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck4">
+                              <label class="custom-control-label" for="customCheck4">4</label>
+                            </div>
+                            </th>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td>R/HCM/CONF/CBN001</td>
+                          <td>Experienced</td>
+                          <td>Ahmadu Bello University, Zaria</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                </div>
+                
+              </div>
+              <div class="tab-pane fade" id="Employer" role="tabpanel" aria-labelledby="Employer-tab">
+                
+                <div class="card p-3">
+                  <div class="table-responsive">
+                    <table class="table" id="EmployerData"> 
+                      <thead>
+                        <tr>
+                          <th scope="col">SN</th>
+                          <th scope="col">NAME</th>
+                          <th scope="col">GRADE</th>
+                          <th scope="col">STAFF ID</th>
+                          <th scope="col">BATCH NUMBER</th>
+                          <th scope="col">TYPE OF HIRE</th>
+                          <th scope="col">PAST EMPLOYER</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck1">
+                              <label class="custom-control-label" for="customCheck1">1</label>
+                            </div>
+                            </th>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td>R/HCM/CONF/CBN001</td>
+                          <td>New</td>
+                          <td>The Tony Elumelu Foundation</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck2">
+                              <label class="custom-control-label" for="customCheck2">2</label>
+                            </div>
+                            </th>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td>R/HCM/CONF/CBN001</td>
+                          <td>New</td>
+                          <td>Access Bank</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck3">
+                              <label class="custom-control-label" for="customCheck3">3</label>
+                            </div>
+                            </th>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td >R/HCM/CONF/CBN001</td>
+                          <td>New</td>
+                          <td>Ahmadu Bello University, Zaria</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck4">
+                              <label class="custom-control-label" for="customCheck4">4</label>
+                            </div>
+                            </th>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td >R/HCM/CONF/CBN001</td>
+                          <td>Experienced</td>
+                          <td>Ahmadu Bello University, Zaria</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="Cbn" role="tabpanel" aria-labelledby="Cbn-tab">
+                
+                <div class="card p-3">
+                  <div class="table-responsive">
+                    <table class="table" id="CbnData"> 
+                      <thead>
+                        <tr>
+                          <th scope="col">SN</th>
+                          <th scope="col">NAME</th>
+                          <th scope="col">BATCH NUMBER</th>
+                          <th scope="col">GRADE</th>
+                          <th scope="col">STAFF ID</th>
+                          <th scope="col">TYPE OF HIRE</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck1">
+                              <label class="custom-control-label" for="customCheck1">1</label>
+                            </div>
+                            </th>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>R/HCM/CONF/CBN001</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td>Experienced</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck2">
+                              <label class="custom-control-label" for="customCheck2">2</label>
+                            </div>
+                            </th>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>R/HCM/CONF/CBN001</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td>New</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck3">
+                              <label class="custom-control-label" for="customCheck3">3</label>
+                            </div>
+                            </th>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td >R/HCM/CONF/CBN001</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td>New</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              
+          </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.aside.js"></script>
+    <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="../../assets/js/drop.js"></script>
+    <script src="../../assets/js/dropzone.js"></script>
+    <script>
+      $('#tableData,#EmployerData,#CbnData').DataTable({
+        responsive: true,
+        language: {
+          searchPlaceholder: 'Search...',
+          sSearch: '',
+          lengthMenu: '_MENU_ items/page',
+        }
+      });
+    </script>
+
+  </body>
+</html>

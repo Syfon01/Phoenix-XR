@@ -53,8 +53,8 @@
         <ul class="nav nav-aside">
          
           <li class="nav-item p-14"><a href="../validation-request/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/requests.png" class="pd-r-15"/> <span>Validation Requests</span></a></li>
-          <li class="nav-item p-14"><a href="../validation-updates/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/updates.png" class="pd-r-15"/> <span>Validation Updates</span></a></li>
-          <li class="nav-item active p-14"><a href="../validation-issues/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Validation Issues</span></a></li>
+          <li class="nav-item p-14"><a href="../validation-updates/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/updates.png" class="pd-r-15"/> <span>Validation Updates</span></a></li>
+          <li class="nav-item p-14"><a href="../validation-issues/index.html" class="nav-link  text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Validation Issues</span></a></li>
           <li class="nav-item p-14"><a href="../management-confirmation/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/Manager.png" class="pd-r-15"/> <span>Management Confirmation</span></a></li>
           <li class="nav-item p-14"><a href="../confirmation-approval/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/confirmation.png" class="pd-r-15"/> <span>Confirmation Appraisal</span></a></li>
           <li class="nav-item p-14"><a href="../manage-contact/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/contacts.png" class="pd-r-15"/> <span>Manage Contacts</span></a></li>
@@ -68,8 +68,8 @@
         <div class="d-flex justify-content-between w-100">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-2 mg-b-0">
-              <li class="breadcrumb-item"><a href="./index.html">Validation Issues</a></li>
-              <li class="breadcrumb-item text-gray-700" aria-current="page">Resolve issue</li>
+              <li class="breadcrumb-item"><a href="./index.html">Validation Updates</a></li>
+              <li class="breadcrumb-item text-gray-700" aria-current="page">CBN clearance || Academic clearance</li>
             </ol>
           </nav>
           <div>
@@ -83,8 +83,7 @@
           <div class="">
             <a href="" onclick="history.go(-1)" class="btn btn-back p-10 font-weight-bold mb-3"><i class="fas fa-arrow-left mr-2"></i>GO BACK</a>
             <div class="row px-3 mb-0">
-              <p class="mb-0 p-32"><span class="font-weight-bold">Resolve Issue</span></p>
-             <p class="mb-0"><span class="badge badge-resign pd-y-4 px-2 p-14 ml-2 mt-3 text-uppercase">EMPLOYER validation</span></p>
+              <p class="mb-0 p-32"><span class="font-weight-bold">CBN Clearance || Academic clearance</span></p>
             </div>
             <hr/>
           </div>
@@ -157,170 +156,188 @@
           <div class="col-xl-8 col-md-8 col-12 col-lg-8">
            <div class="card">
              <div class="card-body">
-                <!------------------------
-               For employment validation 
-              ---------------- -->
-              <div>
-                <div class="row px-3 mb-0">
-                  <h3><span class="font-weight-bold">Andela Nigeria</span></h3>
-                <p class="mb-0"><span class="badge badge-danger pd-y-5 px-3 p-14 ml-2 text-uppercase">flagged</span></p>
-                <p class="mb-0"><span class="badge badge-green pd-y-5 px-3 p-14 ml-2 text-uppercase">confirmed</span></p>
-
+                <div>
+                  <div class="row px-3 mb-0">
+                    <h3><span class="font-weight-bold">Update Confirmation</span></h3>
+                  <p class="mb-0"><span class="badge badge-warning pd-y-5 px-3 p-14 ml-2 text-uppercase"> PENDING</span></p>
+                  <p class="mb-0"><span class="badge badge-green pd-y-5 px-3 p-14 ml-2 text-uppercase">confirmed</span></p>
+                    <p class="p-14">Update verification of CBN validation of the selected staff</p>
+                  </div>
                 </div>
-                <div class="card">
-                  <div class="card-body py-1">
-                    <div class="row">
-                      <div class="col-md-4 col-xl-4 col-12 py-2">
-                        <p class="p-14 mb-0">Batch ID  </p>
-                        <p class="p-14 mb-0 font-weight-bold">R/HCM/CONF/FER</p>
-                      </div>
-                      <div class="col-md-4 col-xl-4 col-12 py-2">
-                        <p class="p-14 mb-0">Updated on </p>
-                        <p class="p-14 mb-0 font-weight-bold">16th Nov, 2020. 12:13pm</p>
-                      </div>
-                      <div class="col-md-4 col-xl-4 col-12 py-2">
-                        <p class="p-14 mb-0">Processed by</p>
-                        <p class="p-14 mb-0 font-weight-bold">Uche Nwaoha</p>
-                      </div>
+                <div class="d-flex justify-content-between">
+                  <button type="button" class="btn btn-primary btn-icon" data-toggle="modal" data-target="#confirmModal">
+                    <i data-feather="check"></i> Confirm verification
+                  </button>
+
+                  <button type="button" class="btn btn-outline btn-icon" data-toggle="modal" data-target="#flagModal">
+                    <i data-feather="alert-triangle"></i> Flag certification
+                  </button>
+                </div>
+             </div>
+           </div>
+
+           <h2 class="text-danger">Academic clearance below(remove)</h2>
+                <div id="accordion">
+                  <div class="card my-3">
+                    <div class="card-header" id="headingOne">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="p-16 font-weight-bold mb-0">Employee details</p>
+                        <p class="p-12 font-weight-bold mb-0">Collapse <i class="fas fa-angle-down ml-2"></i></p>
+                      </div>                   
                     </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                      <div class=" p-4">
+                        <div class="row">
+                          <div class="col-md-4 col-xl-4 col-12 py-2">
+                            <p class="p-14 mb-0">Year </p>
+                            <p class="p-14 mb-0 font-weight-bold">2019</p>
+                          </div>
+                          <div class="col-md-4 col-xl-4 col-12 py-2">
+                            <p class="p-14 mb-0">Qualification</p>
+                            <p class="p-14 mb-0 font-weight-bold">B.Sc Petroleum Chemisty</p>
+                          </div>
+                          <div class="col-md-4 col-xl-4 col-12 py-2">
+                            <p class="p-14 mb-0">Batch ID  </p>
+                            <p class="p-14 mb-0 font-weight-bold">R/HCM/CONF/FER</p>
+                          </div>
+                        </div>
+
+                        <p class="p-14 mt-4 font-weight-bold mb-2">Validation Request Letter</p>
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-md-8 col-lg-8 col-xl-8 col-12">
+                                <div class="row pd-x-12">
+                                    <img src="../../assets/img/icon/pdf.svg" class="img-fluid"/>
+                                    <p class="font-weight-bold p-14 pd-t-12 mb-0 ml-3">
+                                      UBA/HC/SCR/RV/EO/2725
+                                    </p>
+                                </div>
+                              </div>
+                              <div class="col-md-4 col-lg-4 col-xl-4 col-12"> 
+                                <div class="d-flex justify-content-end pt-2">
+                                  <div>
+                                    <button class="btn btn-sm btn-outline pd-y-2 mr-3">View</button>
+                                  </div>
+                                  <div>
+                                    <button class="btn btn-sm btn-outline pd-y-2">Download</button>
+                                  </div>
+                                </div> 
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>    
                   </div>
                 </div>
               </div>
               
-
-               <!------------------------
-               For academic validation 
-              ---------------- -->
-              <div>
-                <div class="row px-3 mb-0">
-                  <h3><span class="font-weight-bold">Bowen University</span></h3>
-                <p class="mb-0"><span class="badge badge-danger pd-y-5 px-3 p-14 ml-2 text-uppercase">flagged</span></p>
-                </div>
-                <div class="card">
-                  <div class="card-body py-1">
-                    <div class="row">
-                      <div class="col-md-4 col-xl-4 col-12 py-2">
-                        <p class="p-14 mb-0">Batch ID  </p>
-                        <p class="p-14 mb-0 font-weight-bold">R/HCM/CONF/FER</p>
-                      </div>
-                      <div class="col-md-4 col-xl-4 col-12 py-2">
-                        <p class="p-14 mb-0">Updated on </p>
-                        <p class="p-14 mb-0 font-weight-bold">16th Nov, 2020. 12:13pm</p>
-                      </div>
-                      <div class="col-md-4 col-xl-4 col-12 py-2">
-                        <p class="p-14 mb-0">Processed by</p>
-                        <p class="p-14 mb-0 font-weight-bold">Uche Nwaoha</p>
-                      </div>
-                    </div>
-  
+              <!-- employer clearance  -->
+              <h2 class="text-danger">Employer clearance below(remove)</h2>
+              <div id="accordion">
+                <div class="card my-3">
+                  <div class="card-header" id="headingOne">
+                    <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <p class="p-16 font-weight-bold mb-0">Employee details</p>
+                      <p class="p-12 font-weight-bold mb-0">Collapse <i class="fas fa-angle-down ml-2"></i></p>
+                    </div>                   
+                  </div>
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class=" p-4">
                       <div class="row">
                         <div class="col-md-4 col-xl-4 col-12 py-2">
-                          <p class="p-14 mb-0">Year </p>
-                          <p class="p-14 mb-0 font-weight-bold">2019</p>
+                          <p class="p-14 mb-0">Past employer </p>
+                          <p class="p-14 mb-0 font-weight-bold">Andela Nigeria</p>
                         </div>
                         <div class="col-md-4 col-xl-4 col-12 py-2">
-                          <p class="p-14 mb-0">Qualification</p>
-                          <p class="p-14 mb-0 font-weight-bold">B.Sc Petroleum Chemisty</p>
+                          <p class="p-14 mb-0">Batch ID</p>
+                          <p class="p-14 mb-0 font-weight-bold">R/HCM/CONF/FER</p>
                         </div>
-                        <div class="col-md-4 col-xl-4 col-12 py-2">
-                          <!-- <p class="p-14 mb-0">Processed by</p>
-                          <p class="p-14 mb-0 font-weight-bold">Uche Nwaoha</p> -->
+                      </div>
+
+                      <p class="p-14 mt-4 font-weight-bold mb-2">Validation Request Letter</p>
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-md-8 col-lg-8 col-xl-8 col-12">
+                              <div class="row pd-x-12">
+                                  <img src="../../assets/img/icon/pdf.svg" class="img-fluid"/>
+                                  <p class="font-weight-bold p-14 pd-t-12 mb-0 ml-3">
+                                    UBA/HC/SCR/RV/EO/2725
+                                  </p>
+                              </div>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-xl-4 col-12"> 
+                              <div class="d-flex justify-content-end pt-2">
+                                <div>
+                                  <button class="btn btn-sm btn-outline pd-y-2 mr-3">View</button>
+                                </div>
+                                <div>
+                                  <button class="btn btn-sm btn-outline pd-y-2">Download</button>
+                                </div>
+                              </div> 
+                            </div>
+                          </div>
                         </div>
-                    </div>
-                  </div>
+                      </div>
+                    </div>    
                 </div>
               </div>
-              
-                <!------------------------
-               For CBN validation 
-              ---------------- -->
-              <div>
-                <div class="row px-3 mb-0">
-                  <h3><span class="font-weight-bold">Central Bank of Nigeria</span></h3>
-                <p class="mb-0"><span class="badge badge-danger pd-y-5 px-3 p-14 ml-2 text-uppercase">flagged</span></p>
+            </div>
+
+            <!-- cbn clearance  -->
+            <div id="accordion">
+              <div class="card my-3">
+                <div class="card-header" id="headingOne">
+                  <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <p class="p-16 font-weight-bold mb-0">Employee details</p>
+                    <p class="p-12 font-weight-bold mb-0">Collapse <i class="fas fa-angle-down ml-2"></i></p>
+                  </div>                   
                 </div>
-                <div class="card">
-                  <div class="card-body py-1">
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class=" p-4">
                     <div class="row">
                       <div class="col-md-4 col-xl-4 col-12 py-2">
-                        <p class="p-14 mb-0">Batch ID  </p>
+                        <p class="p-14 mb-0">Batch ID</p>
                         <p class="p-14 mb-0 font-weight-bold">R/HCM/CONF/FER</p>
                       </div>
-                      <div class="col-md-4 col-xl-4 col-12 py-2">
-                        <p class="p-14 mb-0">Updated on </p>
-                        <p class="p-14 mb-0 font-weight-bold">16th Nov, 2020. 12:13pm</p>
-                      </div>
-                      <div class="col-md-4 col-xl-4 col-12 py-2">
-                        <p class="p-14 mb-0">Processed by</p>
-                        <p class="p-14 mb-0 font-weight-bold">Uche Nwaoha</p>
-                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              
 
-              <div class="mt-4">
-                <p class="p-14 font-weight-bold mb-0">Comments</p>
-              <p class="p-14 col-12 col-lg-10 px-0">Enthusiastically visualize team building intellectual capital through global platforms. 
-                Energistically impact pandemic innovation through e-business growth </p>
-              </div>
-              <div class="mt-4">
-                <p class="p-14 font-weight-bold mg-b-10">Uploaded files</p>
-                <div class="row">
-                  <div class="col-md-8 col-lg-8 col-xl-8 col-12">
-                    <div class="row pd-x-12">
-                        <img src="../../assets/img/icon/pdf-sm.png" class="upload-pad"/>
-                        <p class="p-14 mb-0 pt-1">
-                          Response from employer
-                        </p>
+                    <p class="p-14 mt-4 font-weight-bold mb-2">Curriculum Vitae (CV)</p>
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-8 col-lg-8 col-xl-8 col-12">
+                            <div class="row pd-x-12">
+                                <img src="../../assets/img/icon/pdf.svg" class="img-fluid"/>
+                                <p class="font-weight-bold p-14 pd-t-12 mb-0 ml-3">
+                                  UBA/HC/SCR/RV/EO/2725
+                                </p>
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-lg-4 col-xl-4 col-12"> 
+                            <div class="d-flex justify-content-end pt-2">
+                              <div>
+                                <button class="btn btn-sm btn-outline pd-y-2 mr-3">View</button>
+                              </div>
+                              <div>
+                                <button class="btn btn-sm btn-outline pd-y-2">Download</button>
+                              </div>
+                            </div> 
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-4 col-lg-4 col-xl-4 col-12"> 
-                    <div class="d-flex justify-content-end">
-                      <div>
-                        <button class="btn btn-sm btn-outline pd-y-2 mr-3">View</button>
-                      </div>
-                      <div>
-                        <button class="btn btn-sm btn-outline pd-y-2">Download</button>
-                      </div>
-                    </div> 
-                  </div>
-                </div>
-                <hr class="my-2"/>
-                <div class="row mt-0">
-                  <div class="col-md-8 col-lg-9 col-xl-8 col-12">
-                    <div class="row pd-x-12">
-                        <img src="../../assets/img/icon/pdf-sm.png" class="upload-pad"/>
-                        <p class="p-14 mb-0 pt-1">
-                          Reference letter for R/HCM/CONF/FER
-                        </p>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-lg-3 col-xl-4 col-12"> 
-                    <div class="d-flex justify-content-end">
-                      <div>
-                        <button class="btn btn-sm btn-outline pd-y-2 mr-3">View</button>
-                      </div>
-                      <div>
-                        <button class="btn btn-sm btn-outline pd-y-2">Download</button>
-                      </div>
-                    </div> 
-                  </div>
-                </div>
+                  </div>    
               </div>
-             </div>
-           </div>  
-           <!-- validation button  -->
-           <button class="btn btn-validate form-control font-weight-bold mt-4" data-toggle="modal" data-target="#validateModal">
-            Update validation
-           </button>
+            </div>
+          </div>
 
           </div>
           </div>
 
 
-          <!-- Modal -->
+          <!--Confirm Modal -->
           <div class="modal fade" id="validateModal" tabindex="-1" role="dialog" aria-labelledby="validateModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
               <div class="modal-content">
