@@ -53,7 +53,8 @@
       color: #B1C2D9;
   }
   .text-gray-700{
-      color: #6E84A3;
+      color:#6E84A3;
+      ;
   }
   .text-new{
      color: rgba(52, 55, 65, 1);
@@ -143,8 +144,12 @@
 font-weight: 400!important;
 }
 .nav-link.active{
-    color: #000!important;
+    color: #fff!important;
     font-weight: 700!important;
+}
+.nav-link.tab.active{
+  color: #000!important;
+  font-weight: 700!important;
 }
 .nav-link.active.bg{
     background-color: #DB4C3F!important;
@@ -231,3 +236,32 @@ font-weight: 400!important;
     font-weight: 700!important;
     color:white!important;
 }  
+.badge.badge-danger{
+  background: rgba(189, 39, 30, 1)!important;
+  color: #fff;
+  font-size: 10px!important;
+}
+
+.breadcrumb-style1 .breadcrumb-item, .breadcrumb-style2 .breadcrumb-item, .breadcrumb-style3 .breadcrumb-item{
+  font-size: 14px!important;
+  text-transform: capitalize!important;
+  font-weight: 400!important;
+}
+.p-32{
+  font-size: 32px;
+}
+.upload-pad{
+  width: 24px;
+  height: 24px;
+}
+
+.btn-validate{
+  background-color: rgba(219, 76, 63, 1)!important;
+  color: #fff!important;
+}
+
+.btn-validate:hover{
+  background-color: #fff!important;
+  color: #DB4C3F!important;
+  border: 1px solid #DB4C3F;
+}

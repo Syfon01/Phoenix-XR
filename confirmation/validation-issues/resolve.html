@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Confirmation Module</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/confirmation.css">
+    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+
+    
+
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-700">Confirmation Team Lead </p>
+            </div>
+          </div>
+          
+          </div><!-- aside-loggedin -->
+        <ul class="nav nav-aside">
+         
+          <li class="nav-item p-14"><a href="../validation-request.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/requests.png" class="pd-r-15"/> <span>Validation Requests</span></a></li>
+          <li class="nav-item p-14"><a href="./validation-updates.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/updates.png" class="pd-r-15"/> <span>Validation Updates</span></a></li>
+          <li class="nav-item active p-14"><a href="../validation-issues/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Validation Issues</span></a></li>
+          <li class="nav-item p-14"><a href="./management-confirmation.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/Manager.png" class="pd-r-15"/> <span>Management Confirmation</span></a></li>
+          <li class="nav-item p-14"><a href="./confirmation-approval.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/confirmation.png" class="pd-r-15"/> <span>Confirmation Appraisal</span></a></li>
+          <li class="nav-item p-14"><a href="./manage-contact.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/contacts.png" class="pd-r-15"/> <span>Manage Contacts</span></a></li>
+        
+        </ul>
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-2 mg-b-0">
+              <li class="breadcrumb-item"><a href="./index.html">Validation Issues</a></li>
+              <li class="breadcrumb-item text-gray-700" aria-current="page">Resolve issue</li>
+            </ol>
+          </nav>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/new.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <div class="">
+            <a href="" onclick="history.go(-1)" class="btn btn-back p-10 font-weight-bold mb-3"><i class="fas fa-arrow-left mr-2"></i>GO BACK</a>
+            <div class="row px-3 mb-0">
+              <p class="mb-0 p-32"><span class="font-weight-bold">Resolve Issue</span></p>
+             <p class="mb-0"><span class="badge badge-resign pd-y-4 px-2 p-14 ml-2 mt-3 text-uppercase">EMPLOYER validation</span></p>
+            </div>
+            <hr/>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-4 col-lg-4 col-xl-4 col-12">
+            <div class="card py-3 profile-sidebar pd-lg-r-20 sidebar-fix">
+              <div class="text-center px-5">
+                <div class="avatar avatar-xxl mx-auto d-block">
+                  <img src="../../assets/img/staff.png" class="rounded-circle" alt="staff-image">
+                </div>
+                  <p class="p-32 font-weight-bold pd-t-5">James Yuri</p>
+                    <p class="p-14 text-title my-0">Team Player, Internal Innovation</p>
+                    <label class="p-12 text-gray-700">Banking Officer, Information Technology</label>
+
+                    <div class="row bd-t bd-b">
+                      <div class="col bd-r">
+                        <label for="employee-id" class="p-10 text-uppercase my-0 text-gray-700 font-weight-bold">Employee ID</label>
+                        <p class="font-weight-bold mb-1">A29837</p>
+                      </div>
+                      <div class="col">
+                        <label for="cost-code" class="p-10 text-uppercase my-0 text-gray-700 font-weight-bold">Cost code</label>
+                        <p class="font-weight-bold mb-1">U32</p>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="details pd-x-30 d-none d-sm-none d-lg-block d-xl-block">
+                      <div class="row pt-3">
+                        <div class="col-2 pt-2">
+                          <img src="../../assets/img/icon/person.svg" alt="person">
+                        </div>
+                        <div class="col-10 px-0">
+                          <label for="joined" class="p-12 text-gray-700 my-0">Joined</label>
+                          <p class=""><span class="p-14">21 Jun 2017</span> <span class="p-12">(3yrs 5 months)</span></p>
+                        </div>
+                      </div>
+                      <hr class="my-0"/>
+                      <div class="row pt-2">
+                        <div class="col-2 pt-2">
+                          <img src="../../assets/img/icon/mail.svg" alt="person">
+                        </div>
+                        <div class="col-10 px-0">
+                          <label for="email" class="p-12 text-gray-700 my-0">Email</label>
+                          <p class="p-14">chimamanda.ifunaya@ubagroup.com</p>
+                        </div>
+                      </div>
+                      <hr class="my-0"/>
+                      <div class="row pt-2">
+                        <div class="col-2 pt-2">
+                          <img src="../../assets/img/icon/phone.svg" alt="person">
+                        </div>
+                        <div class="col-10 px-0">
+                          <label for="phone" class="p-12 text-gray-700 my-0">Work Phone</label>
+                          <p class="p-14">+234 805 384 3332</p>
+                        </div>
+                      </div>
+                      <hr class="my-0"/>
+                      <div class="row pt-2">
+                        <div class="col-2 pt-2">
+                          <img src="../../assets/img/icon/location.svg" alt="person">
+                        </div>
+                        <div class="col-10 px-0">
+                          <label for="location" class="p-12 text-gray-700 my-0">Office location</label>
+                          <p class="p-14">Uba House, 57 Marina, Lagos, Nigeria</p>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+          </div>
+          <div class="col-xl-8 col-md-8 col-12 col-lg-8">
+           <div class="card">
+             <div class="card-body">
+                <!------------------------
+               For employment validation 
+              ---------------- -->
+              <div>
+                <div class="row px-3 mb-0">
+                  <h3><span class="font-weight-bold">Andela Nigeria</span></h3>
+                <p class="mb-0"><span class="badge badge-danger pd-y-5 px-3 p-14 ml-2 text-uppercase">flagged</span></p>
+                <p class="mb-0"><span class="badge badge-green pd-y-5 px-3 p-14 ml-2 text-uppercase">confirmed</span></p>
+
+                </div>
+                <div class="card">
+                  <div class="card-body py-1">
+                    <div class="row">
+                      <div class="col-md-4 col-xl-4 col-12 py-2">
+                        <p class="p-14 mb-0">Batch ID  </p>
+                        <p class="p-14 mb-0 font-weight-bold">R/HCM/CONF/FER</p>
+                      </div>
+                      <div class="col-md-4 col-xl-4 col-12 py-2">
+                        <p class="p-14 mb-0">Updated on </p>
+                        <p class="p-14 mb-0 font-weight-bold">16th Nov, 2020. 12:13pm</p>
+                      </div>
+                      <div class="col-md-4 col-xl-4 col-12 py-2">
+                        <p class="p-14 mb-0">Processed by</p>
+                        <p class="p-14 mb-0 font-weight-bold">Uche Nwaoha</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+               <!------------------------
+               For academic validation 
+              ---------------- -->
+              <div>
+                <div class="row px-3 mb-0">
+                  <h3><span class="font-weight-bold">Bowen University</span></h3>
+                <p class="mb-0"><span class="badge badge-danger pd-y-5 px-3 p-14 ml-2 text-uppercase">flagged</span></p>
+                </div>
+                <div class="card">
+                  <div class="card-body py-1">
+                    <div class="row">
+                      <div class="col-md-4 col-xl-4 col-12 py-2">
+                        <p class="p-14 mb-0">Batch ID  </p>
+                        <p class="p-14 mb-0 font-weight-bold">R/HCM/CONF/FER</p>
+                      </div>
+                      <div class="col-md-4 col-xl-4 col-12 py-2">
+                        <p class="p-14 mb-0">Updated on </p>
+                        <p class="p-14 mb-0 font-weight-bold">16th Nov, 2020. 12:13pm</p>
+                      </div>
+                      <div class="col-md-4 col-xl-4 col-12 py-2">
+                        <p class="p-14 mb-0">Processed by</p>
+                        <p class="p-14 mb-0 font-weight-bold">Uche Nwaoha</p>
+                      </div>
+                    </div>
+  
+                      <div class="row">
+                        <div class="col-md-4 col-xl-4 col-12 py-2">
+                          <p class="p-14 mb-0">Year </p>
+                          <p class="p-14 mb-0 font-weight-bold">2019</p>
+                        </div>
+                        <div class="col-md-4 col-xl-4 col-12 py-2">
+                          <p class="p-14 mb-0">Qualification</p>
+                          <p class="p-14 mb-0 font-weight-bold">B.Sc Petroleum Chemisty</p>
+                        </div>
+                        <div class="col-md-4 col-xl-4 col-12 py-2">
+                          <!-- <p class="p-14 mb-0">Processed by</p>
+                          <p class="p-14 mb-0 font-weight-bold">Uche Nwaoha</p> -->
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+                <!------------------------
+               For CBN validation 
+              ---------------- -->
+              <div>
+                <div class="row px-3 mb-0">
+                  <h3><span class="font-weight-bold">Central Bank of Nigeria</span></h3>
+                <p class="mb-0"><span class="badge badge-danger pd-y-5 px-3 p-14 ml-2 text-uppercase">flagged</span></p>
+                </div>
+                <div class="card">
+                  <div class="card-body py-1">
+                    <div class="row">
+                      <div class="col-md-4 col-xl-4 col-12 py-2">
+                        <p class="p-14 mb-0">Batch ID  </p>
+                        <p class="p-14 mb-0 font-weight-bold">R/HCM/CONF/FER</p>
+                      </div>
+                      <div class="col-md-4 col-xl-4 col-12 py-2">
+                        <p class="p-14 mb-0">Updated on </p>
+                        <p class="p-14 mb-0 font-weight-bold">16th Nov, 2020. 12:13pm</p>
+                      </div>
+                      <div class="col-md-4 col-xl-4 col-12 py-2">
+                        <p class="p-14 mb-0">Processed by</p>
+                        <p class="p-14 mb-0 font-weight-bold">Uche Nwaoha</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="mt-4">
+                <p class="p-14 font-weight-bold mb-0">Comments</p>
+              <p class="p-14 col-12 col-lg-10 px-0">Enthusiastically visualize team building intellectual capital through global platforms. 
+                Energistically impact pandemic innovation through e-business growth </p>
+              </div>
+              <div class="mt-4">
+                <p class="p-14 font-weight-bold mg-b-10">Uploaded files</p>
+                <div class="row">
+                  <div class="col-md-8 col-lg-8 col-xl-8 col-12">
+                    <div class="row pd-x-12">
+                        <img src="../../assets/img/icon/pdf-sm.png" class="upload-pad"/>
+                        <p class="p-14 mb-0 pt-1">
+                          Response from employer
+                        </p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-lg-4 col-xl-4 col-12"> 
+                    <div class="d-flex justify-content-end">
+                      <div>
+                        <button class="btn btn-sm btn-outline pd-y-2 mr-3">View</button>
+                      </div>
+                      <div>
+                        <button class="btn btn-sm btn-outline pd-y-2">Download</button>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+                <hr class="my-2"/>
+                <div class="row mt-0">
+                  <div class="col-md-8 col-lg-9 col-xl-8 col-12">
+                    <div class="row pd-x-12">
+                        <img src="../../assets/img/icon/pdf-sm.png" class="upload-pad"/>
+                        <p class="p-14 mb-0 pt-1">
+                          Reference letter for R/HCM/CONF/FER
+                        </p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-lg-3 col-xl-4 col-12"> 
+                    <div class="d-flex justify-content-end">
+                      <div>
+                        <button class="btn btn-sm btn-outline pd-y-2 mr-3">View</button>
+                      </div>
+                      <div>
+                        <button class="btn btn-sm btn-outline pd-y-2">Download</button>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+             </div>
+           </div>  
+           <!-- validation button  -->
+           <button class="btn btn-validate form-control font-weight-bold mt-4" data-toggle="modal" data-target="#validateModal">
+            Update validation
+           </button>
+
+          </div>
+          </div>
+
+
+          <!-- Modal -->
+          <div class="modal fade" id="validateModal" tabindex="-1" role="dialog" aria-labelledby="validateModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <p class="modal-title p-14 font-weight-bold" id="validateModalLabel">Confirmation</p>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2 class="font-weight-bold">Update Validation</h2>
+
+                  <div class="form-group">
+                    <div class="d-flex justify-content-between">
+                      <p class="p-14 font-weight-bold my-0">Upload proof of response</p>
+                    <label for="csv" class="p-12 text-gray-700">Size not greater than 1mb
+                    </label>
+                    </div>
+                    
+                    <div class="form-drop">
+                      <div class="drop-zone pd-20">
+                        <div class="cell"> 
+                          <div class="drop-zone__prompt">
+                            <p class="p-14 my-0 text-gray-700">Drag and drop or click to upload</p>
+                          </div>
+                          <input type="file" name="myFile" class="drop-zone__input">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-body py-0">
+                      <div class="row">
+                        <div class="col-lg-6 bd-r py-3">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                            <label class="custom-control-label p-16 font-weight-bold" for="customRadio1">Cleared</label>
+                          </div>
+                          <p class="p-12 mb-0">This confirms the validation for this staff</p>
+                        </div>
+                        <div class="col-lg-6 py-3">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label p-16 font-weight-bold" for="customRadio2">Uncleared and archive</label>
+                          </div>
+                          <p class="p-12 mb-0">This moves the staff from active issue list to the archive</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-3">
+                    <label for="comment" class="p-14 font-weight-bold">Enter Additional comments</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                  </div>
+
+                  <div class="modal-foot">
+                    <button class="btn btn-validate form-control font-weight-bold mt-4" data-dismiss="modal">
+                      Update
+                     </button>
+                  </div>
+
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.aside.js"></script>
+    <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="../../assets/js/drop.js"></script>
+    <script src="../../assets/js/dropzone.js"></script>
+   
+  </body>
+</html>
