@@ -241,6 +241,11 @@ font-weight: 400!important;
   color: #fff;
   font-size: 10px!important;
 }
+.badge.badge-grey{
+  background:rgba(222, 226, 240, 1);
+  font-weight: 700!important;
+    font-size: 16px!important;
+}
 
 .breadcrumb-style1 .breadcrumb-item, .breadcrumb-style2 .breadcrumb-item, .breadcrumb-style3 .breadcrumb-item{
   font-size: 14px!important;
@@ -269,4 +274,13 @@ font-weight: 400!important;
   background:rgba(237, 242, 249, 1);
   border: 1px solid rgba(227, 235, 246, 1);
   border-bottom: 3px solid #6E84A3;
+}
+.bg-accent{
+  background-color: rgba(172, 11, 108, 1)!important;
+  color:#fff;
+}
+.btn-disabled{
+  background: rgba(194, 195, 198, 1)!important;
+  font-weight:700!important;
+  color:#000;
 }
