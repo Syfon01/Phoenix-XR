@@ -68,8 +68,9 @@
         <div class="d-flex justify-content-between w-100">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-2 mg-b-0">
-              <li class="breadcrumb-item"><a href="./index.html">Validation requests</a></li>
-              <li class="breadcrumb-item text-gray-700" aria-current="page">Academic Contacts</li>
+              <li class="breadcrumb-item"><a href="./index.html">Validation Requests</a></li>
+              <li class="breadcrumb-item"><a href="./batch.html">Batch Validation</a></li>
+              <li class="breadcrumb-item text-gray-700" aria-current="page">Academic Validation</li>
             </ol>
           </nav>
           <div>
@@ -81,75 +82,80 @@
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
           <div class="">
-            <a href="" onclick="history.go(-1)" class="btn btn-back p-10 font-weight-bold mb-3"><i class="fas fa-arrow-left mr-2"></i>GO BACK</a>
+            <a href="" onclick="history.go(-1)" class="btn btn-back p-10 font-weight-bold mb-3"><i class="fas fa-arrow-left mr-1"></i>GO BACK</a>
             <div class="row px-3 mb-0">
-              <p class="mb-0 p-32"><span class="font-weight-bold">Academic Contacts</span></p>
+              <p class="mb-0 p-32"><span class="font-weight-bold">Academic Validation || Employer Validation</span></p>
             </div>
             <hr/>
           </div>
-                    
-                <div class="card mt-4 p-3">
-                  <div class="table-responsive">
-                    <table class="table" id="tableData">
-                      <thead>
-                        <tr>
-                          <th scope="col">SN</th>
-                          <th scope="col">NAME</th>
-                          <th scope="col">EMAIL ADDRESS</th>
-                          <th scope="col">LOCATION</th>
-                          <th scope="col">PHONE NO</th>
-                          
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="customCheck1">
-                              <label class="custom-control-label" for="customCheck1">1</label>
-                            </div>
-                            </th>
-                          <td class="tx-bold">Ahmadu Bello University, Zaria</td>
-                          <td class="">academics@abu.edu.ng</td>
-                          <td>P.M.B.1013 Samaru, Zaria</td>
-                          <td>077-543500</td>
-                            <td><a href="./edit-contact.html" class="btn btn-sm btn-outline pd-y-2">view</a></td>
-                        </tr>
+          <div class="bg-blue p-3 mb-4">
+            <h5 class="font-weight-bold">SCHOOL DETAILS || EMPLOYER DETAILS</h5>
 
-                        <tr>
-                          <th scope="row">
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="customCheck2">
-                              <label class="custom-control-label" for="customCheck2">2</label>
-                            </div>
-                            </th>
-                            <td class="tx-bold">Ahmadu Bello University, Zaria</td>
-                            <td class="">academics@abu.edu.ng</td>
-                            <td>P.M.B.1013 Samaru, Zaria</td>
-                            <td>077-543500</td>
-                          <td><a href="./edit-contact.html" class="btn btn-sm btn-outline pd-y-2">view</a></td>
-                        </tr>
+            <div class="row mt-3">
+              <div class="col-md-3 col-6 col-lg-3 col-xl-3">
+                <p class="p-16 mb-0">Total count</p>
+                <h3 class="mb-0 font-weight-bold">67</h3>
+              </div>
 
-                        <tr>
-                          <th scope="row">
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="customCheck3">
-                              <label class="custom-control-label" for="customCheck3">3</label>
-                            </div>
-                            </th>
-                            <td class="tx-bold">Ahmadu Bello University, Zaria</td>
-                            <td class="">academics@abu.edu.ng</td>
-                            <td>P.M.B.1013 Samaru, Zaria</td>
-                            <td>077-543500</td>
-                          <td><a href="./edit-contact.html" class="btn btn-sm btn-outline pd-y-2">view</a></td>
-                        </tr>
-                        
-                      </tbody>
-                    </table>
+              <div class="col-md-3 col-6 col-lg-3 col-xl-3">
+                <p class="p-16 mb-0">Sent</p>
+                <h3 class="mb-0 font-weight-bold">45</h3>
+              </div>
+              <div class="col-md-3 col-6 col-lg-3 col-xl-3">
+                <p class="p-16 mb-0">Pending</p>
+                <h3 class="mb-0 font-weight-bold">9</h3>
+              </div>
+              <div class="col-md-3 col-6 col-lg-3 col-xl-3">
+                <p class="p-16 mb-0">Staff Count</p>
+                <h3 class="mb-0 font-weight-bold">145</h3>
+              </div>
+            </div>
+            
+          </div>
+          
+           <div class="row">
+             <div class="col-12 col-lg-6 col-xl-6">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <h4 class="tx-bold">
+                          Ahmadu Bello University, Zaria
+                        </h4>
+                        <p class="p-16 mb-0">
+                          <span><i data-feather="check-circle" class="icon-sm text-success mr-1"></i>  Sent</span>
+                          <span class="ml-4"> <i data-feather="user" class="icon-sm mr-1"></i>4 Staff</span>
+                        </p>
+                      </div>
+                      <div>
+                        <a href="./initiate-validation.html" class="btn btn-primary mt-2">Initiate</a>
+                      </div>
+                    </div>
                   </div>
-                  
                 </div>
+             </div>
+
+             <div class="col-12 col-lg-6 col-xl-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h4 class="tx-bold">
+                        Ahmadu Bello University, Zaria
+                      </h4>
+                      <p class="p-16 mb-0">
+                        <span><i data-feather="clock" class="icon-sm text-warning mr-1"></i> Pending</span>
+                        <span class="ml-4"> <i data-feather="user" class="icon-sm mr-1"></i>4 Staff</span>
+                      </p>
+                    </div>
+                    <div>
+                      <a href="./view-validation.html" class="btn btn-primary-outline mt-2">View</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+           </div>
+           </div>
                 
         </div>
       </div>

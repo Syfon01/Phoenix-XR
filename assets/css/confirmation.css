@@ -284,3 +284,12 @@ font-weight: 400!important;
   font-weight:700!important;
   color:#000;
 }
+.icon-sm{
+  width: 16px!important;
+  height: 16px!important;
+  margin-top: -5px!important;
+  stroke-width: 2px!important;
+}
+.box-height{
+  min-height: 40vh;
+}
