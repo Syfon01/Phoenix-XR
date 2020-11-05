@@ -53,9 +53,9 @@
         <ul class="nav nav-aside">
          
           <li class="nav-item p-14"><a href="../validation-request/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/requests.png" class="pd-r-15"/> <span>Validation Requests</span></a></li>
-          <li class="nav-item p-14"><a href="../validation-updates/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/updates.png" class="pd-r-15"/> <span>Validation Updates</span></a></li>
-          <li class="nav-item active p-14"><a href="../validation-issues/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Validation Issues</span></a></li>
-          <li class="nav-item p-14"><a href="../validation-appraisal/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/validate-appraisal.png" class="pd-r-15"/> <span>Validation Issues</span></a></li>
+          <li class="nav-item  p-14"><a href="../validation-updates/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/updates.png" class="pd-r-15"/> <span>Validation Updates</span></a></li>
+          <li class="nav-item p-14"><a href="../validation-issues/index.html" class="nav-link  text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Validation Issues</span></a></li>
+          <li class="nav-item active p-14"><a href="../validation-appraisal/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/validate-appraisal.png" class="pd-r-15"/> <span>Validation Issues</span></a></li>
           <li class="nav-item p-14"><a href="../management-confirmation/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/Manager.png" class="pd-r-15"/> <span>Management Confirmation</span></a></li>
           <li class="nav-item p-14"><a href="../confirmation-approval/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/confirmation.png" class="pd-r-15"/> <span>Confirmation Listing</span></a></li>
           <li class="nav-item p-14"><a href="../manage-contact/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/contacts.png" class="pd-r-15"/> <span>Manage Contacts</span></a></li>
@@ -67,7 +67,7 @@
     <div class="content ht-100v pd-0">
       <div class="content-header">
         <div class="d-flex justify-content-between w-100">
-          <p class="p-14 mb-0 pt-2">Validation Issues</p>
+          <p class="p-14 mb-0 pt-2">Validation Appraisal</p>
           <div>
             <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/new.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
           </div>
@@ -77,20 +77,28 @@
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
           <div class="mt-2">
-            <p class="p-32 tx-bold">Validation Issues</p>
-            <p class="p-14">Staff with flagged validations.</p>
+            <p class="p-32 tx-bold">Validation Updates</p>
           </div>
           <div>
             <ul class="nav nav-line" id="myTab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link tab active" id="Pending-tab" data-toggle="tab" href="#Pending" role="tab" aria-controls="Pending" aria-selected="true">Pending <span class="tx-13 pd-l-5 rounded-circle badge">(7)</span></a>
+                <a class="nav-link tab active" id="Cleared-tab" data-toggle="tab" href="#Cleared" role="tab" aria-controls="Cleared" aria-selected="true">Cleared validation <span class="tx-13 pd-l-5 rounded-circle badge">(7)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link tab" id="Archived-tab" data-toggle="tab" href="#Archived" role="tab" aria-controls="Archived" aria-selected="false">Archived <span class="tx-13 pd-l-5">(7)</span></a>
+                <a class="nav-link tab" id="Sent-tab" data-toggle="tab" href="#Sent" role="tab" aria-controls="Sent" aria-selected="false">Sent validation <span class="tx-13 pd-l-5">(7)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tab" id="Appraised-tab" data-toggle="tab" href="#Appraised" role="tab" aria-controls="Appraised" aria-selected="false">Appraised validation <span class="tx-13 pd-l-5">(27)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tab" id="Deferred-tab" data-toggle="tab" href="#Deferred" role="tab" aria-controls="Deferred" aria-selected="false">Deferred <span class="tx-13 pd-l-5">(27)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tab" id="Approved-tab" data-toggle="tab" href="#Approved" role="tab" aria-controls="Approved" aria-selected="false">Approved <span class="tx-13 pd-l-5">(27)</span></a>
               </li>
             </ul>
             <div class="tab-content bd-t-0 pd-t-20" id="myTabContent">
-              <div class="tab-pane fade show active" id="Pending" role="tabpanel" aria-labelledby="Pending-tab">
+              <div class="tab-pane fade show active" id="Cleared" role="tabpanel" aria-labelledby="Cleared-tab">
                 <div class="card p-3">
                   <div class="table-responsive">
                     <table class="table" id="tableData">
@@ -98,10 +106,12 @@
                         <tr>
                           <th scope="col">SN</th>
                           <th scope="col">STAFF ID</th>
-                          <th scope="col">STAFF NAME</th>
-                          <th scope="col">TYPE</th>
-                          <th scope="col">DATE FLAGGED</th>
-                          <th scope="col">FLAGGED BY</th>
+                          <th scope="col">NAME</th>
+                          <th scope="col">CONFIRMATION DUE DATE</th>
+                          <th scope="col">CBN</th>
+                          <th scope="col">ACADEMIC</th>
+                          <th scope="col">EMPLOYER</th>
+                          <th scope="col">APPRAISAL</th>
                           <th></th>
                         </tr>
                       </thead>
@@ -113,12 +123,14 @@
                               <label class="custom-control-label" for="customCheck1">1</label>
                             </div>
                             </th>
-                          <td class="tx-bold">A29840</td>
-                          <td class="tx-bold">Olaide Sulaimon</td>
-                          <td>Academic</td>
-                          <td>12th Aug 2020</td>
-                          <td>Uche Nwaoha</td>
-                          <td><a href="./resolve.html" class="btn btn-sm btn-outline pd-y-2">Resolve</a></td>
+                          <td>A29480</td>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>Dec 5, 2020 (in 8 weeks)</td>
+                          <td> - </td>
+                          <td>&#x2713;</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td><a href="./cleared.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
                         </tr>
                         <tr>
                           <th scope="row">
@@ -127,12 +139,14 @@
                               <label class="custom-control-label" for="customCheck2">2</label>
                             </div>
                             </th>
-                          <td class="tx-bold">A29840</td>
-                          <td class="tx-bold">Olaide Sulaimon</td>
-                          <td>CBN</td>
-                          <td>12th Aug 2020</td>
-                          <td>Uche Nwaoha</td>
-                          <td><a href="./resolve.html" class="btn btn-sm btn-outline pd-y-2">Resolve</a></td>
+                            <td>A29480</td>
+                            <td class="tx-bold">Chimamanda Ifunanya</td>
+                            <td>Dec 5, 2020 (in 8 weeks)</td>
+                            <td> - </td>
+                            <td>&#x2713;</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td><a href="./cleared.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
                         </tr>
                         <tr>
                           <th scope="row">
@@ -141,12 +155,14 @@
                               <label class="custom-control-label" for="customCheck3">3</label>
                             </div>
                             </th>
-                          <td class="tx-bold">A29840</td>
-                          <td class="tx-bold">Olaide Sulaimon</td>
-                          <td>Employer</td>
-                          <td>12th Aug 2020</td>
-                          <td>Uche Nwaoha</td>
-                          <td><a href="./resolve.html" class="btn btn-sm btn-outline pd-y-2">Resolve</a></td>
+                            <td>A29480</td>
+                            <td class="tx-bold">Chimamanda Ifunanya</td>
+                            <td>Dec 5, 2020 (in 8 weeks)</td>
+                            <td>&#x2713;</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td><a href="./cleared.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
                         </tr>
                         <tr>
                           <th scope="row">
@@ -155,69 +171,16 @@
                               <label class="custom-control-label" for="customCheck4">4</label>
                             </div>
                             </th>
-                          <td class="tx-bold">A29840</td>
-                          <td class="tx-bold">Olaide Sulaimon</td>
-                          <td>Academic</td>
-                          <td>12th Aug 2020</td>
-                          <td>Uche Nwaoha</td>
-                          <td><a href="./resolve.html" class="btn btn-sm btn-outline pd-y-2">Resolve</a></td>
+                            <td>A29480</td>
+                            <td class="tx-bold">Chimamanda Ifunanya</td>
+                            <td>Dec 5, 2020 (in 8 weeks)</td>
+                            <td> - </td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>&#x2713;</td>
+                            <td><a href="./cleared.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
                         </tr>
-                        <tr>
-                          <th scope="row">
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="customCheck5">
-                              <label class="custom-control-label" for="customCheck5">5</label>
-                            </div>
-                            </th>
-                          <td class="tx-bold">A29840</td>
-                          <td class="tx-bold">Olaide Sulaimon</td>
-                          <td>Academic</td>
-                          <td>12th Aug 2020</td>
-                          <td>Uche Nwaoha</td>
-                          <td><a href="./resolve.html" class="btn btn-sm btn-outline pd-y-2">Resolve</a></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="customCheck6">
-                              <label class="custom-control-label" for="customCheck6">6</label>
-                            </div>
-                            </th>
-                          <td class="tx-bold">A29840</td>
-                          <td class="tx-bold">Olaide Sulaimon</td>
-                          <td>CBN</td>
-                          <td>12th Aug 2020</td>
-                          <td>Uche Nwaoha</td>
-                          <td><a href="./resolve.html" class="btn btn-sm btn-outline pd-y-2">Resolve</a></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="customCheck7">
-                              <label class="custom-control-label" for="customCheck7">7</label>
-                            </div>
-                            </th>
-                          <td class="tx-bold">A29840</td>
-                          <td class="tx-bold">Olaide Sulaimon</td>
-                          <td>CBN</td>
-                          <td>12th Aug 2020</td>
-                          <td>Uche Nwaoha</td>
-                          <td><a href="./resolve.html" class="btn btn-sm btn-outline pd-y-2">Resolve</a></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="customCheck8">
-                              <label class="custom-control-label" for="customCheck8">8</label>
-                            </div>
-                            </th>
-                          <td class="tx-bold">A29840</td>
-                          <td class="tx-bold">Olaide Sulaimon</td>
-                          <td>Academic</td>
-                          <td>12th Aug 2020</td>
-                          <td>Uche Nwaoha</td>
-                          <td><a href="./resolve.html" class="btn btn-sm btn-outline pd-y-2">Resolve</a></td>
-                        </tr>
+                        
                       </tbody>
                     </table>
                   </div>
@@ -225,18 +188,20 @@
                 </div>
                 
               </div>
-              <div class="tab-pane fade" id="Archived" role="tabpanel" aria-labelledby="Archived-tab">
+              <div class="tab-pane fade" id="Sent" role="tabpanel" aria-labelledby="Sent-tab">
                 
                 <div class="card p-3">
                   <div class="table-responsive">
-                    <table class="table" id="ArchivedData"> 
+                    <table class="table" id="SentData"> 
                       <thead>
                         <tr>
                           <th scope="col">SN</th>
+                          <th scope="col">NAME</th>
+                          <th scope="col">GRADE</th>
                           <th scope="col">STAFF ID</th>
-                          <th scope="col">STAFF NAME</th>
-                          <th scope="col">DATE ARCHIVED</th>
-                          <th scope="col">FLAGGED BY</th>
+                          <th scope="col">BATCH NUMBER</th>
+                          <th scope="col">TYPE OF HIRE</th>
+                          <th scope="col">PAST Sent</th>
                           <th></th>
                         </tr>
                       </thead>
@@ -248,11 +213,13 @@
                               <label class="custom-control-label" for="customCheck1">1</label>
                             </div>
                             </th>
-                          <td class="tx-bold">A29840</td>
-                          <td class="tx-bold">Olaide Sulaimon</td>
-                          <td>12th Aug 2020</td>
-                          <td>Uche Nwaoha</td>
-                          <td><a href="./view.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td>R/HCM/CONF/Appraised001</td>
+                          <td>New</td>
+                          <td>The Tony Elumelu Foundation</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
                         </tr>
                         <tr>
                           <th scope="row">
@@ -261,11 +228,13 @@
                               <label class="custom-control-label" for="customCheck2">2</label>
                             </div>
                             </th>
-                          <td class="tx-bold">A29840</td>
-                          <td class="tx-bold">Olaide Sulaimon</td>
-                          <td>12th Aug 2020</td>
-                          <td>Uche Nwaoha</td>
-                          <td><a href="./view.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td>R/HCM/CONF/Appraised001</td>
+                          <td>New</td>
+                          <td>Access Bank</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
                         </tr>
                         <tr>
                           <th scope="row">
@@ -274,11 +243,13 @@
                               <label class="custom-control-label" for="customCheck3">3</label>
                             </div>
                             </th>
-                          <td class="tx-bold">A29840</td>
-                          <td class="tx-bold">Olaide Sulaimon</td>
-                          <td>12th Aug 2020</td>
-                          <td>Uche Nwaoha</td>
-                          <td><a href="./view.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td >R/HCM/CONF/Appraised001</td>
+                          <td>New</td>
+                          <td>Ahmadu Bello University, Zaria</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
                         </tr>
                         <tr>
                           <th scope="row">
@@ -287,64 +258,81 @@
                               <label class="custom-control-label" for="customCheck4">4</label>
                             </div>
                             </th>
-                          <td class="tx-bold">A29840</td>
-                          <td class="tx-bold">Olaide Sulaimon</td>
-                          <td>12th Aug 2020</td>
-                          <td>Uche Nwaoha</td>
-                          <td><a href="./view.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td >R/HCM/CONF/Appraised001</td>
+                          <td>Experienced</td>
+                          <td>Ahmadu Bello University, Zaria</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="Appraised" role="tabpanel" aria-labelledby="Appraised-tab">
+                
+                <div class="card p-3">
+                  <div class="table-responsive">
+                    <table class="table" id="AppraisedData"> 
+                      <thead>
+                        <tr>
+                          <th scope="col">SN</th>
+                          <th scope="col">NAME</th>
+                          <th scope="col">BATCH NUMBER</th>
+                          <th scope="col">GRADE</th>
+                          <th scope="col">STAFF ID</th>
+                          <th scope="col">TYPE OF HIRE</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck1">
+                              <label class="custom-control-label" for="customCheck1">1</label>
+                            </div>
+                            </th>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>R/HCM/CONF/Appraised001</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td>Experienced</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
                         </tr>
                         <tr>
                           <th scope="row">
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="customCheck5">
-                              <label class="custom-control-label" for="customCheck5">5</label>
+                              <input type="checkbox" class="custom-control-input" id="customCheck2">
+                              <label class="custom-control-label" for="customCheck2">2</label>
                             </div>
                             </th>
-                          <td class="tx-bold">A29840</td>
-                          <td class="tx-bold">Olaide Sulaimon</td>
-                          <td>12th Aug 2020</td>
-                          <td>Uche Nwaoha</td>
-                          <td><a href="./view.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td>R/HCM/CONF/Appraised001</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td>New</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
                         </tr>
                         <tr>
                           <th scope="row">
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="customCheck6">
-                              <label class="custom-control-label" for="customCheck6">6</label>
+                              <input type="checkbox" class="custom-control-input" id="customCheck3">
+                              <label class="custom-control-label" for="customCheck3">3</label>
                             </div>
                             </th>
-                          <td class="tx-bold">A29840</td>
-                          <td class="tx-bold">Olaide Sulaimon</td>
-                          <td>12th Aug 2020</td>
-                          <td>Uche Nwaoha</td>
-                          <td><a href="./view.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                          <td class="tx-bold">Chimamanda Ifunanya</td>
+                          <td >R/HCM/CONF/Appraised001</td>
+                          <td>ET</td>
+                          <td>A29480</td>
+                          <td>New</td>
+                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
                         </tr>
-                        <tr>
-                          <th scope="row">
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="customCheck7">
-                              <label class="custom-control-label" for="customCheck7">7</label>
-                            </div>
-                            </th>
-                          <td class="tx-bold">A29840</td>
-                          <td class="tx-bold">Olaide Sulaimon</td>
-                          <td>12th Aug 2020</td>
-                          <td>Uche Nwaoha</td>
-                          <td><a href="./view.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="customCheck8">
-                              <label class="custom-control-label" for="customCheck8">8</label>
-                            </div>
-                            </th>
-                          <td class="tx-bold">A29840</td>
-                          <td class="tx-bold">Olaide Sulaimon</td>
-                          <td>12th Aug 2020</td>
-                          <td>Uche Nwaoha</td>
-                          <td><a href="./view.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
-                        </tr>
+                        
                       </tbody>
                     </table>
                   </div>
@@ -374,7 +362,7 @@
     <script src="../../assets/js/drop.js"></script>
     <script src="../../assets/js/dropzone.js"></script>
     <script>
-      $('#tableData,#ArchivedData').DataTable({
+      $('#tableData,#SentData,#AppraisedData').DataTable({
         responsive: true,
         language: {
           searchPlaceholder: 'Search...',
