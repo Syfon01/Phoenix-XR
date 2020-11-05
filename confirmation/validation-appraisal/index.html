@@ -55,7 +55,7 @@
           <li class="nav-item p-14"><a href="../validation-request/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/requests.png" class="pd-r-15"/> <span>Validation Requests</span></a></li>
           <li class="nav-item  p-14"><a href="../validation-updates/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/updates.png" class="pd-r-15"/> <span>Validation Updates</span></a></li>
           <li class="nav-item p-14"><a href="../validation-issues/index.html" class="nav-link  text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Validation Issues</span></a></li>
-          <li class="nav-item active p-14"><a href="../validation-appraisal/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/validate-appraisal.png" class="pd-r-15"/> <span>Validation Issues</span></a></li>
+          <li class="nav-item active p-14"><a href="../validation-appraisal/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/validate-appraisal.png" class="pd-r-15"/> <span>Validation Appraisal</span></a></li>
           <li class="nav-item p-14"><a href="../management-confirmation/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/Manager.png" class="pd-r-15"/> <span>Management Confirmation</span></a></li>
           <li class="nav-item p-14"><a href="../confirmation-approval/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/confirmation.png" class="pd-r-15"/> <span>Confirmation Listing</span></a></li>
           <li class="nav-item p-14"><a href="../manage-contact/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/contacts.png" class="pd-r-15"/> <span>Manage Contacts</span></a></li>
@@ -77,7 +77,7 @@
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
           <div class="mt-2">
-            <p class="p-32 tx-bold">Validation Updates</p>
+            <p class="p-32 tx-bold">Validation Appraisal</p>
           </div>
           <div>
             <ul class="nav nav-line" id="myTab" role="tablist">
@@ -196,12 +196,10 @@
                       <thead>
                         <tr>
                           <th scope="col">SN</th>
-                          <th scope="col">NAME</th>
-                          <th scope="col">GRADE</th>
                           <th scope="col">STAFF ID</th>
-                          <th scope="col">BATCH NUMBER</th>
-                          <th scope="col">TYPE OF HIRE</th>
-                          <th scope="col">PAST Sent</th>
+                          <th scope="col">STAFF NAME</th>
+                          <th scope="col">DATE SENT</th>
+                          <th scope="col">COMPLETION STATUS</th>
                           <th></th>
                         </tr>
                       </thead>
@@ -213,13 +211,11 @@
                               <label class="custom-control-label" for="customCheck1">1</label>
                             </div>
                             </th>
+                          <td class="tx-bold">A29480</td>
                           <td class="tx-bold">Chimamanda Ifunanya</td>
-                          <td>ET</td>
-                          <td>A29480</td>
-                          <td>R/HCM/CONF/Appraised001</td>
-                          <td>New</td>
-                          <td>The Tony Elumelu Foundation</td>
-                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                          <td>Nov 7, 2020 (today)</td>
+                          <td><span class="badge badge-warning pd-y-7 px-3 p-12"> Pending</span></td>
+                          <td><a href="./sent-appraisal.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
                         </tr>
                         <tr>
                           <th scope="row">
@@ -228,14 +224,12 @@
                               <label class="custom-control-label" for="customCheck2">2</label>
                             </div>
                             </th>
-                          <td class="tx-bold">Chimamanda Ifunanya</td>
-                          <td>ET</td>
-                          <td>A29480</td>
-                          <td>R/HCM/CONF/Appraised001</td>
-                          <td>New</td>
-                          <td>Access Bank</td>
-                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
-                        </tr>
+                            <td class="tx-bold">A29480</td>
+                            <td class="tx-bold">Chimamanda Ifunanya</td>
+                            <td>Nov 7, 2020 (today)</td>
+                            <td><span class="badge badge-danger pd-y-7 px-3 p-12"> Overdue</span></td>
+                            <td><a href="./sent-appraisal.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                          </tr>
                         <tr>
                           <th scope="row">
                             <div class="custom-control custom-checkbox">
@@ -243,14 +237,12 @@
                               <label class="custom-control-label" for="customCheck3">3</label>
                             </div>
                             </th>
-                          <td class="tx-bold">Chimamanda Ifunanya</td>
-                          <td>ET</td>
-                          <td>A29480</td>
-                          <td >R/HCM/CONF/Appraised001</td>
-                          <td>New</td>
-                          <td>Ahmadu Bello University, Zaria</td>
-                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
-                        </tr>
+                            <td class="tx-bold">A29480</td>
+                            <td class="tx-bold">Chimamanda Ifunanya</td>
+                            <td>Nov 7, 2020 (today)</td>
+                            <td><span class="badge badge-warning pd-y-7 px-3 p-12"> Pending</span></td>
+                            <td><a href="./sent-appraisal.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                          </tr>
                         <tr>
                           <th scope="row">
                             <div class="custom-control custom-checkbox">
@@ -258,14 +250,12 @@
                               <label class="custom-control-label" for="customCheck4">4</label>
                             </div>
                             </th>
-                          <td class="tx-bold">Chimamanda Ifunanya</td>
-                          <td>ET</td>
-                          <td>A29480</td>
-                          <td >R/HCM/CONF/Appraised001</td>
-                          <td>Experienced</td>
-                          <td>Ahmadu Bello University, Zaria</td>
-                          <td><a href="./update.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
-                        </tr>
+                            <td class="tx-bold">A29480</td>
+                            <td class="tx-bold">Chimamanda Ifunanya</td>
+                            <td>Nov 7, 2020 (today)</td>
+                            <td><span class="badge badge-danger pd-y-7 px-3 p-12"> Overdue</span></td>
+                            <td><a href="./sent-appraisal.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                          </tr>
                         
                       </tbody>
                     </table>
