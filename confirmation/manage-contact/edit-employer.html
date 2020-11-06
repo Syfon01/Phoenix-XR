@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Confirmation Module</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/confirmation.css">
+    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+
+    
+
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-700">Confirmation Team Lead </p>
+            </div>
+          </div>
+          
+          </div><!-- aside-loggedin -->
+        <ul class="nav nav-aside">
+         
+          <li class="nav-item p-14"><a href="../validation-request/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/requests.png" class="pd-r-15"/> <span>Validation Requests</span></a></li>
+          <li class="nav-item p-14"><a href="../validation-updates/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/updates.png" class="pd-r-15"/> <span>Validation Updates</span></a></li>
+          <li class="nav-item p-14"><a href="../validation-issues/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Validation Issues</span></a></li>
+          <li class="nav-item p-14"><a href="../validation-appraisal/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/validate-appraisal.png" class="pd-r-15"/> <span>Validation Appraisal</span></a></li>
+          <li class="nav-item p-14"><a href="../management-confirmation/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/Manager.png" class="pd-r-15"/> <span>Management Confirmation</span></a></li>
+          <li class="nav-item p-14"><a href="../confirmation-approval/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/confirmation.png" class="pd-r-15"/> <span>Confirmation Listing</span></a></li>
+          <li class="nav-item active p-14"><a href="../manage-contact/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/contacts.png" class="pd-r-15"/> <span>Manage Contacts</span></a></li>
+        
+        </ul>
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <p class="p-14 mb-0 pt-2">Manage Contact</p>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/new.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <div class="col-md-8 mx-auto">
+            <p class="p-32 font-weight-bold">Edit Contact</p>
+
+            <form>
+              <div class="form-group">
+                <label for="" class="d-block tx-bold">Contact Type</label>
+                <select class="custom-select">
+                  <option value="">Past Employer</option>
+                  <option value="">Past Employer</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="" class="d-block tx-bold">Contact Personnel</label>
+                <input type="text" class="form-control" placeholder="Head HR">
+              </div>
+              <div class="form-group">
+                <label for="" class="d-block tx-bold">Organisation</label>
+                <input type="text" class="form-control" placeholder="The Tony Elumelu Foundation">
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                   <label for="" class="tx-bold">Email Address</label>
+                  <input type="email" class="form-control" id="" placeholder="hr@tonyelumelufoundation.org">
+                  <p class="text-primary p-14 tx-bold mt-2 mb-0">Add another email address</p>
+                
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="" class="tx-bold">Phone Number</label>
+                  <input type="text" class="form-control" id="inputPassword4" placeholder="077-543500">
+                </div>
+              </div>
+              <div class="form-group mb-5">
+                <label for="" class="d-block tx-bold">State</label>
+                <input type="text" class="form-control" placeholder="Lagos, Nigeria">
+              </div>
+              <hr class="mt-5">
+              <div class="d-flex justify-content-between">
+              <button class="btn btn-outline" type="cancel">Cancel</button>
+
+                <button class="btn btn-primary" type="submit">Save</button>
+              </div>
+              
+            </form>
+          </div>  
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.aside.js"></script>
+    <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="../../assets/js/drop.js"></script>
+    <script src="../../assets/js/dropzone.js"></script>
+    <script>
+      $('#tableData').DataTable({
+        responsive: true,
+        language: {
+          searchPlaceholder: 'Search...',
+          sSearch: '',
+          lengthMenu: '_MENU_ items/page',
+        }
+      });
+    </script>
+
+  </body>
+</html>
