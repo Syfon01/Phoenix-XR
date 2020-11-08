@@ -309,3 +309,11 @@ font-weight: 400!important;
 .box-height{
   min-height: 40vh;
 }
+.card-head{
+  background-color: #F9F9FA!important;
+  padding:12px 15px!important;
+}
+
+.card-height{
+  min-height: 60vh;
+}
