@@ -68,9 +68,10 @@
         <div class="d-flex justify-content-between w-100">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-2 mg-b-0">
-              <li class="breadcrumb-item"><a href="./index.html">Validation requests</a></li>
-              <li class="breadcrumb-item"><a href="./missing-contact.html">Past Employer Missing Contacts</a></li>
-              <li class="breadcrumb-item text-gray-700" aria-current="page">Edit Contact</li>
+              <li class="breadcrumb-item"><a href="./index.html">Validation Requests</a></li>
+              <li class="breadcrumb-item"><a href="./batch.html">Batch Validation</a></li>
+              <li class="breadcrumb-item"><a href="./employer-validation.html">Employer Validation</a></li>
+              <li class="breadcrumb-item text-gray-700" aria-current="page">The Tony Elumelu Foundation</li>
             </ol>
           </nav>
           <div>
@@ -81,99 +82,47 @@
 
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
-          <div class="col-md-8 mx-auto">
-            <p class="p-32 font-weight-bold">Edit Contact</p>
+          <div class="">
+            <a href="" onclick="history.go(-1)" class="btn btn-back p-10 font-weight-bold mb-3"><i class="fas fa-arrow-left mr-1"></i>GO BACK</a>
+            <div class="row px-3 mb-0">
+              <p class="mb-0 p-32"><span class="font-weight-bold">The Tony Elumelu Foundation</span></p>
+            </div>
+            <hr/>
+          </div>
+          
 
-            <form>
+          <div class="row mt-5">
+            <div class="col-12 col-lg-4 col-xl-4">
               <div class="card">
-                <div class="card-body py-0">
-                    <div class="nav nav-tabs bd-b-0" role="tablist">
-                      <div class="row w-100">
-                      <div class="col-md-6 col-6 py-3">
-                          <div class="custom-control custom-radio">
-                            <input type="radio" name="intervaltype" id="upload" class="custom-control-input" checked data-target="#contact"/>
-                          <label for="upload" class="p-16 custom-control-label font-weight-bold mb-0">Upload contact list</label>
-                          <p class="p-12 mb-0 ">Supported file format are CSV and XLX</p> 
-                          </div>
-                          
-                      </div>
-                      <div class="col-md-6 col-6 bd-l py-3">
-                        <div class="custom-control custom-radio">
-                          <input type="radio" id="fill-contact" name="intervaltype" class="custom-control-input" data-target="#fill">
-                          <label class="custom-control-label p-16 font-weight-bold mb-0" for="fill-contact">Fill contact details</label>
-                          <p class="p-12 mb-0">Enter school details</p>
-                        </div>
-                      
-                      </div>
-                    </div>
-                      </div>
+                <div class="card-body">
+                  <h4 class="tx-bold">The Tony Elumelu Foundation</h4>
+                  <p class="p-14"><i data-feather="mail" class="icon-sm mr-1"></i> hr@tonyelumelufoundation.org</p>
+                  <form action="" method="post" class="mt-4">
+                    <label for="body" class="p-14 tx-semibold">Body of email </label>
+                    <textarea class="form-control" rows="5"></textarea>
+                  </form>
+                  <div class="modal-footer bd-0">
+                    <button class="btn btn-outline" type="cancel">Cancel</button>
+                    <button class="btn btn-primary" type="submit">Send</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-8 col-xl-8">
+              <div>
+                <div class="bg-accent p-3">
+                  <p class="p-16 tx-bold mb-0">List of PDF for The Tony Elumelu Foundation</p>
+                  <p class="p-14 mb-0">R/HCM/CONF/FER</p>
+                </div>
+                <div class="bg-blue bd-b-0 box-height p-3">
 
                 </div>
               </div>
-              <hr/>
-                <div class="tab-content">
-                    <div id="contact" class="tab-pane active">
-                      <div class="form-group mt-4">
-                        <p class="p-16 font-weight-bold my-0">Upload contact list</p>
-                        <label for="csv" class="p-12">Supported file format are CSV and XLX
-                        </label>
-                        <div class="form-drop mt-2">
-                          <div class="drop-zone pd-20">
-                            <div class="cell"> 
-                              <div class="drop-zone__prompt">
-                                <p class="p-14 my-0 text-gray-700">Drag and drop or click to upload</p>
-                              </div>
-                              <input type="file" name="myFile" class="drop-zone__input">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-    
-                    </div>
-                    
-                    <div id="fill" class="tab-pane">
-                    <form class="mt-3">
-                      <div class="form-group">
-                      <label for="" class="d-block tx-bold">Contact Type</label>
-                      <select class="custom-select">
-                        <option value="">Past Employer</option>
-                        <option value="">Past Employer</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="" class="d-block tx-bold">Contact Personnel</label>
-                      <input type="text" class="form-control" placeholder="Head HR">
-                    </div>
-                    <div class="form-group">
-                      <label for="" class="d-block tx-bold">Organisation</label>
-                      <input type="text" class="form-control" placeholder="The Tony Elumelu Foundation">
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                         <label for="" class="tx-bold">Email Address</label>
-                        <input type="email" class="form-control" id="" placeholder="hr@tonyelumelufoundation.org">
-                        <p class="text-primary p-14 tx-bold mt-2 mb-0">Add another email address</p>
-                      
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="" class="tx-bold">Phone Number</label>
-                        <input type="text" class="form-control" id="inputPassword4" placeholder="077-543500">
-                      </div>
-                    </div>
-                    <div class="form-group mb-5">
-                      <label for="" class="d-block tx-bold">State</label>
-                      <input type="text" class="form-control" placeholder="Lagos, Nigeria">
-                    </div>
-                    <hr class="mt-5">
-                    <div class="d-flex justify-content-between">
-                    <button class="btn btn-outline" type="cancel">Cancel</button>
-      
-                      <button class="btn btn-primary" type="submit">Save</button>
-                    </div>
-                  </div>
-                </div>
-            </form>
-          </div>  
+            </div>
+          </div>
+          
+           
+                
         </div>
       </div>
     </div>
@@ -203,12 +152,6 @@
           lengthMenu: '_MENU_ items/page',
         }
       });
-      $(document).ready(function () {
-        $('input[name="intervaltype"]').click(function () {
-            $(this).tab('show');
-            $(this).removeClass('active');
-        });
-      })
     </script>
 
   </body>
