@@ -177,10 +177,110 @@
                     <div class="row px-3 mb-0">
                       <h4><span class="font-weight-bold">Appraisal Confirmation</span></h4>
                     <p class="mb-0"><span class="badge badge-warning pd-y-5 px-3 p-14 ml-2 text-uppercase">pending</span></p>
-                    <p class="mb-0"><span class="badge badge-danger pd-y-5 px-3 p-14 ml-2 text-uppercase">overdue</span></p>
                     </div>
                     <div class="card mt-3">
-                      <div class="card-body">
+                      <div class="card-body-inner">
+                        <div class="row">
+                          <div class="col-md-3 col-xl-3 col-7 pr-0">
+                            <div class="row">
+                              <div class="col-5 col-xl-5 pr-0">
+                                <h3 class="mb-0 tx-bold">74%</h3>
+                              </div>
+                              <div class="col-7 col-xl-7 pl-0">
+                                <p class="mb-0 p-14 ">Appraisal Score</p>
+                              </div>
+
+                            </div>
+                          </div>
+                          <div class="col-md-3 col-xl-4 col-5">
+                            <label for="date" class="mb-0">Date Submitted</label>
+                            <p class="p-14 mb-0 tx-bold">Nov 2, 2020 (2 days ago)</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <form action="" class="my-4">
+                      <div class="row">
+                        <div class="col-md-4 col-6">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                            <label class="custom-control-label p-12 tx-bold" for="customRadio1">Custom Appraisal</label>
+                          </div>
+                        </div>
+  
+                        <div class="col-md-4 col-6">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label p-12 tx-bold" for="customRadio2">Defer Appraisal</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group my-4">
+                        <label for="comment" class="tx-medium mb-0">Enter Additional comments</label>
+                        <textarea name="" id="" rows="4" class="form-control"></textarea>
+                      </div>
+                      <button class="btn btn-primary w-100" >Update</button>
+                    </form>
+                  </div>
+                </div>
+
+                <!--------------------------------
+                   passed card 
+                  ---------------------------------= -->
+                <div class="card mt-5">
+                  <div class="card-body">
+                   <div>
+                     <div class="row px-3 mb-0">
+                       <h3><span class="font-weight-bold">Appraisal Status</span></h3>
+                     <p class="mb-0"><span class="badge badge-green pd-y-5 px-3 p-14 ml-2 text-uppercase">passed</span></p>
+
+                     </div>
+                     <div class="card mt-3">
+                       <div class="card-body-inner py-1">
+                         <div class="row">
+                           <div class="col-md-4 col-xl-4 col-12 py-2">
+                             <p class="p-14 mb-0">Score</p>
+                             <p class="p-14 mb-0 font-weight-bold">74%</p>
+                           </div>
+                           <div class="col-md-4 col-xl-4 col-12 py-2">
+                             <p class="p-14 mb-0">Confirmation due date</p>
+                             <p class="p-14 mb-0 font-weight-bold">Nov 2, 2020 (2 days ago)</p>
+                           </div>
+                           <div class="col-md-4 col-xl-4 col-12 py-2">
+                             <p class="p-14 mb-0">Date validated</p>
+                             <p class="p-14 mb-0 font-weight-bold">Oct 28, 2020 (5 days ago)</p>
+                           </div>
+                         </div>
+                           <div class="row">
+                             <div class="col-md-4 col-xl-4 col-12 py-2">
+                               <p class="p-14 mb-0">Submitted by</p>
+                               <p class="p-14 mb-0 font-weight-bold">Yetunde Madu</p>
+                             </div>
+                           </div>
+                       </div>
+                     </div>
+                   </div>
+                   
+                   <div class="mt-4">
+                     <p class="p-14 font-weight-bold mb-0">Comments</p>
+                   <p class="p-14 col-12 col-lg-10 px-0">Enthusiastically visualize team building intellectual capital through global platforms. 
+                     Energistically impact pandemic innovation through e-business growth </p>
+                   </div>
+                   
+                  </div>
+                </div>
+
+                <!-------------------------------------
+                   pending card 
+                   ------------------------------------->
+                <div class="card mt-5">
+                  <div class="card-body">
+                    <div class="row px-3 mb-0">
+                      <h4><span class="font-weight-bold">Appraisal Confirmation</span></h4>
+                    <p class="mb-0"><span class="badge badge-warning pd-y-5 px-3 p-14 ml-2 text-uppercase">pending</span></p>
+                    </div>
+                    <div class="card mt-3">
+                      <div class="card-body-inner">
                         <div class="row">
                           <div class="col-md-3 col-xl-3 col-7 pr-0">
                             <div class="row">
@@ -211,7 +311,7 @@
   
                         <div class="col-md-4 col-6">
                           <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" checked>
                             <label class="custom-control-label p-12 tx-bold" for="customRadio2">Defer Appraisal</label>
                           </div>
                         </div>
@@ -228,17 +328,19 @@
                   </div>
                 </div>
 
-                <div class="card mt-3">
+                <!------------------------------------
+                   probation card  
+                  ------------------------------------->
+                <div class="card mt-5">
                   <div class="card-body">
                    <div>
                      <div class="row px-3 mb-0">
                        <h3><span class="font-weight-bold">Appraisal Status</span></h3>
-                     <p class="mb-0"><span class="badge badge-green pd-y-5 px-3 p-14 ml-2 text-uppercase">passed</span></p>
                      <p class="mb-0"><span class="badge badge-danger pd-y-5 px-3 p-14 ml-2 text-uppercase">probation</span></p>
 
                      </div>
                      <div class="card mt-3">
-                       <div class="card-body py-1">
+                       <div class="card-body-inner py-1">
                          <div class="row">
                            <div class="col-md-4 col-xl-4 col-12 py-2">
                              <p class="p-14 mb-0">Score</p>
@@ -253,7 +355,6 @@
                              <p class="p-14 mb-0 font-weight-bold">Oct 28, 2020 (5 days ago)</p>
                            </div>
                          </div>
-       
                            <div class="row">
                              <div class="col-md-4 col-xl-4 col-12 py-2">
                                <p class="p-14 mb-0">Submitted by</p>
@@ -263,16 +364,15 @@
                        </div>
                      </div>
                    </div>
-                   
                    <div class="mt-4">
                      <p class="p-14 font-weight-bold mb-0">Comments</p>
                    <p class="p-14 col-12 col-lg-10 px-0">Enthusiastically visualize team building intellectual capital through global platforms. 
                      Energistically impact pandemic innovation through e-business growth </p>
                    </div>
-                   
                   </div>
                 </div>
               </div>
+
               <div class="tab-pane fade" id="Academic" role="tabpanel" aria-labelledby="Academic-tab">
                 <div class="card">
                   <div class="card-body">
@@ -282,7 +382,7 @@
                      <p class="mb-0"><span class="badge badge-green pd-y-5 px-3 p-14 ml-2 text-uppercase">confirmed</span></p>
                      </div>
                      <div class="card mt-3">
-                       <div class="card-body py-1">
+                       <div class="card-body-inner py-1">
                          <div class="row">
                            <div class="col-md-4 col-xl-4 col-12 py-2">
                              <p class="p-14 mb-0">Batch ID  </p>
@@ -311,7 +411,6 @@
                        </div>
                      </div>
                    </div>
-                   
                    <div class="mt-4">
                      <p class="p-14 font-weight-bold mb-0">Comments</p>
                    <p class="p-14 col-12 col-lg-10 px-0">Enthusiastically visualize team building intellectual capital through global platforms. 
@@ -373,7 +472,7 @@
                      <p class="mb-0"><span class="badge badge-green pd-y-5 px-3 p-14 ml-2 text-uppercase">confirmed</span></p>
                      </div>
                      <div class="card mt-3">
-                       <div class="card-body py-1">
+                       <div class="card-body-inner py-1">
                          <div class="row">
                            <div class="col-md-4 col-xl-4 col-12 py-2">
                              <p class="p-14 mb-0">Batch ID  </p>
@@ -451,7 +550,7 @@
                      <p class="mb-0"><span class="badge badge-green pd-y-5 px-3 p-14 ml-2 text-uppercase">confirmed</span></p>
                      </div>
                      <div class="card mt-3">
-                       <div class="card-body py-1">
+                       <div class="card-body-inner py-1">
                          <div class="row">
                            <div class="col-md-4 col-xl-4 col-12 py-2">
                              <p class="p-14 mb-0">Batch ID  </p>
@@ -531,7 +630,7 @@
                      <p class="mb-0"><span class="badge badge-green pd-y-5 px-3 p-14 ml-2 text-uppercase">confirmed</span></p>
                      </div>
                      <div class="card mt-3">
-                       <div class="card-body py-1">
+                       <div class="card-body-inner py-1">
                          <div class="row">
                            <div class="col-md-4 col-xl-4 col-12 py-2">
                              <p class="p-14 mb-0">Batch ID  </p>

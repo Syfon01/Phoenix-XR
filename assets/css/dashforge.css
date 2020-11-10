@@ -4199,12 +4199,12 @@ a.close.disabled {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   border-bottom: 1px solid rgba(72, 94, 144, 0.16);
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem; }
   .modal-header .close {
-    padding: 1rem 1rem;
+    padding: 0.9rem;
     margin: -1rem -1rem -1rem auto; }
 
 .modal-title {
@@ -4214,7 +4214,7 @@ a.close.disabled {
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 1rem 1.5rem; }
+  padding: 1.5rem; }
 
 .modal-footer {
   display: flex;
@@ -7414,16 +7414,16 @@ strong {
   border-color: rgba(72, 94, 144, 0.16); }
 
 .card-header {
-  padding: 15px 24px; }
+  padding: 24px; }
   @media (min-width: 576px) {
     .card-header {
-      padding:15px 24px; } }
+      padding:24px; } }
 
 .card-body {
-  padding:15px 24px; }
+  padding:24px; }
   @media (min-width: 576px) {
     .card-body {
-      padding:15px 24px; } }
+      padding:24px; } }
 
 .card-img {
   border-radius: 0.25rem; }
