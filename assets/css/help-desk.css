@@ -8,3 +8,17 @@
   color:#6E84A3!important;
   ;
 }
+.card-body{
+  padding:14px!important;
+}
+.card-header{
+  padding:14px!important;
+}
+
+.card-help .card-body {
+  text-align: justify!important;
+}
+.btn-sm{
+  padding-top:5px!important ;
+  padding-bottom: 5px!important;
+}
