@@ -15,8 +15,12 @@
   padding:14px!important;
 }
 
+.card-body-height{
+  min-height: 125px;
+}
 .card-help .card-body {
   text-align: justify!important;
+  align-items: flex-start!important;
 }
 .btn-sm{
   padding-top:5px!important ;
