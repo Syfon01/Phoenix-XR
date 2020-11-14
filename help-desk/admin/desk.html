@@ -19,6 +19,7 @@
 
     <!-- Page CSS -->
     <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/help-desk.css">
     <link rel="stylesheet" href="../../assets/css/dashforge.css">
 
     <style>
@@ -65,6 +66,7 @@
             </ul>
           </div>
         </div><!-- aside-loggedin -->
+
         <ul class="nav nav-aside">
           <li class="nav-item  p-14"><a href="./index.html" class="nav-link text-gray-700"><i data-feather="help-circle"></i><span>Help Desk and FAQ</span></a></li>
           <li class="nav-item active p-14"><a href="./desk.html" class="nav-link active text-gray-700"><i data-feather="help-circle"></i><span>Create Help Desk Unit</span></a></li>
@@ -86,119 +88,43 @@
 
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
-          <div class="col-md-7 mx-auto">
-            <h2 class="p-32 font-weight-bold">FAQ</h2>
+                    <div class="col-md-7 mx-auto">
+            <h2 class="p-32 font-weight-bold">Create Help Desk Unit</h2>
 
-            <div>
-              <ul class="nav nav-line mt-5" id="myTab" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link tab active" id="Academic-tab" data-toggle="tab" href="#Academic" role="tab" aria-controls="Academic" aria-selected="true">Add FAQ </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link tab" id="Companies-tab" data-toggle="tab" href="#Companies" role="tab" aria-controls="Companies" aria-selected="false">Add FAQ category </a>
-                </li>
-              </ul>
-              <div class="tab-content bd-t-0 pd-t-20" id="myTabContent">
-                <div class="tab-pane fade show active" id="Academic" role="tabpanel" aria-labelledby="Academic-tab">
-                  <div class="card ">
-                    <div class="card-body py-15">
-                      <form>
-                      <div class="form-group">
-                        <label for="" class="d-block tx-bold">Question</label>
-                        <textarea name="" class="form-control" id=""  rows="3"></textarea>
-                      </div>
-                      <div class="form-group">
-                        <label for="" class="d-block tx-bold">Answer</label>
-                        <textarea name="" class="form-control" id="" rows="3"></textarea>
-                      </div>
+              <div class="card mt-5">
+                <div class="card-body py-15">
+                  <form>
+                  <div class="form-group">
+                    <label for="" class="d-block tx-bold">Name</label>
+                    <input type="text" class="form-control" placeholder="Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="d-block tx-bold">Job description</label>
+                    <input type="text" class="form-control" placeholder="HR personnel">
+                  </div>
+                    <div class="form-group">
+                       <label for="" class="tx-bold">Email Createress</label>
+                      <input type="email" class="form-control" id="" placeholder="hr@tonyelumelufoundation.org">
+                    
+                    </div>
+                    <hr class="mt-5">
+                  <div class="row">
+                    <div class="col-lg-5 col-12 py-2">
+                      <button class="btn btn-outline form-control" type="cancel">Save and Create another</button>
+                    </div>
+                    <div class="col-lg-5 col-12 py-2">
+                      <button class="btn btn-outline form-control" type="cancel">Save and continue Editing</button>
 
-                      <div class="form-group">
-                        <label for="" class="d-block tx-bold">Category</label>
-                        <select class="custom-select">
-                          <option selected>Select Category</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                        
-                      </div>
-                        <div class="form-group">
-                           <label for="" class="tx-bold">Control</label>
-                          <input type="text" class="form-control" id="" placeholder="3">
-                        
-                        </div>
-                        <hr class="mt-5">
-                      <div class="row">
-                        <div class="col-lg-5 col-12 py-2">
-                          <button class="btn btn-outline form-control" type="cancel">Save and add another</button>
-                        </div>
-                        <div class="col-lg-5 col-12 py-2">
-                          <button class="btn btn-outline form-control" type="cancel">Save and continue Editing</button>
-    
-                        </div>
-                        <div class="col-lg-2 col-12 py-2">
-                          <button class="btn btn-primary form-control text-white" type="submit">Save</button>
-    
-                        </div>
-    
-                      </div>
-                    </form>
                     </div>
-                </div>                  
-                </div>
-                <div class="tab-pane fade" id="Companies" role="tabpanel" aria-labelledby="Companies-tab">
-                  
-                  <div class="card">
-                    <div class="card-body py-15">
-                      <form>
-                      <div class="form-group">
-                        <label for="" class="d-block tx-bold">Name</label>
-                        <input type="text" class="form-control" placeholder="Name">
-                      </div>
-                      <div class="form-group">
-                        <label for="" class="d-block tx-bold">Help Desk Unit</label>
-                        <select class="custom-select">
-                          <option selected>Select Unit</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                        
-                      </div>
-                        <div class="form-group">
-                           <label for="" class="tx-bold">Upvote</label>
-                          <input type="text" class="form-control" id="" placeholder="23">
-                        
-                        </div>
-                        <div class="form-group">
-                          <label for="" class="tx-bold">Downvote</label>
-                         <input type="text" class="form-control" id="" placeholder="6">
-                       
-                       </div>
-                        <hr class="mt-5">
-                      <div class="row">
-                        <div class="col-lg-5 col-12 py-2">
-                          <button class="btn btn-outline form-control" type="cancel">Save and add another</button>
-                        </div>
-                        <div class="col-lg-5 col-12 py-2">
-                          <button class="btn btn-outline form-control" type="cancel">Save and continue Editing</button>
-    
-                        </div>
-                        <div class="col-lg-2 col-12 py-2">
-                          <button class="btn btn-primary form-control text-white" type="submit">Save</button>
-    
-                        </div>
-    
-                      </div>
-                    </form>
+                    <div class="col-lg-2 col-12 py-2">
+                      <button class="btn btn-primary form-control text-white" type="submit">Save</button>
+
                     </div>
+
+                  </div>
+                </form>
                 </div>
-                </div>
-  
-            </div> 
             </div>
-
-              
           </div>
         </div>
       </div>
