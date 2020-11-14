@@ -19,6 +19,7 @@
 
     <!-- Page CSS -->
     <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/help-desk.css">
     <link rel="stylesheet" href="../../assets/css/dashforge.css">
 
     <style>
@@ -77,13 +78,19 @@
     <div class="content ht-100v pd-0">
       <div class="content-header">
         <div class="d-flex justify-content-between w-100">
-          <p class="p-14 mb-0 pt-2">Help Desk</p>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-2 mg-b-0">
+              <li class="breadcrumb-item"><a href="./index.html">Help Desk</a></li>
+              <li class="breadcrumb-item text-gray-700" aria-current="page">Create FAQ</li>
+            </ol>
+          </nav>
           <div>
-            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/New.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/new.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
           </div>
         </div>
-      </div>
-
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/New.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
           <div class="col-md-7 mx-auto">
@@ -91,62 +98,16 @@
 
             <div>
               <ul class="nav nav-line mt-5" id="myTab" role="tablist">
+                
                 <li class="nav-item">
-                  <a class="nav-link tab active" id="Academic-tab" data-toggle="tab" href="#Academic" role="tab" aria-controls="Academic" aria-selected="true">Add FAQ </a>
+                  <a class="nav-link tab active" id="faq-category-tab" data-toggle="tab" href="#faq-category" role="tab" aria-controls="faq-category" aria-selected="false">Create FAQ category </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link tab" id="Companies-tab" data-toggle="tab" href="#Companies" role="tab" aria-controls="Companies" aria-selected="false">Add FAQ category </a>
+                  <a class="nav-link tab " id="faq-tab" data-toggle="tab" href="#faq" role="tab" aria-controls="faq" aria-selected="true">Create FAQ </a>
                 </li>
               </ul>
               <div class="tab-content bd-t-0 pd-t-20" id="myTabContent">
-                <div class="tab-pane fade show active" id="Academic" role="tabpanel" aria-labelledby="Academic-tab">
-                  <div class="card ">
-                    <div class="card-body py-15">
-                      <form>
-                      <div class="form-group">
-                        <label for="" class="d-block tx-bold">Question</label>
-                        <textarea name="" class="form-control" id=""  rows="3"></textarea>
-                      </div>
-                      <div class="form-group">
-                        <label for="" class="d-block tx-bold">Answer</label>
-                        <textarea name="" class="form-control" id="" rows="3"></textarea>
-                      </div>
-
-                      <div class="form-group">
-                        <label for="" class="d-block tx-bold">Category</label>
-                        <select class="custom-select">
-                          <option selected>Select Category</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                        
-                      </div>
-                        <div class="form-group">
-                           <label for="" class="tx-bold">Control</label>
-                          <input type="text" class="form-control" id="" placeholder="3">
-                        
-                        </div>
-                        <hr class="mt-5">
-                      <div class="row">
-                        <div class="col-lg-5 col-12 py-2">
-                          <button class="btn btn-outline form-control" type="cancel">Save and add another</button>
-                        </div>
-                        <div class="col-lg-5 col-12 py-2">
-                          <button class="btn btn-outline form-control" type="cancel">Save and continue Editing</button>
-    
-                        </div>
-                        <div class="col-lg-2 col-12 py-2">
-                          <button class="btn btn-primary form-control text-white" type="submit">Save</button>
-    
-                        </div>
-    
-                      </div>
-                    </form>
-                    </div>
-                </div>                  
-                </div>
-                <div class="tab-pane fade" id="Companies" role="tabpanel" aria-labelledby="Companies-tab">
+                <div class="tab-pane fade show active" id="faq-category" role="tabpanel" aria-labelledby="faq-category-tab">
                   
                   <div class="card">
                     <div class="card-body py-15">
@@ -178,7 +139,7 @@
                         <hr class="mt-5">
                       <div class="row">
                         <div class="col-lg-5 col-12 py-2">
-                          <button class="btn btn-outline form-control" type="cancel">Save and add another</button>
+                          <button class="btn btn-outline form-control" type="cancel">Save and Create another</button>
                         </div>
                         <div class="col-lg-5 col-12 py-2">
                           <button class="btn btn-outline form-control" type="cancel">Save and continue Editing</button>
@@ -195,6 +156,54 @@
                 </div>
                 </div>
   
+                <div class="tab-pane fade " id="faq" role="tabpanel" aria-labelledby="faq-tab">
+                  <div class="card ">
+                    <div class="card-body py-15">
+                      <form>
+                      <div class="form-group">
+                        <label for="" class="d-block tx-bold">Question</label>
+                        <textarea name="" class="form-control" id=""  rows="3"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="" class="d-block tx-bold">Answer</label>
+                        <textarea name="" class="form-control" id="" rows="3"></textarea>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="" class="d-block tx-bold">Category</label>
+                        <select class="custom-select">
+                          <option selected>Select Category</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                        
+                      </div>
+                        <div class="form-group">
+                           <label for="" class="tx-bold">Control</label>
+                          <input type="text" class="form-control" id="" placeholder="3">
+                        
+                        </div>
+                        <hr class="mt-5">
+                      <div class="row">
+                        <div class="col-lg-5 col-12 py-2">
+                          <button class="btn btn-outline form-control" type="cancel">Save and Create another</button>
+                        </div>
+                        <div class="col-lg-5 col-12 py-2">
+                          <button class="btn btn-outline form-control" type="cancel">Save and continue Editing</button>
+    
+                        </div>
+                        <div class="col-lg-2 col-12 py-2">
+                          <button class="btn btn-primary form-control text-white" type="submit">Save</button>
+    
+                        </div>
+    
+                      </div>
+                    </form>
+                    </div>
+                </div>                  
+                </div>
+                
             </div> 
             </div>
 

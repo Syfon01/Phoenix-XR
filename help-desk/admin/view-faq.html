@@ -66,10 +66,9 @@
             </ul>
           </div>
         </div><!-- aside-loggedin -->
-
         <ul class="nav nav-aside">
-          <li class="nav-item  p-14"><a href="./index.html" class="nav-link text-gray-700"><i data-feather="help-circle"></i><span>Help Desk and FAQ</span></a></li>
-          <li class="nav-item active p-14"><a href="./desk.html" class="nav-link active text-gray-700"><i data-feather="help-circle"></i><span>Create Help Desk Unit</span></a></li>
+          <li class="nav-item active p-14"><a href="./index.html" class="nav-link active text-gray-700"><i data-feather="help-circle"></i><span>Help Desk and FAQ</span></a></li>
+          <li class="nav-item  p-14"><a href="./desk.html" class="nav-link text-gray-700"><i data-feather="help-circle"></i><span>Create Help Desk Unit</span></a></li>
           <li class="nav-item p-14"><a href="./faq.html" class="nav-link text-gray-700"><i data-feather="layers"></i> <span>Create FAQ Unit</span></a></li>
         </ul>
         
@@ -82,58 +81,54 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-2 mg-b-0">
               <li class="breadcrumb-item"><a href="./index.html">Help Desk</a></li>
-              <li class="breadcrumb-item text-gray-700" aria-current="page">Create Help Desk Unit</li>
+              <li class="breadcrumb-item text-gray-700" aria-current="page">View Help Desk</li>
             </ol>
           </nav>
           <div>
             <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/new.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
           </div>
         </div>
-      </div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/New.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
 
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
-                    <div class="col-md-7 mx-auto">
-            <h2 class="p-32 font-weight-bold">Create Help Desk Unit</h2>
-
-              <div class="card mt-5">
-                <div class="card-body py-15">
-                  <form>
-                  <div class="form-group">
-                    <label for="" class="d-block tx-bold">Name</label>
-                    <input type="text" class="form-control" placeholder="Name">
-                  </div>
-                  <div class="form-group">
-                    <label for="" class="d-block tx-bold">Job description</label>
-                    <input type="text" class="form-control" placeholder="HR personnel">
-                  </div>
-                    <div class="form-group">
-                       <label for="" class="tx-bold">Email Createress</label>
-                      <input type="email" class="form-control" id="" placeholder="hr@tonyelumelufoundation.org">
+          <h1>View FAQ</h1>
+          <div class="card mt-4 p-3">
+            <div class="table-responsive">
+              <table class="table" id="tableData">
+                <thead>
+                  <tr>
+                    <th scope="col">SN</th>
+                    <th scope="col">QUESTION</th>
+                    <th scope="col">ANSWER</th>
+                    <th scope="col">CATEGORY</th>
                     
-                    </div>
-                    <hr class="mt-5">
-                  <div class="row">
-                    <div class="col-lg-5 col-12 py-2">
-                      <button class="btn btn-outline form-control" type="cancel">Save and Create another</button>
-                    </div>
-                    <div class="col-lg-5 col-12 py-2">
-                      <button class="btn btn-outline form-control" type="cancel">Save and continue Editing</button>
-
-                    </div>
-                    <div class="col-lg-2 col-12 py-2">
-                      <button class="btn btn-primary form-control text-white" type="submit">Save</button>
-
-                    </div>
-
-                  </div>
-                </form>
-                </div>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">1</label>
+                      </div>
+                      </th>
+                    <td class="">When can I see a doctor</td>
+                    <td class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis corporis officiis ipsa atque exercitationem recusandae ut nesciunt suscipit? Veritatis, obcaecati?</td>
+                    <td>Medical</td>
+                    
+                    <td class="text-center"><a href="./faq.html" class="btn btn-sm btn-outline pd-y-2">Edit</a></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
             </div>
+            
           </div>
         </div>
       </div>
-    </div>
 
 
     <script src="../../assets/lib/jquery/jquery.min.js"></script>
