@@ -72,11 +72,11 @@
             <p class="text-title tx-32 tx-bold mb-0">Examination Leave</p>
             <p class="tx-gray-700">Your entitlement for Examination Leave is 10 days. You are to ensure that you meet the criteria and submit an Approval to apply before applying </p>
           
-            <p class="tx-uppercase tx-medium mb-0">criteria</p>
+            <p class="tx-uppercase tx-20 tx-medium mb-0">criteria</p>
             <p class="mb-0 tx-gray-700">- You must have worked for at least 18months</p>
             <p class="tx-gray-700">- You must be a Confirmed Staff</p>
 
-            <p class="tx-uppercase tx-medium mb-0">steps</p>
+            <p class="tx-uppercase tx-20 tx-medium mb-0">steps</p>
             <p class="tx-gray-700">Please follow the steps below to start</p>
 
             <p class="tx-uppercase tx-medium mb-0">step 1</p>
@@ -89,13 +89,14 @@
             <div class="card card-body bg-gray-200 pd-y-10 pd-x-15 col-lg-10 col-12 ">
               <h5 class="">Your HRBP</h5>
               <p class="p-14 mb-0"><span class="tx-semibold">Joan Martha</span> is HRPB for Innovation team</p>
-              <p class="p-12 mb-0"><i data-feather="mail" class="mr-2"></i>joan.martha@ubagroup</p>
+              <p class="p-12 mb-0"> <a href="mailto:joan.martha@ubagroup.com" class="tx-black"><i data-feather="mail" class="mr-2"></i>joan.martha@ubagroup.com</a></p>
             </div>
 
             <div class="card card-body bg-gray-200 pd-y-10 pd-x-15 col-lg-10 col-12 mt-3 ">
               <h5 class="">Your Supervisor</h5>
               <p class="p-14 mb-0"><span class="tx-semibold">Joan Martha</span> is HRPB for Innovation team</p>
-              <p class="p-12 mb-0"><i data-feather="mail" class="mr-2"></i>joan.martha@ubagroup</p>
+              <p class="p-12 mb-0"> <a href="mailto:joan.martha@ubagroup.com" class="tx-black"><i data-feather="mail" class="mr-2"></i>joan.martha@ubagroup.com</a></p>
+
             </div>
           </div>
           <div class="col-md-7 col-12 col-lg-7 my-2">
@@ -194,6 +195,77 @@
   placeholder: "What's the justification",
   theme: 'snow'
       });
+      document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+          const dropZoneElement = inputElement.closest(".drop-zone");
+
+          dropZoneElement.addEventListener("click", (e) => {
+            inputElement.click();
+          });
+
+          inputElement.addEventListener("change", (e) => {
+            if (inputElement.files.length) {
+              updateThumbnail(dropZoneElement, inputElement.files[0]);
+            }
+          });
+
+          dropZoneElement.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dropZoneElement.classList.add("drop-zone--over");
+          });
+
+          ["dragleave", "dragend"].forEach((type) => {
+            dropZoneElement.addEventListener(type, (e) => {
+              dropZoneElement.classList.remove("drop-zone--over");
+            });
+          });
+
+          dropZoneElement.addEventListener("drop", (e) => {
+            e.preventDefault();
+
+            if (e.dataTransfer.files.length) {
+              inputElement.files = e.dataTransfer.files;
+              updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+            }
+
+            dropZoneElement.classList.remove("drop-zone--over");
+          });
+        });
+
+        /**
+         * Updates the thumbnail on a drop zone element.
+         *
+         * @param {HTMLElement} dropZoneElement
+         * @param {File} file
+         */
+        function updateThumbnail(dropZoneElement, file) {
+          let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+          // First time - remove the prompt
+          if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+            dropZoneElement.querySelector(".drop-zone__prompt").remove();
+          }
+
+          // First time - there is no thumbnail element, so lets create it
+          if (!thumbnailElement) {
+            thumbnailElement = document.createElement("div");
+            thumbnailElement.classList.add("drop-zone__thumb");
+            dropZoneElement.appendChild(thumbnailElement);
+          }
+
+          thumbnailElement.dataset.label = file.name;
+
+          // Show thumbnail for image files
+          if (file.type.startsWith("image/")) {
+            const reader = new FileReader();
+
+            reader.readAsDataURL(file);
+            reader.onload = () => {
+              thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+            };
+          } else {
+            thumbnailElement.style.backgroundImage = null;
+          }
+        }
   </script>
 
 
