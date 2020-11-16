@@ -62,3 +62,9 @@
 .form-drop{
   height: 100%;
 }
+.bg-green{
+  background: rgba(1, 125, 115, 1)!important;
+  font-weight: 700!important;
+  color:#000!important;
+  border: 2px solid rgb(2, 163, 150)!important;
+}
