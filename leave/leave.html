@@ -177,6 +177,44 @@
           <hr />
           <p class="text-title mt-5 tx-28 tx-bold mb-0">Your Approved Leave Applications</p>
           <p class="tx-16 tx-gray-700">All your Leave applications and history for Year 2020</p>
+
+          <div class="card p-3">
+            <div class="table-responsive">
+              <table class="table" id="ArchivedData"> 
+                <thead>
+                  <tr>
+                    <th scope="col">TYPE</th>
+                    <th scope="col">DURATION</th>
+                    <th scope="col">RELIEF OFFICER</th>
+                    <th scope="col">START DATE</th>
+                    <th scope="col">END DATE</th>
+                    <th scope="col">LEAVE STATUS</th>
+                    <th scope="col">DETAILS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td >Casual Leave</td>
+                    <td >5 Days</td>
+                    <td >Olaide Sulaimon</td>
+                    <td>12th Aug 2020</td>
+                    <td>12th Aug 2022</td>
+                    <td><a href="./view.html" class="btn btn-sm btn-primary pd-y-2">Utilized</a></td>
+                    <td><a href="./view.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                  </tr>
+                  <tr>
+                    <td >Annual Leave</td>
+                    <td >5 Days</td>
+                    <td >Olaide Sulaimon</td>
+                    <td>12th Aug 2020</td>
+                    <td>12th Aug 2022</td>
+                    <td><a href="./view.html" class="btn btn-sm btn-warning pd-y-2 text-white font-weight-bold">Initated</a></td>
+                    <td><a href="./view.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
        
       </div>
     </section>
@@ -193,13 +231,23 @@
     <script src="../assets/js/dashforge.js"></script>
     <script src="../assets/lib/js-cookie/js.cookie.js"></script>
     <script src="../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
     <script src="../assets/js/drop.js"></script>
     <script src="../assets/js/dropzone.js"></script>
     <script>
-      $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-          })
-    </script>
+    $('#tableData,#ArchivedData').DataTable({
+      responsive: true,
+      language: {
+        searchPlaceholder: 'Search...',
+        sSearch: '',
+        lengthMenu: '_MENU_ items/page',
+      }
+    });
+  </script>
+
 
 
   </body>
