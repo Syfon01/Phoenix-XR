@@ -2,7 +2,7 @@
   color: rgba(18, 38, 63, 1);
 }
 .card-inner-height{
-  min-height: 100px!important;
+  min-height: 70px!important;
 }
 .btn-primary-outline{
   background-color: #fff!important;
