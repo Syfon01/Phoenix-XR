@@ -94,6 +94,7 @@ color: rgb(110,132,163,1);
     background: #FAFBFD;;
     border-top: 1px solid #E3EBF6;
     padding-bottom: 3rem;
+    min-height:100vh;
 }
 .btn-module{
     border: 1px solid #E7E9F1!important;

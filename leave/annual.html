@@ -70,9 +70,12 @@
         <div class="row">
           <div class="col-md-5 col-12 col-lg-5 col-xl-5 my-2">
             <p class="text-title tx-32 tx-bold mb-0">Plan your Annual Leave</p>
-            <p class="tx-gray-700">Your entitlement for Annual Leave is 22 days.</p>
-          
-            <p class="tx-uppercase tx-20 tx-medium mb-0">criteria</p>
+            <p class="tx-gray-700">What is a Leave Plan? A Leave Plan is your annual scheduled plan on how you wish to allot or utilize your Annual Leave  </p>
+            <p class="tx-gray-700">You can set as many plans as possible within the allotted number of days. You have used <span class="tx-black tx-medium">0 Days</span> out of <span class="tx-black tx-medium">22 Days</span>  of entitlement</p>
+            
+            <a href="#leave-table" class="tx-medium">Your Approval Leave Applications are detailed below.</a>
+
+            <p class="tx-uppercase tx-20 tx-medium mb-0 mt-1">criteria</p>
             <p class="mb-0 tx-gray-700">- You must have up to 22 days leave entitlement</p>
             <p class="tx-gray-700">- You must either be an unconfirmed or confirmed Staff</p>
 
@@ -89,8 +92,7 @@
           <div class="col-md-7 col-12 col-lg-7 my-2">
             <div class="card card-body shadow-sm bg-gray-200">
               <h4>Setup a Plan</h4>
-              <label >You can set as many plans as posssible within your allotted number of days</label>
-              <form class="mt-3">
+              <form class="">
                 <div class="form-row">
                   <div class="form-group col-12 col-md-6 my-2">
                     <label for="name" class="mb-0">Leave Title</label>
@@ -130,52 +132,55 @@
        
         <div>
           <hr class="mt-5" />
-          <p class="text-title mt-4 tx-28 tx-bold mb-0">Your Approved Leave Applications</p>
-          <p class="tx-16 tx-gray-700">All your Leave applications and history for Year 2020</p>
-
-          <div class="card p-3">
-            <div class="table-responsive">
-              <table class="table" id="ArchivedData"> 
-                <thead>
-                  <tr>
-                    <th scope="col">TYPE</th>
-                    <th scope="col">DURATION</th>
-                    <th scope="col">RELIEF OFFICER</th>
-                    <th scope="col">START DATE</th>
-                    <th scope="col">END DATE</th>
-                    <th scope="col">APPROVAL STATUS</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td >My Vacation</td>
-                    <td >5 Days</td>
-                    <td >Olaide Sulaimon</td>
-                    <td>12th Aug 2020</td>
-                    <td>12th Aug 2022</td>
-                    <td><span class="badge badge-secondary pd-x-10 tx-bold">Pending</span></td>
-                    <td><button class="btn btn-sm btn-primary-outline pd-y-0" data-toggle="modal" data-target="#editLeave">Edit Plan</button></td>
-                    <td><button class="btn btn-sm btn-outline pd-y-0" data-toggle="modal" data-target="#pendingLeave">View Plan</button></td>
-                  </tr>
-
-                  <tr>
-                    <td >My Vacation</td>
-                    <td >5 Days</td>
-                    <td >Olaide Sulaimon</td>
-                    <td>12th Aug 2020</td>
-                    <td>12th Aug 2022</td>
-                    <td><span class="badge badge-success pd-x-10 tx-bold">Approved</span></td>
-                    <td><button class="btn btn-sm btn-primary-outline pd-y-0" data-toggle="modal" data-target="#editLeave" disabled>Edit Plan</button></td>
-                    <td><button class="btn btn-sm btn-outline pd-y-0" data-toggle="modal" data-target="#approvedLeave">View Plan</button></td>
-                  </tr>
-                  
-                </tbody>
-              </table>
+          <section id="leave-table">
+            <p class="text-title mt-4 tx-28 tx-bold mb-0">Your Approved Leave Applications</p>
+            <p class="tx-16 tx-gray-700">All your Leave applications and history for Year 2020</p>
+  
+            <div class="card p-3">
+              <div class="table-responsive">
+                <table class="table" id="ArchivedData"> 
+                  <thead>
+                    <tr>
+                      <th scope="col">TYPE</th>
+                      <th scope="col">DURATION</th>
+                      <th scope="col">RELIEF OFFICER</th>
+                      <th scope="col">START DATE</th>
+                      <th scope="col">END DATE</th>
+                      <th scope="col">APPROVAL STATUS</th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td >My Vacation</td>
+                      <td >5 Days</td>
+                      <td >Olaide Sulaimon</td>
+                      <td>12th Aug 2020</td>
+                      <td>12th Aug 2022</td>
+                      <td><span class="badge badge-secondary pd-x-10 tx-bold">Pending</span></td>
+                      <td><button class="btn btn-sm btn-primary-outline pd-y-0" data-toggle="modal" data-target="#editLeave">Edit Plan</button></td>
+                      <td><button class="btn btn-sm btn-outline pd-y-0" data-toggle="modal" data-target="#pendingLeave">View Plan</button></td>
+                    </tr>
+  
+                    <tr>
+                      <td >My Vacation</td>
+                      <td >5 Days</td>
+                      <td >Olaide Sulaimon</td>
+                      <td>12th Aug 2020</td>
+                      <td>12th Aug 2022</td>
+                      <td><span class="badge badge-success pd-x-10 tx-bold">Approved</span></td>
+                      <td><button class="btn btn-sm btn-primary-outline pd-y-0" data-toggle="modal" data-target="#editLeave" disabled>Edit Plan</button></td>
+                      <td><button class="btn btn-sm btn-outline pd-y-0" data-toggle="modal" data-target="#approvedLeave">View Plan</button></td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
-        
+          
+          </section>
+         
         </div>
         
        <!--Edit Modal -->
