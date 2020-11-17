@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Leave Application</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/leave.css">
+    <link rel="stylesheet" href="../assets/css/dashforge.css">
+    
+  </head>
+  <body>
+    <header class="navbar-header-fixed">
+      <nav class="navbar navbar-expand-lg bg-white bd navbar-header-fixed pd-b-0">
+        <div class="container">
+          <button class="navbar-toggler order-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i data-feather="menu" class="wd-20 ht-20"></i>
+          </button>    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active pb-2">
+                <a class="nav-link header-link" href="/staff/home.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link header-link" href="#">Performance</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link header-link" href="#">Talent center</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link header-link" href="#">Benefits</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link header-link" href="#">TalentX</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto mr-5">
+              <a href="/supervisor/index.html" class="btn btn-sm btn-outline pd-y-2"><i data-feather="power" class="mr-2"></i>Sign out</a>
+            </ul>
+        </div>
+         <a class="navbar-brand navbar-right tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/home.html"><img src="../assets/img/logo.png" class="img-fluid"/></a>
+      </nav>    
+        <div class="navbar-black">
+          <div class="container mt-5">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-style2 bg-transparent bed-pad mg-b-0">
+                <li class="breadcrumb-item pb-0"><a href="./index.html" class="text-bread text-capitalize">Home</a></li>
+                <li class="breadcrumb-item pb-0"><a href="./leave.html" class="text-bread text-capitalize">Leave Application</a></li>
+                <li class="breadcrumb-item pb-0 active text-bread text-capitalize" aria-current="page">Paternity Leave</li>
+              </ol>
+            </nav>
+          </div>          
+        </div>           
+    </header>
+    <section class="secondary-bg mt-5">
+      <div class="container mt-5 py-5">
+        <div class="row">
+          <div class="col-md-5 col-12 col-lg-5 col-xl-5 my-2">
+            <p class="text-title tx-32 tx-bold mb-0">Paternity Leave</p>
+            <p class="tx-gray-700">This leave is only available to male staff of the bank</p>
+          
+            <p class="tx-uppercase tx-20 tx-medium mb-0">criteria</p>
+            <p class="mb-0 tx-gray-700">- You must have up to 10 days leave entitlement</p>
+            <p class="tx-gray-700">- You must either be an unconfirmed or confirmed Staff</p>
+
+            <p class="tx-uppercase tx-20 tx-medium mb-0">steps</p>
+            <p class="tx-gray-700">Submit your leave request which contains your start date, end date, relief officer details and handover notes</p>
+
+            
+          </div>
+          <div class="col-md-7 col-12 col-lg-7 my-2">
+            <div class="card card-body shadow-sm bg-gray-200">
+              <h4>Paternity Leave Request Form</h4>
+              <label >Kindly ensure you meet the requirement before filling this form</label>
+              <form class="mt-3">
+                <div class="form-row">
+                  <div class="form-group col-md-6 col-12">
+                    <label for="startDate" class="mb-0">Leave Start Date</label>
+                    <input type="date" class="form-control" id="" placeholder="">
+                  </div>
+                  <div class="form-group col-md-6 col-12">
+                    <label class="mb-0" for="EndDate">Leave End Date</label>
+                    <input type="date" class="form-control" id="" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="mb-0">Relief Officer's Name</label>
+                    <input type="text" class="form-control" id="" placeholder="Bassey Tony">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="justification" class="mb-0">Handover Note</label>
+                    <div id="toolbar-container">
+                      <div id="editor-container" class="ht-150 bg-white">
+
+                      </div>
+                  </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Request Leave</button>
+              </form>
+              
+            </div>
+          </div>
+        </div>
+          
+        
+       
+      </div>
+    </section>
+    <section class="footer text-white fixed-bottom">
+      <div class="container">
+        <p class="p-14 mb-0 text-capitalize">&copy; 2020 UBA Group. All Rights Reserved.</p>
+      </div>
+    </section>
+  
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../assets/js/drop.js"></script>
+    <script src="../assets/js/dropzone.js"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script>
+    $('#tableData,#ArchivedData').DataTable({
+      responsive: true,
+      language: {
+        searchPlaceholder: 'Search...',
+        sSearch: '',
+        lengthMenu: '_MENU_ items/page',
+      }
+    });
+    var quill = new Quill('#editor-container', {
+        modules: {
+    toolbar: [
+      ['bold', 'italic'],
+      ['link', 'blockquote', 'code-block', 'image'],
+      [{ list: 'ordered' }, { list: 'bullet' }]
+    ]
+  },
+  placeholder: "What's the justification",
+  theme: 'snow'
+      });
+  </script>
+
+
+
+  </body>
+</html>
