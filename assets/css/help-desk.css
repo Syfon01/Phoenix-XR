@@ -16,7 +16,7 @@
 }
 
 .card-body-height{
-  min-height: 125px;
+  min-height: 190px;
 }
 .card-help .card-body {
   text-align: justify!important;
@@ -38,3 +38,9 @@ font-weight: 700!important;
   background-color: #DB4C3F!important;
   font-weight: 700!important;
 }
+
+.help-icon{
+  height: 40px!important;
+  width: 40px;
+}
+
