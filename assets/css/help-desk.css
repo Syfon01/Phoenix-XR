@@ -40,10 +40,12 @@ font-weight: 700!important;
 }
 
 .help-icon{
-  height: 40px!important;
   width: 40px;
 }
 
 .complaint-icon{
   height:4rem!important
+}
+.faq-icon{
+  height: 1rem!important;
 }
