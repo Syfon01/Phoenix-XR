@@ -223,7 +223,7 @@
 
         <!-- Modal -->
         <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="editLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content ">
               <div class="modal-header pd-y-10">
                 <h5 class="modal-title" id="editLabel">Edit Session Details</h5>
@@ -236,22 +236,22 @@
                   <div class="form-row">
                     <div class="form-group col-md-6 col-12">
                       <label class="tx-gray-800 mb-0">Session Title</label>
-                      <input type="text" placeholder="" class="form-control">
+                      <input type="text" placeholder="Suspension Session" class="form-control">
                     </div>
                     <div class="form-group col-md-6 col-12">
                      <label class="tx-gray-800 mb-0">Start Date</label>
-                    <input type="date" class="form-control">
+                    <input type="text" class="form-control" placeholder="13/12/2020">
                     </div>
                   </div>
    
                    <div class="form-group">
                     <label class="tx-gray-800 mb-0">Session Description</label>
-                    <textarea name="" id=""  rows="3" class="form-control"></textarea>
+                    <textarea name="" id=""  rows="3" class="form-control" placeholder="Only DC Members will have access to this report Only DC Members will have access to this report Only DC Members will have access to this report"></textarea>
                    </div>
    
                    <div class="form-group">
                      <label class="tx-gray-800 mb-0">Defendant (Employee) ID - If more than one, seperate with comma</label>
-                     <input type="text" placeholder="" class="form-control">
+                     <input type="text" class="form-control" placeholder="Basil Kenneth">
                    </div>
    
                     <div class="form-group">
@@ -272,15 +272,15 @@
                    <div class="bg-blue mt-3">
                     <div class="card card-body pd-x-10 pd-y-5">
                     <div class="row">
-                      <div class="col-md-10 col-12 my-2">
-                        <label for="name" class="tx-gray-800 mb-0">Status Report</label>     
+                      <div class="col-md-9 col-12 my-2">
+                        <label for="name" class="tx-gray-800 mb-0">Investigation Report</label>     
                         <h6 class="mb-0">
                           <i data-feather="download" class="mr-2"></i>Directive for Recommendation for Basil Dauda
     
                         </h6>
                       </div>
-                      <div class="col-md-2 col-12 mg-t-10">
-                        <button class="btn btn-outline btn-sm  float-right w-100">Download</button>
+                      <div class="col-md-3 col-12 mg-t-10">
+                        <button class="btn btn-outline btn-sm  float-right w-100">Delete</button>
                       </div>
                     </div>
                   </div>
@@ -288,10 +288,10 @@
    
                    <div class="row mt-4">
                      <div class="col-md-6 my-2">
-                       <button class="btn btn-outline">Cancel Process</button>
+                       <button class="btn btn-outline">Cancel</button>
                      </div>
                      <div class="col-md-6 my-2">
-                       <button class="btn btn-primary float-right">Schedule Session</button>
+                       <button class="btn btn-primary float-right pd-x-20">Save</button>
                      </div>
                    </div>
                 </form>
