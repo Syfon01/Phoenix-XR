@@ -71,7 +71,8 @@
         <div class="d-flex justify-content-between w-100">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
-              <li class="breadcrumb-item"><a href="./index.html">Recognition</a></li>
+              <li class="breadcrumb-item"><a href="./index.html">Recommendation</a></li>
+              <li class="breadcrumb-item text-gray-700" aria-current="page">Review Recommendation</li>
             </ol>
           </nav>
           <div>
@@ -82,118 +83,43 @@
 
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
-          <div class="mt-2">
-              <div class="d-flex justify-content-between w-100">
-                  <p class="p-32 tx-bold">Recognition</p>
-                <div>
-                  <a class="btn btn-primary" href="./new.html">Create New Recognition</a>
+          <div class="col-md-8 col-12 mx-auto">
+             <h3>Review Recommendation</h3>
+             <hr/>
+            <div class="card card-body">
+              <div class="row">
+                <div class="col-md-4 col-12 my-2">
+                  <label for="employee" class="tx-semibold tx-13">Employee</label>
+                  <p class="tx-gray-900 tx-16 mb-0">Basil Dauda Chukwueze</p>
+                  <p class="tx-13 tx-gray-700">Branch Manager,Marina,Lagos</p>
+                </div>
+                <div class="col-md-4 col-12 my-2">
+                  <label for="employee" class="tx-semibold tx-13">Type of Recommendation</label>
+                  <p class="tx-gray-900 tx-16 mb-0">Project Completion</p>
+                </div>
+                <div class="col-md-4 col-12 my-2">
+                  <label for="employee" class="tx-semibold tx-13">Date Issued</label>
+                  <p class="tx-gray-900 tx-16 mb-0">Nov 7 2020</p>
                 </div>
               </div>
-          </div>
-            <div class="card mt-4 p-3">
-              <div class="table-responsive">
-                <table class="table" id="tableData">
-                  <thead>
-                    <tr>
-                      <th scope="col">EMPLOYEE ID</th>
-                      <th scope="col">EMPLOYEE NAME</th>
-                      <th scope="col">DATE ISSUED</th>
-                      <th scope="col">TYPE OF RECOGNITION</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>A29488</td>
-                      <td>Seun Oti</td>
-                      <td>Oct 31, 2020</td>
-                      <td>Outstanding Staff</td>
-                      <td class="text-center"><button class="btn btn-sm btn-outline pd-y-2"  data-toggle="modal" data-target="#recognitionModal">View</button></td>
-                    </tr>
-
-                    <tr>
-                      <td>A293678</td>
-                      <td>Amaka George</td>
-                      <td>Nov 12, 2020</td>
-                      <td>Recognition of Excellence</td>
-                      <td class="text-center"><button class="btn btn-sm btn-outline pd-y-2"  data-toggle="modal" data-target="#recognitionModal">View</button></td>
-                    </tr>
-                    
-                  </tbody>
-                </table>
-              </div>
-              
-                </div>
-              
-              
-            <!-- Modal -->
-            <div class="modal fade" id="recognitionModal" tabindex="-1" role="dialog" aria-labelledby="recognitionModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                <div class="modal-content">
-                  <div class="modal-header pd-y-15">
-                    <h3 class="modal-title mb-0" id="recognitionModalLabel">View Recognition</h3>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row">
-                      <div class="col-md-6 col-12 my-2">
-                        <label for="name" class="tx-gray-800 mb-0">Employee</label>
-                        <h5>Seun Oti</h5>
-                      </div>
-                    <div class="col-md-6 col-12 my-2">
-                      <label for="name" class="tx-gray-800 mb-0">Type of Recognition</label>
-                      <h5>Outstanding Staff</h5>
-                    </div>
-                    <div class="col-md-6 col-12 my-2">
-                      <label for="name" class="tx-gray-800 mb-0">Date Issued</label>
-                      <h5>Oct 31, 2020</h5>
-                    </div>
-                    <div class="col-md-6 col-12 my-2">
-                      <label for="name" class="tx-gray-800 mb-0">Issued By</label>
-                      <h5>Seun Daye</h5>
-                    </div>
-                  </div>
-                  <div class="bg-blue">
-                    <div class="card card-body pd-x-10 pd-y-5">
-                    <div class="row">
-                      <div class="col-md-9 col-12 my-2">
-                        <label for="name" class="tx-gray-800 mb-0">Approved for Evidence</label>     
-                        <h6 class="mb-0">
-                          <i data-feather="download" class="mr-2"></i>Directive to Recognise Seun Oti
-                        </h6>
-                      </div>
-                      <div class="col-md-3 col-12 mg-t-10">
-                        <button class="btn btn-outline btn-sm float-right w-100">Download</button>
-                      </div>
-                    </div>
-                    
-                    </div>
-                  </div>
-
-                  <div class="bg-blue mt-3">
-                    <div class="card card-body pd-x-10 pd-y-5">
-                    <div class="row">
-                      <div class="col-md-9 col-12 my-2">
-                        <label for="name" class="tx-gray-800 mb-0">Recognition Document</label>     
-                        <h6 class="mb-0">
-                          <i data-feather="download" class="mr-2"></i>Seun Otti's Recognition Letter
-                        </h6>
-                      </div>
-                      <div class="col-md-3 col-12 mg-t-10">
-                        <button class="btn btn-outline btn-sm float-right w-100">Download</button>
-                      </div>
-                    </div>
-                    
-                    </div>
-                  </div>
-                  </div>
-                  
-                </div>
-              </div>
+              <div class="mt-2">
+                <label for="employee" class="tx-semibold tx-13">Recommendation Details</label>
+                <p class="tx-gray-900 tx-16 mb-0">Project Completion Project CompletionProject Completion</p>
             </div>
-                
+            <div class="mt-4">
+              <label for="employee" class="tx-semibold tx-13">Recommendation Letter Preview</label>
+              <textarea name="" id=""  rows="10" class="form-control" placeholder="this is for pdf preview"></textarea>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-6 my-2">
+              <button class="btn btn-outline">Edit Recommendation</button>
+            </div>
+            <div class="col-md-6 my-2">
+              <a href="./review.html" class="btn btn-primary float-right">Issue Recommendation</a>
+            </div>
+          </div>
+             
         </div>
       </div>
     </div>
@@ -223,6 +149,77 @@
           lengthMenu: '_MENU_ items/page',
         }
       });
+      document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+          const dropZoneElement = inputElement.closest(".drop-zone");
+
+          dropZoneElement.addEventListener("click", (e) => {
+            inputElement.click();
+          });
+
+          inputElement.addEventListener("change", (e) => {
+            if (inputElement.files.length) {
+              updateThumbnail(dropZoneElement, inputElement.files[0]);
+            }
+          });
+
+          dropZoneElement.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dropZoneElement.classList.add("drop-zone--over");
+          });
+
+          ["dragleave", "dragend"].forEach((type) => {
+            dropZoneElement.addEventListener(type, (e) => {
+              dropZoneElement.classList.remove("drop-zone--over");
+            });
+          });
+
+          dropZoneElement.addEventListener("drop", (e) => {
+            e.preventDefault();
+
+            if (e.dataTransfer.files.length) {
+              inputElement.files = e.dataTransfer.files;
+              updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+            }
+
+            dropZoneElement.classList.remove("drop-zone--over");
+          });
+        });
+
+        /**
+         * Updates the thumbnail on a drop zone element.
+         *
+         * @param {HTMLElement} dropZoneElement
+         * @param {File} file
+         */
+        function updateThumbnail(dropZoneElement, file) {
+          let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+          // First time - remove the prompt
+          if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+            dropZoneElement.querySelector(".drop-zone__prompt").remove();
+          }
+
+          // First time - there is no thumbnail element, so lets create it
+          if (!thumbnailElement) {
+            thumbnailElement = document.createElement("div");
+            thumbnailElement.classList.add("drop-zone__thumb");
+            dropZoneElement.appendChild(thumbnailElement);
+          }
+
+          thumbnailElement.dataset.label = file.name;
+
+          // Show thumbnail for image files
+          if (file.type.startsWith("image/")) {
+            const reader = new FileReader();
+
+            reader.readAsDataURL(file);
+            reader.onload = () => {
+              thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+            };
+          } else {
+            thumbnailElement.style.backgroundImage = null;
+          }
+        }
     </script>
 
   </body>
