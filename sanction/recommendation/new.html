@@ -56,13 +56,13 @@
           </div>
           
           </div><!-- aside-loggedin -->
-        <ul class="nav nav-aside">
-          <li class="nav-item p-14"><a href="../dashboard/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/requests.png" class="pd-r-15"/> <span>Dashboard</span></a></li>
-          <li class="nav-item p-14"><a href="../sanction/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/updates.svg" class="pd-r-15"/> <span>Sanctions</span></a></li>
-          <li class="nav-item p-14"><a href="../recommendation/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Recommendation</span></a></li>
-          <li class="nav-item active p-14"><a href="../recognition/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/appraisal.svg" class="pd-r-15"/> <span>Recognition</span></a></li>
-          <li class="nav-item p-14"><a href="../discipline/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/Manager.png" class="pd-r-15"/> <span>Disciplinary Committee</span></a></li>
-        </ul>
+          <ul class="nav nav-aside">
+            <li class="nav-item p-14"><a href="../dashboard/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/requests.png" class="pd-r-15"/> <span>Dashboard</span></a></li>
+            <li class="nav-item p-14"><a href="../sanction/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/updates.svg" class="pd-r-15"/> <span>Sanctions</span></a></li>
+            <li class="nav-item active p-14"><a href="../recommendation/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Recommendation</span></a></li>
+            <li class="nav-item p-14"><a href="../recognition/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/appraisal.svg" class="pd-r-15"/> <span>Recognition</span></a></li>
+            <li class="nav-item p-14"><a href="../discipline/index.html" class="nav-link  text-gray-700"><img src="../../assets/img/icon/Manager.png" class="pd-r-15"/> <span>Disciplinary Committee</span></a></li>
+          </ul>
       </div>
     </aside>
 
@@ -71,8 +71,8 @@
         <div class="d-flex justify-content-between w-100">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
-              <li class="breadcrumb-item"><a href="./index.html">Recognition</a></li>
-              <li class="breadcrumb-item text-gray-700" aria-current="page">Create Recognition</li>
+              <li class="breadcrumb-item"><a href="./index.html">Recommendation</a></li>
+              <li class="breadcrumb-item text-gray-700" aria-current="page">Create Recommendation</li>
             </ol>
           </nav>
           <div>
@@ -84,7 +84,7 @@
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
           <div class="col-md-8 mx-auto">
-             <h3>New Recognition</h3>
+             <h3>New Recommendation</h3>
              <hr/>
 
              <form action="" class="mt-5">
@@ -94,18 +94,43 @@
                    <input type="text" placeholder="" class="form-control">
                  </div>
                  <div class="form-group col-md-6 col-12">
-                  <label class="tx-gray-800 mb-0">Type of Recognition</label>
-                  <select class="custom-select">
-                    <option selected>Outstanding Staff</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
+                  <label class="tx-gray-800 mb-0">Type of Recommendation</label>
+                 <select class="custom-select">
+                  <option selected>Project Completion</option>
+                   <option value="1">Fast Forward</option>
+                   <option value="2">Project Completion</option>
+                 </select>
                  </div>
                </div>
 
+                <div class="form-group">
+                 <label class="tx-gray-800 mb-0">Recommendation Impact</label>
+                 <select class="custom-select">
+                   <option selected>Pay &amp; Promotion</option>
+                   <option value="1">Promotion</option>
+                   <option value="2">Pay </option>
+                 </select>
+                </div>
+
+               <div class="form-row">
+                <div class="form-group col-md-6 col-12">
+                  <label class="tx-gray-800 mb-0">Enter Recommendation Amount</label>
+                  <input type="text" placeholder="" class="form-control">
+                </div>
+                <div class="form-group col-md-6 col-12">
+                 <label class="tx-gray-800 mb-0">Recommended Grade Level</label>
+                 <select class="custom-select">
+                   <option selected>Senior Manager</option>
+                   <option value="1">Assistant</option>
+                   <option value="2">Director</option>
+                   <option value="3">Team Lead</option>
+                 </select>
+                </div>
+              </div>
+
+
                  <div class="form-group">
-                  <label for="upload " class="tx-gray-800 mb-0">Upload Recognition Document</label>
+                  <label for="upload " class="tx-gray-800 mb-0">Upload Recommendation Document</label>
                   <div class="form-drop mt-1">
                     <div class="drop-zone pd-20">
                       <div class="cell"> 
@@ -123,7 +148,7 @@
                     <button class="btn btn-outline">Cancel Process</button>
                   </div>
                   <div class="col-md-6 my-2">
-                    <button class="btn btn-primary float-right">Issue Recognition</button>
+                    <button class="btn btn-primary float-right">Issue Recommendation</button>
                   </div>
                 </div>
              </form>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Sanction</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/confirmation.css">
+    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+
+    
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-700">Confirmation Team Lead </p>
+            </div>
+          </div>
+          
+          </div><!-- aside-loggedin -->
+        <ul class="nav nav-aside">
+          <li class="nav-item p-14"><a href="../dashboard/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/requests.png" class="pd-r-15"/> <span>Dashboard</span></a></li>
+          <li class="nav-item p-14"><a href="../sanction/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/updates.svg" class="pd-r-15"/> <span>Sanctions</span></a></li>
+          <li class="nav-item active p-14"><a href="../recommendation/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Recommendation</span></a></li>
+          <li class="nav-item p-14"><a href="../recognition/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/appraisal.svg" class="pd-r-15"/> <span>Recognition</span></a></li>
+          <li class="nav-item p-14"><a href="../discipline/index.html" class="nav-link  text-gray-700"><img src="../../assets/img/icon/Manager.png" class="pd-r-15"/> <span>Disciplinary Committee</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
+              <li class="breadcrumb-item"><a href="./index.html">Recommendation</a></li>
+            </ol>
+          </nav>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/new.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <div class="mt-2">
+              <div class="d-flex justify-content-between w-100">
+                  <p class="p-32 tx-bold">Recommendation</p>
+                <div>
+                  <a class="btn btn-primary" href="./new.html">Make New Recommendation</a>
+                </div>
+              </div>
+          </div>
+            <div class="card mt-4 p-3">
+              <div class="table-responsive">
+                <table class="table" id="tableData">
+                  <thead>
+                    <tr>
+                      <th scope="col">EMPLOYEE ID</th>
+                      <th scope="col">EMPLOYEE NAME</th>
+                      <th scope="col">DATE ISSUED</th>
+                      <th scope="col">TYPE OF RECOMMENDATION</th>
+                      <th scope="col">IMPACT</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>A29488</td>
+                      <td>Seun Oti</td>
+                      <td>Oct 31, 2020</td>
+                      <td>Outstanding Staff</td>
+                      <td>Pay & Promotion</td>
+                      <td class="text-center"><button class="btn btn-sm btn-outline pd-y-2"  data-toggle="modal" data-target="#recognitionModal">View</button></td>
+                    </tr>
+
+                    <tr>
+                      <td>A293678</td>
+                      <td>Amaka George</td>
+                      <td>Nov 12, 2020</td>
+                      <td>Recognition of Excellence</td>
+                      <td>Pay</td>
+                      <td class="text-center"><button class="btn btn-sm btn-outline pd-y-2"  data-toggle="modal" data-target="#recognitionModal">View</button></td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+              
+                </div>
+              
+              
+            <!-- Modal -->
+            <div class="modal fade" id="recognitionModal" tabindex="-1" role="dialog" aria-labelledby="recognitionModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header pd-y-15">
+                    <h3 class="modal-title mb-0" id="recognitionModalLabel">View Recognition</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-6 col-12 my-2">
+                        <label for="name" class="tx-gray-800 mb-0">Employee</label>
+                        <h5>Seun Oti</h5>
+                      </div>
+                    <div class="col-md-6 col-12 my-2">
+                      <label for="name" class="tx-gray-800 mb-0">Type of Recommendation</label>
+                      <h5>Outstanding Staff</h5>
+                    </div>
+                    <div class="col-md-6 col-12 my-2">
+                      <label for="name" class="tx-gray-800 mb-0">Date Issued</label>
+                      <h5>Oct 31, 2020</h5>
+                    </div>
+                    <div class="col-md-6 col-12 my-2">
+                      <label for="name" class="tx-gray-800 mb-0">Issued By</label>
+                      <h5>Seun Daye</h5>
+                    </div>
+                    <div class="col-md-6 col-12 my-2">
+                      <label for="name" class="tx-gray-800 mb-0">Recommendation Impact</label>
+                      <h5>Pay &amp; Payment</h5>
+                    </div>
+                    <div class="col-md-6 col-12 my-2">
+                      <label for="name" class="tx-gray-800 mb-0">Recommended Amount</label>
+                      <h5>None</h5>
+                    </div>
+                    <div class="col-md-6 col-12 my-2">
+                      <label for="name" class="tx-gray-800 mb-0">Recommended Grade Level</label>
+                      <h5>Pay &amp; Payment</h5>
+                    </div>
+                  </div>
+                  <div class="bg-blue">
+                    <div class="card card-body pd-x-10 pd-y-5">
+                    <div class="row">
+                      <div class="col-md-8 col-12 my-2">
+                        <label for="name" class="tx-gray-800 mb-0">Approved for Evidence</label>     
+                        <h6 class="mb-0">
+                          <i data-feather="download" class="mr-2"></i>Director of General Affairs
+                        </h6>
+                      </div>
+                      <div class="col-md-4 col-12 mg-t-10">
+                        <button class="btn btn-primary float-right w-100">Download</button>
+                      </div>
+                    </div>
+                    
+                    </div>
+                  </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+                
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.aside.js"></script>
+    <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="../../assets/js/drop.js"></script>
+    <script src="../../assets/js/dropzone.js"></script>
+    <script>
+      $('#tableData').DataTable({
+        responsive: true,
+        language: {
+          searchPlaceholder: 'Search...',
+          sSearch: '',
+          lengthMenu: '_MENU_ items/page',
+        }
+      });
+    </script>
+
+  </body>
+</html>
