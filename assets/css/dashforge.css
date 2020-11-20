@@ -11608,11 +11608,20 @@ textarea.parsley-success:focus {
 
 .bootstrap-tagsinput {
   display: block;
-  padding: 5px;
-  box-shadow: none;
-  border-color: #c0ccda;
-  border-radius: 0.25rem; }
-  .bootstrap-tagsinput .tag {
+  width: 100%;
+  height: calc(1.5em + 0.9375rem + 2px);
+  padding: 0.46875rem 0.625rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #596882;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #c0ccda;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+  .bootstrap-tagsinput .tag { 
     display: inline-flex;
     align-items: center;
     background-color: #DB4C3F;

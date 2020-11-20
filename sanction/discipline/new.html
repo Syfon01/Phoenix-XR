@@ -14,12 +14,16 @@
     <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
 
+
     <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    
 
     <!-- Page CSS -->
     <link rel="stylesheet" href="../../assets/css/confirmation.css">
     <link rel="stylesheet" href="../../assets/css/dashforge.css">
+<link href="../../assets/lib/bootstrap-tagsinput/bootstrap-tagsinput.css">
+    <link href="../../assets/lib/bootstrap-tagsinput/bootstrap-tagsinput-typeahead.css">
 
     
     <style>
@@ -81,7 +85,7 @@
         </div>
       </div>
 
-      <div class="content-body secondary-bg">
+      <div class="content-body mt-2 py-3">
         <div class="container pd-x-0">
           <div class="col-md-8 col-12 mx-auto">
              <h3>DC Session</h3>
@@ -106,7 +110,8 @@
 
                 <div class="form-group">
                   <label class="tx-gray-800 mb-0">Defendant (Employee) ID - If more than one, seperate with comma</label>
-                  <input type="text" placeholder="" class="form-control">
+                  <input type="text" class="form-control" value="Olumide, Basey" data-role="tagsinput" >
+                
                 </div>
 
                  <div class="form-group">
@@ -132,7 +137,8 @@
                     <button class="btn btn-primary float-right">Schedule Session</button>
                   </div>
                 </div>
-             </form>
+             
+              </form>
         </div>
       </div>
     </div>
@@ -150,9 +156,7 @@
     <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
     <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
-
-    <script src="../../assets/js/drop.js"></script>
-    <script src="../../assets/js/dropzone.js"></script>
+    <script src="../../assets/lib/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
     <script>
       $('#tableData').DataTable({
         responsive: true,
