@@ -22,7 +22,7 @@
     <!-- Page CSS -->
     <link rel="stylesheet" href="../../assets/css/confirmation.css">
     <link rel="stylesheet" href="../../assets/css/dashforge.css">
-<link href="../../assets/lib/bootstrap-tagsinput/bootstrap-tagsinput.css">
+    <link href="../../assets/lib/bootstrap-tagsinput/bootstrap-tagsinput.css">
     <link href="../../assets/lib/bootstrap-tagsinput/bootstrap-tagsinput-typeahead.css">
 
     
@@ -94,29 +94,59 @@
              <form action="" class="mt-5">
                <div class="form-row">
                  <div class="form-group col-md-6 col-12">
-                   <label class="tx-gray-800 mb-0">Session Title</label>
+                   <label class="tx-semibold mb-0">Session Title</label>
                    <input type="text" placeholder="" class="form-control">
                  </div>
                  <div class="form-group col-md-6 col-12">
-                  <label class="tx-gray-800 mb-0">Start Date</label>
+                  <label class="tx-semibold mb-0">Start Date</label>
                  <input type="date" class="form-control">
                  </div>
                </div>
 
-                <div class="form-group">
-                 <label class="tx-gray-800 mb-0">Session Description</label>
+                <div class="form-group ">
+                 <label class="tx-semibold mb-0">Session Description</label>
                  <textarea name="" id=""  rows="3" class="form-control"></textarea>
                 </div>
 
                 <div class="form-group">
-                  <label class="tx-gray-800 mb-0">Defendant (Employee) ID - If more than one, seperate with comma</label>
+                  <label class="tx-semibold mb-0">Defendant (Employee) ID - If more than one, seperate with comma</label>
                   <input type="text" class="form-control" value="Olumide, Basey" data-role="tagsinput" >
-                
                 </div>
 
+                <p class="tx-16 tx-semibold mb-0">DC Members</p>
+                <label class="tx-gray-800">Select Members to sit in this session</label>
+                <form action="">
+                  <div class="form-row">
+                    <div class="form-group col-md-6 col-12">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                        <label class="custom-control-label" for="customCheck1">Tolu Tinu</label>
+                      </div>
+                    </div>
+
+                    <div class="form-group col-md-6 col-12">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2" checked>
+                        <label class="custom-control-label" for="customCheck2">Seyi Daausa</label>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-6 col-12">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                        <label class="custom-control-label" for="customCheck3">Martha Bill</label>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-6 col-12">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck4" checked>
+                        <label class="custom-control-label" for="customCheck4">OLumide Seun</label>
+                      </div>
+                    </div>
+                  </div> 
+
                  <div class="form-group">
-                  <label for="upload " class="tx-gray-800 mb-0">Upload Investigation Report</label>
-                  <p class="tx-12 tx-gray-700 mb-0">Only DC Members will have access to this report</p>
+                  <label for="upload " class="tx-semibold mb-0">Upload Investigation Report</label>
+                  <p class="tx-13 tx-gray-800 mb-0">Only DC Members will have access to this report</p>
                   <div class="form-drop mt-1">
                     <div class="drop-zone pd-20">
                       <div class="cell"> 

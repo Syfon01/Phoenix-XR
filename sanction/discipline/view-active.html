@@ -20,6 +20,9 @@
     <!-- Page CSS -->
     <link rel="stylesheet" href="../../assets/css/confirmation.css">
     <link rel="stylesheet" href="../../assets/css/dashforge.css">
+    <link href="../../assets/lib/bootstrap-tagsinput/bootstrap-tagsinput.css">
+    <link href="../../assets/lib/bootstrap-tagsinput/bootstrap-tagsinput-typeahead.css">
+
 
     
     <style>
@@ -99,7 +102,7 @@
                 <button class="btn btn-outline w-100" data-toggle="modal" data-target="#edit">Edit Session</button>
               </div> -->
               <div class="col-md-6 col-12 my-2 12 my-2">
-                <button class="btn btn-success w-100 tx-semibold">Update Session</button>
+                <button class="btn btn-success w-100 tx-semibold" data-toggle="modal" data-target="#update">Update Session</button>
               </div>
               <div class="col-md-6 col-12 my-2 12 my-2">
                 <button class="btn btn-danger w-100 tx-semibold">Close Session</button>
@@ -180,7 +183,7 @@
               </div>
               <div class="col-md-6 col-12 my-2">
                 <p class="tx-semibold mb-0">DC Members
-                  <button class="btn btn-outline btn-sm pd-y-3 float-right" data-toggle="modal" data-target="#edit"><i data-feather="edit" class="mr-2"></i>Edit</button>
+                  <button class="btn btn-outline btn-sm pd-y-3 float-right" data-toggle="modal" data-target="#DC"><i data-feather="edit" class="mr-2"></i>Edit</button>
                 </p>
                 <p class="tx-gray-800 mb-0">David Obiake, Sharon Oron, David Obiake, Sharon Balogun</p>
               </div>
@@ -234,7 +237,7 @@
 
         </div>
 
-        <!-- session Modal -->
+        <!--edit session Modal -->
         <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="editLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content ">
@@ -257,6 +260,10 @@
                     </div>
                   </div>
    
+                  <div class="form-group">
+                    <label class="tx-semibold mb-0">Session Description</label>
+                    <textarea name="" id="" rows="4" class="form-control" placeholder="Directive for Recommendation for Basil Dauda Directive for Recommendation for Basil Dauda Directive for Recommendation for Basil Dauda"></textarea>
+                  </div>
                   <div class="bg-blue mt-3">
                     <div class="card card-body pd-x-10 pd-y-5">
                     <div class="row">
@@ -302,6 +309,54 @@
           </div>
         </div>
 
+         <!--Update session Modal -->
+         <div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="updateLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content ">
+              <div class="modal-header pd-y-10">
+                <h5 class="modal-title" id="updateLabel">Update Session Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form action="">
+                  <label class="tx-gray-800 mb-0">Session Title</label>
+                  <p class="tx-16 tx-semibold">Suspension Sanction for 3 months</p>
+                  <hr>
+                  <div class="form-group">
+                    <label class="tx-semibold mb-0">Add Case Feedback or Comments</label>
+                    <textarea name="" id="" rows="4" class="form-control" placeholder=""></textarea>
+                  </div>
+                  <div class="form-group mt-4">
+                     <label for="upload " class="tx-semibold mb-0">Upload Status Report</label>
+                     <p class="tx-13 tx-gray-800 mb-0">Only DC Members will have access to this report</p>
+                     <div class="form-drop mt-1">
+                       <div class="drop-zone pd-20">
+                         <div class="cell"> 
+                           <div class="drop-zone__prompt">
+                             <p class="p-14 my-0 text-gray-700">Click or drop here</p>
+                           </div>
+                           <input type="file" name="myFile" class="drop-zone__input">
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+
+                    <div class="row mt-4">
+                     <div class="col-md-6 my-2">
+                       <button class="btn btn-outline">Cancel</button>
+                     </div>
+                     <div class="col-md-6 my-2">
+                       <button class="btn btn-primary float-right pd-x-20">Save</button>
+                     </div>
+                   </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- defendant Modal -->
         <div class="modal fade" id="defendant" tabindex="-1" role="dialog" aria-labelledby="defendantLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
@@ -315,9 +370,79 @@
               <div class="modal-body">
                 <form action="">
                     <div class="form-group">
-                      <label class="tx-gray-800 mb-0">Session Title</label>
-                      <input type="text" placeholder="Suspension Session" class="form-control">
+                      <label class="tx-semibold mb-0">New Defendant (Employee ID)-If more than one use, seperate with a comma</label>
+                      <input type="text" class="form-control" value="Olumide, Rufai" data-role="tagsinput" >
                     </div>
+
+                    <div class="form-group mt-4">
+                      <label class="tx-semibold mb-0">Current Offenders</label>
+                      <p class="tx-16 mb-0 mt-2">Bausit Dauda
+                        <button class="btn bd-0 btn-delete  pd-y-3 float-right"><i data-feather="trash-2" class="mr-2"></i>Delete</button>
+                      </p>
+                      <p class="tx-16 mb-0 mt-2">Bausit Dauda
+                        <button class="btn bd-0 btn-delete  pd-y-3 float-right"><i data-feather="trash-2" class="mr-2"></i>Delete</button>
+                      </p>
+                      <p class="tx-16 mb-0 mt-2">Bausit Dauda
+                        <button class="btn bd-0 btn-delete  pd-y-3 float-right"><i data-feather="trash-2" class="mr-2"></i>Delete</button>
+                      </p>
+                    </div>
+                    
+                    <div class="row mt-5">
+                     <div class="col-md-6 my-2">
+                       <button class="btn btn-outline">Cancel</button>
+                     </div>
+                     <div class="col-md-6 my-2">
+                       <button class="btn btn-primary float-right pd-x-20">Save</button>
+                     </div>
+                   </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DC members Modal -->
+        <div class="modal fade" id="DC" tabindex="-1" role="dialog" aria-labelledby="DCLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content ">
+              <div class="modal-header pd-y-10">
+                <h5 class="modal-title" id="DCLabel">Edit DC Members</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5 class="mb-0">DC Members</h5>
+                <label class="tx-gray-800">Select Members to sit in this session</label>
+                <form action="">
+                  <div class="form-row">
+                    <div class="form-group col-md-6 col-12">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                        <label class="custom-control-label" for="customCheck1">Tolu Tinu</label>
+                      </div>
+                    </div>
+
+                    <div class="form-group col-md-6 col-12">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2" checked>
+                        <label class="custom-control-label" for="customCheck2">Seyi Daausa</label>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-6 col-12">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                        <label class="custom-control-label" for="customCheck3">Martha Bill</label>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-6 col-12">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck4" checked>
+                        <label class="custom-control-label" for="customCheck4">OLumide Seun</label>
+                      </div>
+                    </div>
+                  </div>
+                    
                     
                     <div class="row mt-4">
                      <div class="col-md-6 my-2">
@@ -348,9 +473,7 @@
     <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
     <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../../assets/lib/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
 
-    <script src="../../assets/js/drop.js"></script>
-    <script src="../../assets/js/dropzone.js"></script>
-    
   </body>
 </html>
