@@ -111,10 +111,10 @@
           <div class="col-md-7 col-12 mx-auto mt-4">
             <div class="row">
               <div class="col-md-8 col-lg-9 col-12">
-                <h4 class="tx-semibold">Fraud Case at Marina Branch -N10 million in Vault</h4>
+                <h5 class="tx-semibold pt-2">Fraud Case at Marina Branch -N10 million in Vault</h5>
               </div>
               <div class="col-md-4 col-lg-3 col-12">
-              <button class="btn btn-outline w-100" data-toggle="modal" data-target="#edit"><i data-feather="edit" class="mr-2"></i>Edit</button>
+              <button class="btn btn-outline btn-sm w-100" data-toggle="modal" data-target="#edit"><i data-feather="edit" class="mr-2"></i>Edit</button>
               </div>
             </div>
             <div class="row mt-2">
@@ -135,16 +135,7 @@
               <p class="tx-semibold mb-0">Session Description</p>
               <p class="tx-gray-800">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis fuga placeat dolore odit voluptas dignissimos suscipit. Doloribus rem molestias illum quod illo facilis hic laborum doloremque officia fugiat commodi tenetur eos nisi sit autem, tempora cumque? Unde illum sapiente minus molestiae, exercitationem similique, sit, explicabo provident aut voluptate reprehenderit consectetur beatae cumque laborum consequuntur neque officiis laudantium est eligendi delectus ducimus atque dolore a! Voluptatibus distinctio, impedit quidem quo deleniti exercitationem cum doloremque consectetur cupiditate blanditiis odit inventore id magni? Dolore, earum quo culpa odio illo iusto totam aspernatur officia?</p>
             </div>
-            <div class="row mt-2">
-              <div class="col-md-6 col-12 my-2 ">
-                <label for="" class="tx-semibold mb-0">Defendant (Employee ID)</label>
-                <p class="tx-gray-800">Basil Dauda</p>
-              </div>
-              <div class="col-md-6 col-12 my-2">
-                <label for="" class="tx-semibold mb-0">DC Members</label>
-                <p class="tx-gray-800">David Obiake, Sharon Oron, David Obiake, Sharon Balogun</p>
-              </div>
-            </div>'
+
             <div class="mt-2">
               <p class="bd-b tx-semibold tx-16">Case Document</p>
               <div class="bg-blue">
@@ -153,7 +144,7 @@
                   <div class="col-md-10 col-12 my-2">
                     <label for="name" class="tx-gray-800 mb-0">Investigation Report</label>     
                     <h6 class="mb-0">
-                      <i data-feather="printer" class="mr-2"></i>Directive for Recommendation for Basil Dauda
+                      <i data-feather="printer" class="mr-2 icon-sm"></i>Directive for Recommendation for Basil Dauda
                     </h6>
                   </div>
                   <div class="col-md-2 col-12 mg-t-15">
@@ -168,7 +159,7 @@
                   <div class="col-md-10 col-12 my-2">
                     <label for="name" class="tx-gray-800 mb-0">Status Report</label>     
                     <h6 class="mb-0">
-                      <i data-feather="printer" class="mr-2"></i>Directive for Recommendation for Basil Dauda
+                      <i data-feather="printer" class="mr-2 icon-sm"></i>Directive for Recommendation for Basil Dauda
 
                     </h6>
                   </div>
@@ -179,8 +170,23 @@
               </div>
               </div>
             </div>
-
-            <div class="mt-5">
+            <hr class="my-4"/>
+            <div class="row mt-2">
+              <div class="col-md-6 col-12 my-2 ">
+                <p class="tx-semibold mb-0">Defendant (Employee ID)
+                  <button class="btn btn-outline btn-sm pd-y-3 float-right" data-toggle="modal" data-target="#defendant"><i data-feather="edit" class="mr-2"></i>Edit</button>
+                </p>
+                <p class="tx-gray-800 mb-0">Basil Dauda </p>
+              </div>
+              <div class="col-md-6 col-12 my-2">
+                <p class="tx-semibold mb-0">DC Members
+                  <button class="btn btn-outline btn-sm pd-y-3 float-right" data-toggle="modal" data-target="#edit"><i data-feather="edit" class="mr-2"></i>Edit</button>
+                </p>
+                <p class="tx-gray-800 mb-0">David Obiake, Sharon Oron, David Obiake, Sharon Balogun</p>
+              </div>
+            </div>'
+            
+            <div class="mt-2">
               <p class="bd-b tx-semibold tx-16 mb-0">Case Updates</p>
               <div class="card card-body pd-y-10 mt-3">
                 <div class="row">
@@ -228,9 +234,9 @@
 
         </div>
 
-        <!-- Modal -->
+        <!-- session Modal -->
         <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="editLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content ">
               <div class="modal-header pd-y-10">
                 <h5 class="modal-title" id="editLabel">Edit Session Details</h5>
@@ -242,28 +248,34 @@
                 <form action="">
                   <div class="form-row">
                     <div class="form-group col-md-6 col-12">
-                      <label class="tx-gray-800 mb-0">Session Title</label>
+                      <label class="tx-semibold mb-0">Session Title</label>
                       <input type="text" placeholder="Suspension Session" class="form-control">
                     </div>
                     <div class="form-group col-md-6 col-12">
-                     <label class="tx-gray-800 mb-0">Start Date</label>
+                     <label class="tx-semibold mb-0">Start Date</label>
                     <input type="text" class="form-control" placeholder="13/12/2020">
                     </div>
                   </div>
    
-                   <div class="form-group">
-                    <label class="tx-gray-800 mb-0">Session Description</label>
-                    <textarea name="" id=""  rows="3" class="form-control" placeholder="Only DC Members will have access to this report Only DC Members will have access to this report Only DC Members will have access to this report"></textarea>
-                   </div>
-   
-                   <div class="form-group">
-                     <label class="tx-gray-800 mb-0">Defendant (Employee) ID - If more than one, seperate with comma</label>
-                     <input type="text" class="form-control" placeholder="Basil Kenneth">
-                   </div>
-   
-                    <div class="form-group">
-                     <label for="upload " class="tx-gray-800 mb-0">Upload Investigation Report</label>
-                     <p class="tx-12 tx-gray-700 mb-0">Only DC Members will have access to this report</p>
+                  <div class="bg-blue mt-3">
+                    <div class="card card-body pd-x-10 pd-y-5">
+                    <div class="row">
+                      <div class="col-md-9 col-xl-9 col-12 my-2">
+                        <label for="name" class="mb-0">Investigation Report</label>     
+                        <p class="mb-0 tx-semibold tx-14">
+                          <i data-feather="printer" class="mr-1 icon-sm"></i>Directive for Recommendation for Basil Dauda
+                        </p>
+                      </div>
+                      <div class="col-md-3 col-xl-3 col-12 mg-t-10">
+                        <button class="btn btn-outline btn-sm  float-right w-100">Delete</button>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+
+                  <div class="form-group mt-4">
+                     <label for="upload " class="tx-semibold mb-0">Upload Investigation Report</label>
+                     <p class="tx-13 tx-gray-800 mb-0">Only DC Members will have access to this report</p>
                      <div class="form-drop mt-1">
                        <div class="drop-zone pd-20">
                          <div class="cell"> 
@@ -276,24 +288,38 @@
                      </div>
                    </div>
 
-                   <div class="bg-blue mt-3">
-                    <div class="card card-body pd-x-10 pd-y-5">
-                    <div class="row">
-                      <div class="col-md-9 col-12 my-2">
-                        <label for="name" class="tx-gray-800 mb-0">Investigation Report</label>     
-                        <h6 class="mb-0">
-                          <i data-feather="download" class="mr-2"></i>Directive for Recommendation for Basil Dauda
-    
-                        </h6>
-                      </div>
-                      <div class="col-md-3 col-12 mg-t-10">
-                        <button class="btn btn-outline btn-sm  float-right w-100">Delete</button>
-                      </div>
+                    <div class="row mt-4">
+                     <div class="col-md-6 my-2">
+                       <button class="btn btn-outline">Cancel</button>
+                     </div>
+                     <div class="col-md-6 my-2">
+                       <button class="btn btn-primary float-right pd-x-20">Save</button>
+                     </div>
+                   </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- defendant Modal -->
+        <div class="modal fade" id="defendant" tabindex="-1" role="dialog" aria-labelledby="defendantLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content ">
+              <div class="modal-header pd-y-10">
+                <h5 class="modal-title" id="defendantLabel">Edit Defendant</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form action="">
+                    <div class="form-group">
+                      <label class="tx-gray-800 mb-0">Session Title</label>
+                      <input type="text" placeholder="Suspension Session" class="form-control">
                     </div>
-                  </div>
-                  </div>
-   
-                   <div class="row mt-4">
+                    
+                    <div class="row mt-4">
                      <div class="col-md-6 my-2">
                        <button class="btn btn-outline">Cancel</button>
                      </div>
