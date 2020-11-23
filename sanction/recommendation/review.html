@@ -18,7 +18,8 @@
     <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
 
     <!-- Page CSS -->
-    <link rel="stylesheet" href="../../assets/css/confirmation.css">
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/sanction.css">
     <link rel="stylesheet" href="../../assets/css/dashforge.css">
 
     
@@ -72,6 +73,7 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
               <li class="breadcrumb-item"><a href="./index.html">Recommendation</a></li>
+              <li class="breadcrumb-item"><a href="./new.html">Create Recommendation</a></li>
               <li class="breadcrumb-item text-gray-700" aria-current="page">Review Recommendation</li>
             </ol>
           </nav>
@@ -81,36 +83,41 @@
         </div>
       </div>
 
-      <div class="content-body mt-2 py-3">
+      <div class="content-body secondary-bg">
         <div class="container pd-x-0">
-          <div class="col-md-8 col-12 mx-auto">
-             <h3>Review Recommendation</h3>
-             <hr/>
-            <div class="card card-body">
+          <div class="col-md-8 mx-auto col-12 card px-0">
+            <div class="card-header pd-y-15">
+             <h3 class="mb-0">Review Recommendation</h3>
+            </div>
+            <div class="card-body">
               <div class="row">
                 <div class="col-md-4 col-12 my-2">
                   <label for="employee" class="tx-semibold tx-13">Employee</label>
-                  <p class="tx-gray-900 tx-16 mb-0">Basil Dauda Chukwueze</p>
+                  <p class="tx-gray-900 mb-0">Basil Dauda Chukwueze</p>
                   <p class="tx-13 tx-gray-700">Branch Manager,Marina,Lagos</p>
                 </div>
                 <div class="col-md-4 col-12 my-2">
                   <label for="employee" class="tx-semibold tx-13">Type of Recommendation</label>
-                  <p class="tx-gray-900 tx-16 mb-0">Project Completion</p>
+                  <p class="tx-gray-900 mb-0">Project Completion</p>
                 </div>
                 <div class="col-md-4 col-12 my-2">
                   <label for="employee" class="tx-semibold tx-13">Date Issued</label>
-                  <p class="tx-gray-900 tx-16 mb-0">Nov 7 2020</p>
+                  <p class="tx-gray-900 mb-0">Nov 7 2020</p>
                 </div>
               </div>
               <div class="mt-2">
                 <label for="employee" class="tx-semibold tx-13">Recommendation Details</label>
-                <p class="tx-gray-900 tx-16 mb-0">Project Completion Project CompletionProject Completion</p>
+                <p class="tx-gray-900 mb-0">Project Completion Project CompletionProject Completion</p>
             </div>
             <div class="mt-4">
               <label for="employee" class="tx-semibold tx-13">Recommendation Letter Preview</label>
-              <div class="card card-body card-height">
-                <iframe src="http://docs.google.com/gview?url=http://path.com/to/your/pdf.pdf&embedded=true" 
+              <div class="card">
+                <div class="card-body pd-10">
+                  <div class="card-height">
+                    <iframe src="http://docs.google.com/gview?url=http://path.com/to/your/pdf.pdf&embedded=true" 
                   style="width:100%; height:500px;" frameborder="0"></iframe>
+                  </div>
+                </div>
               </div>
           </div>
 

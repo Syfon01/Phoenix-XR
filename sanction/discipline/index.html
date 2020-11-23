@@ -18,7 +18,8 @@
     <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
 
     <!-- Page CSS -->
-    <link rel="stylesheet" href="../../assets/css/confirmation.css">
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/sanction.css">''
     <link rel="stylesheet" href="../../assets/css/dashforge.css">
 
     
@@ -101,48 +102,56 @@
           </ul>
           <div class="tab-content bd-t-0" id="myTabContent">
             <div class="tab-pane fade show active" id="Active" role="tabpanel" aria-labelledby="Active-tab">
-              <div class="card mt-4 p-3">
-                <div class="table-responsive">
-                  <table class="table" id="tableData">
-                    <thead>
-                      <tr>
-                        <th scope="col">SESSION TITLE</th>
-                        <th scope="col">CREATED BY</th>
-                        <th scope="col">DATE CREATED</th>
-                        <th scope="col">START DATE</th>
-                        <th scope="col">STATUS</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Suspension Sanction exceeding 3 months</td>
-                        <td>Seun Oti</td>
-                        <td>Oct 31, 2020</td>
-                        <td>Nov 15,2020</td>
-                        <td>Scheduled</td>
-                        <td class="text-center"><a href="./view-active.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
-                      </tr>
-  
-                      <tr>
-                        <td>Fraud Case involving 5 employees</td>
-                        <td>Amaka George</td>
-                        <td>Nov 12, 2020</td>
-                        <td>Nov 15,2020</td>
-                        <td>On-going</td>
-                        <td class="text-center"><a href="./view-active.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
-                      </tr>
-                      
-                    </tbody>
-                  </table>
+              <div class="card mt-4">
+                <div class="card-header pd-y-15">
+                  <h5 class="mb-0">Title</h5>
                 </div>
-                
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table" id="tableData">
+                      <thead>
+                        <tr>
+                          <th scope="col">SESSION TITLE</th>
+                          <th scope="col">CREATED BY</th>
+                          <th scope="col">DATE CREATED</th>
+                          <th scope="col">START DATE</th>
+                          <th scope="col">STATUS</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Suspension Sanction exceeding 3 months</td>
+                          <td>Seun Oti</td>
+                          <td>Oct 31, 2020</td>
+                          <td>Nov 15,2020</td>
+                          <td>Scheduled</td>
+                          <td class="text-center"><a href="./view-active.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                        </tr>
+    
+                        <tr>
+                          <td>Fraud Case involving 5 employees</td>
+                          <td>Amaka George</td>
+                          <td>Nov 12, 2020</td>
+                          <td>Nov 15,2020</td>
+                          <td>On-going</td>
+                          <td class="text-center"><a href="./view-active.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="tab-pane fade" id="Closed" role="tabpanel" aria-labelledby="Closed-tab">
-              <div class="card mt-4 p-3">
+              <div class="card mt-4">
+                <div class="card-header pd-y-15">
+                  <h5 class="mb-0">Title</h5>
+                </div>
+                <div class="card-body">
                 <div class="table-responsive">
-                  <table class="table" id="tableData">
+                  <table class="table" id="closedData">
                     <thead>
                       <tr>
                         <th scope="col">SESSION TITLE</th>
@@ -175,7 +184,7 @@
                     </tbody>
                   </table>
                 </div>
-                
+                </div>
               </div>
             </div>
             
@@ -254,7 +263,7 @@
     <script src="../../assets/js/drop.js"></script>
     <script src="../../assets/js/dropzone.js"></script>
     <script>
-      $('#tableData').DataTable({
+      $('#tableData,#closedData').DataTable({
         responsive: true,
         language: {
           searchPlaceholder: 'Search...',

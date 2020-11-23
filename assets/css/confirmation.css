@@ -85,12 +85,7 @@
       color: #fff!important;
       font-weight:700!important;
   }
-  .btn-primary:hover{
-    background-color: #DB4C3F!important;
-    border: 1px solid #fff!important;
-    color: #fff!important;
-    font-weight:700!important;
-  }
+  
   .secondary-bg{
       background: #FAFBFD;;
       border-top: 1px solid #E3EBF6;

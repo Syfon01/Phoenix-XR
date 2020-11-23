@@ -18,7 +18,8 @@
     <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
 
     <!-- Page CSS -->
-    <link rel="stylesheet" href="../../assets/css/confirmation.css">
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/sanction.css">
     <link rel="stylesheet" href="../../assets/css/dashforge.css">
 
     
@@ -80,49 +81,53 @@
         </div>
       </div>
 
-      <div class="content-body mt-2 py-3">
+      <div class="content-body secondary-bg">
         <div class="container pd-x-0">
           <div class="mt-2">
               <div class="d-flex justify-content-between w-100">
-                  <p class="p-32 tx-bold">Recognition</p>
+                  <h1 class="p-32 tx-bold">Recognition</h1>
                 <div>
                   <a class="btn btn-primary" href="./new.html">Create New Recognition</a>
                 </div>
               </div>
           </div>
-            <div class="card mt-4 p-3">
-              <div class="table-responsive">
-                <table class="table" id="tableData">
-                  <thead>
-                    <tr>
-                      <th scope="col">EMPLOYEE ID</th>
-                      <th scope="col">EMPLOYEE NAME</th>
-                      <th scope="col">DATE ISSUED</th>
-                      <th scope="col">TYPE OF RECOGNITION</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>A29488</td>
-                      <td>Seun Oti</td>
-                      <td>Oct 31, 2020</td>
-                      <td>Outstanding Staff</td>
-                      <td class="text-center"><button class="btn btn-sm btn-outline pd-y-2"  data-toggle="modal" data-target="#recognitionModal">View</button></td>
-                    </tr>
-
-                    <tr>
-                      <td>A293678</td>
-                      <td>Amaka George</td>
-                      <td>Nov 12, 2020</td>
-                      <td>Recognition of Excellence</td>
-                      <td class="text-center"><button class="btn btn-sm btn-outline pd-y-2"  data-toggle="modal" data-target="#recognitionModal">View</button></td>
-                    </tr>
-                    
-                  </tbody>
-                </table>
+            <div class="card mt-4">
+              <div class="card-header pd-y-15">
+                <h5 class="mb-0">Title</h5>
               </div>
-              
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table" id="tableData">
+                    <thead>
+                      <tr>
+                        <th scope="col">EMPLOYEE ID</th>
+                        <th scope="col">EMPLOYEE NAME</th>
+                        <th scope="col">DATE ISSUED</th>
+                        <th scope="col">TYPE OF RECOGNITION</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>A29488</td>
+                        <td>Seun Oti</td>
+                        <td>Oct 31, 2020</td>
+                        <td>Outstanding Staff</td>
+                        <td class="text-center"><button class="btn btn-sm btn-outline pd-y-2"  data-toggle="modal" data-target="#recognitionModal">View</button></td>
+                      </tr>
+  
+                      <tr>
+                        <td>A293678</td>
+                        <td>Amaka George</td>
+                        <td>Nov 12, 2020</td>
+                        <td>Recognition of Excellence</td>
+                        <td class="text-center"><button class="btn btn-sm btn-outline pd-y-2"  data-toggle="modal" data-target="#recognitionModal">View</button></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
                 </div>
               
               
