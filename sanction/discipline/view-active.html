@@ -105,7 +105,7 @@
                 <button class="btn btn-success w-100 tx-semibold" data-toggle="modal" data-target="#update">Update Session</button>
               </div>
               <div class="col-md-6 col-12 my-2 12 my-2">
-                <button class="btn btn-danger w-100 tx-semibold">Close Session</button>
+                <button class="btn btn-danger w-100 tx-semibold" data-toggle="modal" data-target="#close">Close Session</button>
               </div>
               </div>
             </div>
@@ -351,6 +351,79 @@
                        <button class="btn btn-primary float-right pd-x-20">Save</button>
                      </div>
                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--close session Modal -->
+        <div class="modal fade" id="close" tabindex="-1" role="dialog" aria-labelledby="closeLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content ">
+              <div class="modal-header pd-y-10">
+                <h5 class="modal-title" id="closeLabel">Close Session</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p class="tx-16">Enter verdict against each defendant</p>
+                <form action="">
+                  <div class="form-row">
+                    <div class="form-group col-12 col-lg-6 mg-b-10">
+                      <label for="" class="tx-13 tx-semibold">DEFENDANT</label>
+                      <p class="mb-0">Bausit Dauda</p>
+                    </div>
+                    <div class="form-group col-12 col-lg-6 mg-b-10">
+                      <label for="" class="tx-13 tx-semibold">VERDICT/SANCTION</label>
+                      <select class="custom-select">
+                        <option selected>Indefinite suspension</option>
+                        <option value="1">Query</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-12 col-lg-6 mg-b-10">
+                      <p class="mb-0">Chukwuemeka David Chisom</p>
+                    </div>
+                    <div class="form-group col-12 col-lg-6 mg-b-10">
+                      <select class="custom-select">
+                        <option selected>Indefinite suspension</option>
+                        <option value="1">Query</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="form-group">
+                    <label for="upload " class="tx-semibold mb-0">Upload any related file for this session</label>
+                    <div class="form-drop mt-1">
+                      <div class="drop-zone pd-20">
+                        <div class="cell"> 
+                          <div class="drop-zone__prompt">
+                            <p class="p-14 my-0 text-gray-700">Click or drop here</p>
+                          </div>
+                          <input type="file" name="myFile" class="drop-zone__input">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="tx-semibold mb-0">Add summary of the DC Session</label>
+                    <textarea name="" id="" rows="3" class="form-control" placeholder=""></textarea>
+                  </div>
+                  
+                    <div class="row mt-4">
+                    <div class="col-md-6 my-2">
+                      <button class="btn btn-outline">Cancel</button>
+                    </div>
+                    <div class="col-md-6 my-2">
+                      <button class="btn btn-primary float-right pd-x-20">Save</button>
+                    </div>
+                  </div>
                 </form>
               </div>
             </div>
