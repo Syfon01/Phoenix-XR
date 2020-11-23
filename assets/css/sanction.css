@@ -1,0 +1,32 @@
+.btn-side{
+  background-color: #f4f5f8 !important;
+  border: 1px solid #b0b1b6!important;
+  padding: 5px!important;
+  border-radius: 5px;
+}
+.text-gray-700{
+  color:#6E84A3!important;
+  ;
+}
+
+.btn-sm{
+  padding-top:5px!important ;
+  padding-bottom: 5px!important;
+}
+.nav-link.active{
+  color: #fff!important;
+  font-weight: 700!important;
+}
+.nav-link.tab.active{
+color: #000!important;
+font-weight: 700!important;
+}
+.nav-link.active.bg{
+  background-color: #DB4C3F!important;
+  font-weight: 700!important;
+}
+.card-sanction{
+  height: 400px!important;
+  overflow-y: hidden;
+}
+

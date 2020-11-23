@@ -18,10 +18,9 @@
     <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
 
     <!-- Page CSS -->
-    <link rel="stylesheet" href="../../assets/css/confirmation.css">
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/sanction.css">
     <link rel="stylesheet" href="../../assets/css/dashforge.css">
-
-    
     <style>
       *{
       -webkit-font-smoothing: antialiased !important;
@@ -81,77 +80,80 @@
         </div>
       </div>
 
-      <div class="content-body mt-2 py-3">
+      <div class="content-body secondary-bg">
         <div class="container pd-x-0">
-          <div class="col-md-8 mx-auto">
-             <h3>New Recommendation</h3>
-             <hr/>
-
-             <form action="" class="mt-5">
-               <div class="form-row">
+          <div class="col-md-8 mx-auto card px-0">
+            <div class="card-header pd-y-15">
+             <h3 class="mb-0">New Recommendation</h3>
+            </div>
+            <div class="card-body">
+              <form action="">
+                <div class="form-row">
+                  <div class="form-group col-md-6 col-12">
+                    <label class="tx-gray-800 mb-0">Employee ID</label>
+                    <input type="text" placeholder="" class="form-control">
+                  </div>
+                  <div class="form-group col-md-6 col-12">
+                   <label class="tx-gray-800 mb-0">Type of Recommendation</label>
+                  <select class="custom-select">
+                   <option selected>Project Completion</option>
+                    <option value="1">Fast Forward</option>
+                    <option value="2">Project Completion</option>
+                  </select>
+                  </div>
+                </div>
+ 
+                 <div class="form-group">
+                  <label class="tx-gray-800 mb-0">Recommendation Impact</label>
+                  <select class="custom-select">
+                    <option selected>Pay &amp; Promotion</option>
+                    <option value="1">Promotion</option>
+                    <option value="2">Pay </option>
+                  </select>
+                 </div>
+ 
+                <div class="form-row">
                  <div class="form-group col-md-6 col-12">
-                   <label class="tx-gray-800 mb-0">Employee ID</label>
+                   <label class="tx-gray-800 mb-0">Enter Recommendation Amount</label>
                    <input type="text" placeholder="" class="form-control">
                  </div>
                  <div class="form-group col-md-6 col-12">
-                  <label class="tx-gray-800 mb-0">Type of Recommendation</label>
-                 <select class="custom-select">
-                  <option selected>Project Completion</option>
-                   <option value="1">Fast Forward</option>
-                   <option value="2">Project Completion</option>
-                 </select>
+                  <label class="tx-gray-800 mb-0">Recommended Grade Level</label>
+                  <select class="custom-select">
+                    <option selected>Senior Manager</option>
+                    <option value="1">Assistant</option>
+                    <option value="2">Director</option>
+                    <option value="3">Team Lead</option>
+                  </select>
                  </div>
                </div>
-
-                <div class="form-group">
-                 <label class="tx-gray-800 mb-0">Recommendation Impact</label>
-                 <select class="custom-select">
-                   <option selected>Pay &amp; Promotion</option>
-                   <option value="1">Promotion</option>
-                   <option value="2">Pay </option>
-                 </select>
-                </div>
-
-               <div class="form-row">
-                <div class="form-group col-md-6 col-12">
-                  <label class="tx-gray-800 mb-0">Enter Recommendation Amount</label>
-                  <input type="text" placeholder="" class="form-control">
-                </div>
-                <div class="form-group col-md-6 col-12">
-                 <label class="tx-gray-800 mb-0">Recommended Grade Level</label>
-                 <select class="custom-select">
-                   <option selected>Senior Manager</option>
-                   <option value="1">Assistant</option>
-                   <option value="2">Director</option>
-                   <option value="3">Team Lead</option>
-                 </select>
-                </div>
-              </div>
-
-
-                 <div class="form-group">
-                  <label for="upload " class="tx-gray-800 mb-0">Upload Recommendation Document</label>
-                  <div class="form-drop mt-1">
-                    <div class="drop-zone pd-20">
-                      <div class="cell"> 
-                        <div class="drop-zone__prompt">
-                          <p class="p-14 my-0 text-gray-700">Click or drop here</p>
-                        </div>
-                        <input type="file" name="myFile" class="drop-zone__input">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row mt-4">
-                  <div class="col-md-6 my-2">
-                    <button class="btn btn-outline">Cancel Process</button>
-                  </div>
-                  <div class="col-md-6 my-2">
-                    <a href="./review.html" class="btn btn-primary float-right">Issue Recommendation</a>
-                  </div>
-                </div>
-             </form>
+ 
+ 
+                  <div class="form-group">
+                   <label for="upload " class="tx-gray-800 mb-0">Upload Recommendation Document</label>
+                   <div class="form-drop mt-1">
+                     <div class="drop-zone pd-20">
+                       <div class="cell"> 
+                         <div class="drop-zone__prompt">
+                           <p class="p-14 my-0 text-gray-700">Click or drop here</p>
+                         </div>
+                         <input type="file" name="myFile" class="drop-zone__input">
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+ 
+                 <div class="row mt-4">
+                   <div class="col-md-6 my-2">
+                     <button class="btn btn-outline">Cancel Process</button>
+                   </div>
+                   <div class="col-md-6 my-2">
+                     <a href="./review.html" class="btn btn-primary float-right">Issue Recommendation</a>
+                   </div>
+                 </div>
+              </form>
+            </div>
+             
         </div>
       </div>
     </div>
