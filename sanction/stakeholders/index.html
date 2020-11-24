@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Sanction</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/sanction.css">
+    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+  
+
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-700">Confirmation Team Lead </p>
+            </div>
+          </div>
+          
+          </div><!-- aside-loggedin -->
+        <ul class="nav nav-aside">
+          <li class="nav-item p-14"><a href="../dashboard/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/requests.png" class="pd-r-15"/> <span>Dashboard</span></a></li>
+          <li class="nav-item p-14"><a href="../sanction/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/updates.svg" class="pd-r-15"/> <span>Sanctions</span></a></li>
+          <li class="nav-item p-14"><a href="../recommendation/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Recommendation</span></a></li>
+          <li class="nav-item p-14"><a href="../recognition/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/appraisal.svg" class="pd-r-15"/> <span>Recognition</span></a></li>
+          <li class="nav-item p-14"><a href="../discipline/index.html" class="nav-link  text-gray-700"><img src="../../assets/img/icon/Manager.png" class="pd-r-15"/> <span>Disciplinary Committee</span></a></li>
+          <li class="nav-item active p-14"><a href="../stakeholders/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/Manager.png" class="pd-r-15"/> <span>DC Stakeholders</span></a></li>
+       
+        </ul>
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
+              <li class="breadcrumb-item"><a href="./index.html">DC Stakeholders</a></li>
+            </ol>
+          </nav>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/new.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <div class="mt-2">
+              <div class="d-flex justify-content-between w-100">
+                  <h1 class="p-32 tx-bold">DC Stakeholders</h1>
+                <div>
+                  <button class="btn btn-primary" data-toggle="modal" data-target="#addStakeholderModal">Add Stakeholders</button>
+                </div>
+              </div>
+          </div>
+           
+          <div class="row mt-4">
+            <div class="col-md-6 col-lg-4 col-12 my-2">
+              <div class="card card-body">
+                <p class="tx-semibold tx-16 mb-0">Dunsin Chukwu</p>
+                <label for="title" class="tx-gray-900">Branch Manager, Marina, Lagos</label>
+
+                <div class="mt-3">
+                  <p class="tx-gray-700 mb-0 tx-13"><i data-feather="mail" class="mr-1 icon-sm"></i> dusinohjfjfhhfhh@ubagroup.com</p>
+                <p class="tx-gray-700 mb-0 tx-13"><i data-feather="phone" class="mr-1 icon-sm"></i> 0808989868</p>
+                </div>
+                
+                <div>
+                <button class="btn bd-0 btn-delete  pd-y-1 float-right"><i data-feather="trash-2" class="mr-2"></i>Remove</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-12 my-2">
+              <div class="card card-body">
+                <p class="tx-semibold tx-16 mb-0">Dunsin Chukwu</p>
+                <label for="title" class="tx-gray-900">Branch Manager, Marina, Lagos</label>
+
+                <div class="mt-3">
+                  <p class="tx-gray-700 mb-0 tx-13"><i data-feather="mail" class="mr-1 icon-sm"></i> dusinohjfjfhhfhh@ubagroup.com</p>
+                <p class="tx-gray-700 mb-0 tx-13"><i data-feather="phone" class="mr-1 icon-sm"></i> 0808989868</p>
+                </div>
+                
+                <div>
+                <button class="btn bd-0 btn-delete  pd-y-1 float-right"><i data-feather="trash-2" class="mr-2"></i>Remove</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-12 my-2">
+              <div class="card card-body">
+                <p class="tx-semibold tx-16 mb-0">Dunsin Chukwu</p>
+                <label for="title" class="tx-gray-900">Branch Manager, Marina, Lagos</label>
+
+                <div class="mt-3">
+                  <p class="tx-gray-700 mb-0 tx-13"><i data-feather="mail" class="mr-1 icon-sm"></i> dusinohjfjfhhfhh@ubagroup.com</p>
+                <p class="tx-gray-700 mb-0 tx-13"><i data-feather="phone" class="mr-1 icon-sm"></i> 0808989868</p>
+                </div>
+                
+                <div>
+                <button class="btn bd-0 btn-delete  pd-y-1 float-right"><i data-feather="trash-2" class="mr-2"></i>Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+              
+            <!-- Modal -->
+            <div class="modal fade" id="addStakeholderModal" tabindex="-1" role="dialog" aria-labelledby="addStakeholderModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header pd-y-10">
+                    <h5 class="modal-title mb-0" id="addStakeholderModalLabel">Add Stakeholders</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form action="">
+                      <div class="form-group">
+                        <label for="employee" class="tx-semibold mb-0">Add Employee ID</label>
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col-md-6 my-2">
+                          <button class="btn btn-outline">Cancel</button>
+                        </div>
+                        <div class="col-md-6 my-2">
+                          <button class="btn btn-primary float-right pd-x-20">Save</button>
+                        </div>
+                      </div>
+                    </form>
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+                
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.aside.js"></script>
+    <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="../../assets/js/drop.js"></script>
+    <script src="../../assets/js/dropzone.js"></script>
+    <script>
+      $('#tableData').DataTable({
+        responsive: true,
+        language: {
+          searchPlaceholder: 'Search...',
+          sSearch: '',
+          lengthMenu: '_MENU_ items/page',
+        }
+      });
+    </script>
+
+  </body>
+</html>
