@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Sanction</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/sanction.css">
+    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-700">Confirmation Team Lead </p>
+            </div>
+          </div>
+          
+          </div><!-- aside-loggedin -->
+          <ul class="nav nav-aside">
+            <li class="nav-item p-14"><a href="../dashboard/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/requests.png" class="pd-r-15"/> <span>Dashboard</span></a></li>
+            <li class="nav-item active p-14"><a href="../sanction/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/updates.svg" class="pd-r-15"/> <span>Sanctions</span></a></li>
+            <li class="nav-item  p-14"><a href="../recommendation/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Recommendation</span></a></li>
+            <li class="nav-item p-14"><a href="../recognition/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/appraisal.svg" class="pd-r-15"/> <span>Recognition</span></a></li>
+            <li class="nav-item p-14"><a href="../discipline/index.html" class="nav-link  text-gray-700"><img src="../../assets/img/icon/Manager.png" class="pd-r-15"/> <span>Disciplinary Committee</span></a></li>
+          </ul>
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
+              <li class="breadcrumb-item"><a href="./index.html">Sanction</a></li>
+              <li class="breadcrumb-item text-gray-700" aria-current="page">Create Sanction</li>
+            </ol>
+          </nav>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/new.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <div class="col-md-8 mx-auto card px-0">
+            <div class="card-header pd-y-15">
+             <h3 class="mb-0">New Sanction</h3>
+            </div>
+            <div class="card-body">
+              <form action="">
+                <div class="form-row">
+                  <div class="form-group col-md-6 col-12">
+                    <label class="tx-semibold mb-0">Employee ID</label>
+                    <input type="text" placeholder="" class="form-control">
+                  </div>
+                  <div class="form-group col-md-6 col-12">
+                    <label class="tx-semibold mb-0">Employee ID</label>
+                    <input type="text" placeholder="" class="form-control">
+                  </div>
+                </div>
+
+                <div id="accordion">
+                  <div class="card mt-2">
+                    <div class="card-header pd-y-10" id="headingOne">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="font-weight-bold mb-0">Letter Fields</p>
+                        <p class="p-12 font-weight-bold mb-0">Collapse <i class="fas fa-angle-down ml-2"></i></p>
+                      </div>                   
+                    </div>
+                
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                      <div class="card-body pd-y-15">
+                        <label class="tx-semibold mb-0">Reason for Sanction</label>
+                        <textarea name="" id="" rows="3" class="form-control"></textarea>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="card mt-3">
+                    <div class="card-header pd-y-10" id="headingTwo">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="font-weight-bold mb-0">Termination Fields</p>
+                        <p class="p-12 font-weight-bold mb-0 panel-title">Collapse<i class="fas fa-angle-down ml-2"></i></p>
+                      </div>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                      <div class="card-body py-15">
+                        <div class="form-group">
+                          <label class="tx-semibold mb-0">Start Date</label>
+                          <input type="date" placeholder="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label class="tx-semibold mb-0">Reason for Disengagement</label>
+                          <textarea name="" id="" rows="3" class="form-control"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card mt-3">
+                    <div class="card-header pd-y-10" id="headingThree">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="font-weight-bold mb-0">Caution with Pay Fields</p>
+                        <p class="p-12 font-weight-bold mb-0 panel-title">Collapse<i class="fas fa-angle-down ml-2"></i></p>
+                      </div>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                      <div class="card-body py-15">
+                        <div class="form-group">
+                          <label class="tx-semibold mb-0">Agreed Payment</label>
+                          <input type="text" placeholder="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label class="tx-semibold mb-0">Details of Caution</label>
+                          <textarea name="" id="" rows="3" class="form-control"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card mt-3">
+                    <div class="card-header pd-y-10" id="headingFour">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        <p class="font-weight-bold mb-0">Suspension Fields</p>
+                        <p class="p-12 font-weight-bold mb-0 panel-title">Collapse<i class="fas fa-angle-down ml-2"></i></p>
+                      </div>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                      <div class="card-body py-15">
+                        <div class="form-row">
+                          <div class="form-group col-md-6 col-12">
+                            <div>
+                              <label class="tx-semibold mb-0">Enter Suspension Duration (in days) </label>
+                              <input type="text" placeholder="" class="form-control">
+                            </div>
+
+                            <div>
+                              <label class="tx-semibold mb-0">Start Date</label>
+                              <input type="date" placeholder="" class="form-control">
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6 col-12">
+                            <div class="card card-body">
+                              <p class="p-16">25 working days Suspension.
+                                Starting from Nov 30, 2020 and ending January 12, 2021
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="form-group">
+                          <label class="tx-semibold mb-0">Reason for Suspension</label>
+                          <textarea name="" id="" rows="3" class="form-control"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card mt-3">
+                    <div class="card-header pd-y-10" id="headingFive">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                        <p class="font-weight-bold mb-0">Suspension with Recovery</p>
+                        <p class="p-12 font-weight-bold mb-0 panel-title">Collapse<i class="fas fa-angle-down ml-2"></i></p>
+                      </div>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive data-parent="#accordion">
+                      <div class="card-body py-15">
+                        <div class="form-group">
+                          <label class="tx-semibold mb-0">Items to be Recovered</label>
+                          <input type="text" placeholder="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label class="tx-semibold mb-0">Details of Caution</label>
+                          <textarea name="" id="" rows="3" class="form-control"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="form-group mt-4">
+                   <label for="upload mb-0" class="tx-semibold">Upload Sanction Report</label>
+                   <div class="form-drop mt-1">
+                     <div class="drop-zone pd-20">
+                       <div class="cell"> 
+                         <div class="drop-zone__prompt">
+                           <p class="p-14 my-0 text-gray-700">Click or drop here</p>
+                         </div>
+                         <input type="file" name="myFile" class="drop-zone__input">
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+ 
+                 <div class="row mt-4">
+                   <div class="col-md-6 my-2">
+                     <button class="btn btn-outline">Cancel Process</button>
+                   </div>
+                   <div class="col-md-6 my-2">
+                     <a href="" class="btn btn-primary float-right">Issue Sanction</a>
+                   </div>
+                 </div>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.aside.js"></script>
+    <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="../../assets/js/drop.js"></script>
+    <script src="../../assets/js/dropzone.js"></script>
+    <script>
+      document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+          const dropZoneElement = inputElement.closest(".drop-zone");
+
+          dropZoneElement.addEventListener("click", (e) => {
+            inputElement.click();
+          });
+
+          inputElement.addEventListener("change", (e) => {
+            if (inputElement.files.length) {
+              updateThumbnail(dropZoneElement, inputElement.files[0]);
+            }
+          });
+
+          dropZoneElement.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dropZoneElement.classList.add("drop-zone--over");
+          });
+
+          ["dragleave", "dragend"].forEach((type) => {
+            dropZoneElement.addEventListener(type, (e) => {
+              dropZoneElement.classList.remove("drop-zone--over");
+            });
+          });
+
+          dropZoneElement.addEventListener("drop", (e) => {
+            e.preventDefault();
+
+            if (e.dataTransfer.files.length) {
+              inputElement.files = e.dataTransfer.files;
+              updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+            }
+
+            dropZoneElement.classList.remove("drop-zone--over");
+          });
+        });
+
+        /**
+         * Updates the thumbnail on a drop zone element.
+         *
+         * @param {HTMLElement} dropZoneElement
+         * @param {File} file
+         */
+        function updateThumbnail(dropZoneElement, file) {
+          let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+          // First time - remove the prompt
+          if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+            dropZoneElement.querySelector(".drop-zone__prompt").remove();
+          }
+
+          // First time - there is no thumbnail element, so lets create it
+          if (!thumbnailElement) {
+            thumbnailElement = document.createElement("div");
+            thumbnailElement.classList.add("drop-zone__thumb");
+            dropZoneElement.appendChild(thumbnailElement);
+          }
+
+          thumbnailElement.dataset.label = file.name;
+
+          // Show thumbnail for image files
+          if (file.type.startsWith("image/")) {
+            const reader = new FileReader();
+
+            reader.readAsDataURL(file);
+            reader.onload = () => {
+              thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+            };
+          } else {
+            thumbnailElement.style.backgroundImage = null;
+          }
+        };
+        $(document).ready(function(){
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.show").each(function(){
+          $(this).prev(".card-header pd-y-10").find(".fas").addClass("fa-angle-up").removeClass("fa-angle-down");
+        });
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+          $(this).prev(".card-header pd-y-10").find(".fas").removeClass("fa-angle-down").addClass("fa-angle-up");
+        }).on('hide.bs.collapse', function(){
+          $(this).prev(".card-header pd-y-10").find(".fas").removeClass("fa-angle-up").addClass("fa-angle-down");
+        });
+      });
+    </script>
+
+  </body>
+</html>
