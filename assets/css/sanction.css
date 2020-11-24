@@ -38,3 +38,11 @@ font-weight: 700!important;
 .bg-blue{
     background: #FAFBFD;;
 }
+.close-btn{
+  float: right;
+  border:none;
+  background: transparent;
+}
+.badge-success:hover{
+background: #10B759;
+}
