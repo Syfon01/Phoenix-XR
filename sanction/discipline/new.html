@@ -20,7 +20,8 @@
     
 
     <!-- Page CSS -->
-    <link rel="stylesheet" href="../../assets/css/confirmation.css">
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/sanction.css">''
     <link rel="stylesheet" href="../../assets/css/dashforge.css">
     <link href="../../assets/lib/bootstrap-tagsinput/bootstrap-tagsinput.css">
     <link href="../../assets/lib/bootstrap-tagsinput/bootstrap-tagsinput-typeahead.css">
@@ -71,7 +72,7 @@
     </aside>
 
     <div class="content ht-100v pd-0">
-      <div class="content-header">
+      <div class="content-header sticky-top">
         <div class="d-flex justify-content-between w-100">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
@@ -85,90 +86,93 @@
         </div>
       </div>
 
-      <div class="content-body mt-2 py-3">
+      <div class="content-body secondary-bg">
         <div class="container pd-x-0">
-          <div class="col-md-8 col-12 mx-auto">
-             <h3>DC Session</h3>
-             <hr/>
-
-             <form action="" class="mt-5">
-               <div class="form-row">
-                 <div class="form-group col-md-6 col-12">
-                   <label class="tx-semibold mb-0">Session Title</label>
-                   <input type="text" placeholder="" class="form-control">
-                 </div>
-                 <div class="form-group col-md-6 col-12">
-                  <label class="tx-semibold mb-0">Start Date</label>
-                 <input type="date" class="form-control">
-                 </div>
-               </div>
-
-                <div class="form-group ">
-                 <label class="tx-semibold mb-0">Session Description</label>
-                 <textarea name="" id=""  rows="3" class="form-control"></textarea>
+          <div class="col-md-8 col-12 card mx-auto pd-0">
+            <div class="card-header pd-y-15">
+             <h3 class="mb-0">DC Session</h3>
+            </div>
+            <div class="card-body">
+              <form action="">
+                <div class="form-row">
+                  <div class="form-group col-md-4 col-6 mg-b-10">
+                    <label class="tx-semibold mb-0">Session Title</label>
+                    <input type="text" placeholder="" class="form-control">
+                  </div>
+                  <div class="form-group col-md-4 col-6 mg-b-10">
+                   <label class="tx-semibold mb-0">Start Date</label>
+                  <input type="date" class="form-control">
+                  </div>
                 </div>
-
-                <div class="form-group">
-                  <label class="tx-semibold mb-0">Defendant (Employee) ID - If more than one, seperate with comma</label>
-                  <input type="text" class="form-control" value="Olumide, Basey" data-role="tagsinput" >
-                </div>
-
-                <p class="tx-16 tx-semibold mb-0">DC Members</p>
-                <label class="tx-gray-800">Select Members to sit in this session</label>
-                <form action="">
-                  <div class="form-row">
-                    <div class="form-group col-md-6 col-12">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
-                        <label class="custom-control-label" for="customCheck1">Tolu Tinu</label>
-                      </div>
-                    </div>
-
-                    <div class="form-group col-md-6 col-12">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck2" checked>
-                        <label class="custom-control-label" for="customCheck2">Seyi Daausa</label>
-                      </div>
-                    </div>
-                    <div class="form-group col-md-6 col-12">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck3">
-                        <label class="custom-control-label" for="customCheck3">Martha Bill</label>
-                      </div>
-                    </div>
-                    <div class="form-group col-md-6 col-12">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck4" checked>
-                        <label class="custom-control-label" for="customCheck4">OLumide Seun</label>
-                      </div>
-                    </div>
-                  </div> 
-
+ 
+                 <div class="form-group ">
+                  <label class="tx-semibold mb-0">Session Description</label>
+                  <textarea name="" id=""  rows="3" class="form-control"></textarea>
+                 </div>
+ 
                  <div class="form-group">
-                  <label for="upload " class="tx-semibold mb-0">Upload Investigation Report</label>
-                  <p class="tx-13 tx-gray-800 mb-0">Only DC Members will have access to this report</p>
-                  <div class="form-drop mt-1">
-                    <div class="drop-zone pd-20">
-                      <div class="cell"> 
-                        <div class="drop-zone__prompt">
-                          <p class="p-14 my-0 text-gray-700">Click or drop here</p>
-                        </div>
-                        <input type="file" name="myFile" class="drop-zone__input">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row mt-4">
-                  <div class="col-md-6 my-2">
-                    <button class="btn btn-outline">Cancel Process</button>
-                  </div>
-                  <div class="col-md-6 my-2">
-                    <button class="btn btn-primary float-right">Schedule Session</button>
-                  </div>
-                </div>
+                   <label class="tx-semibold mb-0">Defendant (Employee) ID - If more than one, seperate with comma</label>
+                   <input type="text" class="form-control" value="Olumide, Basey" data-role="tagsinput" >
+                 </div>
+ 
+                 <p class="tx-16 tx-semibold mb-0">DC Members</p>
+                 <label class="tx-gray-800">Select Members to sit in this session</label>
+                 <form action="">
+                   <div class="form-row">
+                     <div class="form-group col-md-4 col-6 mg-b-10">
+                       <div class="custom-control custom-checkbox">
+                         <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                         <label class="custom-control-label" for="customCheck1">Tolu Tinu</label>
+                       </div>
+                     </div>
+ 
+                     <div class="form-group col-md-4 col-6 mg-b-10">
+                       <div class="custom-control custom-checkbox">
+                         <input type="checkbox" class="custom-control-input" id="customCheck2" checked>
+                         <label class="custom-control-label" for="customCheck2">Seyi Daausa</label>
+                       </div>
+                     </div>
+                     <div class="form-group col-md-4 col-6 mg-b-10">
+                       <div class="custom-control custom-checkbox">
+                         <input type="checkbox" class="custom-control-input" id="customCheck3">
+                         <label class="custom-control-label" for="customCheck3">Martha Bill</label>
+                       </div>
+                     </div>
+                     <div class="form-group col-md-4 col-6 mg-b-10">
+                       <div class="custom-control custom-checkbox">
+                         <input type="checkbox" class="custom-control-input" id="customCheck4" checked>
+                         <label class="custom-control-label" for="customCheck4">OLumide Seun</label>
+                       </div>
+                     </div>
+                   </div> 
+ 
+                  <div class="form-group mt-3">
+                   <label for="upload " class="tx-semibold mb-0">Upload Investigation Report</label>
+                   <p class="tx-13 tx-gray-800 mb-0">Only DC Members will have access to this report</p>
+                   <div class="form-drop mt-1">
+                     <div class="drop-zone pd-20">
+                       <div class="cell"> 
+                         <div class="drop-zone__prompt">
+                           <p class="p-14 my-0 text-gray-700">Click or drop here</p>
+                         </div>
+                         <input type="file" name="myFile" class="drop-zone__input">
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+ 
+                 <div class="row mt-4">
+                   <div class="col-md-6 my-2">
+                     <button class="btn btn-outline">Cancel Process</button>
+                   </div>
+                   <div class="col-md-6 my-2">
+                     <button class="btn btn-primary float-right">Schedule Session</button>
+                   </div>
+                 </div>
+              
+               </form>
+            </div>
              
-              </form>
         </div>
       </div>
     </div>
