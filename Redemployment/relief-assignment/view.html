@@ -19,7 +19,7 @@
 
     <!-- Page CSS -->
     <link rel="stylesheet" href="../../assets/css/admin.css">
-    <link rel="stylesheet" href="../../assets/css/sanction.css">
+    <link rel="stylesheet" href="../../assets/css/redeployment.css">
     <link rel="stylesheet" href="../../assets/css/dashforge.css">
   
 
@@ -87,8 +87,12 @@
             <a href="" onclick="history.go(-1)" class="btn btn-back p-10 font-weight-bold mb-3"><i class="fas fa-arrow-left mr-2"></i>GO BACK</a>
 
               <div class="d-flex justify-content-between w-100">
+                  
+                <div class="row px-3 mb-0">
+                    <p><span class="tx-bold tx-24">View Relief Reassignment Request</span></p>
+                  <p class="mb-0"><span class="badge badge-blue pd-y-6 px-3 p-14 ml-2 mt-1 text-uppercase">pending</span></p>
+                  </div>
                 <div>
-                  <h1 class="mb-0 p-32 tx-bold">Initiate Relief Reassignment Request</h1>
                 </div>
                 
               </div>
@@ -140,131 +144,174 @@
                 </div>
               </div>
             <div class="col-md-8 col-lg-8 col-xl-8 col-12">
-
                 <section>
-                  <div class="card card-body media-body">
-                    <h3 class="font-weight-bold">Provide your details and upload the required files</h3>
-                    <p>Fill in the form below with detailed answers</p>
+                <div class="card">
+                  <div class="card-body">
+                      <div class="d-flex justify-content-between">
+                          <div>
+                            <h3 class="tx-bold">Submission Details</h3>
+                            <p>View the new details of the staff to be redeployed</p>
+                          </div>
+                          <div>
+                            <button class="btn btn-primary">
+                                <i data-feather="edit"></i>
+                                Edit
+                            </button>
+                          </div>
+                      </div>
                     <form class="my-2">
-                        <div class="form-group">
+                        <div class="card card-body pd-15">
                           <p class="tx-14 tx-semibold my-0">Purpose</p>
-                          <textarea class="form-control" rows="3" placeholder=""></textarea>
+                          <p class="mb-0">To developp</p>
                         </div>
-                        
-                      <div class="form-row">
-                        <div class="form-group col-md-6 col-12">
-                          <p class="tx-14 tx-semibold my-0">Select New Department</p>
-                          <select class="custom-select">
-                            <option value="">Bridge head Onitsha</option>
-                            <option value="">Innovation Marina</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-6 col-12">
-                          <p class="tx-14 tx-semibold my-0">Select New Unit</p>
-                          <select class="custom-select">
-                            <option value="">Bridge head Onitsha</option>
-                            <option value="">Innovation Marina</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-6 col-12">
-                          <p class="tx-14 tx-semibold my-0">New Reporting Line</p>
-                          <select class="custom-select">
-                            <option value="">Bridge head</option>
-                            <option value="">Team lead</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-6 col-12">
-                          <p class="tx-14 tx-semibold my-0">New Supervisor</p>
-                          <select class="custom-select">
-                            <option value="">Olumide Basssey</option>
-                            <option value="">Timothy Moses</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="card card-body mb-3 pd-15">
-                        <div class="form-row">
-                          <div class="form-group col-md-4 col-6">
-                            <p class="tx-14 tx-semibold mb-0">New Directorate</p>
-                            <p class="tx-14 mb-0">East Bank</p>
-                          </div>
-                          <div class="form-group col-md-4 col-6">
-                            <p class="tx-14 tx-semibold mb-0">New Divison</p>
-                            <p class="tx-14 mb-0">Anambra 1</p>
-                          </div>
-                          <div class="form-group col-md-4 col-6">
-                            <p class="tx-14 tx-semibold mb-0">New Subdivision</p>
-                            <p class="tx-14 mb-0">Anambra West</p>
-                          </div>
-                          <div class="form-group col-md-4 col-6 mb-0">
-                            <p class="tx-14 tx-semibold mb-0">New SOL ID</p>
-                            <p class="tx-14 mb-0">0478</p>
-                          </div>
-                          <div class="form-group col-md-4 col-6 mb-0">
-                            <p class="tx-14 tx-semibold mb-0">New Location</p>
-                            <p class="tx-14 mb-0">No. 4 Anambra Road</p>
-                          </div>
-                        </div>
-                        
-                      </div>
-
-                      <div class="form-row">
-                        <div class="form-group col-md-6 col-12">
-                          <p class="tx-14 tx-semibold my-0">New Title</p>
-                          <select class="custom-select">
-                            <option value="">Supervisor</option>
-                            <option value="">Team lead</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-6 col-12">
-                          <div class="row">
-                              <div class="col-md-6 col-6">
-                                <p class="tx-13 font-weight-bold my-0">Effective Transfer Date</p>
-                                <input type="date" name="" id="" class="form-control">
-
+                        <div class="card card-body my-3 pd-15">
+                            <div class="form-row">
+                              <div class="form-group mb-0 col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">Date Created</p>
+                                <p class="tx-14 mb-0">2nd Nov, 2020</p>
                               </div>
-                              <div class="col-md-6 col-6">
-                                <p class="tx-14 tx-semibold my-0">Effective End Date</p>
-                                <input type="date" name="" id="" class="form-control">
+                              <div class="form-group mb-0 col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">Effective Transfer Date</p>
+                                <p class="tx-14 mb-0">2nd Nov, 2020</p>
                               </div>
+                              <div class="form-group mb-0 col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">Effective End Date</p>
+                                <p class="tx-14 mb-0">2nd Nov, 2020 (24 Days)</p>
+                              </div>
+                            </div>
+                            
                           </div>
-                        </div>
-                      </div>
 
-                      <div class="form-group">
-                        <p class="tx-14 tx-semibold my-0">Upload Required Approvals</p>
-                        <div class="form-drop">
-                          <div class="drop-zone pd-20">
-                            <div class="cell"> 
-                              <div class="drop-zone__prompt">
-                                <p class="p-14 my-0 text-gray-700">Drag and drop or click to upload</p>
+                          <div class="card card-body my-3 pd-15">
+                            <div class="form-row">
+                              <div class="form-group col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">Department</p>
+                                <p class="tx-14 mb-0">Bridgehead, Onitsha</p>
                               </div>
-                              <input type="file" name="myFile" class="drop-zone__input">
+                              <div class="form-group  col-md-8 col-6">
+                                <p class="tx-14 tx-semibold mb-0">Unit</p>
+                                <p class="tx-14 mb-0">Area Operations Office Onitsha</p>
+                              </div>
+
+                              <div class="form-group col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">New Directorate</p>
+                                <p class="tx-14 mb-0">East Bank</p>
+                              </div>
+                              <div class="form-group col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">New Divison</p>
+                                <p class="tx-14 mb-0">Anambra 1</p>
+                              </div>
+                              <div class="form-group col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">New Subdivision</p>
+                                <p class="tx-14 mb-0">Anambra West</p>
+                              </div>
+                              <div class="form-group col-md-4 col-6 mb-0">
+                                <p class="tx-14 tx-semibold mb-0">New SOL ID</p>
+                                <p class="tx-14 mb-0">0478</p>
+                              </div>
+                              <div class="form-group col-md-4 col-6 mb-0">
+                                <p class="tx-14 tx-semibold mb-0">New Location</p>
+                                <p class="tx-14 mb-0">No. 4 Anambra Road</p>
+                              </div>
+                              
+                            </div>
+                            
+                          </div>
+
+                          <div class="card card-body my-3 pd-15">
+                            <div class="form-row">
+                              <div class="form-group mb-0 col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">Reporting Line</p>
+                                <p class="tx-14 mb-0">Samuel Nwafor</p>
+                              </div>
+                              <div class="form-group mb-0 col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">Supervisor</p>
+                                <p class="tx-14 mb-0">Samuel Nwafor</p>
+                              </div>
+                              <div class="form-group mb-0 col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">Title</p>
+                                <p class="tx-14 mb-0">Managing Desk</p>
+                              </div>
                             </div>
                           </div>
+
+                    <p class="tx-14 tx-semibold mb-0">Required Approvals</p>
+                      <div class="card card-body pd-15">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p class="mb-0 pt-1">Authorization to Redeployment</p>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary btn-sm">Open</button>
+                            </div>
                         </div>
                       </div>
-      
-                    <div class="">
-                         <button type="button" class="btn btn-primary float-right pd-x-20">Submit</a>
+                      </form>
+                  </div>
+                  <div class="card-footer modal-footer bd-0">
+                        <button type="button" class="btn btn-outline pd-x-20 ml-4" data-toggle="modal" data-target="#declineModal">Decline</a>
+                        <button type="button" class="btn btn-primary pd-x-20 ml-5" data-toggle="modal" data-target="#approveModal">Approve</a>
                     </div>
-
-                  <div class=" mt-3">
-                    <p class="tx-danger">For view</p>
-                    <a href="./view" type="button" class="btn btn-primary pd-x-20">View-Requet</a>
-                  </div>
-
-                    </form>
-                  </div>
-                 
-                </section>
-                               
-              </div> 
-  
+                </div>
+            </section>
+            </div> 
             </div>
-  
+            <!-- approve modal  -->
+            <div class="modal fade" id="approveModal" tabindex="-1" role="dialog" aria-labelledby="approveModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <p class="tx-14 tx-semibold my-0" id="approveModalLabel">Approve with Comment</p>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="">You are about to submit your exit request to begin your resignation process. 
+                      </p>
+                      <form action="">
+                          <div class="form-group mb-0">
+                            <label for="" class="tx-semibold mb-0">comment</label>  
+                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                          </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+                      <a href="/staff/status.html" type="button" class="btn btn-primary">Proceed</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- decline modal  -->
+            <div class="modal fade" id="declineModal" tabindex="-1" role="dialog" aria-labelledby="declineModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <p class="tx-14 tx-semibold my-0" id="declineModalLabel">Decline with Comment</p>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="">You are about to submit your exit request to begin your resignation process. 
+                      </p>
+                      <form action="">
+                          <div class="form-group mb-0">
+                            <label for="" class="tx-semibold mb-0">comment</label>  
+                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                          </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+                      <a href="/staff/status.html" type="button" class="btn btn-primary">Proceed</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
                 
         </div>
       </div>
