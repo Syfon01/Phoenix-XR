@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Redeployment</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/sanction.css">
+    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+  
+
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-700">Confirmation Team Lead </p>
+            </div>
+          </div>
+          
+          </div><!-- aside-loggedin -->
+          <ul class="nav nav-aside">
+            <li class="nav-item p-14"><a href="../dashboard/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/requests.png" class="pd-r-15"/> <span>Dashboard</span></a></li>
+            <li class="nav-item p-14 active"><a href="../relief-assignment/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/updates.svg" class="pd-r-15"/> <span>Relief Assignment</span></a></li>
+            <li class="nav-item p-14"><a href="../staff-redeployment/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Staff Redeployment</span></a></li>
+            <li class="nav-item p-14"><a href="../expatriation/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/appraisal.svg" class="pd-r-15"/> <span>Expatriation</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
+                <li class="breadcrumb-item"><a href="./index.html">Staff Redeployment</a></li>
+                <li class="breadcrumb-item text-gray-700" aria-current="page">Relief Assignment</li>
+              </ol>
+          </nav>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/new.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <div class="">
+            <a href="" onclick="history.go(-1)" class="btn btn-back p-10 font-weight-bold mb-3"><i class="fas fa-arrow-left mr-2"></i>GO BACK</a>
+
+              <div class="d-flex justify-content-between w-100">
+                <div>
+                  <h1 class="mb-0 p-32 tx-bold">Initiate Relief Reassignment Request</h1>
+                </div>
+                
+              </div>
+          </div>
+         
+          <div class="row mt-5">
+            <div class="col-md-4 col-lg-4 col-xl-4 col-12">
+              <div class="card py-3 profile-sidebar pd-lg-r-25 sidebar-fix">
+                <div class="text-center px-5">
+                  <div class="avatar avatar-xxl mx-auto d-block">
+                    <img src="../../assets/img/avatar-xl.png" class="rounded-circle" alt="staff-image">
+                  </div>
+                    <h4 class="font-weight-bold pd-t-5">Henry
+                      Chukwuemeka</h4>
+                      <p class="p-14 text-title my-0">Solution Architect (Internal Innovation)</p>
+                      <label class="p-12 text-gray-700">Banking Officer, Information Technology</label>
+  
+                      <div class="row bd-t bd-b">
+                        <div class="col bd-r">
+                          <label for="employee-id" class="p-10 text-uppercase my-0 text-gray-700 font-weight-bold">Employee ID</label>
+                          <p class="font-weight-bold mb-1">A29837</p>
+                        </div>
+                        <div class="col">
+                          <label for="cost-code" class="p-10 text-uppercase my-0 text-gray-700 font-weight-bold">Cost code</label>
+                          <p class="font-weight-bold mb-1">U32</p>
+                        </div>
+                      </div>
+                    </div>
+                      <div class="details pd-x-30">
+                        <div class="row pt-3">
+                          <div class="col-12 px-0">
+                            <label for="joined" class="p-12 tx-semibold my-0">Directorate</label>
+                            <p class="">UBA Africa Executive Office </p>
+                          </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col-12 px-0">
+                            <label for="email" class="p-12 tx-semibold my-0">Department</label>
+                            <p class="p-14">53 Marina Lagos</p>
+                          </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col-12 px-0">
+                            <label for="email" class="p-12 tx-semibold my-0">Unit</label>
+                            <p class="p-14">Service -0301</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            <div class="col-md-8 col-lg-8 col-xl-8 col-12">
+
+                <section>
+                  <div class="card card-body media-body">
+                    <h3 class="font-weight-bold">Provide your details and upload the required files</h3>
+                    <p>Fill in the form below with detailed answers</p>
+                    <form class="my-2">
+                        <div class="form-group">
+                          <p class="p-14 font-weight-bold my-0">Purpose</p>
+                          <textarea class="form-control" rows="3" placeholder=""></textarea>
+                        </div>
+                        
+                      <div class="form-row">
+                        <div class="form-group col-md-6 col-12">
+                          <p class="p-14 font-weight-bold my-0">Select New Department</p>
+                          <select class="custom-select">
+                            <option value="">Bridge head Onitsha</option>
+                            <option value="">Innovation Marina</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-6 col-12">
+                          <p class="p-14 font-weight-bold my-0">Select New Unit</p>
+                          <select class="custom-select">
+                            <option value="">Bridge head Onitsha</option>
+                            <option value="">Innovation Marina</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6 col-12">
+                          <p class="p-14 font-weight-bold my-0">New Reporting Line</p>
+                          <select class="custom-select">
+                            <option value="">Bridge head</option>
+                            <option value="">Team lead</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-6 col-12">
+                          <p class="p-14 font-weight-bold my-0">New Supervisor</p>
+                          <select class="custom-select">
+                            <option value="">Olumide Basssey</option>
+                            <option value="">Timothy Moses</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <div class="form-group col-md-6 col-12">
+                          <p class="p-14 font-weight-bold my-0">New Title</p>
+                          <select class="custom-select">
+                            <option value="">Supervisor</option>
+                            <option value="">Team lead</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-6 col-12">
+                          <div class="row">
+                              <div class="col-md-6 col-6">
+                                <p class="tx-13 font-weight-bold my-0">Effective Transfer Date</p>
+                                <input type="date" name="" id="" class="form-control">
+
+                              </div>
+                              <div class="col-md-6 col-6">
+                                <p class="p-14 font-weight-bold my-0">Effective End Date</p>
+                                <input type="date" name="" id="" class="form-control">
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <p class="p-14 font-weight-bold my-0">Upload Required Approvals</p>
+                        <div class="form-drop">
+                          <div class="drop-zone pd-20">
+                            <div class="cell"> 
+                              <div class="drop-zone__prompt">
+                                <p class="p-14 my-0 text-gray-700">Drag and drop or click to upload</p>
+                              </div>
+                              <input type="file" name="myFile" class="drop-zone__input">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+      
+                    <div class="">
+                         <button type="button" class="btn btn-primary float-right pd-x-20">Submit</a>
+                    </div>
+
+                  <div class=" mt-3">
+                    <p class="tx-danger">For view</p>
+                    <a href="./view" type="button" class="btn btn-primary pd-x-20">View-Requet</a>
+                  </div>
+
+                    </form>
+                  </div>
+                  <!-- <div class="d-flex justify-content-between">
+                    <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+                    <div class="p-14 font-weight-bold text-gray-700 mb-0 pt-2">Step 1 of 2</div>
+                    <a href="/staff/started2.html" type="button" class="btn btn-primary">Contine</a>
+                  </div> -->
+                </section>
+                               
+              </div> 
+  
+              <!-- Modal -->
+          <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="submitModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <p class="p-14 font-weight-bold my-0" id="submitModalLabel">Do you want to proceed?</p>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h5 class="text-title font-weight-normal">You are about to submit your exit request to begin your resignation process. 
+                    Do you want to proceed?
+                  </h5>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+                  <a href="/staff/status.html" type="button" class="btn btn-primary">Yes, Proceed</a>
+                </div>
+              </div>
+            </div>
+          </div>           
+            </div>
+  
+                
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.aside.js"></script>
+    <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="../../assets/js/drop.js"></script>
+    <script src="../../assets/js/dropzone.js"></script>
+    <script>
+      $('#tableData,#closedData').DataTable({
+        responsive: true,
+        language: {
+          searchPlaceholder: 'Search...',
+          sSearch: '',
+          lengthMenu: '_MENU_ items/page',
+        }
+      });
+      document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+          const dropZoneElement = inputElement.closest(".drop-zone");
+
+          dropZoneElement.addEventListener("click", (e) => {
+            inputElement.click();
+          });
+
+          inputElement.addEventListener("change", (e) => {
+            if (inputElement.files.length) {
+              updateThumbnail(dropZoneElement, inputElement.files[0]);
+            }
+          });
+
+          dropZoneElement.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dropZoneElement.classList.add("drop-zone--over");
+          });
+
+          ["dragleave", "dragend"].forEach((type) => {
+            dropZoneElement.addEventListener(type, (e) => {
+              dropZoneElement.classList.remove("drop-zone--over");
+            });
+          });
+
+          dropZoneElement.addEventListener("drop", (e) => {
+            e.preventDefault();
+
+            if (e.dataTransfer.files.length) {
+              inputElement.files = e.dataTransfer.files;
+              updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+            }
+
+            dropZoneElement.classList.remove("drop-zone--over");
+          });
+        });
+
+        /**
+         * Updates the thumbnail on a drop zone element.
+         *
+         * @param {HTMLElement} dropZoneElement
+         * @param {File} file
+         */
+        function updateThumbnail(dropZoneElement, file) {
+          let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+          // First time - remove the prompt
+          if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+            dropZoneElement.querySelector(".drop-zone__prompt").remove();
+          }
+
+          // First time - there is no thumbnail element, so lets create it
+          if (!thumbnailElement) {
+            thumbnailElement = document.createElement("div");
+            thumbnailElement.classList.add("drop-zone__thumb");
+            dropZoneElement.appendChild(thumbnailElement);
+          }
+
+          thumbnailElement.dataset.label = file.name;
+
+          // Show thumbnail for image files
+          if (file.type.startsWith("image/")) {
+            const reader = new FileReader();
+
+            reader.readAsDataURL(file);
+            reader.onload = () => {
+              thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+            };
+          } else {
+            thumbnailElement.style.backgroundImage = null;
+          }
+        }
+    </script>
+
+  </body>
+</html>
