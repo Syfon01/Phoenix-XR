@@ -253,38 +253,16 @@
 
                   <div class=" mt-3">
                     <p class="tx-danger">For view</p>
-                    <a href="./view.html" type="button" class="btn btn-primary pd-x-20">View-Requet</a>
+                    <a href="./view" type="button" class="btn btn-primary pd-x-20">View-Requet</a>
                   </div>
 
                     </form>
                   </div>
-                  
+                 
                 </section>
                                
               </div> 
   
-              <!-- Modal -->
-          <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="submitModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <p class="tx-14 tx-semibold my-0" id="submitModalLabel">Do you want to proceed?</p>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <h5 class="text-title font-weight-normal">You are about to submit your exit request to begin your resignation process. 
-                    Do you want to proceed?
-                  </h5>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
-                  <a href="/staff/status.html" type="button" class="btn btn-primary">Yes, Proceed</a>
-                </div>
-              </div>
-            </div>
-          </div>           
             </div>
   
                 
@@ -317,77 +295,7 @@
           lengthMenu: '_MENU_ items/page',
         }
       });
-      document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
-          const dropZoneElement = inputElement.closest(".drop-zone");
-
-          dropZoneElement.addEventListener("click", (e) => {
-            inputElement.click();
-          });
-
-          inputElement.addEventListener("change", (e) => {
-            if (inputElement.files.length) {
-              updateThumbnail(dropZoneElement, inputElement.files[0]);
-            }
-          });
-
-          dropZoneElement.addEventListener("dragover", (e) => {
-            e.preventDefault();
-            dropZoneElement.classList.add("drop-zone--over");
-          });
-
-          ["dragleave", "dragend"].forEach((type) => {
-            dropZoneElement.addEventListener(type, (e) => {
-              dropZoneElement.classList.remove("drop-zone--over");
-            });
-          });
-
-          dropZoneElement.addEventListener("drop", (e) => {
-            e.preventDefault();
-
-            if (e.dataTransfer.files.length) {
-              inputElement.files = e.dataTransfer.files;
-              updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
-            }
-
-            dropZoneElement.classList.remove("drop-zone--over");
-          });
-        });
-
-        /**
-         * Updates the thumbnail on a drop zone element.
-         *
-         * @param {HTMLElement} dropZoneElement
-         * @param {File} file
-         */
-        function updateThumbnail(dropZoneElement, file) {
-          let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
-
-          // First time - remove the prompt
-          if (dropZoneElement.querySelector(".drop-zone__prompt")) {
-            dropZoneElement.querySelector(".drop-zone__prompt").remove();
-          }
-
-          // First time - there is no thumbnail element, so lets create it
-          if (!thumbnailElement) {
-            thumbnailElement = document.createElement("div");
-            thumbnailElement.classList.add("drop-zone__thumb");
-            dropZoneElement.appendChild(thumbnailElement);
-          }
-
-          thumbnailElement.dataset.label = file.name;
-
-          // Show thumbnail for image files
-          if (file.type.startsWith("image/")) {
-            const reader = new FileReader();
-
-            reader.readAsDataURL(file);
-            reader.onload = () => {
-              thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
-            };
-          } else {
-            thumbnailElement.style.backgroundImage = null;
-          }
-        }
+      
     </script>
 
   </body>
