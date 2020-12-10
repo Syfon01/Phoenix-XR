@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Redeployment</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/redeployment.css">
+    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+  
+
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-700">Confirmation Team Lead </p>
+            </div>
+          </div>
+          
+          </div><!-- aside-loggedin -->
+          <ul class="nav nav-aside">
+            <li class="nav-item p-14"><a href="../dashboard/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/requests.png" class="pd-r-15"/> <span>Dashboard</span></a></li>
+            <li class="nav-item p-14"><a href="../relief-assignment/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/updates.svg" class="pd-r-15"/> <span>Relief Assignment</span></a></li>
+            <li class="nav-item p-14 active"><a href="../staff-redeployment/index.html" class="nav-link text-gray-700 active"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Staff Redeployment</span></a></li>
+            <li class="nav-item p-14"><a href="../expatriation/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/appraisal.svg" class="pd-r-15"/> <span>Expatriation</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
+                <li class="breadcrumb-item"><a href="./index.html">Staff Redeployment</a></li>
+                <!-- <li class="breadcrumb-item text-gray-700" aria-current="page">Relief Assignment</li> -->
+              </ol>
+          </nav>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/new.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <div class="">
+              <div class="d-flex justify-content-between w-100">
+                <div>
+                  <h1 class="mb-0 p-32 tx-bold">Staff Redeployment</h1>
+                </div>
+                <div>
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter Staff ID" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <a href="./initiate.html" class="btn btn-primary btn-sm" type="button">Initiate a request</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <ul class="nav nav-line mt-3" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link tab active" id="Active-tab" data-toggle="tab" href="#Active" role="tab" aria-controls="Active" aria-selected="true">Pending Requests</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link tab" id="Closed-tab" data-toggle="tab" href="#Closed" role="tab" aria-controls="Closed" aria-selected="false">Completed Requests</a>
+            </li>
+            
+          </ul>
+          <div class="tab-content bd-t-0" id="myTabContent">
+            <div class="tab-pane fade show active" id="Active" role="tabpanel" aria-labelledby="Active-tab">
+              <div class="card mt-2">
+                <!-- <div class="card-header pd-y-15">
+                  <h5 class="mb-0">Title</h5>
+                </div> -->
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table" id="tableData">
+                      <thead>
+                        <tr>
+                          <th scope="col">SESSION TITLE</th>
+                          <th scope="col">CREATED BY</th>
+                          <th scope="col">DATE CREATED</th>
+                          <th scope="col">START DATE</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                            <td>Bola Favour</td>
+                            <td>Seun Oti</td>
+                            <td>Oct 31, 2020</td>
+                            <td>Nov 15,2020</td>
+                            <td class="text-center"><a href="./view.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                          </tr>
+      
+                          <tr>
+                              <td>Bola Favour</td>
+                              <td>Seun Oti</td>
+                              <td>Oct 31, 2020</td>
+                              <td>Nov 15,2020</td>
+                              <td class="text-center"><a href="./view.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                            </tr>
+                          
+                        </tbody>
+                      
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="Closed" role="tabpanel" aria-labelledby="Closed-tab">
+              <div class="card mt-2">
+                <!-- <div class="card-header pd-y-15">
+                  <h5 class="mb-0">Title</h5>
+                </div> -->
+                <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table" id="closedData">
+                    <thead>
+                      <tr>
+                        <th scope="col">STAFF</th>
+                        <th scope="col">CREATED BY</th>
+                        <th scope="col">DATE CREATED</th>
+                        <th scope="col">START DATE</th>
+                        <th scope="col">STATUS</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Bola Favour</td>
+                        <td>Seun Oti</td>
+                        <td>Oct 31, 2020</td>
+                        <td>Nov 15,2020</td>
+                        <td><span class="badge badge-danger pd-y-5 pd-x-10 tx-12">Declined</span></td>
+                        <td class="text-center"><a href="./view.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                      </tr>
+  
+                      <tr>
+                          <td>Bola Favour</td>
+                          <td>Seun Oti</td>
+                          <td>Oct 31, 2020</td>
+                          <td>Nov 15,2020</td>
+                          <td><span class="badge badge-success pd-y-5 pd-x-10 tx-12">Approved</span></td>
+                          <td class="text-center"><a href="./view.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                        </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+              
+              
+            <!-- Modal -->
+            <div class="modal fade" id="recognitionModal" tabindex="-1" role="dialog" aria-labelledby="recognitionModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header pd-y-15">
+                    <h3 class="modal-title mb-0" id="recognitionModalLabel">View Recognition</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-6 col-12 my-2">
+                        <label for="name" class="tx-gray-800 mb-0">Employee</label>
+                        <h5>Seun Oti</h5>
+                      </div>
+                    <div class="col-md-6 col-12 my-2">
+                      <label for="name" class="tx-gray-800 mb-0">Type of Recognition</label>
+                      <h5>Outstanding Staff</h5>
+                    </div>
+                    <div class="col-md-6 col-12 my-2">
+                      <label for="name" class="tx-gray-800 mb-0">Date Issued</label>
+                      <h5>Oct 31, 2020</h5>
+                    </div>
+                    <div class="col-md-6 col-12 my-2">
+                      <label for="name" class="tx-gray-800 mb-0">Issued By</label>
+                      <h5>Seun Daye</h5>
+                    </div>
+                  </div>
+                  <div class="bg-blue">
+                    <div class="card card-body pd-x-10 pd-y-5">
+                    <div class="row">
+                      <div class="col-md-8 col-12 my-2">
+                        <label for="name" class="tx-gray-800 mb-0">Approved for Evidence</label>     
+                        <h6 class="mb-0">
+                          <i data-feather="download" class="mr-2 "></i>Director of General Affairs
+                        </h6>
+                      </div>
+                      <div class="col-md-4 col-12 mg-t-10">
+                        <button class="btn btn-primary float-right w-100">Download</button>
+                      </div>
+                    </div>
+                    
+                    </div>
+                  </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+                
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.aside.js"></script>
+    <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="../../assets/js/drop.js"></script>
+    <script src="../../assets/js/dropzone.js"></script>
+    <script>
+      $('#tableData,#closedData').DataTable({
+        responsive: true,
+        language: {
+          searchPlaceholder: 'Search...',
+          sSearch: '',
+          lengthMenu: '_MENU_ items/page',
+        }
+      });
+    </script>
+
+  </body>
+</html>

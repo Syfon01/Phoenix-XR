@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Redeployment</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/redeployment.css">
+    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+  
+
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-700">Confirmation Team Lead </p>
+            </div>
+          </div>
+          
+          </div><!-- aside-loggedin -->
+          <ul class="nav nav-aside">
+            <li class="nav-item p-14"><a href="../dashboard/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/requests.png" class="pd-r-15"/> <span>Dashboard</span></a></li>
+            <li class="nav-item p-14"><a href="../relief-assignment/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/updates.svg" class="pd-r-15"/> <span>Relief Assignment</span></a></li>
+            <li class="nav-item p-14 active"><a href="../staff-redeployment/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Staff Redeployment</span></a></li>
+            <li class="nav-item p-14"><a href="../expatriation/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/appraisal.svg" class="pd-r-15"/> <span>Expatriation</span></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
+                <li class="breadcrumb-item"><a href="./index.html">Staff Redeployment</a></li>
+                <!-- <li class="breadcrumb-item text-gray-700" aria-current="page">Relief Assignment</li> -->
+              </ol>
+          </nav>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/new.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <div class="">
+            <a href="" onclick="history.go(-1)" class="btn btn-back p-10 font-weight-bold mb-3"><i class="fas fa-arrow-left mr-2"></i>GO BACK</a>
+
+              <div class="d-flex justify-content-between w-100">
+                  
+                <div class="row px-3 mb-0">
+                    <p><span class="tx-bold tx-24">View Staff Redeployment Request</span></p>
+                  <p class="mb-0"><span class="badge badge-blue pd-y-6 px-3 p-14 ml-2 mt-1 text-uppercase">pending</span></p>
+                  </div>
+                <div>
+                </div>
+                
+              </div>
+          </div>
+         
+          <div class="row mt-5">
+            <div class="col-md-4 col-lg-4 col-xl-4 col-12">
+              <div class="card py-3 profile-sidebar pd-lg-r-25 sidebar-fix">
+                <div class="text-center px-5">
+                  <div class="avatar avatar-xxl mx-auto d-block">
+                    <img src="../../assets/img/avatar-xl.png" class="rounded-circle" alt="staff-image">
+                  </div>
+                    <h4 class="font-weight-bold pd-t-5">Henry
+                      Chukwuemeka</h4>
+                      <p class="p-14 text-title my-0">Solution Architect (Internal Innovation)</p>
+                      <label class="p-12 text-gray-700">Banking Officer, Information Technology</label>
+  
+                      <div class="row bd-t bd-b">
+                        <div class="col bd-r">
+                          <label for="employee-id" class="p-10 text-uppercase my-0 text-gray-700 font-weight-bold">Employee ID</label>
+                          <p class="font-weight-bold mb-1">A29837</p>
+                        </div>
+                        <div class="col">
+                          <label for="cost-code" class="p-10 text-uppercase my-0 text-gray-700 font-weight-bold">Cost code</label>
+                          <p class="font-weight-bold mb-1">U32</p>
+                        </div>
+                      </div>
+                    </div>
+                      <div class="details pd-x-30">
+                        <div class="row pt-3">
+                          <div class="col-12 px-0">
+                            <label for="joined" class="p-12 tx-semibold my-0">Directorate</label>
+                            <p class="">UBA Africa Executive Office </p>
+                          </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col-12 px-0">
+                            <label for="email" class="p-12 tx-semibold my-0">Department</label>
+                            <p class="p-14">53 Marina Lagos</p>
+                          </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col-12 px-0">
+                            <label for="email" class="p-12 tx-semibold my-0">Unit</label>
+                            <p class="p-14">Service -0301</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            <div class="col-md-8 col-lg-8 col-xl-8 col-12">
+                <section>
+                <div class="card">
+                  <div class="card-body">
+                      <div class="d-flex justify-content-between">
+                          <div>
+                            <h3 class="tx-bold">Submission Details</h3>
+                            <p>View the new details of the staff to be redeployed</p>
+                          </div>
+                          <div>
+                            <button class="btn btn-primary">
+                                <i data-feather="edit"></i>
+                                Edit
+                            </button>
+                          </div>
+                      </div>
+                    <form class="my-2">
+                        <div class="card card-body pd-15">
+                          <p class="tx-14 tx-semibold my-0">Purpose</p>
+                          <p class="mb-0">To develop branch financial and service delivery performance goals and objectives and monitors results. To oversee branch administration and operations and establishes policies and procedures that drive efficient operations and regulatory compliance.</p>
+                        </div>
+                        <div class="card card-body my-3 pd-15">
+                            <div class="form-row">
+                              <div class="form-group mb-0 col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">Date Created</p>
+                                <p class="tx-14 mb-0">2nd Nov, 2020</p>
+                              </div>
+                              <div class="form-group mb-0 col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">Effective Transfer Date</p>
+                                <p class="tx-14 mb-0">2nd Nov, 2020</p>
+                              </div>
+                              <div class="form-group mb-0 col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">Effective End Date</p>
+                                <p class="tx-14 mb-0">2nd Nov, 2020 (24 Days)</p>
+                              </div>
+                            </div>
+                            
+                          </div>
+
+                          <div class="card card-body my-3 pd-15">
+                            <div class="form-row">
+                              <div class="form-group col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">Department</p>
+                                <p class="tx-14 mb-0">Bridgehead, Onitsha</p>
+                              </div>
+                              <div class="form-group  col-md-8 col-6">
+                                <p class="tx-14 tx-semibold mb-0">Unit</p>
+                                <p class="tx-14 mb-0">Area Operations Office Onitsha</p>
+                              </div>
+
+                              <div class="form-group col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">New Directorate</p>
+                                <p class="tx-14 mb-0">East Bank</p>
+                              </div>
+                              <div class="form-group col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">New Divison</p>
+                                <p class="tx-14 mb-0">Anambra 1</p>
+                              </div>
+                              <div class="form-group col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">New Subdivision</p>
+                                <p class="tx-14 mb-0">Anambra West</p>
+                              </div>
+                              <div class="form-group col-md-4 col-6 mb-0">
+                                <p class="tx-14 tx-semibold mb-0">New SOL ID</p>
+                                <p class="tx-14 mb-0">0478</p>
+                              </div>
+                              <div class="form-group col-md-4 col-6 mb-0">
+                                <p class="tx-14 tx-semibold mb-0">New Location</p>
+                                <p class="tx-14 mb-0">No. 4 Anambra Road</p>
+                              </div>
+                              
+                            </div>
+                            
+                          </div>
+
+                          <div class="card card-body my-3 pd-15">
+                            <div class="form-row">
+                              <div class="form-group mb-0 col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">Reporting Line</p>
+                                <p class="tx-14 mb-0">Samuel Nwafor</p>
+                              </div>
+                              <div class="form-group mb-0 col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">Supervisor</p>
+                                <p class="tx-14 mb-0">Samuel Nwafor</p>
+                              </div>
+                              <div class="form-group mb-0 col-md-4 col-6">
+                                <p class="tx-14 tx-semibold mb-0">Title</p>
+                                <p class="tx-14 mb-0">Managing Desk</p>
+                              </div>
+                            </div>
+                          </div>
+
+                    <p class="tx-14 tx-semibold mb-0">Required Approvals</p>
+                      <div class="card card-body pd-15">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p class="mb-0 pt-1">Authorization to Redeployment</p>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary btn-sm">Open</button>
+                            </div>
+                        </div>
+                      </div>
+                      </form>
+                  </div>
+                  <div class="card-footer modal-footer bd-0">
+                        <button type="button" class="btn btn-outline pd-x-20 ml-4" data-toggle="modal" data-target="#declineModal">Decline</a>
+                        <button type="button" class="btn btn-primary pd-x-20 ml-5" data-toggle="modal" data-target="#approveModal">Approve</a>
+                    </div>
+                </div>
+            </section>
+            </div> 
+            </div>
+            <!-- approve modal  -->
+            <div class="modal fade" id="approveModal" tabindex="-1" role="dialog" aria-labelledby="approveModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <p class="tx-14 tx-semibold my-0" id="approveModalLabel">Approve with Comment</p>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="">You are about to submit your exit request to begin your resignation process. 
+                      </p>
+                      <form action="">
+                          <div class="form-group mb-0">
+                            <label for="" class="tx-semibold mb-0">comment</label>  
+                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                          </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+                      <a href="/staff/status.html" type="button" class="btn btn-primary">Proceed</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- decline modal  -->
+            <div class="modal fade" id="declineModal" tabindex="-1" role="dialog" aria-labelledby="declineModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <p class="tx-14 tx-semibold my-0" id="declineModalLabel">Decline with Comment</p>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="">You are about to submit your exit request to begin your resignation process. 
+                      </p>
+                      <form action="">
+                          <div class="form-group mb-0">
+                            <label for="" class="tx-semibold mb-0">comment</label>  
+                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                          </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+                      <a href="/staff/status.html" type="button" class="btn btn-primary">Proceed</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+                
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.aside.js"></script>
+    <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="../../assets/js/drop.js"></script>
+    <script src="../../assets/js/dropzone.js"></script>
+    <script>
+      $('#tableData,#closedData').DataTable({
+        responsive: true,
+        language: {
+          searchPlaceholder: 'Search...',
+          sSearch: '',
+          lengthMenu: '_MENU_ items/page',
+        }
+      });
+      
+    </script>
+
+  </body>
+</html>
