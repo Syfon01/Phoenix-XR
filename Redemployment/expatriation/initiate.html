@@ -60,8 +60,8 @@
           <ul class="nav nav-aside">
             <li class="nav-item p-14"><a href="../dashboard/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/requests.png" class="pd-r-15"/> <span>Dashboard</span></a></li>
             <li class="nav-item p-14"><a href="../relief-assignment/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/updates.svg" class="pd-r-15"/> <span>Relief Assignment</span></a></li>
-            <li class="nav-item p-14 active"><a href="../staff-redeployment/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Staff Redeployment</span></a></li>
-            <li class="nav-item p-14"><a href="../expatriation/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/appraisal.svg" class="pd-r-15"/> <span>Expatriation</span></a></li>
+            <li class="nav-item p-14"><a href="../staff-redeployment/index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/issues.png" class="pd-r-15"/> <span>Staff Redeployment</span></a></li>
+            <li class="nav-item p-14 active"><a href="../expatriation/index.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/appraisal.svg" class="pd-r-15"/> <span>Expatriation</span></a></li>
         </ul>
       </div>
     </aside>
@@ -71,7 +71,7 @@
         <div class="d-flex justify-content-between w-100">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
-                <li class="breadcrumb-item"><a href="./index.html">Staff Redeployment</a></li>
+                <li class="breadcrumb-item"><a href="./index.html">Expatriation</a></li>
                 <li class="breadcrumb-item text-gray-700" aria-current="page">Initiate Request</li>
               </ol>
           </nav>
@@ -88,7 +88,7 @@
 
               <div class="d-flex justify-content-between w-100">
                 <div>
-                  <h1 class="mb-0 p-32 tx-bold">Initiate Redeployment Request</h1>
+                  <h1 class="mb-0 p-32 tx-bold">Initiate Expatriation Request</h1>
                 </div>
                 
               </div>
@@ -143,93 +143,46 @@
 
                 <section>
                   <div class="card card-body media-body">
-                    <h3 class="font-weight-bold">Staff Redeployment Request Form</h3>
+                    <h3 class="font-weight-bold">Expatriation Request Form</h3>
                     <p>Fill in the form below with detailed answers</p>
                     <form class="my-2">
                         <div class="form-group">
                           <p class="tx-14 tx-semibold my-0">Purpose</p>
                           <textarea class="form-control" rows="3" placeholder=""></textarea>
                         </div>
+
+                        <div class="form-group">
+                          <p class="tx-14 tx-semibold my-0">Host Country</p>
+                          <select class="custom-select">
+                            <option value="">Nigeria</option>
+                            <option value="">Ghana</option>
+                          </select>
+                        </div>
                         
                       <div class="form-row">
                         <div class="form-group col-md-6 col-12">
-                          <p class="tx-14 tx-semibold my-0">Select New Department</p>
+                          <p class="tx-14 tx-semibold my-0">Expatriation Period</p>
                           <select class="custom-select">
-                            <option value="">Bridge head Onitsha</option>
-                            <option value="">Innovation Marina</option>
+                            <option value="">November</option>
+                            <option value="">December</option>
                           </select>
                         </div>
                         <div class="form-group col-md-6 col-12">
-                          <p class="tx-14 tx-semibold my-0">Select New Unit</p>
+                          <p class="tx-14 tx-semibold my-0">Proposed Period</p>
                           <select class="custom-select">
-                            <option value="">Bridge head Onitsha</option>
-                            <option value="">Innovation Marina</option>
+                            <option value="">January</option>
+                            <option value="">February</option>
                           </select>
                         </div>
                       </div>
                       <div class="form-row">
                         <div class="form-group col-md-6 col-12">
-                          <p class="tx-14 tx-semibold my-0">New Reporting Line</p>
-                          <select class="custom-select">
-                            <option value="">Bridge head</option>
-                            <option value="">Team lead</option>
-                          </select>
+                            <p class="tx-14 font-weight-bold my-0">Effective Transfer Date</p>
+                            <input type="date" name="" id="" class="form-control">
                         </div>
                         <div class="form-group col-md-6 col-12">
-                          <p class="tx-14 tx-semibold my-0">New Supervisor</p>
-                          <select class="custom-select">
-                            <option value="">Olumide Basssey</option>
-                            <option value="">Timothy Moses</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="card card-body mb-3 pd-15">
-                        <div class="form-row">
-                          <div class="form-group col-md-4 col-6">
-                            <p class="tx-14 tx-semibold mb-0">New Directorate</p>
-                            <p class="tx-14 mb-0">East Bank</p>
-                          </div>
-                          <div class="form-group col-md-4 col-6">
-                            <p class="tx-14 tx-semibold mb-0">New Divison</p>
-                            <p class="tx-14 mb-0">Anambra 1</p>
-                          </div>
-                          <div class="form-group col-md-4 col-6">
-                            <p class="tx-14 tx-semibold mb-0">New Subdivision</p>
-                            <p class="tx-14 mb-0">Anambra West</p>
-                          </div>
-                          <div class="form-group col-md-4 col-6 mb-0">
-                            <p class="tx-14 tx-semibold mb-0">New SOL ID</p>
-                            <p class="tx-14 mb-0">0478</p>
-                          </div>
-                          <div class="form-group col-md-4 col-6 mb-0">
-                            <p class="tx-14 tx-semibold mb-0">New Location</p>
-                            <p class="tx-14 mb-0">No. 4 Anambra Road</p>
-                          </div>
-                        </div>
-                        
-                      </div>
-
-                      <div class="form-row">
-                        <div class="form-group col-md-6 col-12">
-                          <p class="tx-14 tx-semibold my-0">New Title</p>
-                          <select class="custom-select">
-                            <option value="">Supervisor</option>
-                            <option value="">Team lead</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-6 col-12">
-                          <div class="row">
-                              <div class="col-md-6 col-6">
-                                <p class="tx-13 font-weight-bold my-0">Effective Transfer Date</p>
-                                <input type="date" name="" id="" class="form-control">
-
-                              </div>
-                              <div class="col-md-6 col-6">
-                                <p class="tx-13 tx-semibold my-0">Effective End Date</p>
-                                <input type="date" name="" id="" class="form-control">
-                              </div>
-                          </div>
+                            <p class="tx-14 tx-semibold my-0">Effective End Date</p>
+                            <input type="date" name="" id="" class="form-control">
                         </div>
                       </div>
 
