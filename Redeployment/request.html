@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Redployment</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/redeployment.css">
+    <link rel="stylesheet" href="../assets/css/dashforge.css">
+    
+  </head>
+  <body>
+    <header class="navbar-header-fixed">
+      <nav class="navbar navbar-expand-lg bg-white bd navbar-header-fixed pd-b-0">
+        <div class="container">
+          <button class="navbar-toggler order-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i data-feather="menu" class="wd-20 ht-20"></i>
+          </button>    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active pb-2">
+                <a class="nav-link header-link" href="/staff/home.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link header-link" href="#">Performance</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link header-link" href="#">Talent center</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link header-link" href="#">Benefits</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link header-link" href="#">TalentX</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto mr-5">
+              <a href="/supervisor/index.html" class="btn btn-sm btn-outline pd-y-2"><i data-feather="power" class="mr-2"></i>Sign out</a>
+            </ul>
+        </div>
+         <a class="navbar-brand navbar-right tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/home.html"><img src="../assets/img/logo.png" class="img-fluid"/></a>
+      </nav>    
+        <div class="navbar-black">
+          <div class="container mt-5">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-style2 bg-transparent bed-pad mg-b-0">
+                <li class="breadcrumb-item pb-0"><a href="./index.html" class="text-bread text-capitalize">Home</a></li>
+                <li class="breadcrumb-item pb-0"><a href="./movement.html" class="text-bread text-capitalize">Staff Movement</a></li>
+                <li class="breadcrumb-item pb-0 active text-bread text-capitalize" aria-current="page">Unit Requests</li>
+              </ol>
+            </nav>
+          </div>          
+        </div>           
+    </header>
+    <section class="secondary-bg mt-5">
+      <div class="container mt-5 py-5">
+        <div class="">
+          <div class="d-flex justify-content-between w-100">
+            <div>
+              <h1 class="mb-0 p-32 tx-bold">Unit Requests</h1>
+            </div>
+            <div>
+            </div>
+          </div>
+      </div>
+      <ul class="nav nav-line" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link tab active" id="Cleared-tab" data-toggle="tab" href="#Cleared" role="tab" aria-controls="Cleared" aria-selected="true">Cleared<span class="tx-13 pd-l-5 rounded-circle badge">(7)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link tab" id="Sent-tab" data-toggle="tab" href="#Sent" role="tab" aria-controls="Sent" aria-selected="false">Sent<span class="tx-13 pd-l-5">(7)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link tab" id="Appraised-tab" data-toggle="tab" href="#Appraised" role="tab" aria-controls="Appraised" aria-selected="false">Appraised<span class="tx-13 pd-l-5">(27)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link tab" id="Deferred-tab" data-toggle="tab" href="#Deferred" role="tab" aria-controls="Deferred" aria-selected="false">Deferred <span class="tx-13 pd-l-5">(27)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link tab" id="Approved-tab" data-toggle="tab" href="#Approved" role="tab" aria-controls="Approved" aria-selected="false">Approved <span class="tx-13 pd-l-5">(27)</span></a>
+        </li>
+      </ul>
+      <div class="tab-content bd-t-0 pd-t-20" id="myTabContent">
+        <div class="tab-pane fade show active" id="Cleared" role="tabpanel" aria-labelledby="Cleared-tab">
+          <div class="card p-3">
+            <div class="table-responsive">
+              <table class="table" id="tableData">
+                <thead>
+                  <tr>
+                    <th scope="col">SN</th>
+                    <th scope="col">STAFF ID</th>
+                    <th scope="col">NAME</th>
+                    <th scope="col">CONFIRMATION DUE DATE</th>
+                    <th scope="col">CBN</th>
+                    <th scope="col">ACADEMIC</th>
+                    <th scope="col">EMPLOYER</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">1</label>
+                      </div>
+                      </th>
+                    <td>A29480</td>
+                    <td class="tx-bold">Chimamanda Ifunanya</td>
+                    <td>Dec 5, 2020 (in 8 weeks)</td>
+                    <td> - </td>
+                    <td>&#x2713;</td>
+                    <td>-</td>
+                    <td class="text-center"><a href="./cleared.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">2</label>
+                      </div>
+                      </th>
+                      <td>A29480</td>
+                      <td class="tx-bold">Chimamanda Ifunanya</td>
+                      <td>Dec 5, 2020 (in 8 weeks)</td>
+                      <td> - </td>
+                      <td>&#x2713;</td>
+                      <td>-</td>
+                      <td class="text-center"><a href="./cleared.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                        <label class="custom-control-label" for="customCheck3">3</label>
+                      </div>
+                      </th>
+                      <td>A29480</td>
+                      <td class="tx-bold">Chimamanda Ifunanya</td>
+                      <td>Dec 5, 2020 (in 8 weeks)</td>
+                      <td>&#x2713;</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td class="text-center"><a href="./cleared.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                        <label class="custom-control-label" for="customCheck4">4</label>
+                      </div>
+                      </th>
+                      <td>A29480</td>
+                      <td class="tx-bold">Chimamanda Ifunanya</td>
+                      <td>Dec 5, 2020 (in 8 weeks)</td>
+                      <td> - </td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td class="text-center"><a href="./cleared.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+            
+          </div>
+          
+        </div>
+        <div class="tab-pane fade" id="Sent" role="tabpanel" aria-labelledby="Sent-tab">
+          
+          <div class="card p-3">
+            <div class="table-responsive">
+              <table class="table" id="SentData"> 
+                <thead>
+                  <tr>
+                    <th scope="col">SN</th>
+                    <th scope="col">STAFF ID</th>
+                    <th scope="col">STAFF NAME</th>
+                    <th scope="col">DATE SENT</th>
+                    <th scope="col">COMPLETION STATUS</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">1</label>
+                      </div>
+                      </th>
+                    <td class="tx-bold">A29480</td>
+                    <td class="tx-bold">Chimamanda Ifunanya</td>
+                    <td>Nov 7, 2020 (today)</td>
+                    <td><span class="badge badge-warning-lg pd-y-7 px-3 p-12"> Pending</span></td>
+                    <td class="text-center"><a href="./sent-appraisal.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">2</label>
+                      </div>
+                      </th>
+                      <td class="tx-bold">A29480</td>
+                      <td class="tx-bold">Chimamanda Ifunanya</td>
+                      <td>Nov 7, 2020 (today)</td>
+                      <td><span class="badge badge-danger-lg pd-y-7 px-3 p-12"> Overdue</span></td>
+                      <td class="text-center"><a href="./sent-appraisal.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                    </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                        <label class="custom-control-label" for="customCheck3">3</label>
+                      </div>
+                      </th>
+                      <td class="tx-bold">A29480</td>
+                      <td class="tx-bold">Chimamanda Ifunanya</td>
+                      <td>Nov 7, 2020 (today)</td>
+                      <td><span class="badge badge-warning-lg pd-y-7 px-3 p-12"> Pending</span></td>
+                      <td class="text-center"><a href="./sent-appraisal.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                    </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                        <label class="custom-control-label" for="customCheck4">4</label>
+                      </div>
+                      </th>
+                      <td class="tx-bold">A29480</td>
+                      <td class="tx-bold">Chimamanda Ifunanya</td>
+                      <td>Nov 7, 2020 (today)</td>
+                      <td><span class="badge badge-danger-lg pd-y-7 px-3 p-12"> Overdue</span></td>
+                      <td class="text-center"><a href="./sent-appraisal.html" class="btn btn-sm btn-outline pd-y-2">Update</a></td>
+                    </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="Appraised" role="tabpanel" aria-labelledby="Appraised-tab">
+          
+          <div class="card p-3">
+            <div class="table-responsive">
+              <table class="table" id="SentData"> 
+                <thead>
+                  <tr>
+                    <th scope="col">SN</th>
+                    <th scope="col">STAFF ID</th>
+                    <th scope="col">STAFF NAME</th>
+                    <th scope="col">DATE SUBMITTED</th>
+                    <th scope="col">SCORE</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">1</label>
+                      </div>
+                      </th>
+                    <td class="tx-bold">A29480</td>
+                    <td class="tx-bold">Chimamanda Ifunanya</td>
+                    <td>Nov 7, 2020 (today)</td>
+                    <td class="text-right">34</td>
+                    <td class="text-center"><a href="./review-appraisal.html" class="btn btn-sm btn-outline pd-y-2">Review</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">2</label>
+                      </div>
+                      </th>
+                      <td class="tx-bold">A29480</td>
+                      <td class="tx-bold">Chimamanda Ifunanya</td>
+                      <td>Nov 7, 2020 (today)</td>
+                      <td class="text-right">56</td>
+                      <td class="text-center"><a href="./review-appraisal.html" class="btn btn-sm btn-outline pd-y-2">Review</a></td>
+                    </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                        <label class="custom-control-label" for="customCheck3">3</label>
+                      </div>
+                      </th>
+                      <td class="tx-bold">A29480</td>
+                      <td class="tx-bold">Chimamanda Ifunanya</td>
+                      <td>Nov 7, 2020 (today)</td>
+                      <td class="text-right">78</td>
+                      <td class="text-center"><a href="./review-appraisal.html" class="btn btn-sm btn-outline pd-y-2">Review</a></td>
+                    </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                        <label class="custom-control-label" for="customCheck4">4</label>
+                      </div>
+                      </th>
+                      <td class="tx-bold">A29480</td>
+                      <td class="tx-bold">Chimamanda Ifunanya</td>
+                      <td>Nov 7, 2020 (today)</td>
+                      <td class="text-right">70</td>
+                      <td class="text-center"><a href="./review-appraisal.html" class="btn btn-sm btn-outline pd-y-2">Review</a></td>
+                    </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="Deferred" role="tabpanel" aria-labelledby="Deferred-tab">
+          
+          <div class="card p-3">
+            <div class="table-responsive">
+              <table class="table" id="SentData"> 
+                <thead>
+                  <tr>
+                    <th scope="col">SN</th>
+                    <th scope="col">STAFF ID</th>
+                    <th scope="col">STAFF NAME</th>
+                    <th scope="col">DATE DEFERRED</th>
+                    <th scope="col">DEFFERED BY</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">1</label>
+                      </div>
+                      </th>
+                    <td class="tx-bold">A29480</td>
+                    <td class="tx-bold">Chimamanda Ifunanya</td>
+                    <td>Nov 7, 2020</td>
+                    <td>Temini Ajao</td>
+                    <td class="text-center"><a href="./deferred-appraisal.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">2</label>
+                      </div>
+                      </th>
+                      <td class="tx-bold">A29480</td>
+                    <td class="tx-bold">Chimamanda Ifunanya</td>
+                    <td>Nov 7, 2020</td>
+                    <td>Temini Ajao</td>
+                    <td class="text-center"><a href="./deferred-appraisal.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                        <label class="custom-control-label" for="customCheck3">3</label>
+                      </div>
+                      </th>
+                      <td class="tx-bold">A29480</td>
+                    <td class="tx-bold">Chimamanda Ifunanya</td>
+                    <td>Nov 7, 2020</td>
+                    <td>Temini Ajao</td>
+                    <td class="text-center"><a href="./deferred-appraisal.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                        <label class="custom-control-label" for="customCheck4">4</label>
+                      </div>
+                      </th>
+                      <td class="tx-bold">A29480</td>
+                    <td class="tx-bold">Chimamanda Ifunanya</td>
+                    <td>Nov 7, 2020</td>
+                    <td>Temini Ajao</td>
+                    <td class="text-center"><a href="./deferred-appraisal.html" class="btn btn-sm btn-outline pd-y-2">View</a></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="Approved" role="tabpanel" aria-labelledby="Approved-tab">
+          
+          <div class="card p-3">
+            <div class="table-responsive">
+              <table class="table" id="SentData"> 
+                <thead>
+                  <tr>
+                    <th scope="col">SN</th>
+                    <th scope="col">STAFF ID</th>
+                    <th scope="col">STAFF NAME</th>
+                    <th scope="col">DATE CONFIRMED</th>
+                    <th scope="col">CONFIRMED BY</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">1</label>
+                      </div>
+                      </th>
+                    <td class="tx-bold">A29480</td>
+                    <td class="tx-bold">Chimamanda Ifunanya</td>
+                    <td>Nov 7, 2020</td>
+                    <td>Temini Ajao</td>
+                    <td class="text-center"><a href="./approved-appraisal.html" class="btn btn-sm btn-outline pd-y-2">Review</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label" for="customCheck2">2</label>
+                      </div>
+                      </th>
+                      <td class="tx-bold">A29480</td>
+                    <td class="tx-bold">Chimamanda Ifunanya</td>
+                    <td>Nov 7, 2020</td>
+                    <td>Temini Ajao</td>
+                    <td class="text-center"><a href="./approved-appraisal.html" class="btn btn-sm btn-outline pd-y-2">Review</a></td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                        <label class="custom-control-label" for="customCheck3">3</label>
+                      </div>
+                      </th>
+                      <td class="tx-bold">A29480</td>
+                    <td class="tx-bold">Chimamanda Ifunanya</td>
+                    <td>Nov 7, 2020</td>
+                    <td>Temini Ajao</td>
+                    <td class="text-center"><a href="./approved-appraisal.html" class="btn btn-sm btn-outline pd-y-2">Review</a></td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                        <label class="custom-control-label" for="customCheck4">4</label>
+                      </div>
+                      </th>
+                      <td class="tx-bold">A29480</td>
+                    <td class="tx-bold">Chimamanda Ifunanya</td>
+                    <td>Nov 7, 2020</td>
+                    <td>Temini Ajao</td>
+                    <td class="text-center"><a href="./approved-appraisal.html" class="btn btn-sm btn-outline pd-y-2">Review</a></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+      </div>
+    </section>
+    <section class="footer text-white">
+      <div class="container">
+        <p class="p-14 mb-0 text-capitalize">&copy; 2020 UBA Group. All Rights Reserved.</p>
+      </div>
+    </section>
+  
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../assets/js/dashforge.settings.js"></script>
+    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../assets/js/drop.js"></script>
+    <script src="../assets/js/dropzone.js"></script>
+    <script>
+   $('').DataTable({
+        responsive: true,
+        language: {
+          searchPlaceholder: 'Search...',
+          sSearch: '',
+          lengthMenu: '_MENU_ items/page',
+        }
+      });
+  </script>
+
+
+
+  </body>
+</html>
