@@ -20,3 +20,31 @@
   fill: #595959;
   color: #fff!important;
 }
+.color-02{
+ color: #5D6A7B;
+}
+.potential-card{
+  background: #E7EAF0!important;
+}
+.nav-tabs .nav-link.pot.active{
+  background:#DB4C3F!important ;
+  color: #fff;
+  font-weight: 700;
+}
+.badge-green{
+  background: #017D24;
+  border-radius: 30px!important;
+  color: #fff;
+  font-weight: 400!important;
+}
+.btn-gray{
+  background: #E4EAF2!important;
+  color: #DB4C3F!important;
+}
+.badge-pending{
+  background: #F5A700;
+  border-radius: 30px!important;
+  color: #000;
+  font-weight: 400!important;
+
+}
