@@ -21,7 +21,7 @@
   color: #fff!important;
 }
 .color-02{
- color: #5D6A7B;
+ color: #3d3f42;
 }
 .potential-card{
   background: #E7EAF0!important;
@@ -47,4 +47,16 @@
   color: #000;
   font-weight: 400!important;
 
+}
+.btn-yes{
+  background: rgba(1,125,115,0.15)!important;
+  font-weight: 600;
+}
+.btn-no{
+  background: rgba(189, 39, 30, 0.15)!important;
+  font-weight: 600;
+}
+.large-avatar{
+  width: 146px!important;
+  height: 146px!important;
 }
