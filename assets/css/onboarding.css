@@ -1,0 +1,152 @@
+.red-400{
+  color:#FF5C39
+}
+.red-500{
+  color: #FF401E;
+}
+.red-800{
+  color: #ED1500;
+}
+.avatar-xxxl{
+  width: 150px!important;
+  height: 150px!important;
+}
+.pale-gray{
+ color: #848484
+}
+.feath-icon{
+  /* margin-top: -10px; */
+}
+.hire-icon{
+  color: #AE2A01;
+}
+.red-50{
+  background-color: #FFE8E6!important;
+}
+.green-pale{
+  color: #007D8C;
+}
+.blue-50{
+  background-color: #d2faff !important;;
+}
+.buddy-icon{
+  color: #006286;
+}
+.deep-green{
+  color: #007C10;
+}
+.green-50{
+  background-color: #E2FFE6!important;
+}
+.academy-icon{
+  color: #297E35;
+}
+.card-pad{
+  padding:8px 16px!important;
+}
+.card-padd{
+  padding: 24px!important;
+}
+.card-height{
+  min-height: 127px;
+
+}
+.grey-2{
+  background-color: #F6F6F6!important;
+}
+.green-2{
+  background-color: #6BC376!important;
+}
+.help-icon{
+  stroke-width: 1!important;
+}
+.help-bg-icon{
+  fill: rgb(255, 153, 165);
+  stroke-width: 1!important;
+
+}
+.modal-pad{
+  padding: 48px!important;
+}
+.list-group-item.active{
+  background-color: rgba(167, 167, 167,0.2)!important;
+  color: #000!important;
+  border-color: #A7A7A7!important;
+}
+.bg-succ{
+  background-color: #98EED5;
+  border-radius: 50%;
+  color: #265F58!important;
+  padding: 2px;
+}
+.error-circle{
+  fill: #A7A7A7;
+  
+}
+.error-triangle{
+  fill: #FF884C;
+}
+.badge-succ{
+  background-color: rgb(117, 231, 132);
+  border-radius: 7.5px!important;
+}
+.badge-second{
+  border-radius: 7.5px!important;
+background-color: rgb(167, 167, 167);
+}
+.tx-dark{
+  color: #000!important;
+}
+.drop-zone {
+  width: 100%;
+  height: auto;
+  border: 1px dashed #ddd;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+  color: #666;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+}
+
+.drop-zone--over {
+  border-style: solid;
+}
+
+.drop-zone__input {
+  display: none;
+}
+
+.drop-zone__thumb {
+  width: 100%;
+  height: 25vh;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  background-size: cover;
+  position: relative;
+}
+
+.drop-zone__thumb::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  text-align: center;
+}
+.form-drop{
+  height: 100%;
+}
+
+ /* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+  .modal-pad{
+    padding: 16px!important;
+  }
+ }

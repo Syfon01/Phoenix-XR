@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Employee Onboarding</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/onboarding.css">
+    <link rel="stylesheet" href="../assets/css/dashforge.css">
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+  </head>
+  <body>
+    <header class="navbar-header-fixed">
+      <nav class="navbar navbar-expand-lg bg-white bd navbar-header-fixed pd-b-0">
+        <div class="container">
+          <button class="navbar-toggler order-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i data-feather="menu" class="wd-20 ht-20"></i>
+          </button>    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active pb-2">
+                <a class="nav-link header-link" href="/staff/home.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link header-link" href="#">Performance</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link header-link" href="#">Talent center</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link header-link" href="#">Benefits</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link header-link" href="#">TalentX</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto mr-5">
+              <a href="/supervisor/index.html" class="btn btn-sm btn-outline pd-y-2"><i data-feather="power" class="mr-2"></i>Sign out</a>
+            </ul>
+        </div>
+         <a class="navbar-brand navbar-right tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/home.html"><img src="../assets/img/logo.png" class="img-fluid"/></a>
+      </nav>    
+        <div class="navbar-black">
+          <div class="container mt-5">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-style2 bg-transparent bed-pad mg-b-0">
+                <li class="breadcrumb-item pb-0"><a href="../staff/home.html" class="text-bread text-capitalize">Home</a></li>
+                <li class="breadcrumb-item pb-0"><a href="./index.html" class="text-bread text-capitalize">Employee Onboarding</a></li>
+                <li class="breadcrumb-item pb-0 active text-bread text-capitalize" aria-current="page">New Hire Forms</li>
+              </ol>
+            </nav>
+          </div>          
+        </div>           
+    </header>
+
+    <section class="secondary-bg mt-5">
+      <div class="container mt-5 py-5">
+        <div class="card card-body bg-red pd-y-15 red-50">
+          <p class="tx-40 tx-bold red-800 mb-0 pd-t-30"> 
+            <i data-feather="file-text" class="wd-30 ht-30 feath-icon mg-r-10"></i>
+            New Hire Forms
+          </p>
+          <p class="tx-16">
+            To complete your Tribe Onboarding process there a few forms you need to complete.
+          </p>
+        </div>
+        <div class="row justify-content-between pd-y-30">
+          <div class="col-12 col-md-6 pd-y-10">
+            <p class="tx-16 mb-0">
+              All the forms are required to be filled accordingly in order to be confirmed as a staff. Kindly read all instructions within the form to avoid mistakes. 
+            </p>
+          </div>
+          <div class="col-md-4 col-12 pd-y-10">
+            <card class="card card-body card-pad grey-2">
+              <div class="d-flex justify-content-between">
+                <p class="tx-12 mb-0 tx-bold">Click to view your Onboarding Progress</p>
+                <label for="" class="tx-12 tx-bold">34%</label>
+               </div>
+               <div class="pd-b-8">
+                <div class="progress ht-10">
+                  <div class="progress-bar wd-35p green-2" role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+               </div>
+            </card>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4 mt-4">
+            <div class="list-group" id="list-tab" role="tablist">
+              
+              <div class="card card-body pd-15 bd-b-0 grey-2">
+                <div class="d-flex justify-content-between">
+                  <p class="mb-0 tx-11 pale-gray">Click on any of the forms to take an action</p>
+                </div>
+              </div>
+              <a class="list-group-item active list-group-item-action new bd-y-0" id="list-competence-list" data-toggle="list" href="#list-competence" role="tab" aria-controls="profile">
+                <div class="d-flex justify-content-between">
+                  <p class="mb-0 tx-16 tx-dark tx-bold">Assets Declaration Form</p>
+                  <i data-feather="check" class="wd-20 ht-20 bg-succ"></i>
+                </div>
+              </a>
+              <a class="list-group-item list-group-item-action new bd-y-0" id="list-committment-list" data-toggle="list" href="#list-committment" role="tab" aria-controls="messages">
+                <div class="d-flex justify-content-between">
+                  <p class="mb-0 tx-16 tx-dark tx-bold">Employee ID Form</p>
+                  <i data-feather="check" class="wd-20 ht-20 bg-succ"></i>
+
+                </div>
+              </a>
+              <a class="list-group-item list-group-item-action new bd-y-0" id="list-contribution-list" data-toggle="list" href="#list-contribution" role="tab" aria-controls="messages">
+                <div class="d-flex justify-content-between">
+                  <p class="mb-0 tx-16 tx-dark tx-bold">Guarantor’s Form</p>
+                  <i data-feather="check" class="wd-20 ht-20 bg-succ"></i>
+
+                </div>
+              </a>
+              <a class="list-group-item list-group-item-action new bd-y-0" id="list-agility-list" data-toggle="list" href="#list-agility" role="tab" aria-controls="messages">
+                <div class="d-flex justify-content-between">
+                  <p class="mb-0 tx-16 tx-dark tx-bold">Housing Registration Form</p>
+                  <i data-feather="check" class="wd-20 ht-20 bg-succ"></i>
+
+                </div>
+              </a>
+              <a class="list-group-item list-group-item-action new bd-y-0" id="list-values-list" data-toggle="list" href="#list-values" role="tab" aria-controls="messages">
+                <div class="d-flex justify-content-between">
+                  <p class="mb-0 tx-16 tx-dark tx-bold">Individual Account Opening Form</p>
+                  <i data-feather="alert-circle" class="wd-20 ht-20 error-circle"></i>
+                </div>
+              </a>
+              <a class="list-group-item list-group-item-action new bd-y-0" id="list-derailment-list" data-toggle="list" href="#list-derailment" role="tab" aria-controls="messages">
+                <div class="d-flex justify-content-between">
+                  <p class="mb-0 tx-16 tx-dark tx-bold">New Employee Form</p>
+                  <i data-feather="check" class="wd-20 ht-20 bg-succ"></i>
+                </div>
+              </a>
+              <a class="list-group-item list-group-item-action new bd-y-0" id="list-learning-list" data-toggle="list" href="#list-learning" role="tab" aria-controls="settings">
+                <div class="d-flex justify-content-between">
+                  <p class="mb-0 tx-16 tx-dark tx-semibold">Related Party Declaration Form</p>
+                  <i data-feather="alert-triangle" class="wd-20 ht-20 error-triangle"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-md-8 mt-4">
+            <div class="tab-content" id="nav-tabContent">
+              
+              <div class="tab-pane fade show active" id="list-competence" role="tabpanel" aria-labelledby="list-competence-list">
+                <section>
+                  <div class="card">
+                    <div class="card-body card-padd">
+                      <p class="tx-24 tx-bold">
+                        <span class="pd-t-20">Asset Declaration Form</span>
+                        <span class="badge badge-succ pd-x-20 pd-t-5 tx-uppercase">Completed</span>
+                      </p>
+                      <p class="tx-14">It is mandatory according to "Section 1 of the Bank Employees’ Declaration of Assets Act of 1986" that staff declare all known assets at point of joining the banking organization. 
+                      </p>
+                      <p class="tx-14">
+                        Kindly download and fill the form below declaring every owned assets known to you on this day. Once you have completed the form, upload the form and submit.
+                      </p>
+                      <p class="tx-14 tx-dark tx-bold"> 
+                        <i data-feather="file-text" class="wd-25 ht-25 feath-icon mg-r-10 hire-icon"></i>
+                        Click to access & complete forms</p>
+
+                        <div class="card card-padd">
+                          <form action="">
+                            <div class="form-group">
+                              <p class="tx-16 tx-bold red-800">Upload Asset Declaration Form</p>
+                              <label for="upload" class="tx-14 mb-1">Upload Signed Asset Declaration Form</label>
+                              <div class="form-drop">
+                                <div class="drop-zone pd-20">
+                                  <div class="cell"> 
+                                    <div class="drop-zone__prompt">
+                                      <p class="p-14 my-0 text-gray-700">Click here to upload/Drag and Drop File</p>
+                                    </div>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                              <button type="submit" class="btn btn-outline pd-x-40 btn-sm"> Reset</button>
+
+                              <button type="submit" class="btn btn-primary pd-x-20 btn-sm">Upload & Submit</button>
+                            </div>
+                          </form>
+                     
+                    </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="tab-pane fade" id="list-committment" role="tabpanel" aria-labelledby="list-committment-list">
+                <section>
+                  <div class="card">
+                    <div class="card-body card-padd">
+                      <p class="tx-24 tx-bold">
+                        <span class="pd-t-20">Employee ID Form</span>
+                        <span class="badge badge-succ pd-x-20 pd-t-5 tx-uppercase">Completed</span>
+                      </p>
+                      <p class="tx-14">Kindly upload a passport photo that is clear and taken on a red background. Photo should not be more than 5MB.  
+                      </p>
+                      
+                        <div class="card card-padd">
+                          <form action="">
+                            <div class="form-group">
+                              <p class="tx-16 tx-bold red-800">Complete your Employee ID Form</p>
+                              <label for="upload" class="tx-14 mb-1">Upload Signed Guarantor’s Form</label>
+                              <div class="form-drop">
+                                <div class="drop-zone pd-20">
+                                  <div class="cell"> 
+                                    <div class="drop-zone__prompt">
+                                      <p class="p-14 my-0 text-gray-700">Click here to upload/Drag and Drop File</p>
+                                    </div>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your First Name">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your Last Name">
+                              </div>
+                             
+                            </div>
+                            
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="title">Job Title</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your Job Title">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="id">ID Number</label>
+                                <input type="type" class="form-control" id="inputPassword4" placeholder="A12345678" disabled>
+                              </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between">
+                              <button type="submit" class="btn btn-outline pd-x-40 btn-sm"> Reset</button>
+
+                              <button type="submit" class="btn btn-primary pd-x-40 btn-sm">Submit</button>
+                            </div>
+                          </form>
+                     
+                    </div>
+                    </div>
+                  </div>
+                </section>              
+              </div>
+              <div class="tab-pane fade" id="list-contribution" role="tabpanel" aria-labelledby="list-contribution-list">
+                <section>
+                  <div class="card">
+                    <div class="card-body card-padd">
+                      <p class="tx-24 tx-bold">
+                        <span class="pd-t-20">Guarantor’s Form</span>
+                        <span class="badge badge-succ pd-x-20 pd-t-5 tx-uppercase">Completed</span>
+                      </p>
+                      <p class="tx-14">It is mandatory according for every new staff to provide one guarantor upon resumption. Kindly download guarantor's form, ensure your guarantor signs it appropriately. 
+
+                      <p class="tx-14">
+                        You will be required to fill the basic information of your Guarantor for BVN Validation. The BVN Validation will be checked automatically before your form is recieved. 
+                      </p>
+                      <p class="tx-14">
+                        Please ensure you read the instructions in the form properly & upload the signed copy in the space provided below. </p>
+                      </p>
+                      <div class="row justify-content-between">
+                        <div class="col-md-6 col-12">
+                          <p class="tx-14 tx-dark tx-bold"> 
+                            <i data-feather="file-text" class="wd-25 ht-25 feath-icon mg-r-10 hire-icon"></i>
+                            Click to access & complete forms</p>
+                        </div>
+                        <div class="col-md-4 col-12">
+                          <p class="tx-14 tx-dark tx-bold"> 
+                          <i data-feather="help-circle" class="wd-25 ht-25 feath-icon mg-r-10 help-bg-icon"></i>
+                          Who can be a Guarantor?</p>
+                        </div>
+                      </div>
+                        <div class="card card-padd">
+                          <form action="">
+                            <p class="tx-16 tx-bold red-800">Complete your Guarantor’s Form</p>
+                            
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="firstName"> Guarantor's First Name</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter First Name">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="lastName">Guarantor's Last Name</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter Last Name">
+                              </div>
+                             
+                            </div>
+                            
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="title">Guarantor's Mobile Number</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter Phone Number">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="id">Guarantor's BVN</label>
+                                <input type="type" class="form-control" id="inputPassword4" placeholder="A12345678" disabled>
+                              </div>
+                            </div>
+
+                            <div class="form-group">
+                              <label for="upload" class="tx-14 mb-1">Upload Signed Guarantor’s Form</label>
+                              <div class="form-drop">
+                                <div class="drop-zone pd-20">
+                                  <div class="cell"> 
+                                    <div class="drop-zone__prompt">
+                                      <p class="p-14 my-0 text-gray-700">Click here to upload/Drag and Drop File</p>
+                                    </div>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between">
+                              <button type="submit" class="btn btn-outline pd-x-40 btn-sm"> Reset</button>
+
+                              <button type="submit" class="btn btn-primary pd-x-40 btn-sm">Upload & Submit</button>
+                            </div>
+                          </form>
+                     
+                    </div>
+                    </div>
+                  </div>
+                </section>              
+              </div>
+
+              <div class="tab-pane fade" id="list-agility" role="tabpanel" aria-labelledby="list-agility-list">
+                <section>
+                  <div class="card">
+                    <div class="card-body card-padd">
+                      <p class="tx-24 tx-bold">
+                        <span class="pd-t-20">Housing Registration Form</span>
+                        <span class="badge badge-second pd-x-20 pd-t-5 tx-uppercase">pending</span>
+                      </p>
+                      <p class="tx-14">
+                        This form is mandatory according to National Housing Fund Decree 3 in 1992, Kindly download the individual registration form below and ensure you fill it appropriately then upload the signed copy in the space provided below.
+                      </p>
+                      <p class="tx-14">
+                        Please ensure you read the instructions in the form properly.
+                      </p>
+
+                      <p class="tx-14 tx-dark tx-bold"> 
+                        <i data-feather="file-text" class="wd-25 ht-25 feath-icon mg-r-10 hire-icon"></i>
+                        Click here to download the Housing Registration Form (Federal Mortgage Bank of Nigeria)
+                      </p>
+
+                      
+                        <div class="card card-padd">
+                          <form action="">
+                            <p class="tx-16 tx-bold red-800">Upload your Housing Registration Form</p>
+                            <div class="form-group">
+                              <label for="upload" class="tx-14 mb-1">Upload Signed Housing Registration Form</label>
+                              <div class="form-drop">
+                                <div class="drop-zone pd-20">
+                                  <div class="cell"> 
+                                    <div class="drop-zone__prompt">
+                                      <p class="p-14 my-0 text-gray-700">Click here to upload/Drag and Drop File</p>
+                                    </div>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between">
+                              <button type="submit" class="btn btn-outline pd-x-40 btn-sm"> Reset</button>
+
+                              <button type="submit" class="btn btn-primary pd-x-20 btn-sm"> Upload & Submit</button>
+                            </div>
+                          </form>
+                     
+                    </div>
+                    </div>
+                  </div>
+                </section>              
+              </div>
+
+              <div class="tab-pane fade" id="list-derailment" role="tabpanel" aria-labelledby="list-derailment-list">
+                <section>
+                  <div class="card">
+                    <div class="card-body card-padd">
+                      <p class="tx-24 tx-bold">
+                        <span class="pd-t-20">Employee ID Form</span>
+                        <span class="badge badge-succ pd-x-20 pd-t-5 tx-uppercase">Completed</span>
+                      </p>
+                      <p class="tx-14">Kindly upload a passport photo that is clear and taken on a red background. Photo should not be more than 5MB.  
+                      </p>
+                      
+                        <div class="card card-padd">
+                          <form action="">
+                            <div class="form-group">
+                              <p class="tx-16 tx-bold red-800">Complete your Employee ID Form</p>
+                              <label for="upload" class="tx-14 mb-1">Upload Signed Guarantor’s Form</label>
+                              <div class="form-drop">
+                                <div class="drop-zone pd-20">
+                                  <div class="cell"> 
+                                    <div class="drop-zone__prompt">
+                                      <p class="p-14 my-0 text-gray-700">Click here to upload/Drag and Drop File</p>
+                                    </div>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your First Name">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your Last Name">
+                              </div>
+                             
+                            </div>
+                            
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="title">Job Title</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your Job Title">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="id">ID Number</label>
+                                <input type="type" class="form-control" id="inputPassword4" placeholder="A12345678" disabled>
+                              </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between">
+                              <button type="submit" class="btn btn-outline pd-x-40 btn-sm"> Reset</button>
+
+                              <button type="submit" class="btn btn-primary pd-x-40 btn-sm">Submit</button>
+                            </div>
+                          </form>
+                     
+                    </div>
+                    </div>
+                  </div>
+                </section>              
+              </div>
+              <div class="tab-pane fade" id="list-agility" role="tabpanel" aria-labelledby="list-agility-list">
+                <section>
+                  <div class="card">
+                    <div class="card-body card-padd">
+                      <p class="tx-24 tx-bold">
+                        <span class="pd-t-20">Employee ID Form</span>
+                        <span class="badge badge-succ pd-x-20 pd-t-5 tx-uppercase">Completed</span>
+                      </p>
+                      <p class="tx-14">Kindly upload a passport photo that is clear and taken on a red background. Photo should not be more than 5MB.  
+                      </p>
+                      
+                        <div class="card card-padd">
+                          <form action="">
+                            <div class="form-group">
+                              <p class="tx-16 tx-bold red-800">Complete your Employee ID Form</p>
+                              <label for="upload" class="tx-14 mb-1">Upload Signed Guarantor’s Form</label>
+                              <div class="form-drop">
+                                <div class="drop-zone pd-20">
+                                  <div class="cell"> 
+                                    <div class="drop-zone__prompt">
+                                      <p class="p-14 my-0 text-gray-700">Click here to upload/Drag and Drop File</p>
+                                    </div>
+                                    <input type="file" name="myFile" class="drop-zone__input">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your First Name">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your Last Name">
+                              </div>
+                             
+                            </div>
+                            
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="title">Job Title</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your Job Title">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="id">ID Number</label>
+                                <input type="type" class="form-control" id="inputPassword4" placeholder="A12345678" disabled>
+                              </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between">
+                              <button type="submit" class="btn btn-outline pd-x-40 btn-sm"> Reset</button>
+
+                              <button type="submit" class="btn btn-primary pd-x-40 btn-sm">Submit</button>
+                            </div>
+                          </form>
+                     
+                    </div>
+                    </div>
+                  </div>
+                </section>              
+              </div>
+              <div class="tab-pane fade" id="list-values" role="tabpanel" aria-labelledby="list-values-list">
+                <h2>Potential Assessment</h2>
+                <section>
+                  <div class="card">
+                    <div class="card-header pd-20">
+                      <div class="d-flex justify-content-between">
+                        <p class="tx-16 mb-0">Values
+                          <span><i data-feather="check-circle" class="wd-22 ht-22 tx-success pd-l-5"></i></span>
+                        </p>
+                        <p class="tx-12 mb-0 tx-uppercase tx-custom">7 Questions</p>
+                      </div>
+                    </div>
+                    <div class="card-body pd-0">
+                      <div class="pd-20 bd-b">
+                        <p class="tx-custom mb-0 tx-12">Functional Competence - Rate Henry Chukwuemeka’s Demonstration of Functional Competencies</p>
+                        <div class=" pd-t-5">
+                          <p class="tx-bold mb-3">1. Does Henry demonstrates knowledge of functional competencies and applies same in area of work at own level?</p>
+                          <div class="row pd-x-20">
+                            <div class="custom-control custom-radio item col-md-3 col-6">
+                              <input type="radio" id="GenConsistent" name="customRadio" class="custom-control-input"
+                                >
+                              <label class="custom-control-label label-box" for="GenConsistent">Exceed Expectationl</label>
+                            </div>
+
+                            <div class="custom-control custom-radio item col-md-3 col-6">
+                              <input type="radio" id="GenMost" name="customRadio" class="custom-control-input">
+                              <label class="custom-control-label label-box" for="GenMost">Meets Expectation</label>
+                            </div>
+                            <div class="custom-control custom-radio item col-md-3 col-6">
+                              <input type="radio" id="GenSome" name="customRadio" class="custom-control-input"
+                                checked>
+                              <label class="custom-control-label label-box" for="GenSome">Developing</label>
+                            </div>
+
+                            <div class="custom-control custom-radio item col-md-3 col-6">
+                              <input type="radio" id="GenSeldom" name="customRadio" class="custom-control-input">
+                              <label class="custom-control-label label-box" for="GenSeldom">Not Demonstrated</label>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="pd-20 bd-b">
+                        <p class="tx-custom mb-0 tx-12">Organisational Competence - Rate Henry Chukwuemeka’s Customer-centricity</p>
+                        <div class=" pd-t-5">
+                          <p class="tx-bold mb-3">2. Does Henry continously listen to and understand customer needs and wants and infuses customer insights into all aspect of work?</p>
+                          <div class="row pd-x-20">
+                            <div class="custom-control custom-radio item col-md-3 col-6">
+                              <input type="radio" id="OwnConsistent" name="customRadio2" class="custom-control-input"
+                                >
+                              <label class="custom-control-label label-box" for="OwnConsistent">Exceed Expectationl</label>
+                            </div>
+
+                            <div class="custom-control custom-radio item col-md-3 col-6">
+                              <input type="radio" id="OwnMost" name="customRadio2" class="custom-control-input">
+                              <label class="custom-control-label label-box" for="OwnMost">Meets Expectation</label>
+                            </div>
+                            <div class="custom-control custom-radio item col-md-3 col-6">
+                              <input type="radio" id="GenSome" name="customRadio2" class="custom-control-input">
+                              <label class="custom-control-label label-box" for="OwnSome">Developing</label>
+                            </div>
+
+                            <div class="custom-control custom-radio item col-md-3 col-6">
+                              <input type="radio" id="GenSeldom" name="customRadio2" class="custom-control-input">
+                              <label class="custom-control-label label-box" for="OwnSeldom">Not Demonstrated</label>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="pd-20 bd-b">
+                        <p class="tx-custom mb-0 tx-12">Organisational Competence - Rate Henry Chukwuemeka’s Customer-centricity</p>
+                        <div class=" pd-t-5">
+                          <p class="tx-bold mb-3">3. Does Henry continously listen to and understand customer needs and wants and infuses customer insights into all aspect of work?</p>
+                          <div class="row pd-x-20">
+                            <div class="custom-control custom-radio item col-md-3 col-6">
+                              <input type="radio" id="OwnConsistent" name="customRadio2" class="custom-control-input"
+                                >
+                              <label class="custom-control-label label-box" for="OwnConsistent">Exceed Expectationl</label>
+                            </div>
+
+                            <div class="custom-control custom-radio item col-md-3 col-6">
+                              <input type="radio" id="OwnMost" name="customRadio2" class="custom-control-input">
+                              <label class="custom-control-label label-box" for="OwnMost">Meets Expectation</label>
+                            </div>
+                            <div class="custom-control custom-radio item col-md-3 col-6">
+                              <input type="radio" id="GenSome" name="customRadio2" class="custom-control-input">
+                              <label class="custom-control-label label-box" for="OwnSome">Developing</label>
+                            </div>
+
+                            <div class="custom-control custom-radio item col-md-3 col-6">
+                              <input type="radio" id="GenSeldom" name="customRadio2" class="custom-control-input">
+                              <label class="custom-control-label label-box" for="OwnSeldom">Not Demonstrated</label>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="mt-4 pd-x-20 pd-t-0 pd-b-20">
+                      <button class="btn btn-primary pd-x-20">Submit Competency Assessment</button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </section>              
+              </div>
+              <div class="tab-pane fade" id="list-learning" role="tabpanel" aria-labelledby="list-learning-list">
+                                 
+                <h2>Learning Needs</h2>
+                <section>
+                  <div class="card">
+                    <div class="card-header pd-20">
+                      <div class="d-flex justify-content-between">
+                        <p class="tx-16 mb-0">Select Learning Needs for Henry
+                          <span><i data-feather="check-circle" class="wd-22 ht-22 tx-success pd-l-5"></i></span>
+                        </p>
+                        <p class="tx-12 mb-0 tx-uppercase tx-custom">maximum of 7</p>
+                      </div>
+                    </div>
+                    <div class="card-body pd-x-20 pd-y-10">
+                      <ul class="nav nav-tabs nav-justified mt-3" id="myTab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link pot tx-semibold active" id="enterprise-tab" data-toggle="tab" href="#enterprise" role="tab" aria-controls="home" aria-selected="true">Enterprise</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link pot tx-semibold" id="leadership-tab" data-toggle="tab" href="#leadership" role="tab" aria-controls="profile" aria-selected="false">Leadership</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link pot tx-semibold" id="functional-tab" data-toggle="tab" href="#functional" role="tab" aria-controls="contact" aria-selected="false">Functional</a>
+                        </li>
+                      </ul>
+                        <div class="tab-content pd-t-20" id="myTabContent">
+                          <div class="tab-pane fade show active" id="enterprise" role="tabpanel" aria-labelledby="enterprise-tab">
+                            <div class="pd-x-20 pd-y-10">
+                            <h2>Enterprise</h2>
+                              <p class="tx-custom mb-0 tx-14">
+                                You are required to add at least 5</p>
+                                <div class="row pd-x-20 pd-t-10">
+                                  <div class="custom-control custom-checkbox col-md-6 col-6 mg-y-5">
+                                    <input type="checkbox" id="GenConsistent" class="custom-control-input"
+                                      >
+                                    <label class="custom-control-label label-box tx-medium" for="GenConsistent">Talent Management</label>
+                                  </div>
+      
+                                  <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                    <input type="checkbox" id="GenMost"  class="custom-control-input">
+                                    <label class="custom-control-label label-box tx-medium" for="GenMost">Cisco CCNA</label>
+                                  </div>
+                                  <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                    <input type="checkbox" id="GenSome"  class="custom-control-input"
+                                      checked>
+                                    <label class="custom-control-label label-box tx-medium" for="GenSome">Financial Markets</label>
+                                  </div>
+      
+                                  <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                    <input type="checkbox" id="GenSeldom"  class="custom-control-input" checked>
+                                    <label class="custom-control-label label-box tx-medium" for="GenSeldom">Cyber Security</label>
+                                  </div>
+      
+                                  <div class="custom-control custom-checkbox col-md-6 col-6 mg-y-5">
+                                    <input type="checkbox" id="training" class="custom-control-input" checked
+                                      >
+                                    <label class="custom-control-label label-box tx-medium" for="training">Training & Development</label>
+                                  </div>
+      
+                                  <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                    <input type="checkbox" id="human"  class="custom-control-input">
+                                    <label class="custom-control-label label-box tx-medium" for="human">Human Resources (HR)</label>
+                                  </div>
+                                  <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                    <input type="checkbox" id="people"  class="custom-control-input">
+                                    <label class="custom-control-label label-box tx-medium" for="people">People Management</label>
+                                  </div>
+      
+                                  <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                    <input type="checkbox" id="insurance"  class="custom-control-input">
+                                    <label class="custom-control-label label-box tx-medium" for="insurance">Insurance</label>
+                                  </div>
+                                </div>
+                                <div class="mt-4">
+                                  <button class="btn btn-primary pd-x-20">Submit Learning Needs</button>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="tab-pane fade pd-x-20 pd-y-10" id="leadership" role="tabpanel" aria-labelledby="leadership-tab">
+                            <h2>Leadership</h2>
+                            <div class="media align-items-stretch">
+                              <ul class="nav nav-tabs flex-column wd-150" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                  <a class="nav-link pot inner tx-medium active" id="self-tab" data-toggle="tab" href="#self" role="tab" aria-controls="home" aria-selected="true">Leading Self</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link pot inner tx-medium" id="profile-tab" data-toggle="tab" href="#others" role="tab" aria-controls="others" aria-selected="false">Leading Others</a>
+                                </li>
+                                <li class="nav-item pd-x-0">
+                                  <a class="nav-link pot inner tx-medium pd-x-0" id="contact-tab" data-toggle="tab" href="#business" role="tab" aria-controls="business" aria-selected="false">Leading Business</a>
+                                </li>
+                              </ul>
+                              <div class="media-body">
+                              <div class="tab-content bd bd-gray-300 bd-l-0 pd-20" id="myTabContent">
+                                <div class="tab-pane fade show active" id="self" role="tabpanel" aria-labelledby="self-tab">
+                                  <h4>Leading Self</h4>
+                                  <div class="pd-20">
+                                    <p class="tx-custom mb-0 tx-14">
+                                      You are required to add at least 5</p>
+                                      <div class="row pd-x-20 pd-t-10">
+                                        <div class="custom-control custom-checkbox col-md-6 col-6 mg-y-5">
+                                          <input type="checkbox" id="GenConsistent" class="custom-control-input"
+                                            >
+                                          <label class="custom-control-label label-box tx-medium" for="GenConsistent">Talent Management</label>
+                                        </div>
+            
+                                        <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                          <input type="checkbox" id="GenMost"  class="custom-control-input">
+                                          <label class="custom-control-label label-box tx-medium" for="GenMost">Cisco CCNA</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                          <input type="checkbox" id="GenSome"  class="custom-control-input"
+                                            checked>
+                                          <label class="custom-control-label label-box tx-medium" for="GenSome">Financial Markets</label>
+                                        </div>
+            
+                                        <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                          <input type="checkbox" id="GenSeldom"  class="custom-control-input" checked>
+                                          <label class="custom-control-label label-box tx-medium" for="GenSeldom">Cyber Security</label>
+                                        </div>
+            
+                                        <div class="custom-control custom-checkbox col-md-6 col-6 mg-y-5">
+                                          <input type="checkbox" id="training" class="custom-control-input" checked
+                                            >
+                                          <label class="custom-control-label label-box tx-medium" for="training">Training & Development</label>
+                                        </div>
+            
+                                        <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                          <input type="checkbox" id="human"  class="custom-control-input">
+                                          <label class="custom-control-label label-box tx-medium" for="human">Human Resources (HR)</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                          <input type="checkbox" id="people"  class="custom-control-input">
+                                          <label class="custom-control-label label-box tx-medium" for="people">People Management</label>
+                                        </div>
+            
+                                        <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                          <input type="checkbox" id="insurance"  class="custom-control-input">
+                                          <label class="custom-control-label label-box tx-medium" for="insurance">Insurance</label>
+                                        </div>
+                                      </div>
+                                      <div class="mt-4">
+                                        <button class="btn btn-primary pd-x-20">Submit Learning Needs</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="others" role="tabpanel" aria-labelledby="others-tab">
+                                  <h4>Leading Others</h4>
+                                    <div class="pd-20">
+                                  <p class="tx-custom mb-0 tx-14">
+                                    You are required to add at least 5</p>
+                                    <div class="row pd-x-20 pd-t-10">
+                                      <div class="custom-control custom-checkbox col-md-6 col-6 mg-y-5">
+                                        <input type="checkbox" id="GenConsistent" class="custom-control-input"
+                                          >
+                                        <label class="custom-control-label label-box tx-medium" for="GenConsistent">Talent Management</label>
+                                      </div>
+          
+                                      <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                        <input type="checkbox" id="GenMost"  class="custom-control-input">
+                                        <label class="custom-control-label label-box tx-medium" for="GenMost">Cisco CCNA</label>
+                                      </div>
+                                      <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                        <input type="checkbox" id="GenSome"  class="custom-control-input"
+                                          checked>
+                                        <label class="custom-control-label label-box tx-medium" for="GenSome">Financial Markets</label>
+                                      </div>
+          
+                                      <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                        <input type="checkbox" id="GenSeldom"  class="custom-control-input" checked>
+                                        <label class="custom-control-label label-box tx-medium" for="GenSeldom">Cyber Security</label>
+                                      </div>
+          
+                                      <div class="custom-control custom-checkbox col-md-6 col-6 mg-y-5">
+                                        <input type="checkbox" id="training" class="custom-control-input" checked
+                                          >
+                                        <label class="custom-control-label label-box tx-medium" for="training">Training & Development</label>
+                                      </div>
+          
+                                      <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                        <input type="checkbox" id="human"  class="custom-control-input">
+                                        <label class="custom-control-label label-box tx-medium" for="human">Human Resources (HR)</label>
+                                      </div>
+                                      <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                        <input type="checkbox" id="people"  class="custom-control-input">
+                                        <label class="custom-control-label label-box tx-medium" for="people">People Management</label>
+                                      </div>
+          
+                                      <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                        <input type="checkbox" id="insurance"  class="custom-control-input">
+                                        <label class="custom-control-label label-box tx-medium" for="insurance">Insurance</label>
+                                      </div>
+                                    </div>
+                                    <div class="mt-4">
+                                      <button class="btn btn-primary pd-x-20">Submit Learning Needs</button>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="tab-pane fade" id="business" role="tabpanel" aria-labelledby="business-tab">
+                                  <h4>Leading Business</h4>
+                                    <div class="pd-20">
+                                    <p class="tx-custom mb-0 tx-14">
+                                      You are required to add at least 5</p>
+                                      <div class="row pd-x-20 pd-t-10">
+                                        <div class="custom-control custom-checkbox col-md-6 col-6 mg-y-5">
+                                          <input type="checkbox" id="GenConsistent" class="custom-control-input"
+                                            >
+                                          <label class="custom-control-label label-box tx-medium" for="GenConsistent">Talent Management</label>
+                                        </div>
+            
+                                        <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                          <input type="checkbox" id="GenMost"  class="custom-control-input">
+                                          <label class="custom-control-label label-box tx-medium" for="GenMost">Cisco CCNA</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                          <input type="checkbox" id="GenSome"  class="custom-control-input"
+                                            checked>
+                                          <label class="custom-control-label label-box tx-medium" for="GenSome">Financial Markets</label>
+                                        </div>
+            
+                                        <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                          <input type="checkbox" id="GenSeldom"  class="custom-control-input" checked>
+                                          <label class="custom-control-label label-box tx-medium" for="GenSeldom">Cyber Security</label>
+                                        </div>
+            
+                                        <div class="custom-control custom-checkbox col-md-6 col-6 mg-y-5">
+                                          <input type="checkbox" id="training" class="custom-control-input" checked
+                                            >
+                                          <label class="custom-control-label label-box tx-medium" for="training">Training & Development</label>
+                                        </div>
+            
+                                        <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                          <input type="checkbox" id="human"  class="custom-control-input">
+                                          <label class="custom-control-label label-box tx-medium" for="human">Human Resources (HR)</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                          <input type="checkbox" id="people"  class="custom-control-input">
+                                          <label class="custom-control-label label-box tx-medium" for="people">People Management</label>
+                                        </div>
+            
+                                        <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                          <input type="checkbox" id="insurance"  class="custom-control-input">
+                                          <label class="custom-control-label label-box tx-medium" for="insurance">Insurance</label>
+                                        </div>
+                                      </div>
+                                      <div class="mt-4">
+                                        <button class="btn btn-primary pd-x-20">Submit Learning Needs</button>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="functional" role="tabpanel" aria-labelledby="functional-tab">
+                            <div class="pd-x-20 pd-y-10">
+                            <h2>Functional</h2>
+                              <p class="tx-custom mb-0 tx-14">
+                                You are required to add at least 5</p>
+                                <div class="row pd-x-20 pd-t-10">
+                                  <div class="custom-control custom-checkbox col-md-6 col-6 mg-y-5">
+                                    <input type="checkbox" id="GenConsistent" class="custom-control-input"
+                                      >
+                                    <label class="custom-control-label label-box tx-medium" for="GenConsistent">Talent Management</label>
+                                  </div>
+      
+                                  <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                    <input type="checkbox" id="GenMost"  class="custom-control-input">
+                                    <label class="custom-control-label label-box tx-medium" for="GenMost">Cisco CCNA</label>
+                                  </div>
+                                  <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                    <input type="checkbox" id="GenSome"  class="custom-control-input"
+                                      checked>
+                                    <label class="custom-control-label label-box tx-medium" for="GenSome">Financial Markets</label>
+                                  </div>
+      
+                                  <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                    <input type="checkbox" id="GenSeldom"  class="custom-control-input" checked>
+                                    <label class="custom-control-label label-box tx-medium" for="GenSeldom">Cyber Security</label>
+                                  </div>
+      
+                                  <div class="custom-control custom-checkbox col-md-6 col-6 mg-y-5">
+                                    <input type="checkbox" id="training" class="custom-control-input" checked
+                                      >
+                                    <label class="custom-control-label label-box tx-medium" for="training">Training & Development</label>
+                                  </div>
+      
+                                  <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                    <input type="checkbox" id="human"  class="custom-control-input">
+                                    <label class="custom-control-label label-box tx-medium" for="human">Human Resources (HR)</label>
+                                  </div>
+                                  <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                    <input type="checkbox" id="people"  class="custom-control-input">
+                                    <label class="custom-control-label label-box tx-medium" for="people">People Management</label>
+                                  </div>
+      
+                                  <div class="custom-control custom-checkbox item col-md-6 col-6 mg-y-5">
+                                    <input type="checkbox" id="insurance"  class="custom-control-input">
+                                    <label class="custom-control-label label-box tx-medium" for="insurance">Insurance</label>
+                                  </div>
+                                </div>
+
+                                <div class="mt-4">
+                                  <button class="btn btn-primary pd-x-20">Submit Learning Needs</button>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                     
+    
+                      
+                    </div>
+                  </div>
+                  
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer text-white">
+      <div class="container">
+        <p class="p-14 mb-0 text-capitalize">&copy; 2020 UBA Group. All Rights Reserved.</p>
+      </div>
+    </section>
+  
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../assets/js/drop.js"></script>
+    <script src="../assets/js/dropzone.js"></script>
+    
+<script>
+   document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+          const dropZoneElement = inputElement.closest(".drop-zone");
+
+          dropZoneElement.addEventListener("click", (e) => {
+            inputElement.click();
+          });
+
+          inputElement.addEventListener("change", (e) => {
+            if (inputElement.files.length) {
+              updateThumbnail(dropZoneElement, inputElement.files[0]);
+            }
+          });
+
+          dropZoneElement.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dropZoneElement.classList.add("drop-zone--over");
+          });
+
+          ["dragleave", "dragend"].forEach((type) => {
+            dropZoneElement.addEventListener(type, (e) => {
+              dropZoneElement.classList.remove("drop-zone--over");
+            });
+          });
+
+          dropZoneElement.addEventListener("drop", (e) => {
+            e.preventDefault();
+
+            if (e.dataTransfer.files.length) {
+              inputElement.files = e.dataTransfer.files;
+              updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+            }
+
+            dropZoneElement.classList.remove("drop-zone--over");
+          });
+        });
+
+        /**
+         * Updates the thumbnail on a drop zone element.
+         *
+         * @param {HTMLElement} dropZoneElement
+         * @param {File} file
+         */
+        function updateThumbnail(dropZoneElement, file) {
+          let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+          // First time - remove the prompt
+          if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+            dropZoneElement.querySelector(".drop-zone__prompt").remove();
+          }
+
+          // First time - there is no thumbnail element, so lets create it
+          if (!thumbnailElement) {
+            thumbnailElement = document.createElement("div");
+            thumbnailElement.classList.add("drop-zone__thumb");
+            dropZoneElement.appendChild(thumbnailElement);
+          }
+
+          thumbnailElement.dataset.label = file.name;
+
+          // Show thumbnail for image files
+          if (file.type.startsWith("image/")) {
+            const reader = new FileReader();
+
+            reader.readAsDataURL(file);
+            reader.onload = () => {
+              thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+            };
+          } else {
+            thumbnailElement.style.backgroundImage = null;
+          }
+        }
+
+
+</script>
+
+  </body>
+</html>
