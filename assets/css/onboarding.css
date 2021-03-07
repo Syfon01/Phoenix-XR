@@ -71,7 +71,7 @@
 .list-group-item.active{
   background-color: rgba(167, 167, 167,0.2)!important;
   color: #000!important;
-  border-color: #A7A7A7!important;
+  border:0;
 }
 .bg-succ{
   background-color: #98EED5;
@@ -93,6 +93,10 @@
 .badge-second{
   border-radius: 7.5px!important;
 background-color: rgb(167, 167, 167);
+}
+.badge-warn{
+  background-color: rgb(255, 131, 99);
+  border-radius: 7.5px!important;
 }
 .tx-dark{
   color: #000!important;
