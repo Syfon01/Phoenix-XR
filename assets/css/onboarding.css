@@ -162,3 +162,37 @@ background-color: rgb(167, 167, 167);
     padding: 16px!important;
   }
  }
+
+
+
+
+
+
+
+ /* Admin section  */
+@media (min-width: 1200px) { 
+ .btn-neg{
+   margin-top: -20px;
+ }
+}
+.nav-link.active{
+  color: #fff!important;
+  font-weight: 700!important;
+}
+.nav-link.tab.active{
+color: #000!important;
+font-weight: 700!important;
+}
+.nav-link.active.bg{
+  background-color: #DB4C3F!important;
+  font-weight: 700!important;
+}
+.grey-1{
+  background-color: rgb(235, 235, 235)!important;
+}
+.green-button{
+  background-color: rgb(117, 231, 132)!important;
+}
+.green-button:hover{
+  background-color: rgb(106, 206, 119)!important;
+}
