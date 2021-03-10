@@ -162,7 +162,19 @@ background-color: rgb(167, 167, 167);
     padding: 16px!important;
   }
  }
-
+ .avatar-xxxl{
+  width: 120px!important;
+  height: 120px!important;
+  margin-top: 40px;
+}
+.avatar-resize{
+  width: 110px!important;
+  height: 110px!important;
+  
+}
+.pd-t-100{
+  padding-top: 50px!important;
+}
 
 
 
