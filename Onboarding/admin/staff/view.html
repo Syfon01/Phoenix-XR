@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Manpower Onboarding</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../../assets/css/onboarding.css">
+    <link rel="stylesheet" href="../../../assets/css/dashforge.css">
+
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-700">Exit Admin</p>
+            </div>
+          </div>
+          
+          <div class="collapse" id="loggedinMenu">
+            <ul class="nav nav-aside mg-b-0">
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="edit"></i> <span>Edit Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="user"></i> <span>View Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="settings"></i> <span>Account Settings</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="help-circle"></i> <span>Help Center</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="log-out"></i> <span>Sign Out</span></a></li>
+            </ul>
+          </div>
+        </div><!-- aside-loggedin -->
+
+        <ul class="nav nav-aside">
+          <li class="nav-item p-14"><a href="../requisition/index.html" class="nav-link text-gray-700"><i data-feather="grid"></i><span>Manpower Requisiton</span></a></li>
+          <li class="nav-item p-14"><a href="../job/index.html" class="nav-link text-gray-700"><i data-feather="help-circle"></i><span>Job Publishing</span></a></li>
+          <li class="nav-item p-14"><a href="../external-invitation/index.html" class="nav-link text-gray-700"><i data-feather="layers"></i> <span>External Invitation</span></a></li>
+          <li class="nav-item p-14"><a href="../interview/index.html" class="nav-link text-gray-700"><i data-feather="layers"></i> <span>Interview Management</span></a></li>
+          <li class="nav-item active p-14"><a href="../staff/index.html" class="nav-link active text-gray-700"><i data-feather="layers"></i> <span>Staff OnBoarding</span></a></li>
+
+        </ul>
+        
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
+              <li class="breadcrumb-item"><a href="./index.html">Requisition</a></li>
+              <li class="breadcrumb-item text-gray-700" aria-current="page">Requisition Listing</li>
+            </ol>
+          </nav>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/New.html"><img src="../../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <div class="">
+            <p class="tx-40 tx-bold mb-0">Submission Review</p>
+          </div>
+          <hr/>
+    
+          <div class="row">
+            <div class="col-md-4 col-12">
+              <div class="card grey-2">
+                <div class=" pd-15">
+                  <div class="search-form mg-b-10">
+                    <input type="search" class="form-control" placeholder="Search">
+                    <button class="btn" type="button"><i data-feather="search"></i></button>
+                  </div>
+                </div>
+                
+                  <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="avatar avatar-lg"><img src="../../../assets/img/avatar-xl.png" src="staff"></div>
+                        </div>
+                        <div class="col-9 pd-t-10">
+                          <p class="tx-16 tx-bold mb-0">Olumide Olusesi</p>
+                          <p class="mb-0 t-14 text-new">Pending Review</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="avatar avatar-lg"><img src="../../../assets/img/avatar-xl.jpg" src="staff"></div>
+                        </div>
+                        <div class="col-9 pd-t-10">
+                          <p class="tx-16 tx-bold mb-0">Olumide Olusesi</p>
+                          <p class="mb-0 t-14 text-new">Pending Review</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="avatar avatar-lg"><img src="../../../assets/img/birthday2.png" src="staff"></div>
+                        </div>
+                        <div class="col-9 pd-t-10">
+                          <p class="tx-16 tx-bold mb-0">Olumide Olusesi</p>
+                          <p class="mb-0 t-14 text-new">Pending Review</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="avatar avatar-lg"><img src="../../../assets/img/birthday2.png" src="staff"></div>
+                        </div>
+                        <div class="col-9 pd-t-10">
+                          <p class="tx-16 tx-bold mb-0">Olumide Olusesi</p>
+                          <p class="mb-0 t-14 text-new">Pending Review</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-12">
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                  <p class="tx-32 tx-bold mb-0">Olumide’s Submission</p>
+                  <p class="tx-16">Full submission of the onboarding forms for review and Approval</p>
+                  <div class="card grey-2">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-lg-2 col-6 mg-t-10">
+                          <div class="avatar avatar-xxl"><img src="../../../assets/img/avatar-xl.png" src="staff"></div>
+                        </div>
+                        <div class="col-lg-4 col-6 mg-t-10">
+                          <p class="tx-24 red-800 mb-0 tx-bold">Olumide Olusesi</p>
+                          <p class="tx-13 mb-0 tx-medium">A3011890</p>
+                          <p class="tx-13 mb-0 tx-medium">olumide.olusesi@ubagroup.com</p>
+                          <p class="tx-12 mb-0 tx-medium">Principal Product Designer (UI/UX)</p>
+                        </div>
+                        <div class="col-lg-3 col-6 mg-t-10 tx-right pd-t-5">
+                          <p class="tx-13 mb-0 tx-medium pd-t-30">CIO Organisation</p>
+                          <p class="tx-13 mb-0 tx-medium">Technology Group</p>
+                          <p class="tx-13 mb-0 tx-medium">IT Directorate</p>
+                        </div>
+                        <div class="col-lg-3 col-6 mg-t-10 tx-right pd-t-5">
+                          <p class="tx-13 mb-0 tx-medium pd-t-30">Head Office Team</p>
+                          <p class="tx-13 mb-0 tx-medium">South West Division</p>
+                          <p class="tx-13 mb-0 tx-medium">Lagos, Nigeria.</p>
+                        </div>
+                      </div>
+                      <hr/>
+                      <div class="row">
+                        <div class="col-lg-6 col-12">
+                          <div class="mg-t-15">
+                            <div class="card grey-2">
+                              <div class="card-header pd-y-5 pd-x-10 grey-1">
+                                <p class="tx-16 tx-bold mb-0">Asset Declaration Form</p>
+                              </div>
+                              <div class="card-body pd-10">
+                                <div class="row">
+                                  <div class="col-md-7 col-12">
+                                   <div class="row">
+                                     <div class="col-3">
+                                    <img src="../../../assets/img/icon/pdf.svg"/>
+                                     </div>
+                                     <div class="col-9 px-x-0">
+                                      <div class="pd-l-4">
+                                        <p class="tx-11 mb-0">Asset_Declaration_Olumide_Olusesi.pdf</p>
+                                        <button class="btn tx-bold mg-t-0 pd-x-0 pd-y-0">View File</button>
+                                      </div>
+                                     </div>
+                                    
+                                   </div> 
+                                  </div>
+                                  <div class="col-md-5 col-12 pd-lg-l-0">
+                                    <button class="btn green-button pd-x-15 pd-y-2 w-100" data-toggle="modal" data-target="#acceptModal">Accept Form</button>
+                                    <button class="btn btn-outline pd-x-5 pd-y-2 mg-t-5 w-100 tx-normal" data-toggle="modal" data-target="#reviewModal">Request Review</button>
+  
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="mg-t-15">
+                            <div class="card grey-2">
+                              <div class="card-header pd-y-5 pd-x-10 grey-1">
+                                <p class="tx-16 tx-bold mb-0">Individual Account Opening Form</p>
+                              </div>
+                              <div class="card-body pd-10">
+                                <div class="row">
+                                  <div class="col-md-7 col-12">
+                                   <div class="row">
+                                     <div class="col-3">
+                                    <img src="../../../assets/img/icon/pdf.svg"/>
+                                     </div>
+                                     <div class="col-9 px-x-0">
+                                      <div class="pd-l-4">
+                                        <p class="tx-11 mb-0">Asset_Declaration_Olumide_Olusesi.pdf</p>
+                                        <button class="btn tx-bold mg-t-0 pd-x-0 pd-y-0">View File</button>
+                                      </div>
+                                     </div>
+                                    
+                                   </div> 
+                                  </div>
+                                  <div class="col-md-5 col-12 pd-lg-l-0">
+                                    <button class="btn green-button pd-x-15 pd-y-2 w-100" data-toggle="modal" data-target="#acceptModal">Accept Form</button>
+                                    <button class="btn btn-outline pd-x-5 pd-y-2 mg-t-5 w-100 tx-normal" data-toggle="modal" data-target="#reviewModal">Request Review</button>
+  
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="mg-t-15">
+                            <div class="card grey-2">
+                              <div class="card-header pd-y-5 pd-x-10 grey-1">
+                                <p class="tx-16 tx-bold mb-0">Housing Registration From</p>
+                              </div>
+                              <div class="card-body pd-10">
+                                <div class="row">
+                                  <div class="col-md-7 col-12">
+                                   <div class="row">
+                                     <div class="col-3">
+                                    <img src="../../../assets/img/icon/pdf.svg"/>
+                                     </div>
+                                     <div class="col-9 px-x-0">
+                                      <div class="pd-l-4">
+                                        <p class="tx-11 mb-0">Asset_Declaration_Olumide_Olusesi.pdf</p>
+                                        <button class="btn tx-bold mg-t-0 pd-x-0 pd-y-0">View File</button>
+                                      </div>
+                                     </div>
+                                    
+                                   </div> 
+                                  </div>
+                                  <div class="col-md-5 col-12 pd-lg-l-0">
+                                    <button class="btn green-button pd-x-15 pd-y-2 w-100" data-toggle="modal" data-target="#acceptModal">Accept Form</button>
+                                    <button class="btn btn-outline pd-x-5 pd-y-2 mg-t-5 w-100 tx-normal" data-toggle="modal" data-target="#reviewModal">Request Review</button>
+  
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        
+                        
+                        <div class="col-md-12 col-lg-6 col-12 mg-t-10">
+                          <div class="card grey-2">
+                            <div class="card-header pd-y-5 pd-x-10 grey-1">
+                              <p class="tx-16 tx-bold mb-0">New Employee Forms</p>
+                            </div>
+                            <div class="card-body pd-10">
+                              <div class="row">
+                                <div class="col-md-7 col-12">
+                                 <div class="row">
+                                   <div class="col-3">
+                                  <img src="../../../assets/img/icon/pdf.svg"/>
+                                   </div>
+                                   <div class="col-9 px-x-0">
+                                    <div class="pd-l-4">
+                                      <p class="tx-11 mb-0">Asset_Declaration_Olumide_Olusesi.pdf</p>
+                                      <button class="btn tx-bold mg-t-0 pd-x-0 pd-y-0">View File</button>
+                                    </div>
+                                   </div>
+                                  
+                                 </div> 
+                                </div>
+                                <div class="col-md-5 col-12 pd-lg-l-0">
+                                  <button class="btn green-button pd-x-15 pd-y-2 w-100" data-toggle="modal" data-target="#acceptModal">Accept Form</button>
+                                  <button class="btn btn-outline pd-x-5 pd-y-2 mg-t-5 w-100 tx-normal" data-toggle="modal" data-target="#reviewModal">Request Review</button>
+
+                                </div>
+                              </div>
+                              <div class="row mg-t-15">
+                                <div class="col-md-7 col-12">
+                                 <div class="row">
+                                   <div class="col-3">
+                                  <img src="../../../assets/img/icon/pdf.svg"/>
+                                   </div>
+                                   <div class="col-9 px-x-0">
+                                    <div class="pd-l-4">
+                                      <p class="tx-11 mb-0">Asset_Declaration_Olumide_Olusesi.pdf</p>
+                                      <button class="btn tx-bold mg-t-0 pd-x-0 pd-y-0">View File</button>
+                                    </div>
+                                   </div>
+                                  
+                                 </div> 
+                                </div>
+                                <div class="col-md-5 col-12 pd-lg-l-0">
+                                  <button class="btn green-button pd-x-15 pd-y-2 w-100" data-toggle="modal" data-target="#acceptModal">Accept Form</button>
+                                  <button class="btn btn-outline pd-x-5 pd-y-2 mg-t-5 w-100 tx-normal" data-toggle="modal" data-target="#reviewModal">Request Review</button>
+
+                                </div>
+                              </div>
+                              <div class="row mg-t-15">
+                                <div class="col-md-7 col-12">
+                                 <div class="row">
+                                   <div class="col-3">
+                                  <img src="../../../assets/img/icon/pdf.svg"/>
+                                   </div>
+                                   <div class="col-9 px-x-0">
+                                    <div class="pd-l-4">
+                                      <p class="tx-11 mb-0">Asset_Declaration_Olumide_Olusesi.pdf</p>
+                                      <button class="btn tx-bold mg-t-0 pd-x-0 pd-y-0">View File</button>
+                                    </div>
+                                   </div>
+                                  
+                                 </div> 
+                                </div>
+                                <div class="col-md-5 col-12 pd-lg-l-0">
+                                  <button class="btn green-button pd-x-15 pd-y-2 w-100" data-toggle="modal" data-target="#acceptModal">Accept Form</button>
+                                  <button class="btn btn-outline pd-x-5 pd-y-2 mg-t-5 w-100 tx-normal" data-toggle="modal" data-target="#reviewModal">Request Review</button>
+
+                                </div>
+                              </div>
+                              <div class="row mg-t-15">
+                                <div class="col-md-7 col-12">
+                                 <div class="row">
+                                   <div class="col-3">
+                                  <img src="../../../assets/img/icon/pdf.svg"/>
+                                   </div>
+                                   <div class="col-9 px-x-0">
+                                    <div class="pd-l-4">
+                                      <p class="tx-11 mb-0">Asset_Declaration_Olumide_Olusesi.pdf</p>
+                                      <button class="btn tx-bold mg-t-0 pd-x-0 pd-y-0">View File</button>
+                                    </div>
+                                   </div>
+                                  
+                                 </div> 
+                                </div>
+                                <div class="col-md-5 col-12 pd-lg-l-0">
+                                  <button class="btn green-button pd-x-15 pd-y-2 w-100" data-toggle="modal" data-target="#acceptModal">Accept Form</button>
+                                  <button class="btn btn-outline pd-x-5 pd-y-2 mg-t-5 w-100 tx-normal" data-toggle="modal" data-target="#reviewModal">Request Review</button>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                        
+                      </div>
+                      
+                      <div class="mg-t-20">
+                        <p class="tx-24 tx-bold">Input Submission</p>
+                        <div class="card grey-2">
+                          <div class="card-header pd-y-5 pd-x-10 grey-1">
+                            <p class="tx-16 tx-bold mb-0">Guarantor Form  </p>
+                          </div>
+                          <div class="card-body pd-10">
+                            <div class="row">
+                              <div class="col-md-3 col-6 mg-t-15 pd-lg-t-30">
+                               <div class="row">
+                                 <div class="col-3">
+                                <img src="../../../assets/img/icon/pdf.svg"/>
+                                 </div>
+                                 <div class="col-9 px-x-0">
+                                  <div class="pd-l-4">
+                                    <p class="tx-11 mb-0">Asset_Declaration_Olumide_Olusesi.pdf</p>
+                                    <button class="btn tx-bold mg-t-0 pd-x-0 pd-y-0">View File</button>
+                                  </div>
+                                 </div>
+                                
+                               </div> 
+                              </div>
+                              <div class="col-md-3 col-6 mg-t-15 ">
+                                <label for="details" class="tx-10 pale-gray mb-0">Details of Submission</label>
+                                <p class="tx-12 tx-bold mb-0">Name</p>
+                                <p class="tx-14">Ademola Johnson</p>
+
+                                <p class="tx-12 tx-bold mb-0">BVN</p>
+                                <p class="tx-14">2230098372311</p>
+                              </div>
+                              <div class="col-md-3 col-6 mg-t-15 pd-lg-t-20">
+                                <p class="tx-12 tx-bold mb-0">Mobile Number</p>
+                                <p class="tx-14">(+234) 08023458703</p>
+
+                                <p class="tx-12 tx-bold mb-0">Email Address</p>
+                                <p class="tx-14">djohnson@gmail.com</p>
+                              </div>
+                              <div class="col-md-3 col-6 mg-t-15 pd-lg-t-30">
+                                <button class="btn green-button pd-x-15 pd-y-2 w-100" data-toggle="modal" data-target="#acceptModal">Accept Form</button>
+                                <button class="btn btn-outline pd-x-5 pd-y-2 mg-t-5 w-100 tx-normal" data-toggle="modal" data-target="#reviewModal">Request Review</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="card grey-2 mg-t-20">
+                          <div class="card-header pd-y-5 pd-x-10 grey-1">
+                            <p class="tx-16 tx-bold mb-0">Related Party Delaration Form  </p>
+                          </div>
+                          <div class="card-body pd-10">
+                            <div class="row">
+                              <div class="col-md-3 col-6 mg-t-15 pd-lg-t-30">
+                               <div class="row">
+                                 <div class="col-3">
+                                <img src="../../../assets/img/icon/pdf.svg"/>
+                                 </div>
+                                 <div class="col-9 px-x-0">
+                                  <div class="pd-l-4">
+                                    <p class="tx-11 mb-0">Asset_Declaration_Olumide_Olusesi.pdf</p>
+                                    <button class="btn tx-bold mg-t-0 pd-x-0 pd-y-0">View File</button>
+                                  </div>
+                                 </div>
+                                
+                               </div> 
+                              </div>
+                              <div class="col-md-3 col-6 mg-t-15 ">
+                                <label for="details" class="tx-10 pale-gray mb-0">Details of Submission</label>
+                                <p class="tx-12 tx-bold mb-0">Name</p>
+                                <p class="tx-14">Ademola Johnson</p>
+
+                                <p class="tx-12 tx-bold mb-0">Relationship</p>
+                                <p class="tx-14">Grand Father</p>
+                              </div>
+                              <div class="col-md-3 col-6 mg-t-15 pd-lg-t-20">
+                                <p class="tx-12 tx-bold mb-0">Grade</p>
+                                <p class="tx-14">Non-Executive Director</p>
+
+                                <p class="tx-12 tx-bold mb-0">Department</p>
+                                <p class="tx-14">Board Member</p>
+                              </div>
+                              <div class="col-md-3 col-6 mg-t-15 pd-lg-t-30">
+                                <button class="btn green-button pd-x-15 pd-y-2 w-100" data-toggle="modal" data-target="#acceptModal">Accept Form</button>
+                                <button class="btn btn-outline pd-x-5 pd-y-2 mg-t-5 w-100 tx-normal" data-toggle="modal" data-target="#reviewModal">Request Review</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
+                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+              </div>
+            </div>
+          </div>
+
+          <!--Accept Modal -->
+          <div class="modal fade" id="acceptModal" tabindex="-1" aria-labelledby="acceptModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header pd-y-10 grey-2">
+                  <p class="modal-title tx-24 tx-bold" id="acceptModalLabel">Acceptance Confirmation</p>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p class="tx-16">You are about to accept the information submitted by the staff. It’s important to review thoroughly before continuing.</p>
+
+                  <p class="tx-16">Would you like to continue with this action?</p>
+                </div>
+                <div class="modal-foot d-flex justify-content-between pd-x-20 pd-b-20">
+                  <button type="button" class="btn btn-outline pd-x-40" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary pd-x-30">Continue</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Request Review Modal -->
+          <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header pd-y-10 grey-2">
+                  <p class="modal-title tx-24 tx-bold" id="reviewModalLabel">Request Submission Review</p>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                 <label for="comment" class="mb-0">Please provide clear feedback on the issue to be reviewed.</label>
+                 <textarea  rows="3" class="form-control" placeholder="Enter Comment Here"></textarea>
+                </div>
+                <div class="modal-foot d-flex justify-content-between pd-x-20 pd-b-20">
+                  <button type="button" class="btn btn-outline pd-x-40" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary pd-x-30">Send Feedback</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+    <script src="../../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../../assets/js/dashforge.js"></script>
+    <script src="../../../assets/js/dashforge.aside.js"></script>
+    <script src="../../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../../assets/js/dashforge.settings.js"></script>
+    <script src="../../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="../../../assets/js/drop.js"></script>
+    <script src="../../../assets/js/dropzone.js"></script>
+    <script>
+       $('#employee,#standardProject').DataTable({
+        responsive: true,
+        language: {
+          searchPlaceholder: 'Search...',
+          sSearch: '',
+          lengthMenu: '_MENU_ items/page',
+          columnDefs: [{
+              responsivePriority: 1,
+              targets: 0
+            },
+            {
+              responsivePriority: 2,
+              targets: -1
+            }
+          ]
+        }
+      });
+    </script>
+
+  </body>
+</html>

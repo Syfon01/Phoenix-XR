@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Manpower Onboarding</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../../assets/css/onboarding.css">
+    <link rel="stylesheet" href="../../../assets/css/dashforge.css">
+
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-700">Exit Admin</p>
+            </div>
+          </div>
+          
+          <div class="collapse" id="loggedinMenu">
+            <ul class="nav nav-aside mg-b-0">
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="edit"></i> <span>Edit Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="user"></i> <span>View Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="settings"></i> <span>Account Settings</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="help-circle"></i> <span>Help Center</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="log-out"></i> <span>Sign Out</span></a></li>
+            </ul>
+          </div>
+        </div><!-- aside-loggedin -->
+
+        <ul class="nav nav-aside">
+          <li class="nav-item active p-14"><a href="./index.html" class="nav-link active text-gray-700"><i data-feather="grid"></i><span>Manpower Requisiton</span></a></li>
+          <li class="nav-item p-14"><a href="../job/index.html" class="nav-link text-gray-700"><i data-feather="help-circle"></i><span>Job Publishing</span></a></li>
+          <li class="nav-item p-14"><a href="../external-invitation/index.html" class="nav-link text-gray-700"><i data-feather="layers"></i> <span>External Invitation</span></a></li>
+          <li class="nav-item p-14"><a href="../interview/index.html" class="nav-link text-gray-700"><i data-feather="layers"></i> <span>Interview Management</span></a></li>
+          <li class="nav-item p-14"><a href="../staff/index.html" class="nav-link text-gray-700"><i data-feather="layers"></i> <span>Staff OnBoarding</span></a></li>
+
+        </ul>
+        
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
+              <li class="breadcrumb-item"><a href="./index.html">Requisition</a></li>
+              <li class="breadcrumb-item text-gray-700" aria-current="page">Requisition Listing</li>
+            </ol>
+          </nav>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/New.html"><img src="../../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <div class="">
+            <p class="tx-40 tx-bold mb-0">New Requisition</p>
+            <div class="row justify-content-between">
+              <div class="col-md-8 col-12">
+                <p class="tx-16 mb-0">Make a business case for a new Manpower resource by filling the form.</p>
+              </div>
+            </div>
+            <hr>
+              <div class="col-md-10 col-lg-8 mx-auto mg-t-30">
+                <div id="wizard1">
+                  <h5 class="grey-1 pd-10">Business Case</h5>
+                  <section class="mg-t-20">
+                    
+                        <form>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="title" class="mb-0">Job Title</label>
+                              <input type="text" class="form-control" id="title" placeholder="Financial Analyst">
+                            </div>
+                            <div class="form-group col-md-6 pd-t-30">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input">
+                                <label class="custom-control-label">Is this role a regulatory requirement?</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="description" class="mb-0">Job Description</label>
+                            <textarea name="" id="" rows="3" class="form-control" placeholder="brief description"></textarea>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="monthly-revenue" class="mb-0">Expected Monthly Revenue</label>
+                              <input type="text" class="form-control" id="inputtext4" placeholder="">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="annual-revenue" class="mb-0">Expected Annual Revenue</label>
+                              <input type="text" class="form-control" id="inputtext4" placeholder="">
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="monthly-savings" class="mb-0">Monthly Cost Savings</label>
+                              <input type="text" class="form-control" id="inputtext4" placeholder="">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="annual-savings" class="mb-0">Annual Cost Savings</label>
+                              <input type="text" class="form-control" id="inputtext4" placeholder="">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="description" class="mb-0">Impact on the Strategic Goals</label>
+                            <textarea name="" id="" rows="3" class="form-control" placeholder="brief description"></textarea>
+                          </div>
+                        </form>
+                  </section>
+
+                  <h5 class="grey-1 pd-10">Job Profile</h5>
+                  <section class="mg-t-20">
+                    <form>
+                      <div class="form-row">
+                        <div class="form-group col-md-4 col-6">
+                          <label for="slots" class="mb-0">No. of Slots</label>
+                          <input type="text" class="form-control" id="title" placeholder="">
+                        </div>
+                        <div class="form-group col-md-4 col-6">
+                          <label for="slots" class="mb-0">No. of Slots</label>
+                          <input type="text" class="form-control" id="title" placeholder="">
+                        </div>
+                        <div class="form-group col-md-4 col-6">
+                          <label for="slots" class="mb-0">No. of Slots</label>
+                          <input type="text" class="form-control" id="title" placeholder="">
+                        </div>
+                        
+                      </div>
+                      <div class="form-group">
+                        <label for="slots" class="mb-0">Functional Skills</label>
+                          <input type="text" class="form-control" id="title" placeholder="">
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="monthly-revenue" class="mb-0">Academic Qualification</label>
+                          <select class="custom-select">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="annual-revenue" class="mb-0">Professional Qualification</label>
+                          <select class="custom-select">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="monthly-savings" class="mb-0">Industry Experience</label>
+                          <select class="custom-select">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="annual-savings" class="mb-0">Annual Cost Savings</label>
+                          <select class="custom-select">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6 col-6">
+                          <label for="slots" class="mb-0">Salary Range (Min)</label>
+                          <input type="text" class="form-control" id="title" placeholder="">
+                        </div>
+                        <div class="form-group col-md-6 col-6">
+                          <label for="slots" class="mb-0">Salary Range (Max)</label>
+                          <input type="text" class="form-control" id="title" placeholder="">
+                        </div>
+                        
+                      </div>
+                    </form>
+                  </section>
+                  <h5 class="grey-1 pd-10">Job Summary</h5>
+                  <section class="mg-t-20">
+                    
+                    <div id="toolbar-container">
+                      <span class="ql-formats">
+                        <select class="ql-font"></select>
+                        <select class="ql-size"></select>
+                      </span>
+                      <span class="ql-formats">
+                        <button class="ql-bold"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                        <button class="ql-strike"></button>
+                      </span>
+                      <span class="ql-formats">
+                        <select class="ql-color"></select>
+                        <select class="ql-background"></select>
+                      </span>
+                      <span class="ql-formats">
+                        <button class="ql-script" value="sub"></button>
+                        <button class="ql-script" value="super"></button>
+                      </span>
+                      <span class="ql-formats">
+                        <button class="ql-header" value="1"></button>
+                        <button class="ql-header" value="2"></button>
+                        <button class="ql-blockquote"></button>
+                        <button class="ql-code-block"></button>
+                      </span>
+                      <span class="ql-formats mg-t-5">
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                        <button class="ql-indent" value="-1"></button>
+                        <button class="ql-indent" value="+1"></button>
+                      </span>
+                      <span class="ql-formats mg-t-5">
+                        <button class="ql-direction" value="rtl"></button>
+                        <select class="ql-align"></select>
+                      </span>
+                      <span class="ql-formats mg-t-5">
+                        <button class="ql-link"></button>
+                        <button class="ql-image"></button>
+                        <button class="ql-video"></button>
+                        <button class="ql-formula"></button>
+                      </span>
+                      <span class="ql-formats">
+                        <button class="ql-clean"></button>
+                      </span>
+                    </div>
+
+                    <div id="editor-container" class="ht-200 grey-1">
+                    </div>
+                  </section>
+                </div>
+               
+              </div>
+          
+          <div>
+
+          </div>
+            
+          </div>
+         
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../../assets/js/dashforge.js"></script>
+    <script src="../../../assets/js/dashforge.aside.js"></script>
+    <script src="../../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../../assets/lib/parsleyjs/parsley.min.js"></script>
+    <script src="../../../assets/lib/jquery-steps/build/jquery.steps.min.js"></script>
+    <script src="../../../assets/js/drop.js"></script>
+    <script src="../../../assets/js/dropzone.js"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script>
+      $('#wizard1').steps({
+          headerTag: 'h5',
+          bodyTag: 'section',
+          autoFocus: true,
+          titleTemplate: '<span class="number">#index#</span> <span class="title">#title#</span>'
+        });
+    </script>
+    <script>
+      var quill = new Quill('#editor-container', {
+        modules: {
+          toolbar: '#toolbar-container'
+        },
+        placeholder: 'Add job summary',
+        theme: 'snow'
+      });
+    </script>
+
+  </body>
+</html>

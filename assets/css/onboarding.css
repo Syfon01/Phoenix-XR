@@ -187,6 +187,19 @@ font-weight: 700!important;
   background-color: #DB4C3F!important;
   font-weight: 700!important;
 }
+
+.nav-link.man-tab.active{
+  color: #000!important;
+  font-weight: 700!important;
+  background-color: #fff!important;
+  }
+  .nav-link.man-tab{
+    background-color: rgb(235, 235, 235)!important;
+    font-weight: 400!important;
+  }
+  table.dataTable.table-tab thead .sorting_asc, table.dataTable thead .sorting_desc{
+    background-color: rgb(95, 94, 94)!important;
+  }
 .grey-1{
   background-color: rgb(235, 235, 235)!important;
 }
@@ -195,4 +208,19 @@ font-weight: 700!important;
 }
 .green-button:hover{
   background-color: rgb(106, 206, 119)!important;
+}
+
+.table-head-dark{
+  background-color: rgb(68, 68, 68)!important;
+  color: #fff;
+  font-size: 700;
+}
+.list-group-item{
+  background-color: rgb(246, 246, 246)!important;
+}
+.list-group-item-action{
+  color: #000!important;
+}
+.tx-normal{
+  font-weight: 400!important;
 }
