@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Manpower Onboarding</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/onboarding.css">
+    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+
+    <!-- external link for phone placeholder -->
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-700">Exit Admin</p>
+            </div>
+          </div>
+          
+          <div class="collapse" id="loggedinMenu">
+            <ul class="nav nav-aside mg-b-0">
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="edit"></i> <span>Edit Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="user"></i> <span>View Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="settings"></i> <span>Account Settings</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="help-circle"></i> <span>Help Center</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="log-out"></i> <span>Sign Out</span></a></li>
+            </ul>
+          </div>
+        </div><!-- aside-loggedin -->
+
+        <ul class="nav nav-aside">
+          <li class="nav-item p-14"><a href="../requisition/index.html" class="nav-link text-gray-700"><i data-feather="grid"></i><span>Manpower Requisiton</span></a></li>
+          <li class="nav-item p-14"><a href="../job/index.html" class="nav-link text-gray-700"><i data-feather="help-circle"></i><span>Job Publishing</span></a></li>
+          <li class="nav-item p-14"><a href="../external-invitation/index.html" class="nav-link text-gray-700"><i data-feather="layers"></i> <span>External Invitation</span></a></li>
+          <li class="nav-item p-14"><a href="../interview/index.html" class="nav-link text-gray-700"><i data-feather="layers"></i> <span>Interview Management</span></a></li>
+          <li class="nav-item p-14"><a href="../staff/index.html" class="nav-link text-gray-700"><i data-feather="layers"></i> <span>Staff OnBoarding</span></a></li>
+          <li class="nav-item active p-14"><a href="./onboarding-info.html" class="nav-link active text-gray-700"><i data-feather="user-plus"></i> <span>New Employee Onboarding</span></a></li>
+
+        </ul>
+        
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
+              <li class="breadcrumb-item"><a href="./index.html">Requisition</a></li>
+              <li class="breadcrumb-item text-gray-700" aria-current="page">Onboarding</li>
+            </ol>
+          </nav>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/New.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body secondary-bg">
+        <div class="container col-xl-10 mx-auto pd-x-0">
+          <div class="">
+            <p class="tx-28 tx-bold mb-0 dark-gray">New Employee Onboarding Information</p>
+            <div class="row justify-content-between">
+              <div class="col-md-8 col-12">
+                <p class="tx-14 mb-0 text-gray">All details below are required to successfully onboard new employee.</p>
+              </div>
+              
+            </div>
+          </div>
+    
+          <div class="card mg-t-50">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-4 col-12 mg-t-15 mg-lg-t-0">
+                  <p class="tx-24">Personal Information</p>
+                </div>
+                <div class="col-md-8 col-12 mg-t-15 mg-lg-t-0">
+                  <form action="">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="firstName" class="dark-gray mb-1">First Name</label>
+                        <input type="text" class="form-control" id="" placeholder="">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="lastName" class="dark-gray mb-1">Last Name</label>
+                        <input type="text" class="form-control" id="" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="middleName" class="dark-gray mb-1">Middle Name</label>
+                        <input type="text" class="form-control" id="" placeholder="">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="dob" class="dark-gray mb-1">Date of Birth</label>
+                        <input type="date" class="form-control" id="" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="maritalStatus" class="dark-gray mb-1">Marital status </label>
+                        <select class="custom-select form-control">
+                          <option selected>select</option>
+                          <option value="1">Single</option>
+                          <option value="2">Married</option>
+                          <option value="3">Divorced</option>
+                          <option value="4">Seperated</option>
+                          <option value="5">Widowed</option>
+                          <option value="6">Common Law</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="phone" class="dark-gray mb-1">Phone Number</label>
+                        <input id="phone" type="tel" name="phone" class="form-control phone-width" />
+                      </div>
+                    </div>
+                    <div class="form-group col-md-6 px-0">
+                      <label for="gender" class="dark-gray mb-1">Gender</label>
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="male" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="male">Male</label>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="female" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="female">Female</label>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="others" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="others">Others</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <hr/>
+              <div class="row">
+                <div class="col-md-4 col-12 mg-t-15 mg-lg-t-0">
+                  <p class="tx-24">Work Information</p>
+                </div>
+                <div class="col-md-8 col-12 mg-t-15 mg-lg-t-0">
+                  <form action="">
+                    <div class="form-group">
+                      <label for="mail" class="dark-gray mb-1">Work Mail</label>
+                      <input type="text" class="form-control" id="" placeholder="">
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="firstName" class="dark-gray mb-1">Job Role</label>
+                        <select class="custom-select form-control">
+                          <option selected>select</option>
+                          <option value="1">IT</option>
+                          <option value="2">Customer service</option>
+                          <option value="3">Cashier</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="lastName" class="dark-gray mb-1">Grade</label>
+                        <select class="custom-select form-control">
+                          <option selected>select</option>
+                          <option value="1">Assistant Manager</option>
+                          <option value="2">Manager</option>
+                          <option value="3">Deputy</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="firstName" class="dark-gray mb-1">Department</label>
+                        <select class="custom-select form-control">
+                          <option selected>select</option>
+                          <option value="1">IT</option>
+                          <option value="2">HR</option>
+                          <option value="3"></option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="lastName" class="dark-gray mb-1">Work Country</label>
+                        <select class="custom-select form-control">
+                          <option selected>select</option>
+                          <option value="1">Nigeria</option>
+                          <option value="2">Cameroun</option>
+                          <option value="3">Ghana</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-6 px-0">
+                      <label for="doe" class="dark-gray mb-1">Date of Employment</label>
+                      <input type="date" class="form-control" id="" placeholder="">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+           </div>
+           <div class="d-flex justify-content-end mg-t-30">
+            <button class="btn btn-outline-primary pd-x-30 mg-r-20">Clear Contents</button>
+             <button class="btn btn-primary pd-x-40" data-toggle="modal" data-target="#viewModal">Submit</button>
+           </div>
+
+           <!--view Modal -->
+            <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header pd-b-0 bd-b-0">
+                    <p class="tx-22 tx-semibold modal-title mb-0 dark-gray" id="viewModalLabel">Preview Employee Onboarding Information</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body pd-t-0">
+                    <p class="tx-14 dark-gray">Please confirm the information below before submitting.</p>
+                    <div class="row">
+                      <div class="col-md-6 col-12">
+                        <p class="tx-12 text-gray tx-medium mb-2">Personal Information</p>
+                        <div class="row">
+                          <div class="col-5">
+                            <p class="tx-14 dark-gray mb-2">First Name</p>
+                          </div>
+                          <div class="col-7">
+                            <p class="tx-14 dark-gray mb-2 tx-semibold">Bayo</p>
+                          </div>
+                          <div class="col-5">
+                            <p class="tx-14 dark-gray mb-2 ">Last Name</p>
+                          </div>
+                          <div class="col-7">
+                            <p class="tx-14 dark-gray mb-2 tx-semibold">Nnamdi</p>
+                          </div>
+                          <div class="col-5">
+                            <p class="tx-14 dark-gray mb-2">Middle Name</p>
+                          </div>
+                          <div class="col-7">
+                            <p class="tx-14 dark-gray mb-2 tx-semibold">Audu</p>
+                          </div>
+                          <div class="col-5">
+                            <p class="tx-14 dark-gray mb-2">Marital Status</p>
+                          </div>
+                          <div class="col-7">
+                            <p class="tx-14 dark-gray mb-2 tx-semibold">Single</p>
+                          </div>
+                          <div class="col-5">
+                            <p class="tx-14 dark-gray mb-2">Gender</p>
+                          </div>
+                          <div class="col-7">
+                            <p class="tx-14 dark-gray mb-2 tx-semibold">Female</p>
+                          </div>
+                          <div class="col-5">
+                            <p class="tx-14 dark-gray mb-2">Date of Birth</p>
+                          </div>
+                          <div class="col-7">
+                            <p class="tx-14 dark-gray mb-2 tx-semibold">13 June, 1978</p>
+                          </div>
+                          <div class="col-5">
+                            <p class="tx-14 dark-gray mb-2">Phone Number</p>
+                          </div>
+                          <div class="col-7">
+                            <p class="tx-14 dark-gray mb-2 tx-semibold">🇳🇬 07016315678</p>
+                          </div> 
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-12">
+                        <p class="tx-12 text-gray tx-medium mb-2">Work Information</p>
+                        <div class="row">
+                          <div class="col-5">
+                            <p class="tx-14 dark-gray mb-2">Date of Employment</p>
+                          </div>
+                          <div class="col-7">
+                            <p class="tx-14 dark-gray mb-2 tx-semibold">14 November, 2011</p>
+                          </div>
+                          <div class="col-5">
+                            <p class="tx-14 dark-gray mb-2 ">Work Email</p>
+                          </div>
+                          <div class="col-7">
+                            <p class="tx-14 dark-gray mb-2 tx-semibold">bayo.nnamdi@ubagroup.com</p>
+                          </div>
+                          <div class="col-5">
+                            <p class="tx-14 dark-gray mb-2">Job Role</p>
+                          </div>
+                          <div class="col-7">
+                            <p class="tx-14 dark-gray mb-2 tx-semibold">Team Member, Retail Lending</p>
+                          </div>
+                          <div class="col-5">
+                            <p class="tx-14 dark-gray mb-2">Grade</p>
+                          </div>
+                          <div class="col-7">
+                            <p class="tx-14 dark-gray mb-2 tx-semibold">Banking Officer</p>
+                          </div>
+                          <div class="col-5">
+                            <p class="tx-14 dark-gray mb-2">Department</p>
+                          </div>
+                          <div class="col-7">
+                            <p class="tx-14 dark-gray mb-2 tx-semibold">Retail Banking</p>
+                          </div>
+                          <div class="col-5">
+                            <p class="tx-14 dark-gray mb-2">Work Country</p>
+                          </div>
+                          <div class="col-7">
+                            <p class="tx-14 dark-gray mb-2 tx-semibold"> 🇳🇬 Nigeria</p>
+                          </div> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer bg-gray-footer">
+                    <button type="button" class="btn btn-primary-outline pd-x-40" data-dismiss="modal">Edit </button>
+                    <button type="button" class="btn btn-primary pd-x-50" data-toggle="modal" data-target="#alertModal" data-dismiss="modal">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Alert Modal -->
+              <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header bd-b-0">
+                      <!-- <h5 class="modal-title" id="alertModalLabel">Modal title</h5> -->
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body pd-t-0">
+                      <p class="tx-22 tx-semibold tx-center"><img src="../../assets/img/icon/Check.svg" class="img-fluid alert-icon mg-r-10"/> New employee information saved</p>
+                      <hr/>
+                      <p class="tx-14 tx-center dark-gray">Notification has been sent to the employee.</p>
+                    </div>
+                    <div class="modal-footer bg-gray-footer">
+                      <button type="button" class="btn btn-primary-outline pd-x-40" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.aside.js"></script>
+    <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="../../assets/js/drop.js"></script>
+    <script src="../../assets/js/dropzone.js"></script>
+    <script>
+      const phoneInputField = document.querySelector("#phone");
+      const phoneInput = window.intlTelInput(phoneInputField, {
+          preferredCountries: ["ng", "us", "eg", "gh"],
+          utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+    </script>
+  </body>
+</html>

@@ -1,3 +1,6 @@
+.dark-gray{
+  color: rgba(36, 41, 46, 1);
+}
 .red-400{
   color:#FF5C39
 }
@@ -161,6 +164,9 @@ background-color: rgb(167, 167, 167);
   .modal-pad{
     padding: 16px!important;
   }
+  .phone-width{
+    width: 140%!important;
+  }
  }
  .avatar-xxxl{
   width: 120px!important;
@@ -187,6 +193,9 @@ background-color: rgb(167, 167, 167);
  .btn-neg{
    margin-top: -20px;
  }
+ .phone-width{
+  width: 113%!important;
+}
 }
 .nav-link.active{
   color: #fff!important;
@@ -236,4 +245,17 @@ font-weight: 700!important;
 }
 .tx-normal{
   font-weight: 400!important;
+}
+.text-gray{
+  color: rgba(88, 96, 105, 1);
+}
+.form-control{
+  background-color: rgba(244, 245, 247, 1)!important;
+}
+.bg-gray-footer{
+  background-color: rgba(243, 245, 247, 1);
+}
+.alert-icon{
+  width: 50px;
+  height: 50px;
 }
