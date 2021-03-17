@@ -164,10 +164,7 @@ background-color: rgb(167, 167, 167);
   .modal-pad{
     padding: 16px!important;
   }
-  .phone-width{
-    width: 125%!important;
-  }
- }
+  
  .avatar-xxxl{
   width: 120px!important;
   height: 120px!important;
@@ -184,18 +181,18 @@ background-color: rgb(167, 167, 167);
 .tx-40{
   font-size: 36px!important;
 }
+}
 
-
-
+.iti iti--allow-dropdown{
+  width: 100%;
+}
 
  /* Admin section  */
 @media (min-width: 1200px) { 
  .btn-neg{
    margin-top: -20px;
  }
- .phone-width{
-  width: 113%!important;
-}
+ 
 }
 .nav-link.active{
   color: #fff!important;
