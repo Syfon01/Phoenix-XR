@@ -183,8 +183,8 @@ background-color: rgb(167, 167, 167);
 }
 }
 
-.iti iti--allow-dropdown{
-  width: 100%;
+.iti{
+  width: 100%!important;
 }
 
  /* Admin section  */
