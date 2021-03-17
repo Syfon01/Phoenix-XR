@@ -3,7 +3,7 @@
 body{
  font-family: 'DM Sans', sans-serif!important;
 }
-p{
+p, label{
  font-family: 'DM Sans', sans-serif!important;
 }
 .dark-gray{
@@ -352,4 +352,41 @@ font-weight: 700!important;
   border-bottom: 20px solid transparent;
   border-left: 20px solid #5a99ee;
 }
-
+.bg-light-blue{
+  background-color: rgba(222, 235, 255, 1)!important;
+}
+.neutral-color{
+  color: rgba(23, 43, 77, 1);
+}
+li{
+  font-family: 'DM Sans', sans-serif!important;
+  line-height: 1.8;
+}
+.badge-neutral{
+  background-color:rgba(223, 225, 230, 1)!important;
+  color: rgba(66, 82, 110, 1);
+  font-size: 11px;
+  border-radius: 5px;
+  padding: 4px;
+  font-weight: 600;
+}
+.badge-green{
+  background-color: rgba(227, 252, 239, 1)!important;
+  color:rgba(0, 102, 68, 1)!important;
+  font-size: 11px;
+  border-radius: 5px;
+  padding: 4px;
+  font-weight: 600;
+}
+.badge-error{
+  background-color: rgba(255, 235, 230, 1)!important;
+  color: rgba(191, 38, 0, 1)!important;
+  font-size: 11px;
+  border-radius: 5px;
+  padding: 4px;
+  font-weight: 600;
+}
+.alert-feather{
+  fill: #FF884C;
+  color: #fff!important;
+}

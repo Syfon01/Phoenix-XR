@@ -106,151 +106,267 @@
         <div class="container col-xl-10 mx-auto pd-x-0">
           <div class="">
             <p class="tx-28 tx-bold mb-0 dark-gray">New Employee Onboarding Information</p>
-            <div class="row justify-content-between">
-              <div class="col-md-8 col-12">
-                <p class="tx-14 mb-0 text-gray">All details below are required to successfully onboard new employee.</p>
+            <ul class="nav nav-line" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link tab active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Single Employee</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tab" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Bulk Upload</a>
+              </li>
+              
+            </ul>
+            <div class="tab-content bd-t-0 pd-y-20" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row justify-content-between">
+                  <div class="col-md-8 col-12">
+                    <p class="tx-14 mb-1 text-gray">All details below are required to successfully onboard new employee.</p>
+                  </div>
+                </div>
+                <div class="card mg-t-10">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-4 col-12 mg-t-15 mg-lg-t-0">
+                        <p class="tx-24">Personal Information</p>
+                      </div>
+                      <div class="col-md-8 col-12 mg-t-15 mg-lg-t-0">
+                        <form action="">
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="firstName" class="dark-gray mb-1">First Name</label>
+                              <input type="text" class="form-control" id="" placeholder="">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="lastName" class="dark-gray mb-1">Last Name</label>
+                              <input type="text" class="form-control" id="" placeholder="">
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="middleName" class="dark-gray mb-1">Middle Name</label>
+                              <input type="text" class="form-control" id="" placeholder="">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="dob" class="dark-gray mb-1">Date of Birth</label>
+                              <input type="date" class="form-control" id="" placeholder="">
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="maritalStatus" class="dark-gray mb-1">Marital status </label>
+                              <select class="custom-select form-control">
+                                <option selected>select</option>
+                                <option value="1">Single</option>
+                                <option value="2">Married</option>
+                                <option value="3">Divorced</option>
+                                <option value="4">Seperated</option>
+                                <option value="5">Widowed</option>
+                                <option value="6">Common Law</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="phone" class="dark-gray mb-1">Phone Number</label>
+                              <input id="phone" type="tel" name="phone" class="form-control phone-width" />
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6 px-0">
+                            <label for="gender" class="dark-gray mb-1">Gender</label>
+                            <div class="row">
+                              <div class="col-4">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="male" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="male">Male</label>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="female" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="female">Female</label>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="others" name="customRadio" class="custom-control-input">
+                                  <label class="custom-control-label" for="others">Others</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                      <div class="col-md-4 col-12 mg-t-15 mg-lg-t-0">
+                        <p class="tx-24">Work Information</p>
+                      </div>
+                      <div class="col-md-8 col-12 mg-t-15 mg-lg-t-0">
+                        <form action="">
+                          <div class="form-group">
+                            <label for="mail" class="dark-gray mb-1">Work Mail</label>
+                            <input type="text" class="form-control" id="" placeholder="">
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="firstName" class="dark-gray mb-1">Job Role</label>
+                              <select class="custom-select form-control">
+                                <option selected>select</option>
+                                <option value="1">IT</option>
+                                <option value="2">Customer service</option>
+                                <option value="3">Cashier</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="lastName" class="dark-gray mb-1">Grade</label>
+                              <select class="custom-select form-control">
+                                <option selected>select</option>
+                                <option value="1">Assistant Manager</option>
+                                <option value="2">Manager</option>
+                                <option value="3">Deputy</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="firstName" class="dark-gray mb-1">Department</label>
+                              <select class="custom-select form-control">
+                                <option selected>select</option>
+                                <option value="1">IT</option>
+                                <option value="2">HR</option>
+                                <option value="3"></option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="lastName" class="dark-gray mb-1">Work Country</label>
+                              <select class="custom-select form-control">
+                                <option selected>select</option>
+                                <option value="1">Nigeria</option>
+                                <option value="2">Cameroun</option>
+                                <option value="3">Ghana</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6 px-0">
+                            <label for="doe" class="dark-gray mb-1">Date of Employment</label>
+                            <input type="date" class="form-control" id="" placeholder="">
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                 </div>
+                 <div class="d-flex justify-content-end mg-t-30">
+                  <button class="btn btn-outline-primary pd-x-30 mg-r-20">Clear Contents</button>
+                   <button class="btn btn-primary pd-x-40" data-toggle="modal" data-target="#viewModal">Submit</button>
+                 </div>
+      
+
+              </div>
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <p class="tx-14 mb-1 text-gray">Onboard multiple employees at the same time using the CSV format.</p>
+                <div class="card card-body bg-light-blue">
+                  <p class="tx-16 mb-1 neutral-color tx-semibold"><img src="../../assets/img/icon/guideline.svg" class="img-fluid mg-r-10"/>Guidelines</p>
+                  <ul class="text-gray tx-12 col-lg-10 col-12">
+                    <li>Use the template provided for this upload. </li>
+                    <li>Only one CSV file can be uploaded at a time.</li>
+                    <li>Format guidelines for date of birth and date of employment must be formatted as yyyy-mm-dd. E.g. 1985-10-23. </li>
+                    <li>Format guidelines for phone number must be formatted as (xxx)8024482321. (xxx) is the international dialing code.</li>
+                    <li>Once an upload is done, the system validates the uploaded file for errors if any. Upload status can be found in the Bulk Upload Listing table on this page.</li>
+                  </ul>
+
+                </div>
+                <!-- <form > -->
+                  <div class="mg-y-50 pd-b-40">
+                  <label for="" class="tx-medium mb-1">Employee Bulk Onboarding</label>
+                  <div class="form-drop mb-3">
+                    <div class="drop-zone pd-20 bg-transparent">
+                      <div class="cell"> 
+                        <div class="drop-zone__prompt">
+                          <p class="p-14 my-0 text-gray-700 tx-left">
+                            <span class="tx-primary grey-1 tx-medium pd-4 mg-r-10">
+                              Upload File
+                            </span>
+                              <i data-feather="upload"></i>
+                              Click or drop here
+                            </p>
+                          </div>
+                        <input type="file" name="myFile" class="drop-zone__input">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="">
+                  <button class="btn btn-primary float-right pd-x-40" data-toggle="modal" data-target="#viewUpload">Submit</button>
+                  </div>
+                </div>
+                  
+                <!-- </form> -->
+                
+                <div class="card mg-t-50">
+                  <div class="card-header pd-y-10">
+                    <p class="tx-16 tx-semibold mb-0">Bulk Upload Listing</p>
+                  </div>
+                  <div class="card-body">
+                    <table class="table table-hover display" id="bulkUpload">
+                      <thead class="grey-1 tx-12">
+                          <th scope="col">SN</th>
+                          <th scope="col" class="">FILE NAME</th>
+                          <th scope="col" class="tx-center">DATE UPLOADED</th>
+                          <th scope="col">STATUS</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">
+                            1
+                          </th>
+                          <td class="tx-medium tx-14">New-Hire-Data-20/03/2021.csv </td>
+                          <td class="">
+                            <p class="tx-12 mb-0 tx-medium">Mar 20, 2021</p>
+                            <p class="tx-12 mb-0 tx-light text-gray">9:26am </p>
+                          </td>
+                          <td><span class="badge-neutral tx-uppercase">Processing</span></td>
+                          <td><button class="btn btn-sm btn-outline-primary pd-y-2" disabled>View</button></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            2
+                          </th>
+                          <td class="tx-medium"> Employee-Requirements-Data-20/03/2021.csv </td>
+                          <td class="">
+                            <p class="tx-12 mb-0 tx-medium">Mar 20, 2021</p>
+                            <p class="tx-12 mb-0 tx-light text-gray">9:26am </p>
+                          </td>
+                          <td><span class="badge-green tx-uppercase">successful</span></td>
+                          <td><button class="btn btn-sm btn-outline-primary pd-y-2" data-toggle="modal" data-target="#viewUpload">View</button></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            3
+                          </th>
+                          <td class="tx-medium"> Managers-Reserve.csv </td>
+                          <td class="">
+                            <p class="tx-12 mb-0 tx-medium">Mar 20, 2021</p>
+                            <p class="tx-12 mb-0 tx-light text-gray">9:26am </p>
+                          </td>
+                          <td>
+                            <span class="badge-error tx-uppercase">Error</span>
+                          </td>
+                          <td><button class="btn btn-sm btn-outline-primary pd-y-2">View Log</button></td>
+                        </tr>
+          
+                      </tbody>
+                    </table>
+                   </div>
+                </div>
+                
               </div>
               
             </div>
+            
+            
           </div>
     
-          <div class="card mg-t-50">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-4 col-12 mg-t-15 mg-lg-t-0">
-                  <p class="tx-24">Personal Information</p>
-                </div>
-                <div class="col-md-8 col-12 mg-t-15 mg-lg-t-0">
-                  <form action="">
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="firstName" class="dark-gray mb-1">First Name</label>
-                        <input type="text" class="form-control" id="" placeholder="">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="lastName" class="dark-gray mb-1">Last Name</label>
-                        <input type="text" class="form-control" id="" placeholder="">
-                      </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="middleName" class="dark-gray mb-1">Middle Name</label>
-                        <input type="text" class="form-control" id="" placeholder="">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="dob" class="dark-gray mb-1">Date of Birth</label>
-                        <input type="date" class="form-control" id="" placeholder="">
-                      </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="maritalStatus" class="dark-gray mb-1">Marital status </label>
-                        <select class="custom-select form-control">
-                          <option selected>select</option>
-                          <option value="1">Single</option>
-                          <option value="2">Married</option>
-                          <option value="3">Divorced</option>
-                          <option value="4">Seperated</option>
-                          <option value="5">Widowed</option>
-                          <option value="6">Common Law</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="phone" class="dark-gray mb-1">Phone Number</label>
-                        <input id="phone" type="tel" name="phone" class="form-control phone-width" />
-                      </div>
-                    </div>
-                    <div class="form-group col-md-6 px-0">
-                      <label for="gender" class="dark-gray mb-1">Gender</label>
-                      <div class="row">
-                        <div class="col-4">
-                          <div class="custom-control custom-radio">
-                            <input type="radio" id="male" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="male">Male</label>
-                          </div>
-                        </div>
-                        <div class="col-4">
-                          <div class="custom-control custom-radio">
-                            <input type="radio" id="female" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="female">Female</label>
-                          </div>
-                        </div>
-                        <div class="col-4">
-                          <div class="custom-control custom-radio">
-                            <input type="radio" id="others" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="others">Others</label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <hr/>
-              <div class="row">
-                <div class="col-md-4 col-12 mg-t-15 mg-lg-t-0">
-                  <p class="tx-24">Work Information</p>
-                </div>
-                <div class="col-md-8 col-12 mg-t-15 mg-lg-t-0">
-                  <form action="">
-                    <div class="form-group">
-                      <label for="mail" class="dark-gray mb-1">Work Mail</label>
-                      <input type="text" class="form-control" id="" placeholder="">
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="firstName" class="dark-gray mb-1">Job Role</label>
-                        <select class="custom-select form-control">
-                          <option selected>select</option>
-                          <option value="1">IT</option>
-                          <option value="2">Customer service</option>
-                          <option value="3">Cashier</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="lastName" class="dark-gray mb-1">Grade</label>
-                        <select class="custom-select form-control">
-                          <option selected>select</option>
-                          <option value="1">Assistant Manager</option>
-                          <option value="2">Manager</option>
-                          <option value="3">Deputy</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="firstName" class="dark-gray mb-1">Department</label>
-                        <select class="custom-select form-control">
-                          <option selected>select</option>
-                          <option value="1">IT</option>
-                          <option value="2">HR</option>
-                          <option value="3"></option>
-                        </select>
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="lastName" class="dark-gray mb-1">Work Country</label>
-                        <select class="custom-select form-control">
-                          <option selected>select</option>
-                          <option value="1">Nigeria</option>
-                          <option value="2">Cameroun</option>
-                          <option value="3">Ghana</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-group col-md-6 px-0">
-                      <label for="doe" class="dark-gray mb-1">Date of Employment</label>
-                      <input type="date" class="form-control" id="" placeholder="">
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-           </div>
-           <div class="d-flex justify-content-end mg-t-30">
-            <button class="btn btn-outline-primary pd-x-30 mg-r-20">Clear Contents</button>
-             <button class="btn btn-primary pd-x-40" data-toggle="modal" data-target="#viewModal">Submit</button>
-           </div>
-
+         
            <!--view Modal -->
             <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -384,6 +500,31 @@
                 </div>
               </div>
 
+               <!--Upload Modal -->
+               <div class="modal fade" id="viewUpload" tabindex="-1" aria-labelledby="viewUploadLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header bd-b-0">
+                      <!-- <h5 class="modal-title" id="alertModalLabel">Modal title</h5> -->
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body pd-t-0">
+                      <p class="tx-22 tx-semibold tx-center"><img src="../../assets/img/icon/Check.svg" class="img-fluid alert-icon mg-r-10"/> Upload Successful</p>
+                      <hr/>
+                      <p class="tx-14 tx-justified dark-gray"> 
+                        <i data-feather="alert-triangle" class="alert-feather"></i>
+                        The system is currently validating for errors. Check the Bulk Upload Listing table for Validation Status. </p>
+                    </div>
+                    <div class="modal-footer bg-gray-footer">
+                      <button type="button" class="btn btn-primary-outline pd-x-40" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
           </div>
         </div>
       </div>
@@ -406,12 +547,107 @@
     <script src="../../assets/js/drop.js"></script>
     <script src="../../assets/js/dropzone.js"></script>
     <script>
+      $(document).ready( function () {
+  $('.display').DataTable({
+    "paging": true,
+    "info": true,
+    "responsive": true,
+    "aoColumnDefs": [{
+        "bSortable": false,
+        "aTargets": ["no-sort"]
+    }],
+    "bInfo": true
+  });
+  
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    $('.display:visible').each( function(e) {
+      $(this).DataTable().columns.adjust().responsive.recalc();
+    });
+  });
+} );
+
+    </script>
+    <script>
       const phoneInputField = document.querySelector("#phone");
       const phoneInput = window.intlTelInput(phoneInputField, {
           preferredCountries: ["ng", "us", "eg", "gh"],
           utilsScript:
             "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
         });
+
+        document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+          const dropZoneElement = inputElement.closest(".drop-zone");
+
+          dropZoneElement.addEventListener("click", (e) => {
+            inputElement.click();
+          });
+
+          inputElement.addEventListener("change", (e) => {
+            if (inputElement.files.length) {
+              updateThumbnail(dropZoneElement, inputElement.files[0]);
+            }
+          });
+
+          dropZoneElement.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dropZoneElement.classList.add("drop-zone--over");
+          });
+
+          ["dragleave", "dragend"].forEach((type) => {
+            dropZoneElement.addEventListener(type, (e) => {
+              dropZoneElement.classList.remove("drop-zone--over");
+            });
+          });
+
+          dropZoneElement.addEventListener("drop", (e) => {
+            e.preventDefault();
+
+            if (e.dataTransfer.files.length) {
+              inputElement.files = e.dataTransfer.files;
+              updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+            }
+
+            dropZoneElement.classList.remove("drop-zone--over");
+          });
+        });
+
+        /**
+         * Updates the thumbnail on a drop zone element.
+         *
+         * @param {HTMLElement} dropZoneElement
+         * @param {File} file
+         */
+        function updateThumbnail(dropZoneElement, file) {
+          let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+          // First time - remove the prompt
+          if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+            dropZoneElement.querySelector(".drop-zone__prompt").remove();
+          }
+
+          // First time - there is no thumbnail element, so lets create it
+          if (!thumbnailElement) {
+            thumbnailElement = document.createElement("div");
+            thumbnailElement.classList.add("drop-zone__thumb");
+            dropZoneElement.appendChild(thumbnailElement);
+          }
+
+          thumbnailElement.dataset.label = file.name;
+
+          // Show thumbnail for image files
+          if (file.type.startsWith("image/")) {
+            const reader = new FileReader();
+
+            reader.readAsDataURL(file);
+            reader.onload = () => {
+              thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+            };
+          } else {
+            thumbnailElement.style.backgroundImage = null;
+          }
+        }
     </script>
+    
+
   </body>
 </html>
