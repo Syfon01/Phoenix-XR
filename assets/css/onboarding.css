@@ -390,3 +390,16 @@ li{
   fill: #FF884C;
   color: #fff!important;
 }
+.letter-space{
+  letter-spacing: -1px!important;
+}
+.btn-primary{
+  background: linear-gradient(180deg, #D70900 0%, #BF0B1C 100%)!important;
+border: 1px solid rgba(27, 31, 35, 0.15)!important;
+box-sizing: border-box;
+box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.1), inset 0px 2px 0px rgba(255, 255, 255, 0.03)!important;
+border-radius: 6px;
+}
+.btn-same-width{
+  width: 82px;
+}
