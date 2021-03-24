@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="UBA - Know Your Employee">
+    <title>UBA - Know Your Employee</title>
+
+    <!-- Required External CSS -->
+    <link href="assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <!-- <link href="assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- <link href="assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet"> -->
+    <link href="assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- DashForge CSS -->
+    <link rel="stylesheet" href="assets/css/dashforge.css">
+
+    <!-- Page CSS --> 
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    
+  </head>
+  <body>
+
+
+<!-- ===========================
+  start of header and of sidebar 
+  ==================================
+ -->
+<div class="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="d-md-none d-lg-none d-xl-none d-block">
+    <button class="openbtn float-left" onclick="openNav()">&#9776;</button>
+    </div>
+    <div class="row header-row">
+      <div class="avatar avatar-md"><img src="assets/img/icon/chairman.jpg" class="rounded-circle" alt=""></div>
+      <div class="pd-l-10">
+        <p class="tx-14 tx-gray mb-1">Tony Elumelu</p>
+        <p class="tx-12 tx-grayy mb-0">Chairman</p>
+      </div>
+    </div> 
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto pd-r-40">
+        
+        
+        <li class="nav-item active pd-r-40 pd-t-5">
+          <div class="dropdown dropdown-notification">
+            <a href="" class="dropdown-link new-indicator" data-toggle="dropdown">
+              <i data-feather="bell"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header">Notifications</div>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="assets/img/boy.svg"
+                      class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+                    <span>Mar 15 12:32pm</span>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="assets/img/boy.svg"
+                      class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Joyce Chua</strong> just created a new blog post</p>
+                    <span>Mar 13 04:16am</span>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="assets/img/boy.svg"
+                      class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Althea Cabardo</strong> just created a new blog post</p>
+                    <span>Mar 13 02:56am</span>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="assets/img/boy.svg"
+                      class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Adrian Monino</strong> added new comment on your photo</p>
+                    <span>Mar 12 10:40pm</span>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-footer"><a href="">View all Notifications</a></div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <img class="uba-logo img-fluid nav-logo" alt="UBA Logo Dark" src="assets/img/uba_logo_red.svg">
+        </li>
+      
+    </div>
+  </nav>
+  
+</div>
+<div class="d-block d-md-none d-lg-none d-xl-none">
+  <aside class="asid aside-fixed sidepanel" id="mySidepanel">
+      
+    <!-- <a href="" class="aside-menu-link">
+      <i data-feather="menu"></i>
+      <i data-feather="x"></i>
+    </a> -->
+  <!-- </div> -->
+  <div class="aside-body bd-t-0 bg-dark-color tx-center">
+    <div class="float-right">
+        <a href="javascript:void(0)" class="btn closebtn float-right pd-20" onclick="closeNav()">&times;</a>
+    </div>
+   
+    <ul class="nav block-nav nav-asid pd-t-20 mg-t-40 tx-center">
+      
+      <li class="nav-item active">
+          <a href="./dashboard.html" class="nav-link">
+            <img src="./assets/img/icon/Insights.svg" class="img-fluid">
+            <p class="mb-0">Insights</p>
+          </a>   
+        </li>
+      
+      <li class="nav-item">
+        <a href="./employee/index.html" class="nav-link">
+          <i data-feather="users"></i>
+          <p class="mb-0">Employees</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="./project.html" class="nav-link"><i data-feather="file-plus"></i>
+          <p class="mb-0">Projects</p></a>
+      </li>
+
+      <li class="nav-item">
+        <a href="./favourite.html" class="nav-link"><i data-feather="heart"></i>
+          <p class="mb-0">Favourites</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
+          <p class="mb-0">History</p></a>
+      </li>
+     
+      <li class="nav-item">
+        <a href="setting.html" class="nav-link"><i data-feather="settings"></i>
+          <p class="mb-0">Settings</p></a>
+      </li>
+     
+    </ul>
+          
+  </div>
+</aside>
+
+</div>
+<div class="d-none d-md-block d-lg-block d-xl-block">
+  <aside class="asid aside-fixed">
+      
+  <div class="aside-body bd-t-0 bg-dark-color tx-center">
+   
+    <ul class="nav block-nav nav-asid pd-t-20 tx-center">
+      
+      <li class="nav-item active">
+          <a href="./dashboard.html" class="nav-link">
+            <img src="./assets/img/icon/Insights.svg" class="img-fluid">
+            <p class="mb-0">Insights</p>
+          </a>   
+        </li>
+      
+      <li class="nav-item">
+        <a href="./employee/index.html" class="nav-link">
+          <i data-feather="users"></i>
+          <p class="mb-0">Employees</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="./project.html" class="nav-link"><i data-feather="file-plus"></i>
+          <p class="mb-0">Projects</p></a>
+      </li>
+
+      <li class="nav-item">
+        <a href="./favourite.html" class="nav-link"><i data-feather="heart"></i>
+          <p class="mb-0">Favourites</p></a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="history.html" class="nav-link"><i data-feather="rotate-ccw"></i>
+          <p class="mb-0">History</p></a>
+      </li>
+     
+      <li class="nav-item">
+        <a href="setting.html" class="nav-link"><i data-feather="settings"></i>
+          <p class="mb-0">Settings</p></a>
+      </li>
+     
+    </ul>
+          
+  </div>
+</aside>
+
+</div>
+
+<!-- ===========================
+  end of sidebar 
+  ==================================
+ -->
+   
+    <div class="content pd-0">
+      
+      <div class="content-body pd-t-100">
+        <div class="container pd-x-0">
+         <p class="tx-32 tx-bold">Insights</p>
+          <div class="row mg-t-30">
+            <div class="col-lg-6 col-12 mg-t-0 mg-lg-t-0">
+              <div class="card">
+                <div class="card-header pd-y-15">
+                  <p class="tx-14 tx-bold mb-0">OVERVIEW</p>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6 col-12 mg-t-20 mg-lg-t-0">
+                      <div class="card">
+                          <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                              <div class="">
+                                <p class="tx-14 mb-1 tx-placeholder tx-medium">Total Employee</p>
+                                <p class="tx-24 mb-0 tx-semibold">13,355</p>
+                              </div>
+                              <div>
+                                <img src="./assets/img/icon/Employee.svg" alt="" srcset="">
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12 mg-t-20 mg-lg-t-0">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="d-flex justify-content-between">
+                            <div class="">
+                              <p class="tx-14 mb-1 tx-placeholder tx-medium">Total No. of Branches</p>
+                              <p class="tx-24 mb-0 tx-semibold">1,930</p>
+                            </div>
+                            <div>
+                              <img src="./assets/img/icon/Building.svg" alt="" srcset="">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    </div>
+                      
+      
+                  <div class="col-md-6 col-12 mg-t-20 mg-lg-t-20">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                          <div class="">
+                            <p class="tx-14 mb-1 tx-placeholder tx-medium">Full-time</p>
+                            <p class="tx-24 mb-0 tx-semibold">15,000</p>
+                          </div>
+                          <div>
+                            <img src="./assets/img/icon/ID Card.svg" alt="" srcset="">
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+      
+                  <div class="col-md-6 col-12 mg-t-20 mg-lg-t-20">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                          <div class="">
+                            <p class="tx-14 mb-1 tx-placeholder tx-medium">Contract Staff</p>
+                            <p class="tx-24 mb-0 tx-semibold">3,240</p>
+                          </div>
+                          <div>
+                            <img src="./assets/img/icon/Contract (color).svg" alt="" srcset="">
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 mg-t-20 mg-lg-t-0">
+              <table class="table table-count bd">
+                <thead class="table-head tx-placeholder">
+                  <tr>
+                    <th scope="col">COUNTRIES</th>
+                    <th scope="col">EMPLOYEES</th>
+                    <th scope="col">BRANCHES</th>
+                    
+                  </tr>
+                </thead>
+                <tbody class="table-body">
+                  <tr>
+                    <th scope="row" class="country-font">Nigeria</th>
+                    <td>4189 <span class="tx-placeholder">(27.9%)</span></td>
+                    <td>787</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row" class="country-font">Ghana</th>
+                    <td>978 <span class="tx-placeholder">(6.5%)</span></td>
+                    <td>78</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row" class="country-font">Senegal</th>
+                    <td>419 <span class="tx-placeholder">(5.9%)</span></td>
+                    <td>67</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row" class="country-font">Cameroun</th>
+                    <td>389 <span class="tx-placeholder">(5.8%)</span></td>
+                    <td>59</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row" class="country-font">Mali</th>
+                    <td>349 <span class="tx-placeholder">(4.3%)</span></td>
+                    <td>787</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row" class="country-font">Burkina Faso</th>
+                    <td>354 <span class="tx-placeholder">(2.9%)</span></td>
+                    <td>53</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row" class="country-font">Nigeria</th>
+                    <td>4189 <span class="tx-placeholder">(27.9%)</span></td>
+                    <td>787</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row" class="country-font">Nigeria</th>
+                    <td>4189 <span class="tx-placeholder">(27.9%)</span></td>
+                    <td>787</td>
+                    
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="sticky-top">
+            <div class="row justify-content-between mg-t-15">
+              <div class="col-lg-8 col-12 mg-t-15">
+              <p class="tx-18 mb-0 tx-bold pd-t-5">Showing Data for All UBA Countries</p>
+              </div>
+              <div class="col mg-t-15">
+                <div class="row">
+                  <div class="col-4 pd-r-0">
+                    <label for="" class="tx-placeholder pd-t-10 mb-0">Filter by Country</label>
+                  </div>
+                  <div class="col-8 pd-l-0">
+                    <select class="custom-select">
+                      <option selected>All UBA Countries</option>
+                      <option value="1">Nigeria</option>
+                      <option value="2">Ghana</option>
+                      <option value="3">Burkina Faso</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr/>
+          </div>
+          <div class="row">
+            
+            <div class="col-sm-12 col-lg-4 col-xl-4 mg-t-20">
+              <div class="card">
+                <div class="card-header">
+                  <div class="row">
+                    <div class="col-md-8 col-12">
+                        <p class="tx-14 tx-bold mg-b-0">AGE DISTRIBUTION</p>
+                    </div>
+                  </div>
+                </div><!-- card-header -->
+
+                <div class="card-body">
+                    <div class="chart-thirteen"><canvas id="chartDonut2" class="chartDo"></canvas></div>
+                </div> 
+                <div class="card-footer footer-gray pd-20">
+                  <div class="tooltipp">
+                    <i data-feather="info"></i>
+                    <div class="tooltipptext">
+                      <div class="row">
+                        <div class="col-md-5 col-5">
+                          <p class="tx-12 mb-1"><span class="tx-grayy">Gen Z:</span> <span>9 - 24 yrs</span></p>
+                        </div>
+                        <div class="col-md-7 col-7">
+                          <p class="tx-12 mb-1"><span class="tx-grayy">Millennials:</span><span>25 - 40 yrs</span></p>
+                        </div>
+                        <div class="col-md-5 col-5">
+                          <p class="tx-12 mb-1"><span class="tx-grayy">Gen X:</span> <span>39 - 54 yrs</span></p>
+                        </div>
+                        <div class="col-md-7 col-7">
+                          <p class="tx-12 mb-1"><span class="tx-grayy">Baby Boomers:</span><span>55 - 70 yrs</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                <div class="row">
+                  <div class="col-6 col-md-6 mg-t-20">
+                    <div class="gen-z pd-x-10">
+                      <p class="tx-12 tx-uppercase tx-medium tx-placeholder tx-spacing-1 mg-b-5">Gen Z</p>
+                    <div class="d-flex align-items-center">
+                      <h5 class="tx-normal tx-rubik mg-b-0"> 547<span class="tx-placeholder mg-l-4">(3%)</span></h5>
+                    </div>
+                    </div>
+                  </div><!-- col -->
+                  <div class="col-6 col-md-6 mg-t-20">
+                    <div class="millenial pd-x-10">
+                      <p class="tx-12 tx-uppercase tx-medium tx-placeholder tx-spacing-1 mg-b-5">Millenials</p>
+                      <div class="d-flex align-items-center">
+                        <h5 class="tx-normal tx-rubik mg-b-0">11,126 <span class="tx-placeholder mg-l-4">(61%)</span></h5>
+                      </div>
+                    </div>
+                  </div><!-- col -->
+                  
+                  <div class="col-6 col-md-6 mg-t-20">
+                    <div class="gen-x pd-x-10">
+                      <p class="tx-12 tx-uppercase tx-medium tx-placeholder tx-spacing-1 mg-b-5">Gen X</p>
+                    <div class="d-flex align-items-center">
+                      <h5 class="tx-normal tx-rubik mg-b-0"> 4,378 <small class="tx-placeholder-04 mg-l-4">(24%)</small></h5>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-6 mg-t-20">
+                    <div class="baby-bloom pd-x-10">
+                      <p class="tx-12 tx-uppercase tx-medium tx-placeholder tx-spacing-1 mg-b-5">Baby Boomers</p>
+                      <div class="d-flex align-items-center">
+                        <h5 class="tx-normal tx-rubik mg-b-0"> 2189 <small class="tx-placeholder mg-l-4">(12%)</small></h5>
+                      </div>
+                    </div>
+                  </div>
+                
+                </div><!-- row -->
+                </div><!-- card-footer -->
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 col-xl-4 mg-t-20">
+              <div class="card">
+                <div class="card-header">
+                  <div class="row">
+                    <div class="col-md-8 col-12">
+                      <p class="tx-14 tx-bold mg-b-0">GENDER DISTRIBUTION</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body ">
+                  <div class="chart-seven"><canvas id="chartDonut" class="chartDo"></canvas></div>
+                </div>
+                <div class="card-footer footer-gray pd-20">
+                  <!-- <div class="tooltipp">
+                    <i data-feather="info"></i>
+                    <div class="tooltipptext">
+                      <div class="row">
+                        <div class="col-md-5 col-5">
+                          <p class="tx-12 mb-1"><span class="tx-grayy">Gen Z:</span> <span>9 - 24 yrs</span></p>
+                        </div>
+                        <div class="col-md-7 col-7">
+                          <p class="tx-12 mb-1"><span class="tx-grayy">Millennials:</span><span>25 - 40 yrs</span></p>
+                        </div>
+                        <div class="col-md-5 col-5">
+                          <p class="tx-12 mb-1"><span class="tx-grayy">Gen X:</span> <span>39 - 54 yrs</span></p>
+                        </div>
+                        <div class="col-md-7 col-7">
+                          <p class="tx-12 mb-1"><span class="tx-grayy">Baby Boomers:</span><span>55 - 70 yrs</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                   -->
+                <div class="row">
+                  <div class="col-6 col-md-6 mg-t-20">
+                    <div class="male pd-x-10">
+                      <p class="tx-12 tx-uppercase tx-medium tx-placeholder tx-spacing-1 mg-b-5">Male</p>
+                    <div class="d-flex align-items-center">
+                      <h5 class="tx-normal tx-rubik mg-b-0">10,579<span class="tx-placeholder mg-l-4">(58%)</span></h5>
+                    </div>
+                    </div>
+                  </div><!-- col -->
+                  <div class="col-6 col-md-6 mg-t-20">
+                    <div class="female pd-x-10">
+                      <p class="tx-12 tx-uppercase tx-medium tx-placeholder tx-spacing-1 mg-b-5">Female</p>
+                      <div class="d-flex align-items-center">
+                        <h5 class="tx-normal tx-rubik mg-b-0">6749 <span class="tx-placeholder mg-l-4">(37%)</span></h5>
+                      </div>
+                    </div>
+                  </div><!-- col -->
+                  
+                  <div class="col-6 col-md-6 mg-t-20">
+                    <div class="others pd-x-10">
+                      <p class="tx-12 tx-uppercase tx-medium tx-placeholder tx-spacing-1 mg-b-5">Others</p>
+                    <div class="d-flex align-items-center">
+                      <h5 class="tx-normal tx-rubik mg-b-0"> 912 <small class="tx-placeholder-04 mg-l-4">(5%)</small></h5>
+                    </div>
+                    </div>
+                  </div>
+                </div><!-- row -->
+                </div><!-- card-footer -->
+              </div><!-- card -->
+            </div>
+            <div class="col-12 col-lg-4 col-xl-4 mg-t-20">
+              <div class="card">
+                <div class="card-header">
+                  <div class="row">
+                    <div class="col-md-12 col-12">
+                      <p class="tx-14 tx-bold mg-b-0 tx-uppercase">Educational Qualification</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <table class="table  table-borderless">
+                    <thead class="table-hea tx-placeholder">
+                      <tr>
+                        <th scope="col">QUALIFICATION</th>
+                        <th scope="col">(%)</th>
+                        <th scope="col">COUNT </th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody class="table-bod">
+                      <tr>
+                        <th scope="row" class="country-font">Nigeria</th>
+                        <td>4189 <span class="tx-placeholder">(27.9%)</span></td>
+                        <td>787</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font">Ghana</th>
+                        <td>978 <span class="tx-placeholder">(6.5%)</span></td>
+                        <td>78</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font">Senegal</th>
+                        <td>419 <span class="tx-placeholder">(5.9%)</span></td>
+                        <td>67</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font">Cameroun</th>
+                        <td>389 <span class="tx-placeholder">(5.8%)</span></td>
+                        <td>59</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font">Mali</th>
+                        <td>349 <span class="tx-placeholder">(4.3%)</span></td>
+                        <td>787</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font">Burkina Faso</th>
+                        <td>354 <span class="tx-placeholder">(2.9%)</span></td>
+                        <td>53</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font">Nigeria</th>
+                        <td>4189 <span class="tx-placeholder">(27.9%)</span></td>
+                        <td>787</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font">Nigeria</th>
+                        <td>4189 <span class="tx-placeholder">(27.9%)</span></td>
+                        <td>787</td>
+                        
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+            </div>
+            
+            </div>
+          </div>
+
+        </div>
+      </div>
+    
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/feather-icons/feather.min.js"></script>
+    <script src="assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <script src="assets/lib/prismjs/prism.js"></script>
+    <script src="assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="assets/lib/chart.js/Chart1.min.js"></script>
+    <script src="assets/lib/chart.js/utils.js"></script>
+
+    <script src="assets/js/dashforge.js"></script>
+    <script src="assets/js/dashforge.aside.js"></script>
+    <script src="assets/js/dashforge.sampledata.js"></script>
+
+    <!-- append theme customizer -->
+    <script src="assets/lib/js-cookie/js.cookie.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- <script src="assets/js/dashforge.settings.js"></script> -->
+
+    <script>
+     
+    //date picker
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+  
+    </script>
+    
+    <script>
+
+        /** PIE CHART **/
+        var datapie = {
+          labels: ['Male', 'Female', 'Others'],
+          datasets: [{
+            data: [58,37,5],
+            backgroundColor: ['#B392F0', '#6F42C1','#4C2888']
+          }]
+        };
+
+        var optionpie = {
+          maintainAspectRatio: false,
+          responsive: true,
+          legend: {
+            display: false,
+          },
+          animation: {
+            animateScale: true,
+            animateRotate: true
+          }
+        };
+
+        // For a pie chart
+        var ctx2 = document.getElementById('chartDonut');
+        var myDonutChart = new Chart(ctx2, {
+          type: 'doughnut',
+          data: datapie,
+          options: optionpie
+        });
+
+ 
+        /** PIE CHART 2 **/
+        var datapie2 = {
+          labels: ['Gen Z', 'Millenials', 'Gen X', 'Baby Boomers'],
+          datasets: [{
+            data: [3,61,24,12],
+            backgroundColor: ['#79B8FF', '#0366D6','#044289','#05264C']
+          }]
+        };
+
+        var optionpie2 = {
+          maintainAspectRatio: false,
+          responsive: true,
+          legend: {
+            display: false,
+          },
+          animation: {
+            animateScale: true,
+            animateRotate: true
+          }
+        };
+
+        // For a pie chart
+        var ctx2 = document.getElementById('chartDonut2');
+        var myDonutChart = new Chart(ctx2, {
+          type: 'doughnut',
+          data: datapie2,
+          options: optionpie2
+        });
+    </script>
+
+  <!-- for togglesidebar -->
+  <script>
+      /* Set the width of the sidebar to 250px (show it) */
+    function openNav() {
+      document.getElementById("mySidepanel").style.width = "250px";
+    }
+
+    /* Set the width of the sidebar to 0 (hide it) */
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+    }
+  </script>
+  </body>
+</html>

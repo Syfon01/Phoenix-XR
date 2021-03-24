@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Exit Module</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+
+    <!-- Required External CSS -->
+    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/admin-dashboard.css">
+    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-700">Exit Admin</p>
+            </div>
+          </div>
+          
+          <div class="collapse" id="loggedinMenu">
+            <ul class="nav nav-aside mg-b-0">
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="edit"></i> <span>Edit Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="user"></i> <span>View Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="settings"></i> <span>Account Settings</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="help-circle"></i> <span>Help Center</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="log-out"></i> <span>Sign Out</span></a></li>
+            </ul>
+          </div>
+        </div><!-- aside-loggedin -->
+
+        <ul class="nav nav-aside">
+          <li class="nav-item active p-14"><a href="./index.html" class="nav-link active text-gray-700"><img src="../assets/img/icon/Insights.svg" class="img-fluid mg-r-10 insight-icon"/><span>Insights</span></a></li>
+          <!-- <li class="nav-item p-14"><a href="./desk.html" class="nav-link text-gray-700"><i data-feather="help-circle"></i><span>Create Help Desk Unit</span> </a></li>
+          <li class="nav-item p-14"><a href="./faq.html" class="nav-link text-gray-700"><i data-feather="layers"></i> <span>Create FAQ Unit</span></a></li> -->
+        </ul>
+        
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
+              <li class="breadcrumb-item"><a href="./index.html">Insight</a></li>
+            </ol>
+          </nav>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/New.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <p class="tx-32 tx-bold">Insights</p>
+           <div class="row mg-t-30">
+             <div class="col-lg-6 col-12 mg-t-0 mg-lg-t-0">
+               <div class="card">
+                 <div class="card-header pd-y-15">
+                   <p class="tx-14 tx-bold mb-0">OVERVIEW</p>
+                 </div>
+                 <div class="card-body">
+                   <div class="row">
+                     <div class="col-md-6 col-12 mg-t-20 mg-lg-t-0">
+                       <div class="card">
+                           <div class="card-body">
+                             <div class="d-flex justify-content-between">
+                               <div class="">
+                                 <p class="tx-14 mb-1 tx-placeholder tx-medium">Total Employee</p>
+                                 <p class="tx-24 mb-0 tx-semibold">13,355</p>
+                               </div>
+                               <div>
+                                 <img src="../../assets/img/icon/Employee.svg" alt="" srcset="">
+                               </div>
+                             </div>
+                           </div>
+                       </div>
+                     </div>
+                     <div class="col-md-6 col-12 mg-t-20 mg-lg-t-0">
+                       <div class="card">
+                         <div class="card-body">
+                           <div class="d-flex justify-content-between">
+                             <div class="">
+                               <p class="tx-14 mb-1 tx-placeholder tx-medium">Total No. of Branches</p>
+                               <p class="tx-24 mb-0 tx-semibold">1,930</p>
+                             </div>
+                             <div>
+                               <img src="../../assets/img/icon/Building.svg" alt="" srcset="">
+                             </div>
+                           </div>
+                         </div>
+                     </div>
+                     </div>
+                       
+       
+                   <div class="col-md-6 col-12 mg-t-20 mg-lg-t-20">
+                     <div class="card">
+                       <div class="card-body">
+                         <div class="d-flex justify-content-between">
+                           <div class="">
+                             <p class="tx-14 mb-1 tx-placeholder tx-medium">Full-time</p>
+                             <p class="tx-24 mb-0 tx-semibold">15,000</p>
+                           </div>
+                           <div>
+                             <img src="../../assets/img/icon/ID Card.svg" alt="" srcset="">
+                           </div>
+                         </div>
+                       </div>
+                   </div>
+                   </div>
+       
+                   <div class="col-md-6 col-12 mg-t-20 mg-lg-t-20">
+                     <div class="card">
+                       <div class="card-body">
+                         <div class="d-flex justify-content-between">
+                           <div class="">
+                             <p class="tx-14 mb-1 tx-placeholder tx-medium">Contract Staff</p>
+                             <p class="tx-24 mb-0 tx-semibold">3,240</p>
+                           </div>
+                           <div>
+                             <img src="../../assets/img/icon/Contract (color).svg" alt="" srcset="">
+                           </div>
+                         </div>
+                       </div>
+                   </div>
+                   </div>
+                 </div>
+                 </div>
+               </div>
+             </div>
+             <div class="col-lg-6 col-12 mg-t-20 mg-lg-t-0 card-hei">
+               <table class="table table-count bd">
+                 <thead class="table-head tx-placeholder">
+                   <tr>
+                     <th scope="col">COUNTRIES</th>
+                     <th scope="col">EMPLOYEES</th>
+                     <th scope="col">BRANCHES</th>
+                     
+                   </tr>
+                 </thead>
+                 <tbody class="table-body">
+                   <tr>
+                     <th scope="row" class="country-font">Nigeria</th>
+                     <td>4189 <span class="tx-placeholder">(27.9%)</span></td>
+                     <td>787</td>
+                     
+                   </tr>
+                   <tr>
+                     <th scope="row" class="country-font">Ghana</th>
+                     <td>978 <span class="tx-placeholder">(6.5%)</span></td>
+                     <td>78</td>
+                     
+                   </tr>
+                   <tr>
+                     <th scope="row" class="country-font">Senegal</th>
+                     <td>419 <span class="tx-placeholder">(5.9%)</span></td>
+                     <td>67</td>
+                     
+                   </tr>
+                   <tr>
+                     <th scope="row" class="country-font">Cameroun</th>
+                     <td>389 <span class="tx-placeholder">(5.8%)</span></td>
+                     <td>59</td>
+                     
+                   </tr>
+                   <tr>
+                     <th scope="row" class="country-font">Mali</th>
+                     <td>349 <span class="tx-placeholder">(4.3%)</span></td>
+                     <td>787</td>
+                     
+                   </tr>
+                   <tr>
+                     <th scope="row" class="country-font">Burkina Faso</th>
+                     <td>354 <span class="tx-placeholder">(2.9%)</span></td>
+                     <td>53</td>
+                     
+                   </tr>
+                   <tr>
+                     <th scope="row" class="country-font">Nigeria</th>
+                     <td>4189 <span class="tx-placeholder">(27.9%)</span></td>
+                     <td>787</td>
+                     
+                   </tr>
+                   <tr>
+                     <th scope="row" class="country-font">Nigeria</th>
+                     <td>4189 <span class="tx-placeholder">(27.9%)</span></td>
+                     <td>787</td>
+                     
+                   </tr>
+                 </tbody>
+               </table>
+             </div>
+           </div>
+           <div class="sticky-top">
+             <div class="row justify-content-between mg-t-15">
+               <div class="col-lg-8 col-12 mg-t-15">
+               <p class="tx-18 mb-0 tx-bold pd-t-5">Showing Data for All UBA Countries</p>
+               </div>
+               <div class="col mg-t-15">
+                 <div class="row">
+                   <div class="col-4 pd-r-0">
+                     <label for="" class="tx-placeholder pd-t-10 mb-0">Filter by Country</label>
+                   </div>
+                   <div class="col-8 pd-l-0">
+                     <select class="custom-select">
+                       <option selected>All UBA Countries</option>
+                       <option value="1">Nigeria</option>
+                       <option value="2">Ghana</option>
+                       <option value="3">Burkina Faso</option>
+                     </select>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <hr/>
+           </div>
+           <div class="row">
+             <div class="col-sm-12 col-lg-4 col-xl-4 mg-t-20">
+               <div class="card">
+                 <div class="card-header">
+                   <div class="row">
+                     <div class="col-md-8 col-12">
+                         <p class="tx-14 tx-bold mg-b-0">AGE DISTRIBUTION</p>
+                     </div>
+                   </div>
+                 </div><!-- card-header -->
+ 
+                 <div class="card-body">
+                     <div class="chart-thirteen"><canvas id="chartDonut2" class="chartDo"></canvas></div>
+                 </div> 
+                 <div class="card-footer footer-gray pd-20">
+                   <div class="tooltipp">
+                     <i data-feather="info"></i>
+                     <div class="tooltipptext">
+                       <div class="row">
+                         <div class="col-md-5 col-5">
+                           <p class="tx-12 mb-1"><span class="tx-grayy">Gen Z:</span> <span>9 - 24 yrs</span></p>
+                         </div>
+                         <div class="col-md-7 col-7">
+                           <p class="tx-12 mb-1"><span class="tx-grayy">Millennials:</span><span>25 - 40 yrs</span></p>
+                         </div>
+                         <div class="col-md-5 col-5">
+                           <p class="tx-12 mb-1"><span class="tx-grayy">Gen X:</span> <span>39 - 54 yrs</span></p>
+                         </div>
+                         <div class="col-md-7 col-7">
+                           <p class="tx-12 mb-1"><span class="tx-grayy">Baby Boomers:</span><span>55 - 70 yrs</span></p>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   
+ 
+                 <div class="row">
+                   <div class="col-6 col-md-6 mg-t-20">
+                     <div class="gen-z pd-x-10">
+                       <p class="tx-12 tx-uppercase tx-medium tx-placeholder tx-spacing-1 mg-b-5">Gen Z</p>
+                     <div class="d-flex align-items-center">
+                       <h5 class="tx-normal tx-rubik mg-b-0"> 547<span class="tx-placeholder mg-l-4">(3%)</span></h5>
+                     </div>
+                     </div>
+                   </div><!-- col -->
+                   <div class="col-6 col-md-6 mg-t-20">
+                     <div class="millenial pd-x-10">
+                       <p class="tx-12 tx-uppercase tx-medium tx-placeholder tx-spacing-1 mg-b-5">Millenials</p>
+                       <div class="d-flex align-items-center">
+                         <h5 class="tx-normal tx-rubik mg-b-0">11,126 <span class="tx-placeholder mg-l-4">(61%)</span></h5>
+                       </div>
+                     </div>
+                   </div><!-- col -->
+                   
+                   <div class="col-6 col-md-6 mg-t-20">
+                     <div class="gen-x pd-x-10">
+                       <p class="tx-12 tx-uppercase tx-medium tx-placeholder tx-spacing-1 mg-b-5">Gen X</p>
+                     <div class="d-flex align-items-center">
+                       <h5 class="tx-normal tx-rubik mg-b-0"> 4,378 <small class="tx-placeholder-04 mg-l-4">(24%)</small></h5>
+                     </div>
+                     </div>
+                   </div>
+                   <div class="col-6 col-md-6 mg-t-20">
+                     <div class="baby-bloom pd-x-10">
+                       <p class="tx-12 tx-uppercase tx-medium tx-placeholder tx-spacing-1 mg-b-5">Baby Boomers</p>
+                       <div class="d-flex align-items-center">
+                         <h5 class="tx-normal tx-rubik mg-b-0"> 2189 <small class="tx-placeholder mg-l-4">(12%)</small></h5>
+                       </div>
+                     </div>
+                   </div>
+                 
+                 </div><!-- row -->
+                 </div><!-- card-footer -->
+               </div>
+             </div>
+             <div class="col-12 col-lg-4 col-xl-4 mg-t-20">
+               <div class="card">
+                 <div class="card-header">
+                   <div class="row">
+                     <div class="col-md-8 col-12">
+                       <p class="tx-14 tx-bold mg-b-0">GENDER DISTRIBUTION</p>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="card-body ">
+                   <div class="chart-seven"><canvas id="chartDonut" class="chartDo"></canvas></div>
+                 </div>
+                 <div class="card-footer footer-gray pd-20">
+                   <!-- <div class="tooltipp">
+                     <i data-feather="info"></i>
+                     <div class="tooltipptext">
+                       <div class="row">
+                         <div class="col-md-5 col-5">
+                           <p class="tx-12 mb-1"><span class="tx-grayy">Gen Z:</span> <span>9 - 24 yrs</span></p>
+                         </div>
+                         <div class="col-md-7 col-7">
+                           <p class="tx-12 mb-1"><span class="tx-grayy">Millennials:</span><span>25 - 40 yrs</span></p>
+                         </div>
+                         <div class="col-md-5 col-5">
+                           <p class="tx-12 mb-1"><span class="tx-grayy">Gen X:</span> <span>39 - 54 yrs</span></p>
+                         </div>
+                         <div class="col-md-7 col-7">
+                           <p class="tx-12 mb-1"><span class="tx-grayy">Baby Boomers:</span><span>55 - 70 yrs</span></p>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                    -->
+                 <div class="row">
+                   <div class="col-6 col-md-6 mg-t-20">
+                     <div class="male pd-x-10">
+                       <p class="tx-12 tx-uppercase tx-medium tx-placeholder tx-spacing-1 mg-b-5">Male</p>
+                     <div class="d-flex align-items-center">
+                       <h5 class="tx-normal tx-rubik mg-b-0">10,579<span class="tx-placeholder mg-l-4">(58%)</span></h5>
+                     </div>
+                     </div>
+                   </div><!-- col -->
+                   <div class="col-6 col-md-6 mg-t-20">
+                     <div class="female pd-x-10">
+                       <p class="tx-12 tx-uppercase tx-medium tx-placeholder tx-spacing-1 mg-b-5">Female</p>
+                       <div class="d-flex align-items-center">
+                         <h5 class="tx-normal tx-rubik mg-b-0">6749 <span class="tx-placeholder mg-l-4">(37%)</span></h5>
+                       </div>
+                     </div>
+                   </div><!-- col -->
+                   
+                   <div class="col-6 col-md-6 mg-t-20">
+                     <div class="others pd-x-10">
+                       <p class="tx-12 tx-uppercase tx-medium tx-placeholder tx-spacing-1 mg-b-5">Others</p>
+                     <div class="d-flex align-items-center">
+                       <h5 class="tx-normal tx-rubik mg-b-0"> 912 <small class="tx-placeholder-04 mg-l-4">(5%)</small></h5>
+                     </div>
+                     </div>
+                   </div>
+                 </div><!-- row -->
+                 </div><!-- card-footer -->
+               </div><!-- card -->
+             </div>
+
+             <div class="col-12 col-lg-4 col-xl-4 mg-t-20">
+               <div class="card card-hei">
+                 <div class="card-header">
+                   <div class="row">
+                     <div class="col-md-12 col-12">
+                       <p class="tx-14 tx-bold mg-b-0 tx-uppercase">Educational Qualification</p>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="card-body">
+                   <table class="table  table-borderless">
+                     <thead class="table-he tx-placeholder">
+                       <tr>
+                         <th scope="col">QUALIFICATION</th>
+                         <th scope="col" class="tx-center">(%)</th>
+                         <th scope="col">COUNT </th>
+                         
+                       </tr>
+                     </thead>
+                     <tbody class="table-bod">
+                       <tr>
+                         <th scope="row" class="country-font"><span class="purple-box"></span> Ph.D</th>
+                         <td class="tx-right">27%</td>
+                         <td class="tx-right">787</td>
+                         
+                       </tr>
+                       <tr>
+                         <th scope="row" class="country-font"><span class="blue-box"></span>M.Sc</th>
+                         <td class="tx-right">63%</td>
+                         <td class="tx-right">78</td>
+                         
+                       </tr>
+                       <tr>
+                         <th scope="row" class="country-font"><span class="green-box"></span>Bachelors Degree</th>
+                         <td class="tx-right">5%</td>
+                         <td class="tx-right">67</td>
+                         
+                       </tr>
+                       <tr>
+                         <th scope="row" class="country-font"><span class="yellow-box"></span>MBA</th>
+                         <td class="tx-right">58%</td>
+                         <td class="tx-right">1,108</td>
+                         
+                       </tr>
+                       <tr>
+                         <th scope="row" class="country-font"><span class="orange-box"></span>Diploma</th>
+                         <td class="tx-right">43%</td>
+                         <td class="tx-right">787</td>
+                         
+                       </tr>
+                       <tr>
+                         <th scope="row" class="country-font"><span class="gray-box"></span>LLB</th>
+                         <td class="tx-right">29%</td>
+                         <td class="tx-right">53</td>
+                         
+                       </tr>
+                       <tr>
+                         <th scope="row" class="country-font"><span class="pink-box"></span>LLM</th>
+                         <td class="tx-right">29%</td>
+                         <td class="tx-right">787</td>
+                         
+                       </tr>
+                       
+                     </tbody>
+                   </table>
+                 </div>
+               </div>
+               
+             </div>
+
+             <div class="col-12 col-lg-4 col-xl-4 mg-t-20">
+              <div class="card card-hei">
+                <div class="card-header">
+                  <div class="row">
+                    <div class="col-md-12 col-12">
+                      <p class="tx-14 tx-bold mg-b-0 tx-uppercase">UBA Work experience</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <table class="table  table-borderless">
+                    <thead class="table-he tx-placeholder">
+                      <tr>
+                        <th scope="col">DURATION</th>
+                        <th scope="col" class="tx-center">(%)</th>
+                        <th scope="col" class="tx-center">COUNT </th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody class="table-bod">
+                      <tr>
+                        <th scope="row" class="country-font"><span class="purple-box"></span> &#60; 5yrs</th>
+                        <td class="tx-right">27%</td>
+                        <td class="tx-right">5,725</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font"><span class="blue-box"></span>5 - 10yrs</th>
+                        <td class="tx-right">63%</td>
+                        <td class="tx-right">1178</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font"><span class="green-box"></span>11 - 15yrs</th>
+                        <td class="tx-right">5%</td>
+                        <td class="tx-right">2,331</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font"><span class="yellow-box"></span>16 - 30yrs</th>
+                        <td class="tx-right">58%</td>
+                        <td class="tx-right">1,108</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font"><span class="orange-box"></span>&#62; 30yrs</th>
+                        <td class="tx-right">43%</td>
+                        <td class="tx-right">1787</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="col-12 col-lg-8 col-xl-8 mg-t-20">
+              <div class="card card-hei bg-transparent">
+                <div class="card-header bg-white">
+                  <div class="row">
+                    <div class="col-md-12 col-12">
+                      <p class="tx-14 tx-bold mg-b-0 tx-uppercase">Grade DISTRIBUTION</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body card-table">
+                  <table class="table">
+                    <tbody class="table-bodyy bd-t-0">
+                      <tr>
+                        <th scope="row" class="country-font">Group Managing Director</th>
+                        <td>1 <span class="tx-placeholder">(0%)</span></td>
+                        <td class="tx-bold">Deputy General Manager</td>
+                        <td>101 <span class="tx-placeholder">(1.9%)</span></td>
+                      </tr>
+                      
+                      <tr>
+                        <th scope="row" class="country-font">Assistant General Manager</th>
+                        <td>185 <span class="tx-placeholder">(2%)</span></td>
+                        <td class="tx-bold">Assistant General Manager-Designate</td>
+                        <td>341 <span class="tx-placeholder">(7.9%)</span></td>
+                      </tr>
+                      
+                      <tr>
+                        <th scope="row" class="country-font">Group Managing Director</th>
+                        <td>1 <span class="tx-placeholder">(0%)</span></td>
+                        <td class="tx-bold">Deputy General Manager</td>
+                        <td>101 <span class="tx-placeholder">(1.9%)</span></td>
+                      </tr>
+                      
+                      <tr>
+                        <th scope="row" class="country-font">Group Managing Director</th>
+                        <td>1 <span class="tx-placeholder">(0%)</span></td>
+                        <td class="tx-bold">Deputy General Manager</td>
+                        <td>101 <span class="tx-placeholder">(1.9%)</span></td>
+                      </tr>
+                      
+                      <tr>
+                        <th scope="row" class="country-font">Assistant General Manager</th>
+                        <td>185 <span class="tx-placeholder">(2%)</span></td>
+                        <td class="tx-bold">Assistant General Manager-Designate</td>
+                        <td>341 <span class="tx-placeholder">(7.9%)</span></td>
+                      </tr>
+                      
+                      <tr>
+                        <th scope="row" class="country-font">Group Managing Director</th>
+                        <td>1 <span class="tx-placeholder">(0%)</span></td>
+                        <td class="tx-bold">Deputy General Manager</td>
+                        <td>101 <span class="tx-placeholder">(1.9%)</span></td>
+                      </tr>
+                      
+                      <tr>
+                        <th scope="row" class="country-font">Group Managing Director</th>
+                        <td>1 <span class="tx-placeholder">(0%)</span></td>
+                        <td class="tx-bold">Deputy General Manager</td>
+                        <td>101 <span class="tx-placeholder">(1.9%)</span></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+            </div>
+            
+            <div class="col-12 col-lg-4 col-xl-4 mg-t-20">
+              <div class="card card-hei">
+                <div class="card-header">
+                  <div class="row justify-content-between">
+                    <div class="col-md-4 col-12">
+                      <p class="tx-14 tx-bold mg-b-0 tx-uppercase"> staff activity</p>
+                    </div>
+                    <div class="col-md-8 col-12">
+                      <div id="reportrange" class="form-control date-picker tx-13">
+                        <i class="fa fa-calendar"></i>&nbsp;
+                        <span></span> <i class="fa fa-caret-down"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <table class="table  table-borderless">
+                    <thead class="table-he tx-placeholder">
+                      <tr>
+                        <th scope="col">ACTIVITY</th>
+                        <th scope="col" class="tx-center">COUNT </th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-bod">
+                      <tr>
+                        <th scope="row" class="country-font">Exits</th>
+                        <td class="tx-right">4</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font">Hires</th>
+                        <td class="tx-right">23</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font">Redeployments</th>
+                        <td class="tx-right">9</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font">Promotions</th>
+                        <td class="tx-right">0</td>
+                        
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font">Confirmations</th>
+                        <td class="tx-right">123</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font">Sanctions</th>
+                        <td class="tx-right">15</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font">Leave</th>
+                        <td class="tx-right">11</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="col-12 col-lg-4 col-xl-4 mg-t-20">
+              <div class="card card-hei">
+                <div class="card-header">
+                  <div class="row">
+                    <div class="col-md-12 col-12">
+                      <p class="tx-14 tx-bold mg-b-0 tx-uppercase">LANGUAGE PROFICIENCY</p>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="card-body">
+                  <table class="table  table-borderless">
+                    <thead class="table-he tx-placeholder">
+                      <tr>
+                        <th scope="col">TYPE</th>
+                        <th scope="col" class="tx-center">(%)</th>
+                        <th scope="col" class="tx-center">COUNT </th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody class="table-bod">
+                     
+                      <tr>
+                        <th scope="row" class="country-font"><span class="green-box"></span>English</th>
+                        <td class="tx-right">75%</td>
+                        <td class="tx-right">10,112</td>
+                        
+                      </tr>
+                      
+                      <tr>
+                        <th scope="row" class="country-font"><span class="blue-box"></span>French</th>
+                        <td class="tx-right">15%</td>
+                        <td class="tx-right">7,208</td>
+                        
+                      </tr>
+                      
+                      <tr>
+                        <th scope="row" class="country-font"><span class="orange-box"></span>Portuguese</th>
+                        <td class="tx-right">7%</td>
+                        <td class="tx-right">1,904</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="country-font"><span class="purple-box"></span> Swahili</th>
+                        <td class="tx-right">3%</td>
+                        <td class="tx-right">1,000</td>
+                        
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+            </div>
+
+             
+             </div>
+           </div>
+ 
+      </div>
+    </div>
+
+
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.aside.js"></script>
+    <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/lib/chart.js/Chart1.min.js"></script>
+    <script src="../../assets/lib/chart.js/utils.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <script>
+     
+      //date picker
+      var start = moment().subtract(29, 'days');
+      var end = moment();
+  
+      function cb(start, end) {
+          $('#reportrange span').html(start.format('MMMM D') + ' - ' + end.format('MMMM D'));
+      }
+  
+      $('#reportrange').daterangepicker({
+          startDate: start,
+          endDate: end,
+          ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          }
+      }, cb);
+  
+      cb(start, end);
+    
+      </script>
+      
+      <script>
+  
+          /** PIE CHART **/
+          var datapie = {
+            labels: ['Male', 'Female', 'Others'],
+            datasets: [{
+              data: [58,37,5],
+              backgroundColor: ['#B392F0', '#6F42C1','#4C2888']
+            }]
+          };
+  
+          var optionpie = {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+            },
+            animation: {
+              animateScale: true,
+              animateRotate: true
+            }
+          };
+  
+          // For a pie chart
+          var ctx2 = document.getElementById('chartDonut');
+          var myDonutChart = new Chart(ctx2, {
+            type: 'doughnut',
+            data: datapie,
+            options: optionpie
+          });
+  
+   
+          /** PIE CHART 2 **/
+          var datapie2 = {
+            labels: ['Gen Z', 'Millenials', 'Gen X', 'Baby Boomers'],
+            datasets: [{
+              data: [3,61,24,12],
+              backgroundColor: ['#79B8FF', '#0366D6','#044289','#05264C']
+            }]
+          };
+  
+          var optionpie2 = {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+            },
+            animation: {
+              animateScale: true,
+              animateRotate: true
+            }
+          };
+  
+          // For a pie chart
+          var ctx2 = document.getElementById('chartDonut2');
+          var myDonutChart = new Chart(ctx2, {
+            type: 'doughnut',
+            data: datapie2,
+            options: optionpie2
+          });
+      </script>
+  
+  </body>
+</html>
