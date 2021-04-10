@@ -1,0 +1,57 @@
+.performance{
+  background: url(../img/performance-bg.svg);
+  background-position: center;
+  border-radius: 10px;
+  background-size: cover;
+}
+.perf-img{
+  width: 30px!important;
+  height: 30px!important;
+  /* object-fit: cover; */
+}
+.avata{
+  width: 72px;
+  height: 72px;
+}
+.avatar-perf{
+  width: 65px;
+  height: 65px;
+}
+.btn-black{
+  background-color: rgba(0,0,0,0.6)!important;
+}
+
+.btn-black:hover{
+  background-color: rgba(36, 32, 32, 0.6)!important;
+  color: white!important;
+}
+.btn-go{
+  background-color: rgba(250, 251, 252, 1)!important;
+  border: 1px solid rgba(202, 206, 217, 1)!important;
+  border-radius: 6px;
+}
+.tx-whiter{
+  color: rgba(242,242,242,1);
+}
+.bg-pinkk{
+  background-color: rgba(251, 233, 233, 1);
+}
+.tx-height{
+  min-height: 105px;
+}
+
+@media (max-width: 575.98px) { 
+  .tx-36{
+    font-size: 28px!important;
+  }
+  .perf-img{
+    width: 30px!important;
+    height: 30px!important;
+    /* object-fit: cover; */
+  }
+  .avata{
+    width: 50px;
+    height: 50px;
+  }
+  
+}

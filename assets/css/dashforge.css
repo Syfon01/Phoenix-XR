@@ -2,6 +2,7 @@
 /* ############### FONTS IMPORT ############### */
 @import url("https://fonts.googleapis.com/css?family=Encode+Sans:400,600,800&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800,900");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /* ############### BOOTSTRAP FRAMEWORK ############### */
 /*!
@@ -53,7 +54,7 @@ body { -webkit-font-smoothing: antialiased; }
 
 
 html {
-  font-family: sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
@@ -63,7 +64,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif !important;
+  font-family: 'Inter', sans-serif!important;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
@@ -89,7 +90,7 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  font-family: "Roboto",
+  font-family: "Inter",
   sans-serif;
   margin-bottom: 0.5rem;
 }
@@ -97,7 +98,7 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 abbr[title],
@@ -157,7 +158,7 @@ sup {
 
 a {
   color: #DB4C3F;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   text-decoration: none;
   background-color: transparent; }
   a:hover {
@@ -7230,7 +7231,7 @@ strong {
 .badge {
   font-size: 10px;
   font-weight: 500;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Inter, sans-serif;
   padding: 3px 5px 4px;
   border-radius: 3px; }
 
@@ -7813,7 +7814,7 @@ textarea.form-control {
   box-shadow: 0 0 8px rgba(28, 39, 60, 0.08);
   border-radius: 0.25rem;
   font-size: 13px;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Inter, sans-serif; }
 
 .popover-body {
   padding: 10px 15px 15px; }
@@ -8585,7 +8586,7 @@ textarea.form-control {
   color: #fff;
   font-weight: 700;
   font-size: 15px;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Inter, sans-serif;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -8763,7 +8764,7 @@ textarea.form-control {
   color: #8392a5;
   font-size: 10px;
   font-weight: 500;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Inter, sans-serif;
   letter-spacing: .5px;
   margin: 15px 0; }
   .divider-text::before, .divider-text::after {
@@ -8917,7 +8918,7 @@ textarea.form-control {
   .dropdown-notification .media-body span {
     color: #8392a5;
     font-size: 11px;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif; }
+    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Inter, sans-serif; }
   .dropdown-message .media-body strong,
   .dropdown-notification .media-body strong {
     font-weight: 500;
@@ -8931,7 +8932,7 @@ textarea.form-control {
   text-align: center;
   font-size: 10px;
   font-weight: 500;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Inter, sans-serif;
   letter-spacing: .5px;
   text-transform: uppercase; }
   .dropdown-message .dropdown-footer a,
@@ -9110,7 +9111,7 @@ textarea.form-control {
   padding: 5px 10px;
   font-size: 10px;
   font-weight: 700;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Inter, sans-serif;
   letter-spacing: .5px;
   text-transform: uppercase; }
 
@@ -10095,7 +10096,7 @@ textarea.form-control {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Inter, sans-serif;
   color: #8392a5;
   border: 2px solid #8392a5;
   border-radius: 100%; }
@@ -10153,7 +10154,7 @@ textarea.form-control {
 .steps-sm .step-link {
   font-size: 11px;
   font-weight: 600;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Inter, sans-serif;
   text-transform: uppercase;
   letter-spacing: .2px; }
 
@@ -10664,7 +10665,7 @@ table.dataTable {
   font-size: 10px;
   font-weight: 500;
   color: #8392a5;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-transform: uppercase;
   padding-left: 5px; }
 
@@ -10750,7 +10751,7 @@ table.dataTable {
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Inter, sans-serif;
         border: 2px solid #7987a1;
         border-radius: 100%; }
         @media (min-width: 768px) {
@@ -12052,7 +12053,7 @@ textarea.parsley-success:focus {
   .navbar-menu .nav-label {
     font-size: 10px;
     font-weight: 600;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Inter, sans-serif;
     letter-spacing: .7px;
     color: #8392a5;
     text-transform: uppercase;
@@ -12389,7 +12390,7 @@ textarea.parsley-success:focus {
   .sidebar-nav .nav-label {
     font-size: 10px;
     font-weight: 500;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Inter, sans-serif;
     color: #8392a5;
     text-transform: uppercase;
     letter-spacing: .7px; }
@@ -12710,7 +12711,7 @@ textarea.parsley-success:focus {
   .nav-aside .nav-label {
     font-size: 10px;
     font-weight: 700;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Inter, sans-serif;
     letter-spacing: .5px;
     text-transform: uppercase;
     color: #001737;
@@ -12906,7 +12907,7 @@ textarea.parsley-success:focus {
 
 .content-footer {
   font-size: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Inter, sans-serif;
   text-transform: uppercase;
   letter-spacing: .3px;
   margin-top: 60px;
@@ -12939,7 +12940,7 @@ textarea.parsley-success:focus {
 
 .footer {
   font-size: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Inter, sans-serif;
   letter-spacing: .3px;
   padding: 15px 25px;
   background-color: #fafbfc;

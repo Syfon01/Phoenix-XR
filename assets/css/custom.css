@@ -40,6 +40,12 @@ body { -webkit-font-smoothing: antialiased; }
     padding-top: 21px!important;
     padding-bottom: 7px!important;
 }
+.tx-secondary{
+    color: #6A737D!important;
+}
+.breadcrumb-size{
+   font-size: 12px!important; 
+}
 /* =====================================================
 Topography
 ===================================================== */
@@ -99,7 +105,7 @@ color: rgb(110,132,163,1);
     background: #FAFBFD;;
     border-top: 1px solid #E3EBF6;
     padding-bottom: 3rem;
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 50px);
 }
 .btn-module{
     border: 1px solid #E7E9F1!important;
@@ -276,6 +282,4 @@ p{
     background-color: #000!important;
 
 }
-.sticky-top{
-    /* top:100%!important; */
-}
+
