@@ -34,3 +34,6 @@ body { -webkit-font-smoothing: antialiased; }
    .home-card{
      height: 150px;
    }
+   .bg-gray{
+     background-color: #F1F3F6!important;
+   }
