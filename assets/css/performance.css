@@ -30,6 +30,16 @@
   border: 1px solid rgba(202, 206, 217, 1)!important;
   border-radius: 6px;
 }
+.btn-go:hover{
+  background: #FAFBFC;
+    color: #d70900 !important;;
+    border: 1px solid #d70900!important;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
+    font-weight: 700!important;
+
+}
+
 .tx-whiter{
   color: rgba(242,242,242,1);
 }
@@ -39,6 +49,54 @@
 .tx-height{
   min-height: 105px;
 }
+.tx-link-dark{
+  color: #24292E!important;
+}
+.alert-icon{
+  fill: rgba(106, 115, 125, 1); 
+  color: #fff;
+}
+.alert-blue{
+  fill: rgba(7, 71, 166, 1);
+  color: #fff;
+}
+
+.badge-secondary{
+  background-color: rgba(223, 225, 230, 1)!important;
+  border-radius: 3px;
+  color: rgba(66, 82, 110, 1)!important;
+}
+.badge-blue{
+  background-color: rgba(222, 235, 255, 1)!important;
+  border-radius: 3px;
+  color: rgba(7, 71, 166, 1)!important;
+}
+.badge-green{
+  background-color: rgba(227, 252, 239, 1)!important;
+  border-radius: 3px;
+  color: rgba(0, 102, 68, 1)!important;
+}
+.badge-done{
+  background-color: rgba(234, 230, 255, 1)!important;
+  border-radius: 3px;
+  color: rgba(64, 50, 148, 1)!important;
+}
+.bg-second{
+  background-color: #FAFBFC!important;
+  border: 1px solid #E1E4E8!important;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.bg-light-blue{
+  background-color: rgba(222, 235, 255, 1)!important;
+}
+.tx-neutral{
+color: rgba(23, 43, 77, 1);
+}
+.bg-modal-footer{
+  background-color: rgba(243, 245, 247, 1)!important;
+}
+
 
 @media (max-width: 575.98px) { 
   .tx-36{

@@ -13,6 +13,22 @@ body { -webkit-font-smoothing: antialiased; }
     letter-spacing: 0px;
     color:rgba(18, 38, 63, 1)!important ;
 }
+.btn-outlined-primary:hover{
+    background: linear-gradient(180deg, #D70900 0%, #BF0B1C 100%);
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    box-sizing: border-box;
+    box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.1), inset 0px 2px 0px rgba(255, 255, 255, 0.03);
+    color: #fff!important;
+      font-weight:700;
+     }
+     .btn-outlined-primary{
+      background: #FAFBFC;
+      color: #d70900 !important;;
+      border: 1px solid rgba(27, 31, 35, 0.15)!important;
+      box-sizing: border-box;
+      box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
+     }
+  
 .nav-item.active{
     border-bottom:2px solid #d70900;
 }
@@ -70,7 +86,9 @@ Topography
 .text-new{
    color: rgba(52, 55, 65, 1);
 }
-
+.tx-placeholder{
+    color: rgba(128, 134, 139, 1);
+}
 .text-title{
     color:rgb(18,38,63,1);
 }

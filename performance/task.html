@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Exit Module</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/performance.css">
+    <link rel="stylesheet" href="../assets/css/dashforge.css">
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+  </head>
+  <body class="">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white bd navbar-header-fixed pd-b-0">
+        <div class="container">
+          <a class="navbar-brand tx-bold tx-spacing--2 order-1" href="./index.html">            
+            <img src="../assets/img/connect.svg" alt="" class="img-fluid mr-4">
+          </a>
+          <button class="navbar-toggler order-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i data-feather="menu" class="wd-20 ht-20"></i>
+          </button>
+        
+          <div class="collapse navbar-collapse order-2" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active pb-2 mg-b-20 mg-lg-b-0">
+                <a class="nav-link header-link pd-b-0" href="./index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              
+            </ul>
+  
+            <ul class="navbar-nav ml-auto mr-5">
+              <li class="nav-item pd-t-10 pb-2">
+                <a href="http://" class="nav-link btn btn-sm btn-outline pd-y-2 w-lg-100 wd-md-100 logout-btn"><i data-feather="power" class="mr-2"></i>Sign out</a>
+              </li>
+              <li class="nav-item d-none d-md-none d-lg-block d-xl-block">
+                <a class="nav-link pb-2 navbar-brand navbar-right tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/home.html"><img src="../assets/img/logo.png" class="img-fluid"/></a>
+              </li>
+            </ul>
+  
+          </div>
+        </div>
+
+      </nav>
+    </header>
+    
+    <section class="secondary-bg">
+      <div class="container py-5 mg-t-25 mg-md-t-0 mg-lg-t-35">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb-style2 bg-transparent mg-b-0">
+            <li class="breadcrumb-item pb-0"><a href="./index.html" class="text-capitalize breadcrumb-size tx-secondary">Home</a></li>
+            <li class="breadcrumb-item pb-0"><a href="./dashboard.html" class="text-capitalize breadcrumb-size tx-secondary">Performance</a></li>
+            <li class="breadcrumb-item breadcrumb-size pb-0 active text-capitalize tx-secondary " aria-current="page">Performance Task</li>
+          </ol>
+        </nav>
+
+        <div class="task">
+          <div class="row justify-content-between">
+            <div class="col-md-8 col-lg-9 col-12 mg-t-20">
+              <p class="tx-36 tx-bold mb-0">Tasks</p>
+              <p class="tx-14 tx-secondary mb-0">These serve as targets for performance and are essential for determining employee efforts.</p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-12 mg-t-20 pd-md-t-40 pd-lg-t-30 pd-md-l-70 pd-md-r-0">
+              <button class="btn btn-primary btn-sm pd-x-30 tx-14" data-toggle="modal" data-target="#addModal"> Add New Task</button>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="mg-t-30">
+          <ul class="nav nav-line" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active tx-link-dark tx-semibold" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My Tasks</a>
+            </li>
+          </ul>
+          <div class="tab-content  bd-t-0 pd-y-20" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div class="col-lg-8 col-xl-7 col-md-12 col-12 pd-x-0">
+                <div class="row ">
+                  <div class="col-md-4 col-12 col-lg-4 mg-t-20 mg-md-t-0">
+                    <div class="card card-body pd-10">
+                      <div class="d-flex justify-content-between">
+                        <div>
+                         <p class="tx-14 tx-placeholder mb-0 tx-medium">Overdue Tasks</p>
+                         <p class="tx-bold tx-32 mb-0">6</p>
+                        </div>
+                        <div class="pd-t-20">
+                          <img src="../assets/img/Overdue.svg" alt="" class="img-fluid">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-12 col-lg-4 mg-t-20 mg-md-t-0">
+                   <div class="card card-body pd-10">
+                     <div class="d-flex justify-content-between">
+                       <div>
+                        <p class="tx-14 tx-placeholder mb-0 tx-medium">Yet to Start</p>
+                        <p class="tx-bold tx-32 mb-0">6</p>
+                       </div>
+                       <div class="pd-t-20">
+                         <img src="../assets/img/Start.svg" alt="" class="img-fluid">
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="col-md-4 col-12 col-lg-4 mg-t-20 mg-md-t-0">
+                   <div class="card card-body pd-10 w-100">
+                     <div class="d-flex justify-content-between">
+                       <div>
+                        <p class="tx-14 tx-placeholder mb-0 tx-medium">Ongoing Tasks</p>
+                        <p class="tx-bold tx-32 mb-0">6</p>
+                       </div>
+                       <div class="pd-t-20">
+                         <img src="../assets/img/Ongoing.svg" alt="" class="img-fluid">
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="table-section">
+            <div class="card bg-transparent">
+              <div class="card-header pd-x-10 pd-y-0 pd-b-10">
+                <div class="row justify-content-between">
+                  <div class="col-md-3 col-12 col-lg-3 mg-md-t-10">
+                    <p class="tx-16 mb-0 tx-semibold">Tasks List <span class="tx-14 tx-normal">(5)</span></p>
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-9 mg-md-t-10">
+                    <div class="row">
+                      <div class="col-6 col-md-3 mg-md-t-0 mg-t-10">
+                        <select class="custom-select select2">
+                          <option selected>Assigned By</option>
+                          <option value="1"><div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>Basil Bassey</option>
+                          <option value="2">Funke Olumide</option>
+                          <option value="3">Somto Seyi</option>
+                        </select>
+                      </div>
+                      
+                      <div class="col-6 col-md-2 mg-md-t-0 mg-t-10">
+                        <select class="custom-select">
+                          <option selected>Progress</option>
+                          <option value="1">Open</option>
+                          <option value="2">Done</option>
+                          <option value="3">Closed</option>
+                          <option value="4">Cancelled</option>
+                        </select>
+                      </div>
+                      <div class="col-6 col-md-2 mg-md-t-0 mg-t-10">
+                        <select class="custom-select">
+                          <option selected>Due Date</option>
+                          <option value="1">24th July, 2020</option>
+                        </select>
+                      </div>
+                      <div class="col-6 col-md-2 mg-md-t-0 mg-t-10">
+                        <select class="custom-select">
+                          <option selected>Status</option>
+                          <option value="1">Yet to Start</option>
+                          <option value="2">Ongoing</option>
+                          <option value="3">Overdue</option>
+                        </select>
+                      </div>
+                      <div class="col-6 col-md-3 mg-md-t-0 mg-t-10">
+                        <p class="tx-semibold tx-12 pd-t-10" data-toggle="modal" data-target="#statusModal">
+                          <i data-feather="alert-circle" class="wd-15 ht-15 alert-icon"></i>
+                          What are Statuses?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body pd-10">
+                <table class="table " id="task">
+                  <thead>
+                    <tr class="tx-uppercase tx-12">
+                      <th scope="col">S/N</th>
+                      <th scope="col">Task</th>
+                      <th scope="col">ASSIGNED BY</th>
+                      <th scope="col">START DATE</th>
+                      <th scope="col">DUE DATE</th>
+                      <th scope="col">STATUS</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td class="tx-medium tx-12">Maintain and develop efficient relationship with business development team and promote banking business.</td>
+                      <td class="d-block">
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                          </div>
+                          <div class="col-8">
+                            <p class="tx-12 mb-0">Funke Hussien</p>
+                            <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                        <p class="tx-12 mb-0">Mar 4, 2021</p>
+                          <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
+                        </div>
+                      </td>
+                      <td><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Discarded</span></td>
+                      <td>   
+                       <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold" data-toggle="modal" data-target="#exampleModal"> View</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td class="tx-medium tx-12">Analyze customer portfolio for customers and maintain optimal customer relationships for new business acquisition.</td>
+                      <td>
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="avatar avatar-xs"><img src="../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                          </div>
+                          <div class="col-8">
+                            <p class="tx-12 mb-0">Funke Hussien</p>
+                            <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                        <p class="tx-12 mb-0">Mar 4, 2021</p>
+                          <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
+                        </div>
+                      </td>
+                      <td><span class="badge-blue pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">open</span></td>
+                      <td>   
+                       <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold" data-toggle="modal" data-target="#exampleModal"> View</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td class="tx-medium tx-12">Monitor all queries for present customer and assist in resolving all issues for new requirements.</td>
+                      <td>
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                          </div>
+                          <div class="col-8">
+                            <p class="tx-12 mb-0">Jennifer Aderonke</p>
+                            <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                        <p class="tx-12 mb-0">Mar 4, 2021</p>
+                          <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
+                        </div>
+                      </td>
+                      <td><span class="badge-green pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Closed</span></td>
+                      <td>   
+                       <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold" data-toggle="modal" data-target="#exampleModal"> View</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td class="tx-medium tx-12">Monitor all queries for present customer and assist in resolving all issues for new requirements.</td>
+                      <td>
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="avatar avatar-xs"><img src="../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                          </div>
+                          <div class="col-8">
+                            <p class="tx-12 mb-0">Jennifer Aderonke</p>
+                            <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                        <p class="tx-12 mb-0">Mar 4, 2021</p>
+                          <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
+                        </div>
+                      </td>
+                      <td><span class="badge-done pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Done</span></td>
+                      <td>   
+                       <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold" data-toggle="modal" data-target="#exampleModal"> View</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+
+
+    <!-- view Modal -->
+    <div class="modal fade" id="exampleModal" data-backdrop="static"  data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Add Modal -->
+     <div class="modal fade" id="addModal" data-backdrop="static"  data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header pd-b-0 pd-t-10 bd-b-0">
+            <p class="modal-title tx-22 tx-semibold mb-0" id="addModalLabel">Add New Task</p>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body pd-x-0 pd-y-0">
+            <div class="pd-x-20">
+              <p class="tx-secondary tx-14">Assign a task towards achieving your KPI.</p>
+              <p class="tx-medium tx-14 mb-1">Who executes this task?</p>
+
+              <div class="nav nav-line bd-b-0" role="tablist">
+              <div class="custom-control custom-radio bd pd-y-5 pd-l-40 mg-r-10 mg-md-r-30 bg-second mg-t-0 mg-md-t-0">
+                  <input id="self-input" checked name="customRadio" class="custom-control-input" type="radio" data-target="#self">
+                  <label for="self-input" class="custom-control-label pd-md-r-100 pd-r-50" class="active">Self</label>
+              </div>
+              <div class="custom-control custom-radio bd pd-y-5 pd-l-40 bg-second mg-t-0 mg-md-t-0">
+                  <input id="direct-input" name="customRadio" class="custom-control-input" type="radio" data-target="#direct">
+                  <label for="direct-input" class="custom-control-label pd-md-r-80 pd-r-40">Direct Report</label>
+              </div>
+              
+              </div> 
+            </div>
+              <div class="tab-content mg-t-20">
+                <div id="self" class="tab-pane active">
+                  <form action="" class="pd-x-20">
+                    <p class="tx-medium tx-14 mb-1">Select Target KPI</p>
+                    <select class="custom-select">
+                      <option selected>Bankwide Regulatory Compliance</option>
+                      <option value="1">Bankwide Regulatory Compliance</option>
+                      <option value="2">Regulatory Compliance</option>
+                      <option value="3">Bankwide Compliance</option>
+                    </select>
+
+                    <div class="card card-body pd-15 bg-light-blue mg-t-20">
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <i data-feather="alert-circle" class="wd-30 ht-30 alert-blue"></i>
+                        </div>
+                        <div class="mg-md-l-10 mg-lg-l-20 mg-l-5">
+                          <p class="tx-12 tx-semibold mb-1 tx-neutral">KPI Details</p>
+                          <div class="row">
+                            <div class="col-5 col-md-3 col-lg-2 pd-r-0">
+                              <p class="tx-12 mb-0 tx-neutral">Perspective:</p>
+                            </div>
+                            <div class="col-7 col-md-9 col-lg-10 pd-l-0">
+                              <p class="tx-12 mb-0 tx-neutral">Projects/SLA</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-4 col-md-3 col-lg-2 pd-r-0">
+                              <p class="tx-12 mb-0 tx-neutral">Objective:</p>
+                            </div>
+                            <div class="col-12 col-md-9 col-lg-10 pd-md-l-0 pd-l-15">
+                              <p class="tx-12 mb-0 tx-neutral">Build a reputation for compliance with all regulations and with zero tolerance for regulatory infractions and penalties; (Composite Operational Risk Rating)</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group mg-t-20">
+                      <label for="task" class="d-block tx-medium mb-1">Task Title</label>
+                      <input type="text" class="form-control" placeholder="Enter Here">
+                    </div>
+                    <div class="form-group">
+                      <label for="description" class="d-block tx-medium mb-1">Description</label>
+                      <textarea name="" id="" class="form-control" cols="" rows="3" placeholder="Describe the task here"></textarea>
+                    </div>
+                    <div class="form-row col-md-8 col-12 pd-x-0">
+                      <div class="form-group col-md-6">
+                        <label for="startDate" class="tx-medium mb-1">Start Date</label>
+                        <input type="date" class="form-control" id="inputEmail4">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="completeDate" class="tx-medium mb-1">Completion Date</label>
+                        <input type="date" class="form-control" id="inputPassword4" >
+                      </div>
+                    </div>
+                  </form>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary btn-sm pd-x-30">Create Task</button>
+                  </div>
+              </div>
+              <div id="direct" class="tab-pane">
+                <form action="" class="pd-x-20">
+                  <div class="form-group col-md-7 col-12 pd-x-0">
+                    <label class="tx-medium tx-14 mb-1">Assign Direct Report</label>
+                    <select class="custom-select">
+                      <option selected>-Select here-</option>
+                      <option value="1">Bankwide Regulatory Compliance</option>
+                      <option value="2">Regulatory Compliance</option>
+                      <option value="3">Bankwide Compliance</option>
+                    </select>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="tx-medium tx-14 mb-1">Select Target KPI</label>
+                    <select class="custom-select">
+                      <option selected>Bankwide Regulatory Compliance</option>
+                      <option value="1">Bankwide Regulatory Compliance</option>
+                      <option value="2">Regulatory Compliance</option>
+                      <option value="3">Bankwide Compliance</option>
+                    </select>
+                  </div>
+                  
+                  <div class="card card-body pd-15 bg-light-blue mg-t-20">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <i data-feather="alert-circle" class="wd-30 ht-30 alert-blue"></i>
+                      </div>
+                      <div class="mg-md-l-10 mg-lg-l-20 mg-l-5">
+                        <p class="tx-12 tx-semibold mb-1 tx-neutral">KPI Details</p>
+                        <div class="row">
+                          <div class="col-5 col-md-3 col-lg-2 pd-r-0">
+                            <p class="tx-12 mb-0 tx-neutral">Perspective:</p>
+                          </div>
+                          <div class="col-7 col-md-9 col-lg-10 pd-l-0">
+                            <p class="tx-12 mb-0 tx-neutral">Projects/SLA</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-4 col-md-3 col-lg-2 pd-r-0">
+                            <p class="tx-12 mb-0 tx-neutral">Objective:</p>
+                          </div>
+                          <div class="col-12 col-md-9 col-lg-10 pd-md-l-0 pd-l-15">
+                            <p class="tx-12 mb-0 tx-neutral">Build a reputation for compliance with all regulations and with zero tolerance for regulatory infractions and penalties; (Composite Operational Risk Rating)</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mg-t-20">
+                    <label for="task" class="d-block tx-medium mb-1">Task Title</label>
+                    <input type="text" class="form-control" placeholder="Enter Here">
+                  </div>
+                  <div class="form-group">
+                    <label for="description" class="d-block tx-medium mb-1">Description</label>
+                    <textarea name="" id="" class="form-control" cols="" rows="3" placeholder="Describe the task here"></textarea>
+                  </div>
+                  
+                </form>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary btn-sm pd-x-30">Create Task</button>
+                </div>
+            </div>
+            </div>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+   
+    
+      </div>
+    </section>
+    <section class="footer text-white">
+      <div class="container">
+        <p class="p-14 mb-0 text-capitalize">&copy; 2020 UBA Group. All Rights Reserved.</p>
+      </div>
+    </section>
+  
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../assets/lib/select2/js/select2.min.js"></script>
+
+
+    <script>
+      $('#task').DataTable({
+      responsive: true,
+      language: {
+        searchPlaceholder: 'Search...',
+        sSearch: '',
+        lengthMenu: '_MENU_ items/page',
+      }
+    });
+    </script>
+    <script>
+      $(document).ready(function() {
+      $('.select2').select2({
+        searchInputPlaceholder: 'Search options'
+      });
+
+      // radio button tab 
+      $(document).ready(function () {
+        $('input[name="customRadio"]').click(function () {
+            $(this).tab('show');
+            $(this).removeClass('active');
+        });
+      })
+    });
+    </script>
+  </body>
+</html>
