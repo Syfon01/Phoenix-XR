@@ -142,7 +142,7 @@
             
           </div>
 
-          <div class="table-section">
+          <div class="table-section">This describes a task that is currently active and concluded. It awaits confirmation/approval from a supervisor to be closed
             <div class="card bg-transparent">
               <div class="card-header pd-x-10 pd-y-0 pd-b-10">
                 <div class="row justify-content-between">
@@ -184,7 +184,7 @@
                         </select>
                       </div>
                       <div class="col-6 col-md-3 mg-md-t-0 mg-t-10">
-                        <p class="tx-semibold tx-12 pd-t-10" data-toggle="modal" data-target="#statusModal">
+                        <p class="tx-semibold tx-12 pd-t-10 statuses" data-toggle="modal" data-target="#statusModal">
                           <i data-feather="alert-circle" class="wd-15 ht-15 alert-icon"></i>
                           What are Statuses?
                         </p>
@@ -235,7 +235,7 @@
                       </td>
                       <td><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Discarded</span></td>
                       <td>   
-                       <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold" data-toggle="modal" data-target="#exampleModal"> View</button>
+                       <a href="./view.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
                       </td>
                     </tr>
                     <tr>
@@ -266,7 +266,7 @@
                       </td>
                       <td><span class="badge-blue pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">open</span></td>
                       <td>   
-                       <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold" data-toggle="modal" data-target="#exampleModal"> View</button>
+                       <a href="./view.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
                       </td>
                     </tr>
                     <tr>
@@ -297,7 +297,7 @@
                       </td>
                       <td><span class="badge-green pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Closed</span></td>
                       <td>   
-                       <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold" data-toggle="modal" data-target="#exampleModal"> View</button>
+                       <a href="./view.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
                       </td>
                     </tr>
                     <tr>
@@ -328,7 +328,7 @@
                       </td>
                       <td><span class="badge-done pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Done</span></td>
                       <td>   
-                       <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold" data-toggle="modal" data-target="#exampleModal"> View</button>
+                       <a href="./view.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
                       </td>
                     </tr>
                   </tbody>
@@ -340,22 +340,37 @@
         </div>
 
 
-    <!-- view Modal -->
-    <div class="modal fade" id="exampleModal" data-backdrop="static"  data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
+    <!-- status Modal -->
+    <div class="modal fade" id="statusModal" data-backdrop="static"  data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <div class="modal-header bd-b-0 pd-y-10">
+            <p class="tx-22 tx-semibold modal-title " id="statusModalLabel">Definition of Statuses</p>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            ...
+          <div class="modal-body pd-t-5">
+            <p class="tx-14 mb-2 tx-secondary">This process issues a request to summon affect employees to a disciplinary committee sitting.</p>
+            <div>
+              <p class="mb-1"><span class="badge-blue pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">open</span></p>
+              <p class="tx-14 mb-2">This describes a task that is currently active and ongoing</p>
+            </div>
+            <div>
+              <p class="mb-1"><span class="badge-done pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Done</span></p>
+              <p class="tx-14 mb-2">This describes a task that is currently active and concluded. It awaits confirmation/approval from a supervisor to be closed</p>
+            </div>
+            <div>
+              <p class="mb-1"><span class="badge-green pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Closed</span></p>
+              <p class="tx-14 mb-2">This status describes a task that is done and confirmed by a supervisor. It no longer ongoing.</p>
+            </div>
+            <div>
+              <p class="mb-1"><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Discarded</span></p>
+              <p class="tx-14 mb-2">This task is no longer active or ongoing. Use for tasks that are no more required.</p>
+            </div>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+          <div class="modal-footer bg-modal-footer">
+            <button type="button" class="btn btn-outlined-primary pd-x-40 btn-sm" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -515,10 +530,7 @@
                 </div>
             </div>
             </div>
-            
           </div>
-
-          
         </div>
       </div>
     </div>

@@ -97,7 +97,9 @@ color: rgba(23, 43, 77, 1);
   background-color: rgba(243, 245, 247, 1)!important;
 }
 
-
+.statuses{
+  cursor: pointer;
+}
 @media (max-width: 575.98px) { 
   .tx-36{
     font-size: 28px!important;
