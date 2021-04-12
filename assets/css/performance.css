@@ -96,9 +96,18 @@ color: rgba(23, 43, 77, 1);
 .bg-modal-footer{
   background-color: rgba(243, 245, 247, 1)!important;
 }
-
+.bg-light-bluee{
+  background-color: rgba(249, 250, 252, 1)!important;
+}
 .statuses{
   cursor: pointer;
+}
+.bor-t{
+  border-top: 0!important;
+}
+.nav-link.active{
+font-weight: 700;
+color: #000!important;
 }
 @media (max-width: 575.98px) { 
   .tx-36{

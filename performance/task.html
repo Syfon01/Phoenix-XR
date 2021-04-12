@@ -64,7 +64,7 @@
       </nav>
     </header>
     
-    <section class="secondary-bg">
+    <section class="bg-others">
       <div class="container py-5 mg-t-25 mg-md-t-0 mg-lg-t-35">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb breadcrumb-style2 bg-transparent mg-b-0">
@@ -142,7 +142,7 @@
             
           </div>
 
-          <div class="table-section">This describes a task that is currently active and concluded. It awaits confirmation/approval from a supervisor to be closed
+          <div class="table-section">
             <div class="card bg-transparent">
               <div class="card-header pd-x-10 pd-y-0 pd-b-10">
                 <div class="row justify-content-between">
@@ -207,39 +207,9 @@
                     </tr>
                   </thead>
                   <tbody>
+                   
                     <tr>
                       <th scope="row">1</th>
-                      <td class="tx-medium tx-12">Maintain and develop efficient relationship with business development team and promote banking business.</td>
-                      <td class="d-block">
-                        <div class="row">
-                          <div class="col-3">
-                            <div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
-                          </div>
-                          <div class="col-8">
-                            <p class="tx-12 mb-0">Funke Hussien</p>
-                            <label for="" class="tx-10 mb-0 tx-secondary">You</label>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div>
-                          <p class="tx-12 mb-0">Mar 4, 2021</p>
-                            <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
-                        </div>
-                      </td>
-                      <td>
-                        <div>
-                        <p class="tx-12 mb-0">Mar 4, 2021</p>
-                          <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
-                        </div>
-                      </td>
-                      <td><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Discarded</span></td>
-                      <td>   
-                       <a href="./view.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
                       <td class="tx-medium tx-12">Analyze customer portfolio for customers and maintain optimal customer relationships for new business acquisition.</td>
                       <td>
                         <div class="row">
@@ -266,11 +236,11 @@
                       </td>
                       <td><span class="badge-blue pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">open</span></td>
                       <td>   
-                       <a href="./view.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                       <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row">3</th>
+                      <th scope="row">2</th>
                       <td class="tx-medium tx-12">Monitor all queries for present customer and assist in resolving all issues for new requirements.</td>
                       <td>
                         <div class="row">
@@ -297,11 +267,11 @@
                       </td>
                       <td><span class="badge-green pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Closed</span></td>
                       <td>   
-                       <a href="./view.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                       <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row">4</th>
+                      <th scope="row">3</th>
                       <td class="tx-medium tx-12">Monitor all queries for present customer and assist in resolving all issues for new requirements.</td>
                       <td>
                         <div class="row">
@@ -328,7 +298,38 @@
                       </td>
                       <td><span class="badge-done pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Done</span></td>
                       <td>   
-                       <a href="./view.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                       <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td class="tx-medium tx-12">Maintain and develop efficient relationship with business development team and promote banking business.</td>
+                      <td class="d-block">
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                          </div>
+                          <div class="col-8">
+                            <p class="tx-12 mb-0">Funke Hussien</p>
+                            <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                        <p class="tx-12 mb-0">Mar 4, 2021</p>
+                          <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
+                        </div>
+                      </td>
+                      <td><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Discarded</span></td>
+                      <td>   
+                       <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
                       </td>
                     </tr>
                   </tbody>
@@ -571,6 +572,7 @@
       $('.select2').select2({
         searchInputPlaceholder: 'Search options'
       });
+    });
 
       // radio button tab 
       $(document).ready(function () {
@@ -578,8 +580,7 @@
             $(this).tab('show');
             $(this).removeClass('active');
         });
-      })
-    });
+      });
     </script>
   </body>
 </html>

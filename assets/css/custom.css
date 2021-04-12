@@ -125,6 +125,10 @@ color: rgb(110,132,163,1);
     padding-bottom: 3rem;
     min-height: calc(100vh - 50px);
 }
+.bg-others{
+    padding-bottom: 3rem;
+    min-height: calc(100vh - 50px); 
+}
 .btn-module{
     border: 1px solid #E7E9F1!important;
 }
@@ -300,4 +304,7 @@ p{
     background-color: #000!important;
 
 }
-
+.select-primary{
+    background:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='red' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.625rem center/8px 10px!important;
+    border: 1px solid #D70900!important;
+}
