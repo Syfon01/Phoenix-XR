@@ -109,6 +109,9 @@ color: rgba(23, 43, 77, 1);
 font-weight: 700;
 color: #000!important;
 }
+.negative-margin{
+  margin-top: -20px!important;
+}
 @media (max-width: 575.98px) { 
   .tx-36{
     font-size: 28px!important;
