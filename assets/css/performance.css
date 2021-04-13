@@ -136,6 +136,10 @@ select.custom-select,.select2-selection__rendered{
 .select2-container{
   width: 100%!important;
 }
+.clickable-name:hover{
+  text-decoration: underline!important;
+  cursor: pointer!important;
+}
 @media (max-width: 575.98px) { 
   .tx-36{
     font-size: 28px!important;
