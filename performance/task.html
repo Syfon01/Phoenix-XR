@@ -1015,28 +1015,31 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header bd-b-0 pd-y-10">
-            <p class="tx-22 tx-semibold modal-title " id="statusModalLabel">Definition of Statuses</p>
+            <p class="tx-22 tx-semibold modal-title " id="statusModalLabel">Definition of Status Tabs</p>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body pd-t-5">
-            <p class="tx-14 mb-2 tx-secondary">This process issues a request to summon affect employees to a disciplinary committee sitting.</p>
             <div>
-              <p class="mb-1"><span class="badge-blue pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">open</span></p>
-              <p class="tx-14 mb-2">This describes a task that is currently active and ongoing</p>
+              <p class="mb-1"><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">ongoing</span></p>
+              <p class="tx-14 mb-2">These are yet to be completed tasks that have started and within the due date.</p>
             </div>
             <div>
-              <p class="mb-1"><span class="badge-done pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Done</span></p>
-              <p class="tx-14 mb-2">This describes a task that is currently active and concluded. It awaits confirmation/approval from a supervisor to be closed</p>
+              <p class="mb-1"><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">overdue</span></p>
+              <p class="tx-14 mb-2">These tasks are past their due date and are yet to be completed.</p>
             </div>
             <div>
-              <p class="mb-1"><span class="badge-green pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Closed</span></p>
-              <p class="tx-14 mb-2">This status describes a task that is done and confirmed by a supervisor. It no longer ongoing.</p>
+              <p class="mb-1"><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">pending</span></p>
+              <p class="tx-14 mb-2">These tasks are yet to start.</p>
             </div>
             <div>
-              <p class="mb-1"><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Discarded</span></p>
-              <p class="tx-14 mb-2">This task is no longer active or ongoing. Use for tasks that are no more required.</p>
+              <p class="mb-1"><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">completed</span></p>
+              <p class="tx-14 mb-2">Tasks have been marked completed</p>
+            </div>
+            <div>
+              <p class="mb-1"><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">cancelled</span></p>
+              <p class="tx-14 mb-2">These tasks have been struck out by your supervisor</p>
             </div>
           </div>
           <div class="modal-footer bg-modal-footer">
