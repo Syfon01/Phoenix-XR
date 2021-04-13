@@ -77,7 +77,7 @@
         <div class="task">
           <div class="row justify-content-between">
             <div class="col-md-8 col-lg-9 col-12 mg-t-20">
-              <p class="tx-36 tx-bold mb-0">Tasks</p>
+              <p class="tx-36 tx-bold mb-0">My Performance Tasks</p>
               <p class="tx-14 tx-secondary mb-0">These serve as targets for performance and are essential for determining employee efforts.</p>
             </div>
             <div class="col-md-4 col-lg-3 col-12 mg-t-20 pd-md-t-40 pd-lg-t-30 pd-md-l-70 pd-md-r-0">
@@ -90,256 +90,948 @@
         <div class="mg-t-30">
           <ul class="nav nav-line" id="myTab" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active tx-link-dark tx-semibold" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My Tasks</a>
+              <a class="nav-link active tx-link-dark tx-semibold" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Ongoing <span class="badge">4</span></a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" id="overdue-tab" data-toggle="tab" href="#overdue" role="tab" aria-controls="overdue" aria-selected="false">Overdue <span class="badge">0</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="pending-tab" data-toggle="tab" href="#pending" role="tab" aria-controls="pending" aria-selected="false">Pending <span class="badge">1</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="completed-tab" data-toggle="tab" href="#completed" role="tab" aria-controls="completed" aria-selected="false">Completed <span class="badge">1</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="cancelled-tab" data-toggle="tab" href="#cancelled" role="tab" aria-controls="cancelled" aria-selected="false">Cancelled <span class="badge">0</span></a>
+            </li>
+
+            <li class="nav-item ml-md-auto ml-mobile">
+              <p class="tx-semibold tx-12 pd-t-10 statuses mb-0" data-toggle="modal" data-target="#statusModal">
+                <i data-feather="alert-circle" class="wd-15 ht-15 alert-icon"></i>
+                What are Statuses?
+              </p>
+            </li>
+
           </ul>
           <div class="tab-content  bd-t-0 pd-y-20" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-              <div class="col-lg-8 col-xl-7 col-md-12 col-12 pd-x-0">
-                <div class="row ">
-                  <div class="col-md-4 col-12 col-lg-4 mg-t-20 mg-md-t-0">
-                    <div class="card card-body pd-10">
-                      <div class="d-flex justify-content-between">
-                        <div>
-                         <p class="tx-14 tx-secondary mb-0 tx-medium">Overdue Tasks</p>
-                         <p class="tx-bold tx-32 mb-0">6</p>
-                        </div>
-                        <div class="pd-t-20">
-                          <img src="../assets/img/Overdue.svg" alt="" class="img-fluid">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-12 col-lg-4 mg-t-20 mg-md-t-0">
-                   <div class="card card-body pd-10">
-                     <div class="d-flex justify-content-between">
-                       <div>
-                        <p class="tx-14 tx-secondary mb-0 tx-medium">Yet to Start</p>
-                        <p class="tx-bold tx-32 mb-0">6</p>
-                       </div>
-                       <div class="pd-t-20">
-                         <img src="../assets/img/Start.svg" alt="" class="img-fluid">
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-                 <div class="col-md-4 col-12 col-lg-4 mg-t-20 mg-md-t-0">
-                   <div class="card card-body pd-10 w-100">
-                     <div class="d-flex justify-content-between">
-                       <div>
-                        <p class="tx-14 tx-secondary mb-0 tx-medium">Ongoing Tasks</p>
-                        <p class="tx-bold tx-32 mb-0">6</p>
-                       </div>
-                       <div class="pd-t-20">
-                         <img src="../assets/img/Ongoing.svg" alt="" class="img-fluid">
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="table-section">
-            <div class="card bg-transparent">
-              <div class="card-header pd-x-10 pd-y-0 pd-b-10">
-                <div class="row justify-content-between">
-                  <div class="col-md-3 col-12 col-lg-3 mg-md-t-10">
-                    <p class="tx-16 mb-0 tx-semibold">Tasks List <span class="tx-14 tx-normal">(5)</span></p>
-                  </div>
-                  <div class="col-12 col-md-12 col-lg-9 mg-md-t-10">
-                    <div class="row">
-                      <div class="col-6 col-md-3 mg-md-t-0 mg-t-10">
-                        <select class="custom-select select2">
-                          <option selected>Assigned By</option>
-                          <option value="1"><div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>Basil Bassey</option>
-                          <option value="2">Funke Olumide</option>
-                          <option value="3">Somto Seyi</option>
-                        </select>
-                      </div>
-                      
-                      <div class="col-6 col-md-2 mg-md-t-0 mg-t-10">
-                        <select class="custom-select">
-                          <option selected>Progress</option>
-                          <option value="1">Open</option>
-                          <option value="2">Done</option>
-                          <option value="3">Closed</option>
-                          <option value="4">Cancelled</option>
-                        </select>
-                      </div>
-                      <div class="col-6 col-md-2 mg-md-t-0 mg-t-10">
-                        <select class="custom-select">
-                          <option selected>Due Date</option>
-                          <option value="1">24th July, 2020</option>
-                        </select>
-                      </div>
-                      <div class="col-6 col-md-2 mg-md-t-0 mg-t-10">
-                        <select class="custom-select">
-                          <option selected>Status</option>
-                          <option value="1">Yet to Start</option>
-                          <option value="2">Ongoing</option>
-                          <option value="3">Overdue</option>
-                        </select>
-                      </div>
-                      <div class="col-6 col-md-3 mg-md-t-0 mg-t-10">
-                        <p class="tx-semibold tx-12 pd-t-10 statuses" data-toggle="modal" data-target="#statusModal">
-                          <i data-feather="alert-circle" class="wd-15 ht-15 alert-icon"></i>
-                          What are Statuses?
+              
+              <div class="table-section">
+                <div class="card bg-transparent">
+                  <div class="card-header pd-x-10 pd-y-0 pd-b-10">
+                    <div class="row justify-content-between">
+                      <div class="col-md-4 col-12 col-lg-4 mg-md-t-10">
+                        <p class="tx-16 mb-0 tx-semibold">
+                         <img src="../assets/img/Ongoing.svg" alt="" class="img-fluid mr-2">
+                          Ongoing Tasks 
                         </p>
                       </div>
+                      <div class="col-12 col-md-8 col-lg-5 mg-md-t-10">
+                        <div class="row justify-content-between">
+                          <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                            <select class="custom-select select2">
+                              <option selected>Assigned By</option>
+                              <option value="1"><div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>Basil Bassey</option>
+                              <option value="2">Funke Olumide</option>
+                              <option value="3">Somto Seyi</option>
+                            </select>
+                          </div>
+                          
+                          
+                          <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                            <select class="custom-select">
+                              <option selected>Due Date</option>
+                              <option value="1">24th July, 2020</option>
+                            </select>
+                          </div>
+                          <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                            <button class="btn btn-export tx-12 tx-semibold w-100">
+                              <img src="../assets/img/export.svg" class="mr-1">
+                              Export to CSV
+                            </button>
+                          </div>
+                          
+                        </div>
+                      </div>
                     </div>
                   </div>
+                  <div class="card-body pd-10">
+                    <table class="table display">
+                      <thead>
+                        <tr class="tx-uppercase tx-12 tx-semibold">
+                          <th>S/N</th>
+                          <th>Task</th>
+                          <th>ASSIGNED BY</th>
+                          <th>START DATE</th>
+                          <th>DUE DATE</th>
+                          <th>STATUS</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                       
+                        <tr>
+                          <th scope="row">1</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Analyze customer portfolio for customers and maintain optimal customer relationships for new business acquisition.</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Funke Hussien</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">Supervisor</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-blue pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">open</span></td>
+                          <td>   
+                           <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Monitor all queries for present customer 
+                            and assist in resolving all issues for new requirements.</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Jennifer Aderonke</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-green pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Closed</span></td>
+                          <td>   
+                           <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Monitor all queries for present customer and assist 
+                            in resolving all issues for new requirements.</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Jennifer Aderonke</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-done pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Done</span></td>
+                          <td>   
+                           <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Maintain and develop efficient relationship with business development team and promote banking business.</td>
+                          <td class="d-block">
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Funke Hussien</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Discarded</span></td>
+                          <td>   
+                           <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
+               
               </div>
-              <div class="card-body pd-10">
-                <table class="table " id="task">
-                  <thead>
-                    <tr class="tx-uppercase tx-12">
-                      <th>S/N</th>
-                      <th>Task</th>
-                      <th>ASSIGNED BY</th>
-                      <th>START DATE</th>
-                      <th>DUE DATE</th>
-                      <th>STATUS</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                   
-                    <tr>
-                      <th scope="row">1</th>
-                      <td class="tx-medium tx-12" style="width: 400px;">Analyze customer portfolio for customers and maintain optimal customer relationships for new business acquisition.</td>
-                      <td>
-                        <div class="d-flex">
-                          <div class="">
-                            <div class="avatar avatar-xs"><img src="../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+            
+            </div>
+
+            <div class="tab-pane fade" id="overdue" role="tabpanel" aria-labelledby="overdue-tab">
+              
+              <div class="table-section">
+                <div class="card bg-transparent">
+                  <div class="card-header pd-x-10 pd-y-0 pd-b-10">
+                    <div class="row justify-content-between">
+                      <div class="col-md-4 col-12 col-lg-4 mg-md-t-10">
+                        <p class="tx-16 mb-0 tx-semibold">
+                         <img src="../assets/img/Overdue.svg" alt="" class="img-fluid mr-2">
+                          Overdue Tasks 
+                        </p>
+                      </div>
+                      <div class="col-12 col-md-8 col-lg-5 mg-md-t-10">
+                        <div class="row justify-content-between">
+                          <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                            <select class="custom-select select2 w-100">
+                              <option selected>Assigned By</option>
+                              <option value="1"><div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>Basil Bassey</option>
+                              <option value="2">Funke Olumide</option>
+                              <option value="3">Somto Seyi</option>
+                            </select>
                           </div>
-                          <div class="mg-l-5">
-                            <p class="tx-12 mb-0">Funke Hussien</p>
-                            <label for="" class="tx-10 mb-0 tx-secondary">Supervisor</label>
+                          
+                          
+                          <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                            <select class="custom-select">
+                              <option selected>Due Date</option>
+                              <option value="1">24th July, 2020</option>
+                            </select>
                           </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div>
-                          <p class="tx-12 mb-0">Mar 4, 2021</p>
-                            <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
-                        </div>
-                      </td>
-                      <td>
-                        <div>
-                        <p class="tx-12 mb-0">Mar 4, 2021</p>
-                          <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
-                        </div>
-                      </td>
-                      <td><span class="badge-blue pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">open</span></td>
-                      <td>   
-                       <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td class="tx-medium tx-12" style="width: 400px;">Monitor all queries for present customer 
-                        and assist in resolving all issues for new requirements.</td>
-                      <td>
-                        <div class="d-flex">
-                          <div class="">
-                            <div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                          <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                            <button class="btn btn-export tx-12 tx-semibold w-100">
+                              <img src="../assets/img/export.svg" class="mr-1">
+                              Export to CSV
+                            </button>
                           </div>
-                          <div class="mg-l-5">
-                            <p class="tx-12 mb-0">Jennifer Aderonke</p>
-                            <label for="" class="tx-10 mb-0 tx-secondary">You</label>
-                          </div>
+                          
                         </div>
-                      </td>
-                      <td>
-                        <div>
-                          <p class="tx-12 mb-0">Mar 4, 2021</p>
-                            <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
-                        </div>
-                      </td>
-                      <td>
-                        <div>
-                        <p class="tx-12 mb-0">Mar 4, 2021</p>
-                          <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
-                        </div>
-                      </td>
-                      <td><span class="badge-green pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Closed</span></td>
-                      <td>   
-                       <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td class="tx-medium tx-12" style="width: 400px;">Monitor all queries for present customer and assist 
-                        in resolving all issues for new requirements.</td>
-                      <td>
-                        <div class="d-flex">
-                          <div class="">
-                            <div class="avatar avatar-xs"><img src="../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
-                          </div>
-                          <div class="mg-l-5">
-                            <p class="tx-12 mb-0">Jennifer Aderonke</p>
-                            <label for="" class="tx-10 mb-0 tx-secondary">You</label>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div>
-                          <p class="tx-12 mb-0">Mar 4, 2021</p>
-                            <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
-                        </div>
-                      </td>
-                      <td>
-                        <div>
-                        <p class="tx-12 mb-0">Mar 4, 2021</p>
-                          <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
-                        </div>
-                      </td>
-                      <td><span class="badge-done pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Done</span></td>
-                      <td>   
-                       <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td class="tx-medium tx-12" style="width: 400px;">Maintain and develop efficient relationship with business development team and promote banking business.</td>
-                      <td class="d-block">
-                        <div class="d-flex">
-                          <div class="">
-                            <div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
-                          </div>
-                          <div class="mg-l-5">
-                            <p class="tx-12 mb-0">Funke Hussien</p>
-                            <label for="" class="tx-10 mb-0 tx-secondary">You</label>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div>
-                          <p class="tx-12 mb-0">Mar 4, 2021</p>
-                            <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
-                        </div>
-                      </td>
-                      <td>
-                        <div>
-                        <p class="tx-12 mb-0">Mar 4, 2021</p>
-                          <label for="" class="tx-10 mb-0 tx-secondary"> 9:26am</label>
-                        </div>
-                      </td>
-                      <td><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Discarded</span></td>
-                      <td>   
-                       <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body pd-10">
+                    <table class="table display">
+                      <thead>
+                        <tr class="tx-uppercase tx-12 tx-semibold">
+                          <th>S/N</th>
+                          <th>Task</th>
+                          <th>ASSIGNED BY</th>
+                          <th>START DATE</th>
+                          <th>DUE DATE</th>
+                          <th>STATUS</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                       
+                        <tr>
+                          <th scope="row">1</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Analyze customer portfolio for customers and maintain optimal customer relationships for new business acquisition.</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Funke Hussien</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">Supervisor</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-blue pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">open</span></td>
+                          <td>   
+                           <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Monitor all queries for present customer 
+                            and assist in resolving all issues for new requirements.</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Jennifer Aderonke</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-green pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Closed</span></td>
+                          <td>   
+                           <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Monitor all queries for present customer and assist 
+                            in resolving all issues for new requirements.</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Jennifer Aderonke</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-done pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Done</span></td>
+                          <td>   
+                           <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Maintain and develop efficient relationship with business development team and promote banking business.</td>
+                          <td class="d-block">
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Funke Hussien</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Discarded</span></td>
+                          <td>   
+                           <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+               
               </div>
+            
+            </div>
+            
+            <div class="tab-pane fade" id="pending" role="tabpanel" aria-labelledby="pending-tab">
+              
+              <div class="table-section">
+                <div class="card bg-transparent">
+                  <div class="card-header pd-x-10 pd-y-0 pd-b-10">
+                    <div class="row justify-content-between">
+                      <div class="col-md-4 col-12 col-lg-4 mg-md-t-10">
+                        <p class="tx-16 mb-0 tx-semibold">
+                         <img src="../assets/img/Pending.svg" alt="" class="img-fluid mr-2">
+                          Pending Tasks 
+                        </p>
+                      </div>
+                      <div class="col-12 col-md-8 col-lg-5 mg-md-t-10">
+                        <div class="row justify-content-between">
+                          <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                            <select class="custom-select select2">
+                              <option selected>Assigned By</option>
+                              <option value="1"><div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>Basil Bassey</option>
+                              <option value="2">Funke Olumide</option>
+                              <option value="3">Somto Seyi</option>
+                            </select>
+                          </div>
+                          
+                          
+                          <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                            <select class="custom-select">
+                              <option selected>Due Date</option>
+                              <option value="1">24th July, 2020</option>
+                            </select>
+                          </div>
+                          <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                            <button class="btn btn-export tx-12 tx-semibold w-100">
+                              <img src="../assets/img/export.svg" class="mr-1">
+                              Export to CSV
+                            </button>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body pd-10">
+                    <table class="table display">
+                      <thead>
+                        <tr class="tx-uppercase tx-12 tx-semibold">
+                          <th>S/N</th>
+                          <th>Task</th>
+                          <th>ASSIGNED BY</th>
+                          <th>START DATE</th>
+                          <th>DUE DATE</th>
+                          <th>STATUS</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                       
+                        <tr>
+                          <th scope="row">1</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Analyze customer portfolio for customers and maintain optimal customer relationships for new business acquisition.</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Funke Hussien</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">Supervisor</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-blue pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">open</span></td>
+                          <td>   
+                           <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Monitor all queries for present customer 
+                            and assist in resolving all issues for new requirements.</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Jennifer Aderonke</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-green pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Closed</span></td>
+                          <td>   
+                           <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Monitor all queries for present customer and assist 
+                            in resolving all issues for new requirements.</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Jennifer Aderonke</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-done pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Done</span></td>
+                          <td>   
+                           <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Maintain and develop efficient relationship with business development team and promote banking business.</td>
+                          <td class="d-block">
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Funke Hussien</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Discarded</span></td>
+                          <td>   
+                           <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+               
+              </div>
+            
+            </div>
+            
+            <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab">
+              
+              <div class="table-section">
+                <div class="card bg-transparent">
+                  <div class="card-header pd-x-10 pd-y-0 pd-b-10">
+                    <div class="row justify-content-between">
+                      <div class="col-md-4 col-12 col-lg-4 mg-md-t-10">
+                        <p class="tx-16 mb-0 tx-semibold">
+                         <img src="../assets/img/CompletedTask.svg" alt="" class="img-fluid mr-2">
+                          Completed Tasks 
+                        </p>
+                      </div>
+                      <div class="col-12 col-md-8 col-lg-5 mg-md-t-10">
+                        <div class="row justify-content-between">
+                          <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                            <select class="custom-select select2">
+                              <option selected>Assigned By</option>
+                              <option value="1"><div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>Basil Bassey</option>
+                              <option value="2">Funke Olumide</option>
+                              <option value="3">Somto Seyi</option>
+                            </select>
+                          </div>
+                          
+                          
+                          <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                            <select class="custom-select">
+                              <option selected>Due Date</option>
+                              <option value="1">24th July, 2020</option>
+                            </select>
+                          </div>
+                          <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                            <button class="btn btn-export tx-12 tx-semibold w-100">
+                              <img src="../assets/img/export.svg" class="mr-1">
+                              Export to CSV
+                            </button>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body pd-10">
+                    <table class="table display">
+                      <thead>
+                        <tr class="tx-uppercase tx-12 tx-semibold">
+                          <th>S/N</th>
+                          <th>Task</th>
+                          <th>ASSIGNED BY</th>
+                          <th>START DATE</th>
+                          <th>DUE DATE</th>
+                          <th>STATUS</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                       
+                        <tr>
+                          <th scope="row">1</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Analyze customer portfolio for customers and maintain optimal customer relationships for new business acquisition.</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Funke Hussien</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">Supervisor</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-blue pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">open</span></td>
+                          <td>   
+                           <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Monitor all queries for present customer 
+                            and assist in resolving all issues for new requirements.</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Jennifer Aderonke</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-green pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Closed</span></td>
+                          <td>   
+                           <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Monitor all queries for present customer and assist 
+                            in resolving all issues for new requirements.</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Jennifer Aderonke</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-done pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Done</span></td>
+                          <td>   
+                           <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Maintain and develop efficient relationship with business development team and promote banking business.</td>
+                          <td class="d-block">
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Funke Hussien</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Discarded</span></td>
+                          <td>   
+                           <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+               
+              </div>
+            
+            </div>
+            
+            <div class="tab-pane fade" id="cancelled" role="tabpanel" aria-labelledby="cancelled-tab">
+              
+              <div class="table-section">
+                <div class="card bg-transparent">
+                  <div class="card-header pd-x-10 pd-y-0 pd-b-10">
+                    <div class="row justify-content-between">
+                      <div class="col-md-4 col-12 col-lg-4 mg-md-t-10">
+                        <p class="tx-16 mb-0 tx-semibold">
+                         <img src="../assets/img/Cancelled.svg" alt="" class="img-fluid mr-2">
+                          Cancelled Tasks 
+                        </p>
+                      </div>
+                      <div class="col-12 col-md-8 col-lg-5 mg-md-t-10">
+                        <div class="row justify-content-between">
+                          <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                            <select class="custom-select select2">
+                              <option selected>Assigned By</option>
+                              <option value="1"><div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>Basil Bassey</option>
+                              <option value="2">Funke Olumide</option>
+                              <option value="3">Somto Seyi</option>
+                            </select>
+                          </div>
+                          
+                          
+                          <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                            <select class="custom-select">
+                              <option selected>Due Date</option>
+                              <option value="1">24th July, 2020</option>
+                            </select>
+                          </div>
+                          <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                            <button class="btn btn-export tx-12 tx-semibold w-100">
+                              <img src="../assets/img/export.svg" class="mr-1">
+                              Export to CSV
+                            </button>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body pd-10">
+                    <table class="table display">
+                      <thead>
+                        <tr class="tx-uppercase tx-12 tx-semibold">
+                          <th>S/N</th>
+                          <th>Task</th>
+                          <th>ASSIGNED BY</th>
+                          <th>START DATE</th>
+                          <th>DUE DATE</th>
+                          <th>STATUS</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                       
+                        <tr>
+                          <th scope="row">1</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Analyze customer portfolio for customers and maintain optimal customer relationships for new business acquisition.</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Funke Hussien</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">Supervisor</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-blue pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">open</span></td>
+                          <td>   
+                           <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Monitor all queries for present customer 
+                            and assist in resolving all issues for new requirements.</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Jennifer Aderonke</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-green pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Closed</span></td>
+                          <td>   
+                           <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Monitor all queries for present customer and assist 
+                            in resolving all issues for new requirements.</td>
+                          <td>
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Jennifer Aderonke</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-done pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Done</span></td>
+                          <td>   
+                           <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td class="tx-medium tx-12" style="width: 400px;">Maintain and develop efficient relationship with business development team and promote banking business.</td>
+                          <td class="d-block">
+                            <div class="d-flex">
+                              <div class="">
+                                <div class="avatar avatar-xs"><img src="../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                              </div>
+                              <div class="mg-l-5">
+                                <p class="tx-12 mb-0">Funke Hussien</p>
+                                <label for="" class="tx-10 mb-0 tx-secondary">You</label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div>
+                              <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              </div>
+                          </td>
+                          <td>
+                            <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            </div>
+                          </td>
+                          <td><span class="badge-secondary pd-x-4 pd-y-2 tx-11 tx-semibold tx-uppercase">Discarded</span></td>
+                          <td>   
+                           <a href="./view-closed.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+               
+              </div>
+            
             </div>
            
           </div>
+
+          
         </div>
 
 
@@ -458,7 +1150,7 @@
                         <input type="date" class="form-control" id="inputEmail4">
                       </div>
                       <div class="form-group col-md-6">
-                        <label for="completeDate" class="tx-medium mb-1">Completion Date</label>
+                        <label for="completeDate" class="tx-medium mb-1">Due Date</label>
                         <input type="date" class="form-control" id="inputPassword4" >
                       </div>
                     </div>
@@ -589,15 +1281,24 @@
 
 
     <script>
-      $('#task').DataTable({
-      responsive: true,
-      language: {
-        searchPlaceholder: 'Search...',
-        sSearch: '',
-        lengthMenu: '_MENU_ items/page',
-      }
+     $(document).ready( function () {
+  $('.display').DataTable({
+    "paging": true,
+    "info": true,
+    "responsive": true,
+    "aoColumnDefs": [{
+        "bSortable": false,
+        "aTargets": ["no-sort"]
+    }],
+    "bInfo": true
+  });
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    $('.display:visible').each( function(e) {
+      $(this).DataTable().columns.adjust().responsive.recalc();
     });
-    </script>
+  });
+});    
+</script>
     <script>
       $(document).ready(function() {
       $('.select2').select2({
