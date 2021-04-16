@@ -140,6 +140,53 @@ select.custom-select,.select2-selection__rendered{
   text-decoration: underline!important;
   cursor: pointer!important;
 }
+.ongoing{
+  border-left: 4px solid #79B8FF;
+}
+.overdue{
+  border-left: 4px solid #0366D6;
+}
+.pending{
+  border-left: 4px solid #0C56AA;
+}
+.completed{
+  border-left: 4px solid #044289;
+}
+.cancelled{
+  border-left: 4px solid #05264C;
+}
+
+.after{
+  border-left: 4px solid #4C2888;
+}
+.before{
+  border-left: 4px solid #B392F0;
+}
+.footer-gray{
+  background-color: #F6F6F6!important;
+}
+.card-height{
+  height: 100%;
+}
+.nav-link.new{
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  background: #FAFBFC;
+  padding: 2px 20px!important;
+  border-radius: 6px;
+}
+
+.nav-link.new.active{
+  border: 1px solid #d70900!important;
+  color: #d70900!important;
+}
+.nav-line .nav-link.new.active::after{
+  background-color: transparent;
+}
+
+
+
+
+
 @media (max-width: 575.98px) { 
   .tx-36{
     font-size: 28px!important;
