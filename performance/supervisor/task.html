@@ -1054,7 +1054,7 @@
                       <p class="tx-14 tx-bold mb-0">STATUS</p>
                   </div><!-- card-header -->
                   <div class="card-body pd-20">
-                    <div class="chart-container" style="position: relative; min-height:40vh; width:100%">
+                    <div class="chart-container" style="position: relative; min-height:30vh; width:100%">
                       <canvas id="chartDonut2" class="chartDo"></canvas>
                     </div>
                     
@@ -1073,7 +1073,7 @@
                       <div class="overdue pd-x-10">
                         <p class="tx-12 tx-secondary tx-spacing-1 mg-b-5">Overdue</p>
                         <div class="d-flex align-items-center">
-                          <h5 class="tx-normal tx-rubik mg-b-0">326</h5>
+                          <h5 class="tx-normal tx-rubik mg-b-0">334</h5>
                         </div>
                       </div>
                     </div><!-- col -->
@@ -1082,7 +1082,7 @@
                       <div class="pending pd-x-10">
                         <p class="tx-12 tx-secondary tx-spacing-1 mg-b-5">Pending</p>
                       <div class="d-flex align-items-center">
-                        <h5 class="tx-normal tx-rubik mg-b-0"> 346</h5>
+                        <h5 class="tx-normal tx-rubik mg-b-0"> 332</h5>
                       </div>
                       </div>
                     </div>
@@ -1091,7 +1091,7 @@
                       <div class="completed pd-x-10">
                         <p class="tx-12 tx-secondary tx-spacing-1 mg-b-5">Completed</p>
                       <div class="d-flex align-items-center">
-                        <h5 class="tx-normal tx-rubik mg-b-0"> 656</h5>
+                        <h5 class="tx-normal tx-rubik mg-b-0"> 1378</h5>
                       </div>
                       </div>
                     </div>
@@ -1099,7 +1099,7 @@
                       <div class="cancelled pd-x-10">
                         <p class="tx-12 tx-secondary tx-spacing-1 mg-b-5">Cancelled</p>
                         <div class="d-flex align-items-center">
-                          <h5 class="tx-normal tx-rubik mg-b-0"> 189</h5>
+                          <h5 class="tx-normal tx-rubik mg-b-0"> 989</h5>
                         </div>
                       </div>
                     </div>
@@ -1125,7 +1125,7 @@
                     
                   </div><!-- card-header -->
                   <div class="card-body pd-lg-25">
-                    <div class="chart-container" style="position: relative; height:40vh; width:100%">
+                    <div class="chart-container" style="position: relative; min-height:30vh; width:100%">
                       <canvas id="chartLine1"></canvas>
                     </div>
                   </div><!-- card-body -->
@@ -1166,6 +1166,53 @@
                     </div><!-- df-example -->
             
                   </div>
+                  <div class="card-footer footer-gray pd-x-20 pd-t-0 pd-b-20">
+                    <div class="row">
+                      <div class="col-6 col-md-2 mg-t-20">
+                        <div class="ongoing pd-x-10">
+                          <p class="tx-12 tx-secondary tx-spacing-1 mg-b-5">Ongoing</p>
+                        <div class="d-flex align-items-center">
+                          <h5 class="tx-normal tx-rubik mg-b-0"> 547</h5>
+                        </div>
+                        </div>
+                      </div><!-- col -->
+                      <div class="col-6 col-md-2 mg-t-20">
+                        <div class="overdue pd-x-10">
+                          <p class="tx-12 tx-secondary tx-spacing-1 mg-b-5">Overdue</p>
+                          <div class="d-flex align-items-center">
+                            <h5 class="tx-normal tx-rubik mg-b-0">326</h5>
+                          </div>
+                        </div>
+                      </div><!-- col -->
+                      
+                      <div class="col-6 col-md-2 mg-t-20">
+                        <div class="pending pd-x-10">
+                          <p class="tx-12 tx-secondary tx-spacing-1 mg-b-5">Pending</p>
+                        <div class="d-flex align-items-center">
+                          <h5 class="tx-normal tx-rubik mg-b-0"> 346</h5>
+                        </div>
+                        </div>
+                      </div>
+  
+                      <div class="col-6 col-md-2 mg-t-20 pd-md-l-40">
+                        <div class="completed pd-x-10">
+                          <p class="tx-12 tx-secondary tx-spacing-1 mg-b-5">Completed</p>
+                        <div class="d-flex align-items-center">
+                          <h5 class="tx-normal tx-rubik mg-b-0"> 656</h5>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-2 mg-t-20">
+                        <div class="cancelled pd-x-10">
+                          <p class="tx-12 tx-secondary tx-spacing-1 mg-b-5">Cancelled</p>
+                          <div class="d-flex align-items-center">
+                            <h5 class="tx-normal tx-rubik mg-b-0"> 189</h5>
+                          </div>
+                        </div>
+                      </div>
+                    
+                    </div><!-- row -->
+                    </div>
                 </div>
                 
               </div>
@@ -1438,8 +1485,14 @@
         var stackLabel = ['Unasssigned', 'Tonye Baham', 'Seyi Matthew', 'Bass Felix', 'Onyi David'];
         var stackData1 = [0, 25, 10, 15, 50];
         var stackData2 = [0, 5, 0, 30, 10];
-        var stackColor1 = '#228B22';
-        var stackColor2 = '#d70900';
+        var stackData3 = [0, 10, 0, 5, 20];
+        var stackData4 = [0, 20, 32, 30, 10];
+        var stackData5 = [0, 5, 20, 20, 0];
+        var stackColor1 = '#1F9BE3';
+        var stackColor2 = '#DE350B';
+        var stackColor3 = '#868686';
+        var stackColor4 = '#36C176';
+        var stackColor5 = '#7064BA';
 
         var ctx4 = document.getElementById('chartLine1');
         new Chart(ctx4, {
@@ -1447,16 +1500,19 @@
           data: {
             labels: ctxLabel,
             datasets: [{
+              lineTension: 0,
               data: ctxData1,
               borderColor: ctxColor1,
-              borderWidth: 1,
+              borderWidth: 2,
               fill: false
             },{
+              lineTension: 0,
               data: ctxData2,
               borderColor: ctxColor2,
-              borderWidth: 1,
+              borderWidth: 2,
               fill: false
-            }]
+            }
+          ]
           },
           options: {
             maintainAspectRatio: false,
@@ -1494,8 +1550,8 @@
           var datapie2 = {
             labels: ['Ongoing', 'Overdue', 'Pending', 'Completed', 'Cancelled'],
             datasets: [{
-              data: [3,61,24,12],
-              backgroundColor: ['#79B8FF', '#0366D6','#0C56AA','#044289','#05264C']
+              data: [547,334,332,1378, 989],
+              backgroundColor: ['#1F9BE3', '#DE350B','#868686','#36C176','#7064BA']
             }]
           };
   
@@ -1575,7 +1631,20 @@
               }, {
                 data: stackData2,
                 backgroundColor: stackColor2
-              }]
+              },
+              {
+                data: stackData3,
+                backgroundColor: stackColor3
+              },
+              {
+                data: stackData4,
+                backgroundColor: stackColor4
+              },
+              {
+                data: stackData5,
+                backgroundColor: stackColor5
+              }
+            ]
         },
 
     options: barOptions_stacked,

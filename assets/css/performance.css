@@ -141,19 +141,19 @@ select.custom-select,.select2-selection__rendered{
   cursor: pointer!important;
 }
 .ongoing{
-  border-left: 4px solid #79B8FF;
+  border-left: 4px solid #1F9BE3;
 }
 .overdue{
-  border-left: 4px solid #0366D6;
+  border-left: 4px solid #DE350B;
 }
 .pending{
-  border-left: 4px solid #0C56AA;
+  border-left: 4px solid #868686;
 }
 .completed{
-  border-left: 4px solid #044289;
+  border-left: 4px solid #36C176;
 }
 .cancelled{
-  border-left: 4px solid #05264C;
+  border-left: 4px solid #7064BA;
 }
 
 .after{
