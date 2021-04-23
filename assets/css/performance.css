@@ -203,6 +203,9 @@ p{
 .card-header-red{
   background-color: #FFFBEB!important;
 }
+.table-responsive {
+  display: table!important;
+}
 .tablee td, .tablee th{
   font-size: 12px;
 }
