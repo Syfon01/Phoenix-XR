@@ -1,4 +1,4 @@
-.performance{
+.performance{ 
   background: url(../img/perfornace-bg.jpg);
   background-position: center;
   border-radius: 10px;
@@ -182,11 +182,48 @@ select.custom-select,.select2-selection__rendered{
 .nav-line .nav-link.new.active::after{
   background-color: transparent;
 }
-
-
-
-
-
+.year{
+  margin-top: 20vh;
+}
+.tx-gray{
+  color: rgba(88, 96, 105, 1);
+}
+p{
+  color: rgba(36, 41, 46, 1);
+}
+.bg-side{
+  background-color: #FAFAFA!important;
+}
+.card-header-gray{
+  background-color: #F5F3FF!important;
+}
+.card-header-green{
+  background-color: #F0FDFA!important;
+}
+.card-header-red{
+  background-color: #FFFBEB!important;
+}
+.tablee td, .tablee th{
+  font-size: 12px;
+}
+.bg-grey{
+  background-color: #E5E7EB;
+}
+.list-group-item.kpi.active{
+  background-color: #F5DDDD!important;
+  color: #D70900;
+  border: 1px solid rgba(215, 9, 0, 0.1);
+  font-weight: 600;
+}
+.list-group-item.kpi.active img{
+color: red!important;
+/* background:red; */
+fill: #d70900!important;
+}
+.btn-check{
+  border: 1px solid rgba(209, 213, 219, 1)!important;
+  border-radius: 15px!important;
+}
 @media (max-width: 575.98px) { 
   .tx-36{
     font-size: 28px!important;

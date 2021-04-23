@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Performance Management</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/custom.css">
+    <link rel="stylesheet" href="../../assets/css/performance.css">
+    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+  </head>
+  <body class="">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white bd navbar-header-fixed pd-b-0">
+        <div class="container">
+          <a class="navbar-brand tx-bold tx-spacing--2 order-1" href="./index.html">            
+            <img src="../../assets/img/connect.svg" alt="" class="img-fluid mr-4">
+          </a>
+          <button class="navbar-toggler order-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i data-feather="menu" class="wd-20 ht-20"></i>
+          </button>
+        
+          <div class="collapse navbar-collapse order-2" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active pb-2 mg-b-20 mg-lg-b-0">
+                <a class="nav-link header-link pd-b-0" href="./index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              
+            </ul>
+  
+            <ul class="navbar-nav ml-auto mr-5">
+              <li class="nav-item pd-t-10 pb-2">
+                <a href="http://" class="nav-link btn btn-sm btn-outline pd-y-2 w-lg-100 wd-md-100 logout-btn"><i data-feather="power" class="mr-2"></i>Sign out</a>
+              </li>
+              <li class="nav-item d-none d-md-none d-lg-block d-xl-block">
+                <a class="nav-link pb-2 navbar-brand navbar-right tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/home.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+              </li>
+            </ul>
+  
+          </div>
+        </div>
+
+      </nav>
+    </header>
+    <section class="bg-others">
+      <div class="container py-5 mg-t-25 mg-md-t-0 mg-lg-t-35">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb-style2 bg-transparent mg-b-0">
+            <li class="breadcrumb-item pb-0"><a href="./index.html" class="text-capitalize breadcrumb-size tx-secondary">Home</a></li>
+            <li class="breadcrumb-item pb-0"><a href="./dashboard.html" class="text-capitalize breadcrumb-size tx-secondary">Performance</a></li>
+            <li class="breadcrumb-item breadcrumb-size pb-0 active text-capitalize tx-secondary " aria-current="page">KPI Management</li>
+          </ol>
+        </nav>
+
+        <div class="row mg-t-40">
+          <div class="col-12 col-lg-3">
+            <div class="card bg-side">
+              <div class="card-body pd-x-15">
+                <p class="tx-14 tx-uppercase tx-bold">KPI Management</p>
+                <div class="list-group" id="list-tab" role="tablist">
+                  <a class="list-group-item kpi list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home"><img src="../../assets/img/icon/kpi-setting.svg" class="img-fluid mg-r-5" alt="" srcset=""> KPI Setting</a>
+                  <a class="list-group-item kpi list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"><img src="../../assets/img/icon/assessment_24px.svg" class="img-fluid mg-r-5" alt="" srcset=""> KPI Assessment</a>
+                  <a class="list-group-item kpi list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages"><img src="../../assets/img/icon/assistant_photo_24px.svg" alt="" class="img-fluid mg-r-5" srcset=""> Mid Cycle Check-in</a>
+                  <a class="list-group-item kpi list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><img src="../../assets/img/icon/trending_up_24px.svg" alt="" class="img-fluid mg-r-5" srcset=""> PIP</a>
+    
+                  <div class="year">
+                    <div class="form-group mb-0">
+                      <label for="" class="tx-14 tx-medium mb-0">Select Financial Year</label>
+                      <select class="custom-select">
+                        <option selected>Financial Year 2021</option>
+                        <option value="1">Financial Year 2021</option>
+                        <option value="2">Financial Year 2022</option>
+                        <option value="3">Financial Year 2023</option>
+                      </select>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-12 col-lg-9  mg-t-20 mg-md-t-0">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                <p class="tx-36 tx-bold mb-0">KPI Setting</p>
+                <p class="tx-14 tx-gray mb-0">Take a look at your KPI groups</p>
+                <hr>
+                <p class="tx-14 tx-semibold">Job Role/Function you have worked in</p>
+
+                <div class="card shadow">
+                  <div class="card-body pd-15">
+                    <div class="row justify-content-between">
+                      <div class="col-md-10">
+                        <p class="tx-18 mb-0 tx-bold">Team Lead, Learning and Development</p>
+                        <p class="tx-14 tx-secondary mb-0">HR Department | 57 Marina, Lagos Island, Nigeria</p>
+                      </div>
+                      <div class="col-md-2 mg-t-20 mg-md-t-0">
+                        <a href="./view-kpi.html" class="btn btn-primary w-100 mg-t-5">View KPI</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card shadow mt-4">
+                  <div class="card-body pd-15">
+                    <div class="row justify-content-between">
+                      <div class="col-md-10">
+                        <p class="tx-18 mb-0 tx-bold">Branch CSM, Learning and Development</p>
+                        <p class="tx-14 tx-secondary mb-0">HR Department | 12 Babs Animashaun, Opposite Census Market, Surulere, Nigeria</p>
+                      </div>
+                      <div class="col-md-2 mg-t-20 mg-md-t-0">
+                        <a href="./view-kpi.html" class="btn btn-primary w-100 mg-t-5">View KPI</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+              <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                <p class="tx-36 tx-bold mb-0">Mid Cycle Check-in </p>
+                <p class="tx-14 tx-secondary mb-0">Get in touch with your team to discuss progress on goals and performance to date.</p>
+                <div class="mg-t-30">
+                  <ul class="nav nav-line" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active tx-link-dark tx-semibold" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Yet to be Checked <span class="badge">4</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="overdue-tab" data-toggle="tab" href="#overdue" role="tab" aria-controls="overdue" aria-selected="false">Already Checked-in <span class="badge">0</span></a>
+                    </li>
+                   
+                  </ul>
+                  <div class="tab-content  bd-t-0 pd-y-20" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      
+                      <div class="row ">
+                        <div class="col-md-6 col-12 mg-t-20">
+                          <div class="card bd-x-0 bd-t-0">
+                            <div class="card-body pd-x-5 pd-y-0">
+                              <div class="row justify-content-between">
+                                <div class="col-9">
+                                  <div class="d-flex">
+                                    <div class="">
+                                      <div class="avatar avatar"><img src="../../assets/img/birthday1.png" src="notification"></div>
+                                    </div>
+                                    <div class="mg-l-10">
+                                      <p class="tx-14 font-weight-bold mb-0">Ahmed Hassan</p>
+                                      <p class="tx-12 tx-secondary">Team Member, Legal and Litigations</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-3">
+                                  <button class="btn-check btn btn-sm pd-5 w-100" data-toggle="modal" data-target="#exampleModal">
+                                    Check In
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                        <div class="col-md-6 col-12 mg-t-20">
+                          <div class="card bd-x-0 bd-t-0">
+                            <div class="card-body pd-x-5 pd-y-0">
+                              <div class="row justify-content-between">
+                                <div class="col-9">
+                                  <div class="d-flex">
+                                    <div class="">
+                                      <div class="avatar avatar"><img src="../../assets/img/birthday1.png" src="notification"></div>
+                                    </div>
+                                    <div class="mg-l-10">
+                                      <p class="tx-14 font-weight-bold mb-0">Ahmed Hassan</p>
+                                      <p class="tx-12 tx-secondary">Team Member, Legal and Litigations</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-3">
+                                  <button class="btn-check btn btn-sm pd-5 w-100" data-toggle="modal" data-target="#exampleModal">
+                                    Check In
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div><div class="col-md-6 col-12 mg-t-20">
+                          <div class="card bd-x-0 bd-t-0">
+                            <div class="card-body pd-x-5 pd-y-0">
+                              <div class="row justify-content-between">
+                                <div class="col-9">
+                                  <div class="d-flex">
+                                    <div class="">
+                                      <div class="avatar avatar"><img src="../../assets/img/birthday1.png" src="notification"></div>
+                                    </div>
+                                    <div class="mg-l-10">
+                                      <p class="tx-14 font-weight-bold mb-0">Ahmed Hassan</p>
+                                      <p class="tx-12 tx-secondary">Team Member, Legal and Litigations</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-3">
+                                  <button class="btn-check btn btn-sm pd-5 w-100" data-toggle="modal" data-target="#exampleModal">
+                                    Check In
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="tab-pane fade" id="overdue" role="tabpanel" aria-labelledby="overdue-tab">
+                      
+                      <div class="table-section">
+                        <div class="card bg-transparent">
+                          <div class="card-header pd-x-10 pd-y-0 pd-b-10">
+                            <div class="row justify-content-between">
+                              <div class="col-md-4 col-12 col-lg-4 mg-md-t-10">
+                                <p class="tx-16 mb-0 tx-semibold">
+                                 <img src="../../assets/img/Overdue.svg" alt="" class="img-fluid mr-2">
+                                  Overdue Tasks 
+                                </p>
+                              </div>
+                              <div class="col-12 col-md-8 col-lg-5 mg-md-t-10">
+                                <div class="row justify-content-between">
+                                  <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                                    <select class="custom-select select2 w-100">
+                                      <option selected>Assigned To</option>
+                                      <option value="1"><div class="avatar avatar-xs"><img src="../../assets/img/birthday1.png" class="rounded-circle" alt=""></div>Basil Bassey</option>
+                                      <option value="2">Funke Olumide</option>
+                                      <option value="3">Somto Seyi</option>
+                                    </select>
+                                  </div>
+                                  
+                                  
+                                  <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                                    <select class="custom-select">
+                                      <option selected>Due Date</option>
+                                      <option value="1">24th July, 2020</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-6 col-md-4 mg-md-t-0 mg-t-10 pd-x-10">
+                                    <button class="btn btn-export tx-12 tx-semibold w-100">
+                                      <img src="../../assets/img/export.svg" class="mr-1">
+                                      Export to CSV
+                                    </button>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-body pd-10">
+                            <table class="table display">
+                              <thead>
+                                <tr class="tx-uppercase tx-12 tx-semibold">
+                                  <th>S/N</th>
+                                  <th>Task</th>
+                                  <th>ASSIGNED TO</th>
+                                  <th>START DATE</th>
+                                  <th>DUE DATE</th>
+                                  <th></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                               
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td class="tx-medium tx-12" style="width: 400px;">Analyze customer portfolio for customers and maintain optimal customer relationships for new business acquisition.</td>
+                                  <td>
+                                    <div class="d-flex">
+                                      <div class="">
+                                        <div class="avatar avatar-xs"><img src="../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                                      </div>
+                                      <div class="mg-l-5 clickable-name pd-t-5" data-href='./single-report.html'>
+                                        <p class="tx-12 mb-0">Funke Hussien</p>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div>
+                                      <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div>
+                                    <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                    </div>
+                                  </td>
+                                  <td>   
+                                   <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td class="tx-medium tx-12" style="width: 400px;">Monitor all queries for present customer 
+                                    and assist in resolving all issues for new requirements.</td>
+                                  <td>
+                                    <div class="d-flex">
+                                      <div class="">
+                                        <div class="avatar avatar-xs"><img src="../../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                                      </div>
+                                      <div class="mg-l-5 clickable-name pd-t-5" data-href='./single-report.html'                                <p class="tx-12 mb-0">Jennifer Aderonke</p>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div>
+                                      <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                      </div>
+                                  </td>
+                                  <td>
+                                    <div>
+                                    <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                    </div>
+                                  </td>
+                                  <td>   
+                                   <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">3</th>
+                                  <td class="tx-medium tx-12" style="width: 400px;">Monitor all queries for present customer and assist 
+                                    in resolving all issues for new requirements.</td>
+                                  <td>
+                                    <div class="d-flex">
+                                      <div class="">
+                                        <div class="avatar avatar-xs"><img src="../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                                      </div>
+                                      <div class="mg-l-5 clickable-name pd-t-5" data-href='./single-report.html'                                <p class="tx-12 mb-0">Jennifer Aderonke</p>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div>
+                                      <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                      </div>
+                                  </td>
+                                  <td>
+                                    <div>
+                                    <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                    </div>
+                                  </td>
+                                  <td>   
+                                   <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">4</th>
+                                  <td class="tx-medium tx-12" style="width: 400px;">Maintain and develop efficient relationship with business development team and promote banking business.</td>
+                                  <td class="d-block">
+                                    <div class="d-flex">
+                                      <div class="">
+                                        <div class="avatar avatar-xs"><img src="../../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                                      </div>
+                                      <div class="mg-l-5 clickable-name pd-t-5" data-href='./single-report.html'                                <p class="tx-12 mb-0">Funke Hussien</p>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div>
+                                      <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                      </div>
+                                  </td>
+                                  <td>
+                                    <div>
+                                    <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                    </div>
+                                  </td>
+                                  <td>   
+                                   <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-5 tx-bold"> View</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                       
+                      </div>
+                    
+                    </div>
+                    
+                  </div>
+        
+                  
+                </div>
+        
+              </div>
+              <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+            </div>
+          </div>
+        </div>
+
+        <!--checkin Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-header pd-y-10">
+                <div>
+                <p class="modal-title tx-22 tx-demibold mb-0" id="exampleModalLabel">Check in on Ahmed Hassan</p>
+                <p class="tx-14 tx-secondary mb-0">Enter outcomes of the check-in session with staff</p>
+
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+               
+                <div class="card  bd-x-0 bg-side">
+                  <div class="card-body pd-0">
+                    <div class="row">
+                      <div class="col-md-4 col-12 mg-t-20">
+                        <p class="tx-14 tx-semibold mb-0 pd-t-8">Staff Details</p>
+                      </div>
+                      <div class="col-md-8 mg-t-20">
+                        <div class="d-flex">
+                          <div class="">
+                            <div class="avatar avatar"><img src="../../assets/img/birthday1.png" src="notification"></div>
+                          </div>
+                          <div class="mg-l-10">
+                            <p class="tx-14 font-weight-bold mb-0">Ahmed Hassan</p>
+                            <p class="tx-12 tx-secondary">Team Member, Legal and Litigations</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card  bd-x-0 bd-t-0">
+                  <div class="card-body pd-x-0 pd-y-20">
+                    <div class="row">
+                      <div class="col-md-4 col-12 mg-t-20 mg-md-t-0">
+                        <p class="tx-14 tx-semibold mb-1">High Points</p>
+                        <p class="tx-14 mb-0 tx-secondary">What has gone well?</p>
+
+                      </div>
+                      <div class="col-md-8 mg-t-20 mg-md-t-0">
+                        <input type="text" class="form-control mt-1">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card  bd-x-0 bd-t-0">
+                  <div class="card-body pd-x-0 pd-y-20">
+                    <div class="row">
+                      <div class="col-md-4 col-12 mg-t-20 mg-md-t-0">
+                        <p class="tx-14 tx-semibold mb-1">Missed Opportunities</p>
+                        <p class="tx-14 mb-0 tx-secondary">What could have been acheived?</p>
+
+                      </div>
+                      <div class="col-md-8 mg-t-20 mg-md-t-0">
+                        <input type="text" class="form-control mt-1">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card  bd-x-0 bd-t-0">
+                  <div class="card-body pd-x-0 pd-y-20">
+                    <div class="row">
+                      <div class="col-md-4 col-12 mg-t-20 mg-md-t-0">
+                        <p class="tx-14 tx-semibold mb-1">Corrective Actions</p>
+                        <ul class="tx-14 tx-secondary pd-l-20">
+                          <li>
+                            Things to start
+                          </li>
+                          <li>
+                            Things to stop
+                          </li>
+                          <li>
+                            Things to continue
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-8 mg-t-20 mg-md-t-0">
+                        <textarea name="" class="form-control mt-2" rows="3"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card  bd-x-0 bd-t-0">
+                  <div class="card-body pd-x-0 pd-y-20">
+                    <div class="row">
+                      <div class="col-md-4 col-12 mg-t-20 mg-md-t-0">
+                        <p class="tx-14 tx-semibold mb-1">Strengths</p>
+                        <p class="tx-14 mb-0 tx-secondary">Ability & Capacity</p>
+
+                      </div>
+                      <div class="col-md-8 mg-t-20 mg-md-t-0">
+                        <input type="text" class="form-control mt-1">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card  bd-x-0 bd-t-0">
+                  <div class="card-body pd-x-0 pd-y-20">
+                    <div class="row">
+                      <div class="col-md-4 col-12 mg-t-20 mg-md-t-0">
+                        <p class="tx-14 tx-semibold mb-1">Developmental Needs</p>
+                        <p class="tx-14 mb-0 tx-secondary">Text/Secondary</p>
+
+                      </div>
+                      <div class="col-md-8 mg-t-20 mg-md-t-0">
+                        <input type="text" class="form-control mt-1">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+              <div class="modal-footer bg-modal-footer">
+                <button type="button" class="btn btn-outlined-primary pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary pd-x-40"  data-toggle="modal" data-target="#successModal"  data-dismiss="modal">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!--success  Modal -->
+      <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header pd-y-10 bd-b-0">
+              <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+              <div class="d-flex">
+                <div>
+                  <img src="../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
+                </div>
+                <div class="mg-l-10">
+                  <p class="tx-22 tx-bold mb-0">Check-in Information Saved</p>
+                  <hr/>
+                  <p class="tx-14">You are still able to edit the check-in information before the window is closed </p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer bg-modal-footer">
+              <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+
+      </div>
+    </section>
+   
+    
+    <section class="footer text-white">
+      <div class="container">
+        <p class="p-14 mb-0 text-capitalize">&copy; 2020 UBA Group. All Rights Reserved.</p>
+      </div>
+    </section>
+  
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/js/drop.js"></script>
+    <script src="../../assets/js/dropzone.js"></script>
+
+
+  </body>
+</html>

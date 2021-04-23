@@ -37,3 +37,58 @@ body { -webkit-font-smoothing: antialiased; }
    .bg-gray{
      background-color: #F1F3F6!important;
    }
+   .mood{
+     border:1.2px solid #fff;
+     border-radius:60px;
+   }
+   .bg-not{
+     background-color: #FAFBFC;
+     border: 1px solid #E3EBF6;
+     border-radius: 60px;
+   }
+   /* .icon-not{
+     height: 25px;
+     width: 25px;
+   } */
+   .not-circle{
+     width: 37px;
+     height: 37px;
+   }
+   .bg-light-blue{
+     background-color: rgba(248, 250, 255, 1)!important;
+   }
+   .stack-img{
+     width: 60px;
+   }
+   .cursor{
+     cursor: pointer;
+   }
+   .badge-icon {
+    position: absolute;
+    top: -5px;
+    right: -2px;
+    padding: 2px 4px;
+    border-radius: 50%;
+    background:rgba(204, 43, 90, 1);
+    color: white;
+    font-size: 7px;
+  }
+  .notification {
+    color: white;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+  }
+.notif-icon{
+  color: rgba(247, 226, 73, 1);
+}
+   /* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+  .mob-ava{
+    width: 75px!important;
+    height: 75px!important;
+  }
+  h1{
+    font-size: 1.5rem!important;
+  }
+}

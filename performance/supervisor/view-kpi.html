@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Performance Management</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/custom.css">
+    <link rel="stylesheet" href="../../assets/css/performance.css">
+    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+  </head>
+  <body class="">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white bd navbar-header-fixed pd-b-0">
+        <div class="container">
+          <a class="navbar-brand tx-bold tx-spacing--2 order-1" href="./index.html">            
+            <img src="../../assets/img/connect.svg" alt="" class="img-fluid mr-4">
+          </a>
+          <button class="navbar-toggler order-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i data-feather="menu" class="wd-20 ht-20"></i>
+          </button>
+        
+          <div class="collapse navbar-collapse order-2" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active pb-2 mg-b-20 mg-lg-b-0">
+                <a class="nav-link header-link pd-b-0" href="./index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              
+            </ul>
+  
+            <ul class="navbar-nav ml-auto mr-5">
+              <li class="nav-item pd-t-10 pb-2">
+                <a href="http://" class="nav-link btn btn-sm btn-outline pd-y-2 w-lg-100 wd-md-100 logout-btn"><i data-feather="power" class="mr-2"></i>Sign out</a>
+              </li>
+              <li class="nav-item d-none d-md-none d-lg-block d-xl-block">
+                <a class="nav-link pb-2 navbar-brand navbar-right tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/home.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+              </li>
+            </ul>
+  
+          </div>
+        </div>
+
+      </nav>
+    </header>
+    <section class="bg-others">
+      <div class="container py-5 mg-t-25 mg-md-t-0 mg-lg-t-35">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb-style2 bg-transparent mg-b-0">
+            <li class="breadcrumb-item pb-0"><a href="./index.html" class="text-capitalize breadcrumb-size tx-secondary">Home</a></li>
+            <li class="breadcrumb-item pb-0"><a href="./dashboard.html" class="text-capitalize breadcrumb-size tx-secondary">Performance</a></li>
+            <li class="breadcrumb-item breadcrumb-size pb-0 active text-capitalize tx-secondary " aria-current="page">Performance Task</li>
+          </ol>
+        </nav>
+
+        <div class="row mg-t-40">
+          <div class="col-12 col-lg-3">
+            <div class="card bg-side">
+              <div class="card-body pd-x-15">
+                <p class="tx-14 tx-uppercase tx-bold">KPI Management</p>
+                <div class="list-group" id="list-tab" role="tablist">
+                  <a class="list-group-item kpi list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home"> <img src="../../assets/img/icon/kpi-setting.svg" class="img-fluid mg-r-5" alt="" srcset=""> KPI Setting</a>
+                  <!-- <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">KPI Assessment</a>
+                  <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Mid Cycle Check-in</a>
+                  <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">PIP</a>
+     -->
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-12 col-lg-9 mg-t-20 mg-md-t-0">
+        <button onclick="goBack()" class="btn btn-back tx-14 tx-semibold pd-l-0"><i data-feather="arrow-left"></i> Go Back</button>
+
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                <p class="tx-36 tx-bold mb-0">Your KPIs</p>
+                <p class="tx-14 tx-secondary mb-0">Team Lead, Learning and Development | HR Department | 57 Marina, Lagos Island, Nigeria</p>
+                <hr>
+                <p class="tx-14 tx-semibold mb-4">Job Role/Function you have worked in</p>
+
+                <div id="accordion">
+                  <div class="card mt-4">
+                    <div class="card-header pd-y-10 pd-x-20 card-header-gray " id="headingOne">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <p class="tx-16 tx-semibold mb-0">
+                         <span class="tx-14 tx-normal mb-0 mr-2"><i class="fas fa-angle-down ml-2"></i></span>
+                          Individual KPIs
+                        </p> 
+                        <p class="tx-12 tx-semibold mb-0">35%  Total Weight</p>
+                      </div> 
+                    </div>
+
+                    <div class="card-body pd-y-0" id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                      <table class="table tablee table-responsive">
+                        <thead class="bd-t-0">
+                          <tr>
+                            <th scope="col">SN</th>
+                            <th scope="col">KPI Name</th>
+                            <th scope="col">Objective</th>
+                            <th scope="col">Target</th>
+                            <th scope="col">Weight</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Coaching Framework</td>
+                            <td>Develop a coaching framework for CFC </td>
+                            <td>100% Completion</td>
+                            <td class="tx-right">5%</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Reimbursements</td>
+                            <td>Ensure 100% reimbursements of all training spend by ITF</td>
+                            <td>100% Completion</td>
+                            <td class="tx-right">5%</td>
+                          </tr>
+                          <tr>
+                            <th scope="row"></th>
+                            <td class="tx-right tx-bold" colspan="4">35%</td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                    </div>                  
+                  </div>
+                 
+                  <div class="card mt-4">
+                    <div class="card-header pd-y-10 pd-x-20 card-header-green " id="headingTwo">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <p class="tx-16 tx-semibold mb-0">
+                         <span class="tx-14 tx-normal mb-0 mr-2"><i class="fas fa-angle-down ml-2"></i></span>
+                         Unit KPis
+                        </p> 
+                        <p class="tx-12 tx-semibold mb-0">25%  Total Weight</p>
+                      </div> 
+                    </div>
+
+                    <div class="card-body pd-y-0" id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                      <table class="table tablee table-responsive">
+                        <thead class="bd-t-0">
+                          <tr>
+                            <th scope="col">SN</th>
+                            <th scope="col">KPI Name</th>
+                            <th scope="col">Objective</th>
+                            <th scope="col">Target</th>
+                            <th scope="col">Weight</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Training</td>
+                            <td style="width: 300px;">Deliver cost savings on trainings deployed </td>
+                            <td>100% Adherence </td>
+                            <td class="tx-right">5%</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Reimbursements</td>
+                            <td style="width: 300px;">Ensure zero infraction with regards to CBN regulations concerning customer</td>
+                            <td>100% Compliance</td>
+                            <td class="tx-right">5%</td>
+                          </tr>
+                          <tr>
+                            <th scope="row"></th>
+                            <td class="tx-right tx-bold" colspan="4">35%</td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                    </div>                  
+                  </div>
+                 
+                  <div class="card mt-4">
+                    <div class="card-header pd-y-10 pd-x-20 card-header-red " id="headingThree">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        <p class="tx-16 tx-semibold mb-0">
+                         <span class="tx-14 tx-normal mb-0 mr-2"><i class="fas fa-angle-down ml-2"></i></span>
+                         Departmental KPIs
+                        </p> 
+                        <p class="tx-12 tx-semibold mb-0">25%  Total Weight</p>
+                      </div> 
+                    </div>
+
+                    <div class="card-body pd-y-0" id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                      <table class="table tablee table-responsive">
+                        <thead class="bd-t-0">
+                          <tr>
+                            <th scope="col">SN</th>
+                            <th scope="col">KPI Name</th>
+                            <th scope="col">Objective</th>
+                            <th scope="col">Target</th>
+                            <th scope="col">Weight</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Training</td>
+                            <td style="width: 300px;">Deliver cost savings on trainings deployed </td>
+                            <td>100% Adherence </td>
+                            <td class="tx-right">5%</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Reimbursements</td>
+                            <td style="width: 300px;">Ensure zero infraction with regards to CBN regulations concerning customer</td>
+                            <td>100% Compliance</td>
+                            <td class="tx-right">5%</td>
+                          </tr>
+                          <tr>
+                            <th scope="row"></th>
+                            <td class="tx-right tx-bold" colspan="4">35%</td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                    </div>                  
+                  </div>
+                 
+                  <div class="card mt-4">
+                    <div class="card-header pd-y-10 pd-x-20 card-header-red " id="headingThree">
+                      <div class="d-flex justify-content-between collapse-btn"  data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        <p class="tx-16 tx-semibold mb-0">
+                         <span class="tx-14 tx-normal mb-0 mr-2"><i class="fas fa-angle-down ml-2"></i></span>
+                         Enterprise KPIs
+                        </p> 
+                        <p class="tx-12 tx-semibold mb-0">25%  Total Weight</p>
+                      </div> 
+                    </div>
+
+                    <div class="card-body pd-y-0" id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                      <table class="table tablee table-responsive">
+                        <thead class="bd-t-0">
+                          <tr>
+                            <th scope="col">SN</th>
+                            <th scope="col">KPI Name</th>
+                            <th scope="col">Objective</th>
+                            <th scope="col">Target</th>
+                            <th scope="col">Weight</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Training</td>
+                            <td style="width: 300px;">Deliver cost savings on trainings deployed </td>
+                            <td>100% Adherence </td>
+                            <td class="tx-right">5%</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Reimbursements</td>
+                            <td style="width: 300px;">Ensure zero infraction with regards to CBN regulations concerning customer</td>
+                            <td>100% Compliance</td>
+                            <td class="tx-right">5%</td>
+                          </tr>
+                          <tr>
+                            <th scope="row"></th>
+                            <td class="tx-right tx-bold" colspan="4">35%</td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                      
+                    </div>                  
+                  </div>
+                 
+                  <div class="bg-grey mg-t-30 pd-5">
+                    <div class="row">
+                      <div class="col-md-3 offset-md-9 pd-r-0 float-right">
+                       <p class="tx-14 tx-bold mb-0 mg-l-50"><span>Total Weight: 100%</span></p>
+                      </div>
+                    </div>
+                  </div>
+                 
+                
+                </div>
+              </div>
+              <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
+              <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
+              <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    
+    <section class="footer text-white">
+      <div class="container">
+        <p class="p-14 mb-0 text-capitalize">&copy; 2020 UBA Group. All Rights Reserved.</p>
+      </div>
+    </section>
+  
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/js/drop.js"></script>
+    <script src="../../assets/js/dropzone.js"></script>
+    <script>
+      $(document).ready(function(){
+            // Add minus icon for collapse element which is open by default
+            $(".collapse.show").each(function(){
+              $(this).prev(".card-header").find(".fas").addClass("fa-angle-up").removeClass("fa-angle-down");
+            });
+            // Toggle plus minus icon on show hide of collapse element
+            $(".collapse").on('show.bs.collapse', function(){
+              $(this).prev(".card-header").find(".fas").removeClass("fa-angle-down").addClass("fa-angle-up");
+            }).on('hide.bs.collapse', function(){
+              $(this).prev(".card-header").find(".fas").removeClass("fa-angle-up").addClass("fa-angle-down");
+            });
+          });
+      </script>
+    
+  
+  <script>
+       function goBack() {
+        window.history.back();
+      }
+     
+    </script>
+
+
+  </body>
+</html>
