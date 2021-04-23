@@ -102,37 +102,132 @@
               <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
                 <p class="tx-36 tx-bold mb-0">KPI Setting</p>
                 <p class="tx-14 tx-gray mb-0">Take a look at your KPI groups</p>
-                <hr>
-                <p class="tx-14 tx-semibold">Job Role/Function you have worked in</p>
+                
+                <ul class="nav nav-line" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Your KPIs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Direct Report KPIs</a>
+                  </li>
+                 
+                </ul>
+                <div class="tab-content bd-t-0" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-                <div class="card shadow-sm">
-                  <div class="card-body pd-15">
-                    <div class="row justify-content-between">
-                      <div class="col-md-10">
-                        <p class="tx-18 mb-0 tx-bold">Team Lead, Learning and Development</p>
-                        <p class="tx-14 tx-secondary mb-0">HR Department | 57 Marina, Lagos Island, Nigeria</p>
+                    <p class="tx-14 tx-semibold mt-3">Job Role/Function you have worked in</p>
+
+                      <div class="card shadow-sm mt-4">
+                        <div class="card-body pd-15">
+                          <div class="row justify-content-between">
+                            <div class="col-md-10">
+                              <p class="tx-18 mb-0 tx-bold">Team Lead, Learning and Development</p>
+                              <p class="tx-14 tx-secondary mb-0">HR Department | 57 Marina, Lagos Island, Nigeria</p>
+                            </div>
+                            <div class="col-md-2 mg-t-20 mg-md-t-0">
+                              <a href="./view-kpi.html" class="btn btn-primary w-100 mg-t-5">View KPI</a>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="col-md-2 mg-t-20 mg-md-t-0">
-                        <a href="./view-kpi.html" class="btn btn-primary w-100 mg-t-5">View KPI</a>
+
+                      <div class="card shadow-sm mt-4">
+                        <div class="card-body pd-15">
+                          <div class="row justify-content-between">
+                            <div class="col-md-10">
+                              <p class="tx-18 mb-0 tx-bold">Branch CSM, Learning and Development</p>
+                              <p class="tx-14 tx-secondary mb-0">HR Department | 12 Babs Animashaun, Opposite Census Market, Surulere, Nigeria</p>
+                            </div>
+                            <div class="col-md-2 mg-t-20 mg-md-t-0">
+                              <a href="./view-kpi.html" class="btn btn-primary w-100 mg-t-5">View KPI</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+                  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="row mt-2">
+                      <div class="col-md-6 col-12 mg-t-20">
+                        <div class="card bd-x-0 bd-t-0">
+                          <div class="card-body pd-x-5 pd-y-0">
+                            <div class="row justify-content-between">
+                              <div class="col-9">
+                                <div class="d-flex">
+                                  <div class="">
+                                    <div class="avatar avatar"><img src="../../assets/img/Jones Okafor.svg" src="notification"></div>
+                                  </div>
+                                  <div class="mg-l-10">
+                                    <p class="tx-14 font-weight-bold mb-0">Martha Nnorom</p>
+                                    <p class="tx-12 tx-secondary">Team Member, Legal and Litigations</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-3">
+                                <a href="./view-report-kpi.html" class="btn-check btn btn-sm pd-5 w-100">
+                                  View KPI
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <div class="col-md-6 col-12 mg-t-20">
+                        <div class="card bd-x-0 bd-t-0">
+                          <div class="card-body pd-x-5 pd-y-0">
+                            <div class="row justify-content-between">
+                              <div class="col-9">
+                                <div class="d-flex">
+                                  <div class="">
+                                    <div class="avatar avatar"><img src="../../assets/img/staff.png" src="notification"></div>
+                                  </div>
+                                  <div class="mg-l-10">
+                                    <p class="tx-14 font-weight-bold mb-0">Alex Masawa</p>
+                                    <p class="tx-12 tx-secondary">Team Member, Legal and Litigations</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-3">
+                                <a href="./view-report-kpi.html" class="btn-check btn btn-sm pd-5 w-100">
+                                  View KPI
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <div class="col-md-6 col-12 mg-t-20">
+                        <div class="card bd-x-0 bd-t-0">
+                          <div class="card-body pd-x-5 pd-y-0">
+                            <div class="row justify-content-between">
+                              <div class="col-9">
+                                <div class="d-flex">
+                                  <div class="">
+                                    <div class="avatar avatar"><img src="../../assets/img/admin.png" src="notification"></div>
+                                  </div>
+                                  <div class="mg-l-10">
+                                    <p class="tx-14 font-weight-bold mb-0">Toyin Sowore</p>
+                                    <p class="tx-12 tx-secondary">Team Member, Legal and Litigations</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-3">
+                                <a href="./view-report-kpi.html" class="btn-check btn btn-sm pd-5 w-100">
+                                  View KPI
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
                       </div>
                     </div>
                   </div>
+                 
                 </div>
-
-                <div class="card shadow-sm mt-4">
-                  <div class="card-body pd-15">
-                    <div class="row justify-content-between">
-                      <div class="col-md-10">
-                        <p class="tx-18 mb-0 tx-bold">Branch CSM, Learning and Development</p>
-                        <p class="tx-14 tx-secondary mb-0">HR Department | 12 Babs Animashaun, Opposite Census Market, Surulere, Nigeria</p>
-                      </div>
-                      <div class="col-md-2 mg-t-20 mg-md-t-0">
-                        <a href="./view-kpi.html" class="btn btn-primary w-100 mg-t-5">View KPI</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
+                
               </div>
               <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
                 <h1>KPI Assessment</h1>
@@ -170,10 +265,10 @@
                                 <div class="col-9">
                                   <div class="d-flex">
                                     <div class="">
-                                      <div class="avatar avatar"><img src="../../assets/img/birthday1.png" src="notification"></div>
+                                      <div class="avatar avatar"><img src="../../assets/img/Jones Okafor.svg" src="notification"></div>
                                     </div>
                                     <div class="mg-l-10">
-                                      <p class="tx-14 font-weight-bold mb-0">Ahmed Hassan</p>
+                                      <p class="tx-14 font-weight-bold mb-0">Martha Nnorom</p>
                                       <p class="tx-12 tx-secondary">Team Member, Legal and Litigations</p>
                                     </div>
                                   </div>
@@ -241,7 +336,12 @@
                     </div>
         
                     <div class="tab-pane fade" id="overdue" role="tabpanel" aria-labelledby="overdue-tab">
-                      <h1>PIP</h1>
+                    
+                      <div class="col-md-6 mx-auto tx-center">
+                        <img src="../../assets/img/Noinput.svg" class="img-fluid"/>
+                        <p class="tx-16 tx-secondary tx-bold mb-1">No one here</p>
+                        <p class="tx-12 tx-secondary col-md-7 col-12 mx-auto">Check in on one of your direct reports</p>
+                      </div>
                       
                     </div>
                     
@@ -262,7 +362,7 @@
             <div class="modal-content">
               <div class="modal-header pd-y-10">
                 <div>
-                <p class="modal-title tx-22 tx-demibold mb-0" id="exampleModalLabel">Check in on Ahmed Hassan</p>
+                <p class="modal-title tx-22 tx-demibold mb-0" id="exampleModalLabel">Check in on Martha Nnorom</p>
                 <p class="tx-14 tx-secondary mb-0">Enter outcomes of the check-in session with staff</p>
 
                 </div>
@@ -281,10 +381,10 @@
                       <div class="col-md-8 mg-t-20">
                         <div class="d-flex">
                           <div class="">
-                            <div class="avatar avatar"><img src="../../assets/img/birthday1.png" src="notification"></div>
+                            <div class="avatar avatar"><img src="../../assets/img/Jones Okafor.svg" src="notification"></div>
                           </div>
                           <div class="mg-l-10">
-                            <p class="tx-14 font-weight-bold mb-0">Ahmed Hassan</p>
+                            <p class="tx-14 font-weight-bold mb-0">Martha Nnorom</p>
                             <p class="tx-12 tx-secondary">Team Member, Legal and Litigations</p>
                           </div>
                         </div>
