@@ -197,6 +197,9 @@ p{
 .card-header-gray{
   background-color: #F5F3FF!important;
 }
+.thead-gray{
+  background-color: #F5F3FF!important;
+}
 .card-header-green{
   background-color: #F0FDFA!important;
 }
@@ -217,7 +220,7 @@ p{
 }
 .list-group-item.kpi.active{
   background-color: #F5DDDD!important;
-  color: #D70900;
+  color: #D70900!important;
   border: 1px solid rgba(215, 9, 0, 0.1);
   font-weight: 600;
 }
@@ -225,6 +228,15 @@ p{
 color: red!important;
 /* background:red; */
 fill: #d70900!important;
+}
+.list-group-item.new.active{
+  background-color: rgba(235, 235, 236, 1)!important;
+}
+.list-group-item{
+  border-top: 0!important;
+  margin-bottom: 0!important;
+  border-right: 0!important;
+  border-left: 0!important;
 }
 .btn-check{
   border: 1px solid rgba(209, 213, 219, 1)!important;
@@ -259,4 +271,49 @@ fill: #d70900!important;
   li.nav-item.ml-mobile{
     margin-left: auto!important;
   }
+  .tx-32{
+    font-size: 28px!important;
+  }
 }
+
+
+/*===============================
+ potential style
+  ============================================== */
+  .potential-card{
+    background-color: #E7EAF0!important;
+    border: 1px solid #BAC6D6!important;
+    border-radius: 10px!important;
+  }
+
+  .myselect{
+    background:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='red' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.625rem center/8px 10px!important;
+    border: 1px solid #EE6464!important;
+    max-width: 30%!important;
+
+  }
+  .btn-outlinee{
+    border: 1px solid #D1D5DB!important;
+    color: #374151!important;
+    border-radius: 12px!important;
+  }
+  .badge-pending{
+    color: rgba(23, 43, 77, 1)!important;
+    background-color: rgba(255, 240, 179, 1)!important;
+    border-radius: 3px;
+  }
+  .bg-redish{
+    background-color: rgba(251, 233, 233, 1)!important;
+    border: 1px solid rgba(229, 188, 188, 1)!important;
+  }
+  .card-redish{
+    border: 1px solid rgba(229, 188, 188, 1)!important;
+  }
+  .bg-gray{
+    background-color: rgba(250, 250, 250, 1)!important;
+  }
+  .fa-light{
+    font-weight: 600!important;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 16px;
+  }

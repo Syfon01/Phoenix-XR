@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Performance Management</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../../assets/css/custom.css">
+    <link rel="stylesheet" href="../../../assets/css/performance.css">
+    <link rel="stylesheet" href="../../../assets/css/dashforge.css">
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+  </head>
+  <body class="">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white bd navbar-header-fixed pd-b-0">
+        <div class="container">
+          <a class="navbar-brand tx-bold tx-spacing--2 order-1" href="./index.html">            
+            <img src="../../../assets/img/connect.svg" alt="" class="img-fluid mr-4">
+          </a>
+          <button class="navbar-toggler order-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i data-feather="menu" class="wd-20 ht-20"></i>
+          </button>
+        
+          <div class="collapse navbar-collapse order-2" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active pb-2 mg-b-20 mg-lg-b-0">
+                <a class="nav-link header-link pd-b-0" href="./index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              
+            </ul>
+  
+            <ul class="navbar-nav ml-auto mr-5">
+              <li class="nav-item pd-t-10 pb-2">
+                <a href="http://" class="nav-link btn btn-sm btn-outline pd-y-2 w-lg-100 wd-md-100 logout-btn"><i data-feather="power" class="mr-2"></i>Sign out</a>
+              </li>
+              <li class="nav-item d-none d-md-none d-lg-block d-xl-block">
+                <a class="nav-link pb-2 navbar-brand navbar-right tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/home.html"><img src="../../../assets/img/logo.png" class="img-fluid"/></a>
+              </li>
+            </ul>
+  
+          </div>
+        </div>
+
+      </nav>
+    </header>
+    <section class="bg-others">
+      <div class="container py-5 mg-t-25 mg-md-t-0 mg-lg-t-35">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb-style2 bg-transparent mg-b-0">
+            <li class="breadcrumb-item pb-0"><a href="../index.html" class="text-capitalize breadcrumb-size tx-secondary">Home</a></li>
+            <li class="breadcrumb-item pb-0"><a href="../dashboard.html" class="text-capitalize breadcrumb-size tx-secondary">Performance</a></li>
+            <li class="breadcrumb-item breadcrumb-size pb-0 active text-capitalize tx-secondary " aria-current="page">Potential Assessment</li>
+          </ol>
+        </nav>
+
+        <div>
+          <div class="row justify-content-between mg-t-20">
+            <div class="col-md-12 col-lg-7 col-12 mg-t-20">
+              <p class="tx-32 tx-bold mb-0 mb-0"><img src="../../../assets/img/icon/potential.svg" class="img-fluid" alt="" srcset=""> Qualitative & Potential Assessments</p>
+            </div>
+            <div class="col-lg-4 col-12 mg-t-20">
+              <div class="d-flex justify-content-between float-right">
+                <button class="btn btn-outlined-primary tx-semibold mg-r-10 tx-12 btn-sm pd-x-10">DEFINIR PARA PORTUGUÊS</button>
+                <button class="btn btn-outlined-primary tx-semibold tx-12 btn-sm pd-x-10">DEFINIR EN FRANCAIS</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mg-t-20 justify-content-between">
+          <div class="col-md-8 col-lg-7 col-12 mg-t-20 pd-lg-r-0">
+            <p class="tx-14">
+              This is used in leadership skills assessment, career and succession planning and mapping your development needs. Assess and view ratings.
+            </p>
+            <p class="tx-14">
+              You are required to complete your self-assessment on both Qualitative and Potential Assessment; to assess your Supervisor, Subordinates, and Peers on their Competence, Commitment and Contribution to the growth of the organisation as well as their Learning Agility and our Core Values. 
+            </p>
+            <p class="tx-14">
+              All peers rating will remain confidential and will not be disclosed to any member of your peers. Rate only peers who you have worked with directly. Your assessment must be honest and transparent.
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-4 col-12 mg-t-20">
+            <div class="card card-body potential-card">
+              <div class="row pd-l-0 pd-md-l-10">
+                <div class="avatar avatar-xxl large-avatar"><img src="../../../assets/img/avatar-xl.jpg" class="rounded-circle" alt=""></div>
+              <div class="pd-l-10 pd-t-10">
+                <p class="tx-18 mb-0 tx-semibold">Bolatito John</p>
+                <small class="tx-secondary tx-12">bolatitojoh@ubagroup.com</small>
+                <div class="">
+                  <p class="tx-14 mb-0 tx-medium">Assistant Manager - AM</p>
+                  <p class="tx-14 mb-0 tx-medium">CIO Organisation</p>
+                </div>
+              </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mg-t-30">
+          <ul class="nav nav-line" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My Assessment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My Reports & Comments</a>
+            </li>
+          </ul>
+          <div class="tab-content  bd-t-0 pd-y-20" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div class="col-md-4 pd-x-0 col-12">
+                <div class="d-flex">
+                  <p class="tx-14 tx-bold mb-0 pd-t-7">Select Assessment by Month</p>
+                    <select class="custom-select myselect mg-l-20">
+                      <option selected>April</option>
+                      <option value="1">January</option>
+                      <option value="2">February</option>
+                      <option value="3">March</option>
+                      <option value="4">April</option>
+                      <option value="5">May</option>
+                    </select>
+                  </div>
+              </div>
+              
+              <div class="row mg-t-20">
+                <div class="col-12 col-md-3 mt-4">
+                  <div class="card bg-side">
+                    <div class="card-body pd-x-15 pd-b-10">
+                      <p class="tx-14 tx-uppercase tx-semibold">APRIL ASSESSMENTs</p>
+                      <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item kpi list-group-item-action active" id="list-self-list" data-toggle="list" href="#list-self" role="tab" aria-controls="profile">
+                          <div class="d-flex justify-content-between">
+                            <span class="mb-0 tx-14 tx-medium">Self Assessment</span>
+                            <i data-feather="check-circle" class="wd-20 ht-20 tx-success"></i>
+                          </div>
+                        </a>
+                        <a class="list-group-item kpi list-group-item-action" id="list-supervisor-list" data-toggle="list" href="#list-supervisor" role="tab" aria-controls="messages">
+                          <div class="d-flex justify-content-between">
+                            <span class="mb-0 tx-14 tx-medium">Supervisor</span>
+                            <i data-feather="clock" class="wd-20 ht-20 tx-warning"></i>
+                          </div>
+                        </a>
+                        <a class="list-group-item kpi list-group-item-action" id="list-direct-list" data-toggle="list" href="#list-direct" role="tab" aria-controls="messages">
+                          <div class="d-flex justify-content-between">
+                            <span class="mb-0 tx-14 tx-medium">Direct Reports</span>
+                            <i data-feather="clock" class="wd-20 ht-20 tx-warning"></i>
+                          </div>
+                        </a>
+                        <a class="list-group-item kpi list-group-item-action bd-0" id="list-peers-list" data-toggle="list" href="#list-peers" role="tab" aria-controls="messages">
+                          <div class="d-flex justify-content-between">
+                            <span class="mb-0 tx-14 tx-medium">Peers</span>
+                            <i data-feather="clock" class="wd-20 ht-20 tx-warning"></i>
+                          </div>
+                        </a>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-12 col-md-9 mt-4">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-self" role="tabpanel" aria-labelledby="list-self-list">
+                      <p class="tx-24 tx-bold mb-0">Self Assessment</p>
+                      <p class="tx-14 tx-gray">Complete your self-assessment on both Qualitative and Potential Assessment</p>
+                      <section>
+                        <div class="row">
+                          <div class="col-lg-6 col-12 col-md-12 mg-t-20">
+                            <div class="row justify-content-between">
+                              <div class="col-9">
+                                <div class="d-flex">
+                                  <div class="">
+                                    <div class="avatar avatar-md"><img src="../../../assets/img/birthday2.png" src="notification"></div>
+                                  </div>
+                                  <div class="mg-l-10 pd-t-5 ">
+                                    <p class="tx-16 tx-medium mb-0">Martha Nnorom</p>
+                                    <p class="tx-12 mb-0 tx-secondary">Team Member, Legal and Litigations</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-3 mg-t-15">
+                                <span class="badge-green tx-uppercase tx-11 tx-semibold pd-x-4 pd-y-2">Completed</span>
+                              </div>
+                            </div>
+                            <hr/>
+                            <button class="btn-outlinee tx-gray tx-medium btn btn-sm pd-x-10 pd-y-2">Assess Yourself</button>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="tab-pane fade" id="list-supervisor" role="tabpanel" aria-labelledby="list-supervisor-list">
+                      <p class="tx-24 tx-bold mb-0">Supervisor</p>
+                      <p class="tx-14 tx-gray">Here is your supervisor. Your rating will be kept confidential and will not be disclosed to them.</p>
+                      <section>
+                        <div class="row">
+                          <div class="col-lg-6 col-12 col-md-12 mg-t-20">
+                            <div class="row justify-content-between">
+                              <div class="col-9">
+                                <div class="d-flex">
+                                  <div class="">
+                                    <div class="avatar avatar-md"><img src="../../../assets/img/activity1.png" src="notification"></div>
+                                  </div>
+                                  <div class="mg-l-10 pd-t-5 ">
+                                    <p class="tx-16 tx-medium mb-0">Adams Ifeanyi</p>
+                                    <p class="tx-12 mb-0 tx-secondary">Team Member, Legal and Litigations</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-3 mg-t-15">
+                                <span class="badge-pending tx-uppercase tx-11 tx-semibold pd-x-4 pd-y-2">PENDING</span>
+                              </div>
+                            </div>
+                            <hr/>
+                            <button class="btn-outlinee tx-gray tx-medium btn btn-sm pd-x-10 pd-y-2">Rate Adams</button>
+                          </div>
+                        </div>
+                      </section>              
+                    </div>
+                    <div class="tab-pane fade" id="list-direct" role="tabpanel" aria-labelledby="list-direct-list">
+                      <p class="tx-24 tx-bold mb-0">Direct Reports</p>
+                      <p class="tx-14 tx-gray">Here are your subordinates. Your rating will be kept confidential and will not be disclosed to them.</p>
+                      <section>
+                        <div class="row">
+                          <div class="col-lg-6 col-12 col-md-12 mg-t-20">
+                            <div class="row justify-content-between">
+                              <div class="col-9">
+                                <div class="d-flex">
+                                  <div class="">
+                                    <div class="avatar avatar-md"><img src="../../../assets/img/activity1.png" src="notification"></div>
+                                  </div>
+                                  <div class="mg-l-10 pd-t-5 ">
+                                    <p class="tx-16 tx-medium mb-0">Alex Masawa</p>
+                                    <p class="tx-12 mb-0 tx-secondary">Team Member, Legal and Litigations</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-3 mg-t-15">
+                                <span class="badge-pending tx-uppercase tx-11 tx-semibold pd-x-4 pd-y-2">PENDING</span>
+                              </div>
+                            </div>
+                            <hr/>
+                            <button class="btn-outlinee tx-gray tx-medium btn btn-sm pd-x-10 pd-y-2">Rate Adams</button>
+                          </div>
+                          <div class="col-lg-6 col-12 col-md-12 mg-t-20">
+                            <div class="row justify-content-between">
+                              <div class="col-9">
+                                <div class="d-flex">
+                                  <div class="">
+                                    <div class="avatar avatar-md"><img src="../../../assets/img/birthday2.png" src="notification"></div>
+                                  </div>
+                                  <div class="mg-l-10 pd-t-5 ">
+                                    <p class="tx-16 tx-medium mb-0">Ahmed Hassan</p>
+                                    <p class="tx-12 mb-0 tx-secondary">Team Member, Legal and Litigations</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-3 mg-t-15">
+                                <span class="badge-green tx-uppercase tx-11 tx-semibold pd-x-4 pd-y-2">Completed</span>
+                              </div>
+                            </div>
+                            <hr/>
+                            <button class="btn-outlinee tx-gray tx-medium btn btn-sm pd-x-10 pd-y-2">Rate Ahmed</button>
+                          </div>
+                        </div>
+                      </section>              
+                    </div>
+                    <div class="tab-pane fade" id="list-peers" role="tabpanel" aria-labelledby="list-peers-list">
+                      <p class="tx-24 tx-bold mb-0">Peers</p>
+                      <p class="tx-14 tx-gray">Here are your peers. Your rating will be kept confidential and will not be disclosed to them.</p>
+                      <section>
+                        <div class="row">
+                          <div class="col-lg-6 col-12 col-md-12 mg-t-20">
+                            <div class="row justify-content-between">
+                              <div class="col-9">
+                                <div class="d-flex">
+                                  <div class="">
+                                    <div class="avatar avatar-md"><img src="../../../assets/img/avatar-xl.jpg" src="notification"></div>
+                                  </div>
+                                  <div class="mg-l-10 pd-t-5 ">
+                                    <p class="tx-16 tx-medium mb-0">Felix Adejumo</p>
+                                    <p class="tx-12 mb-0 tx-secondary">Team Member, Legal and Litigations</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-3 mg-t-15">
+                                <span class="badge-pending tx-uppercase tx-11 tx-semibold pd-x-4 pd-y-2">PENDING</span>
+                              </div>
+                            </div>
+                            <hr/>
+                            <button class="btn-outlinee tx-gray tx-medium btn btn-sm pd-x-10 pd-y-2">Rate Felix</button>
+                          </div>
+                          <div class="col-lg-6 col-12 col-md-12 mg-t-20">
+                            <div class="row justify-content-between">
+                              <div class="col-9">
+                                <div class="d-flex">
+                                  <div class="">
+                                    <div class="avatar avatar-md"><img src="../../../assets/img/birthday1.png" src="notification"></div>
+                                  </div>
+                                  <div class="mg-l-10 pd-t-5 ">
+                                    <p class="tx-16 tx-medium mb-0">Blessing Adewole</p>
+                                    <p class="tx-12 mb-0 tx-secondary">Team Member, Legal and Litigations</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-3 mg-t-15">
+                                <span class="badge-green tx-uppercase tx-11 tx-semibold pd-x-4 pd-y-2">Completed</span>
+                              </div>
+                            </div>
+                            <hr/>
+                            <button class="btn-outlinee tx-gray tx-medium btn btn-sm pd-x-10 pd-y-2">Rate Blessing</button>
+                          </div>
+                        </div>
+                      </section>              
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <div class="col-md-4 pd-x-0 col-12">
+                <div class="d-flex">
+                  <p class="tx-14 tx-bold mb-0 pd-t-7">Select Assessment by Month</p>
+                    <select class="custom-select myselect mg-l-20">
+                      <option selected>April</option>
+                      <option value="1">January</option>
+                      <option value="2">February</option>
+                      <option value="3">March</option>
+                      <option value="4">April</option>
+                      <option value="5">May</option>
+                    </select>
+                  </div>
+              </div>
+             <div class="card mg-t-40">
+               <div class="card-header pd-y-15">
+                <div class="row justify-content-between">
+                  <div class="col-md-8 col-12">
+                    <p class="tx-24 mb-0 tx-bold">Potential Assessment Report</p>
+                  </div>
+                  <div class="col-md-3 col-12">
+                    <p class="tx-gray mb-0 tx-14 float-right pd-t-5">Showing report for April, 2021</p>
+                  </div>
+                </div>
+               </div>
+               <div class="card-body pd-y-15">
+                 <div class="row">
+                  <div class="col-md-3 col-12 mg-t-20 mg-md-t-10">
+                    <p class="tx-16 mb-3 pd-t-10 tx-medium">Summary</p>
+                      <div class="card card-redish">
+                        <div class="card-body pd-0 tx-center">
+                          <div class="mg-t-10 pd-y-15">
+                            <p class="tx-14 tx-secondary tx-medium mb-2">SUPERVISOR</p>
+                            <p class="tx-32 tx-bold mb-0">72 <span class="tx-secondary">/80</span></p>
+                          </div>
+                          <div class="pd-y-20 pd-x-15">
+                            <p class="tx-14 tx-secondary tx-medium mb-2">PEERS</p>
+                            <p class="tx-32 tx-bold mb-0">7 <span class="tx-secondary">/10</span></p>
+                          </div>
+                          <div class="pd-y-20 pd-x-15">
+                            <p class="tx-14 tx-secondary tx-medium mb-2">DIRECT REPORTS</p>
+                            <p class="tx-32 tx-bold mb-0">6 <span class="tx-secondary">/10</span></p>
+                          </div>
+                          <div class="pd-y-20 pd-x-15 bg-redish">
+                            <p class="tx-14 tx-secondary tx-medium mb-2">YOUR 360 SCORE</p>
+                            <p class="tx-48 tx-bold mb-0">87%</p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-md-9 col-12 mg-t-20 mg-md-t-10">
+                    <div class="row justify-content-between">
+                      <div class="col-6 col-md-4">
+                        <p class="tx-16 mb-3 pd-t-10 tx-medium">Details</p>
+                      </div>
+                      <div class="col-6 col-md-3">
+                      <a href="./comment.html" class="btn btn-outlined-primary tx-semibold w-100 mb-1 btn-sm">View Comments</a>
+                      </div>
+                    </div>
+                    <div class="card bg-gray">
+                      <div class="card-body pd-15">
+                        <p class="tx-18 mb-2 tx-semibold">Supervisior <span class="tx-14 tx-medium ml-1">(74 <span class="tx-secondary tx-12">/80</span>)</span></p>
+                        <div class="table-responsive">
+                          <table class="table table-hovered tablee">
+                            <thead class="thead-gray">
+                              <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Competence Score</th>
+                                <th scope="col">Commitment Score</th>
+                                <th scope="col">Contribution Score</th>
+                                <th scope="col">Overall Score</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Adrian Monino</td>
+                                <td>78%</td>
+                                <td>50%</td>
+                                <td>35%</td>
+                              </tr>
+                              
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <div class="card bg-gray mg-t-20">
+                      <div class="card-body pd-15">
+                        <p class="tx-18 mb-2 tx-semibold">Peers <span class="tx-14 tx-medium ml-1">(74 <span class="tx-secondary tx-12">/80</span>)</span></p>
+                        <div class="table-responsive">
+                          <table class="table table-hovered tablee">
+                            <thead class="thead-gray">
+                              <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Competence Score</th>
+                                <th scope="col">Commitment Score</th>
+                                <th scope="col">Contribution Score</th>
+                                <th scope="col">Overall Score</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Adrian Monino</td>
+                                <td>78%</td>
+                                <td>50%</td>
+                                <td>35%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Socrates Itumay</td>
+                                <td>50%</td>
+                                <td>48%</td>
+                                <td>70%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>Reynante Labares</td>
+                                <td>60%</td>
+                                <td>55%</td>
+                                <td>45%</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <div class="card bg-gray mg-t-20">
+                      <div class="card-body pd-15">
+                        <p class="tx-18 mb-2 tx-semibold">Direct Report <span class="tx-14 tx-medium ml-1">(74 <span class="tx-secondary tx-12">/80</span>)</span></p>
+                        <div class="table-responsive">
+                          <table class="table table-hovered tablee">
+                            <thead class="thead-gray">
+                              <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Competence Score</th>
+                                <th scope="col">Commitment Score</th>
+                                <th scope="col">Contribution Score</th>
+                                <th scope="col">Overall Score</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Adrian Monino</td>
+                                <td>78%</td>
+                                <td>50%</td>
+                                <td>35%</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Socrates Itumay</td>
+                                <td>50%</td>
+                                <td>48%</td>
+                                <td>70%</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                 </div>
+               </div>
+             </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    
+    <section class="footer text-white">
+      <div class="container">
+        <p class="p-14 mb-0 text-capitalize">&copy; 2020 UBA Group. All Rights Reserved.</p>
+      </div>
+    </section>
+  
+    <script src="../../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../../assets/js/dashforge.js"></script>
+    <script src="../../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../../assets/js/dashforge.settings.js"></script>
+    <script src="../../../assets/js/drop.js"></script>
+    <script src="../../../assets/js/dropzone.js"></script>
+
+
+  </body>
+</html>
