@@ -317,3 +317,9 @@ fill: #d70900!important;
     color: rgba(0, 0, 0, 0.54);
     font-size: 16px;
   }
+  .table-border{
+    border-top: 2px solid #073f6d!important;
+  }
+  .collapse-btn{
+    cursor: pointer;
+  }
