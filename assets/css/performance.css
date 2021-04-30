@@ -198,7 +198,7 @@ p{
   background-color: #F5F3FF!important;
 }
 .thead-gray{
-  background-color: #F5F3FF!important;
+  background-color: rgba(251, 233, 233, 1);
 }
 .card-header-green{
   background-color: #F0FDFA!important;
@@ -318,8 +318,12 @@ fill: #d70900!important;
     font-size: 16px;
   }
   .table-border{
-    border-top: 2px solid #073f6d!important;
+    border-top: 2px solid #cbcbcb!important;
   }
   .collapse-btn{
     cursor: pointer;
   }
+  .table thead th{
+    font-weight: 600!important;
+  }
+  
