@@ -480,41 +480,86 @@
               <div class="modal-content">
                 <div class="modal-header bd-b-0 pd-15">
                   <p class="tx-22 tx-bold modal-title" id="moodModalLabel"></p>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                  </button>
+                  </button> -->
                 </div>
                 <div class="modal-body pd-15 ">
-                  <div class="tx-center">
-                    <p class="tx-22 tx-bold">How are you feeling today?</p>
-                    <div class="row">
-                      <div class="col-4">
-                        <span><img src="../assets/img/icon/happy-xl.svg" alt="" class="img-fluid" srcset=""></span>
-                        <p class="tx-16 mb-0 tx-medium mt-2">Very happy</p>
+                  <div class="">
+                    <p class="tx-22 tx-bold mb-0">Hi Henry</p>
+                    <p class="tx-16">How are you feeling today?</p>
 
-                      </div>
-                      <div class="col-4">
-                        <span><img src="../assets/img/icon/smile-xl.svg" alt="" class="img-fluid" srcset=""></span>
-                        <p class="tx-16 mb-0 tx-medium mt-2">Happy</p>
-
-                      </div>
-                      <div class="col-4">
+                    <ul class="nav justify-content-between tx-center" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link moody active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                          <span><img src="../assets/img/icon/happy-xl.svg" alt="" class="img-fluid" srcset=""></span>
+                        <p class="moody-text tx-16 mb-0 tx-medium mt-2">Very happy</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link moody" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                          <span><img src="../assets/img/icon/smile-xl.svg" alt="" class="img-fluid" srcset=""></span>
+                        <p class="moody-text tx-16 mb-0 tx-medium mt-2">Just OK</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link moody" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
                         <span><img src="../assets/img/icon/sad-xl.svg" alt="" class="img-fluid" srcset=""></span>
-                        <p class="tx-16 mb-0 tx-medium mt-2">Sad</p>
-
+                        <p class="moody-text tx-16 mb-0 tx-medium mt-2">Sad</p>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="tab-content pd-y-20" id="myTabContent">
+                      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <form  class="mg-t-30">
+                          <div class="form-group">
+                            <div class="radios">
+                              <input type="radio" name="rGroup" value="1" id="r1" checked="checked" />
+                              <label class="radio mg-r-10 mg-r-10 pd-x-20 pd-y-7" for="r1">I'm excited</label>
+                              
+                              <input type="radio" name="rGroup" value="2" id="r2" />
+                              <label class="radio mg-r-10 mg-r-10 pd-x-20 pd-y-7" for="r2">Good vibes</label>
+                              
+                              <input type="radio" name="rGroup" value="3" id="r3" />
+                              <label class="radio mg-r-10 pd-x-20 pd-y-7" for="r3">Feeling awesome</label>
+                          </div>
+                          </div>
+                          <div class="form-group">
+                            <textarea name="" class="form-control moody-box"  rows="2" placeholder="Tell us more, personalize your comment"></textarea>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <form  class="mg-t-30">
+                          <div class="form-group">
+                            <div class="radios">
+                              <input type="radio" name="rGroup" value="2" id="r4" checked="checked"/>
+                              <label class="radio mg-r-10 mg-r-10 pd-x-20 pd-y-7" for="r4">Good vibes</label>
+                              
+                              <input type="radio" name="rGroup" value="3" id="r5" />
+                              <label class="radio mg-r-10 pd-x-20 pd-y-7" for="r5">Great Life</label>
+                          </div>
+                          </div>
+                          <div class="form-group">
+                            <textarea name="" class="form-control moody-box"  rows="2" placeholder="Tell us more, personalize your comment"></textarea>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <form  class="mg-t-30">
+                          <div class="form-group">
+                            <label for="" class="tx-14 mb-0 tx-medium">Tell us what is your mind, we would love to hear</label>
+                            <textarea name="" class="form-control moody-box"  rows="4" placeholder="Please kindly note the reason"></textarea>
+                          </div>
+                        </form>
                       </div>
                     </div>
                   </div>
-                 <form  class="mg-t-30">
-                   <div class="form-group">
-                     <label for="" class="tx-14 mb-0 tx-medium">Description</label>
-                     <textarea name="" class="form-control"  rows="5" placeholder="Please kindly note the reason"></textarea>
-                   </div>
-                 </form>
+                 
                 </div>
                 <div class="modal-footer bg-light-blue">
                   <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-primary btn-sm pd-x-40">Send Review</button>
+                  <button type="button" class="btn btn-primary btn-sm pd-x-40"data-toggle="modal" data-target="#emailModal" data-dismiss="modal">Send Review</button>
                 </div>
               </div>
             </div>
@@ -522,26 +567,13 @@
 
           
         <!-- Modal -->
-            <div class="modal fade" id="exitModal" tabindex="-1" role="dialog" aria-labelledby="exitModalLabel" aria-hidden="true">
+            <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <p class="tx-14 font-weight-bold my-0" id="exitModalLabel">Warning</p>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <h5 class="font-weight-bold text-title">You are about to begin a process that terminates your employment with the bank upon approval</h5>
-                    <div class="custom-control custom-checkbox py-3">
-                      <input type="checkbox" class="custom-control-input" id="customCheck1">
-                      <label class="custom-control-label text-title tx-14" for="customCheck1">I understand that EXITING terminates my employment and I have discussed this with my supervisor</label>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
-                    <a href="/staff/started.html" type="button" class="btn btn-primary">Proceed</a>
-                  </div>
+                  <div class="modal-body tx-center p-5">
+                    <img src="../assets/img/icon/email 2.svg" alt="" srcset="">
+                    <p class="tx-24 tx-semibold mt-3">Check your email</p>
+                    <p class="tx-16">Hi Henry, thanks for your response, we’ve just sent a mail to you. Kindly check your email.</p>
                 </div>
               </div>
             </div>  

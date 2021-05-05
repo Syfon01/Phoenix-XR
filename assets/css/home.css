@@ -82,6 +82,39 @@ body { -webkit-font-smoothing: antialiased; }
 .notif-icon{
   color: rgba(247, 226, 73, 1);
 }
+.nav-link.moody.active{
+  background-color: rgba(255, 237, 237, 1)!important;
+  color: #000!important;
+  text-align: center;
+  min-width: 120px;
+}
+.moody{
+  min-width: 120px;
+}
+.moody-box{
+  background-color: rgba(250, 251, 252, 1)!important;
+}
+.radios input[type=radio] {
+  display:none
+}
+.radios .radio {
+  display: inline-block;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1px solid rgba(215, 9, 0, 0.15);
+  font-size: 14px;
+  color: #D70900;
+  font-weight: 600;
+}
+
+.radios input[type=radio] {
+  display: none;
+}
+
+.radios input[type=radio]:checked + .radio {
+  background-color: rgba(255, 237, 237, 1);
+  border: 1px solid rgba(215, 9, 0, 0.7);
+}
    /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
   .mob-ava{
@@ -90,5 +123,17 @@ body { -webkit-font-smoothing: antialiased; }
   }
   h1{
     font-size: 1.5rem!important;
+  }
+  .moody{
+    min-width: 100px;
+  }
+  .nav-link.moody.active{
+    background-color: rgba(255, 237, 237, 1)!important;
+    color: #000!important;
+    text-align: center;
+    min-width: 100px;
+  }
+  .moody-text{
+    font-size: 14px!important;
   }
 }
