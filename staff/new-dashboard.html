@@ -28,7 +28,7 @@
   </head>
   <body class="">
     <header>
-        <nav class="navbar navbar-expand-lg bg-white bd navbar-header-fixed pd-b-0">
+        <nav class="navbar navbar-expand-lg bg-white bd navbar-header-fixed pd-y-0">
           <div class="container">
             <button class="navbar-toggler order-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <i data-feather="menu" class="wd-20 ht-20"></i>
@@ -36,11 +36,11 @@
       
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item active pb-2">
+                <li class="nav-item active pb-1 pd-x-10">
                   <a class="nav-link header-link" href="/staff/home.html">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link header-link" href="#" data-toggle="dropdown">Self Service</a>
+                <li class="nav-item pd-x-20">
+                  <a class="nav-link header-link dropdown-toggle" href="#" data-toggle="dropdown" >Self Service</a>
                     <div class="dropdown-menu dropdown-menuu tx-13">
                       <a href="" class="dropdown-item">Covid-19 Help Desk</a>
                       <a href="" class="dropdown-item">Work Ethics</a>
@@ -48,13 +48,13 @@
                       <a href="" class="dropdown-item">Exit</a>
                     </div>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item pd-x-20">
                   <a class="nav-link header-link" href="#">Manage Profile</a>
                 </li>
               </ul>
 
               <ul class="navbar-nav ml-auto mr-5">
-                <a href="http://" class="btn btn-sm btn-outline pd-y-2"><i data-feather="power" class="mr-2"></i>Sign out</a>
+                <a href="http://" class="btn btn-sm btn-outline tx-bold pd-y-2"><i data-feather="power" class="mr-2"></i>Sign out</a>
               </ul>
           </div>
               
@@ -97,7 +97,7 @@
       <div class="container pd-y-20">
         <div class="row justify-content-between ">
           <div class="col-lg-6 col-12 pd-lg-r-0">
-            <div class="row mg-md-t-25">
+            <div class="row mg-md-t-10">
               
               <div class="col-md-1 col-2 mg-t-20">
                 <div class="bg-primary rounded-circle not-circle cursor" data-toggle="modal" data-target="#profileModal">
@@ -132,7 +132,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-12 pd-lg-l-40 mg-t-20 mg-md-t-20 pd-lg-l-100">
+          <div class="col-lg-6 col-12 pd-lg-l-40 mg-t-20 mg-md-y-0 pd-lg-l-100">
             <div class="card bg-light-blue">
               <div class="card-body pd-x-15">
                 <div class="row">
@@ -280,7 +280,7 @@
                 <div class="d-flex justify-content-between">
                   <p class="tx-16 tx-bold title-text my-0">Upcoming Birthdays</p>
                   <div>
-                    <a href="/" class="btn btn-sm btn-outline pd-y-2 pd-x-5">View all birthdays</a>
+                    <a href="/" class="btn btn-sm btn-outline pd-y-2 pd-x-5 tx-medium">View all birthdays</a>
                   </div>
                 </div>
               </div>
@@ -309,7 +309,7 @@
                 <div class="d-flex justify-content-between">
                   <p class="tx-16 tx-bold title-text my-0">Team members</p>
                   <div>
-                    <a href="/" class="btn btn-sm btn-outline pd-y-2 pd-x-5">View All</a>
+                    <a href="/" class="btn btn-sm btn-outline pd-y-2 pd-x-5 tx-medium">View All</a>
                   </div>
                 </div>
               </div>
@@ -330,7 +330,7 @@
                 <div class="d-flex justify-content-between">
                   <p class="tx-16 tx-bold title-text my-0">Recent Activity</p>
                   <div>
-                    <a href="/" class="btn btn-sm btn-outline pd-y-2 pd-x-5">View All</a>
+                    <a href="/" class="btn btn-sm btn-outline pd-y-2 pd-x-5 tx-medium">View All</a>
                   </div>
                 </div>
               </div>
@@ -374,7 +374,7 @@
                 <div class="d-flex justify-content-between">
                   <p class="tx-16 tx-bold title-text my-0">Holidays & Events</p>
                   <div>
-                    <a href="/" class="btn btn-sm btn-outline pd-y-2 pd-x-5">View All</a>
+                    <a href="/" class="btn btn-sm btn-outline pd-y-2 pd-x-5 tx-medium">View All</a>
                   </div>
                 </div>
               </div>
@@ -478,13 +478,7 @@
           <div class="modal fade" id="moodModal" tabindex="-1" aria-labelledby="moodModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
-                <div class="modal-header bd-b-0 pd-15">
-                  <p class="tx-22 tx-bold modal-title" id="moodModalLabel"></p>
-                  <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button> -->
-                </div>
-                <div class="modal-body pd-15 ">
+                <div class="modal-body">
                   <div class="">
                     <p class="tx-22 tx-bold mb-0">Hi Henry</p>
                     <p class="tx-16">How are you feeling today?</p>
@@ -509,7 +503,7 @@
                         </a>
                       </li>
                     </ul>
-                    <div class="tab-content pd-y-20" id="myTabContent">
+                    <div class="tab-content pd-t-20" id="myTabContent">
                       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <form  class="mg-t-30">
                           <div class="form-group">
@@ -524,7 +518,7 @@
                               <label class="radio mg-r-10 pd-x-20 pd-y-7" for="r3">Feeling awesome</label>
                           </div>
                           </div>
-                          <div class="form-group">
+                          <div class="form-group mb-0">
                             <textarea name="" class="form-control moody-box"  rows="2" placeholder="Tell us more, personalize your comment"></textarea>
                           </div>
                         </form>
@@ -540,16 +534,16 @@
                               <label class="radio mg-r-10 pd-x-20 pd-y-7" for="r5">Great Life</label>
                           </div>
                           </div>
-                          <div class="form-group">
+                          <div class="form-group mb-0">
                             <textarea name="" class="form-control moody-box"  rows="2" placeholder="Tell us more, personalize your comment"></textarea>
                           </div>
                         </form>
                       </div>
                       <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                         <form  class="mg-t-30">
-                          <div class="form-group">
-                            <label for="" class="tx-14 mb-0 tx-medium">Tell us what is your mind, we would love to hear</label>
-                            <textarea name="" class="form-control moody-box"  rows="4" placeholder="Please kindly note the reason"></textarea>
+                          <div class="form-group mb-0">
+                            <label for="" class="tx-14 mb-1 tx-medium">Tell us what is your mind, we would love to hear</label>
+                            <textarea name="" class="form-control moody-box"  rows="5" placeholder="Please kindly note the reason"></textarea>
                           </div>
                         </form>
                       </div>

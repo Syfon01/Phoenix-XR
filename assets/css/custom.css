@@ -6,7 +6,7 @@
 body { -webkit-font-smoothing: antialiased; }
 
 .header-link{
-    font-size: 16px!important;
+    font-size: 14px!important;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
@@ -39,7 +39,7 @@ body { -webkit-font-smoothing: antialiased; }
 .btn-outline{
     border: 1px solid rgba(110, 132, 163, 1)!important;
     box-shadow: 0px 2px 2px 0px rgba(152, 162, 179, 0.15);
-    font-weight: 700!important;
+    font-weight: 700;
 }
 .btn-outline-dark{
     border: 1px solid #fff!important;
