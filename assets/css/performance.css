@@ -327,3 +327,14 @@ fill: #d70900!important;
     font-weight: 600!important;
   }
   
+  .perf-tab{
+    background-color: #FAFBFC;
+    color: #6A737D, 100%;
+    padding: 12px 16px!important;
+  }
+  .nav-line .perf + .perf{
+    margin-left: 0!important;
+  }
+  .nav-link.perf-tab.active{
+    background-color: rgba(251, 233, 233, 1)!important;
+  }
