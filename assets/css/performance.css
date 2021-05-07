@@ -338,3 +338,6 @@ fill: #d70900!important;
   .nav-link.perf-tab.active{
     background-color: rgba(251, 233, 233, 1)!important;
   }
+  .tx-darkk{
+    color: rgba(78, 83, 89, 1);
+  }
