@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Employee Listing</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/report.css">
+    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+  
+
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-700">HR Admin </p>
+            </div>
+          </div>
+          
+          </div><!-- aside-loggedin -->
+        <ul class="nav nav-aside">
+          <li class="nav-item p-14"><a href="./index.html" class="nav-link text-gray-700"><img src="../../assets/img/icon/requests.png" class="pd-r-15"/> <span>Employee Listing</span></a></li>
+          <li class="nav-item p-14 active"><a href="./download.html" class="nav-link active text-gray-700"><img src="../../assets/img/icon/updates.svg" class="pd-r-15"/> <span>Download</span></a></li>
+      </ul>
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
+              <li class="breadcrumb-item"><a href="./index.html">Core HR</a></li>
+              <li class="breadcrumb-item text-gray-700" aria-current="page">Downloads</li>
+            </ol>
+          </nav>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/new.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <div class="mt-2">
+              <div class="d-flex justify-content-between w-100">
+                <div>
+                  <p class="tx-28 tx-bold mb-1">Downloads</p>
+                  <p class="tx-14 text-gray-600">Here is an entire list of staff. You can search or export as csv.</p>
+                </div>
+              </div>
+          </div>
+          <hr class="mt-1">
+          <p class="tx-16 tx-semibold mt-4">View by Module</p>
+           
+          <div class="row">
+            <div class="col-12 col-md-3">
+              <div class="card">
+                <div class="card-body pd-15">
+                  <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">All</a>
+                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Leave</a>
+                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Exit</a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Promotions</a>
+                    <a class="list-group-item list-group-item-action" id="list-confirm-list" data-toggle="list" href="#list-confirm" role="tab" aria-controls="confirm">Confirmation</a>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                  <div class="card-header  pd-t-0 pd-b-15 bd-b-0">
+                        <div class="row justify-content-between">
+                          <div class="col-md-7 col-12">
+                            <div class="d-flex">
+                              <div class="mr-3 pd-t-10">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input "  name="select-all" id="customCheck">
+                                  <label class="custom-control-label tx-medium" for="customCheck"> Select All
+                                  </label>
+                                </div>
+                              </div>
+                              
+                              <div class="search-form">
+                                <input type="search" class="form-control" placeholder="Search">
+                                <button class="btn" type="button"><i data-feather="search"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 pd-l-0 col-12">
+                            <div class="d-flex">
+                              <button class="btn btn-outlined-primary btn-sm" disabled><img src="../assets/img/icon/download.svg" class="mr-1 tx-primary">Download All</button>
+                              <button class="btn btn-primary ml-2 btn-sm" disabled><img src="../assets/img/icon/delete.svg" class="mr-1">Delete</button>
+                            </div>
+                          </div>
+                          
+                      </div>
+                      <hr class="mb-0"/>
+                    </div>
+                 <div class="card-body pd-t-15">
+                   <div class="table-responsive">
+                    <table class="table display table-hover bd-t-0" id="employee">
+                      <tbody>
+                        <tr class=''>
+                          <th scope="row">
+                            <div class="d-flex">
+                              <div class="custom-control custom-checkbox first">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label pd-y-10" for="customCheck2">
+                                </label>
+                              </div>
+                              <div class="ml-2">
+                                <p class="tx-medium mb-0">Exit Report for GHHR</p>
+                                <span class="text-gray-600">Shared by Tope Collins Tue, May 11 4:13 PM</span>
+  
+                            </div>
+                            
+                          </th>
+                          <td><span class="badge badge-blue mg-t-10">processing</span></td>
+                          <td class="tx-center">
+                            <div class="btn-group pd-t-5" role="group" aria-label="Button group with nested dropdown">
+                              <button type="button" class="btn btn-outlined-primary btn-sm pd-y-3">Download</button>
+                            
+                              <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-outlined-primary btn-sm pd-y-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> 
+                                  <a class="dropdown-item" href="#"  type="button" data-toggle="modal" data-target="#shareModal">Share</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class=''>
+                          <th scope="row">
+                            <div class="d-flex">
+                              <div class="custom-control custom-checkbox first">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label pd-y-10" for="customCheck2">
+                                </label>
+                              </div>
+                              <div class="ml-2">
+                                <p class="tx-medium mb-0">Confirmation for April Intakes</p>
+                                <span class="text-gray-600">Shared by Tope Collins Tue, May 11 4:13 PM</span>
+  
+                            </div>
+                            
+                          </th>
+                          <td><span class="badge badge-active mg-t-10">completed</span></td>
+                          <td class="tx-center">
+                            <div class="btn-group pd-t-5" role="group" aria-label="Button group with nested dropdown">
+                              <button type="button" class="btn btn-outlined-primary btn-sm pd-y-3">Download</button>
+                            
+                              <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-outlined-primary btn-sm pd-y-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> 
+                                  <a class="dropdown-item" href="#"  type="button" data-toggle="modal" data-target="#shareModal">Share</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        
+                        <tr class=''>
+                          <th scope="row">
+                            <div class="d-flex">
+                              <div class="custom-control custom-checkbox first">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label pd-y-10" for="customCheck2">
+                                </label>
+                              </div>
+                              <div class="ml-2">
+                                <p class="tx-medium mb-0">Exit Report for GHHR</p>
+                                <span class="text-gray-600">Shared by Tope Collins Tue, May 11 4:13 PM</span>
+  
+                            </div>
+                            
+                          </th>
+                          <td><span class="badge badge-active mg-t-10">completed</span></td>
+                          <td class="tx-center">
+                            <div class="btn-group pd-t-5" role="group" aria-label="Button group with nested dropdown">
+                              <button type="button" class="btn btn-outlined-primary btn-sm pd-y-3">Download</button>
+                            
+                              <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-outlined-primary btn-sm pd-y-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> 
+                                  <a class="dropdown-item" href="#"  type="button" data-toggle="modal" data-target="#shareModal">Share</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                   </div>
+                 </div>
+                
+                </div>
+                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                  <div class="card-header  pd-t-0 pd-b-15 bd-b-0">
+                        <div class="row justify-content-between">
+                          <div class="col-md-7 col-12">
+                            <div class="d-flex">
+                              <div class="mr-3 pd-t-10">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input "  name="select-all" id="customCheck">
+                                  <label class="custom-control-label tx-medium" for="customCheck"> Select All
+                                  </label>
+                                </div>
+                              </div>
+                              
+                              <div class="search-form">
+                                <input type="search" class="form-control" placeholder="Search">
+                                <button class="btn" type="button"><i data-feather="search"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 pd-l-0 col-12">
+                            <div class="d-flex">
+                              <button class="btn btn-outlined-primary btn-sm" disabled><img src="../assets/img/icon/download.svg" class="mr-1 tx-primary">Download All</button>
+                              <button class="btn btn-primary ml-2 btn-sm" disabled><img src="../assets/img/icon/delete.svg" class="mr-1">Delete</button>
+                            </div>
+                          </div>
+                          
+                      </div>
+                      <hr class="mb-0"/>
+                    </div>
+                 <div class="card-body">
+                   <div class="table-responsive">
+                    <table class="table display table-hover bd-t-0" id="employee">
+                      <tbody>
+                        <tr class=''>
+                          <th scope="row">
+                            <div class="d-flex">
+                              <div class="custom-control custom-checkbox first">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label pd-y-10" for="customCheck2">
+                                </label>
+                              </div>
+                              <div class="ml-2">
+                                <p class="tx-medium mb-0">Exit Report for GHHR</p>
+                                <span class="text-gray-600">Shared by Tope Collins Tue, May 11 4:13 PM</span>
+  
+                            </div>
+                            
+                          </th>
+                          <td><span class="badge badge-blue mg-t-10">processing</span></td>
+                          <td class="tx-center">
+                            <div class="btn-group pd-t-5" role="group" aria-label="Button group with nested dropdown">
+                              <button type="button" class="btn btn-outlined-primary btn-sm pd-y-3">Download</button>
+                            
+                              <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-outlined-primary btn-sm pd-y-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> 
+                                  <a class="dropdown-item" href="#"  type="button" data-toggle="modal" data-target="#shareModal">Share</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class=''>
+                          <th scope="row">
+                            <div class="d-flex">
+                              <div class="custom-control custom-checkbox first">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label pd-y-10" for="customCheck2">
+                                </label>
+                              </div>
+                              <div class="ml-2">
+                                <p class="tx-medium mb-0">Confirmation for April Intakes</p>
+                                <span class="text-gray-600">Shared by Tope Collins Tue, May 11 4:13 PM</span>
+  
+                            </div>
+                            
+                          </th>
+                          <td><span class="badge badge-active mg-t-10">completed</span></td>
+                          <td class="tx-center">
+                            <div class="btn-group pd-t-5" role="group" aria-label="Button group with nested dropdown">
+                              <button type="button" class="btn btn-outlined-primary btn-sm pd-y-3">Download</button>
+                            
+                              <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-outlined-primary btn-sm pd-y-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> 
+                                  <a class="dropdown-item" href="#"  type="button" data-toggle="modal" data-target="#shareModal">Share</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        
+                        <tr class=''>
+                          <th scope="row">
+                            <div class="d-flex">
+                              <div class="custom-control custom-checkbox first">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label pd-y-10" for="customCheck2">
+                                </label>
+                              </div>
+                              <div class="ml-2">
+                                <p class="tx-medium mb-0">Exit Report for GHHR</p>
+                                <span class="text-gray-600">Shared by Tope Collins Tue, May 11 4:13 PM</span>
+  
+                            </div>
+                            
+                          </th>
+                          <td><span class="badge badge-active mg-t-10">completed</span></td>
+                          <td class="tx-center">
+                            <div class="btn-group pd-t-5" role="group" aria-label="Button group with nested dropdown">
+                              <button type="button" class="btn btn-outlined-primary btn-sm pd-y-3">Download</button>
+                            
+                              <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-outlined-primary btn-sm pd-y-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> 
+                                  <a class="dropdown-item" href="#"  type="button" data-toggle="modal" data-target="#shareModal">Share</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                   </div>
+                 </div>
+                </div>
+                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                    <div class="card-header  pd-t-0 pd-b-15 bd-b-0">
+                        <div class="row justify-content-between">
+                          <div class="col-md-7 col-12">
+                            <div class="d-flex">
+                              <div class="mr-3 pd-t-10">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input "  name="select-all" id="customCheck">
+                                  <label class="custom-control-label tx-medium" for="customCheck"> Select All
+                                  </label>
+                                </div>
+                              </div>
+                              
+                              <div class="search-form">
+                                <input type="search" class="form-control" placeholder="Search">
+                                <button class="btn" type="button"><i data-feather="search"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 pd-l-0 col-12">
+                            <div class="d-flex">
+                              <button class="btn btn-outlined-primary btn-sm" disabled><img src="../assets/img/icon/download.svg" class="mr-1 tx-primary">Download All</button>
+                              <button class="btn btn-primary ml-2 btn-sm" disabled><img src="../assets/img/icon/delete.svg" class="mr-1">Delete</button>
+                            </div>
+                          </div>
+                          
+                      </div>
+                      <hr class="mb-0"/>
+                    </div>
+                 <div class="card-body">
+                   <div class="table-responsive">
+                    <table class="table display table-hover bd-t-0" id="employee">
+                      <tbody>
+                        <tr class=''>
+                          <th scope="row">
+                            <div class="d-flex">
+                              <div class="custom-control custom-checkbox first">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label pd-y-10" for="customCheck2">
+                                </label>
+                              </div>
+                              <div class="ml-2">
+                                <p class="tx-medium mb-0">Exit Report for GHHR</p>
+                                <span class="text-gray-600">Shared by Tope Collins Tue, May 11 4:13 PM</span>
+  
+                            </div>
+                            
+                          </th>
+                          <td><span class="badge badge-blue mg-t-10">processing</span></td>
+                          <td class="tx-center">
+                            <div class="btn-group pd-t-5" role="group" aria-label="Button group with nested dropdown">
+                              <button type="button" class="btn btn-outlined-primary btn-sm pd-y-3">Download</button>
+                            
+                              <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-outlined-primary btn-sm pd-y-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> 
+                                  <a class="dropdown-item" href="#"  type="button" data-toggle="modal" data-target="#shareModal">Share</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class=''>
+                          <th scope="row">
+                            <div class="d-flex">
+                              <div class="custom-control custom-checkbox first">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label pd-y-10" for="customCheck2">
+                                </label>
+                              </div>
+                              <div class="ml-2">
+                                <p class="tx-medium mb-0">Confirmation for April Intakes</p>
+                                <span class="text-gray-600">Shared by Tope Collins Tue, May 11 4:13 PM</span>
+  
+                            </div>
+                            
+                          </th>
+                          <td><span class="badge badge-active mg-t-10">completed</span></td>
+                          <td class="tx-center">
+                            <div class="btn-group pd-t-5" role="group" aria-label="Button group with nested dropdown">
+                              <button type="button" class="btn btn-outlined-primary btn-sm pd-y-3">Download</button>
+                            
+                              <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-outlined-primary btn-sm pd-y-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> 
+                                  <a class="dropdown-item" href="#"  type="button" data-toggle="modal" data-target="#shareModal">Share</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        
+                        <tr class=''>
+                          <th scope="row">
+                            <div class="d-flex">
+                              <div class="custom-control custom-checkbox first">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label pd-y-10" for="customCheck2">
+                                </label>
+                              </div>
+                              <div class="ml-2">
+                                <p class="tx-medium mb-0">Exit Report for GHHR</p>
+                                <span class="text-gray-600">Shared by Tope Collins Tue, May 11 4:13 PM</span>
+  
+                            </div>
+                            
+                          </th>
+                          <td><span class="badge badge-active mg-t-10">completed</span></td>
+                          <td class="tx-center">
+                            <div class="btn-group pd-t-5" role="group" aria-label="Button group with nested dropdown">
+                              <button type="button" class="btn btn-outlined-primary btn-sm pd-y-3">Download</button>
+                            
+                              <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-outlined-primary btn-sm pd-y-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> 
+                                  <a class="dropdown-item" href="#"  type="button" data-toggle="modal" data-target="#shareModal">Share</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                   </div>
+                 </div>
+                </div>
+                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                    <div class="card-header  pd-t-0 pd-b-15 bd-b-0">
+                        <div class="row justify-content-between">
+                          <div class="col-md-7 col-12">
+                            <div class="d-flex">
+                              <div class="mr-3 pd-t-10">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input "  name="select-all" id="customCheck">
+                                  <label class="custom-control-label tx-medium" for="customCheck"> Select All
+                                  </label>
+                                </div>
+                              </div>
+                              
+                              <div class="search-form">
+                                <input type="search" class="form-control" placeholder="Search">
+                                <button class="btn" type="button"><i data-feather="search"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4 pd-l-0 col-12">
+                            <div class="d-flex">
+                              <button class="btn btn-outlined-primary btn-sm" disabled><img src="../assets/img/icon/download.svg" class="mr-1 tx-primary">Download All</button>
+                              <button class="btn btn-primary ml-2 btn-sm" disabled><img src="../assets/img/icon/delete.svg" class="mr-1">Delete</button>
+                            </div>
+                          </div>
+                          
+                      </div>
+                      <hr class="mb-0"/>
+                    </div>
+                 <div class="card-body">
+                   <div class="table-responsive">
+                    <table class="table display table-hover bd-t-0" id="employee">
+                      <tbody>
+                        <tr class=''>
+                          <th scope="row">
+                            <div class="d-flex">
+                              <div class="custom-control custom-checkbox first">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label pd-y-10" for="customCheck2">
+                                </label>
+                              </div>
+                              <div class="ml-2">
+                                <p class="tx-medium mb-0">Exit Report for GHHR</p>
+                                <span class="text-gray-600">Shared by Tope Collins Tue, May 11 4:13 PM</span>
+  
+                            </div>
+                            
+                          </th>
+                          <td><span class="badge badge-blue mg-t-10">processing</span></td>
+                          <td class="tx-center">
+                            <div class="btn-group pd-t-5" role="group" aria-label="Button group with nested dropdown">
+                              <button type="button" class="btn btn-outlined-primary btn-sm pd-y-3">Download</button>
+                            
+                              <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-outlined-primary btn-sm pd-y-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> 
+                                  <a class="dropdown-item" href="#"  type="button" data-toggle="modal" data-target="#shareModal">Share</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class=''>
+                          <th scope="row">
+                            <div class="d-flex">
+                              <div class="custom-control custom-checkbox first">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label pd-y-10" for="customCheck2">
+                                </label>
+                              </div>
+                              <div class="ml-2">
+                                <p class="tx-medium mb-0">Confirmation for April Intakes</p>
+                                <span class="text-gray-600">Shared by Tope Collins Tue, May 11 4:13 PM</span>
+  
+                            </div>
+                            
+                          </th>
+                          <td><span class="badge badge-active mg-t-10">completed</span></td>
+                          <td class="tx-center">
+                            <div class="btn-group pd-t-5" role="group" aria-label="Button group with nested dropdown">
+                              <button type="button" class="btn btn-outlined-primary btn-sm pd-y-3">Download</button>
+                            
+                              <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-outlined-primary btn-sm pd-y-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> 
+                                  <a class="dropdown-item" href="#"  type="button" data-toggle="modal" data-target="#shareModal">Share</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        
+                        <tr class=''>
+                          <th scope="row">
+                            <div class="d-flex">
+                              <div class="custom-control custom-checkbox first">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label pd-y-10" for="customCheck2">
+                                </label>
+                              </div>
+                              <div class="ml-2">
+                                <p class="tx-medium mb-0">Exit Report for GHHR</p>
+                                <span class="text-gray-600">Shared by Tope Collins Tue, May 11 4:13 PM</span>
+  
+                            </div>
+                            
+                          </th>
+                          <td><span class="badge badge-active mg-t-10">completed</span></td>
+                          <td class="tx-center">
+                            <div class="btn-group pd-t-5" role="group" aria-label="Button group with nested dropdown">
+                              <button type="button" class="btn btn-outlined-primary btn-sm pd-y-3">Download</button>
+                            
+                              <div class="btn-group" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-outlined-primary btn-sm pd-y-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> 
+                                  <a class="dropdown-item" href="#"  type="button" data-toggle="modal" data-target="#shareModal">Share</a>
+                                  <a class="dropdown-item" href="#">Delete</a>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                   </div>
+                 </div>
+                </div>
+                <div class="tab-pane fade" id="list-confirm" role="tabpanel" aria-labelledby="list-confirm-list">
+                  <div class="card-header  pd-t-0 pd-b-15 bd-b-0">
+                      <div class="row justify-content-between">
+                        <div class="col-md-7 col-12">
+                          <div class="d-flex">
+                            <div class="mr-3 pd-t-10">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input "  name="select-all" id="customCheck">
+                                <label class="custom-control-label tx-medium" for="customCheck"> Select All
+                                </label>
+                              </div>
+                            </div>
+                            
+                            <div class="search-form">
+                              <input type="search" class="form-control" placeholder="Search">
+                              <button class="btn" type="button"><i data-feather="search"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 pd-l-0 col-12">
+                          <div class="d-flex">
+                            <button class="btn btn-outlined-primary btn-sm" disabled><img src="../assets/img/icon/download.svg" class="mr-1 tx-primary">Download All</button>
+                            <button class="btn btn-primary ml-2 btn-sm" disabled><img src="../assets/img/icon/delete.svg" class="mr-1">Delete</button>
+                          </div>
+                        </div>
+                        
+                    </div>
+                    <hr class="mb-0"/>
+                  </div>
+               <div class="card-body">
+                 <div class="table-responsive">
+                  <table class="table display table-hover bd-t-0" id="employee">
+                    <tbody>
+                      <tr class=''>
+                        <th scope="row">
+                          <div class="d-flex">
+                            <div class="custom-control custom-checkbox first">
+                              <input type="checkbox" class="custom-control-input" id="customCheck2">
+                              <label class="custom-control-label pd-y-10" for="customCheck2">
+                              </label>
+                            </div>
+                            <div class="ml-2">
+                              <p class="tx-medium mb-0">Exit Report for GHHR</p>
+                              <span class="text-gray-600">Shared by Tope Collins Tue, May 11 4:13 PM</span>
+
+                          </div>
+                          
+                        </th>
+                        <td><span class="badge badge-blue mg-t-10">processing</span></td>
+                        <td class="tx-center">
+                          <div class="btn-group pd-t-5" role="group" aria-label="Button group with nested dropdown">
+                            <button type="button" class="btn btn-outlined-primary btn-sm pd-y-3">Download</button>
+                          
+                            <div class="btn-group" role="group">
+                              <button id="btnGroupDrop1" type="button" class="btn btn-outlined-primary btn-sm pd-y-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> 
+                                <a class="dropdown-item" href="#">Dropdown link</a>
+                                <a class="dropdown-item" href="#">Dropdown link</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class=''>
+                        <th scope="row">
+                          <div class="d-flex">
+                            <div class="custom-control custom-checkbox first">
+                              <input type="checkbox" class="custom-control-input" id="customCheck2">
+                              <label class="custom-control-label pd-y-10" for="customCheck2">
+                              </label>
+                            </div>
+                            <div class="ml-2">
+                              <p class="tx-medium mb-0">Confirmation for April Intakes</p>
+                              <span class="text-gray-600">Shared by Tope Collins Tue, May 11 4:13 PM</span>
+
+                          </div>
+                          
+                        </th>
+                        <td><span class="badge badge-active mg-t-10">completed</span></td>
+                        <td class="tx-center">
+                          <div class="btn-group pd-t-5" role="group" aria-label="Button group with nested dropdown">
+                            <button type="button" class="btn btn-outlined-primary btn-sm pd-y-3">Download</button>
+                          
+                            <div class="btn-group" role="group">
+                              <button id="btnGroupDrop1" type="button" class="btn btn-outlined-primary btn-sm pd-y-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> 
+                                <a class="dropdown-item" href="#">Dropdown link</a>
+                                <a class="dropdown-item" href="#">Dropdown link</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      
+                      <tr class=''>
+                        <th scope="row">
+                          <div class="d-flex">
+                            <div class="custom-control custom-checkbox first">
+                              <input type="checkbox" class="custom-control-input" id="customCheck2">
+                              <label class="custom-control-label pd-y-10" for="customCheck2">
+                              </label>
+                            </div>
+                            <div class="ml-2">
+                              <p class="tx-medium mb-0">Exit Report for GHHR</p>
+                              <span class="text-gray-600">Shared by Tope Collins Tue, May 11 4:13 PM</span>
+
+                          </div>
+                          
+                        </th>
+                        <td><span class="badge badge-active mg-t-10">completed</span></td>
+                        <td class="tx-center">
+                          <div class="btn-group pd-t-5" role="group" aria-label="Button group with nested dropdown">
+                            <button type="button" class="btn btn-outlined-primary btn-sm pd-y-3">Download</button>
+                          
+                            <div class="btn-group" role="group">
+                              <button id="btnGroupDrop1" type="button" class="btn btn-outlined-primary btn-sm pd-y-3 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> 
+                                <a class="dropdown-item" href="#">Dropdown link</a>
+                                <a class="dropdown-item" href="#">Dropdown link</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                 </div>
+               </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <!--share Modal -->
+          <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header bd-b-0">
+                  <p class="tx-22 tx-semibold mb-0">Share Report</p>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput" class="d-block tx-medium tx-14 mb-1">Add receipient email<span class="text-gray-600"> (separate by comma for multiple emails) </span></label>
+                      <input type="text" class="form-control" placeholder="- Enter here -">
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput" class="d-block tx-medium tx-14 mb-1">Enter Message <span class="text-gray-600">(Optional)</span> </label>
+                      <textarea name="" id="" rows="4" class="form-control"></textarea>
+                    </div>
+                    <p class="tx-12 text-gray-600">Each recipient will receive an email and a notification within app with a secure link to this report</p>
+                  </form>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#successModal"  data-dismiss="modal">Share Report</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+           <!--success  Modal -->
+      <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header pd-y-10 bd-b-0">
+              <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+              <div class="d-flex">
+                <div>
+                  <img src="../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
+                </div>
+                <div class="mg-l-10 pd-t-20">
+                  <p class="tx-22 tx-bold mb-0">Report Shared Successfully</p>
+                  <hr/>
+                  <p class="tx-14 tx-light-black">Notification and email has been sent to each recipient to access this report. </p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer bg-modal-footer">
+              <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.aside.js"></script>
+    <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    
+
+    <script src="../../assets/js/drop.js"></script>
+    <script src="../../assets/js/dropzone.js"></script>
+    <script>
+      $('#tableData').DataTable({
+        responsive: true,
+        language: {
+          searchPlaceholder: 'Search...',
+          sSearch: '',
+          lengthMenu: '_MENU_ items/page',
+        }
+      });
+    </script>
+<script>
+    //date picker
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#daterange span').html(start.format('MMMM D YYYY') + ' - ' + end.format('MMMM D YYYY'));
+    }
+
+    $('#daterange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+    //checkboxes select
+    $("#customCheck").click(function () {
+     $('.first input:checkbox').not(this).prop('checked', this.checked);
+       });
+
+       $("#customUnCheck").click(function () {
+        $('.first input:checkbox').not(this).prop('checked', this.checked);
+       });
+
+
+</script>
+  </body>
+</html>
