@@ -41,7 +41,7 @@ body { -webkit-font-smoothing: antialiased; }
      border:1.2px solid #fff;
      border-radius:60px;
      background-color: #121212b8;
-     font-weight: 00;
+     font-weight: 500;
    }
    .bg-not{
      background-color: #FAFBFC;
