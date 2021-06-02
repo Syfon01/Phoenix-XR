@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Rewards and Sanction</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <script src="../../../assets/lib/jquery-simple-datetimepicker/jquery.simple-dtpicker.css"></script>
+    <link href="../../../assets/lib/select2/css/select2.min.css" rel="stylesheet">
+
+
+
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../../assets/css/custom.css">
+    <link rel="stylesheet" href="../../../assets/css/reward_sanction.css">
+    <link rel="stylesheet" href="../../../assets/css/dashforge.css">
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+  </head>
+  <body class="">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white bd navbar-header-fixed pd-b-0">
+        <div class="container">
+          <a class="navbar-brand tx-bold tx-spacing--2 order-1" href="./index.html">            
+            <img src="../../../assets/img/connect.svg" alt="" class="img-fluid mr-4">
+          </a>
+          <button class="navbar-toggler order-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i data-feather="menu" class="wd-20 ht-20"></i>
+          </button>
+        
+          <div class="collapse navbar-collapse order-2" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active pb-2 mg-b-20 mg-lg-b-0">
+                <a class="nav-link header-link pd-b-0" href="./index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              
+            </ul>
+  
+            <ul class="navbar-nav ml-auto mr-5">
+              <li class="nav-item pd-t-10 pb-2">
+                <a href="http://" class="nav-link btn btn-sm btn-outline pd-y-2 w-lg-100 wd-md-100 logout-btn"><i data-feather="power" class="mr-2"></i>Sign out</a>
+              </li>
+              <li class="nav-item d-none d-md-none d-lg-block d-xl-block">
+                <a class="nav-link pb-2 navbar-brand navbar-right tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/home.html"><img src="../../../assets/img/logo.png" class="img-fluid"/></a>
+              </li>
+            </ul>
+  
+          </div>
+        </div>
+
+      </nav>
+    </header>
+    
+    <section class="secondary-bg">
+      <div class="container pt-md-5 mg-t-25 mg-md-t-0 mg-lg-t-35">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb-style2 bg-transparent mg-b-0">
+            <li class="breadcrumb-item pb-0"><a href="../../index.html" class="text-capitalize breadcrumb-size tx-secondary">Home</a></li>
+            <li class="breadcrumb-item breadcrumb-size pb-0 active text-capitalize tx-secondary " aria-current="page">Work Ethics</li>
+          </ol>
+        </nav>
+
+        <div class="mesh-div pd-md-x-25 pd-md-y-30 mg-t-20 pd-10">
+          <div class="row justify-content-between">
+            <div class="col-md-12 col-lg-9 col-12 pd-lg-r-0">
+              <div class="row">
+                <div class="col-md-2 col-3 pd-t-10 pd-md-t-5 pd-r-0 adjust-width">
+                  <div class="avata bg-white rounded-circle tx-center pd-md-20 pd-10"><img src="../../../assets/img/Work Ethics.svg" class="d-block img-fluid perf-img" alt=""></div>
+                </div>
+                <div class="col-md-10 col-9 pd-x-0">
+                  <p class="tx-36 tx-white tx-bold mb-0">
+                    Employee Work Ethics
+                  </p>
+                  <p class="tx-14 mb-0 tx-whiter tx-normal">Check how you're doing in alignment to the bank's values and code of conduct.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-7 col-12 pd-lg-l-10">
+              <div class="d-flex pd-t-25 float-md-right">
+                <div class="">
+                  <button type="" class="btn btn-black tx-semibold tx-white tx-12 pd-x-20">View FAQs</button>
+                </div>
+                <div class="mg-l-15">
+                  <button type="" class="btn btn-black tx-semibold tx-white tx-12">Go to Helpdesk</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-between pd-t-20">
+          <div class="col-md-7 col-12">
+            <p class="tx-14 tx-grey-600">You are viewing Work Ethics as <span class="tx-grey-900 tx-bold">Employee Self Service</span></p>
+          </div>
+          <!-- <div class="col-md-4 col-12">
+            <span  class="d-inline-block tx-primary float-md-right tx-bold" type="button" data-toggle="modal" data-target="#workModal"> <img src="../../../assets/img/icon/swap.svg" class="img-fluid" alt="" srcset=""> Change your Access Mode</span>
+          </div> -->
+        </div>
+       
+      </div>
+
+        <section class="sanction-module bg-white">
+          <div class="container py-5">
+            <div class="row">
+              <div class="col-12 col-lg-3 mg-t-20 mg-md-t-0">
+                <p class="tx-14 mg-b-20 tx-grey-600">EMPLOYEE SELF SERVICE MENU</p>
+                <div class="list-group" id="list-tab" role="tablist">
+                  <a class="list-group-item prima list-group-item-action active" id="list-dc-list" data-toggle="list" href="#list-dc" role="tab" aria-controls="home">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <img src="../../../assets/img/icon/dc.svg" alt="" srcset="" class="mg-r-10 img-fluid"> DC Panelist
+                      </div>
+                      <div>
+                        <span>2</span>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="list-group-item prima list-group-item-action" id="list-dc-list-sitting" data-toggle="list" href="#list-dc-sitting" role="tab" aria-controls="sitting">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <img src="../../../assets/img/icon/dc.svg" alt="" srcset="" class="mg-r-10 img-fluid"> DC Sitting
+                      </div>
+                      <div>
+                        <span>2</span>
+                      </div>
+                    </div>
+                  </a>
+                  
+                  <a class="list-group-item prima list-group-item-action" id="list-sanction-list" data-toggle="list" href="#list-sanction" role="tab" aria-controls="sanctions"> 
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <img src="../../../assets/img/icon/sanction.svg" alt="" srcset="" class="mg-r-10 img-fluid"> Sanctions
+                      </div>
+                      <div>
+                        <span>2</span>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="list-group-item prima list-group-item-action" id="list-commend-list" data-toggle="list" href="#list-commend" role="tab" aria-controls="commend">
+                   <div class="d-flex justify-content-between">
+                     <div>
+                      <img src="../../../assets/img/icon/recall.svg" alt="" srcset="" class="mg-r-10 img-fluid"> Commendation
+                     </div>
+                     <div>
+                       <span>3</span>
+                     </div>
+                   </div>
+                  </a>
+                  <a class="list-group-item prima list-group-item-action" id="list-recognition-list" data-toggle="list" href="#list-recognition" role="tab" aria-controls="recognition">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                       <img src="../../../assets/img/icon/recall.svg" alt="" srcset="" class="mg-r-10 img-fluid"> Recognition
+                      </div>
+                      <div>
+                        <span>4</span>
+                      </div>
+                    </div>
+                   </a>
+                  <a class="list-group-item prima list-group-item-action" id="list-reward-list" data-toggle="list" href="#list-reward" role="tab" aria-controls="recall">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <img src="../../../assets/img/icon/recall.svg" alt="" srcset="" class="mg-r-10 img-fluid"> Recall
+                      </div>
+                      <div>
+                        0
+                      </div>
+                    </div>
+                  </a>
+                  <a class="list-group-item prima list-group-item-action" id="list-withdraw-list" data-toggle="list" href="#list-withdraw" role="tab" aria-controls="withdraw"> 
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <img src="../../../assets/img/icon/withdraw.svg" alt="" srcset="" class="mg-r-10 img-fluid"> Withdraw
+                      </div>
+                      <div>
+                        1
+                      </div>
+                    </div>
+                  </a>
+                  <a class="list-group-item prima list-group-item-action" id="list-grievance-list" data-toggle="list" href="#list-grievance" role="tab" aria-controls="grievance">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <img src="../../../assets/img/icon/grievance.svg" alt="" srcset="" class="mg-r-10 img-fluid"> Grievances
+                      </div>
+                      <div>
+                        4
+                      </div>
+                    </div>
+                  </a>
+                  <a class="list-group-item prima list-group-item-action" id="list-appeal-list" data-toggle="list" href="#list-appeal" role="tab" aria-controls="appeal">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <img src="../../../assets/img/icon/grievance.svg" alt="" srcset="" class="mg-r-10 img-fluid"> Appeal
+                      </div>
+                      <div>
+                        4
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-9 mg-t-20 mg-md-t-0">
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="list-dc" role="tabpanel" aria-labelledby="list-dc-list">
+                    <div class="row justify-content-between">
+                      <div class="col-md-8 col-12">
+                        <p class="tx-28 tx-bold mb-0">DC Panelist</p>
+                        <p class="tx-14 tx-secondary">View your invitations to DC sittings. Also, review sitting details and summary.</p>
+                      </div>
+                      <div class="col-md-4 col-lg-3 col-12">
+                      </div>
+                    </div>
+                    <ul class="nav nav-line" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active pd-x-20" id="attention-tab" data-toggle="tab" href="#attention" role="tab" aria-controls="attention" aria-selected="true">Requiring Attention</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="invites-tab" data-toggle="tab" href="#invites" role="tab" aria-controls="invites" aria-selected="false">Accepted Invites</a>
+                      </li>
+                      
+                    </ul>   
+                    <div class="tab-content  bd-t-0 pd-y-20" id="myTabContent">
+                      <div class="tab-pane fade show active" id="attention" role="tabpanel" aria-labelledby="attention-tab">
+                        <div class="table-section">
+                          <div class="card bg-transparent">
+                            <div class="card-header pd-x-15 pd-y-10">
+                              <div class="row justify-content-between">
+                                <div class="col-md-8 col-12 col-lg-8 ">
+                                  <p class="tx-16 mb-0 tx-semibold mg-t-10">
+                                    Pending DC Invitations/Summary Reports <span>(2)</span>
+                                  </p>
+                                </div>
+                                
+                              </div>
+                            </div>
+                            <div class="card-body pd-10">
+                              <table class="table display">
+                                <thead>
+                                  <tr class="tx-uppercase tx-12 tx-semibold">
+                                    <th>S/N</th>
+                                    <th>CASE</th>
+                                    <th>TYPE</th>
+                                    <th>LAST MODIFIED</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td class="tx-medium tx-12 mb-0" style="width: 340px;">Alleged eight accounts receiving  multiple salaries from local government authority(ies)</td>
+                                    <td>
+                                      <p class=" tx-medium tx-12 mb-0 pd-t-5">DC Invitation</p>
+                                    </td>
+                                    <td>
+                                      <div>
+                                        <p class="tx-12 mb-0 pd-t-10">Mar 4, 2021</p>
+                                      </div>
+                                    </td>
+                                    <td>   
+                                      <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#pendingModal"> Review</button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td class="tx-medium tx-12 mb-0" style="width: 340px;">A case of over-aged debit of n=10,458,516.61 in transit 3 account of maraba business which ...</td>
+                                    <td>
+                                      <p class=" tx-medium tx-12 mb-0 pd-t-5">DC Summary Report</p>
+                                    </td>
+                                    <td>
+                                      <div>
+                                        <p class="tx-12 mb-0 pd-t-10">Mar 4, 2021</p>
+                                      </div>
+                                    </td>
+                                    <td>   
+                                      <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#pendingModal"> Review</button>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      
+                      </div>
+
+                      <div class="tab-pane fade" id="invites" role="tabpanel" aria-labelledby="invites-tab">
+                        <div class="table-section">
+                          <div class="card bg-transparent">
+                            <div class="card-header pd-x-15 pd-y-10">
+                              <div class="row justify-content-between">
+                                <div class="col-md-8 col-12 col-lg-8 ">
+                                  <p class="tx-16 mb-0 tx-semibold mg-t-10">
+                                    Accepted DC Invites
+                                  </p>
+                                </div>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-body pd-10">
+                              <table class="table display">
+                                <thead>
+                                  <tr class="tx-uppercase tx-12 tx-semibold">
+                                    <th>S/N</th>
+                                    <th>CASE</th>
+                                    <th>SITTING DATE</th>
+                                    <th>PROGRESS</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td class="tx-medium tx-12 mb-0" style="width: 340px;">Alleged eight accounts receiving  multiple salaries from local government authority(ies)</td>
+                                    <td>
+                                      <div>
+                                        <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                          <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div>
+                                        <span class="bg-sche tx-second badge tx-11 tx-semibold mg-t-5">SCHEDULED</span>
+                                      </div>
+                                    </td>
+                                    <td style="width:40px;">   
+                                      <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#declinedModal"> View</button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td class="tx-medium tx-12 mb-0" style="width: 340px;">A case of over-aged debit of n=10,458,516.61 in transit 3 account of maraba business office which was in respect... </td>
+                                    <td>
+                                      <div>
+                                        <p class="tx-12 mb-0">Jan 26, 2021</p>
+                                          <label for="" class="tx-12 mb-0 tx-grey-500">  4:06pm</label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <span class="bg-green-50 tx-green badge tx-11 tx-semibold mg-t-5">ACTIVE</span>
+                                    </td>
+                                    <td style="width:40px;">   
+                                      <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#declinedModal"> View</button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td class="tx-medium tx-12 mb-0" style="width: 340px;">Abscondment from office  - ngozi-ibeh chiamobi zion- a20474 - oyan business office</td>
+                                    <td>
+                                      <div>
+                                        <p class="tx-12 mb-0">Feb 26, 2021</p>
+                                          <label for="" class="tx-12 mb-0 tx-grey-500">  4:06pm</label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <span class="bg-conclude tx-grey-800 badge tx-11 tx-semibold mg-t-5">CONCLUDED</span>
+                                    </td>
+                                    <td style="width:40px;">   
+                                      <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#declinedModal"> View</button>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          
+                    </div>
+                  </div>
+                      
+                  <div class="tab-pane fade" id="list-dc-sitting" role="tabpanel" aria-labelledby="list-dc-list-sitting">
+                    <div class="row justify-content-between">
+                      <div class="col-md-12 col-12">
+                        <p class="tx-28 tx-bold mb-0">DC Sitting</p>
+                        <p class="tx-14 tx-secondary">View details about disciplinary committee sittings you have been summoned to as a culprit.</p>
+                      </div>
+                    </div>
+                    <ul class="nav nav-line" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active pd-x-20" id="dc-ongoing-tab" data-toggle="tab" href="#dc-ongoing" role="tab" aria-controls="dc-ongoing" aria-selected="true">Ongoing</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link" id="dc-concluded-tab" data-toggle="tab" href="#dc-concluded" role="tab" aria-controls="dc-concluded" aria-selected="false">Concluded</a>
+                      </li>
+                      
+                      
+                    </ul>   
+                    <div class="tab-content  bd-t-0 pd-y-20" id="myTabContent">
+                      <div class="tab-pane fade show active" id="dc-ongoing" role="tabpanel" aria-labelledby="dc-ongoing-tab">
+                        
+                        <div class="table-section">
+                          <div class="card bg-transparent">
+                            <div class="card-header pd-x-15 pd-y-10">
+                              <div class="row justify-content-between">
+                                <div class="col-md-8 col-12 col-lg-8 ">
+                                  <p class="tx-16 mb-0 tx-semibold mg-t-10">
+                                    <img src="../../../assets/img/icon/Yet to Start.svg" alt="" class="img-fluid mr-2">
+                                    Ongoing DC Sittings (1)
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-body pd-10">
+                              <table class="table display">
+                                <thead>
+                                  <tr class="tx-uppercase tx-12 tx-semibold">
+                                    <th>S/N</th>
+                                    <th>CASE/REPORT</th>
+                                    <th>SCHEDULED DATE</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>
+                                      <p class=" tx-medium tx-12 mb-0" style="width: 360px;">Alleged eight accounts receiving  multiple salaries from local government authority(ies)</p>
+                                    </td>
+                                    <td>
+                                      <div>
+                                        <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                          <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                      </div>
+                                    </td>
+                                    <td>   
+                                      <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-pendingModal"> View</button>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      
+                      </div>
+                      
+                      <div class="tab-pane fade" id="dc-concluded" role="tabpanel" aria-labelledby="dc-concluded-tab">
+                        <div class="table-section">
+                          <div class="card bg-transparent">
+                            <div class="card-header pd-x-15 pd-y-10">
+                              <div class="row justify-content-between">
+                                <div class="col-md-6 col-12 col-lg-6 ">
+                                  <p class="tx-16 mb-0 tx-semibold mg-t-10">
+                                    <img src="../../../assets/img/icon/Completed Task.svg" alt="" class="img-fluid mr-2">
+                                    Concluded DC Sittings (1)
+                                  </p>
+                                </div>
+                                
+                              </div>
+                            </div>
+                            <div class="card-body pd-10">
+                              <table class="table display">
+                                <thead>
+                                  <tr class="tx-uppercase tx-12 tx-semibold">
+                                    <th>S/N</th>
+                                    <th>CASE/REPORT</th>
+                                    <th>OUTCOME</th>
+                                    <th> DATE CONCLUDED</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>
+                                      <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 350px;">Alleged eight accounts receiving  multiple salaries from local government authority(ies)</p>
+                                    </td>
+                                    <td class=""><p class="tx-12 mb-0 pd-t-5">Exoneration</p></td>
+                                    <td>
+                                      <div>
+                                        <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                          <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                      </div>
+                                    </td>
+                                    <td>   
+                                      <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-approvedModal"> View</button>
+                                    </td>
+                                  </tr>
+                                  
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="list-sanction" role="tabpanel" aria-labelledby="list-sanction-list">
+                    <div class="row justify-content-between">
+                      <div class="col-md-8 col-12">
+                        <p class="tx-28 tx-bold mb-0">Sanctions</p>
+                        <p class="tx-14 tx-secondary">Log new sanctions and view details about previously logged requests</p>
+                      </div>
+    
+                      <div class="col-md-4 col-lg-3 col-12">
+                        <a href="./log-sanction.html" class="btn btn-primary float-md-right mg-md-t-15" type="button">Log New Sanction</a>
+                      </div>
+    
+                    </div>
+                      <ul class="nav nav-line" id="myTab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active pd-x-20" id="home-tab" data-toggle="tab" href="#san-home" role="tab" aria-controls="home" aria-selected="true">Submitted</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="declined-tab" data-toggle="tab" href="#san-declined" role="tab" aria-controls="declined" aria-selected="false">Declined</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="approved-tab" data-toggle="tab" href="#san-approved" role="tab" aria-controls="approved" aria-selected="false">Approved</a>
+                        </li>
+                        
+                        
+                      </ul>   
+                      <div class="tab-content  bd-t-0 pd-y-20" id="myTabContent">
+                        <div class="tab-pane fade show active" id="san-home" role="tabpanel" aria-labelledby="home-tab">
+                          
+                          <div class="table-section">
+                            <div class="card bg-transparent">
+                              <div class="card-header pd-x-15 pd-y-10">
+                                <div class="row justify-content-between">
+                                  <div class="col-md-8 col-12 col-lg-8 ">
+                                    <p class="tx-16 mb-0 tx-semibold mg-t-10">
+                                      <img src="../../../assets/img/icon/Yet to Start.svg" alt="" class="img-fluid mr-2">
+                                      Pending Sanctions Requests awaiting Approval <span>(4)</span>
+                                    </p>
+                                  </div>
+                                  <div class="col-12 col-md-3 col-lg-3">
+                                    <div class="d-flex float-md-right">
+                                      <div class="">
+                                        <div class="input-group">
+                                          <input type="text" id="san-datepicker" class="date form-control mb-0 bd-r-0" placeholder="Date Initiated">
+                                        </div>
+                                        
+                                      </div>
+                                      
+                                      
+                                      <!-- <div class="col-6 col-md-6">
+                                        <div class="input-group">
+                                        <input type="text" id="datepicker1" class="date form-control bd-r-0" placeholder="Date Approved">
+                                        </div>
+                                        
+                                      </div> -->
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body pd-10">
+                                <table class="table display">
+                                  <thead>
+                                    <tr class="tx-uppercase tx-12 tx-semibold">
+                                      <th>S/N</th>
+                                      <th>SANCTION TITLE</th>
+                                      <th>STAFF</th>
+                                      <th>MODE</th>
+                                      <th>DATE INITIATED</th>
+                                      <th>STATUS</th>
+                                      <th></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 240px;">Failure to move excess cash to CMC</p>
+                                      </td>
+                                      <td class=""><p class="tx-12 mb-0 pd-t-5">4</p></td>
+                                      <td class=""><p class="tx-12 mb-0 pd-t-5">Bulk Upload</p></td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td class="mb-0"><span class="badge bg-light-40 tx-11 tx-semibold mg-t-5">PENDING</span></td>
+                                      <td>   
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-pendingModal"> View</button>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">2</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Breach of cash movement policy</p>
+                                      </td>
+                                      <td class="tx-12 mb-0">3</td>
+                                      <td class="tx-12 mb-0">Bulk Upload</td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td class="mb-0"><span class="badge bg-red-50 tx-red-500 tx-11 tx-semibold">FAILED</span></td>
+                                      <td>   
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-pendingModal"> View</button>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">3</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Unauthorized absence / insubordination</p>
+                                      </td>
+                                      <td class="tx-12 mb-0">3</td>
+                                      <td class="tx-12 mb-0">Individually</td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td class="mb-0"><span class="badge bg-green-50 tx-green tx-11 tx-semibold">COMPLETED</span></td>
+                                      <td>
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-pendingModal"> View</button>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">4</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Alleged failure of integrity testC</p>
+                                      </td>
+                                      <td class="tx-12 mb-0">2</td>
+                                      <td class="tx-12 mb-0">Bulk Upload</td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td class="mb-0"><span class="badge bg-green-50 tx-green tx-11 tx-semibold">COMPLETED</span></td>
+                                      <td>
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-pendingModal"> View</button>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        
+                        </div>
+  
+                        <div class="tab-pane fade" id="san-declined" role="tabpanel" aria-labelledby="declined-tab">
+                          
+                          <div class="table-section">
+                            <div class="card bg-transparent">
+                              <div class="card-header pd-x-15 pd-y-10">
+                                <div class="row justify-content-between">
+                                  <div class="col-md-6 col-12 col-lg-6 ">
+                                    <p class="tx-16 mb-0 tx-semibold mg-t-10">
+                                      <img src="../../../assets/img/icon/Cancelled.svg" alt="" class="img-fluid mr-2">
+                                      Declined Sanctions Requests <span>(2)</span>
+                                    </p>
+                                  </div>
+                                  <div class="col-12 col-md-6 col-lg-5">
+                                    <div class="row justify-content-between">
+                                      <div class="col-6 col-md-6 ">
+                                        <div class="input-group">
+                                          <input type="text" id="san-dec-datepicker" class="date form-control mb-0 bd-r-0" placeholder="Date Initiated">
+                                        </div>
+                                        
+                                      </div>
+                                      
+                                      
+                                      <div class="col-6 col-md-6">
+                                        <div class="input-group">
+                                        <input type="text" id="san-dec-datepicker1" class="date form-control bd-r-0" placeholder="Date Declined">
+                                        </div>
+                                        
+                                      </div>
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body pd-10">
+                                <table class="table display">
+                                  <thead>
+                                    <tr class="tx-uppercase tx-12 tx-semibold">
+                                      <th>S/N</th>
+                                      <th>SANCTION TITLE</th>
+                                      <th>STAFF</th>
+                                      <th>MODE</th>
+                                      <th>DATE INITIATED</th>
+                                      <th>DATE Declined</th>
+                                      <th></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 240px;">Failure to move excess cash to CMC</p>
+                                      </td>
+                                      <td class=""><p class="tx-12 mb-0 pd-t-5">4</p></td>
+                                      <td class=""><p class="tx-12 mb-0 pd-t-5">Bulk Upload</p></td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Jan 1, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>   
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-declinedModal"> View</button>
+                                      </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                      <th scope="row">2</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Unauthorized absence / insubordination</p>
+                                      </td>
+                                      <td class="tx-12 mb-0">3</td>
+                                      <td class="tx-12 mb-0">Individually</td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Feb 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-declinedModal"> View</button>
+                                      </td>
+                                    </tr>
+                                    
+                                  </tbody>
+                                </table>
+                              
+                              </div>
+                            </div>
+                            
+                          </div>
+                        
+                        </div>
+                        
+                        <div class="tab-pane fade" id="san-approved" role="tabpanel" aria-labelledby="approved-tab">
+                          <div class="table-section">
+                            <div class="card bg-transparent">
+                              <div class="card-header pd-x-15 pd-y-10">
+                                <div class="row justify-content-between">
+                                  <div class="col-md-6 col-12 col-lg-6 ">
+                                    <p class="tx-16 mb-0 tx-semibold mg-t-10">
+                                      <img src="../../../assets/img/icon/Completed Task.svg" alt="" class="img-fluid mr-2">
+                                      Approved Sanctions Requests <span>(3)</span></p>
+                                    </p>
+                                  </div>
+                                  <div class="col-12 col-md-6 col-lg-5">
+                                    <div class="row justify-content-between">
+                                      <div class="col-6 col-md-6 ">
+                                        <div class="input-group">
+                                          <input type="text" id="san-appr-datepicker" class="date form-control mb-0 bd-r-0" placeholder="Date Initiated">
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="col-6 col-md-6">
+                                        <div class="input-group">
+                                        <input type="text" id="san-appr-datepicker1" class="date form-control bd-r-0" placeholder="Date Approved">
+                                        </div>
+                                      </div>
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body pd-10">
+                                <table class="table display">
+                                  <thead>
+                                    <tr class="tx-uppercase tx-12 tx-semibold">
+                                      <th>S/N</th>
+                                      <th>SANCTION TITLE</th>
+                                      <th>STAFF</th>
+                                      <th>MODE</th>
+                                      <th>DATE INITIATED</th>
+                                      <th>DATE Declined</th>
+                                      <th></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 240px;">Failure to move excess cash to CMC</p>
+                                      </td>
+                                      <td class=""><p class="tx-12 mb-0 pd-t-5">4</p></td>
+                                      <td class=""><p class="tx-12 mb-0 pd-t-5">Bulk Upload</p></td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Jan 1, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>   
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-approvedModal"> View</button>
+                                      </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                      <th scope="row">2</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Unauthorized absence / insubordination</p>
+                                      </td>
+                                      <td class="tx-12 mb-0">3</td>
+                                      <td class="tx-12 mb-0">Individually</td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Feb 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-approvedModal"> View</button>
+                                      </td>
+                                    </tr>
+
+                                    <tr>
+                                      <th scope="row">3</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Alleged failure of integrity test</p>
+                                      </td>
+                                      <td class="tx-12 mb-0">3</td>
+                                      <td class="tx-12 mb-0">Individually</td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Feb 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-approvedModal"> View</button>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        
+                        </div>
+                      </div>
+  
+                  </div>
+                  <div class="tab-pane fade" id="list-commend" role="tabpanel" aria-labelledby="list-commend-list">...</div>
+                  <div class="tab-pane fade" id="list-recognition" role="tabpanel" aria-labelledby="list-recognition-list">...</div>
+                  <div class="tab-pane fade" id="list-reward" role="tabpanel" aria-labelledby="list-reward-list">...</div>
+                  <div class="tab-pane fade" id="list-withdraw" role="tabpanel" aria-labelledby="list-withdraw-list">...</div>
+                  <div class="tab-pane fade" id="list-grievance" role="tabpanel" aria-labelledby="list-grievance-list">...</div>
+                  <div class="tab-pane fade" id="list-appeal" role="tabpanel" aria-labelledby="list-appeal-list">...</div>
+                </div>
+              </div>
+            </div>
+
+
+             <!--Work Ethics Modal -->
+            <div class="modal fade" id="workModal" tabindex="-1" aria-labelledby="workModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header pd-y-10 bd-b-0">
+                    <h5 class="modal-title" id="workModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> 
+                  <div class="modal-body pd-md-x-30 pd-x-20">
+                    <p class="tx-20 tx-semibold mg-b-15 tx-heading">Access Work Ethics</p>
+                  
+                    <a href="./work-ethics/dashboard.html" class="access-link" >
+                    <div class="card card-body pd-15  mg-b-15 link">
+                      <p class="tx-14 tx-semibold tx-grey-900 mg-b-5">
+                        As Employee (ESS)
+                      </p>
+                      <p class="tx-12 tx-grey-500 mg-b-0">Check how you're doing in alignment to the bank's values and code of conduct.</p>
+                    </div>
+                  </a>
+                    
+                  <a href=" " class="access-link">
+                    <div class="card card-body pd-15 mg-b-15 link">
+                      <p class="tx-14 tx-semibold tx-grey-900 mg-b-5">
+                        As Manager (MSS)
+                      </p>
+                      <p class="tx-12 tx-grey-500 mg-b-0">Evaluate your team based on general workplace behaviours and values. These options apply to your direct reports. See it as your manager self-service menu.  </p>
+                    </div>
+                  </a>
+                  <a href="./work-ethics/dashboard.html" class="access-link">
+                    <div class="card card-body pd-15 mg-b-15 link">
+                      <p class="tx-14 tx-semibold tx-grey-900 mg-b-5">
+                        As Investigation Team Member
+                      </p>
+                      <p class="tx-12 tx-grey-500 mg-b-0">Manage processes relating to investigation leading to DC sittings, sanctions, recall, withdrawal, etc.</p>
+                    </div>
+                  </a>
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+             <!--Request Modal -->
+             <div class="modal fade" id="requestModal" tabindex="-1" aria-labelledby="requestModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                    <div>
+                    <p class="tx-22 tx-semibold modal-title" id="requestModalLabel">Log New DC Request</p>
+                    <p class="tx-12 tx-secondary mb-0">This process issues a request to summon affect employees to a disciplinary committee sitting.</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> 
+                  <div class="modal-body pd-md-x-30 pd-x-20 " style="overflow:hidden;">
+                  
+                    <form action="">
+                      <div class="form-group">
+                        <label for="formGroupExampleInput" class="d-block tx-medium mb-1">Title</label>
+                        <input type="text" class="form-control input-bg" placeholder="Make the title succinct and recognisable">
+                      </div>
+                      <div class="form-group">
+                        <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Description</label>
+                        <textarea name="" id="" class="form-control input-bg" rows="3" placeholder="Describe the request here"></textarea>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Attach Reports</label>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="customFile">
+                          <label class="custom-file-label" for="customFile"><img src="../../../assets/img/icon/upload.svg" class="mr-2"> Drop files here</label>
+                        </div>
+                        <div id="fileList"></div>
+                      </div>
+                      
+                      
+                      <div class="form-group">
+                        <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Involved Employees </label>
+                        <select id="employee" multiple="multiple" class="form-control">
+                          <option value="1">
+                            <div>
+                              <div class="avatar avatar-xs"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>Bayo Adeosun
+                            </div>
+                          </option>
+                          <option value="2">Funke Hussien</option>
+                          <option value="3">Seyi Bassey</option>
+                          <option value="4">Olu Pascal</option>
+                      </select>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary btn-sm pd-x-50 tx-semibold" data-toggle="modal" data-target="#previewModal" data-dismiss="modal">Preview</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Preview Modal -->
+            <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                    <div>
+                      <p class="tx-22 tx-semibold modal-title" id="previewModalLabel">Preview New DC Request</p>
+                      <p class="tx-12 tx-secondary mb-0">This process issues a request to summon affect employees to a disciplinary committee sitting.</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> 
+
+                  <div class="modal-body pd-md-x-30 pd-x-20">
+                   <div class="mg-b-25">
+                    <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
+                    <p class="tx-14 tx-grey-900 mb-0">Alleged eight accounts receiving multiple salaries from local government authority(ies)</p>
+                   </div>
+                   <div class="mg-b-25">
+                      <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
+                      <p class="tx-14 tx-grey-900">The indicted staff allegedly colluded with officials of some local government councils in 
+                        Borno state to divert salaries to accounts operated by the staff.
+                      </p>
+                    </div>
+                    <div class="mg-b-25">
+                      <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
+                      <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                        <div class="row justify-content-between">
+                          <div class="col-9 col-md-9">
+                            <div class="d-flex">
+                              <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                              <div>
+                                <p class="tx-14 tx-grey-900 mb-0">Investigation_report_424.pdf</p>
+                                <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-3 col-md-2 pd-md-l-0">
+                            <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 w-100"> View</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                   <div class="mg-b-25">
+                    <label for="formGroupExampleInput" class="d-block tx-medium mb-0 tx-grey-600 tx-uppercase tx-12">Involved Employees <span>(2)</span></label>
+                    <div class="d-flex mg-t-15">
+                      <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                      <div class="ml-3 pd-t-3">
+                        <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                        <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                      </div>
+                    </div>
+                  
+                    <div class="d-flex mg-t-15">
+                      <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                      <div class="ml-3 pd-t-3">
+                        <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                        <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Edit</button>
+                    <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal" data-dismiss="modal">Submit DC Request</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+             <!--success  Modal -->
+            <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header pd-y-10 bd-b-0">
+                    <h5 class="modal-title"></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="d-flex">
+                      <div>
+                        <img src="../../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
+                      </div>
+                      <div class="mg-l-10">
+                        <p class="tx-22 tx-bold mb-0 pd-t-20">Request Sent for Approval</p>
+                      </div>
+                    </div>
+                    <hr class="mg-t-10"/>
+                    <p class="tx-14">Notification and email has been sent to the authorizer for approval. The request will have a status of PENDING till either approved or declined. </p>
+
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+
+             <!--Pending Modal -->
+             <div class="modal fade" id="pendingModal" tabindex="-1" aria-labelledby="pendingModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                    <div>
+                      <p class="tx-22 tx-semibold modal-title" id="pendingModalLabel">View Case Details</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> 
+                  <div class="modal-body pd-md-x-30 pd-x-20">
+                    <div class="row">
+                      <div class="col-md-9 col-12">
+                        <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
+                          <p class="tx-14 tx-grey-900 mb-0">Alleged eight accounts receiving multiple salaries from local government authority(ies)</p>
+                         </div>
+                         <div class="mg-b-25">
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
+                            <p class="tx-14 tx-grey-900">The indicted staff allegedly colluded with officials of some local government councils in 
+                              Borno state to divert salaries to accounts operated by the staff.
+                            </p>
+                          </div>
+                          <div class="mg-b-25">
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
+                            <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                              <div class="row justify-content-between">
+                                <div class="col-9 col-md-9">
+                                  <div class="d-flex">
+                                    <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                                    <div>
+                                      <p class="tx-14 tx-grey-900 mb-0">Investigation_report_424.pdf</p>
+                                      <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-3 col-md-2 pd-md-l-0">
+                                  <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 w-100"> View</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                         <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-medium mb-0 tx-grey-600 tx-uppercase tx-12">Involved Employees <span>(2)</span></label>
+                          <div class="d-flex mg-t-15">
+                            <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        
+                          <div class="d-flex mg-t-15">
+                            <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-12">
+                        <div class="pd-b-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Status</label>
+                          <p class="tx-11 mb-0"><span class="badge badge-neutral tx-11 tx-semibold pd-y-3">SUBMITTED</span></p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Case ID</label>
+                          <p class="tx-12 mb-0">DCS03</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created on</label>
+                          <p class="tx-12 mb-0">Mon Feb 16, 2021</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created by</label>
+                          <div class="d-flex">
+                            <div class="avatar avatar-sm"><img src="../../../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-2 pd-t-5">
+                              <p class="tx-14 mb-0">Felix Adejumo</p>
+                            </div>
+                          </div>
+                         </div>
+                      </div>
+                    </div>
+                  
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Approved Modal -->
+            <div class="modal fade" id="approvedModal" tabindex="-1" aria-labelledby="approvedmodalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                    <div>
+                      <p class="tx-22 tx-semibold modal-title" id="approvedModalLabel">View Case Details</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> 
+                  <div class="modal-body pd-md-x-30 pd-x-20">
+                    <div class="row">
+                      <div class="col-md-9 col-12">
+                        <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
+                          <p class="tx-14 tx-grey-900 mb-0">Investigation report on recall of funds - mxg energy</p>
+                         </div>
+                         <div class="mg-b-25">
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
+                            <p class="tx-14 tx-grey-900">The indicted staff allegedly failed to clear the N10,458,516.61 debit in the bank's account 
+                              for 10months which was debited to settle a customer and also failed to notify the customer of the outstanding.
+                            </p>
+                          </div>
+                          <div class="mg-b-25">
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
+                            <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                              <div class="row justify-content-between">
+                                <div class="col-9 col-md-9">
+                                  <div class="d-flex">
+                                    <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                                    <div>
+                                      <p class="tx-14 tx-grey-900 mb-0">Investigation_report_424.pdf</p>
+                                      <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-3 col-md-2 pd-md-l-0">
+                                  <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 w-100"> View</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                         <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-medium mb-0 tx-grey-600 tx-uppercase tx-12">Involved Employees <span>(2)</span></label>
+                          <div class="d-flex mg-t-15">
+                            <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        
+                          <div class="d-flex mg-t-15">
+                            <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-12">
+                        <div class="pd-b-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Status</label>
+                          <p class="tx-11 mb-0"><span class="badge badge-green-400 tx-11 tx-semibold pd-y-3">APPROVED</span></p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Case ID</label>
+                          <p class="tx-12 mb-0">DCS02</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created on</label>
+                          <p class="tx-12 mb-0">Mon Feb 16, 2021</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created by</label>
+                          <p class="tx-12 mb-0">Felix Adejumo</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Approved on</label>
+                          <p class="tx-12 mb-0">Mon Mar 1, 2021</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Approved by</label>
+                          <p class="tx-12 mb-0">Adams Ifeanyi</p>
+                         </div>
+                      </div>
+                    </div>
+                  
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+             <!--Declined Modal -->
+             <div class="modal fade" id="declinedModal" tabindex="-1" aria-labelledby="declinedmodalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                    <div>
+                      <p class="tx-22 tx-semibold modal-title" id="declinedModalLabel">View Case Details</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> 
+                  <div class="modal-body pd-md-x-30 pd-x-20">
+                    <div class="card card-body bg-red-50 pd-15 bd-0 mg-b-20">
+                      <div class="d-flex">
+                        <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-4" alt="" srcset="">
+                        <div class="col-md-10 col-12 pd-x-0">
+                          <p class="tx-14 tx-semibold mb-0">Remarks/Comments for Declining</p>
+                          <p class="tx-14 mb-0">The identfied employee do not match the conclusion from the 
+                            findings by the police. Correct and refrain from repeating.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-9 col-12">
+                        <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
+                          <p class="tx-14 tx-grey-900 mb-0">A case of over-aged debit of n=10,458,516.61 in transit 3 account of maraba business office which was in respect</p>
+                         </div>
+                         <div class="mg-b-25">
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
+                            <p class="tx-14 tx-grey-900">The indicted staff allegedly failed to clear the N10,458,516.61 debit in the bank's account 
+                              for 10months which was debited to settle a customer and also failed to notify the customer of the outstanding.
+                            </p>
+                          </div>
+                          <div class="mg-b-25">
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
+                            <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                              <div class="row justify-content-between">
+                                <div class="col-9 col-md-9">
+                                  <div class="d-flex">
+                                    <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                                    <div>
+                                      <p class="tx-14 tx-grey-900 mb-0">Investigation_report_424.pdf</p>
+                                      <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-3 col-md-2 pd-md-l-0">
+                                  <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 w-100"> View</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                         <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-medium mb-0 tx-grey-600 tx-uppercase tx-12">Involved Employees <span>(2)</span></label>
+                          <div class="d-flex mg-t-15">
+                            <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        
+                          <div class="d-flex mg-t-15">
+                            <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-12">
+                        <div class="pd-b-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Status</label>
+                          <p class="tx-11 mb-0"><span class="badge bg-red-400 tx-11 tx-semibold pd-y-3">Declined</span></p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Case ID</label>
+                          <p class="tx-12 mb-0">DCS02</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created on</label>
+                          <p class="tx-12 mb-0">Mon Feb 16, 2021</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created by</label>
+                          <p class="tx-12 mb-0">Felix Adejumo</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Declined on</label>
+                          <p class="tx-12 mb-0">Mon Mar 1, 2021</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Declined by</label>
+                          <p class="tx-12 mb-0">Adams Ifeanyi</p>
+                         </div>
+                      </div>
+                    </div>
+                  
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+             <!--Sanction Pending Modal -->
+             <div class="modal fade" id="san-pendingModal" tabindex="-1" aria-labelledby="san-pendingModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                    <div>
+                      <p class="tx-22 tx-semibold modal-title" id="san-pendingModalLabel">View Sanction Details</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> 
+                  <div class="modal-body pd-md-x-30 pd-x-20">
+                    <div class="row">
+                      <div class="col-md-9 col-12">
+                        <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
+                          <p class="tx-14 tx-grey-900 mb-0">Failure to move excess cash to CMC</p>
+                         </div>
+                         <div class="mg-b-25">
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
+                            <p class="tx-14 tx-grey-900">Compellingly administrate distinctive e-services whereas adaptive expertise. 
+                              Objectively leverage other's 24/365 quality vectors without value-added.
+                            </p>
+                          </div>
+                          <div class="mg-b-25">
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
+                            <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                              <div class="row justify-content-between">
+                                <div class="col-9 col-md-9">
+                                  <div class="d-flex">
+                                    <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                                    <div>
+                                      <p class="tx-14 tx-grey-900 mb-0">Investigation_report_424.pdf</p>
+                                      <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-3 col-md-2 pd-md-l-0">
+                                  <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 w-100"> View</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                         
+                        <div class="mg-b-25">
+                        <label for="formGroupExampleInput" class="d-block tx-medium mb-0 tx-grey-600 tx-uppercase tx-12">Involved Employees <span>(2)</span></label>
+                        <div class="d-flex mg-t-15">
+                          <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                          <div class="ml-3 pd-t-3">
+                            <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                            <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                          </div>
+                          <div class="break"></div>
+                          <div class="bg-grey-card d-line-bold ml-md-auto pd-x-10 pd-y-5 mg-t-10 mg-b-5">
+                            <p class="mb-0 tx-12">Fixed Suspension (5 days)</p>
+                          </div>
+                        </div>
+                      
+                        <div class="d-flex mg-t-15">
+                          <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                          <div class="ml-3 pd-t-3">
+                            <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                            <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                          </div>
+                          <div class="break"></div>
+                          <div class="bg-grey-card d-line-bold ml-md-auto pd-x-10 pd-y-5 mg-t-10 mg-b-5">
+                            <p class="mb-0 tx-12">Letter of Displeasure</p>
+                          </div>
+                        </div>
+                        </div>
+
+                      </div>
+                      <div class="col-md-3 col-12">
+                        <div class="pd-b-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Status</label>
+                          <p class="tx-11 mb-0"><span class="badge badge-neutral tx-11 tx-semibold pd-y-3">SUBMITTED</span></p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Mode</label>
+                          <p class="tx-12 mb-0">Bulk Upload (Pending)</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created on</label>
+                          <p class="tx-12 mb-0">Mon Feb 16, 2021</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created by</label>
+                          <div class="d-flex">
+                            <div class="avatar avatar-sm"><img src="../../../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-2 pd-t-5">
+                              <p class="tx-14 mb-0">Felix Adejumo</p>
+                            </div>
+                          </div>
+                         </div>
+                      </div>
+                    </div>
+                  
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Sanction Approved Modal -->
+            <div class="modal fade" id="san-approvedModal" tabindex="-1" aria-labelledby="san-approvedmodalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                    <div>
+                      <p class="tx-22 tx-semibold modal-title" id="san-approvedModalLabel">View Case Details</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> 
+                  <div class="modal-body pd-md-x-30 pd-x-20">
+                    <div class="row">
+                      <div class="col-md-9 col-12">
+                        <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
+                          <p class="tx-14 tx-grey-900 mb-0">Investigation report on recall of funds - mxg energy</p>
+                         </div>
+                         <div class="mg-b-25">
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
+                            <p class="tx-14 tx-grey-900">The indicted staff allegedly failed to clear the N10,458,516.61 debit in the bank's account 
+                              for 10months which was debited to settle a customer and also failed to notify the customer of the outstanding.
+                            </p>
+                          </div>
+                          <div class="mg-b-25">
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
+                            <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                              <div class="row justify-content-between">
+                                <div class="col-9 col-md-9">
+                                  <div class="d-flex">
+                                    <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                                    <div>
+                                      <p class="tx-14 tx-grey-900 mb-0">Investigation_report_424.pdf</p>
+                                      <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-3 col-md-2 pd-md-l-0">
+                                  <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 w-100"> View</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                         <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-medium mb-0 tx-grey-600 tx-uppercase tx-12">Involved Employees <span>(2)</span></label>
+                          <div class="d-flex mg-t-15">
+                            <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        
+                          <div class="d-flex mg-t-15">
+                            <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-12">
+                        <div class="pd-b-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Status</label>
+                          <p class="tx-11 mb-0"><span class="badge badge-green-400 tx-11 tx-semibold pd-y-3">APPROVED</span></p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Case ID</label>
+                          <p class="tx-12 mb-0">DCS02</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created on</label>
+                          <p class="tx-12 mb-0">Mon Feb 16, 2021</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created by</label>
+                          <p class="tx-12 mb-0">Felix Adejumo</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Approved on</label>
+                          <p class="tx-12 mb-0">Mon Mar 1, 2021</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Approved by</label>
+                          <p class="tx-12 mb-0">Adams Ifeanyi</p>
+                         </div>
+                      </div>
+                    </div>
+                  
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+             <!--Sanction Declined Modal -->
+             <div class="modal fade" id="san-declinedModal" tabindex="-1" aria-labelledby="san-declinedmodalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                    <div>
+                      <p class="tx-22 tx-semibold modal-title" id="san-declinedModalLabel">View Sanction Details</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> 
+                  <div class="modal-body pd-md-x-30 pd-x-20">
+                    <div class="card card-body bg-red-50 pd-15 bd-0 mg-b-20">
+                      <div class="d-flex">
+                        <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-4" alt="" srcset="">
+                        <div class="col-md-10 col-12 pd-x-0">
+                          <p class="tx-14 tx-semibold mb-0">Remarks/Comments for Declining</p>
+                          <p class="tx-14 mb-0">The identfied employee do not match the conclusion from the 
+                            findings by the police. Correct and refrain from repeating.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-9 col-12">
+                        <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
+                          <p class="tx-14 tx-grey-900 mb-0">Alleged failure of integrity test.</p>
+                         </div>
+                         <div class="mg-b-25">
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
+                            <p class="tx-14 tx-grey-900">Energistically parallel task open-source leadership after cross functional customer service. 
+                              Globally iterate extensible scenarios rather than go forward platforms. 
+                              Conveniently utilize ethical products.
+                            </p>
+                          </div>
+                          <div class="mg-b-25">
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
+                            <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                              <div class="row justify-content-between">
+                                <div class="col-9 col-md-9">
+                                  <div class="d-flex">
+                                    <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                                    <div>
+                                      <p class="tx-14 tx-grey-900 mb-0">Investigation_report_424.pdf</p>
+                                      <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-3 col-md-2 pd-md-l-0">
+                                  <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 w-100"> View</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="mg-b-25">
+                            <label for="formGroupExampleInput" class="d-block tx-medium mb-0 tx-grey-600 tx-uppercase tx-12">Involved Employees <span>(2)</span></label>
+                            <div class="d-flex mg-t-15">
+                              <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                              <div class="ml-3 pd-t-3">
+                                <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                              </div>
+                              <div class="break"></div>
+                              <div class="bg-grey-card d-line-bold ml-md-auto pd-x-10 pd-y-5 mg-t-10 mg-b-5">
+                                <p class="mb-0 tx-12">Fixed Suspension (5 days)</p>
+                              </div>
+                            </div>
+                          
+                            <div class="d-flex mg-t-15">
+                              <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                              <div class="ml-3 pd-t-3">
+                                <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                              </div>
+                              <div class="break"></div>
+                              <div class="bg-grey-card d-line-bold ml-md-auto pd-x-10 pd-y-5 mg-t-10 mg-b-5">
+                                <p class="mb-0 tx-12">Letter of Displeasure</p>
+                              </div>
+                            </div>
+                            </div>
+                      </div>
+                      <div class="col-md-3 col-12">
+                        <div class="pd-b-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Status</label>
+                          <p class="tx-11 mb-0"><span class="badge bg-red-400 tx-11 tx-semibold pd-y-3">Declined</span></p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">MODE</label>
+                          <p class="tx-12 mb-0">Bulk Upload</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created on</label>
+                          <p class="tx-12 mb-0">Mon Feb 16, 2021</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created by</label>
+                          <p class="tx-12 mb-0">Felix Adejumo</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Declined on</label>
+                          <p class="tx-12 mb-0">Mon Mar 1, 2021</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Declined by</label>
+                          <p class="tx-12 mb-0">Adams Ifeanyi</p>
+                         </div>
+                      </div>
+                    </div>
+                  
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      
+    </section>
+    <section class="footer text-white">
+      <div class="container">
+        <p class="p-14 mb-0 text-capitalize">&copy; 2020 UBA Group. All Rights Reserved.</p>
+      </div>
+    </section>
+  
+    <script src="../../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../../assets/js/dashforge.js"></script>
+    <script src="../../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../../assets/js/dashforge.settings.js"></script>
+    <script src="../../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../../../assets/lib/jqueryui/jquery-ui.min.js"></script>
+    <script src="../../../assets/lib/select2/js/select2.min.js"></script>
+
+
+<script>
+      $(document).ready( function () {
+   $('.display').DataTable({
+     "paging": true,
+     "info": true,
+     "responsive": true,
+     "aoColumnDefs": [{
+         "bSortable": false,
+         "aTargets": [-1]
+     }],
+     "language": {
+          "searchPlaceholder": 'Search...',
+          "sSearch": '',
+          "lengthMenu": '_MENU_ items/page',
+        },
+     "bInfo": true
+   });
+   
+   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+     $('.display:visible').each( function(e) {
+       $(this).DataTable().columns.adjust().responsive.recalc();
+     });
+   });
+      });
+</script>
+<script>
+  $(document).ready( function () {
+    $('#datepicker').datepicker(
+      {
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    }
+    );
+
+    $('#datepicker1').datepicker({
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    });
+    $('#dec-datepicker').datepicker(
+      {
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    }
+    );
+
+    $('#dec-datepicker1').datepicker({
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    });
+
+
+    $('#appr-datepicker').datepicker(
+      {
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    }
+    );
+
+    $('#appr-datepicker1').datepicker({
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    });
+
+    $('#san-datepicker').datepicker(
+      {
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    }
+    );
+
+    $('#san-datepicker1').datepicker({
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    });
+    $('#san-dec-datepicker').datepicker(
+      {
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    }
+    );
+
+    $('#san-dec-datepicker1').datepicker({
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    });
+
+
+    $('#san-appr-datepicker').datepicker(
+      {
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    }
+    );
+
+    $('#san-appr-datepicker1').datepicker({
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    });
+
+
+
+
+    });
+</script>
+
+<!-- form action  -->
+<script>
+   $(document).ready(function() {
+      $('#employee').select2({
+        width: '100%' ,
+        dropdownParent: $("#requestModal")
+      });
+      $(".custom-file-input").on("change", function() {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+
+    
+  });
+</script>
+  </body>
+</html>

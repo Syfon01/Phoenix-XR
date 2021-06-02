@@ -336,6 +336,9 @@ p{
 .tx-grey-900{
     color: #111827;
 }
+.tx-grey-800{
+  color: #1F2937;
+}
 .tx-grey-600{
     color: #4B5563;
 }
@@ -351,7 +354,9 @@ p{
 .tx-red-500{
   color: #BF2600;
 }
-
+.tx-second{
+  color: rgba(6, 95, 212, 1);
+}
 .badge{
     border-radius: 3px;
     padding-top: 4px!important;
@@ -453,8 +458,12 @@ p{
   .card-header-bluee{
     background-color: #E5EDF8!important;
   }
-
-  
+  .bg-sche{
+    background-color: rgba(6, 95, 212, 0.1)!important;
+  }
+  .bg-conclude{
+    background-color: rgba(75, 85, 99, 0.2)!important;
+  }  
 .link:hover{
     color: #D70900!important;
     border: 1px solid #D70900!important;
