@@ -363,6 +363,14 @@ p{
     padding-bottom: 3px!important;
 
 }
+.ava{
+  width: 40px!important;
+  height: 40px!important;
+}
+.bg-neutral{
+  background-color: rgba(66, 82, 110, 1)!important;
+  color:#fff
+}
 .badge-secondary{
     background-color: rgba(223, 225, 230, 1)!important;
     border-radius: 3px;

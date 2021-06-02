@@ -156,6 +156,7 @@
                       </div>
                     </div>
                     </div>
+    
                   </div>
                 </div>
               </div>
@@ -198,7 +199,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="mg-b-25">
+                    <div class="">
                       <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
                       <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
                         <div class="row justify-content-between">
@@ -218,13 +219,31 @@
                       </div>
                     </div>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-toggle="modal" data-target="#declineDCModal" > <i class="fa fa-ban" aria-hidden="true"></i> Dispute DC Summary</button>
-                    <button type="button" class="btn btn-primary btn-sm pd-x-30 tx-semibold" data-toggle="modal" data-target="#acceptDCModal" > <i class="fa fa-check" aria-hidden="true"></i> Accept DC Summary</button>
+                </div>
+              </div>
+
+              <div class="card mt-3">
+                <div class="card-header bg-grey-100 pd-y-10 pd-md-x-25 pd-x-20 pd-b-10" id="headingThree">
+                  <div class="d-flex collapse-btn"  data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                    <p class="tx-12 font-weight-bold mb-0 panel-title"><i class="fas fa-angle-down fa-2x mr-2"></i></p>
+                    <p class="tx-14 mb-0 tx-semibold modal-title">Feedback from Work Ethics Admin</p>
                   </div>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body pd-md-x-25 pd-x-20">
+                    <div class="d-flex">
+                      <div class="avatar avatar ava"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                      <div class="mg-l-15">
+                        <p class="tx-14 mb-0 tx-bold">Toyin Sowore</p>
+                        <p class="tx-12 tx-secondary mg-b-10">Work Ethics Admin</p>
+                        <p class="tx-14 mg-b-10">Your feedback has been received, thank you.</p>
+                        <p class="cursor-point ml-2"><i class="fa fa-reply tx-secondary mg-r-10"></i> <span class="tx-primary tx-12 tx-semibold">Reply</span></p> 
+                      </div>
+                    </div>
                 </div>
               </div>
             </div>
+          </div>
         </div>
 
           <div class="col-md-4 col-12">
@@ -234,7 +253,7 @@
                   <p class="tx-12 tx-secondary mb-0">Status</p>
                 </div>
                <div class="col-md-6 col-7 mg-b-15">
-                <span class="badge badge-green-400 tx-uppercase tx-11 tx-semibold">Active</span>
+                <span class="badge badge-neutral tx-uppercase tx-11 tx-semibold">CONCLUDED</span>
                </div> 
                
                <div class="col-md-6 col-5">
@@ -247,128 +266,6 @@
             </div>
           </div>
         </div>
-
-       
-         <!--confirm decline Modal -->
-         <div class="modal fade" id="declineDCModal" tabindex="-1" aria-labelledby="declineDCModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
-                <div>
-                  <p class="tx-22 tx-semibold modal-title" id="declineDCModalLabel">Confirmation</p>
-                  <p class="tx-12 tx-grey-500 mb-0">You are about to dispute the DC Summary. Kindly input the reasons below to help the requester.</p>
-                </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div> 
-
-              <div class="modal-body pd-md-x-30 pd-x-20">
-                
-                <form action="">
-                  <div class="form-group">
-                    <label class="tx-medium mb-1">Comments/Remarks</label>
-                    <textarea name="" id="" class="form-control" rows="4" placeholder="Enter Here"></textarea>
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer bg-modal-footer">
-                <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary btn-sm pd-x-40 tx-semibold" data-toggle="modal" data-target="#declineModal" data-dismiss="modal">Submit</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-           <!--confirm accept Modal -->
-           <div class="modal fade" id="acceptDCModal" tabindex="-1" aria-labelledby="acceptDCModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
-                  <div>
-                    <p class="tx-22 tx-semibold modal-title" id="acceptDCModalLabel">Confirmation</p>
-                    <p class="tx-12 tx-grey-500 mb-0">You are about to accept the DC Summary. Would you like to give any comment/feedback?</p>
-                  </div>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div> 
-  
-                <div class="modal-body pd-md-x-30 pd-x-20">
-                  
-                  <form action="">
-                    <div class="form-group">
-                      <label class="tx-medium mb-1">Comments/Remarks</label>
-                      <textarea name="" id="" class="form-control" rows="4" placeholder="Enter Here"></textarea>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer bg-modal-footer">
-                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary btn-sm pd-x-40 tx-semibold" data-toggle="modal" data-target="#acceptModal" data-dismiss="modal">Submit</button>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-          <!--accept  Modal -->
-          <div class="modal fade" id="acceptModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header pd-y-10 bd-b-0">
-                  <h5 class="modal-title"></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                  <div class="d-flex">
-                    <div>
-                      <img src="../../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
-                    </div>
-                    <div class="mg-l-10">
-                      <p class="tx-22 tx-bold mb-0 pd-t-20">DC Summary Accepted</p>
-                    </div>
-                  </div>
-                  <hr class="mg-t-10"/>
-                  <p class="tx-14">Your response has been sent to the Work Ethics Admin. </p>
-                </div>
-                <div class="modal-footer bg-modal-footer">
-                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-            <!--decline  Modal -->
-            <div class="modal fade" id="declineModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header pd-y-10 bd-b-0">
-                    <h5 class="modal-title"></h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="d-flex">
-                      <div>
-                        <img src="../../../assets/img/icon/Cancel.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
-                      </div>
-                      <div class="mg-l-10">
-                        <p class="tx-22 tx-bold mb-0 pd-t-20">DC Summary Disputed</p>
-                      </div>
-                    </div>
-                    <hr class="mg-t-10"/>
-                    <p class="tx-14">Your response has been sent to the Work Ethics Admin. </p>
-                  </div>
-                  <div class="modal-footer bg-modal-footer">
-                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-        
 
       </div>
 
