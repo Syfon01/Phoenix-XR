@@ -147,7 +147,7 @@
                         <img src="../../../assets/img/icon/sanction.svg" alt="" srcset="" class="mg-r-10 img-fluid"> Sanctions
                       </div>
                       <div>
-                        <span>2</span>
+                        <span>4</span>
                       </div>
                     </div>
                   </a>
@@ -240,7 +240,7 @@
                             <div class="card-header pd-x-15 pd-y-10">
                               <div class="row justify-content-between">
                                 <div class="col-md-8 col-12 col-lg-8 ">
-                                  <p class="tx-16 mb-0 tx-semibold mg-t-10">
+                                  <p class="tx-16 mb-0 tx-semibold">
                                     Pending DC Invitations/Summary Reports <span>(2)</span>
                                   </p>
                                 </div>
@@ -304,7 +304,7 @@
                             <div class="card-header pd-x-15 pd-y-10">
                               <div class="row justify-content-between">
                                 <div class="col-md-8 col-12 col-lg-8 ">
-                                  <p class="tx-16 mb-0 tx-semibold mg-t-10">
+                                  <p class="tx-16 mb-0 tx-semibold">
                                     Accepted DC Invites
                                   </p>
                                 </div>
@@ -379,7 +379,7 @@
                                 </tbody>
                               </table>
                             </div>
-                          </div>
+                      </div>
                           
                     </div>
                   </div>
@@ -410,7 +410,7 @@
                             <div class="card-header pd-x-15 pd-y-10">
                               <div class="row justify-content-between">
                                 <div class="col-md-8 col-12 col-lg-8 ">
-                                  <p class="tx-16 mb-0 tx-semibold mg-t-10">
+                                  <p class="tx-16 mb-0 tx-semibold">
                                     <img src="../../../assets/img/icon/Yet to Start.svg" alt="" class="img-fluid mr-2">
                                     Ongoing DC Sittings (1)
                                   </p>
@@ -459,7 +459,7 @@
                             <div class="card-header pd-x-15 pd-y-10">
                               <div class="row justify-content-between">
                                 <div class="col-md-6 col-12 col-lg-6 ">
-                                  <p class="tx-16 mb-0 tx-semibold mg-t-10">
+                                  <p class="tx-16 mb-0 tx-semibold">
                                     <img src="../../../assets/img/icon/Completed Task.svg" alt="" class="img-fluid mr-2">
                                     Concluded DC Sittings (1)
                                   </p>
@@ -511,388 +511,105 @@
                     <div class="row justify-content-between">
                       <div class="col-md-8 col-12">
                         <p class="tx-28 tx-bold mb-0">Sanctions</p>
-                        <p class="tx-14 tx-secondary">Log new sanctions and view details about previously logged requests</p>
+                        <p class="tx-14 tx-secondary">View details about the sanctions you have been issued.</p>
                       </div>
-    
-                      <div class="col-md-4 col-lg-3 col-12">
-                        <a href="./log-sanction.html" class="btn btn-primary float-md-right mg-md-t-15" type="button">Log New Sanction</a>
-                      </div>
-    
                     </div>
-                      <ul class="nav nav-line" id="myTab" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link active pd-x-20" id="home-tab" data-toggle="tab" href="#san-home" role="tab" aria-controls="home" aria-selected="true">Submitted</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" id="declined-tab" data-toggle="tab" href="#san-declined" role="tab" aria-controls="declined" aria-selected="false">Declined</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" id="approved-tab" data-toggle="tab" href="#san-approved" role="tab" aria-controls="approved" aria-selected="false">Approved</a>
-                        </li>
-                        
-                        
-                      </ul>   
-                      <div class="tab-content  bd-t-0 pd-y-20" id="myTabContent">
-                        <div class="tab-pane fade show active" id="san-home" role="tabpanel" aria-labelledby="home-tab">
-                          
-                          <div class="table-section">
-                            <div class="card bg-transparent">
-                              <div class="card-header pd-x-15 pd-y-10">
-                                <div class="row justify-content-between">
-                                  <div class="col-md-8 col-12 col-lg-8 ">
-                                    <p class="tx-16 mb-0 tx-semibold mg-t-10">
-                                      <img src="../../../assets/img/icon/Yet to Start.svg" alt="" class="img-fluid mr-2">
-                                      Pending Sanctions Requests awaiting Approval <span>(4)</span>
-                                    </p>
-                                  </div>
-                                  <div class="col-12 col-md-3 col-lg-3">
-                                    <div class="d-flex float-md-right">
-                                      <div class="">
-                                        <div class="input-group">
-                                          <input type="text" id="san-datepicker" class="date form-control mb-0 bd-r-0" placeholder="Date Initiated">
-                                        </div>
-                                        
-                                      </div>
-                                      
-                                      
-                                      <!-- <div class="col-6 col-md-6">
-                                        <div class="input-group">
-                                        <input type="text" id="datepicker1" class="date form-control bd-r-0" placeholder="Date Approved">
-                                        </div>
-                                        
-                                      </div> -->
-                                      
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="card-body pd-10">
-                                <table class="table display">
-                                  <thead>
-                                    <tr class="tx-uppercase tx-12 tx-semibold">
-                                      <th>S/N</th>
-                                      <th>SANCTION TITLE</th>
-                                      <th>STAFF</th>
-                                      <th>MODE</th>
-                                      <th>DATE INITIATED</th>
-                                      <th>STATUS</th>
-                                      <th></th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    
-                                    <tr>
-                                      <th scope="row">1</th>
-                                      <td>
-                                        <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 240px;">Failure to move excess cash to CMC</p>
-                                      </td>
-                                      <td class=""><p class="tx-12 mb-0 pd-t-5">4</p></td>
-                                      <td class=""><p class="tx-12 mb-0 pd-t-5">Bulk Upload</p></td>
-                                      <td>
-                                        <div>
-                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                                        </div>
-                                      </td>
-                                      <td class="mb-0"><span class="badge bg-light-40 tx-11 tx-semibold mg-t-5">PENDING</span></td>
-                                      <td>   
-                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-pendingModal"> View</button>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <th scope="row">2</th>
-                                      <td>
-                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Breach of cash movement policy</p>
-                                      </td>
-                                      <td class="tx-12 mb-0">3</td>
-                                      <td class="tx-12 mb-0">Bulk Upload</td>
-                                      <td>
-                                        <div>
-                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                                        </div>
-                                      </td>
-                                      <td class="mb-0"><span class="badge bg-red-50 tx-red-500 tx-11 tx-semibold">FAILED</span></td>
-                                      <td>   
-                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-pendingModal"> View</button>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <th scope="row">3</th>
-                                      <td>
-                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Unauthorized absence / insubordination</p>
-                                      </td>
-                                      <td class="tx-12 mb-0">3</td>
-                                      <td class="tx-12 mb-0">Individually</td>
-                                      <td>
-                                        <div>
-                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                                        </div>
-                                      </td>
-                                      <td class="mb-0"><span class="badge bg-green-50 tx-green tx-11 tx-semibold">COMPLETED</span></td>
-                                      <td>
-                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-pendingModal"> View</button>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <th scope="row">4</th>
-                                      <td>
-                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Alleged failure of integrity testC</p>
-                                      </td>
-                                      <td class="tx-12 mb-0">2</td>
-                                      <td class="tx-12 mb-0">Bulk Upload</td>
-                                      <td>
-                                        <div>
-                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                                        </div>
-                                      </td>
-                                      <td class="mb-0"><span class="badge bg-green-50 tx-green tx-11 tx-semibold">COMPLETED</span></td>
-                                      <td>
-                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-pendingModal"> View</button>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </div>
+                    <div class="table-section">
+                      <div class="card bg-transparent">
+                        <div class="card-header pd-x-15 pd-y-10">
+                          <div class="row justify-content-between">
+                            <div class="col-md-8 col-12 col-lg-8 ">
+                              <p class="tx-16 mb-0 tx-semibold">
+                                Your Issued Sanctions
+                              </p>
                             </div>
-                            
                           </div>
-                        
                         </div>
-  
-                        <div class="tab-pane fade" id="san-declined" role="tabpanel" aria-labelledby="declined-tab">
-                          
-                          <div class="table-section">
-                            <div class="card bg-transparent">
-                              <div class="card-header pd-x-15 pd-y-10">
-                                <div class="row justify-content-between">
-                                  <div class="col-md-6 col-12 col-lg-6 ">
-                                    <p class="tx-16 mb-0 tx-semibold mg-t-10">
-                                      <img src="../../../assets/img/icon/Cancelled.svg" alt="" class="img-fluid mr-2">
-                                      Declined Sanctions Requests <span>(2)</span>
-                                    </p>
-                                  </div>
-                                  <div class="col-12 col-md-6 col-lg-5">
-                                    <div class="row justify-content-between">
-                                      <div class="col-6 col-md-6 ">
-                                        <div class="input-group">
-                                          <input type="text" id="san-dec-datepicker" class="date form-control mb-0 bd-r-0" placeholder="Date Initiated">
-                                        </div>
-                                        
-                                      </div>
-                                      
-                                      
-                                      <div class="col-6 col-md-6">
-                                        <div class="input-group">
-                                        <input type="text" id="san-dec-datepicker1" class="date form-control bd-r-0" placeholder="Date Declined">
-                                        </div>
-                                        
-                                      </div>
-                                      
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="card-body pd-10">
-                                <table class="table display">
-                                  <thead>
-                                    <tr class="tx-uppercase tx-12 tx-semibold">
-                                      <th>S/N</th>
-                                      <th>SANCTION TITLE</th>
-                                      <th>STAFF</th>
-                                      <th>MODE</th>
-                                      <th>DATE INITIATED</th>
-                                      <th>DATE Declined</th>
-                                      <th></th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    
-                                    <tr>
-                                      <th scope="row">1</th>
-                                      <td>
-                                        <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 240px;">Failure to move excess cash to CMC</p>
-                                      </td>
-                                      <td class=""><p class="tx-12 mb-0 pd-t-5">4</p></td>
-                                      <td class=""><p class="tx-12 mb-0 pd-t-5">Bulk Upload</p></td>
-                                      <td>
-                                        <div>
-                                          <p class="tx-12 mb-0">Jan 1, 2021</p>
-                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                                        </div>
-                                      </td>
-                                      <td>
-                                        <div>
-                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                                        </div>
-                                      </td>
-                                      <td>   
-                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-declinedModal"> View</button>
-                                      </td>
-                                    </tr>
-                                    
-                                    <tr>
-                                      <th scope="row">2</th>
-                                      <td>
-                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Unauthorized absence / insubordination</p>
-                                      </td>
-                                      <td class="tx-12 mb-0">3</td>
-                                      <td class="tx-12 mb-0">Individually</td>
-                                      <td>
-                                        <div>
-                                          <p class="tx-12 mb-0">Feb 4, 2021</p>
-                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                                        </div>
-                                      </td>
-                                      <td>
-                                        <div>
-                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                                        </div>
-                                      </td>
-                                      <td>
-                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-declinedModal"> View</button>
-                                      </td>
-                                    </tr>
-                                    
-                                  </tbody>
-                                </table>
+                        <div class="card-body pd-10">
+                          <table class="table display">
+                            <thead>
+                              <tr class="tx-uppercase tx-12 tx-semibold">
+                                <th>S/N</th>
+                                <th>TITLE</th>
+                                <th>TYPE</th>
+                                <th>DURATION</th>
+                                <th>DATE ISSUED</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
                               
-                              </div>
-                            </div>
-                            
-                          </div>
-                        
-                        </div>
-                        
-                        <div class="tab-pane fade" id="san-approved" role="tabpanel" aria-labelledby="approved-tab">
-                          <div class="table-section">
-                            <div class="card bg-transparent">
-                              <div class="card-header pd-x-15 pd-y-10">
-                                <div class="row justify-content-between">
-                                  <div class="col-md-6 col-12 col-lg-6 ">
-                                    <p class="tx-16 mb-0 tx-semibold mg-t-10">
-                                      <img src="../../../assets/img/icon/Completed Task.svg" alt="" class="img-fluid mr-2">
-                                      Approved Sanctions Requests <span>(3)</span></p>
-                                    </p>
-                                  </div>
-                                  <div class="col-12 col-md-6 col-lg-5">
-                                    <div class="row justify-content-between">
-                                      <div class="col-6 col-md-6 ">
-                                        <div class="input-group">
-                                          <input type="text" id="san-appr-datepicker" class="date form-control mb-0 bd-r-0" placeholder="Date Initiated">
-                                        </div>
-                                      </div>
-                                      
-                                      <div class="col-6 col-md-6">
-                                        <div class="input-group">
-                                        <input type="text" id="san-appr-datepicker1" class="date form-control bd-r-0" placeholder="Date Approved">
-                                        </div>
-                                      </div>
-                                      
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="card-body pd-10">
-                                <table class="table display">
-                                  <thead>
-                                    <tr class="tx-uppercase tx-12 tx-semibold">
-                                      <th>S/N</th>
-                                      <th>SANCTION TITLE</th>
-                                      <th>STAFF</th>
-                                      <th>MODE</th>
-                                      <th>DATE INITIATED</th>
-                                      <th>DATE Declined</th>
-                                      <th></th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    
-                                    <tr>
-                                      <th scope="row">1</th>
-                                      <td>
-                                        <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 240px;">Failure to move excess cash to CMC</p>
-                                      </td>
-                                      <td class=""><p class="tx-12 mb-0 pd-t-5">4</p></td>
-                                      <td class=""><p class="tx-12 mb-0 pd-t-5">Bulk Upload</p></td>
-                                      <td>
-                                        <div>
-                                          <p class="tx-12 mb-0">Jan 1, 2021</p>
-                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                                        </div>
-                                      </td>
-                                      <td>
-                                        <div>
-                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                                        </div>
-                                      </td>
-                                      <td>   
-                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-approvedModal"> View</button>
-                                      </td>
-                                    </tr>
-                                    
-                                    <tr>
-                                      <th scope="row">2</th>
-                                      <td>
-                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Unauthorized absence / insubordination</p>
-                                      </td>
-                                      <td class="tx-12 mb-0">3</td>
-                                      <td class="tx-12 mb-0">Individually</td>
-                                      <td>
-                                        <div>
-                                          <p class="tx-12 mb-0">Feb 4, 2021</p>
-                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                                        </div>
-                                      </td>
-                                      <td>
-                                        <div>
-                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                                        </div>
-                                      </td>
-                                      <td>
-                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-approvedModal"> View</button>
-                                      </td>
-                                    </tr>
-
-                                    <tr>
-                                      <th scope="row">3</th>
-                                      <td>
-                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Alleged failure of integrity test</p>
-                                      </td>
-                                      <td class="tx-12 mb-0">3</td>
-                                      <td class="tx-12 mb-0">Individually</td>
-                                      <td>
-                                        <div>
-                                          <p class="tx-12 mb-0">Feb 4, 2021</p>
-                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                                        </div>
-                                      </td>
-                                      <td>
-                                        <div>
-                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                                        </div>
-                                      </td>
-                                      <td>
-                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#san-approvedModal"> View</button>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </div>
-                            </div>
-                            
-                          </div>
-                        
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                  <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 260px;">Poor ATM Management</p>
+                                </td>
+                                <td class=""><p class="tx-12 mb-0 pd-t-5">Letter of Displeasure</p></td>
+                                <td>
+                                    <p class="tx-12 mb-0 pd-t-5">One-time</p>
+                                </td>
+                                <td>                                    
+                                  <p class="tx-12 mb-0 pd-t-5">Mar 4, 2021</p>
+                                </td>
+                                <td>   
+                                  <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#sanctionModal"> View Details</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>
+                                  <p class=" tx-medium tx-12 mb-0" style="width: 260px;">Fraudulent Withdrawal of ₦300,000.00 on account of Osaruyi Eguasa</p>
+                                </td>
+                                <td class=""><p class="tx-12 mb-0 pd-t-5">Fixed Suspension</p></td>
+                                <td>
+                                    <p class="tx-12 mb-0 pd-t-5">2 weeks</p>
+                                </td>
+                                <td>                                    
+                                  <p class="tx-12 mb-0 pd-t-5">Feb 26, 2021</p>
+                                </td>
+                                <td>   
+                                  <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#sanctionModal"> View Details</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>
+                                  <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 260px;">Breach of Cash Movement Policy</p>
+                                </td>
+                                <td class=""><p class="tx-12 mb-0 pd-t-5">Letter of Caution</p></td>
+                                <td>
+                                    <p class="tx-12 mb-0 pd-t-5">One-time</p>
+                                </td>
+                                <td>                                    
+                                  <p class="tx-12 mb-0 pd-t-5">Mar 4, 2021</p>
+                                </td>
+                                <td>   
+                                  <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#sanctionModal"> View Details</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">4</th>
+                                <td>
+                                  <p class=" tx-medium tx-12 mb-0" style="width: 260px;">Report on Integrity Test at Ado Bayero Business Office / Breach of the Bank's Policy</p>
+                                </td>
+                                <td class=""><p class="tx-12 mb-0 pd-t-5">Warning Letter</p></td>
+                                <td>
+                                    <p class="tx-12 mb-0 pd-t-5">One-time</p>
+                                </td>
+                                <td>                                    
+                                  <p class="tx-12 mb-0 pd-t-5">Feb. 5, 2021</p>
+                                </td>
+                                <td>   
+                                  <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#sanctionModal"> View Details</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
-  
+                      
+                    </div>
+                  
                   </div>
                   <div class="tab-pane fade" id="list-commend" role="tabpanel" aria-labelledby="list-commend-list">...</div>
                   <div class="tab-pane fade" id="list-recognition" role="tabpanel" aria-labelledby="list-recognition-list">...</div>
@@ -911,7 +628,7 @@
             <div class="modal fade" id="ongoingModal" tabindex="-1" aria-labelledby="ongoingModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
-                  <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                  <div class="modal-header pd-y-10 pd-md-x-30 pd-x-20 pd-b-10">
                     <div>
                       <p class="tx-22 tx-semibold modal-title" id="ongoingModalLabel">View Case Details</p>
                     </div>
@@ -963,7 +680,7 @@
               <div class="modal fade" id="concludedModal" tabindex="-1" aria-labelledby="concludedModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                   <div class="modal-content">
-                    <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                    <div class="modal-header pd-y-10 pd-md-x-30 pd-x-20 pd-b-10">
                       <div>
                         <p class="tx-22 tx-semibold modal-title" id="concludedModalLabel">View Case Details</p>
                       </div>
@@ -1050,30 +767,44 @@
 
            
 
-             <!--Sanction Pending Modal -->
-             <div class="modal fade" id="san-pendingModal" tabindex="-1" aria-labelledby="san-pendingModalLabel" aria-hidden="true">
+             <!--Sanction Modal -->
+             <div class="modal fade" id="sanctionModal" tabindex="-1" aria-labelledby="sanctionModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
-                  <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                  <div class="modal-header pd-y-10 pd-md-x-30 pd-x-20 pd-b-10">
                     <div>
-                      <p class="tx-22 tx-semibold modal-title" id="san-pendingModalLabel">View Sanction Details</p>
+                      <p class="tx-22 tx-semibold modal-title" id="sanctionModalLabel">View Sanction Details</p>
                     </div>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div> 
                   <div class="modal-body pd-md-x-30 pd-x-20">
-                    <div class="row">
-                      <div class="col-md-9 col-12">
+                      <div class="">
                         <div class="mg-b-25">
                           <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
-                          <p class="tx-14 tx-grey-900 mb-0">Failure to move excess cash to CMC</p>
+                          <p class="tx-14  mb-0">Fraudulent Withdrawal of ₦300,000.00 on account of Osaruyi Eguasa</p>
                          </div>
                          <div class="mg-b-25">
                             <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
-                            <p class="tx-14 tx-grey-900">Compellingly administrate distinctive e-services whereas adaptive expertise. 
-                              Objectively leverage other's 24/365 quality vectors without value-added.
+                            <p class="tx-14">Following the report from Investigations Unit and Management's subsequent approval, 
+                              it was observed that you were negligent in the discharge of your duties as you processed the withdrawal of N300, 000.00 from the above customer's account on an irregular mandate which turned out to be fraudulent. You also failed to review and verify the beneficiary's identity using ZF1 before processing the transaction. 
+
+                              This negligence of yours is totally unacceptable and will not be condoned.
                             </p>
+                          </div>
+                          <div class="mg-b-25">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Type</label>
+                                <p class="tx-14 mb-0">Letter of Displeasure</p>
+                                <p class="tx-12 tx-grey-500 mb-0">Issued once</p>
+                              </div>
+                              <div class="col-md-6">
+                                <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Date Issued</label>
+                                <p class="tx-14 mb-0">Thur, March 4 2021</p>
+                              </div>
+                            </div>
                           </div>
                           <div class="mg-b-25">
                             <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
@@ -1089,65 +820,30 @@
                                   </div>
                                 </div>
                                 <div class="col-3 col-md-2 pd-md-l-0">
-                                  <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 w-100"> View</a>
+                                  <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 float-right"> View</a>
                                 </div>
                               </div>
                             </div>
                           </div>
-                         
-                        <div class="mg-b-25">
-                        <label for="formGroupExampleInput" class="d-block tx-medium mb-0 tx-grey-600 tx-uppercase tx-12">Involved Employees <span>(2)</span></label>
-                        <div class="d-flex mg-t-15">
-                          <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
-                          <div class="ml-3 pd-t-3">
-                            <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
-                            <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
-                          </div>
-                          <div class="break"></div>
-                          <div class="bg-grey-card d-line-bold ml-md-auto pd-x-10 pd-y-5 mg-t-10 mg-b-5">
-                            <p class="mb-0 tx-12">Fixed Suspension (5 days)</p>
-                          </div>
-                        </div>
-                      
-                        <div class="d-flex mg-t-15">
-                          <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
-                          <div class="ml-3 pd-t-3">
-                            <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
-                            <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
-                          </div>
-                          <div class="break"></div>
-                          <div class="bg-grey-card d-line-bold ml-md-auto pd-x-10 pd-y-5 mg-t-10 mg-b-5">
-                            <p class="mb-0 tx-12">Letter of Displeasure</p>
-                          </div>
-                        </div>
-                        </div>
+                         <hr>
+                         <div class="mg-b-25">
+                          <div class="card card-body pd-15 bg-light-blue">
+                            <div class="d-flex">
+                              <div>
+                              <img src="../../../assets/img/icon/info-icon.svg" alt="" srcset="" class="mg-r-10">
+                              </div>
+                              <div>
+                                <p class="tx-16 tx-semibold mb-0 tx-neutral">Would you like to appeal this sanction?</p>
+                                <p class="tx-14 mg-b-10 tx-neutral">Successful appeal will lead to a withdrawal of the currenct sanction.</p>
+                                  <a href="http://">Begin Appeal</a>
 
-                      </div>
-                      <div class="col-md-3 col-12">
-                        <div class="pd-b-12 bd-b">
-                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Status</label>
-                          <p class="tx-11 mb-0"><span class="badge badge-neutral tx-11 tx-semibold pd-y-3">SUBMITTED</span></p>
-                         </div>
-                         <div class="pd-y-12 bd-b">
-                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Mode</label>
-                          <p class="tx-12 mb-0">Bulk Upload (Pending)</p>
-                         </div>
-                         <div class="pd-y-12 bd-b">
-                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created on</label>
-                          <p class="tx-12 mb-0">Mon Feb 16, 2021</p>
-                         </div>
-                         <div class="pd-y-12 bd-b">
-                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created by</label>
-                          <div class="d-flex">
-                            <div class="avatar avatar-sm"><img src="../../../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
-                            <div class="ml-2 pd-t-5">
-                              <p class="tx-14 mb-0">Felix Adejumo</p>
+                              </div>
+
                             </div>
                           </div>
-                         </div>
+                        </div>
+                        
                       </div>
-                    </div>
-                  
                   </div>
                   <div class="modal-footer bg-modal-footer">
                     <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
@@ -1160,7 +856,7 @@
             <div class="modal fade" id="san-approvedModal" tabindex="-1" aria-labelledby="san-approvedmodalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
-                  <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                  <div class="modal-header pd-y-10 pd-md-x-30 pd-x-20 pd-b-10">
                     <div>
                       <p class="tx-22 tx-semibold modal-title" id="san-approvedModalLabel">View Case Details</p>
                     </div>
@@ -1169,7 +865,6 @@
                     </button>
                   </div> 
                   <div class="modal-body pd-md-x-30 pd-x-20">
-                    <div class="row">
                       <div class="col-md-9 col-12">
                         <div class="mg-b-25">
                           <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
@@ -1260,7 +955,7 @@
              <div class="modal fade" id="san-declinedModal" tabindex="-1" aria-labelledby="san-declinedmodalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
-                  <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                  <div class="modal-header pd-y-10 pd-md-x-30 pd-x-20 pd-b-10">
                     <div>
                       <p class="tx-22 tx-semibold modal-title" id="san-declinedModalLabel">View Sanction Details</p>
                     </div>
