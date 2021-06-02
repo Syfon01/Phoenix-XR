@@ -69,9 +69,8 @@
     <section class="secondary-bg">
       <div class="container pt-md-5 mg-t-25 mg-md-t-0 mg-lg-t-35">
         <button onclick="goBack()" class="btn btn-back tx-14 tx-semibold pd-l-0 pd-y-0"><i data-feather="arrow-left"></i> Go Back</button>
-        <p class="tx-32 tx-bold mb-0 mg-t-10">Pending DC Invitation</p>
+        <p class="tx-32 tx-bold mb-0 mg-t-10">DC Sitting</p>
         <hr class="mg-t-5">
-        <p class="tx-16 tx-uppercase">Review your invitation to DC Sitting</p>
 
         <div class="row mg-t-25">
           <div class="col-md-8 col-12">
@@ -83,8 +82,14 @@
               </div> 
               <div class="card-body pd-md-x-25 pd-x-20">
                 <div class="mg-b-25">
+                  <div class="card card-body pd-10 bg-green-50">
+
+                    <p class="tx-12 tx-semibold mb-0"><img src="../../../assets/img/icon/tickk.svg" alt="" srcset="" class="mg-r-10"> You accepted the invitation <span class="tx-normal">on March 12, 2021</span></p>
+                  </div>
+                </div>
+                <div class="mg-b-25">
                   <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
-                  <p class="tx-14 tx-grey-900 mb-0">Alleged eight accounts receiving multiple salaries from local government authority(ies)</p>
+                  <p class="tx-14 tx-grey-900 mb-0">Abscondment from office  - ngozi-ibeh chiamobi zion- a20474 - oyan business office</p>
                  </div>
                  <div class="mg-b-25">
                     <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
@@ -153,10 +158,10 @@
                 </div>
                 </div>
               </div>
-              <div class="modal-footer">
+              <!-- <div class="modal-footer">
                 <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-toggle="modal" data-target="#confirmModal" > <i class="fa fa-ban" aria-hidden="true"></i> Decline</button>
                 <button type="button" class="btn btn-primary btn-sm pd-x-30 tx-semibold" data-toggle="modal" data-target="#acceptModal" > <i class="fa fa-check" aria-hidden="true"></i> Approve Request</button>
-              </div>
+              </div> -->
           </div>
         </div>
 
@@ -167,8 +172,9 @@
                   <p class="tx-12 tx-secondary mb-0">Status</p>
                 </div>
                <div class="col-md-6 col-7 mg-b-15">
-                <span class="badge bg-yellow tx-11 tx-semibold">REQUIRING ATTENTION</span>
-               </div>
+                <span class="badge bg-blue-400 tx-11 tx-semibold">SCHEDULED</span>
+               </div> 
+               
                <div class="col-md-6 col-5">
                 <p class="tx-12 tx-secondary mb-0">Last Updated</p>
               </div>
@@ -180,101 +186,8 @@
           </div>
         </div>
 
-       
-         <!--confirm decline Modal -->
-         <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
-                <div>
-                  <p class="tx-22 tx-semibold modal-title" id="confirmModalLabel">Confirmation</p>
-                  <p class="tx-12 tx-grey-500 mb-0">You are about to decline the invite. Kindly input the reasons below to help the requester.</p>
-                </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div> 
-
-              <div class="modal-body pd-md-x-30 pd-x-20">
-                
-                <form action="">
-                  <div class="form-group">
-                    <label class="tx-medium mb-1">Comments/Remarks</label>
-                    <textarea name="" id="" class="form-control" rows="4" placeholder="Enter Here"></textarea>
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer bg-modal-footer">
-                <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary btn-sm pd-x-40 tx-semibold" data-toggle="modal" data-target="#declineModal" data-dismiss="modal">Submit</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-          <!--accept  Modal -->
-          <div class="modal fade" id="acceptModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header pd-y-10 bd-b-0">
-                  <h5 class="modal-title"></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                  <div class="d-flex">
-                    <div>
-                      <img src="../../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
-                    </div>
-                    <div class="mg-l-10">
-                      <p class="tx-22 tx-bold mb-0 pd-t-20">Invite Accepted</p>
-                    </div>
-                  </div>
-                  <hr class="mg-t-10"/>
-                  <p class="tx-14">You can check details of the request in your Previous Authorization listing. </p>
-                </div>
-                <div class="modal-footer bg-modal-footer">
-                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-            <!--decline  Modal -->
-            <div class="modal fade" id="declineModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header pd-y-10 bd-b-0">
-                    <h5 class="modal-title"></h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="d-flex">
-                      <div>
-                        <img src="../../../assets/img/icon/Cancel.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
-                      </div>
-                      <div class="mg-l-10">
-                        <p class="tx-22 tx-bold mb-0 pd-t-20">Invite Declined</p>
-                      </div>
-                    </div>
-                    <hr class="mg-t-10"/>
-                    <p class="tx-14">You can close this modal </p>
-                  </div>
-                  <div class="modal-footer bg-modal-footer">
-                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-        
-
       </div>
 
-      
        
     </section>
     <section class="footer text-white">
