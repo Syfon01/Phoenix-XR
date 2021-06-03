@@ -609,9 +609,71 @@
                       </div>
                       
                     </div>
-                  
                   </div>
-                  <div class="tab-pane fade" id="list-commend" role="tabpanel" aria-labelledby="list-commend-list">...</div>
+                  <div class="tab-pane fade" id="list-commend" role="tabpanel" aria-labelledby="list-commend-list">
+                    <div class="row justify-content-between">
+                      <div class="col-md-8 col-12">
+                        <p class="tx-28 tx-bold mb-0">Commendation</p>
+                        <p class="tx-14 tx-secondary">View details about the commendations you have received</p>
+                      </div>
+                    </div>
+                    <div class="table-section">
+                      <div class="card bg-transparent">
+                        <div class="card-header pd-x-15 pd-y-10">
+                          <div class="row justify-content-between">
+                            <div class="col-md-8 col-12 col-lg-8 ">
+                              <p class="tx-16 mb-0 tx-semibold">
+                                Commendations Received by You
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-body pd-10">
+                          <table class="table display">
+                            <thead>
+                              <tr class="tx-uppercase tx-12 tx-semibold">
+                                <th>S/N</th>
+                                <th>TITLE</th>
+                                <th>reward</th>
+                                <th>DATE ISSUED</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                  <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 260px;">Exception Performance</p>
+                                </td>
+                                <td class=""><p class="tx-12 mb-0 pd-t-5">₦100,000</p></td>
+                                <td>                                    
+                                  <p class="tx-12 mb-0 pd-t-5">Mar 4, 2021</p>
+                                </td>
+                                <td>   
+                                  <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#commendModal"> View Details</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>
+                                  <p class=" tx-medium tx-12 mb-0" style="width: 260px;">Exception Performance</p>
+                                </td>
+                                <td class=""><p class="tx-12 mb-0 pd-t-5">₦250,000</p></td>
+                                <td>                                    
+                                  <p class="tx-12 mb-0 pd-t-5">Feb 26, 2021</p>
+                                </td>
+                                <td>   
+                                  <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#commendModal"> View Details</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
                   <div class="tab-pane fade" id="list-recognition" role="tabpanel" aria-labelledby="list-recognition-list">...</div>
                   <div class="tab-pane fade" id="list-reward" role="tabpanel" aria-labelledby="list-reward-list">...</div>
                   <div class="tab-pane fade" id="list-withdraw" role="tabpanel" aria-labelledby="list-withdraw-list">...</div>
@@ -764,9 +826,6 @@
               </div>
             </div>
         
-
-           
-
              <!--Sanction Modal -->
              <div class="modal fade" id="sanctionModal" tabindex="-1" aria-labelledby="sanctionModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -795,12 +854,12 @@
                           </div>
                           <div class="mg-b-25">
                             <div class="row">
-                              <div class="col-md-6">
+                              <div class="col-md-6 col-6">
                                 <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Type</label>
                                 <p class="tx-14 mb-0">Letter of Displeasure</p>
                                 <p class="tx-12 tx-grey-500 mb-0">Issued once</p>
                               </div>
-                              <div class="col-md-6">
+                              <div class="col-md-6 col-6">
                                 <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Date Issued</label>
                                 <p class="tx-14 mb-0">Thur, March 4 2021</p>
                               </div>
@@ -814,7 +873,7 @@
                                   <div class="d-flex">
                                     <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
                                     <div>
-                                      <p class="tx-14 tx-grey-900 mb-0">Investigation_report_424.pdf</p>
+                                      <p class="tx-14 tx-grey-900 mb-0">Sanction_Letter_for_Staff_A29382.pdf</p>
                                       <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
                                     </div>
                                   </div>
@@ -852,29 +911,47 @@
               </div>
             </div>
 
-            <!--Sanction Approved Modal -->
-            <div class="modal fade" id="san-approvedModal" tabindex="-1" aria-labelledby="san-approvedmodalLabel" aria-hidden="true">
+            <!--Commendation Modal -->
+            <div class="modal fade" id="commendModal" tabindex="-1" aria-labelledby="commendModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header pd-y-10 pd-md-x-30 pd-x-20 pd-b-10">
                     <div>
-                      <p class="tx-22 tx-semibold modal-title" id="san-approvedModalLabel">View Case Details</p>
+                      <p class="tx-22 tx-semibold modal-title" id="commendModalLabel">View Commendation Details</p>
                     </div>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div> 
                   <div class="modal-body pd-md-x-30 pd-x-20">
-                      <div class="col-md-9 col-12">
+                      <div class="">
                         <div class="mg-b-25">
                           <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
-                          <p class="tx-14 tx-grey-900 mb-0">Investigation report on recall of funds - mxg energy</p>
+                          <p class="tx-14  mb-0">Exceptional Performance</p>
                          </div>
                          <div class="mg-b-25">
                             <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
-                            <p class="tx-14 tx-grey-900">The indicted staff allegedly failed to clear the N10,458,516.61 debit in the bank's account 
-                              for 10months which was debited to settle a customer and also failed to notify the customer of the outstanding.
+                            <p class="tx-14">Collaboratively benchmark principle-centered data before granular action items. 
+                              Compellingly enhance customer directed mindshare after installed base markets.
+                               Distinctively provide access to team building innovation vis-a-vis.
                             </p>
+                          </div>
+                          <div class="mg-b-25">
+                            <div class="row">
+                              <div class="col-md-4 col-6">
+                         
+                                <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Date Issued</label>
+                                <p class="tx-14 mb-0">Thur, March 4 2021</p>
+                              </div>
+                              <div class="col-md-4 col-6">
+                                <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">FINANCIAL REWARD</label>
+                                <p class="tx-14 mb-0">₦250,000</p>
+                              </div>
+                              <div class="col-md-4 mg-t-10 mg-md-t-0">
+                                <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">PROMOTION IMPACT</label>
+                                <p class="tx-14 mb-0">No</p>
+                              </div>
+                            </div>
                           </div>
                           <div class="mg-b-25">
                             <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
@@ -884,65 +961,18 @@
                                   <div class="d-flex">
                                     <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
                                     <div>
-                                      <p class="tx-14 tx-grey-900 mb-0">Investigation_report_424.pdf</p>
+                                      <p class="tx-14 tx-grey-900 mb-0">Commendation_Letter_for_Staff_A29382.pdf</p>
                                       <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
                                     </div>
                                   </div>
                                 </div>
                                 <div class="col-3 col-md-2 pd-md-l-0">
-                                  <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 w-100"> View</a>
+                                  <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 float-right"> View</a>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          
-                         <div class="mg-b-25">
-                          <label for="formGroupExampleInput" class="d-block tx-medium mb-0 tx-grey-600 tx-uppercase tx-12">Involved Employees <span>(2)</span></label>
-                          <div class="d-flex mg-t-15">
-                            <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
-                            <div class="ml-3 pd-t-3">
-                              <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
-                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
-                            </div>
-                          </div>
-                        
-                          <div class="d-flex mg-t-15">
-                            <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
-                            <div class="ml-3 pd-t-3">
-                              <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
-                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
-                            </div>
-                          </div>
-                        </div>
                       </div>
-                      <div class="col-md-3 col-12">
-                        <div class="pd-b-12 bd-b">
-                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Status</label>
-                          <p class="tx-11 mb-0"><span class="badge badge-green-400 tx-11 tx-semibold pd-y-3">APPROVED</span></p>
-                         </div>
-                         <div class="pd-y-12 bd-b">
-                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Case ID</label>
-                          <p class="tx-12 mb-0">DCS02</p>
-                         </div>
-                         <div class="pd-y-12 bd-b">
-                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created on</label>
-                          <p class="tx-12 mb-0">Mon Feb 16, 2021</p>
-                         </div>
-                         <div class="pd-y-12 bd-b">
-                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created by</label>
-                          <p class="tx-12 mb-0">Felix Adejumo</p>
-                         </div>
-                         <div class="pd-y-12 bd-b">
-                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Approved on</label>
-                          <p class="tx-12 mb-0">Mon Mar 1, 2021</p>
-                         </div>
-                         <div class="pd-y-12 bd-b">
-                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Approved by</label>
-                          <p class="tx-12 mb-0">Adams Ifeanyi</p>
-                         </div>
-                      </div>
-                    </div>
-                  
                   </div>
                   <div class="modal-footer bg-modal-footer">
                     <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
@@ -951,126 +981,7 @@
               </div>
             </div>
 
-             <!--Sanction Declined Modal -->
-             <div class="modal fade" id="san-declinedModal" tabindex="-1" aria-labelledby="san-declinedmodalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header pd-y-10 pd-md-x-30 pd-x-20 pd-b-10">
-                    <div>
-                      <p class="tx-22 tx-semibold modal-title" id="san-declinedModalLabel">View Sanction Details</p>
-                    </div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div> 
-                  <div class="modal-body pd-md-x-30 pd-x-20">
-                    <div class="card card-body bg-red-50 pd-15 bd-0 mg-b-20">
-                      <div class="d-flex">
-                        <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-4" alt="" srcset="">
-                        <div class="col-md-10 col-12 pd-x-0">
-                          <p class="tx-14 tx-semibold mb-0">Remarks/Comments for Declining</p>
-                          <p class="tx-14 mb-0">The identfied employee do not match the conclusion from the 
-                            findings by the police. Correct and refrain from repeating.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-9 col-12">
-                        <div class="mg-b-25">
-                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
-                          <p class="tx-14 tx-grey-900 mb-0">Alleged failure of integrity test.</p>
-                         </div>
-                         <div class="mg-b-25">
-                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
-                            <p class="tx-14 tx-grey-900">Energistically parallel task open-source leadership after cross functional customer service. 
-                              Globally iterate extensible scenarios rather than go forward platforms. 
-                              Conveniently utilize ethical products.
-                            </p>
-                          </div>
-                          <div class="mg-b-25">
-                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
-                            <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
-                              <div class="row justify-content-between">
-                                <div class="col-9 col-md-9">
-                                  <div class="d-flex">
-                                    <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
-                                    <div>
-                                      <p class="tx-14 tx-grey-900 mb-0">Investigation_report_424.pdf</p>
-                                      <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-3 col-md-2 pd-md-l-0">
-                                  <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 w-100"> View</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          
-                          <div class="mg-b-25">
-                            <label for="formGroupExampleInput" class="d-block tx-medium mb-0 tx-grey-600 tx-uppercase tx-12">Involved Employees <span>(2)</span></label>
-                            <div class="d-flex mg-t-15">
-                              <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
-                              <div class="ml-3 pd-t-3">
-                                <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
-                                <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
-                              </div>
-                              <div class="break"></div>
-                              <div class="bg-grey-card d-line-bold ml-md-auto pd-x-10 pd-y-5 mg-t-10 mg-b-5">
-                                <p class="mb-0 tx-12">Fixed Suspension (5 days)</p>
-                              </div>
-                            </div>
-                          
-                            <div class="d-flex mg-t-15">
-                              <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
-                              <div class="ml-3 pd-t-3">
-                                <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
-                                <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
-                              </div>
-                              <div class="break"></div>
-                              <div class="bg-grey-card d-line-bold ml-md-auto pd-x-10 pd-y-5 mg-t-10 mg-b-5">
-                                <p class="mb-0 tx-12">Letter of Displeasure</p>
-                              </div>
-                            </div>
-                            </div>
-                      </div>
-                      <div class="col-md-3 col-12">
-                        <div class="pd-b-12 bd-b">
-                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Status</label>
-                          <p class="tx-11 mb-0"><span class="badge bg-red-400 tx-11 tx-semibold pd-y-3">Declined</span></p>
-                         </div>
-                         <div class="pd-y-12 bd-b">
-                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">MODE</label>
-                          <p class="tx-12 mb-0">Bulk Upload</p>
-                         </div>
-                         <div class="pd-y-12 bd-b">
-                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created on</label>
-                          <p class="tx-12 mb-0">Mon Feb 16, 2021</p>
-                         </div>
-                         <div class="pd-y-12 bd-b">
-                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created by</label>
-                          <p class="tx-12 mb-0">Felix Adejumo</p>
-                         </div>
-                         <div class="pd-y-12 bd-b">
-                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Declined on</label>
-                          <p class="tx-12 mb-0">Mon Mar 1, 2021</p>
-                         </div>
-                         <div class="pd-y-12 bd-b">
-                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Declined by</label>
-                          <p class="tx-12 mb-0">Adams Ifeanyi</p>
-                         </div>
-                      </div>
-                    </div>
-                  
-                  </div>
-                  <div class="modal-footer bg-modal-footer">
-                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            
           </div>
         </section>
       
@@ -1115,6 +1026,11 @@
    });
    
    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+     $('.display:visible').each( function(e) {
+       $(this).DataTable().columns.adjust().responsive.recalc();
+     });
+   });
+   $('a[data-toggle="list"]').on('shown.bs.tab', function (e) {
      $('.display:visible').each( function(e) {
        $(this).DataTable().columns.adjust().responsive.recalc();
      });
