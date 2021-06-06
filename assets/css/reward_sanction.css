@@ -167,7 +167,7 @@ td div p.tx-12{
 }
 .nav-link.active{
 font-weight: 700;
-color: #000!important;
+/* color: #000!important; */
 }
 .negative-margin{
   margin-top: -20px!important;

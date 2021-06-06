@@ -31,6 +31,7 @@ body { -webkit-font-smoothing: antialiased; }
   
 .nav-item.active{
     border-bottom:2px solid #d70900;
+    
 }
 .nav-item.active .header-link{
     font-weight: 700!important;
@@ -453,7 +454,7 @@ p{
   .bg-grey-card{
     background-color: #ECECEC!important;
     border-radius: 4px;
-    max-height: 45px;
+    /* max-height: 45px; */
   }
   .bg-yellow{
     background-color: #F9C513!important;

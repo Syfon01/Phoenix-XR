@@ -86,7 +86,7 @@
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
               <div class="card">
                 <div class="card-body pd-md-30">
-                  <form action="">
+                  <form>
                     <div class="row">
                       <div class="col-lg-3 col-12  mg-md-t-0">
                         <p class="tx-24 mb-0">Sanction Details</p>
@@ -119,7 +119,8 @@
                       <div class="col-lg-9 col-12 mg-t-20">
                         <div class="form-row">
                           <div class="form-group col-md-6">
-                            <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Employee ID or Email <span class="tx-secondary">(Please type at least 4 characters) </span> </label>
+                            <div class="card card-body pd-10 bg-grey-card">
+                              <label for="formGroupExampleInput2" class="tx-medium mb-1">Employee ID or Email <span class="tx-secondary tx-12">(Please type at least 4 characters) </span> </label>
                               <select id="employee" multiple="multiple" class="form-control">
                                 <option value="1">
                                   Bayo Adeosun - (A29118)
@@ -128,19 +129,16 @@
                                 <option value="3">Seyi Bassey</option>
                                 <option value="4">Olu Pascal</option>
                               </select>
+                              <p class="mb-0 tx-14 d-flex justify-content-between mg-t-10">
+                                <span class="tx-grey-900 tx-semibold">Fixed Suspension (5 days)</span>
+                                <button class=" btn tx-primary tx-12 tx-semibold d-block pd-y-0" type="button" data-toggle="modal" data-target="#edit-sanction-Modal">EDIT</button>
+                             </p>
+                            </div>
+                            
                           </div>
                           <div class="form-group col-md-6">
-                            <span class="bg-grey-card mg-md-t-25 pd-x-10 pd-y-10 d-inline-block">
-                              <p class="mb-0 tx-12"><span class="tx-grey-600">Added Sanction: </span>
-                                 <span class="tx-grey-900 tx-semibold">Fixed Suspension (5 days)</span>
-                                 <a href="" class=" ml-md-3 tx-semibold" data-toggle="modal" data-target="#edit-sanction-Modal">EDIT</a>
-                              </p>
-                            </span>
-                          </div>
-                        </div>
-                        <div class="form-row">
-                          <div class="form-group col-md-6">
-                            <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Employee ID or Email <span class="tx-secondary">(Please type at least 4 characters) </span> </label>
+                            <div class="card card-body pd-10 bg-grey-card">
+                              <label for="formGroupExampleInput2" class="tx-medium mb-1">Employee ID or Email <span class="tx-secondary tx-12">(Please type at least 4 characters) </span> </label>
                               <select id="employe" multiple="multiple" class="form-control">
                                 <option value="1">
                                   Bayo Adeosun - (A29118)
@@ -149,12 +147,15 @@
                                 <option value="3">Seyi Bassey</option>
                                 <option value="4">Olu Pascal</option>
                               </select>
-                          </div>
-                          <div class="form-group col-md-6"> 
-                            <label for="formGroupExampleInput2" class="d-block tx-medium mb-md-4"></label>
-                            <a href="" class="tx-12 tx-semibold pd-md-t-10 d-block" data-toggle="modal" data-target="#add-sanction-Modal">ADD SANCTION TYPE</a> 
+                              <p class="mb-0 tx-14 d-flex justify-content-between mg-t-10">
+                                <span class="tx-grey-500 "><em>No Sanction Added yet</em></span>
+                                <button class="btn tx-primary tx-12 tx-semibold d-block pd-y-0" data-toggle="modal" type="button" data-target="#add-sanction-Modal" disabled>ADD SANCTION TYPE</button> 
+                             </p>
+                            </div>
+                            
                           </div>
                         </div>
+                        <hr>
                         <div class="form-group">
                           <a href="" class="tx-semibold"><img src="../../../assets/img/icon/add.svg" alt="" srcset="" class="mr-2">Add another Employee </a>
                         </div>
@@ -170,123 +171,159 @@
               
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-              <h1>Bulk Upload</h1>
-              <p>...</p>
+              <div class="row">
+                <div class="col-md-7 col-12">
+                  <div class="card">
+                    <div class="card-body pd-md-30 pd-20">
+                      <p class="tx-12 tx-semibold mg-b-15 tx-uppercase">Sanction multiple employees at the same time using the excel format.</p>
+    
+                      <div class="card card-body pd-20 bg-light-blue">
+                        <div class="d-flex">
+                          <div>
+                          <img src="../../../assets/img/icon/info-icon.svg" alt="" srcset="" class="mg-r-10">
+                          </div>
+                          <div>
+                            <p class="tx-16 tx-semibold mb-0 tx-neutral">Guidelines</p>
+                            <ul class="pd-l-15">
+                              <li class="tx-grey-900 mg-b-8">
+                                Use the template provided for this upload. <button class="btn tx-primary py-0 tx-semibold pd-x-10">Download Template</button>
+                              </li>
+                              <li class="tx-grey-900 mg-b-8">
+                                Only one excel file can be uploaded at a time.
+                              </li>
+                              <li class="tx-grey-900 mg-b-8">
+                                Once an upload is done, the system validates the uploaded file for errors if any. Upload status can be found in the submitted tab of Sanctions table.
+                              </li>
+                            </ul>
+                           
+                          </div>
+    
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  
+                </div>
+              </div>
+             
             </div>
             
           </div>
         </div>
   
-         <!--Add Sanction Modal -->
-         <div class="modal fade" id="add-sanction-Modal" tabindex="-1" aria-labelledby="add-sanction-ModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
-                <div>
-                  <p class="tx-22 tx-semibold modal-title" id="add-sanction-ModalLabel">Add Sanction Type</p>
-                </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div> 
-
-              <div class="modal-body pd-md-x-30 pd-x-20">
-               <div class="mg-b-25">
-                <label for="formGroupExampleInput" class="d-block tx-medium mb-1">Affected Employee</label>
-                <div class="card bg-grey-100">
-                  <div class="card-body pd-15">
-                    <div class="d-flex">
-                      <div class="avatar avatar mg-t-2"><img src="../../../assets/img/team5.png" class="rounded-circle" alt=""></div>
-                      <div class="mg-l-10">
-                        <p class="mb-0">                
-                          <span class="tx-16">Michael Adeyemo <span class="tx-12 tx-secondary">(A28922)</span></span></p>
-                        <p class="tx-12 tx-secondary mb-0">Team Member, Card Services</p>
+       
+          <!--Add Sanction Modal -->
+          <div class="modal fade" id="add-sanction-Modal" tabindex="-1" aria-labelledby="add-sanction-ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                  <div>
+                    <p class="tx-22 tx-semibold modal-title" id="add-sanction-ModalLabel">Add Sanction Type</p>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> 
+  
+                <div class="modal-body pd-md-x-30 pd-x-20">
+                 <div class="mg-b-25">
+                  <label for="formGroupExampleInput" class="d-block tx-medium mb-1">Affected Employee</label>
+                  <div class="card bg-grey-100">
+                    <div class="card-body pd-15">
+                      <div class="d-flex">
+                        <div class="avatar avatar mg-t-2"><img src="../../../assets/img/team5.png" class="rounded-circle" alt=""></div>
+                        <div class="mg-l-10">
+                          <p class="mb-0">                
+                            <span class="tx-16">Michael Adeyemo <span class="tx-12 tx-secondary">(A28922)</span></span></p>
+                          <p class="tx-12 tx-secondary mb-0">Team Member, Card Services</p>
+                        </div>
                       </div>
                     </div>
                   </div>
+                 </div>
+                  
+                  <form action="">
+                    <div class="form-group">
+                      <label class="tx-medium mb-1">Select Sanction Type</label>
+                      <select class="custom-select">
+                        <option selected>Letter of Dismissal</option>
+                        <option value="1">Letter of Advice</option>
+                        <option value="2">Letter of Advice</option>
+                        <option value="3">Fixed Suspension</option>
+                      </select>
+                    </div>
+                  </form>
                 </div>
-               </div>
-                
-                <form action="">
-                  <div class="form-group">
-                    <label class="tx-medium mb-1">Select Sanction Type</label>
-                    <select class="custom-select">
-                      <option selected>Letter of Dismissal</option>
-                      <option value="1">Letter of Advice</option>
-                      <option value="2">Letter of Advice</option>
-                      <option value="3">Fixed Suspension</option>
-                    </select>
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer bg-modal-footer">
-                <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal" data-dismiss="modal">Save Added Sanction</button>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal" data-dismiss="modal">Save Added Sanction</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-         <!--Edit Sanction Modal -->
-         <div class="modal fade" id="edit-sanction-Modal" tabindex="-1" aria-labelledby="edit-sanction-ModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
-                <div>
-                  <p class="tx-22 tx-semibold modal-title" id="edit-sanction-ModalLabel">Edit Sanction Type</p>
-                </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div> 
-
-              <div class="modal-body pd-md-x-30 pd-x-20">
-               <div class="mg-b-25">
-                <label for="formGroupExampleInput" class="d-block tx-medium mb-1">Affected Employee</label>
-                <div class="card bg-grey-100">
-                  <div class="card-body pd-15">
-                    <div class="d-flex">
-                      <div class="avatar avatar mg-t-2"><img src="../../../assets/img/team2.png" class="rounded-circle" alt=""></div>
-                      <div class="mg-l-10">
-                        <p class="mb-0">                
-                          <span class="tx-16">Bayo Adeosun<span class="tx-12 tx-secondary">(A29118)</span></span></p>
-                        <p class="tx-12 tx-secondary mb-0">Team Member, Card Services</p>
+  
+           <!--Edit Sanction Modal -->
+           <div class="modal fade" id="edit-sanction-Modal" tabindex="-1" aria-labelledby="edit-sanction-ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                  <div>
+                    <p class="tx-22 tx-semibold modal-title" id="edit-sanction-ModalLabel">Edit Sanction Type</p>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> 
+  
+                <div class="modal-body pd-md-x-30 pd-x-20">
+                 <div class="mg-b-25">
+                  <label for="formGroupExampleInput" class="d-block tx-medium mb-1">Affected Employee</label>
+                  <div class="card bg-grey-100">
+                    <div class="card-body pd-15">
+                      <div class="d-flex">
+                        <div class="avatar avatar mg-t-2"><img src="../../../assets/img/team2.png" class="rounded-circle" alt=""></div>
+                        <div class="mg-l-10">
+                          <p class="mb-0">                
+                            <span class="tx-16">Bayo Adeosun<span class="tx-12 tx-secondary">(A29118)</span></span></p>
+                          <p class="tx-12 tx-secondary mb-0">Team Member, Card Services</p>
+                        </div>
                       </div>
                     </div>
                   </div>
+                 </div>
+                  
+                  <form action="">
+                    <div class="form-group">
+                      <label class="tx-medium mb-1">Select Sanction Type</label>
+                      <select class="custom-select">
+                        <option selected>Fixed Suspension</option>
+                        <option value="1">Letter of Advice</option>
+                        <option value="2">Fixed Suspension</option>
+                        <option value="3">Letter of Dismissal</option>
+                      </select>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label class="tx-medium mb-1">Duration (working days)</label>
+                        <input type="text" class="form-control" placeholder="-Enter here-">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label class="tx-medium mb-1">Start Date</label>
+                        <input type="date" class="form-control" placeholder="">
+                      </div>
+                    </div>
+                  </form>
                 </div>
-               </div>
-                
-                <form action="">
-                  <div class="form-group">
-                    <label class="tx-medium mb-1">Select Sanction Type</label>
-                    <select class="custom-select">
-                      <option selected>Fixed Suspension</option>
-                      <option value="1">Letter of Advice</option>
-                      <option value="2">Fixed Suspension</option>
-                      <option value="3">Letter of Dismissal</option>
-                    </select>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label class="tx-medium mb-1">Duration (working days)</label>
-                      <input type="text" class="form-control" placeholder="-Enter here-">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label class="tx-medium mb-1">Start Date</label>
-                      <input type="date" class="form-control" placeholder="">
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer bg-modal-footer">
-                <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal" data-dismiss="modal">Update Sanction</button>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal" data-dismiss="modal">Update Sanction</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
+  
          <!--Preview Modal -->
          <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
@@ -383,7 +420,8 @@
                       <img src="../../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
                     </div>
                     <div class="mg-l-10">
-                      <p class="tx-22 tx-bold mb-0 pd-t-20">Request Sent for Approval</p>
+                      <p class="tx-22 tx-bold mb-0">Sanction Request Sent for 
+                        Approval</p>
                     </div>
                   </div>
                   <hr class="mg-t-10"/>
