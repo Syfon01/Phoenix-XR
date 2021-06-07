@@ -177,7 +177,7 @@
                     <div class="card-body pd-md-30 pd-20">
                       <p class="tx-12 tx-semibold mg-b-15 tx-uppercase">Sanction multiple employees at the same time using the excel format.</p>
     
-                      <div class="card card-body pd-20 bg-light-blue">
+                      <div class="card card-body pd-20 bg-light-blue mg-b-20">
                         <div class="d-flex">
                           <div>
                           <img src="../../../assets/img/icon/info-icon.svg" alt="" srcset="" class="mg-r-10">
@@ -195,16 +195,70 @@
                                 Once an upload is done, the system validates the uploaded file for errors if any. Upload status can be found in the submitted tab of Sanctions table.
                               </li>
                             </ul>
-                           
                           </div>
-    
                         </div>
                       </div>
+                      <form action="">
+                        <div class="form-group">
+                          <div class="row justify-content-between">
+                            <div class="col-md-7">
+                              <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Upload Affected Employees Data <span class="tx-secondary tx-12"> (cvs, xls)</span> </label>
+                            </div>
+                            <div class="col-md-5">
+                              <a href="http://" class="btn tx-primary float-md-right tx-semibold tx-12 pd-0"><img src="../../../assets/img/icon/inf.svg" alt="" srcset="">  Download Excel Template</a>
+                            </div>
+                          </div>
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile"><img src="../../../assets/img/icon/upload.svg" class="mr-2"> Drop files here</label>
+                          </div>
+                          <div id="fileList"></div>
+                        </div>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Comments/Remarks to Authorizer (optional)</label>
+                          <textarea name="" id="" class="form-control input-bg" rows="3" placeholder="Describe the request here"></textarea>
+                        </div>
+                        
+                        <div class="modal-footer pd-b-0">
+                          <button class="btn btn-primary pd-x-50 txx-semibold" type="button" data-toggle="modal" data-target="#bulkModal" data-dismiss="modal">Submit</button>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-5">
-                  
+                  <p class="tx-18 tx-grey-900 tx-bold">Previous Bulk Upload Listing</p>
+                  <div class="">
+                    <div class="row bd-b pd-y-10">
+                      <div class="col-md-9 col-9 mg-b-15 mg-md-b-0">
+                        <p class="tx-14 tx-medium tx-secondary mb-0 tx-grey-900">Sanctions-Bulk-Upload-Template (1).xlsx</p>
+                        <label for="" class="tx-12 mb-0 tx-grey-600 tx-medium">Fri, May 14, 2021  1:30 PM</label>
+                      </div>
+                      <div class="col-md-3 col-3 mg-b-15 mg-md-b-0">
+                        <span class="badge badge-blue tx-11 tx-semibold float-right">PROCESSING</span>
+                      </div> 
+                    </div>
+                    
+                    <div class="row bd-b pd-y-10">
+                      <div class="col-md-9 col-9 mg-b-15 mg-md-b-0">
+                        <p class="tx-14 tx-medium tx-secondary mb-0 tx-grey-900">Sanctions-Bulk-Upload-ella5.xlsx</p>
+                        <label for="" class="tx-12 mb-0 tx-grey-600 tx-medium">Mon, Apr 28, 2021 4:13 PM</label>
+                      </div>
+                      <div class="col-md-3 col-3 mg-b-15 mg-md-b-0">
+                        <span class="badge badge-green tx-11 tx-semibold float-right">COMPLETED</span>
+                      </div>
+                    </div>
+                    
+                    <div class="row bd-b pd-y-10">
+                      <div class="col-md-9 col-9 mg-b-15 mg-md-b-0">
+                        <p class="tx-14 tx-medium tx-secondary mb-0 tx-grey-900">Sanction Template New Sample.xlsx</p>
+                        <label for="" class="tx-12 mb-0 tx-grey-600 tx-medium">Mon Apr 23, 2021 1:13 PM <button class="btn tx-primary py-0 tx-semibold pd-x-10">View Log</button></label>
+                      </div>
+                      <div class="col-md-3 col-3 mg-b-15 mg-md-b-0">
+                        <span class="badge bg-red-50 tx-red-500 tx-11 tx-semibold float-right">FAILED</span>
+                      </div> 
+                    </div>
+                  </div>
                 </div>
               </div>
              
@@ -426,6 +480,35 @@
                   </div>
                   <hr class="mg-t-10"/>
                   <p class="tx-14">Notification and email has been sent to the authorizer for approval. The request will have a status of SUBMITTED till either approved or declined. </p>
+                </div>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+           <!--Bulk  Modal -->
+           <div class="modal fade" id="bulkModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header pd-y-10 bd-b-0">
+                  <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  <div class="d-flex">
+                    <div>
+                      <img src="../../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
+                    </div>
+                    <div class="mg-l-10">
+                      <p class="tx-22 tx-bold mb-0">Bulk Upload Processing</p>
+                    </div>
+                  </div>
+                  <hr class="mg-t-10"/>
+                  <p class="tx-14 mb-4">Check status update in the previous bulk upload listing.  </p>
                 </div>
                 <div class="modal-footer bg-modal-footer">
                   <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
