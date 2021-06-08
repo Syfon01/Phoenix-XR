@@ -69,7 +69,7 @@
     <section class="secondary-bg">
       <div class="container pt-md-5 mg-t-25 mg-md-t-0 mg-lg-t-35">
         <button onclick="goBack()" class="btn btn-back tx-14 tx-semibold pd-l-0 pd-y-0"><i data-feather="arrow-left"></i> Go Back</button>
-        <p class="tx-32 tx-bold">Log New Sanction Request</p>
+        <p class="tx-32 tx-bold">Initiate New Recognition</p>
       
         <div>
           <ul class="nav nav-line" id="myTab" role="tablist">
@@ -89,7 +89,7 @@
                   <form>
                     <div class="row">
                       <div class="col-lg-3 col-12  mg-md-t-0">
-                        <p class="tx-24 mb-0">Sanction Details</p>
+                        <p class="tx-24 mb-0">Recognition Details</p>
                       </div>
                       <div class="col-lg-9 col-12 mg-t-20 mg-md-t-0">
                           <div class="form-group">
@@ -119,7 +119,7 @@
                       <div class="col-lg-9 col-12 mg-t-20">
                         <div class="form-row">
                           <div class="form-group col-md-6">
-                            <div class="card card-body pd-10 bg-grey-card">
+                            <div class="card card-body pd-10">
                               <label for="formGroupExampleInput2" class="tx-medium mb-1">Employee ID or Email <span class="tx-secondary tx-12">(Please type at least 4 characters) </span> </label>
                               <select id="employee" multiple="multiple" class="form-control">
                                 <option value="1">
@@ -129,15 +129,11 @@
                                 <option value="3">Seyi Bassey</option>
                                 <option value="4">Olu Pascal</option>
                               </select>
-                              <p class="mb-0 tx-14 d-flex justify-content-between mg-t-10">
-                                <span class="tx-grey-900 tx-semibold">Fixed Suspension (5 days)</span>
-                                <button class=" btn tx-primary tx-12 tx-semibold d-block pd-y-0" type="button" data-toggle="modal" data-target="#edit-sanction-Modal">EDIT</button>
-                             </p>
                             </div>
                             
                           </div>
                           <div class="form-group col-md-6">
-                            <div class="card card-body pd-10 ">
+                            <div class="card card-body pd-10">
                               <label for="formGroupExampleInput2" class="tx-medium mb-1">Employee ID or Email <span class="tx-secondary tx-12">(Please type at least 4 characters) </span> </label>
                               <select id="employe" multiple="multiple" class="form-control">
                                 <option value="1">
@@ -147,10 +143,6 @@
                                 <option value="3">Seyi Bassey</option>
                                 <option value="4">Olu Pascal</option>
                               </select>
-                              <p class="mb-0 tx-14 d-flex justify-content-between mg-t-10">
-                                <span class="tx-grey-500 "><em>No Sanction Added yet</em></span>
-                                <button class="btn tx-primary tx-12 tx-semibold d-block pd-y-0" data-toggle="modal" type="button" data-target="#add-sanction-Modal" disabled>ADD SANCTION TYPE</button> 
-                             </p>
                             </div>
                             
                           </div>
@@ -175,7 +167,7 @@
                 <div class="col-md-7 col-12">
                   <div class="card">
                     <div class="card-body pd-md-30 pd-20">
-                      <p class="tx-12 tx-semibold mg-b-15 tx-uppercase">Sanction multiple employees at the same time using the excel format.</p>
+                      <p class="tx-12 tx-semibold mg-b-15 tx-uppercase">recognize multiple employees at the same time using the excel format.</p>
     
                       <div class="card card-body pd-20 bg-light-blue mg-b-20">
                         <div class="d-flex">
@@ -202,7 +194,7 @@
                         <div class="form-group">
                           <div class="row justify-content-between">
                             <div class="col-md-7">
-                              <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Upload Affected Employees Data <span class="tx-secondary tx-12"> (cvs, xls)</span> </label>
+                              <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Involved Staff Recognition Bulk Upload<span class="tx-secondary tx-12"> (cvs, xls)</span> </label>
                             </div>
                             <div class="col-md-5">
                               <button type="button" class="btn tx-primary float-md-right tx-semibold tx-12 pd-0" data-toggle="modal" data-target="#excelModal"><img src="../../../assets/img/icon/inf.svg" alt="" srcset="" >  Download Excel Template</button>
@@ -231,7 +223,7 @@
                   <div class="">
                     <div class="row bd-b pd-y-10">
                       <div class="col-md-9 col-9 mg-b-15 mg-md-b-0">
-                        <p class="tx-14 tx-medium tx-secondary mb-0 tx-grey-900">Recognition-Bulk-Upload-Template (1).xlsx</p>
+                        <p class="tx-14 tx-medium tx-secondary mb-0 tx-grey-900">Sanctions-Bulk-Upload-Template (1).xlsx</p>
                         <label for="" class="tx-12 mb-0 tx-grey-600 tx-medium">Fri, May 14, 2021  1:30 PM</label>
                       </div>
                       <div class="col-md-3 col-3 mg-b-15 mg-md-b-0">
@@ -241,7 +233,7 @@
                     
                     <div class="row bd-b pd-y-10">
                       <div class="col-md-9 col-9 mg-b-15 mg-md-b-0">
-                        <p class="tx-14 tx-medium tx-secondary mb-0 tx-grey-900">Recognition-Bulk-Upload-ella5.xlsx</p>
+                        <p class="tx-14 tx-medium tx-secondary mb-0 tx-grey-900">Sanctions-Bulk-Upload-ella5.xlsx</p>
                         <label for="" class="tx-12 mb-0 tx-grey-600 tx-medium">Mon, Apr 28, 2021 4:13 PM</label>
                       </div>
                       <div class="col-md-3 col-3 mg-b-15 mg-md-b-0">
@@ -251,7 +243,7 @@
                     
                     <div class="row bd-b pd-y-10">
                       <div class="col-md-9 col-9 mg-b-15 mg-md-b-0">
-                        <p class="tx-14 tx-medium tx-secondary mb-0 tx-grey-900">Recognition_Template_New_Sample.xlsx</p>
+                        <p class="tx-14 tx-medium tx-secondary mb-0 tx-grey-900">Sanction Template New Sample.xlsx</p>
                         <label for="" class="tx-12 mb-0 tx-grey-600 tx-medium">Mon Apr 23, 2021 1:13 PM <button class="btn tx-primary py-0 tx-semibold pd-x-10">View Log</button></label>
                       </div>
                       <div class="col-md-3 col-3 mg-b-15 mg-md-b-0">
@@ -268,6 +260,7 @@
         </div>
   
        
+
           <!--Download Excel Modal -->
           <div class="modal fade" id="excelModal" tabindex="-1" aria-labelledby="excelModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -416,8 +409,8 @@
             <div class="modal-content">
               <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
                 <div>
-                  <p class="tx-22 tx-semibold modal-title" id="previewModalLabel">Issue New Sanction Request</p>
-                  <p class="tx-12 tx-secondary mb-0">This process initiates a request to issue sanction to affected employee(s)</p>
+                  <p class="tx-22 tx-semibold modal-title" id="previewModalLabel">Preview New Recognition Request</p>
+                  <p class="tx-12 tx-secondary mb-0">This process initiates a request to issue recognition to affected employee(s)</p>
                 </div>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
@@ -427,23 +420,23 @@
               <div class="modal-body pd-md-x-30 pd-x-20">
                <div class="mg-b-25">
                 <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
-                <p class="tx-14 tx-grey-900 mb-0">Unauthorized absence / insubordination</p>
+                <p class="tx-14 tx-grey-900 mb-0">Exceptional Performance</p>
                </div>
                <div class="mg-b-25">
                   <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
-                  <p class="tx-14 tx-grey-900">The indicted staff allegedly colluded with officials of some local government councils in Borno state to 
-                    divert salaries to accounts operated by the staff.
+                  <p class="tx-14 tx-grey-900">Management acknowledges and commends your exceptional performance in mobilizing 
+                    and securing a deposit inflow of N10million for a newly opened account.
                   </p>
                 </div>
                 <div class="mg-b-25">
-                  <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
+                  <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">Additional attachment</label>
                   <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
                     <div class="row justify-content-between">
                       <div class="col-9 col-md-9">
                         <div class="d-flex">
                           <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
                           <div>
-                            <p class="tx-14 tx-grey-900 mb-0">Investigation_report_424.pdf</p>
+                            <p class="tx-14 tx-grey-900 mb-0">Recognition_justification_report_424.pdf</p>
                             <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
                           </div>
                         </div>
@@ -463,10 +456,6 @@
                     <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
                     <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
                   </div>
-                  <div class="break"></div>
-                  <div class="bg-grey-card d-line-bold ml-md-auto pd-x-10 pd-y-5 mg-t-10 mg-b-5">
-                    <p class="mb-0 tx-12">Fixed Suspension (5 days)</p>
-                  </div>
                 </div>
               
                 <div class="d-flex mg-t-15">
@@ -474,10 +463,6 @@
                   <div class="ml-3 pd-t-3">
                     <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
                     <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
-                  </div>
-                  <div class="break"></div>
-                  <div class="bg-grey-card d-line-bold ml-md-auto pd-x-10 pd-y-5 mg-t-10 mg-b-5">
-                    <p class="mb-0 tx-12">Letter of Displeasure</p>
                   </div>
                 </div>
               </div>
@@ -506,7 +491,7 @@
                       <img src="../../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
                     </div>
                     <div class="mg-l-10">
-                      <p class="tx-22 tx-bold mb-0">Sanction Request Sent for 
+                      <p class="tx-22 tx-bold mb-0">Recognition Request Sent for 
                         Approval</p>
                     </div>
                   </div>

@@ -124,12 +124,12 @@
                 <div class="list-group" id="list-tab" role="tablist">
                   <a class="list-group-item prima list-group-item-action active" id="list-dc-list" data-toggle="list" href="#list-dc" role="tab" aria-controls="home"><img src="../../../assets/img/icon/dc.svg" alt="" srcset="" class="mg-r-10 img-fluid"> Approvals</a>
                   <a class="list-group-item prima list-group-item-action" id="list-sanction-list" data-toggle="list" href="#list-sanction" role="tab" aria-controls="profile"> <img src="../../../assets/img/icon/sanction.svg" alt="" srcset="" class="mg-r-10 img-fluid"> Sanctions</a>
+                  <a class="list-group-item prima list-group-item-action" id="list-recognition-list" data-toggle="list" href="#list-recognition" role="tab" aria-controls="recognition">
+                    <img src="../../../assets/img/icon/recognitiom.svg" alt="" srcset="" class="mg-r-10 img-fluid"> Recognition
+                    </a>
                   <a class="list-group-item prima list-group-item-action" id="list-commend-list" data-toggle="list" href="#list-commend" role="tab" aria-controls="commend">
                     <img src="../../../assets/img/icon/commendation.svg" alt="" srcset="" class="mg-r-10 img-fluid"> Commendation
                   </a>
-                   <a class="list-group-item prima list-group-item-action" id="list-recognition-list" data-toggle="list" href="#list-recognition" role="tab" aria-controls="recognition">
-                    <img src="../../../assets/img/icon/recognitiom.svg" alt="" srcset="" class="mg-r-10 img-fluid"> Recognition
-                    </a>
                   <a class="list-group-item prima list-group-item-action" id="list-reward-list" data-toggle="list" href="#list-reward" role="tab" aria-controls="messages"><img src="../../../assets/img/icon/recall.svg" alt="" srcset="" class="mg-r-10 img-fluid"> Recall</a>
                   <a class="list-group-item prima list-group-item-action" id="list-withdraw-list" data-toggle="list" href="#list-withdraw" role="tab" aria-controls="settings"> <img src="../../../assets/img/icon/withdraw.svg" alt="" srcset="" class="mg-r-10 img-fluid"> Withdraw</a>
                 </div>
@@ -300,7 +300,6 @@
                       </div>
                     </div>
                   </div>
-                      
                   <div class="tab-pane fade" id="list-sanction" role="tabpanel" aria-labelledby="list-sanction-list">
                     <div class="row justify-content-between  pd-t-20 pd-md-t-35">
                       <div class="col-md-8 col-12">
@@ -588,7 +587,7 @@
                                   <div class="col-md-6 col-12 col-lg-6 ">
                                     <p class="tx-16 mb-0 tx-semibold mg-t-10">
                                       <img src="../../../assets/img/icon/Completed Task.svg" alt="" class="img-fluid mr-2">
-                                      Approved Sanctions Requests <span>(3)</span></p>
+                                      Approved Sanctions Requests <span>(3)</span>
                                     </p>
                                   </div>
                                   <div class="col-12 col-md-6 col-lg-5">
@@ -704,7 +703,364 @@
                         
                         </div>
                       </div>
+                  </div>
+                  <div class="tab-pane fade" id="list-recognition" role="tabpanel" aria-labelledby="list-recognition-list">
+                    <div class="row justify-content-between  pd-t-20 pd-md-t-35">
+                      <div class="col-md-8 col-12">
+                        <p class="tx-28 tx-bold mb-0">Recognition</p>
+                        <p class="tx-14 tx-secondary">View previous recognition you have issued.</p>
+                      </div>
+    
+                      <div class="col-md-4 col-lg-3 col-12 pd-md-l-0">
+                        <a href="./log-recognition.html" class="btn btn-primary float-md-right mg-md-t-15" type="button">Initiate New Recognition</a>
+                      </div>
+    
+                    </div>
+                      <ul class="nav nav-line" id="myTab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active pd-x-20" id="home-tab" data-toggle="tab" href="#rec-home" role="tab" aria-controls="home" aria-selected="true">Submitted</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="declined-tab" data-toggle="tab" href="#rec-declined" role="tab" aria-controls="declined" aria-selected="false">Declined</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="approved-tab" data-toggle="tab" href="#rec-approved" role="tab" aria-controls="approved" aria-selected="false">Approved</a>
+                        </li>
+                        
+                        
+                      </ul>   
+                      <div class="tab-content  bd-t-0 pd-y-20" id="myTabContent">
+                        <div class="tab-pane fade show active" id="rec-home" role="tabpanel" aria-labelledby="home-tab">
+                          
+                          <div class="table-section">
+                            <div class="card bg-transparent">
+                              <div class="card-header pd-x-15 pd-y-10">
+                                <div class="row justify-content-between">
+                                  <div class="col-md-8 col-12 col-lg-8 ">
+                                    <p class="tx-16 mb-0 tx-semibold mg-t-10">
+                                      <img src="../../../assets/img/icon/Yet to Start.svg" alt="" class="img-fluid mr-2">
+                                      Submitted Recognition Requests awaiting Approval <span>(4)</span>
+                                    </p>
+                                  </div>
+                                  <div class="col-12 col-md-3 col-lg-3">
+                                    <div class="d-flex float-md-right">
+                                      <div class="">
+                                        <div class="input-group">
+                                          <input type="text" id="rec-datepicker" class="date form-control mb-0 bd-r-0" placeholder="Date Initiated">
+                                        </div>
+                                        
+                                      </div>
+                                      
+                                      
+                                      <!-- <div class="col-6 col-md-6">
+                                        <div class="input-group">
+                                        <input type="text" id="datepicker1" class="date form-control bd-r-0" placeholder="Date Approved">
+                                        </div>
+                                        
+                                      </div> -->
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body pd-10">
+                                <table class="table display">
+                                  <thead>
+                                    <tr class="tx-uppercase tx-12 tx-semibold">
+                                      <th>S/N</th>
+                                      <th>RECOGNITION TITLE</th>
+                                      <th>STAFF</th>
+                                      <th>MODE</th>
+                                      <th>DATE INITIATED</th>
+                                      <th>STATUS</th>
+                                      <th></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 240px;">Exceptional Performance</p>
+                                      </td>
+                                      <td class=""><p class="tx-12 mb-0 pd-t-5">4</p></td>
+                                      <td class=""><p class="tx-12 mb-0 pd-t-5">Bulk Upload</p></td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td class="mb-0"><span class="badge bg-light-40 tx-11 tx-semibold mg-t-5">PENDING</span></td>
+                                      <td>   
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#rec-pendingBulkModal"> View</button>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">2</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Remarkable Stewardship</p>
+                                      </td>
+                                      <td class="tx-12 mb-0">3</td>
+                                      <td class="tx-12 mb-0">Bulk Upload</td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td class="mb-0"><span class="badge bg-red-50 tx-red-500 tx-11 tx-semibold">FAILED</span></td>
+                                      <td>   
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#rec-pendingBulkModal"> View</button>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">3</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Excellent Service Delivery</p>
+                                      </td>
+                                      <td class="tx-12 mb-0">3</td>
+                                      <td class="tx-12 mb-0">Individually</td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td class="mb-0"><span class="badge bg-green-50 tx-green tx-11 tx-semibold">COMPLETED</span></td>
+                                      <td>
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#rec-pendingModal"> View</button>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">4</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Exemplary Performance</p>
+                                      </td>
+                                      <td class="tx-12 mb-0">2</td>
+                                      <td class="tx-12 mb-0">Bulk Upload</td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td class="mb-0"><span class="badge bg-green-50 tx-green tx-11 tx-semibold">COMPLETED</span></td>
+                                      <td>
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#rec-pendingBulkModal"> View</button>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        
+                        </div>
   
+                        <div class="tab-pane fade" id="rec-declined" role="tabpanel" aria-labelledby="declined-tab">
+                          <div class="table-section">
+                            <div class="card bg-transparent">
+                              <div class="card-header pd-x-15 pd-y-10">
+                                <div class="row justify-content-between">
+                                  <div class="col-md-6 col-12 col-lg-6 ">
+                                    <p class="tx-16 mb-0 tx-semibold mg-t-10">
+                                      <img src="../../../assets/img/icon/Cancelled.svg" alt="" class="img-fluid mr-2">
+                                      Declined Recognition Requests <span>(2)</span>
+                                    </p>
+                                  </div>
+                                  <div class="col-12 col-md-6 col-lg-5">
+                                    <div class="row justify-content-between">
+                                      <div class="col-6 col-md-6 ">
+                                        <div class="input-group">
+                                          <input type="text" id="rec-dec-datepicker" class="date form-control mb-0 bd-r-0" placeholder="Date Initiated">
+                                        </div>
+                                      </div>
+
+                                      <div class="col-6 col-md-6">
+                                        <div class="input-group">
+                                        <input type="text" id="rec-dec-datepicker1" class="date form-control bd-r-0" placeholder="Date Declined">
+                                        </div>
+                                        
+                                      </div>
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body pd-10">
+                                <table class="table display">
+                                  <thead>
+                                    <tr class="tx-uppercase tx-12 tx-semibold">
+                                      <th>S/N</th>
+                                      <th>RECOGNITION TITLE</th>
+                                      <th>STAFF</th>
+                                      <th>MODE</th>
+                                      <th>DATE INITIATED</th>
+                                      <th>DATE Declined</th>
+                                      <th></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 240px;">Exceptional Performance</p>
+                                      </td>
+                                      <td class=""><p class="tx-12 mb-0 pd-t-5">4</p></td>
+                                      <td class=""><p class="tx-12 mb-0 pd-t-5">Bulk Upload</p></td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Jan 1, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>   
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#rec-declinedModal"> View</button>
+                                      </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                      <th scope="row">2</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Remarkable Stewardship</p>
+                                      </td>
+                                      <td class="tx-12 mb-0">3</td>
+                                      <td class="tx-12 mb-0">Individually</td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Feb 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#rec-declinedModal"> View</button>
+                                      </td>
+                                    </tr>
+                                    
+                                  </tbody>
+                                </table>
+                              
+                              </div>
+                            </div>
+                            
+                          </div>
+                        
+                        </div>
+                        
+                        <div class="tab-pane fade" id="rec-approved" role="tabpanel" aria-labelledby="approved-tab">
+                          <div class="table-section">
+                            <div class="card bg-transparent">
+                              <div class="card-header pd-x-15 pd-y-10">
+                                <div class="row justify-content-between">
+                                  <div class="col-md-6 col-12 col-lg-6 ">
+                                    <p class="tx-16 mb-0 tx-semibold mg-t-10">
+                                      <img src="../../../assets/img/icon/Completed Task.svg" alt="" class="img-fluid mr-2">
+                                      Approved Recognition Requests <span>(3)</span>
+                                    </p>
+                                  </div>
+                                  <div class="col-12 col-md-6 col-lg-5">
+                                    <div class="row justify-content-between">
+                                      <div class="col-6 col-md-6 ">
+                                        <div class="input-group">
+                                          <input type="text" id="rec-appr-datepicker" class="date form-control mb-0 bd-r-0" placeholder="Date Initiated">
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="col-6 col-md-6">
+                                        <div class="input-group">
+                                        <input type="text" id="rec-appr-datepicker1" class="date form-control bd-r-0" placeholder="Date Approved">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body pd-10">
+                                <table class="table display">
+                                  <thead>
+                                    <tr class="tx-uppercase tx-12 tx-semibold">
+                                      <th>S/N</th>
+                                      <th>RECOGNITION TITLE</th>
+                                      <th>STAFF</th>
+                                      <th>MODE</th>
+                                      <th>DATE INITIATED</th>
+                                      <th>DATE Declined</th>
+                                      <th></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 240px;">Excellent Service Delivery</p>
+                                      </td>
+                                      <td class=""><p class="tx-12 mb-0 pd-t-5">4</p></td>
+                                      <td class=""><p class="tx-12 mb-0 pd-t-5">Bulk Upload</p></td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Jan 1, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>   
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#rec-approvedModal"> View</button>
+                                      </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                      <th scope="row">2</th>
+                                      <td>
+                                        <p class=" tx-medium tx-12 mb-0" style="width: 240px;">Remarkable Stewardship</p>
+                                      </td>
+                                      <td class="tx-12 mb-0">3</td>
+                                      <td class="tx-12 mb-0">Individually</td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Feb 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div>
+                                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#rec-approvedModal"> View</button>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        
+                        </div>
+                      </div>
                   </div>
                   <div class="tab-pane fade" id="list-reward" role="tabpanel" aria-labelledby="list-reward-list">...</div>
                   <div class="tab-pane fade" id="list-withdraw" role="tabpanel" aria-labelledby="list-withdraw-list">...</div>
@@ -811,7 +1167,7 @@
                             </p>
                           </div>
                           <div class="mg-b-25">
-                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">additional attachment</label>
                             <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
                               <div class="row justify-content-between">
                                 <div class="col-9 col-md-9">
@@ -923,7 +1279,7 @@
                             </p>
                           </div>
                           <div class="mg-b-25">
-                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">additional attachment</label>
                             <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
                               <div class="row justify-content-between">
                                 <div class="col-9 col-md-9">
@@ -1076,7 +1432,7 @@
                             </p>
                           </div>
                           <div class="mg-b-25">
-                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">additional attachment</label>
                             <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
                               <div class="row justify-content-between">
                                 <div class="col-9 col-md-9">
@@ -1177,7 +1533,7 @@
                             </p>
                           </div>
                           <div class="mg-b-25">
-                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">additional attachment</label>
                             <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
                               <div class="row justify-content-between">
                                 <div class="col-9 col-md-9">
@@ -1231,7 +1587,7 @@
                          </div>
                          <div class="pd-y-12 bd-b">
                           <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Mode</label>
-                          <p class="tx-12 mb-0 pd-t-5">Bulk Upload (Pending)</p>
+                          <p class="tx-12 mb-0 pd-t-5">Bulk Upload</p>
                          </div>
                          <div class="pd-y-12 bd-b">
                           <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created on</label>
@@ -1298,7 +1654,7 @@
                             </p>
                           </div>
                           <div class="mg-b-25">
-                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">additional attachment</label>
                             <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
                               <div class="row justify-content-between">
                                 <div class="col-9 col-md-9">
@@ -1343,7 +1699,6 @@
                               </div>
                             </div>
                           </div>
-    
                       </div>
                       <div class="col-md-3 col-12">
                         <div class="pd-b-12 bd-b">
@@ -1352,7 +1707,7 @@
                         </div>
                         <div class="pd-y-12 bd-b">
                         <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Mode</label>
-                        <p class="tx-12 mb-0 pd-t-5">Bulk Upload (Pending)</p>
+                        <p class="tx-12 mb-0 pd-t-5">Bulk Upload</p>
                         </div>
                         <div class="pd-y-12 bd-b">
                         <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created on</label>
@@ -1370,6 +1725,78 @@
                         <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Declined by</label>
                         <p class="tx-12 mb-0 pd-t-5">Adams Ifeanyi</p>
                       </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            </div>
+
+
+            <!--Recognition Pending Modal  for Bulk Upload-->
+            <div class="modal fade" id="rec-pendingBulkModal" tabindex="-1" aria-labelledby="rec-pendingBulkModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                    <div>
+                      <p class="tx-22 tx-semibold modal-title" id="rec-pendingBulkModalLabel">View Recognition Details</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> 
+                  <div class="modal-body pd-md-x-30 pd-x-20">
+                    <div class="row">
+                      <div class="col-md-9 col-12">
+                         <div class="mg-b-25">
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">comment/remark to authorizer</label>
+                            <p class="tx-14 tx-grey-900">Compellingly administrate distinctive e-services whereas adaptive expertise. 
+                              Objectively leverage other's 24/365 quality vectors without value-added.
+                            </p>
+                          </div>
+                          <div class="mg-b-25">
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">INVOLVED EMPLOYEEs DATA</label>
+                            <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                              <div class="row justify-content-between">
+                                <div class="col-9 col-md-9">
+                                  <div class="d-flex">
+                                    <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                                    <div>
+                                      <p class="tx-14 tx-grey-900 mb-0">recognition_justification_report_424.pdf</p>
+                                      <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-3 col-md-2 pd-md-l-0">
+                                  <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 w-100"> View</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-md-3 col-12">
+                        <div class="pd-b-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Upload Status</label>
+                          <p class="tx-11 mb-0"><span class="badge badge-neutral tx-11 tx-semibold pd-y-3">SUBMITTED</span></p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Mode</label>
+                          <p class="tx-12 mb-0 pd-t-5">Bulk Upload (Pending)</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created on</label>
+                          <p class="tx-12 mb-0 pd-t-5">Mon Feb 16, 2021</p>
+                         </div>
+                         <div class="pd-y-12 bd-b">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created by</label>
+                          <p class="tx-12 mb-0 pd-t-5">Felix Adejumo</p>
+                         </div>
+                      </div>
                     </div>
                   
                   </div>
@@ -1380,6 +1807,321 @@
               </div>
             </div>
 
+
+           <!--Recognition Pending Modal -->
+           <div class="modal fade" id="rec-pendingModal" tabindex="-1" aria-labelledby="rec-pendingModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                  <div>
+                    <p class="tx-22 tx-semibold modal-title" id="rec-pendingModalLabel">View Recognition Details</p>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> 
+                <div class="modal-body pd-md-x-30 pd-x-20">
+                  <div class="row">
+                    <div class="col-md-9 col-12">
+                      <div class="mg-b-25">
+                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
+                        <p class="tx-14 tx-grey-900 mb-0">Exceptional Performance</p>
+                       </div>
+                       <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
+                          <p class="tx-14 tx-grey-900">Compellingly administrate distinctive e-services whereas adaptive expertise. 
+                            Objectively leverage other's 24/365 quality vectors without value-added.
+                          </p>
+                        </div>
+                        <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">additional attachment</label>
+                          <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                            <div class="row justify-content-between">
+                              <div class="col-9 col-md-9">
+                                <div class="d-flex">
+                                  <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                                  <div>
+                                    <p class="tx-14 tx-grey-900 mb-0">recognition_justification_report_424.pdf</p>
+                                    <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-3 col-md-2 pd-md-l-0">
+                                <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 w-100"> View</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                       
+                        <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mb-0 tx-grey-600 tx-uppercase tx-12">Involved Employees <span>(2)</span></label>
+                          <div class="d-flex mg-t-15">
+                            <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                            <div class="break"></div>
+                            <div class="bg-grey-card d-line-bold ml-md-auto pd-x-10 pd-y-5 mg-t-10 mg-b-5">
+                              <p class="mb-0 tx-12">Fixed Suspension (5 days)</p>
+                            </div>
+                          </div>
+                        
+                          <div class="d-flex mg-t-15">
+                            <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                            <div class="break"></div>
+                            <div class="bg-grey-card d-line-bold ml-md-auto pd-x-10 pd-y-5 mg-t-10 mg-b-5">
+                              <p class="mb-0 tx-12">Letter of Displeasure</p>
+                            </div>
+                          </div>
+                        </div>
+  
+                    </div>
+                    <div class="col-md-3 col-12">
+                      <div class="pd-b-12 bd-b">
+                        <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Upload Status</label>
+                        <p class="tx-11 mb-0"><span class="badge badge-neutral tx-11 tx-semibold pd-y-3">SUBMITTED</span></p>
+                       </div>
+                       <div class="pd-y-12 bd-b">
+                        <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Mode</label>
+                        <p class="tx-12 mb-0 pd-t-5">Individually</p>
+                       </div>
+                       <div class="pd-y-12 bd-b">
+                        <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created on</label>
+                        <p class="tx-12 mb-0 pd-t-5">Mon Feb 16, 2021</p>
+                       </div>
+                       <div class="pd-y-12 bd-b">
+                        <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created by</label>
+                        <p class="tx-12 mb-0 pd-t-5">Felix Adejumo</p>
+                       </div>
+                    </div>
+                  </div>
+                
+                </div>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Recognition Approved Modal -->
+          <div class="modal fade" id="rec-approvedModal" tabindex="-1" aria-labelledby="rec-approvedmodalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                  <div>
+                    <p class="tx-22 tx-semibold modal-title" id="rec-approvedModalLabel">View Recognition Details</p>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> 
+                <div class="modal-body pd-md-x-30 pd-x-20">
+                  <div class="row">
+                    <div class="col-md-9 col-12">
+                      <div class="mg-b-25">
+                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
+                        <p class="tx-14 tx-grey-900 mb-0">Excellent Service Delivery</p>
+                       </div>
+                       <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
+                          <p class="tx-14 tx-grey-900">Dramatically revolutionize one-to-one e-tailers vis-a-vis cost effective methodologies. 
+                            Progressively innovate quality services through client-based total linkage. Energistically parallel task top-line ROI for collaborative.
+                          </p>
+                        </div>
+                        <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">additional attachment</label>
+                          <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                            <div class="row justify-content-between">
+                              <div class="col-9 col-md-9">
+                                <div class="d-flex">
+                                  <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                                  <div>
+                                    <p class="tx-14 tx-grey-900 mb-0">Recognition_report_424.pdf</p>
+                                    <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-3 col-md-2 pd-md-l-0">
+                                <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 w-100"> View</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mb-0 tx-grey-600 tx-uppercase tx-12">Involved Employees <span>(2)</span></label>
+                          <div class="d-flex mg-t-15">
+                            <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        
+                          <div class="d-flex mg-t-15">
+                            <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        </div>
+                      
+                    </div>
+                    <div class="col-md-3 col-12">
+                      <div class="pd-b-12 bd-b">
+                        <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Upload  Status</label>
+                        <p class="tx-11 mb-0"><span class="badge badge-green-400 tx-11 tx-semibold pd-y-3">COMPLETED</span></p>
+                       </div>
+                       <div class="pd-y-12 bd-b">
+                        <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Mode</label>
+                        <p class="tx-12 mb-0 pd-t-5">Bulk Upload</p>
+                       </div>
+                       <div class="pd-y-12 bd-b">
+                        <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created on</label>
+                        <p class="tx-12 mb-0 pd-t-5">Mon Feb 16, 2021</p>
+                       </div>
+                       <div class="pd-y-12 bd-b">
+                        <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created by</label>
+                        <p class="tx-12 mb-0 pd-t-5">Felix Adejumo</p>
+                       </div>
+                       <div class="pd-y-12 bd-b">
+                        <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Approved on</label>
+                        <p class="tx-12 mb-0 pd-t-5">Mon Mar 1, 2021</p>
+                       </div>
+                       <div class="pd-y-12 bd-b">
+                        <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Approved by</label>
+                        <p class="tx-12 mb-0 pd-t-5">Adams Ifeanyi</p>
+                       </div>
+                    </div>
+                  </div>
+                
+                </div>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+           <!--Recognition Declined Modal -->
+           <div class="modal fade" id="rec-declinedModal" tabindex="-1" aria-labelledby="rec-declinedmodalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                  <div>
+                    <p class="tx-22 tx-semibold modal-title" id="rec-declinedModalLabel">View Recognition Details</p>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> 
+                <div class="modal-body pd-md-x-30 pd-x-20">
+                  <div class="card card-body bg-red-50 pd-15 bd-0 mg-b-20">
+                    <div class="d-flex">
+                      <img src="../../../assets/img/icon/dec-Icon.svg" class="img-fluid mr-4" alt="" srcset="">
+                      <div class="col-md-10 col-12 pd-x-0">
+                        <p class="tx-14 tx-semibold mb-0">Remarks/Comments for Failing</p>
+                        <p class="tx-14 mb-0">Funke Hussien has done well but not unusually exemplarily to be considered for a recognition. Let her be removed in this cycle.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-9 col-12">
+                      <div class="mg-b-25">
+                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
+                        <p class="tx-14 tx-grey-900 mb-0">Remarkable Stewardship</p>
+                       </div>
+                       <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
+                          <p class="tx-14 tx-grey-900">Energistically parallel task open-source leadership after cross functional customer service. 
+                            Globally iterate extensible scenarios rather than go forward platforms. 
+                            Conveniently utilize ethical products.
+                          </p>
+                        </div>
+                        <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">additional attachment</label>
+                          <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                            <div class="row justify-content-between">
+                              <div class="col-9 col-md-9">
+                                <div class="d-flex">
+                                  <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                                  <div>
+                                    <p class="tx-14 tx-grey-900 mb-0">Recognition_report_424.pdf</p>
+                                    <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-3 col-md-2 pd-md-l-0">
+                                <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 w-100"> View</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mb-0 tx-grey-600 tx-uppercase tx-12">Involved Employees <span>(2)</span></label>
+                          <div class="d-flex mg-t-15">
+                            <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        
+                          <div class="d-flex mg-t-15">
+                            <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="col-md-3 col-12">
+                      <div class="pd-b-12 bd-b">
+                        <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Status</label>
+                        <p class="tx-11 mb-0"><span class="badge bg-red-400 tx-11 tx-semibold pd-y-3">Failed</span></p>
+                      </div>
+                      <div class="pd-y-12 bd-b">
+                      <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Mode</label>
+                      <p class="tx-12 mb-0 pd-t-5">Bulk Upload</p>
+                      </div>
+                      <div class="pd-y-12 bd-b">
+                      <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created on</label>
+                      <p class="tx-12 mb-0 pd-t-5">Mon Feb 16, 2021</p>
+                      </div>
+                      <div class="pd-y-12 bd-b">
+                      <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Created by</label>
+                      <p class="tx-12 mb-0 pd-t-5">Felix Adejumo</p>
+                    </div>
+                    <div class="pd-y-12 bd-b">
+                      <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Declined on</label>
+                      <p class="tx-12 mb-0 pd-t-5">Mon March 16, 2021</p>
+                      </div>
+                      <div class="pd-y-12 bd-b">
+                      <label for="formGroupExampleInput" class="d-block tx-semibold mg-b-0 tx-grey-600 tx-uppercase tx-10">Declined by</label>
+                      <p class="tx-12 mb-0 pd-t-5">Adams Ifeanyi</p>
+                    </div>
+                    </div>
+                 </div>
+                </div>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+          
           </div>
         </section>
       
@@ -1533,6 +2275,47 @@
       buttonText: "Select date"
     });
 
+    $('#rec-datepicker').datepicker(
+      {
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    }
+    );
+
+    $('#rec-dec-datepicker').datepicker(
+      {
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    }
+    );
+
+    $('#rec-dec-datepicker1').datepicker({
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    });
+
+
+    $('#rec-appr-datepicker').datepicker(
+      {
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    }
+    );
+
+    $('#rec-appr-datepicker1').datepicker({
+      showOn: "button",
+      buttonImage: "../../../assets/img/icon/arrow-down.svg",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    });
 
 
 
