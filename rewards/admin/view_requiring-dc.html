@@ -16,6 +16,8 @@
 
     <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="../../assets/lib/select2/css/select2.min.css" rel="stylesheet">
+
 
     <!-- Page CSS -->
     <link rel="stylesheet" href="../../assets/css/admin.css">
@@ -107,7 +109,7 @@
             </ul>
           </li>
           <li class="nav-item with-sub tx-14">
-            <a href="" class="nav-link"><img src="../../assets/img/icon/sanction.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Recall</span></a>
+            <a href="" class="nav-link"><img src="../../assets/img/icon/recall.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Recall</span></a>
             <ul>  
              
               <li><span></span><a href="./dc-requests.html">DC Request</a></li>
@@ -117,7 +119,7 @@
             </ul>
           </li>
           <li class="nav-item with-sub tx-14">
-            <a href="" class="nav-link"><img src="../../assets/img/icon/sanction.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Withdraw</span></a>
+            <a href="" class="nav-link"><img src="../../assets/img/icon/withdraw.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Withdraw</span></a>
             <ul>  
              
               <li><span></span><a href="./dc-requests.html">DC Request</a></li>
@@ -127,17 +129,15 @@
             </ul>
           </li>
           <li class="nav-item with-sub tx-14">
-            <a href="" class="nav-link"><img src="../../assets/img/icon/sanction.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Appeal</span></a>
+            <a href="" class="nav-link"><img src="../../assets/img/icon/appeal.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Appeal</span></a>
             <ul>  
-             
               <li><span></span><a href="./dc-requests.html">DC Request</a></li>
               <li><a href="./dc-sittings.html">DC Sittings</a></li>
               <li><a href="./dc-panel.html">DC Panel Members</a></li>
-
             </ul>
           </li>
           <li class="nav-item with-sub tx-14">
-            <a href="" class="nav-link"><img src="../../assets/img/icon/sanction.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Grievances</span></a>
+            <a href="" class="nav-link"><img src="../../assets/img/icon/grievance.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Grievances</span></a>
             <ul>  
              
               <li><span></span><a href="./dc-requests.html">DC Request</a></li>
@@ -170,342 +170,591 @@
       
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
-          <p class="tx-28 tx-bold">DC Requests</p>
-
-          <ul class="nav nav-line" id="myTab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active pd-x-20" id="home-tab" data-toggle="tab" href="#rec-home" role="tab" aria-controls="home" aria-selected="true">Requiring Attention</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="declined-tab" data-toggle="tab" href="#rec-declined" role="tab" aria-controls="declined" aria-selected="false">Redirected</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="approved-tab" data-toggle="tab" href="#rec-approved" role="tab" aria-controls="approved" aria-selected="false">Closed</a>
-            </li>
-            
-            
-          </ul>   
-          <div class="tab-content  bd-t-0 pd-y-20" id="myTabContent">
-            <p class="tx-14 tx-gray">Requests from Investigation Team are sent here for you to review. Click to review and take action.</p>
-            <div class="tab-pane fade show active" id="rec-home" role="tabpanel" aria-labelledby="home-tab">
-              <div class="table-section">
-                <div class="card">
-                  <div class="card-header pd-x-15 pd-y-10">
-                    <div class="row justify-content-between">
-                      <div class="col-md-6 col-12 col-lg-6 ">
-                        <p class="tx-14 mb-0 tx-medium pd-t-10">
-                          DC Requests Awaiting Your Review (4)
-                        </p>
-                      </div>
-                      <div class="col-md-5 col-12">
-                        <div class="d-flex float-md-right">
-                          <div class="mg-r-15 mg-t-5">
-                            <button class="btn pd-0 mb-0">
-                              <span>
-                                <img src="../../assets/img/icon/filter_b.svg" alt="" srcset="">
-                                  Filter
-                              </span>
-                            </button>
-                          </div>
-    
-                          <div class="search-form">
-                            <input type="search" class="form-control" placeholder="Search">
-                            <button class="btn" type="button"><i data-feather="search"></i></button>
-                          </div>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body pd-10">
-                    <table class="table display">
-                      <thead>
-                        <tr class="tx-uppercase tx-12 tx-semibold">
-                          <th>S/N</th>
-                          <th>CASE/REPORT</th>
-                          <th>SOURCE</th>
-                          <th>DATE REQUESTED</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>
-                            <p class=" tx-medium tx-12 mb-0" style="width: 350px;">Alleged eight accounts receiving  multiple salaries from local government authority(ies)</p>
-                          </td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5">Investigation</p></td>
-                          <td>
-                            <div>
-                              <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                            </div>
-                          </td>
-                          <td>   
-                            <a href="./view_requiring-dc.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button"> View</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>
-                            <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 350px;">Investigation report on recall of funds - mxg energy</p>
-                          </td>
-                          <td> <p class="tx-12 mb-0 pd-t-5">Suspension Escalation</p></td>
-                          <td>
-                            <div>
-                              <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                <label for="" class="tx-12 mb-0  tx-grey-500"> 9:26am</label>
-                            </div>
-                          </td>
-                          <td>   
-                            <a href="./view_requiring-dc.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button"> View</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>
-                            <p class=" tx-medium tx-12 mb-0" style="width: 350px;">A case of over-aged debit of n=10,458,516.61 in transit 3 account of maraba business office which was in respect... </p>
-                          </td>
-                          <td ><p class="tx-12 mb-0 pd-t-5">Credit </p></td>
-                          <td>
-                            <div>
-                              <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                            </div>
-                          </td>
-                          <td>
-                            <a href="./view_requiring-dc.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button"> View</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">4</th>
-                          <td>
-                            <p class=" tx-medium tx-12 mb-0 " style="width: 350px;">Abscondment from office  - ngozi-ibeh chiamobi zion- a20474 - oyan business office</p>
-                          </td>
-                          <td><p class="tx-12 mb-0 pd-t-5">Control</p></td>
-                          <td>
-                            <div>
-                              <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                <label for="" class="tx-12 mb-0tx-grey-500"> 9:26am</label>
-                            </div>
-                          </td>
-                          <td>
-                            <a href="./view_requiring-dc.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button"> View</a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+          <button onclick="goBack()" class="btn btn-back tx-14 tx-semibold pd-l-0 pd-y-0"><i data-feather="arrow-left"></i> Go Back</button>
+        <p class="tx-28 tx-bold mb-0 mg-t-10">Request Details</p>
+        <hr class="mg-t-5">
+        <div class="row mg-t-25">
+          <div class="col-md-8 col-12">
+            <div class="card">
+              <div class="card-header bg-grey-100 pd-y-15 pd-md-x-25 pd-x-20 pd-b-10">
+                <div>
+                  <p class="tx-14 mb-0 tx-semibold modal-title">Schedule Details</p>
                 </div>
-                
-              </div>
-            </div>
-  
-            <div class="tab-pane fade" id="rec-declined" role="tabpanel" aria-labelledby="declined-tab">
-              <div class="table-section">
-                <div class="card bg-transparent">
-                  <div class="card-header pd-x-15 pd-y-10">
-                    <div class="row justify-content-between">
-                      <div class="col-md-6 col-12 col-lg-6 ">
-                        <p class="tx-14 mb-0 tx-medium pd-t-10">
-                          Last 20 Activities Done by your Team
-                        </p>
-                      </div>
-                      <div class="col-md-5 col-12">
-                        <div class="d-flex float-md-right">
-                          <div class="mg-r-15 mg-t-5">
-                            <button class="btn pd-0 mb-0">
-                              <span>
-                                <img src="../../assets/img/icon/filter_b.svg" alt="" srcset="">
-                                  Filter
-                              </span>
-                            </button>
-                          </div>
-    
-                          <div class="search-form">
-                            <input type="search" class="form-control" placeholder="Search">
-                            <button class="btn" type="button"><i data-feather="search"></i></button>
-                          </div>
-                        </div>
-                        
-                      </div>
+              </div> 
+              <div class="card-body pd-md-x-25 pd-x-20">
+                <div class="mg-b-25">
+                  <div class="row justify-content-between">
+                    <div class="col-9">
+                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
+                      <p class="tx-14 tx-grey-900 mb-0">Alleged eight accounts receiving multiple salaries from local government authority(ies)</p>
+                    </div>
+                    <div class="col-3">
+                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">SOURCE</label>
+                      <p class="tx-14 tx-grey-900 mb-0">Investigation</p>
                     </div>
                   </div>
-                  <div class="card-body pd-10">
-                    <table class="table display">
-                      <thead>
-                        <tr class="tx-uppercase tx-12 tx-semibold">
-                          <th>S/N</th>
-                          <th>RECOGNITION TITLE</th>
-                          <th>STAFF</th>
-                          <th>MODE</th>
-                          <th>DATE INITIATED</th>
-                          <th>DATE Declined</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>
-                            <p class=" tx-medium tx-12 mb-0 pd-t-5 pd-t-5" style="width: 350px;">Exceptional Performance</p>
-                          </td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5 pd-t-5">4</p></td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5 pd-t-5">Bulk Upload</p></td>
-                          <td>
-                            <div>
-                              <p class="tx-12 mb-0 pd-t-5">Jan 1, 2021</p>
-                                <label for="" class="tx-12 mb-0 pd-t-5 tx-grey-500"> 9:26am</label>
-                            </div>
-                          </td>
-                          <td>
-                            <div>
-                              <p class="tx-12 mb-0 pd-t-5">Mar 4, 2021</p>
-                                <label for="" class="tx-12 mb-0 pd-t-5 tx-grey-500"> 9:26am</label>
-                            </div>
-                          </td>
-                          <td>   
-                            <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#rec-declinedModal"> View</button>
-                          </td>
-                        </tr>
-                        
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>
-                            <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 350px;">Remarkable Stewardship</p>
-                          </td>
-                          <td class="tx-12 mb-0 pd-t-5">3</td>
-                          <td class="tx-12 mb-0 pd-t-5">Individually</td>
-                          <td>
-                            <div>
-                              <p class="tx-12 mb-0 pd-t-5">Feb 4, 2021</p>
-                                <label for="" class="tx-12 mb-0 pd-t-5 tx-grey-500"> 9:26am</label>
-                            </div>
-                          </td>
-                          <td>
-                            <div>
-                              <p class="tx-12 mb-0 pd-t-5">Mar 4, 2021</p>
-                                <label for="" class="tx-12 mb-0 pd-t-5 tx-grey-500"> 9:26am</label>
-                            </div>
-                          </td>
-                          <td>
-                            <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#rec-declinedModal"> View</button>
-                          </td>
-                        </tr>
-                        
-                      </tbody>
-                    </table>
                   
+                 </div>
+                 <div class="mg-b-25">
+                    <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
+                    <p class="tx-14 tx-grey-900">The indicted staff allegedly colluded with officials of some local government councils in Borno state to divert salaries to accounts operated by the staff.
+                    </p>
                   </div>
-                </div>
-                
-              </div>
-            
-            </div>
-            
-            <div class="tab-pane fade" id="rec-approved" role="tabpanel" aria-labelledby="approved-tab">
-              <div class="table-section">
-                <div class="card">
-                  <div class="card-header pd-x-15 pd-y-10">
-                    <div class="row justify-content-between">
-                      <div class="col-md-6 col-12 col-lg-6 ">
-                        <p class="tx-14 mb-0 tx-medium pd-t-10">
-                          Last 20 Activities Done by your Team
-                        </p>
-                      </div>
-                      <div class="col-md-5 col-12">
-                        <div class="d-flex float-md-right">
-                          <div class="mg-r-15 mg-t-5">
-                            <button class="btn pd-0 mb-0">
-                              <span>
-                                <img src="../../assets/img/icon/filter_b.svg" alt="" srcset="">
-                                  Filter
-                              </span>
-                            </button>
-                          </div>
-    
-                          <div class="search-form">
-                            <input type="search" class="form-control" placeholder="Search">
-                            <button class="btn" type="button"><i data-feather="search"></i></button>
+                  
+                  <div class="mg-b-25">
+                    <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached Reports</label>
+                    <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                      <div class="row justify-content-between">
+                        <div class="col-9 col-md-9">
+                          <div class="d-flex">
+                            <img src="../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                            <div>
+                              <p class="tx-14 tx-grey-900 mb-0">Investigation_report_424.pdf</p>
+                              <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                            </div>
                           </div>
                         </div>
-                        
+                        <div class="col-3 col-md-2 pd-md-l-0">
+                          <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 float-md-right"> View</a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="card-body pd-10">
-                    <table class="table display">
-                      <thead>
-                        <tr class="tx-uppercase tx-12 tx-semibold">
-                          <th>S/N</th>
-                          <th>RECOGNITION TITLE</th>
-                          <th>STAFF</th>
-                          <th>MODE</th>
-                          <th>DATE INITIATED</th>
-                          <th>DATE Declined</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>
-                            <p class=" tx-medium tx-12 mb-0 pd-t-5 pd-t-5" style="width: 350px;">Excellent Service Delivery</p>
-                          </td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5 pd-t-5">4</p></td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5 pd-t-5">Bulk Upload</p></td>
-                          <td>
-                            <div>
-                              <p class="tx-12 mb-0 pd-t-5">Jan 1, 2021</p>
-                                <label for="" class="tx-12 mb-0 pd-t-5 tx-grey-500"> 9:26am</label>
-                            </div>
-                          </td>
-                          <td>
-                            <div>
-                              <p class="tx-12 mb-0 pd-t-5">Mar 4, 2021</p>
-                                <label for="" class="tx-12 mb-0 pd-t-5 tx-grey-500"> 9:26am</label>
-                            </div>
-                          </td>
-                          <td>   
-                            <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#rec-approvedModal"> View</button>
-                          </td>
-                        </tr>
-                        
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>
-                            <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 350px;">Remarkable Stewardship</p>
-                          </td>
-                          <td class="tx-12 mb-0 pd-t-5">3</td>
-                          <td class="tx-12 mb-0 pd-t-5">Individually</td>
-                          <td>
-                            <div>
-                              <p class="tx-12 mb-0 pd-t-5">Feb 4, 2021</p>
-                                <label for="" class="tx-12 mb-0 pd-t-5 tx-grey-500"> 9:26am</label>
-                            </div>
-                          </td>
-                          <td>
-                            <div>
-                              <p class="tx-12 mb-0 pd-t-5">Mar 4, 2021</p>
-                                <label for="" class="tx-12 mb-0 pd-t-5 tx-grey-500"> 9:26am</label>
-                            </div>
-                          </td>
-                          <td>
-                            <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button" data-toggle="modal" data-target="#rec-approvedModal"> View</button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                <div class="mg-b-25 employ-height">
+                <label for="formGroupExampleInput" class="d-block tx-semibold mb-0 tx-grey-600 tx-uppercase tx-12">Involved Employees <span>(8)</span></label>
+                <div class="row">
+                  <div class="col-md-6 col-12 mg-b-20">
+                    <div class="d-flex">
+                      <div class="avatar avatar"><img src="../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                      <div class="ml-3 pd-t-3">
+                        <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                        <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-12 mg-b-20">
+                    <div class="d-flex">
+                      <div class="avatar avatar"><img src="../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                      <div class="ml-3 pd-t-3">
+                        <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                        <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-12 mg-b-20">
+                    <div class="d-flex">
+                      <div class="avatar avatar"><img src="../../assets/img/activity3.png" class="rounded-circle" alt=""></div>
+                      <div class="ml-3 pd-t-3">
+                        <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                        <p class="tx-12 tx-grey-500 mb-0">Team Member, Teller Operations</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-12 mg-b-20">
+                    <div class="d-flex">
+                      <div class="avatar avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></div>
+                      <div class="ml-3 pd-t-3">
+                        <p class="tx-14 mb-0">Saka Essien<span class="tx-grey-500 tx-12">(A28922)</span></p>
+                        <p class="tx-12 tx-grey-500 mb-0">Team Member, Teller Operations</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-12 mg-b-20">
+                    <div class="d-flex">
+                      <div class="avatar avatar"><img src="../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                      <div class="ml-3 pd-t-3">
+                        <p class="tx-14 mb-0">Rachael Osarieme <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                        <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-12 mg-b-20">
+                    <div class="d-flex">
+                      <div class="avatar avatar"><img src="../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                      <div class="ml-3 pd-t-3">
+                        <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                        <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                
+
+                </div>
               </div>
-            
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outlined-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#redirectModal" >  Redirect Request</button>
+                <button type="button" class="btn btn-primary btn-sm pd-x-30 tx-semibold" data-toggle="modal" data-target="#scheduleModal" > Schedule Sitting</button>
+              </div>
+          </div>
+        </div>
+
+          <div class="col-md-4 col-12">
+            <div class="card card-body pd-y-0 pd-x-15 bg-transparent bd-0">
+              <div class="row bd-b pd-y-10">
+                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Case ID</p>
+                </div>
+                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
+                  <p class="tx-12 mb-0">DCS01</p>
+                </div> 
+              </div>
+              <div class="row bd-b pd-y-10">
+                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Status</p>
+                </div>
+               <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
+                <span class="badge bg-yellow tx-11 tx-semibold">REQUIRING ATTENTION</span>
+               </div>
+              </div>
+              
+              <div class="row bd-b pd-y-10">
+                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Last updated on</p>
+                </div>
+                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
+                  <p class="tx-12 mb-0">Thur, March 4, 2021</p>
+                </div> 
+              </div>
+              <div class="row bd-b pd-y-10">
+                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Created on</p>
+                </div>
+                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
+                  <p class="tx-12 mb-0">Fri Feb 26, 2021</p>
+                </div> 
+              </div>
+              <div class="row bd-b pd-y-10">
+                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium pd-t-5">Created by</p>
+                </div>
+                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
+                  <div class="d-flex float-right">
+                    <div class="avatar avatar-sm mg-r-10 wd-25 ht-25 "><img src="../../assets/img/admin.png" class="rounded-circle " alt=""></div>
+                    <div>
+                      <p class="tx-12 mb-0 pd-t-5">Toyin Sowore</p>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+              <div class="row  pd-y-10">
+                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Approved on</p>
+                </div>
+                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
+                  <p class="tx-12 mb-0">Mon, March 1, 2021 </p>
+                </div> 
+              </div>
             </div>
           </div>
+        </div>
+
+       
+
+           <!--Schedule Sitting Modal -->
+           <div class="modal fade" id="scheduleModal" tabindex="-1" aria-labelledby="scheduleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                  <div>
+                    <p class="tx-22 tx-semibold modal-title mb-0" id="scheduleModalLabel">Schedule DC Sitting</p>
+                    <p class="tx-12 tx-grey-500 mb-0">This process summons a DC sitting to be handled by you.</p>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> 
+                <div class="modal-body pd-md-x-30 pd-x-20">
+                  <form action="">
+                    <div class="form-group">
+                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Select DC Type</label>
+                      <select class="custom-select">
+                        <option selected>HODC - Head Office Disciplinary Committee</option>
+                        <option value="1">HODC - Head Office Disciplinary Committeee</option>
+                        <option value="2">HODC - Head Office Disciplinary Committee</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <div class="card card-body bg-grey-50 pd-15">
+                        <p class="tx-14 tx-medium mg-b-15">Select Panel Members for HODC Sitting</p>
+                        <p class="tx-12 tx-secondary tx-medium mg-b-10">Onboarded Panel members</p>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck1">
+                              <label class="custom-control-label" for="customCheck1">
+                                <div class="d-flex">
+                                  <div class="avatar avatar"><img src="../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                                  <div class="ml-3 pd-t-3">
+                                    <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                    <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck1">
+                              <label class="custom-control-label" for="customCheck1">
+                                <div class="d-flex">
+                                  <div class="avatar avatar"><img src="../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                                  <div class="ml-3 pd-t-3">
+                                    <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                    <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck1">
+                              <label class="custom-control-label" for="customCheck1">
+                                <div class="d-flex">
+                                  <div class="avatar avatar"><img src="../../assets/img/activity3.png" class="rounded-circle" alt=""></div>
+                                  <div class="ml-3 pd-t-3">
+                                    <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                    <p class="tx-12 tx-grey-500 mb-0">Team Member, Teller Operations</p>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6 mb-md-0">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck1">
+                              <label class="custom-control-label" for="customCheck1">
+                                <div class="d-flex">
+                                  <div class="avatar avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></div>
+                                  <div class="ml-3 pd-t-3">
+                                    <p class="tx-14 mb-0">Saka Essien<span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                    <p class="tx-12 tx-grey-500 mb-0">Team Member, Teller Operations</p>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-6 mb-md-0">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customCheck1">
+                              <label class="custom-control-label" for="customCheck1">
+                                <div class="d-flex">
+                                  <div class="avatar avatar"><img src="../../assets/img/staff.png" class="rounded-circle" alt=""></div>
+                                  <div class="ml-3 pd-t-3">
+                                    <p class="tx-14 mb-0">Saka Essien<span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                    <p class="tx-12 tx-grey-500 mb-0">Team Member, Teller Operations</p>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Add Others to HODC Sitting - <span class="tx-grey-500 tx-12">Concurrance to DC Summary will be required from added panelists as well</span></label>
+                      <select id="employe" multiple="multiple" class="form-control">
+                        <option value="1">
+                          Bayo Adeosun - (A29118)
+                        </option>
+                        <option value="2">Michael Adeyemo - (A24084)</option>
+                        <option value="3">Seyi Bassey</option> 
+                        <option value="4">Olu Pascal</option>
+                      </select>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-3">
+                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Date of Sitting</label>
+                        <input class="form-control" type="date" name="" id="">
+                      </div>
+                      <div class="form-group col-md-3">
+                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Time</label>
+                        <input type="time" class="form-control" name="" id="">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Microsoft Teams Meeting Link</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary btn-sm pd-x-50 tx-semibold" data-toggle="modal" data-target="#previewScheduleModal"data-dismiss="modal" > Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Redirect Request Modal -->
+          <div class="modal fade" id="redirectModal" tabindex="-1" aria-labelledby="redirectModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                  <div>
+                    <p class="tx-22 tx-semibold modal-title mb-0" id="redirectModalLabel">Redirect DC Request</p>
+                    <p class="tx-12 tx-grey-500 mb-0">This process assigns HRBP or Company Secretariat to handle DC Sitting.</p>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> 
+                <div class="modal-body pd-md-x-30 pd-x-20">
+                  <form action="">
+                    <div class="form-group">
+                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Select DC Type</label>
+                      <select class="custom-select">
+                        <option selected>HODC - Head Office Disciplinary Committee</option>
+                        <option value="1">HODC - Head Office Disciplinary Committeee</option>
+                        <option value="2">HODC - Head Office Disciplinary Committee</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <div class="card card-body bg-grey-50 pd-15">
+                        <div class="form-group">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Select Region</label>
+                          <select class="custom-select">
+                            <option selected>North Bank</option>
+                            <option value="1">East Bank</option>
+                            <option value="2">North Bank</option>
+                            <option value="3">South Bank</option>
+                          </select>
+                        </div>
+                        <div class="form-group mb-0">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Add HRBPs to redirect RBDC Sitting to</label>
+                          <select id="redirect-panel" multiple="multiple" class="form-control">
+                            <option value="1">
+                              Bayo Adeosun - (A29118)
+                            </option>
+                            <option value="2">Michael Adeyemo - (A24084)</option>
+                            <option value="3">Seyi Bassey</option>
+                            <option value="4">Olu Pascal</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <button class="btn pd-0 tx-primary tx-semibold"><i data-feather="plus"></i> Add Another Region </button>
+                  </form>
+                </div>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary btn-sm pd-x-50 tx-semibold" data-toggle="modal" data-target="#previewRequestModal"data-dismiss="modal" > Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+           <!--Preview DC Schedule Modal -->
+           <div class="modal fade" id="previewScheduleModal" tabindex="-1" aria-labelledby="previewScheduleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                  <div>
+                    <p class="tx-22 tx-semibold modal-title mb-0" id="previewScheduleModalLabel">Preview DC Schedule</p>
+                    <p class="tx-12 tx-grey-500 mb-0">This process summons a DC sitting to be handled by you.</p>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> 
+                <div class="modal-body pd-md-x-30 pd-x-20">
+                  <div class="row">
+                    <div class="col-md-5 col-12">
+                      <p class="tx-12 tx-uppercase tx-grey-600 tx-semibold mg-b-8">Who</p>
+                      <p class="tx-12 tx-secondary mg-b-10">HODC Panel Members</p>
+                      <div class="mg-b-15">
+                        <div class="d-flex">
+                          <div class="avatar avatar-busy"><img src="../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                          <div class="ml-3 pd-t-3">
+                            <p class="tx-14 mb-0">Rachael Osarieme <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                            <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mg-b-15">
+                        <div class="d-flex">
+                          <div class="avatar avatar-busy"><img src="../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                          <div class="ml-3 pd-t-3">
+                            <p class="tx-14 mb-0">Ahmed Hassan<span class="tx-grey-500 tx-12">(A28922)</span></p>
+                            <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mg-b-15">
+                        <div class="d-flex">
+                          <div class="avatar avatar-busy"><img src="../../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                          <div class="ml-3 pd-t-3">
+                            <p class="tx-14 mb-0">Rachael Osarieme <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                            <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mg-b-15">
+                        <div class="d-flex">
+                          <div class="avatar avatar-busy"><img src="../../assets/img/staff.png" class="rounded-circle" alt=""></div>
+                          <div class="ml-3 pd-t-3">
+                            <p class="tx-14 mb-0">Rachael Osarieme <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                            <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <p class="tx-12 tx-secondary tx-medium mg-b-5">
+                        Others
+                      </p>
+                      <div class="mg-b-15">
+                        <div class="d-flex">
+                          <div class="avatar avatar-busy"><img src="../../assets/img/activity3.png" class="rounded-circle" alt=""></div>
+                          <div class="ml-3 pd-t-3">
+                            <p class="tx-14 mb-0">Blessing Adewole <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                            <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-7 col-12">
+                      <p class="tx-12 tx-grey-600 tx-semibold mg-b-8">DC Type</p>
+                      <p class="tx-14">HODC - Head Office Disciplinary Committee</p>
+                      <div class="mg-b-25">
+                        <p class="tx-12 tx-grey-600 tx-uppercase mg-b-5 tx-semibold">When</p>
+                        <p class="tx-14 mb-0">Monday, Feb 23 2021</p>
+                        <p class="tx-12 tx-secondary mb-0"><i class="fa fa-stopwatch mr-1" aria-hidden="true"></i>10:00AM (GMT +1)</p>
+                      </div>
+                      <div class="mg-b-25">
+                        <p class="tx-12 tx-grey-600 tx-uppercase mg-b-5 tx-semibold">Where</p>
+                        <p class="tx-14 mb-0">Microsoft Teams</p>
+                        <p class="tx-12 tx-secondary mb-0"><i class="fa fa-map-marker-alt mr-1" aria-hidden="true"></i>
+                           <a href="https://teams.microsoft.com/dl/launch.er/..." target="_blank" rel="noopener noreferrer" class="tx-secondary" id="teamsLink">https://teams.microsoft.com/dl/launch.er/...</a> 
+                         <span class="cursor-point ml-2" onclick="meetingLink()"><i class="fa fa-copy tx-secondary"></i></span> 
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Edit</button>
+                  <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#confirmScheduleModal"data-dismiss="modal" >Schedule DC Sitting</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+           <!--Preview Redirect Request Modal -->
+           <div class="modal fade" id="previewRequestModal" tabindex="-1" aria-labelledby="previewRequestModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                  <div>
+                    <p class="tx-22 tx-semibold modal-title mb-0" id="previewRequestModalLabel">Preview DC Redirect Request</p>
+                    <p class="tx-12 tx-grey-500 mb-0">This process assigns HRBP or Company Secretariat to handle DC Sitting.</p>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> 
+                <div class="modal-body pd-md-x-30 pd-x-20">
+                  <div class="">
+                    <p class="tx-12 tx-uppercase tx-grey-600 tx-semibold mg-b-8">DC Type</p>
+                    <p class="tx-12 tx-secondary mg-b-10">RBDC - Regional Bank Disciplinary Committee</p>
+                    <div class="card card-body bg-grey-50 pd-15">
+                      <div class="mg-b-20">
+                        <p class="tx-12 tx-uppercase tx-grey-600 tx-semibold mg-b-5">region</p>
+                        <p class="tx-12 tx-secondary mg-b-0">North Bank</p>
+                      </div>
+                      
+                      <p class="tx-12 tx-uppercase tx-grey-600 tx-semibold mg-b-5">HRBP ASSIGNED</p>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="d-flex">
+                            <div class="avatar avatar-busy"><img src="../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Rachael Osarieme <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="d-flex">
+                            <div class="avatar avatar-busy"><img src="../../assets/img/activity3.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Ahmed Hassan <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Edit</button>
+                  <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#confirmRequestModal"data-dismiss="modal" > Redirect DC Request</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+         <!--confirm DC Schedule Modal -->
+          <div class="modal fade" id="confirmScheduleModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header pd-y-10 bd-b-0">
+                  <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  <div class="d-flex">
+                    <div>
+                      <img src="../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
+                    </div>
+                    <div class="mg-l-5">
+                      <p class="tx-22 tx-bold mb-0 pd-t-20">DC Sitting scheduled successfully</p>
+                    </div>
+                  </div>
+                  <hr class="mg-t-10"/>
+                  <p class="tx-14">Notification and email has been sent panel members and involved employees. This case has been added to the list of Sittings. </p>
+                </div>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!--confirm Redirect Request Modal -->
+          <div class="modal fade" id="confirmRequestModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header pd-y-10 bd-b-0">
+                  <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  <div class="d-flex">
+                    <div>
+                      <img src="../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
+                    </div>
+                    <div class="mg-l-5">
+                      <p class="tx-22 tx-bold mb-0 pd-t-20">Request redirected successfully</p>
+                    </div>
+                  </div>
+                  <hr class="mg-t-10"/>
+                  <p class="tx-14">Notification and email has been sent to the assigned HRBP. The case has been updated to show <span class="badge bg-purple-50 tx-purple-500 tx-11 tx-uppercase tx-semibold">Redirected</span>  as Status in the Request listing.. </p>
+                </div>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
          
         </div>
       </div>
@@ -519,14 +768,11 @@
     <script src="../../assets/js/dashforge.js"></script>
     <script src="../../assets/js/dashforge.aside.js"></script>
     <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
-    <script src="../../assets/js/dashforge.settings.js"></script>
     <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
     <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
-
-    <script src="../../assets/js/drop.js"></script>
-    <script src="../../assets/js/dropzone.js"></script>
+    <script src="../../assets/lib/select2/js/select2.min.js"></script>
     <script>
       $(document).ready( function () {
    $('.display').DataTable({
@@ -553,6 +799,33 @@
      });
    });
       });
+</script>
+<script>
+  $(document).ready(function() {
+     $('#employe').select2({
+       width: '100%' ,
+       dropdownParent: $("#scheduleModal")
+     });
+     $('#redirect-panel').select2({
+       width: '100%' ,
+       dropdownParent: $("#redirectModal")
+     });
+ });
+</script>
+<script>
+  const goBack = () => {
+       window.history.back();
+     }
+     const meetingLink = () => {
+    let copyText = document.getElementById("teamsLink");
+    let textArea = document.createElement("textarea");
+      textArea.value = copyText.textContent;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("Copy");
+      textArea.remove();
+    alert("Copied the text: " + copyText.innerHTML);
+     }
 </script>
 
   </body>
