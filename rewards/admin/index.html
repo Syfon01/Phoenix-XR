@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Rewards and Sanction</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-700">Exit Admin</p>
+            </div>
+          </div>
+          
+          <div class="collapse" id="loggedinMenu">
+            <ul class="nav nav-aside mg-b-0">
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="edit"></i> <span>Edit Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="user"></i> <span>View Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="settings"></i> <span>Account Settings</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="help-circle"></i> <span>Help Center</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="log-out"></i> <span>Sign Out</span></a></li>
+            </ul>
+          </div>
+        </div><!-- aside-loggedin -->
+       
+        <ul class="nav nav-aside">
+          <li class="nav-item active p-14"><a href="./index.html" class="nav-link active"><i data-feather="grid"></i><span>Dashboard</span></a></li>
+
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../assets/img/icon/dc.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Disciplinary Committee</span></a>
+            <ul>  
+             
+              <li><span></span><a href="./dc-requests.html">DC Request</a></li>
+              <li><a href="./dc-sittings.html">DC Sittings</a></li>
+              <li><a href="./dc-panel.html">DC Panel Members</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../assets/img/icon/sanction.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Sanction</span></a>
+            <ul>  
+              <li><span></span><a href="./sanction-requests.html">Sanction Requests</a></li>
+              <li><a href="./active-sanction.html">Active Sanctions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../assets/img/icon/recognitiom.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Recognition</span></a>
+            <ul>  
+             
+              <li><span></span><a href="./recognition-requests.html">Recognition Requests</a></li>
+              <li><a href="./active-recognition.html">Active Recognition</li>
+              <li><a href="./dc-panel.html">DC Panel Members</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../assets/img/icon/commendation.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Recommendation</span></a>
+            <ul>  
+             
+              <li><span></span><a href="./dc-requests.html">DC Request</a></li>
+              <li><a href="./dc-sittings.html">DC Sittings</a></li>
+              <li><a href="./dc-panel.html">DC Panel Members</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../assets/img/icon/sanction.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Recall</span></a>
+            <ul>  
+             
+              <li><span></span><a href="./dc-requests.html">DC Request</a></li>
+              <li><a href="./dc-sittings.html">DC Sittings</a></li>
+              <li><a href="./dc-panel.html">DC Panel Members</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../assets/img/icon/sanction.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Withdraw</span></a>
+            <ul>  
+             
+              <li><span></span><a href="./dc-requests.html">DC Request</a></li>
+              <li><a href="./dc-sittings.html">DC Sittings</a></li>
+              <li><a href="./dc-panel.html">DC Panel Members</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../assets/img/icon/sanction.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Appeal</span></a>
+            <ul>  
+             
+              <li><span></span><a href="./dc-requests.html">DC Request</a></li>
+              <li><a href="./dc-sittings.html">DC Sittings</a></li>
+              <li><a href="./dc-panel.html">DC Panel Members</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../assets/img/icon/sanction.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Grievances</span></a>
+            <ul>  
+             
+              <li><span></span><a href="./dc-requests.html">DC Request</a></li>
+              <li><a href="./dc-sittings.html">DC Sittings</a></li>
+              <li><a href="./dc-panel.html">DC Panel Members</a></li>
+
+            </ul>
+          </li>
+         
+        </ul>
+        
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
+              <li class="breadcrumb-item"><a href="./index.html">Work Ethics Requests</a></li>
+            </ol>
+          </nav>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/New.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+      <div class="container pd-md-x-25 pd-md-y-25">
+        <div class="row justify-content-between">
+          <div class="col-lg-6 col-md-7">
+            <div class="d-flex">
+              <div>
+                <div class="avatar avatar-xl"><img src="../../assets/img/avatar-xl.jpg" class="rounded-circle" alt=""></div>
+              </div>
+              <div class="pd-t-10 mg-l-10">
+                <p class="tx-24 tx-bold mb-0">Hi Toyin Sowore</p>
+                <p class="tx-14 tx-grey-500 mb-0">Work Ethics Admin Dashboard</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-5 col-12 pd-lg-l-10">
+            <div class="d-flex pd-t-20 float-md-right">
+              <div class="">
+                <button type="" class="btn btn-outlined-primary tx-semibold tx-white tx-12 pd-x-20">View FAQ</button>
+              </div>
+              <div class="mg-l-15">
+                <button type="" class="btn btn-outlined-primary tx-semibold tx-white tx-12">Go to Employee Portal</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <p class="tx-18 tx-semibold mb-0">Pending Requests</p>
+          <div class="row">
+            <div class="col-md-6 col-lg-3 mg-t-20">
+              <div class="card shadow-sm">
+                <div class="card-body pd-x-15 pd-y-10">
+                  <div class="row justify-content-between">
+                    <div class="col-9">
+                      <div class="d-flex">
+                        <div class="mg-t-5 bg-grey-100 box-icon">
+                          <img src="../../assets/img/icon/dc.svg" class="wd-20 ht-20">
+                        </div>
+                          <p class="tx-14 tx-grey-600 tx-medium mb-0 mg-l-5">Disciplinary
+                            Committee
+                          </p>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <p class="tx-32 mb-0 tx-grey-900 tx-bold float-right">3</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer bg-gray-50 pd-y-5">
+                  <button class="btn pd-0 tx-primary tx-12 tx-semibold">View</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mg-t-20">
+              <div class="card shadow-sm">
+                <div class="card-body pd-x-15 pd-y-10">
+                  <div class="row justify-content-between">
+                    <div class="col-9">
+                      <div class="d-flex">
+                        <div class="mg-t-5 bg-grey-100 box-icon">
+                          <img src="../../assets/img/icon/sanction.svg" class="wd-20 ht-20">
+                        </div>
+                          <p class="tx-14 tx-grey-600 tx-medium mb-0 mg-l-5 pd-t-10">
+                            Sanctions
+                          </p>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <p class="tx-32 mb-0 tx-grey-900 tx-bold float-right">4</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer bg-gray-50 pd-y-5">
+                  <button class="btn pd-0 tx-primary tx-12 tx-semibold">View</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mg-t-20">
+              <div class="card shadow-sm">
+                <div class="card-body pd-x-15 pd-y-10">
+                  <div class="row justify-content-between">
+                    <div class="col-9">
+                      <div class="d-flex">
+                        <div class="mg-t-5 bg-grey-100 box-icon">
+                          <img src="../../assets/img/icon/recognitiom.svg" class="wd-20 ht-20">
+                        </div>
+                          <p class="tx-14 tx-grey-600 tx-medium mb-0 mg-l-5 pd-t-10">
+                            Recognition
+                          </p>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <p class="tx-32 mb-0 tx-grey-900 tx-bold float-right">12</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer bg-gray-50 pd-y-5">
+                  <button class="btn pd-0 tx-primary tx-12 tx-semibold">View</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mg-t-20">
+              <div class="card shadow-sm">
+                <div class="card-body pd-x-15 pd-y-10">
+                  <div class="row justify-content-between">
+                    <div class="col-9">
+                      <div class="d-flex">
+                        <div class="mg-t-5 bg-grey-100 box-icon">
+                          <img src="../../assets/img/icon/appeal.svg" class="wd-20 ht-20">
+                        </div>
+                          <p class="tx-14 tx-grey-600 tx-medium mb-0 mg-l-5 pd-t-10">
+                            Appeals
+                          </p>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <p class="tx-32 mb-0 tx-grey-900 tx-bold float-right">3</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer bg-gray-50 pd-y-5">
+                  <button class="btn pd-0 tx-primary tx-12 tx-semibold">View</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mg-t-20">
+              <div class="card shadow-sm">
+                <div class="card-body pd-x-15 pd-y-10">
+                  <div class="row justify-content-between">
+                    <div class="col-9">
+                      <div class="d-flex">
+                        <div class="mg-t-5 bg-grey-100 box-icon">
+                          <img src="../../assets/img/icon/withdraw.svg" class="wd-20 ht-20">
+                        </div>
+                          <p class="tx-14 tx-grey-600 tx-medium mb-0 mg-l-5 pd-t-10">
+                            Withdrawal
+                          </p>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <p class="tx-32 mb-0 tx-grey-900 tx-bold float-right">2</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer bg-gray-50 pd-y-5">
+                  <button class="btn pd-0 tx-primary tx-12 tx-semibold">View</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mg-t-20">
+              <div class="card shadow-sm">
+                <div class="card-body pd-x-15 pd-y-10">
+                  <div class="row justify-content-between">
+                    <div class="col-9">
+                      <div class="d-flex">
+                        <div class="mg-t-5 bg-grey-100 box-icon">
+                          <img src="../../assets/img/icon/grievance.svg" class="wd-20 ht-20">
+                        </div>
+                          <p class="tx-14 tx-grey-600 tx-medium mb-0 mg-l-5 pd-t-10">
+                            Grievances
+                          </p>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <p class="tx-32 mb-0 tx-grey-900 tx-bold float-right">9</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer bg-gray-50 pd-y-5">
+                  <button class="btn pd-0 tx-primary tx-12 tx-semibold">View</button>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="table-section mg-t-20">
+            <div class="card">
+              <div class="card-header pd-x-15 pd-y-10">
+                <div class="row justify-content-between">
+                  <div class="col-md-6 col-12 col-lg-6 ">
+                    <p class="tx-14 mb-0 tx-medium pd-t-10">
+                      Last 20 Activities Done by your Team
+                    </p>
+                  </div>
+                  <div class="col-md-5 col-12">
+                    <div class="d-flex float-md-right">
+                      <div class="mg-r-15 mg-t-5">
+                        <button class="btn pd-0 mb-0">
+                          <span>
+                            <img src="../../assets/img/icon/filter_b.svg" alt="" srcset="">
+                              Filter
+                          </span>
+                        </button>
+                      </div>
+
+                      <div class="search-form">
+                        <input type="search" class="form-control" placeholder="Search">
+                        <button class="btn" type="button"><i data-feather="search"></i></button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="card-body pd-10">
+                <table class="table display">
+                  <thead>
+                    <tr class="tx-uppercase tx-12 tx-semibold">
+                      <th>S/N</th>
+                      <th>CASE/TITLE</th>
+                      <th>ACTIVITY TYPE</th>
+                      <th>ACTION </th>
+                      <th>TIMESTAMP</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                    <tr>
+                      <th scope="row">1</th>
+                      <td><p class="tx-medium tx-12 mb-0" style="width: 350px;">Alleged eight accounts receiving  multiple salaries from local government authority(ies)</p></td>
+                      <td>
+                        <p class=" tx-medium tx-12 mb-0 pd-t-5">Sanction</p>
+                      </td>
+                        <td>   
+                          <p class=" tx-medium tx-12 mb-0 pd-t-5">Sanction Initiated</p>
+                        </td>
+                      <td>
+                        <div>
+                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            <label for="" class="tx-12 mb-0 tx-grey-500">12:14pm</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td><p class="tx-medium tx-12 mb-0" style="width: 350px;">Alleged eight accounts receiving  multiple salaries from local government authority(ies)</p></td>
+                      <td>
+                        <p class=" tx-medium tx-12 mb-0 pd-t-5">Sanction</p>
+                      </td>
+                        <td>   
+                          <p class=" tx-medium tx-12 mb-0 pd-t-5">Sanction Initiated</p>
+                        </td>
+                        <td>
+                        <div>
+                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            <label for="" class="tx-12 mb-0 tx-grey-500">12:14pm</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td ><p class="tx-medium tx-12 mb-0 pd-t-5" style="width: 350px;">Breach of cash movement policy</p></td>
+                      <td>
+                        <p class=" tx-medium tx-12 mb-0 pd-t-5">DC</p>
+                      </td>
+                        <td>   
+                          <p class=" tx-medium tx-12 mb-0 pd-t-5">DC Scheduled</p>
+                        </td>
+                        <td>
+                        <div>
+                          <p class="tx-12 mb-0">Feb 4, 2021</p>
+                            <label for="" class="tx-12 mb-0 tx-grey-500">3:05pm</label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td><p class="tx-medium tx-12 mb-0 pd-t-5" style="width: 350px;">Excellent Service Delivery</p></td>
+                      <td>
+                        <p class=" tx-medium tx-12 mb-0 pd-t-5">Recognition</p>
+                      </td>
+                        <td>   
+                          <p class=" tx-medium tx-12 mb-0 pd-t-5">Recognition Declined</p>
+                        </td>
+                        <td>
+                        <div>
+                          <p class="tx-12 mb-0">May 7, 2021</p>
+                            <label for="" class="tx-12 mb-0 tx-grey-500">8:44am</label>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../assets/js/dashforge.js"></script>
+    <script src="../../assets/js/dashforge.aside.js"></script>
+    <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
+    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="../../assets/js/drop.js"></script>
+    <script src="../../assets/js/dropzone.js"></script>
+    <script>
+      $(document).ready( function () {
+   $('.display').DataTable({
+     "paging": true,
+     "info": true,
+     "responsive": true,
+     "aoColumnDefs": [{
+         "bSortable": false,
+         "aTargets": [-1]
+     }],
+     "searching": false,
+      "lengthChange": false,
+     "bInfo": true
+   });
+   
+   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+     $('.display:visible').each( function(e) {
+       $(this).DataTable().columns.adjust().responsive.recalc();
+     });
+   });
+   $('a[data-toggle="list"]').on('shown.bs.tab', function (e) {
+     $('.display:visible').each( function(e) {
+       $(this).DataTable().columns.adjust().responsive.recalc();
+     });
+   });
+      });
+</script>
+
+  </body>
+</html>

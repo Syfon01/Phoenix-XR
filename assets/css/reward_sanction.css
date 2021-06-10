@@ -368,3 +368,17 @@ fill: #d70900!important;
   .tx-darkk{
     color: rgba(78, 83, 89, 1);
   }
+
+  .nav-aside .nav-link.active{
+    color: #fff!important;
+    font-weight: 700!important;
+  }
+  .nav-link.tab.active{
+  color: #000!important;
+  font-weight: 700!important;
+  }
+  .nav-link.active.bg{
+    background-color: #DB4C3F!important;
+    font-weight: 700!important;
+  }
+  

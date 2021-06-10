@@ -89,6 +89,163 @@
       border-top: 1px solid #E3EBF6;
       padding-bottom: 3rem;
   }
+
+
+  .tx-gray{
+    color: rgba(88, 96, 105, 1);
+  }
+  p{
+    color: rgba(36, 41, 46, 1);
+  }
+.tx-grey-900{
+    color: #111827;
+}
+.tx-grey-800{
+  color: #1F2937;
+}
+.tx-grey-600{
+    color: #4B5563;
+}
+.tx-grey-500{
+    color: #6B7280;
+}
+.tx-heading{
+    color: #192434;
+}
+.tx-green{
+    color: #006644;
+  }
+.tx-red-500{
+  color: #BF2600;
+}
+.tx-second{
+  color: rgba(6, 95, 212, 1);
+}
+.badge{
+    border-radius: 3px;
+    padding-top: 4px!important;
+    padding-bottom: 3px!important;
+
+}
+.ava{
+  width: 40px!important;
+  height: 40px!important;
+}
+.bg-neutral{
+  background-color: rgba(66, 82, 110, 1)!important;
+  color:#fff
+}
+.badge-secondary{
+    background-color: rgba(223, 225, 230, 1)!important;
+    border-radius: 3px;
+    color: rgba(66, 82, 110, 1)!important;
+  }
+  .badge-neutral{
+    background-color: #42526E!important;
+    border-radius: 3px;
+    color: #fff!important;
+  }
+  .badge-blue{
+    background-color: rgba(222, 235, 255, 1)!important;
+    border-radius: 3px;
+    color: rgba(7, 71, 166, 1)!important;
+  }
+  .badge-green-400{
+    background-color: rgba(0, 135, 90, 1)!important;
+    border-radius: 3px;
+    color: #fff!important;
+  }
+  .badge-green{
+    background-color: rgba(227, 252, 239, 1)!important;
+    border-radius: 3px;
+    color: rgba(0, 102, 68, 1)!important;
+  }
+  .badge-done{
+    background-color: rgba(234, 230, 255, 1)!important;
+    border-radius: 3px;
+    color: rgba(64, 50, 148, 1)!important;
+  }
+  .bg-blue-400{
+    background-color: #0052CC!important;
+    color: #fff;
+  }
+  .bg-light-40{
+    background-color: #DFE1E6!important;
+    color: #42526E!important;
+  }
+  .bg-red-50{
+    background-color: #FFEBE6!important;
+  }
+  .bg-red-400{
+      background-color: #DE350B!important;
+      color: #fff;
+  }
+  .bg-green-50{
+    background-color: #E3FCEF!important;
+  }
+  .bg-second{
+    background-color: #FAFBFC!important;
+    border: 1px solid #E1E4E8!important;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .bg-grey{
+    background-color: #F6F6F6!important;
+  }
+  .bg-grey-50{
+    background-color: #F9FAFB!important;
+  }
+  .bg-grey-100{
+    background-color: #F3F4F6!important;
+  }
+  .bg-light-blue{
+    background-color: rgba(222, 235, 255, 1)!important;
+  }
+  .tx-neutral{
+  color: rgba(23, 43, 77, 1);
+  }
+  .bg-modal-footer{
+    background-color: rgba(243, 245, 247, 1)!important;
+  }
+  .bg-light-bluee{
+    background-color: #F3F8FF!important;
+  }
+  
+  .bg-side{
+    background-color: #FAFAFA!important;
+  }
+  .bg-grey-card{
+    background-color: #ECECEC!important;
+    border-radius: 4px;
+    /* max-height: 45px; */
+  }
+  .bg-yellow{
+    background-color: #F9C513!important;
+  }
+  .card-header-gray{
+    background-color: #F5F3FF!important;
+  }
+  .bg-gray-50{
+    background-color: #F9FAFB!important;
+  }
+  .thead-gray{
+    background-color: rgba(251, 233, 233, 1);
+  }
+  .card-header-green{
+    background-color: #F0FDFA!important;
+  }
+  .card-header-red{
+    background-color: #FFFBEB!important;
+  }
+  .card-header-bluee{
+    background-color: #E5EDF8!important;
+  }
+  .bg-sche{
+    background-color: rgba(6, 95, 212, 0.1)!important;
+  }
+  .bg-conclude{
+    background-color: rgba(75, 85, 99, 0.2)!important;
+  }
   @media (max-width: 575.98px) { 
       
       
@@ -109,21 +266,31 @@
   background: rgba(34, 40, 47, 1)!important;
   color: #fff!important;
 }
+.nav-aside .nav-link::before{
+  left: -15px!important;
+}
 .aside-body{
   background: rgba(45, 53, 62, 1)!important;
+  padding: 25px 15px!important;
 }
 .nav-aside .with-sub.show:not(.active) .nav-link{
   color: #fff!important;
 }
-.nav-aside .nav-link{
-  color: #6E84A3!important;
+.nav-aside .with-sub .nav-link::after{
+  content:'\f3d0'!important ;
 }
-
-.nav-aside .nav-item ul a{
-  color: #6E84A3!important;
+.nav-aside .with-sub.show .nav-link::after{
+  transform: rotate(180deg)!important;
+}
+.nav-aside .nav-link, .nav-aside .nav-item ul a{
+  color: #9CA3AF!important;
+}
+.nav-aside .nav-item ul .active a{
+  color: #fff!important;
+  font-weight: 700;
 }
 .nav-aside svg{
-  color: #6E84A3!important;
+  color: #9CA3AF!important;
 }
 .btn-review{
     background: rgba(227, 235, 246, 1)!important;
@@ -152,6 +319,10 @@ font-weight: 700!important;
 }
 .nav-link.active.bg{
   background-color: #DB4C3F!important;
+  font-weight: 700!important;
+}
+.nav-aside .nav-link.active{
+  color: #fff!important;
   font-weight: 700!important;
 }
 
@@ -244,3 +415,51 @@ font-weight: 700!important;
     font-weight: 700!important;
     color:white!important;
 }  
+.btn-primary-outline{
+  background: #FAFBFC;
+  color: #d70900 !important;;
+  border: 1px solid #d70900!important;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
+  font-weight: 700!important;
+
+}
+.btn-primary-outline:hover{
+  background: linear-gradient(180deg, #D70900 0%, #BF0B1C 100%);
+border: 1px solid rgba(27, 31, 35, 0.15);
+box-sizing: border-box;
+box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.1), inset 0px 2px 0px rgba(255, 255, 255, 0.03);
+color: #fff!important;
+  font-weight:700;
+}
+.btn-outlined-primary:hover{
+  background: linear-gradient(180deg, #D70900 0%, #BF0B1C 100%)!important;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  box-sizing: border-box;
+  box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.1), inset 0px 2px 0px rgba(255, 255, 255, 0.03);
+  color: #fff!important;
+    font-weight:700;
+   }
+   .btn-outlined-primary{
+    background: #FAFBFC!important;
+    color: #d70900 !important;;
+    border: 1px solid rgba(27, 31, 35, 0.15)!important;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
+   }
+.box-icon{
+  width: 32px!important;
+  height: 32px!important;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+td p{
+  line-height: 1.2;
+}
+td label{
+  line-height: 0.8;
+}
+.nav-line .nav-link{
+  padding: 8px 16px!important;
+}
