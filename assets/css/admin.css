@@ -155,6 +155,10 @@
     border-radius: 3px;
     color: rgba(7, 71, 166, 1)!important;
   }
+  .deep-blue{
+    background-color: rgba(82, 67, 170, 1)!important;
+    color: #fff;
+  }
   .badge-green-400{
     background-color: rgba(0, 135, 90, 1)!important;
     border-radius: 3px;
