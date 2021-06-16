@@ -156,7 +156,7 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
               <li class="breadcrumb-item"><a href="./index.html">Disciplinary Committee</a></li>
-              <li class="breadcrumb-item breadcrumb-size pb-0 active text-capitalize tx-gray-500 " aria-current="page">DC Requests</li>
+              <li class="breadcrumb-item breadcrumb-size pb-0 active text-capitalize tx-gray-500 " aria-current="page">Preview DC Sitting</li>
 
             </ol>
           </nav>
@@ -169,7 +169,7 @@
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
           <button onclick="goBack()" class="btn btn-back tx-14 tx-semibold pd-l-0 pd-y-0"><i data-feather="arrow-left"></i> Go Back</button>
-          <p class="tx-32 tx-bold mb-0">Log New DC Sitting Schedule</p>
+          <p class="tx-32 tx-bold mb-0">Preview New DC Sitting Schedule</p>
           <p class="tx-grey-500">This process creates a sitting and summons affected employees and selected panelists to the disciplinary committee sitting.</p>
         
           <div>
@@ -181,35 +181,52 @@
                       <p class="tx-24 mb-0">DC Details</p>
                     </div>
                     <div class="col-lg-9 col-12 mg-t-20 mg-md-t-0">
-                      <div class="form-row">
-                        <div class="form-group col-md-8">
-                          <label for="formGroupExampleInput" class="d-block tx-medium mb-1">Title</label>
-                          <input type="text" class="form-control input-bg" placeholder="Make the title succinct and recognisable">
+                      <div class="mg-b-25">
+                        <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
+                        <p class="tx-14 tx-grey-900 mb-0">Alleged eight accounts receiving multiple salaries from local government authority(ies)</p>
+                       </div>
+                       <div class="mg-b-25">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
+                          <p class="tx-14 tx-grey-900">The indicted staff allegedly colluded with officials of some local government councils in Borno state to 
+                            divert salaries to accounts operated by the staff.
+                          </p>
                         </div>
-                        <div class="form-group col-md-4">
-                          <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Request Source</label>
-                          <select class="custom-select">
-                            <option selected>-- Select here --</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                          </select>
-                        </div>
-                      </div>
-                       
-                        <div class="form-group">
-                          <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Remarks</label>
-                          <textarea name="" id="" class="form-control input-bg" rows="3" placeholder="Enter comments"></textarea>
-                        </div>
-  
-                        <div class="form-group">
-                          <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Upload Investigation Report and Approval <span class="tx-secondary"> (zip, pdf, docs, xls, jpg, png)</span> </label>
-                          <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="customFile">
-                            <label class="custom-file-label" for="customFile"><img src="../../../assets/img/icon/upload.svg" class="mr-2"> Drop files here</label>
+                        <div class="mg-b-10">
+                          <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">Report & APPROVAL</label>
+                          <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                            <div class="row justify-content-between">
+                              <div class="col-9 col-md-9">
+                                <div class="d-flex">
+                                  <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                                  <div>
+                                    <p class="tx-14 tx-grey-900 mb-0">Investigation_report_424.pdf</p>
+                                    <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-3 col-md-2 pd-md-l-0">
+                                <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 float-right"> View</button>
+                              </div>
+                            </div>
                           </div>
-                          <div id="fileList"></div>
+                          <div class="card card-body pd-x-15 pd-y-9 bg-grey-50 mg-t-10">
+                            <div class="row justify-content-between">
+                              <div class="col-9 col-md-9">
+                                <div class="d-flex">
+                                  <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                                  <div>
+                                    <p class="tx-14 tx-grey-900 mb-0">Approval_for_investigation_a34.pdf</p>
+                                    <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-3 col-md-2 pd-md-l-0">
+                                <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 float-right"> View</button>
+                              </div>
+                            </div>
+                          </div>
                         </div>
+                      
                     </div>
                   </div>
                   <hr>
@@ -218,20 +235,64 @@
                       <p class="tx-24">Involved Employees</p>
                     </div>
                     <div class="col-lg-9 col-12 mg-t-20">
-                      <div class="form-group">
-                        <div class="row justify-content-between">
-                          <div class="col-md 6 mg-b-10 mg-md-b-0">
-                            <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Upload Affected Employees Data <span class="tx-secondary"> (cvs, xls)</span> </label>
+                      <div class="mg-b-25">
+                        <label for="formGroupExampleInput" class="d-block tx-semibold mb-0 tx-grey-600 tx-uppercase tx-12">Involved Employees <span>(8)</span></label>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="d-flex mg-t-15">
+                              <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                              <div class="ml-3 pd-t-3">
+                                <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                              </div>
+                            </div>
                           </div>
-                          <div class="col-md-4 mg-b-10 mg-md-b-0">
-                            <button type="button" class="btn tx-primary float-md-right tx-semibold tx-12 pd-0" data-toggle="modal" data-target="#excelModal"><img src="../../../assets/img/icon/inf.svg" alt="" srcset="" >  Download Excel Template</button>
+                          <div class="col-md-6">
+                            <div class="d-flex mg-t-15">
+                              <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                              <div class="ml-3 pd-t-3">
+                                <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="d-flex mg-t-15">
+                              <div class="avatar avatar"><img src="../../../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                              <div class="ml-3 pd-t-3">
+                                <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="d-flex mg-t-15">
+                              <div class="avatar avatar"><img src="../../../assets/img/activity3.png" class="rounded-circle" alt=""></div>
+                              <div class="ml-3 pd-t-3">
+                                <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="d-flex mg-t-15">
+                              <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                              <div class="ml-3 pd-t-3">
+                                <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="d-flex mg-t-15">
+                              <div class="avatar avatar"><img src="../../../assets/img/staff.png" class="rounded-circle" alt=""></div>
+                              <div class="ml-3 pd-t-3">
+                                <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="customFile">
-                          <label class="custom-file-label" for="customFile"><img src="../../../assets/img/icon/upload.svg" class="mr-2"> Drop files here</label>
-                        </div>
-                        <div id="fileList"></div>
                       </div>
                     </div>
                   </div>
@@ -241,365 +302,81 @@
                       <p class="tx-24">DC Schedule</p>
                     </div>
                     <div class="col-lg-9 col-12 mg-t-20">
-                      <div class="form-group">
-                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Select DC Type</label>
-                        <select class="custom-select" id="theSelect">
-                          <option selected>-Select a DC Type-</option>
-                          <option value="HODC">HODC - Head Office Disciplinary Committeee</option>
-                          <option value="RBDC">RBDC - Regional Bank Disciplinary Committee</option>
-                          <option value="HODC">EMC - Executive Management Committee</option>
-                          <option value="HODC">GMDC - Group Managing Disciplinary Committee</option>
-                          <option value="HODC">NGC - Nominations and Governance Committee</option>
-                        </select>
-                      </div>
-                      <div class="isHODC">
-                        <div class="form-group">
-                          <div class="card card-body bg-grey-50 pd-15">
-                            <div class="form-group">
-                              <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Who handles this DC?</label>
-                              <div class="card card-body radio-active pd-x-10 pd-y-10 col-md-6">
-                                <div class="custom-control custom-radio">
-                                  <input type="radio" id="customRadio1" name="customRadio1" class="custom-control-input" checked>
-                                  <label class="custom-control-label" for="customRadio1">Handled by the Work Ethics Team</label>
-                                </div>
-                              </div>
-                              
-                            </div>
-  
-                            <p class="tx-14 tx-medium mg-b-15">Select Panel Members for HODC Sitting</p>
-                            <p class="tx-12 tx-secondary tx-medium mg-b-10">Onboarded Panel members</p>
-                            <div class="form-row">
-                              <div class="form-group col-md-6">
-                                <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                  <label class="custom-control-label" for="customCheck1">
-                                    <div class="d-flex">
-                                      <div class="avatar avatar"><img src="../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
-                                      <div class="ml-3 pd-t-3">
-                                        <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
-                                        <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
-                                      </div>
-                                    </div>
-                                  </label>
-                                </div>
-                              </div>
-                              <div class="form-group col-md-6">
-                                <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                  <label class="custom-control-label" for="customCheck2">
-                                    <div class="d-flex">
-                                      <div class="avatar avatar"><img src="../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
-                                      <div class="ml-3 pd-t-3">
-                                        <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
-                                        <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
-                                      </div>
-                                    </div>
-                                  </label>
-                                </div>
-                              </div>
-                              <div class="form-group col-md-6">
-                                <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                  <label class="custom-control-label" for="customCheck3">
-                                    <div class="d-flex">
-                                      <div class="avatar avatar"><img src="../../assets/img/activity3.png" class="rounded-circle" alt=""></div>
-                                      <div class="ml-3 pd-t-3">
-                                        <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
-                                        <p class="tx-12 tx-grey-500 mb-0">Team Member, Teller Operations</p>
-                                      </div>
-                                    </div>
-                                  </label>
-                                </div>
-                              </div>
-                              <div class="form-group col-md-6 mb-md-0">
-                                <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                  <label class="custom-control-label" for="customCheck4">
-                                    <div class="d-flex">
-                                      <div class="avatar avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></div>
-                                      <div class="ml-3 pd-t-3">
-                                        <p class="tx-14 mb-0">Saka Essien<span class="tx-grey-500 tx-12">(A28922)</span></p>
-                                        <p class="tx-12 tx-grey-500 mb-0">Team Member, Teller Operations</p>
-                                      </div>
-                                    </div>
-                                  </label>
-                                </div>
-                              </div>
-                              <div class="form-group col-md-6 mb-md-0">
-                                <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                  <label class="custom-control-label" for="customCheck5">
-                                    <div class="d-flex">
-                                      <div class="avatar avatar"><img src="../../assets/img/staff.png" class="rounded-circle" alt=""></div>
-                                      <div class="ml-3 pd-t-3">
-                                        <p class="tx-14 mb-0">Saka Essien<span class="tx-grey-500 tx-12">(A28922)</span></p>
-                                        <p class="tx-12 tx-grey-500 mb-0">Team Member, Teller Operations</p>
-                                      </div>
-                                    </div>
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="form-group mg-t-15">
-                              <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Add Others to HODC Sitting - <span class="tx-grey-500 tx-12">Concurrance to DC Summary will be required from added panelists as well</span></label>
-                              <select id="employe" multiple="multiple" class="form-control">
-                                <option value="1">
-                                  Bayo Adeosun - (A29118)
-                                </option>
-                                <option value="2">Michael Adeyemo - (A24084)</option>
-                                <option value="3">Seyi Bassey</option> 
-                                <option value="4">Olu Pascal</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="isRBDC">
-                        <div class="form-group">
-                          <div class="card card-body bg-grey-50 pd-15">
-                            <div class="form-group">
-                              <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Who handles this DC?</label>
-                              <div class="row">
-                                <div class="col-md-6">
-                                  <div class="card card-body radio-active pd-x-10 pd-y-10" >
-                                    <div class="custom-control custom-radio">
-                                      <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" onclick="switch_admin('show_1', 'show_2')" checked>
-                                      <label class="custom-control-label w-100" for="customRadio2">Handled by the Work Ethics Team</label>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-md-6 mg-t-10 mg-md-t-0">
-                                  <div class="card card-body radio-active pd-x-10 pd-y-10 ">
-                                    <div class="custom-control custom-radio">
-                                      <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input"  onclick="switch_admin('show_1', 'show_2')" >
-                                      <label class="custom-control-label w-100" for="customRadio3">Redirect to HRBPs / Company Secretariat</label>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div id="workEthicAdmin">
-                              <div class="form-group">
-                                <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Select Region</label>
-                                <select  class="form-control">
-                                  <option selected>North Bank</option>
-                                  <option value="1">
-                                    South Bank
-                                  </option>
-                                  <option value="2">Lagos Bank</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Add Panel Members for RBDC</label>
-                                   <p class="tx-grey-500 tx-12 mb-0">Concurrance to DC Summary will be required from added panelists as well</p>
-                                <select id="rdbc-panel" multiple="multiple" class="form-control">
-                                  <option value="1">
-                                    Bayo Adeosun - (A29118)
-                                  </option>
-                                  <option value="2">Michael Adeyemo - (A24084)</option>
-                                  <option value="3">Seyi Bassey</option> 
-                                  <option value="4">Olu Pascal</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Add Union Representative for RBDC Sitting</label>
-                                <select id="rdbc-union" multiple="multiple" class="form-control">
-                                  <option value="1">
-                                    Bayo Adeosun - (A29118)
-                                  </option>
-                                  <option value="2">Michael Adeyemo - (A24084)</option>
-                                  <option value="3">Seyi Bassey</option> 
-                                  <option value="4">Olu Pascal</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div id="redirectEthic">
-                              <div class="form-group">
-                                <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Select Region</label>
-                                <select  class="form-control">
-                                  <option selected>North Bank</option>
-                                  <option value="1">
-                                    South Bank
-                                  </option>
-                                  <option value="2">Lagos Bank</option>
-                                </select>
-                              </div>
-                              <div class="form-group mg-b-5">
-                                <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Add North Bank HRBPs to redirect RBDC Sitting to</label>
-                                <select id="redirect-rdbc" multiple="multiple" class="form-control">
-                                  <option value="1">
-                                    Bayo Adeosun - (A29118)
-                                  </option>
-                                  <option value="2">Michael Adeyemo - (A24084)</option>
-                                  <option value="3">Seyi Bassey</option> 
-                                  <option value="4">Olu Pascal</option>
-                                </select>
-                              </div>
-                              <button class="btn tx-primary tx-semibold pd-l-0 pd-y-5 mg-b-15"><i class="fa fa-plus"></i> Add Another</button>
-                            </div>
-                          </div>
-                        </div>
-                        
-                      </div>
                       
-                     
-                    
-                      <div class="form-row">
-                        <div class="form-group col-md-3">
-                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Date of Sitting</label>
-                          <input class="form-control" type="date" name="" id="">
+                      <div class="row">
+                        <div class="col-md-6 col-12">
+                          <p class="tx-12 tx-uppercase tx-grey-600 tx-semibold mg-b-8">Who</p>
+                          <p class="tx-12 tx-secondary mg-b-10">HODC Panel Members</p>
+                          <div class="mg-b-15">
+                            <div class="d-flex">
+                              <div class="avatar avatar-busy"><img src="../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                              <div class="ml-3 pd-t-3">
+                                <p class="tx-14 mb-0">Rachael Osarieme <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                              </div>
+                            </div>
+                          </div>
+    
+                          <div class="mg-b-15">
+                            <div class="d-flex">
+                              <div class="avatar avatar-busy"><img src="../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
+                              <div class="ml-3 pd-t-3">
+                                <p class="tx-14 mb-0">Ahmed Hassan<span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mg-b-15">
+                            <div class="d-flex">
+                              <div class="avatar avatar-busy"><img src="../../assets/img/birthday1.png" class="rounded-circle" alt=""></div>
+                              <div class="ml-3 pd-t-3">
+                                <p class="tx-14 mb-0">Rachael Osarieme <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mg-b-15">
+                            <div class="d-flex">
+                              <div class="avatar avatar-busy"><img src="../../assets/img/staff.png" class="rounded-circle" alt=""></div>
+                              <div class="ml-3 pd-t-3">
+                                <p class="tx-14 mb-0">Rachael Osarieme <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="form-group col-md-3">
-                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Time</label>
-                          <input type="time" class="form-control" name="" id="">
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Microsoft Teams Meeting Link</label>
-                          <input type="text" class="form-control">
+                        <div class="col-md-6 col-12 mg-t-10 mg-md-t-0">
+                          <p class="tx-12 tx-grey-600 tx-semibold mg-b-8">DC Type</p>
+                          <p class="tx-14">HODC - Head Office Disciplinary Committee</p>
+                          <div class="mg-b-25">
+                            <p class="tx-12 tx-grey-600 tx-uppercase mg-b-5 tx-semibold">When</p>
+                            <p class="tx-14 mb-0">Monday, Feb 23 2021</p>
+                            <p class="tx-12 tx-secondary mb-0"><i class="fa fa-stopwatch mr-1" aria-hidden="true"></i>10:00AM (GMT +1)</p>
+                          </div>
+                          <div class="mg-b-25">
+                            <p class="tx-12 tx-grey-600 tx-uppercase mg-b-5 tx-semibold">Where</p>
+                            <p class="tx-14 mb-0">Microsoft Teams</p>
+                            <p class="tx-12 tx-secondary mb-0"><i class="fa fa-map-marker-alt mr-1" aria-hidden="true"></i>
+                               <a href="https://teams.microsoft.com/dl/launch.er/..." target="_blank" rel="noopener noreferrer" class="tx-secondary" id="teamsLink">https://teams.microsoft.com/dl/launch.er/...</a> 
+                             <span class="cursor-point ml-2" onclick="meetingLink()"><i class="fa fa-copy tx-secondary"></i></span> 
+                            </p>
+                          </div>
                         </div>
                       </div>
+                    
+                      
                     </div>
                   </div>
                 </form>
               </div>
             </div>
             <div class="modal-footer bd-t-0 mg-t-30 pd-x-0">
-              <button type="button" class="btn btn-outlined-primary tx-semibold">Clear Contents</button>
-              <button type="button" class="btn btn-primary pd-x-70 tx-semibold" data-toggle="modal" data-target="#previewModal" data-dismiss="modal">Preview</button>
+              <button type="button" class="btn btn-outlined-primary pd-x-40 tx-semibold">Edit</button>
+              <button type="button" class="btn btn-primary pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal" data-dismiss="modal">Schedule New DC Siting</button>
             </div>
             
           </div>
-             
-           <!--Download Excel Modal  -->
-           <div class="modal fade" id="excelModal" tabindex="-1" aria-labelledby="excelModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
-                  <div>
-                    <p class="tx-22 tx-semibold modal-title" id="excelModalLabel">How to use the Template</p>
-                  </div>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div> 
-  
-                <div class="modal-body pd-md-x-30 pd-x-20">
-                  <img src="../../../assets/img/excel.png" alt="" srcset="" class="img-fluid">
-                 <ol class="mg-t-25 pd-l-15 tx-grey-900">
-                   <li>Download the Template.</li>
-                   <li>Enter employee IDs in the specified column.</li>
-                   <li>Enter Sanctions Category. Eg: Fixed Suspension, indefinite suspension, etc.</li>
-                   <li>Enter approved duration in working days. Eg: 5 to mean 5 working days.</li>
-                   <li>Upload filled document in xls or csv in the space provided to upload involved employees data.</li>
-                 </ol>
-                 <button type="button" class="btn tx-primary tx-semibold tx-12 pd-0" >  Download Excel Template</button>
-  
-                </div>
-                <div class="modal-footer bg-modal-footer">
-                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-       
-           <!--Preview Modal -->
-           <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
-                  <div>
-                    <p class="tx-22 tx-semibold modal-title" id="previewModalLabel">Preview New DC Request</p>
-                    <p class="tx-12 tx-secondary mb-0">This process issues a request to summon affect employees to a disciplinary committee sitting.</p>
-                  </div>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div> 
-  
-                <div class="modal-body pd-md-x-30 pd-x-20">
-                 <div class="mg-b-25">
-                  <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
-                  <p class="tx-14 tx-grey-900 mb-0">Alleged eight accounts receiving multiple salaries from local government authority(ies)</p>
-                 </div>
-                 <div class="mg-b-25">
-                    <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">Description</label>
-                    <p class="tx-14 tx-grey-900">The indicted staff allegedly colluded with officials of some local government councils in Borno state to 
-                      divert salaries to accounts operated by the staff.
-                    </p>
-                  </div>
-                  <div class="mg-b-25">
-                    <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">Investigation Report</label>
-                    <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
-                      <div class="row justify-content-between">
-                        <div class="col-9 col-md-9">
-                          <div class="d-flex">
-                            <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
-                            <div>
-                              <p class="tx-14 tx-grey-900 mb-0">Investigation_report_424.pdf</p>
-                              <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-3 col-md-2 pd-md-l-0">
-                          <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 float-right"> View</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                 <div class="mg-b-25">
-                  <label for="formGroupExampleInput" class="d-block tx-semibold mb-0 tx-grey-600 tx-uppercase tx-12">Involved Employees <span>(4)</span></label>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="d-flex mg-t-15">
-                        <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
-                        <div class="ml-3 pd-t-3">
-                          <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
-                          <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="d-flex mg-t-15">
-                        <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
-                        <div class="ml-3 pd-t-3">
-                          <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
-                          <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="d-flex mg-t-15">
-                        <div class="avatar avatar"><img src="../../../assets/img/birthday2.png" class="rounded-circle" alt=""></div>
-                        <div class="ml-3 pd-t-3">
-                          <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
-                          <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="d-flex mg-t-15">
-                        <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
-                        <div class="ml-3 pd-t-3">
-                          <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
-                          <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </div>
-                <div class="modal-footer bg-modal-footer">
-                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Edit</button>
-                  <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal" data-dismiss="modal">Submit DC Request</button>
-                </div>
-              </div>
-            </div>
-          </div>
-  
+         
             <!--success  Modal -->
             <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
@@ -613,14 +390,14 @@
                   <div class="modal-body">
                     <div class="d-flex">
                       <div>
-                        <img src="../../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
+                        <img src="../../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-60 ht-60">
                       </div>
-                      <div class="mg-l-10">
-                        <p class="tx-22 tx-bold mb-0 pd-t-20">Request Sent to Work Ethics</p>
+                      <div class="mg-l-5">
+                        <p class="tx-22 tx-bold mb-0 pd-t-15">DC Schedule Created Successfully</p>
                       </div>
                     </div>
                     <hr class="mg-t-10"/>
-                    <p class="tx-14">Notification and email has been sent to the Work Ethics team to effect. </p>
+                    <p class="tx-14">Notification and email has been sent to the involved employees and panel members.  </p>
                   </div>
                   <div class="modal-footer bg-modal-footer">
                     <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
