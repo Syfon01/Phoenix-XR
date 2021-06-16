@@ -222,7 +222,13 @@
   .bg-light-bluee{
     background-color: #F3F8FF!important;
   }
-  
+  .bg-feedback{
+    background-color: rgba(5, 38, 63, 1);
+    color: #fff!important;
+  }
+  .bd-panel{
+    border-right: 1px solid #fff;
+  }
   .bg-side{
     background-color: #FAFAFA!important;
   }
@@ -233,6 +239,9 @@
   }
   .bg-yellow{
     background-color: #F9C513!important;
+  }
+  .bg-yellow-75{
+    background-color: rgba(255, 240, 179, 1)!important;
   }
   .card-header-gray{
     background-color: #F5F3FF!important;
@@ -259,7 +268,16 @@
     background-color: rgba(75, 85, 99, 0.2)!important;
   }
   @media (max-width: 575.98px) { 
-      
+    .break {
+      flex-basis: 100%;
+      height: 0;
+    }
+    .d-flex{
+      flex-wrap: wrap;
+    } 
+    .bd-panel{
+      border-right: none;
+    }
       
   }
   .modal-sm{
@@ -539,4 +557,7 @@ td label{
 .nav-link .badge{
   background: rgba(209, 213, 218, 0.5);
   border-radius:100px;
+}
+#redirectEthic{
+  display: none;
 }
