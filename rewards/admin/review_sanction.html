@@ -85,7 +85,7 @@
             <a href="" class="nav-link"><img src="../../assets/img/icon/sanction.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Sanction</span></a>
             <ul>  
               <li  class="active"><a href="./sanction-requests.html">Sanction Requests</a></li>
-              <li><a href="./active-sanction.html">Active Sanctions</a></li>
+              <li><a href="./issued-sanction.html">Issued Sanctions</a></li>
               <li><a href="./discarded-sanction.html">Discardrd Sanctions</a></li>
             </ul>
           </li>
@@ -183,8 +183,8 @@
                 </div>
               </div> 
               <div class="card-body pd-md-x-25 pd-x-20">
+                <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">INVOLVED Employee Details</label>
                 <div class="mg-b-25 card card-body bg-grey-50 pd-15">
-                  <label for="formGroupExampleInput" class="d-block tx-semibold mb-0 tx-grey-600 tx-uppercase tx-12">INVOLVED Employee Details</label>
                   <div class="row justify-content-between">
                     <div class="col-md-6 col-12">
                       <div class="d-flex">
@@ -194,16 +194,14 @@
                           <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
                         </div>
                       </div>
-                      <div class="card card-body bg-grey-100 pd-x-8 pd-y-4 mg-t-10">
-                        <p class="tx-12 mb-0">Sanction advised -  <span class="tx-semibold .tx-uppercase">Fixed Suspension (5 days)</span></p>
-                      </div>
                     </div>
                     <div class="col-md-4 col-12 mg-t-10 mg-md-t-0">
-                      <a href="./view_sanction-history.html" class="d-block ml-auto btn btn-outline-light pd-x-10 pd-y-5 tx-grey-700 tx-medium"> View Sanction History</a>
+                      <a href="./view_sanction-history.html" class="d-block ml-auto btn btn-outlined-primary pd-x-10 pd-y-5 tx-grey-700 tx-medium"> View Sanction History</a>
                     </div>
-                    
                   </div>
-  
+                  <div class="card card-body bg-grey-100 pd-x-8 pd-y-4 mg-t-10">
+                    <p class="tx-12 mb-0">Sanction advised -  <span class="tx-semibold .tx-uppercase">Fixed Suspension (5 days)</span></p>
+                  </div>
                   </div>
 
                 <div class="mg-b-25">
@@ -256,14 +254,6 @@
             <div class="card card-body pd-y-0 pd-x-15 bg-transparent bd-0">
               <div class="row bd-b pd-y-10">
                 <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
-                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Case ID</p>
-                </div>
-                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
-                  <p class="tx-12 mb-0">DCS01</p>
-                </div> 
-              </div>
-              <div class="row bd-b pd-y-10">
-                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
                   <p class="tx-12 tx-grey-500 mb-0 tx-medium">Status</p>
                 </div>
                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
@@ -272,7 +262,7 @@
               </div>
               <div class="row bd-b pd-y-10">
                 <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
-                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Created on</p>
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Initiated on</p>
                 </div>
                 <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
                   <p class="tx-12 mb-0">Fri Feb 26, 2021</p>
@@ -280,13 +270,34 @@
               </div>
               <div class="row bd-b pd-y-10">
                 <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
-                  <p class="tx-12 tx-grey-500 mb-0 tx-medium pd-t-5">Created by</p>
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium pd-t-5">Intiated by</p>
                 </div>
                 <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
                   <div class="d-flex float-right">
                     <div class="avatar avatar-sm mg-r-10 wd-25 ht-25 "><img src="../../assets/img/admin.png" class="rounded-circle " alt=""></div>
                     <div>
                       <p class="tx-12 mb-0 pd-t-5">Toyin Sowore</p>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+              <div class="row bd-b pd-y-10">
+                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Approved on</p>
+                </div>
+                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
+                  <p class="tx-12 mb-0">Fri Feb 26, 2021</p>
+                </div> 
+              </div>
+              <div class="row bd-b pd-y-10">
+                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium pd-t-5">Approved by</p>
+                </div>
+                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
+                  <div class="d-flex float-right">
+                    <div class="avatar avatar-sm mg-r-10 wd-25 ht-25 "><img src="../../assets/img/staff.png" class="rounded-circle " alt=""></div>
+                    <div>
+                      <p class="tx-12 mb-0 pd-t-5">Adams Ifeanyi</p>
                     </div>
                   </div>
                 </div> 
