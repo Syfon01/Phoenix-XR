@@ -105,6 +105,9 @@
 .tx-grey-800{
   color: #1F2937;
 }
+.tx-grey-700{
+  color: #374151!important;
+}
 .tx-grey-600{
     color: #4B5563;
 }
@@ -278,6 +281,10 @@
     .bd-panel{
       border-right: none;
     }
+    .bd-mobile{
+      border-bottom: 1px solid #cdd4e0;
+    }
+
       
   }
   .modal-sm{
@@ -560,4 +567,12 @@ td label{
 }
 #redirectEthic{
   display: none;
+}
+.list-group-item.prima.active{
+  background-color: #F5DDDD!important;
+  color: #D70900!important;
+  font-weight: 600;
+}
+.list-group-item{
+  border: none!important;
 }
