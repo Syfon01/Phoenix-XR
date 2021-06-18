@@ -213,6 +213,9 @@
   .bg-grey-100{
     background-color: #F3F4F6!important;
   }
+  .bg-grey-200{
+    background-color: #E5E7EB!important;
+  }
   .bg-light-blue{
     background-color: rgba(222, 235, 255, 1)!important;
   }
@@ -441,11 +444,6 @@ font-weight: 700!important;
   .badge-warning{
     background: rgba(245, 167, 0, 1)!important;
     font-weight: 700!important;
-  }
-  .badge-blue{
-    background: rgba(110, 132, 163, 0.1)!important;
-    font-weight: 700!important;
-    font-size: 14px!important;
   }
 .badge-green{
     background: rgba(1, 125, 115, 1)!important;

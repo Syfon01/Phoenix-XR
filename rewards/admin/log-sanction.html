@@ -17,8 +17,9 @@
     <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
     <link href="../../assets/lib/select2/css/select2.min.css" rel="stylesheet">
-
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+
     <!-- Page CSS -->
     <link rel="stylesheet" href="../../assets/css/admin.css">
     <link rel="stylesheet" href="../../assets/css/dashforge.css">
@@ -84,8 +85,8 @@
           <li class="nav-item active show with-sub tx-14">
             <a href="" class="nav-link"><img src="../../assets/img/icon/sanction.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Sanction</span></a>
             <ul>  
-              <li  class="active"><a href="./sanction-requests.html">Sanction Requests</a></li>
-              <li><a href="./issued-sanction.html">Issued Sanctions</a></li>
+              <li><a href="./sanction-requests.html">Sanction Requests</a></li>
+              <li  class="active"><a href="./issued-sanction.html">Issued Sanctions</a></li>
               <li><a href="./discarded-sanction.html">Discarded Sanctions</a></li>
             </ul>
           </li>
@@ -132,9 +133,11 @@
           <li class="nav-item with-sub tx-14">
             <a href="" class="nav-link"><img src="../../assets/img/icon/appeal.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Appeal</span></a>
             <ul>  
+             
               <li><span></span><a href="./dc-requests.html">DC Request</a></li>
               <li><a href="./dc-sittings.html">DC Sittings</a></li>
               <li><a href="./dc-panel.html">DC Panel Members</a></li>
+
             </ul>
           </li>
           <li class="nav-item with-sub tx-14">
@@ -159,7 +162,7 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
               <li class="breadcrumb-item"><a href="./index.html">Sanctions</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Sanction Requests</li>
+              <li class="breadcrumb-item breadcrumb-size pb-0 active text-capitalize tx-gray-500 " aria-current="page">Issued New Sanction</li>
 
             </ol>
           </nav>
@@ -172,143 +175,242 @@
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
           <button onclick="goBack()" class="btn btn-back tx-14 tx-semibold pd-l-0 pd-y-0"><i data-feather="arrow-left"></i> Go Back</button>
-        <p class="tx-28 tx-bold mb-0 mg-t-10">Review Sanction Request</p>
-        <hr class="mg-t-5">
-        <div class="row mg-t-25">
-          <div class="col-md-8 col-12 order-2 order-md-1 mg-t-20 mg-md-t-0">
-            <div class="card">
-              <div class="card-header bg-grey-100 pd-y-15 pd-md-x-25 pd-x-20 pd-b-10">
-                <div>
-                  <p class="tx-14 mb-0 tx-semibold modal-title">Request Details</p>
-                </div>
-              </div> 
-              <div class="card-body pd-md-x-25 pd-x-20">
-                <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">INVOLVED Employee Details</label>
-                <div class="mg-b-25 card card-body bg-grey-50 pd-15">
-                  <div class="row justify-content-between">
-                    <div class="col-md-6 col-12">
-                      <div class="d-flex">
-                        <div class="avatar avatar"><img src="../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
-                        <div class="ml-3 pd-t-3">
-                          <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
-                          <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+          <p class="tx-32 tx-bold mb-0">Issue New Sanction</p>
+          <p class="tx-grey-500">This process effects selected sanctions against affected employee(s).</p>
+        
+          <div>
+            <ul class="nav nav-line" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Individually</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Bulk Upload</a>
+              </li>
+              <li class="nav-item">
+              </li>
+            </ul>
+            <div class="tab-content  bd-t-0 pd-y-20" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="card">
+                  <div class="card-body pd-md-30">
+                    <form>
+                      <div class="row">
+                        <div class="col-lg-3 col-12  mg-md-t-0">
+                          <p class="tx-24 mb-0">Sanction Details</p>
+                        </div>
+                        <div class="col-lg-9 col-12 mg-t-20 mg-md-t-0">
+                            <div class="form-group">
+                              <label for="formGroupExampleInput" class="d-block tx-medium mb-1">Title</label>
+                              <input type="text" class="form-control input-bg" placeholder="Make the title succinct and recognisable">
+                            </div>
+                            <div class="form-group">
+                              <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Description/Justification</label>
+                              <textarea name="" id="" class="form-control input-bg" rows="3" placeholder="Describe the request here"></textarea>
+                            </div>
+      
+                            <div class="form-group">
+                              <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Upload Attachment e.g approval, report <span class="tx-secondary"> (pdf, docs, xls, jpg, png)</span> </label>
+                              <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFile">
+                                <label class="custom-file-label" for="customFile"><img src="../../assets/img/icon/upload.svg" class="mr-2"> Drop files here</label>
+                              </div>
+                              <div id="fileList"></div>
+                            </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-md-4 col-12 mg-t-10 mg-md-t-0">
-                      <a href="./view_sanction-history.html" class="d-block ml-auto btn btn-outlined-primary pd-x-10 pd-y-5 tx-grey-700 tx-medium"> View Sanction History</a>
-                    </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-lg-3 col-12  mg-md-t-20">
+                          <p class="tx-24">Involved Employees</p>
+                        </div>
+                        <div class="col-lg-9 col-12 mg-t-20">
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <div class="card card-body pd-10 bg-grey-card">
+                                <label for="formGroupExampleInput2" class="tx-medium mb-1">Employee ID or Email <span class="tx-secondary tx-12">(Please type at least 4 characters) </span> </label>
+                                <select id="employee" multiple="multiple" class="form-control">
+                                  <option value="1">
+                                    Bayo Adeosun - (A29118)
+                                  </option>
+                                  <option value="2">Michael Adeyemo - (A24084)</option>
+                                  <option value="3">Seyi Bassey</option>
+                                  <option value="4">Olu Pascal</option>
+                                </select>
+                                <p class="mb-0 tx-14 d-flex justify-content-between mg-t-10">
+                                  <span class="tx-grey-900 tx-semibold">Fixed Suspension (5 days)</span>
+                                  <button class=" btn tx-primary tx-12 tx-semibold d-block pd-y-0" type="button" data-toggle="modal" data-target="#edit-sanction-Modal">EDIT</button>
+                               </p>
+                              </div>
+                              
+                            </div>
+                            <div class="form-group col-md-6">
+                              <div class="card card-body pd-10 ">
+                                <label for="formGroupExampleInput2" class="tx-medium mb-1">Employee ID or Email <span class="tx-secondary tx-12">(Please type at least 4 characters) </span> </label>
+                                <select id="employe" multiple="multiple" class="form-control">
+                                  <option value="1">
+                                    Bayo Adeosun - (A29118)
+                                  </option>
+                                  <option value="2">Michael Adeyemo - (A24084)</option>
+                                  <option value="3">Seyi Bassey</option>
+                                  <option value="4">Olu Pascal</option>
+                                </select>
+                                <p class="mb-0 tx-14 d-flex justify-content-between mg-t-10">
+                                  <span class="tx-grey-500 "><em>No Sanction Added yet</em></span>
+                                  <button class="btn tx-primary tx-12 tx-semibold d-block pd-y-0" data-toggle="modal" type="button" data-target="#add-sanction-Modal" disabled>ADD SANCTION TYPE</button> 
+                               </p>
+                              </div>
+                              
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="form-group">
+                            <a href="" class="tx-semibold"><img src="../../assets/img/icon/add.svg" alt="" srcset="" class="mr-2">Add another Employee </a>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
                   </div>
-                  <div class="card card-body bg-grey-100 pd-x-8 pd-y-4 mg-t-10">
-                    <p class="tx-12 mb-0">Sanction advised -  <span class="tx-semibold .tx-uppercase">Fixed Suspension (5 days)</span></p>
-                  </div>
-                  </div>
-
-                <div class="mg-b-25">
-                  <div class="row justify-content-between">
-                    <div class="col-md-9 col-12">
-                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Offence Title</label>
-                      <p class="tx-14 tx-grey-900 mb-0">Breach of cash movement policy.</p>
-                    </div>
-                    <div class="col-md-3 col-12 mg-t-20 mg-md-t-0">
-                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Source</label>
-                      <p class="tx-14 tx-grey-900 mb-0">Manager</p>
-                    </div>
-                  </div>
-                  
-                 </div>
-                 <div class="mg-b-25">
-                    <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Offence Details</label>
-                    <p class="tx-14 tx-grey-900">The indicted staff allegedly colluded with officials of some local government councils in Borno state to divert salaries to accounts operated by the staff.
-                    </p>
-                  </div>
-                  
-                  <div class="mg-b-25">
-                    <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached FILESs</label>
-                    <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
-                      <div class="row justify-content-between">
-                        <div class="col-9 col-md-9">
+                </div>
+                <div class="modal-footer bd-t-0 mg-t-30 pd-x-0">
+                  <button type="button" class="btn btn-outlined-primary tx-semibold">Clear Contents</button>
+                  <button type="button" class="btn btn-primary pd-x-40 tx-semibold" data-toggle="modal" data-target="#issueModal" data-dismiss="modal">Issue Sanction</button>
+                </div>
+                
+              </div>
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="row">
+                  <div class="col-md-7 col-12">
+                    <div class="card">
+                      <div class="card-body pd-md-30 pd-20">
+                        <p class="tx-12 tx-semibold mg-b-15 tx-uppercase">Sanction multiple employees at the same time using the excel format.</p>
+      
+                        <div class="card card-body pd-20 bg-light-blue mg-b-20">
                           <div class="d-flex">
-                            <img src="../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
                             <div>
-                              <p class="tx-14 tx-grey-900 mb-0">Sanction_Evidence.pdf</p>
-                              <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                            <img src="../../assets/img/icon/info-icon.svg" alt="" srcset="" class="mg-r-10">
+                            </div>
+                            <div>
+                              <p class="tx-16 tx-semibold mb-0 tx-neutral">Guidelines</p>
+                              <ul class="pd-l-15">
+                                <li class="tx-grey-900 mg-b-8">
+                                  Use the template provided for this upload. <button class="btn tx-primary py-0 tx-semibold pd-x-10">Download Template</button>
+                                </li>
+                                <li class="tx-grey-900 mg-b-8">
+                                  Only one excel file can be uploaded at a time.
+                                </li>
+                                <li class="tx-grey-900 mg-b-8">
+                                  Once an upload is done, the system validates the uploaded file for errors if any. Upload status can be found in the submitted tab of Sanctions table.
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
-                        <div class="col-3 col-md-2 pd-md-l-0">
-                          <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 float-md-right"> View</a>
-                        </div>
+                        <form action="">
+                          <div class="form-group">
+                            <div class="row justify-content-between">
+                              <div class="col-md-7">
+                                <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Upload Affected Employees Data <span class="tx-secondary tx-12"> (cvs, xls)</span> </label>
+                              </div>
+                              <div class="col-md-5">
+                                <button type="button" class="btn tx-primary float-md-right tx-semibold tx-12 pd-0" data-toggle="modal" data-target="#excelModal"><img src="../../assets/img/icon/inf.svg" alt="" srcset="" >  Download Excel Template</button>
+                              </div>
+                            </div>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="customFile">
+                              <label class="custom-file-label" for="customFile"><img src="../../assets/img/icon/upload.svg" class="mr-2"> Drop files here</label>
+                            </div>
+                            <div id="fileList"></div>
+                          </div>
+                          <div class="form-group">
+                            <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Upload Attachment e.g approval, report<span class="tx-secondary tx-12"> (pdf, docs, xls, jpg, png)</span> </label>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="customFile">
+                              <label class="custom-file-label" for="customFile"><img src="../../assets/img/icon/upload.svg" class="mr-2"> Drop files here</label>
+                            </div>
+                          </div>
+                          <div class="modal-footer pd-b-0">
+                            <button class="btn btn-primary pd-x-50 txx-semibold" type="button" data-toggle="modal" data-target="#bulkModal" data-dismiss="modal">Submit</button>
+                          </div>
+                        </form>
                       </div>
                     </div>
                   </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-outlined-primary btn-sm pd-x-20 tx-semibold" data-toggle="tooltip" data-placement="top" title="Your are yet to add Sanctions for all Involved Employees"> Discard this Sanction</button>
-                <button type="button" class="btn btn-primary btn-sm pd-x-30 tx-semibold" data-toggle="modal" data-target="#issueModal"> Issue Sanction</button>
-              </div>
-          </div>
-        </div>
-
-          <div class="col-md-4 col-12 order-1 order-md-2">
-            <div class="card card-body pd-y-0 pd-x-15 bg-transparent bd-0">
-              <div class="row bd-b pd-y-10">
-                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
-                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Status</p>
-                </div>
-               <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
-                <span class="badge bg-yellow tx-11 tx-semibold">REQUIRING ATTENTION</span>
-               </div>
-              </div>
-              <div class="row bd-b pd-y-10">
-                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
-                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Initiated on</p>
-                </div>
-                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
-                  <p class="tx-12 mb-0">Fri Feb 26, 2021</p>
-                </div> 
-              </div>
-              <div class="row bd-b pd-y-10">
-                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
-                  <p class="tx-12 tx-grey-500 mb-0 tx-medium pd-t-5">Intiated by</p>
-                </div>
-                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
-                  <div class="d-flex float-right">
-                    <div class="avatar avatar-sm mg-r-10 wd-25 ht-25 "><img src="../../assets/img/admin.png" class="rounded-circle " alt=""></div>
-                    <div>
-                      <p class="tx-12 mb-0 pd-t-5">Toyin Sowore</p>
+                  <div class="col-md-5">
+                    <p class="tx-18 tx-grey-900 tx-bold">Previous Bulk Upload Listing</p>
+                    <div class="">
+                      <div class="row bd-b pd-y-10">
+                        <div class="col-md-9 col-9 mg-b-15 mg-md-b-0">
+                          <p class="tx-14 tx-medium mb-0 tx-grey-900">Sanctions-Bulk-Upload-Template (1).xlsx</p>
+                          <label for="" class="tx-12 mb-0 tx-grey-600 tx-medium">Fri, May 14, 2021  1:30 PM</label>
+                        </div>
+                        <div class="col-md-3 col-3 mg-b-15 mg-md-b-0">
+                          <span class="badge badge-blue tx-11 tx-semibold float-right">PROCESSING</span>
+                        </div> 
+                      </div>
+                      
+                      <div class="row bd-b pd-y-10">
+                        <div class="col-md-9 col-9 mg-b-15 mg-md-b-0">
+                          <p class="tx-14 tx-medium mb-0 tx-grey-900">Sanctions-Bulk-Upload-ella5.xlsx</p>
+                          <label for="" class="tx-12 mb-0 tx-grey-600 tx-medium">Mon, Apr 28, 2021 4:13 PM</label>
+                        </div>
+                        <div class="col-md-3 col-3 mg-b-15 mg-md-b-0">
+                          <span class="badge badge-green tx-11 tx-semibold float-right">COMPLETED</span>
+                        </div>
+                      </div>
+                      
+                      <div class="row bd-b pd-y-10">
+                        <div class="col-md-9 col-9 mg-b-15 mg-md-b-0">
+                          <p class="tx-14 tx-medium mb-0 tx-grey-900">Sanction Template New Sample.xlsx</p>
+                          <label for="" class="tx-12 mb-0 tx-grey-600 tx-medium">Mon Apr 23, 2021 1:13 PM <button class="btn tx-primary py-0 tx-semibold pd-x-10">View Log</button></label>
+                        </div>
+                        <div class="col-md-3 col-3 mg-b-15 mg-md-b-0">
+                          <span class="badge bg-red-50 tx-red-500 tx-11 tx-semibold float-right">FAILED</span>
+                        </div> 
+                      </div>
                     </div>
                   </div>
-                </div> 
-              </div>
-              <div class="row bd-b pd-y-10">
-                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
-                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Approved on</p>
                 </div>
-                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
-                  <p class="tx-12 mb-0">Fri Feb 26, 2021</p>
-                </div> 
+               
               </div>
-              <div class="row bd-b pd-y-10">
-                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
-                  <p class="tx-12 tx-grey-500 mb-0 tx-medium pd-t-5">Approved by</p>
-                </div>
-                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
-                  <div class="d-flex float-right">
-                    <div class="avatar avatar-sm mg-r-10 wd-25 ht-25 "><img src="../../assets/img/staff.png" class="rounded-circle " alt=""></div>
-                    <div>
-                      <p class="tx-12 mb-0 pd-t-5">Adams Ifeanyi</p>
-                    </div>
-                  </div>
-                </div> 
-              </div>
+              
             </div>
           </div>
-        </div>
+    
+         
+            <!--Download Excel Modal -->
+            <div class="modal fade" id="excelModal" tabindex="-1" aria-labelledby="excelModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                    <div>
+                      <p class="tx-22 tx-semibold modal-title" id="excelModalLabel">How to use the Template</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> 
+    
+                  <div class="modal-body pd-md-x-30 pd-x-20">
+                    <img src="../../assets/img/excel.png" alt="" srcset="" class="img-fluid">
+                   <ol class="mg-t-25 pd-l-15 tx-grey-900">
+                     <li>Download the Template.</li>
+                     <li>Enter employee IDs in the specified column.</li>
+                     <li>Enter Sanctions Category. Eg: Fixed Suspension, indefinite suspension, etc.</li>
+                     <li>Enter approved duration in working days. Eg: 5 to mean 5 working days.</li>
+                     <li>Upload filled document in xls or csv in the space provided to upload involved employees data.</li>
+                   </ol>
+                   <button type="button" class="btn tx-primary tx-semibold tx-12 pd-0" >  Download Excel Template</button>
+    
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
 
-       
-
-           <!--Issue Sanction Modal -->
+                  <!--Issue Sanction Modal -->
            <div class="modal fade" id="issueModal" tabindex="-1" aria-labelledby="issueModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
               <div class="modal-content">
@@ -321,6 +423,18 @@
                   </button>
                 </div> 
                 <div class="modal-body pd-md-x-30 pd-x-20">
+                  <div class="card bg-grey-200 mg-b-20">
+                    <div class="card-body pd-15">
+                      <div class="d-flex">
+                        <div class="avatar avatar mg-t-2"><img src="../../assets/img/team2.png" class="rounded-circle" alt=""></div>
+                        <div class="mg-l-10">
+                          <p class="mb-0">                
+                            <span class="tx-16">Bayo Adeosun<span class="tx-12 tx-secondary">(A29118)</span></span></p>
+                          <p class="tx-12 tx-secondary mb-0">Team Member, Card Services</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <form action="">
                     <div class="form-group">
                       <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Sanction Type</label>
@@ -404,13 +518,13 @@
                 </div>
                 <div class="modal-footer bg-modal-footer">
                   <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary btn-sm pd-x-50 tx-semibold" data-toggle="modal" data-target="#successModal"data-dismiss="modal" > Issue Sanction</button>
+                  <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal"data-dismiss="modal" >Save Added Sanction</button>
                 </div>
               </div>
             </div>
           </div>
 
-          <!--confirm Redirect Request Modal -->
+          <!--success Modal -->
           <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
@@ -426,11 +540,11 @@
                       <img src="../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
                     </div>
                     <div class="mg-l-5">
-                      <p class="tx-22 tx-bold mb-0 pd-t-20">Sanction issued successfully</p>
+                      <p class="tx-22 tx-bold mb-0 pd-t-20">Sanction has been effected</p>
                     </div>
                   </div>
                   <hr class="mg-t-10"/>
-                  <p class="tx-14">Notifications has been sent to selected stakeholders.  </p>
+                  <p class="tx-14">Notifications has been sent to selected stakeholders </p>
                 </div>
                 <div class="modal-footer bg-modal-footer">
                   <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
@@ -438,9 +552,40 @@
               </div>
             </div>
           </div>
-      
-         
+     
+            
+             <!--Bulk  Modal -->
+             <div class="modal fade" id="bulkModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header pd-y-10 bd-b-0">
+                    <h5 class="modal-title"></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="d-flex">
+                      <div>
+                        <img src="../../assets/img/icon/Loading.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
+                      </div>
+                      <div class="mg-l-10">
+                        <p class="tx-22 tx-bold mb-0 pd-t-20">Bulk Upload Processing</p>
+                      </div>
+                    </div>
+                    <hr class="mg-t-10"/>
+                    <p class="tx-14 mb-4">Check status update in the previous bulk upload listing.  </p>
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+  
         </div>
+  
       </div>
     </div>
 
@@ -452,6 +597,7 @@
     <script src="../../assets/js/dashforge.js"></script>
     <script src="../../assets/js/dashforge.aside.js"></script>
     <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/js/dashforge.settings.js"></script>
     <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
     <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
@@ -485,6 +631,14 @@
      });
    });
 
+     $('#employee,#employe').select2({
+       width: '100%' ,
+     });
+     $(".custom-file-input").on("change", function() {
+     var fileName = $(this).val().split("\\").pop();
+     $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+   });
+
    const quill = new Quill('#editor-container,#editor-containerr', {
         modules: {
     toolbar: [
@@ -507,8 +661,6 @@
   placeholder: "Write your summary",
   theme: 'snow'
       });
- });
-
  
       
 //select option toggle
@@ -521,34 +673,10 @@ $("#sanctionType").change(function(){
     theDiv.siblings('[class^=is]').slideUp();
 });
 
-</script>
-<script>
-  $(document).ready(function() {
-     $('#employe').select2({
-       width: '100%' ,
-       dropdownParent: $("#issueModal")
-     });
-     $('#redirect-panel').select2({
-       width: '100%' ,
-       dropdownParent: $("#redirectModal")
-     });
-     $('[data-toggle="tooltip"]').tooltip();
  });
 </script>
-<script>
-  const goBack = () => {
-       window.history.back();
-     }
-     const meetingLink = () => {
-    let copyText = document.getElementById("teamsLink");
-    let textArea = document.createElement("textarea");
-      textArea.value = copyText.textContent;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand("Copy");
-      textArea.remove();
-    alert("Copied the text: " + copyText.innerHTML);
-     }
+
+      });
 </script>
 
   </body>
