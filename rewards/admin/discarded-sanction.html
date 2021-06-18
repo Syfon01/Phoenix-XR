@@ -171,173 +171,194 @@
       
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
-          <p class="tx-28 tx-bold">Sanction Requests</p>
-
-          <ul class="nav nav-line" id="myTab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active pd-x-20" id="home-tab" data-toggle="tab" href="#rec-home" role="tab" aria-controls="home" aria-selected="true">Requiring Attention</a>
-            </li>
-            
-          </ul>   
-          <div class="tab-content  bd-t-0 pd-y-20" id="myTabContent">
-            <div class="tab-pane fade show active" id="rec-home" role="tabpanel" aria-labelledby="home-tab">
-            <p class="tx-14 tx-gray mg-b-25">Requests from DC escalations, investigation team, managers are sent here for you to review. Click to review and take action.</p>
-
-              <div class="table-section">
-                <div class="card">
-                  <div class="card-header pd-x-15 pd-y-10">
-                    <div class="row justify-content-between">
-                      <div class="col-md-6 col-12 col-lg-6 ">
-                        <p class="tx-14 mb-0 tx-medium pd-t-10">
-                          All Submitted Requests
-                        </p>
+          <p class="tx-28 tx-bold">Discarded Sanctions</p>
+          <p class="tx-14 tx-gray mg-b-0">Here are sanctions that have been cancelled for one reason or the other.</p>
+          <hr class="mg-t-15">
+          <div class="table-section mg-t-25">
+            <div class="card">
+              <div class="card-header pd-x-15 pd-y-10">
+                <div class="row justify-content-between">
+                  <div class="col-md-6 col-12 col-lg-6 ">
+                    <p class="tx-14 mb-0 tx-semibold pd-t-10">
+                      All Discarded Sanctions (343)
+                    </p>
+                  </div>
+                  <div class="col-md-5 col-12">
+                    <div class="d-flex float-md-right">
+                      <div class="mg-r-15 mg-t-5">
+                        <button class="btn pd-0 mb-0">
+                          <span>
+                            <img src="../../assets/img/icon/filter_b.svg" alt="" srcset="">
+                              Filter
+                          </span>
+                        </button>
                       </div>
-                      <div class="col-md-5 col-12">
-                        <div class="d-flex float-md-right">
-                          <div class="mg-r-15 mg-t-5">
-                            <button class="btn pd-0 mb-0">
-                              <span>
-                                <img src="../../assets/img/icon/filter_b.svg" alt="" srcset="">
-                                  Filter
-                              </span>
-                            </button>
-                          </div>
-    
-                          <div class="search-form">
-                            <input type="search" class="form-control" placeholder="Search">
-                            <button class="btn" type="button"><i data-feather="search"></i></button>
-                          </div>
-                        </div>
-                        
+
+                      <div class="search-form">
+                        <input type="search" class="form-control" placeholder="Search">
+                        <button class="btn" type="button"><i data-feather="search"></i></button>
                       </div>
                     </div>
-                  </div>
-                  <div class="card-body pd-10">
-                    <table class="table display">
-                      <thead>
-                        <tr class="tx-uppercase tx-12 tx-semibold">
-                          <th>S/N</th>
-                          <th>TITLE</th>
-                          <th>EMPLOYEE</th>
-                          <th>REQUESTED SANCTION</th>
-                          <th>SOURCE</th>
-                          <th>DATE REQUESTED</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>
-                            <p class=" tx-medium tx-12 mb-0" style="width: 220px;">Breach of cash movement policy</p>
-                          </td>
-                          <td>
-                            <div class="d-flex">
-                              <div class="avatar avatar-sm mg-r-10 "><img src="../../assets/img/admin.png" class="rounded-circle " alt=""></div>
-                              <div>
-                                <p class="tx-12 mb-0">Alex Masawe</p>
-                                  <label for="" class="tx-12 mb-0 tx-grey-500"> A23902</label>
-                              </div>
-                            </div>
-                          </td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5">Caution Letter</p></td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5">HODC</p></td>
-                          <td>
-                            <div>
-                              <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                            </div>
-                          </td>
-                          <td>   
-                            <a href="./review_sanction.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button">Review</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>
-                            <p class=" tx-medium tx-12 mb-0" style="width: 220px;">Failure to move excess cash to CMC</p>
-                          </td>
-                          <td>
-                            <div class="d-flex">
-                              <div class="avatar avatar-sm mg-r-10 "><img src="../../assets/img/birthday1.png" class="rounded-circle " alt=""></div>
-                              <div>
-                                <p class="tx-12 mb-0">Blessing Adewole</p>
-                                  <label for="" class="tx-12 mb-0 tx-grey-500"> A23902</label>
-                              </div>
-                            </div>
-                          </td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5">Letter of Dsipleasure</p></td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5">Investigation Team</p></td>
-                          <td>
-                            <div>
-                              <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                            </div>
-                          </td>
-                          <td>   
-                            <a href="./review_sanction.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button">Review</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>
-                            <p class=" tx-medium tx-12 mb-0" style="width: 220px;">Alleged failure of integrity test.</p>
-                          </td>
-                          <td>
-                            <div class="d-flex">
-                              <div class="avatar avatar-sm mg-r-10 "><img src="../../assets/img/birthday2.png" class="rounded-circle " alt=""></div>
-                              <div>
-                                <p class="tx-12 mb-0">Gowon Musa</p>
-                                  <label for="" class="tx-12 mb-0 tx-grey-500"> A23902</label>
-                              </div>
-                            </div>
-                          </td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5">Caution Letter</p></td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5">Manager</p></td>
-                          <td>
-                            <div>
-                              <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
-                            </div>
-                          </td>
-                          <td>   
-                            <a href="./review_sanction.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button">Review</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">4</th>
-                          <td>
-                            <p class=" tx-medium tx-12 mb-0" style="width: 220px;">Misrepresentation of Information</p>
-                          </td>
-                          <td>
-                            <div class="d-flex">
-                              <div class="avatar avatar-sm mg-r-10 "><img src="../../assets/img/staff.png" class="rounded-circle " alt=""></div>
-                              <div>
-                                <p class="tx-12 mb-0">Funke Hussien</p>
-                                  <label for="" class="tx-12 mb-0 tx-grey-500"> A23902</label>
-                              </div>
-                            </div>
-                          </td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5">Fixed Suspension</p></td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5">North Bank RBDC</p></td>
-                          <td>
-                            <div>
-                              <p class="tx-12 mb-0">Feb. 5, 2021</p>
-                                <label for="" class="tx-12 mb-0 tx-grey-500">  11:44pm</label>
-                            </div>
-                          </td>
-                          <td>   
-                            <a href="./review_sanction.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button">Review</a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    
                   </div>
                 </div>
               </div>
+              <div class="card-body pd-10">
+                <table class="table display">
+                  <thead>
+                    <tr class="tx-uppercase tx-12 tx-semibold">
+                      <th>S/N</th>
+                      <th>TITLE</th>
+                      <th>EMPLOYEE</th>
+                      <th>TYPE</th>
+                      <th>SOURCE</th>
+                      <th>DISCARDED BY</th>
+                      <th>DATE DISCARDED</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>
+                        <p class=" tx-medium tx-12 mb-0" style="width: 220px;">Breach of cash movement policy</p>
+                      </td>
+                      <td>
+                        <div class="d-flex">
+                          <div class="avatar avatar-sm mg-r-6 "><img src="../../assets/img/admin.png" class="rounded-circle " alt=""></div>
+                          <div>
+                            <p class="tx-12 mb-0">Alex Masawe</p>
+                              <label for="" class="tx-12 mb-0 tx-grey-500"> A23902</label>
+                          </div>
+                        </div>
+                      </td>
+                      <td class=""><p class="tx-12 mb-0 pd-t-5">Caution Letter</p></td>
+                      <td class=""><p class="tx-12 mb-0 pd-t-5">HODC</p></td>
+                      <td>
+                        <div class="d-flex">
+                          <div class="avatar avatar-sm mg-r-6 "><img src="../../assets/img/activity3.png" class="rounded-circle " alt=""></div>
+                          <div>
+                            <p class="tx-12 mb-0 pd-t-10">Alex Masawe</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                        </div>
+                      </td>
+                      <td>   
+                        <a href="./view-discarded.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button">View</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>
+                        <p class=" tx-medium tx-12 mb-0" style="width: 220px;">Failure to move excess cash to CMC</p>
+                      </td>
+                      <td>
+                        <div class="d-flex">
+                          <div class="avatar avatar-sm mg-r-6 "><img src="../../assets/img/birthday1.png" class="rounded-circle " alt=""></div>
+                          <div>
+                            <p class="tx-12 mb-0">Blessing Adewole</p>
+                              <label for="" class="tx-12 mb-0 tx-grey-500"> A23902</label>
+                          </div>
+                        </div>
+                      </td>
+                      <td class=""><p class="tx-12 mb-0 pd-t-5">Letter of Dsipleasure</p></td>
+                      <td class=""><p class="tx-12 mb-0 pd-t-5">Investigation Team</p></td>
+                      <td>
+                        <div class="d-flex">
+                          <div class="avatar avatar-sm mg-r-6 "><img src="../../assets/img/staff.png" class="rounded-circle " alt=""></div>
+                          <div>
+                            <p class="tx-12 mb-0 pd-t-10">Alex Masawe</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                        </div>
+                      </td>
+                      <td>   
+                        <a href="./view-discarded.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button">View</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>
+                        <p class=" tx-medium tx-12 mb-0" style="width: 220px;">Alleged failure of integrity test.</p>
+                      </td>
+                      <td>
+                        <div class="d-flex">
+                          <div class="avatar avatar-sm mg-r-6 "><img src="../../assets/img/birthday2.png" class="rounded-circle " alt=""></div>
+                          <div>
+                            <p class="tx-12 mb-0">Gowon Musa</p>
+                              <label for="" class="tx-12 mb-0 tx-grey-500"> A23902</label>
+                          </div>
+                        </div>
+                      </td>
+                      <td class=""><p class="tx-12 mb-0 pd-t-5">Caution Letter</p></td>
+                      <td class=""><p class="tx-12 mb-0 pd-t-5">Manager</p></td>
+                      <td>
+                        <div class="d-flex">
+                          <div class="avatar avatar-sm mg-r-6 "><img src="../../assets/img/activity1.png" class="rounded-circle " alt=""></div>
+                          <div>
+                            <p class="tx-12 mb-0 pd-t-10">Alex Masawe</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <p class="tx-12 mb-0">Mar 4, 2021</p>
+                            <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                        </div>
+                      </td>
+                      <td>   
+                        <a href="./view-discarded.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button">View</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>
+                        <p class=" tx-medium tx-12 mb-0" style="width: 220px;">Misrepresentation of Information</p>
+                      </td>
+                      <td>
+                        <div class="d-flex">
+                          <div class="avatar avatar-sm mg-r-6 "><img src="../../assets/img/staff.png" class="rounded-circle " alt=""></div>
+                          <div>
+                            <p class="tx-12 mb-0">Funke Hussien</p>
+                              <label for="" class="tx-12 mb-0 tx-grey-500"> A23902</label>
+                          </div>
+                        </div>
+                      </td>
+                      <td class=""><p class="tx-12 mb-0 pd-t-5">Fixed Suspension</p></td>
+                      <td class=""><p class="tx-12 mb-0 pd-t-5">North Bank RBDC</p></td>
+                      <td>
+                        <div class="d-flex">
+                          <div class="avatar avatar-sm mg-r-6 "><img src="../../assets/img/birthday1.png" class="rounded-circle " alt=""></div>
+                          <div>
+                            <p class="tx-12 mb-0 pd-t-10">Alex Masawe</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div>
+                          <p class="tx-12 mb-0">Feb. 5, 2021</p>
+                            <label for="" class="tx-12 mb-0 tx-grey-500">  11:44pm</label>
+                        </div>
+                      </td>
+                      <td>   
+                        <a href="./view-discarded.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button">View</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
-         
         </div>
       </div>
     </div>
