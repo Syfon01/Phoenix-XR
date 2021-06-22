@@ -75,14 +75,12 @@
           <li class="nav-item with-sub tx-14">
             <a href="" class="nav-link"><img src="../../assets/img/icon/dc.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Disciplinary Committee</span></a>
             <ul>  
-             
               <li><a href="./dc-requests.html" >DC Request</a></li>
               <li><a href="./dc-sittings.html">DC Sittings</a></li>
               <li><a href="./dc-panel.html">DC Panel Members</a></li>
-
             </ul>
           </li>
-          <li class="nav-item active show with-sub tx-14">
+          <li class="nav-item with-sub tx-14">
             <a href="" class="nav-link"><img src="../../assets/img/icon/sanction.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Sanction</span></a>
             <ul>  
               <li><a href="./sanction-requests.html">Sanction Requests</a></li>
@@ -90,14 +88,11 @@
               <li><a href="./discarded-sanction.html">Discarded Sanctions</a></li>
             </ul>
           </li>
-          <li class="nav-item with-sub tx-14">
+          <li class="nav-item with-sub active show tx-14">
             <a href="" class="nav-link"><img src="../../assets/img/icon/recognitiom.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Recognition</span></a>
             <ul>  
-             
               <li><a href="./recognition-requests.html">Recognition Requests</a></li>
-              <li><a href="./active-recognition.html">Active Recognition</li>
-              <li><a href="./dc-panel.html">DC Panel Members</a></li>
-
+              <li class="active"><a href="./issued-recognition.html">Issued Recognition</li>
             </ul>
           </li>
           <li class="nav-item with-sub tx-14">
@@ -161,8 +156,8 @@
         <div class="d-flex justify-content-between w-100">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
-              <li class="breadcrumb-item"><a href="./index.html">Sanctions</a></li>
-              <li class="breadcrumb-item breadcrumb-size pb-0 active text-capitalize tx-gray-500 " aria-current="page">Issued New Sanction</li>
+              <li class="breadcrumb-item"><a href="./index.html">Recognition</a></li>
+              <li class="breadcrumb-item breadcrumb-size pb-0 active text-capitalize tx-gray-500 " aria-current="page">Issue New Recognition</li>
 
             </ol>
           </nav>
@@ -175,8 +170,7 @@
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
           <button onclick="goBack()" class="btn btn-back tx-14 tx-semibold pd-l-0 pd-y-0"><i data-feather="arrow-left"></i> Go Back</button>
-          <p class="tx-32 tx-bold mb-0">Issue New Sanction</p>
-          <p class="tx-grey-500">This process issues selected sanctions against to affected employee(s). </p>
+          <p class="tx-32 tx-bold mb-0">Issue New Recognition</p>
         
           <div>
             <ul class="nav nav-line" id="myTab" role="tablist">
@@ -196,7 +190,7 @@
                     <form>
                       <div class="row">
                         <div class="col-lg-3 col-12  mg-md-t-0">
-                          <p class="tx-24 mb-0">Sanction Details</p>
+                          <p class="tx-24 mb-0">Recognition Details</p>
                         </div>
                         <div class="col-lg-9 col-12 mg-t-20 mg-md-t-0">
                             <div class="form-group">
@@ -238,7 +232,7 @@
                                 </select>
                                 <p class="mb-0 tx-14 d-flex justify-content-between mg-t-10">
                                   <span class="tx-grey-900 tx-semibold">Fixed Suspension (5 days)</span>
-                                  <button class=" btn tx-primary tx-12 tx-semibold d-block pd-y-0" type="button" data-toggle="modal" data-target="#issueModal">EDIT</button>
+                                  <button class=" btn tx-primary tx-12 tx-semibold d-block pd-y-0" type="button" data-toggle="modal" data-target="#edit-sanction-Modal">EDIT</button>
                                </p>
                               </div>
                               
@@ -256,7 +250,7 @@
                                 </select>
                                 <p class="mb-0 tx-14 d-flex justify-content-between mg-t-10">
                                   <span class="tx-grey-500 "><em>No Sanction Added yet</em></span>
-                                  <button class="btn tx-primary tx-12 tx-semibold d-block pd-y-0" data-toggle="modal" type="button" data-target="#issueModal" disabled>ADD SANCTION TYPE</button> 
+                                  <button class="btn tx-primary tx-12 tx-semibold d-block pd-y-0" data-toggle="modal" type="button" data-target="#add-sanction-Modal" disabled>ADD SANCTION TYPE</button> 
                                </p>
                               </div>
                               
@@ -273,7 +267,7 @@
                 </div>
                 <div class="modal-footer bd-t-0 mg-t-30 pd-x-0">
                   <button type="button" class="btn btn-outlined-primary tx-semibold">Clear Contents</button>
-                  <button type="button" class="btn btn-primary pd-x-40 tx-semibold" data-toggle="modal" data-target="#issueModal" data-dismiss="modal">Issue Sanction</button>
+                  <button type="button" class="btn btn-primary pd-x-40 tx-semibold" data-toggle="modal" data-target="#issueModal" data-dismiss="modal">Issue Recogition</button>
                 </div>
                 
               </div>
@@ -282,7 +276,7 @@
                   <div class="col-md-7 col-12">
                     <div class="card">
                       <div class="card-body pd-md-30 pd-20">
-                        <p class="tx-12 tx-semibold mg-b-15 tx-uppercase">Sanction multiple employees at the same time using the excel format.</p>
+                        <p class="tx-12 tx-semibold mg-b-15 tx-uppercase">RECOGNISE multiple employees at the same time using the excel format.</p>
       
                         <div class="card card-body pd-20 bg-light-blue mg-b-20">
                           <div class="d-flex">
@@ -329,7 +323,7 @@
                             </div>
                           </div>
                           <div class="modal-footer pd-b-0">
-                            <button class="btn btn-primary pd-x-50 txx-semibold" type="button" data-toggle="modal" data-target="#bulkModal" data-dismiss="modal">Submit</button>
+                            <button class="btn btn-primary pd-x-20 tx-semibold" type="button" data-toggle="modal" data-target="#bulkModal" data-dismiss="modal">Issue Bulk Recognition</button>
                           </div>
                         </form>
                       </div>
@@ -340,7 +334,7 @@
                     <div class="">
                       <div class="row bd-b pd-y-10">
                         <div class="col-md-9 col-9 mg-b-15 mg-md-b-0">
-                          <p class="tx-14 tx-medium mb-0 tx-grey-900">Sanctions-Bulk-Upload-Template (1).xlsx</p>
+                          <p class="tx-14 tx-medium mb-0 tx-grey-900">Recognition-Bulk-Upload-Template (1).xlsx</p>
                           <label for="" class="tx-12 mb-0 tx-grey-600 tx-medium">Fri, May 14, 2021  1:30 PM</label>
                         </div>
                         <div class="col-md-3 col-3 mg-b-15 mg-md-b-0">
@@ -350,7 +344,7 @@
                       
                       <div class="row bd-b pd-y-10">
                         <div class="col-md-9 col-9 mg-b-15 mg-md-b-0">
-                          <p class="tx-14 tx-medium mb-0 tx-grey-900">Sanctions-Bulk-Upload-ella5.xlsx</p>
+                          <p class="tx-14 tx-medium mb-0 tx-grey-900">Recognition-Bulk-Upload-ella5.xlsx</p>
                           <label for="" class="tx-12 mb-0 tx-grey-600 tx-medium">Mon, Apr 28, 2021 4:13 PM</label>
                         </div>
                         <div class="col-md-3 col-3 mg-b-15 mg-md-b-0">
@@ -360,7 +354,7 @@
                       
                       <div class="row bd-b pd-y-10">
                         <div class="col-md-9 col-9 mg-b-15 mg-md-b-0">
-                          <p class="tx-14 tx-medium mb-0 tx-grey-900">Sanction Template New Sample.xlsx</p>
+                          <p class="tx-14 tx-medium mb-0 tx-grey-900">Recognition Template New Sample.xlsx</p>
                           <label for="" class="tx-12 mb-0 tx-grey-600 tx-medium">Mon Apr 23, 2021 1:13 PM <button class="btn tx-primary py-0 tx-semibold pd-x-10">View Log</button></label>
                         </div>
                         <div class="col-md-3 col-3 mg-b-15 mg-md-b-0">
@@ -416,7 +410,7 @@
               <div class="modal-content">
                 <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
                   <div>
-                    <p class="tx-22 tx-semibold modal-title mb-0" id="issueModalLabel">Add Sanction</p>
+                    <p class="tx-22 tx-semibold modal-title mb-0" id="issueModalLabel">Issue Sanction</p>
                   </div>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -439,86 +433,71 @@
                     <div class="form-group">
                       <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Sanction Type</label>
                       <select class="custom-select" id="sanctionType">
-                        <option selected>-Select Sanction Type-</option>
-                        <option value="Caution">Caution Letter</option>
-                        <option value="Fixed">Fixed Suspension</option>
-                        <option value="Caution">Warning Letter</option>
-                        <option value="Caution">Final Warning Letter</option>
-                        <option value="Caution">Letter of Displeasure</option>
-                        <option value="Caution">Credit Recovery Suspension</option>
-                        <option value="Caution">Indefinite Suspesion</option>
-                        <option value="Caution">Query</option>
+                        <option selected>Exemplary Performance</option>
+                        <option value="Caution">Remarkable Stewardship</option>
+                        <option value="Fixed">Exemplary Performance</option>
+                        <option value="Caution">Excellent Service Delivery</option>
+                        <option value="Caution">Exceptional Performance</option>
                       </select>
                     </div>
-                    <div class="isFixed">
-                      <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Start Date</label>
-                          <input class="form-control" type="date" name="" id="">
-                        </div>
-                        <div class="form-group col-md-6">
-                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Suspension Duration (working days)</label>
-                          <input type="text" class="form-control" name="" placeholder="-Enter here-">
-                        </div>
-                      </div>
+                    <div class="">
                     <div class="form-group">
-                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Enter Remarks to the Affected Employee</label>
+                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Remark (body of recognition letter)</label>
                       <div id="toolbar-container">
-                        <div id="editor-container" class="ht-100">  </div>
+                        <div id="editor-container" class="ht-150">  </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="isCaution">
-                  <div class="form-group">
-                    <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Enter Remarks to the Affected Employee</label>
-                    <div id="toolbar-container">
-                      <div id="editor-containerr" class="ht-100">  </div>
-                    </div>
-                  </div>
-                </div>
-                    
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Date to Issue Sanction</label>
-                        <input class="form-control" type="date" name="" id="">
-                      </div>
-                      <div class="form-group col-md-6">
-                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Time to Issue Sanction</label>
-                        <input type="time" class="form-control" name="" id="">
-                      </div>
-                    </div>
+                  </div> 
                     <div class="form-group">
+                      
                       <div class="card card-body bg-gray-50 pd-15">
-                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Who is notified immediately?<span class="tx-grey-600 tx-12">Affected employee will be notified once sanction is executed by the system</span> </label>
-                        <div class="form-group">
-                          <div class="form-row">
-                            <div class="col-md-4 mg-t-10 mg-md-0">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="supervisor" checked>
-                                <label class="custom-control-label tx-grey-900" for="supervisor">1st Level Supervisor</label>
+                        <div class="">
+                          <p class="tx-secondary tx-uppercase mg-b-15 tx-12 tx-medium">MANAGE NOTIFICATION SETTINGS</p>
+                          <label for="formGroupExampleInput" class="d-block tx-bold mg-b-8 tx-medium tx-14 tx-grey-900">Who is notified immediately?</label>
+                          <div class="form-group">
+                            <div class="form-row">
+                              <div class="col-md-6 mg-t-10 mg-md-t-5">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input checked-item" id="staff">
+                                  <label class="custom-control-label tx-grey-900" for="staff">Involved Staff</label>
+                                </div>
                               </div>
-                            </div>
-                            <div class="col-md-4 mg-t-10 mg-md-0">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="hrbp" checked>
-                                <label class="custom-control-label tx-grey-900" for="hrbp">HRBP</label>
+                              <div class="col-md-6 mg-t-10 mg-md-t-5">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input checked-item" id="hrbp">
+                                  <label class="custom-control-label tx-grey-900" for="hrbp">HRBP</label>
+                                </div>
                               </div>
+                              <div class="col-md-6 mg-t-10 mg-md-t-5">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input checked-item" id="1st">
+                                  <label class="custom-control-label tx-grey-900" for="1st">1st Level Supervisor</label>
+                                </div>
+                              </div>
+                              <div class="col-md-6 mg-t-10 mg-md-t-5">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input checked-item" id="2nd">
+                                  <label class="custom-control-label tx-grey-900" for="2nd">2nd Level Supervisor</label>
+                                </div>
+                              </div>
+                              
                             </div>
+    
                           </div>
-  
+                          <div class="form-group mb-2">
+                            <label for="formGroupExampleInput" class="d-block tx-bold mg-b-8 tx-medium tx-14 tx-neutral">Notify Others?</label>
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-12">Email Address</label>
+                             <input class="form-control" type="text" name="" placeholder="- Enter here - ">
+                          </div>
+                          <p class="tx-12 tx-grey-500 mb-0">Separate emails using a comma ( , )</p>
                         </div>
-                        <div class="form-group mb-2">
-                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Other email address to be notified</label>
-                           <input class="form-control" type="text" name="" placeholder="- Enter here - ">
-                        </div>
-                        <p class="tx-12 tx-grey-500 mb-0">Separate emails using a comma ( , )</p>
                       </div>
                     </div>
                   </form>
                 </div>
                 <div class="modal-footer bg-modal-footer">
                   <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal"data-dismiss="modal" >Save Added Sanction</button>
+                  <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal"data-dismiss="modal" >Save Added Recognition</button>
                 </div>
               </div>
             </div>
@@ -540,7 +519,7 @@
                       <img src="../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
                     </div>
                     <div class="mg-l-5">
-                      <p class="tx-22 tx-bold mb-0 pd-t-20">Sanction has been effected</p>
+                      <p class="tx-22 tx-bold mb-0 pd-t-20">Recognition issued successfully</p>
                     </div>
                   </div>
                   <hr class="mg-t-10"/>
