@@ -231,8 +231,8 @@
                                   <option value="4">Olu Pascal</option>
                                 </select>
                                 <p class="mb-0 tx-14 d-flex justify-content-between mg-t-10">
-                                  <span class="tx-grey-900 tx-semibold">Fixed Suspension (5 days)</span>
-                                  <button class=" btn tx-primary tx-12 tx-semibold d-block pd-y-0" type="button" data-toggle="modal" data-target="#edit-sanction-Modal">EDIT</button>
+                                  <span class="tx-grey-900 tx-semibold">Remark Added</span>
+                                  <button class=" btn tx-primary tx-12 tx-semibold d-block pd-y-0" type="button" data-toggle="modal" data-target="#remarkModal">EDIT</button>
                                </p>
                               </div>
                               
@@ -249,8 +249,8 @@
                                   <option value="4">Olu Pascal</option>
                                 </select>
                                 <p class="mb-0 tx-14 d-flex justify-content-between mg-t-10">
-                                  <span class="tx-grey-500 "><em>No Sanction Added yet</em></span>
-                                  <button class="btn tx-primary tx-12 tx-semibold d-block pd-y-0" data-toggle="modal" type="button" data-target="#add-sanction-Modal" disabled>ADD SANCTION TYPE</button> 
+                                  <span class="tx-grey-500 "><em>No remark added yet</em></span>
+                                  <button class="btn tx-primary tx-12 tx-semibold d-block pd-y-0" data-toggle="modal" type="button" data-target="#remarkModal" disabled>ADD REMARK</button> 
                                </p>
                               </div>
                               
@@ -404,104 +404,125 @@
             </div>
     
 
-                  <!--Issue Sanction Modal -->
-           <div class="modal fade" id="issueModal" tabindex="-1" aria-labelledby="issueModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
-                  <div>
-                    <p class="tx-22 tx-semibold modal-title mb-0" id="issueModalLabel">Issue Sanction</p>
-                  </div>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div> 
-                <div class="modal-body pd-md-x-30 pd-x-20">
-                  <div class="card bg-grey-200 mg-b-20">
-                    <div class="card-body pd-15">
-                      <div class="d-flex">
-                        <div class="avatar avatar mg-t-2"><img src="../../assets/img/team2.png" class="rounded-circle" alt=""></div>
-                        <div class="mg-l-10">
-                          <p class="mb-0">                
-                            <span class="tx-16">Bayo Adeosun<span class="tx-12 tx-secondary">(A29118)</span></span></p>
-                          <p class="tx-12 tx-secondary mb-0">Team Member, Card Services</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <form action="">
-                    <div class="form-group">
-                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Sanction Type</label>
-                      <select class="custom-select" id="sanctionType">
-                        <option selected>Exemplary Performance</option>
-                        <option value="Caution">Remarkable Stewardship</option>
-                        <option value="Fixed">Exemplary Performance</option>
-                        <option value="Caution">Excellent Service Delivery</option>
-                        <option value="Caution">Exceptional Performance</option>
-                      </select>
-                    </div>
-                    <div class="">
-                    <div class="form-group">
-                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Remark (body of recognition letter)</label>
-                      <div id="toolbar-container">
-                        <div id="editor-container" class="ht-150">  </div>
-                      </div>
-                    </div>
-                  </div> 
-                    <div class="form-group">
-                      
-                      <div class="card card-body bg-gray-50 pd-15">
-                        <div class="">
-                          <p class="tx-secondary tx-uppercase mg-b-15 tx-12 tx-medium">MANAGE NOTIFICATION SETTINGS</p>
-                          <label for="formGroupExampleInput" class="d-block tx-bold mg-b-8 tx-medium tx-14 tx-grey-900">Who is notified immediately?</label>
-                          <div class="form-group">
-                            <div class="form-row">
-                              <div class="col-md-6 mg-t-10 mg-md-t-5">
-                                <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" class="custom-control-input checked-item" id="staff">
-                                  <label class="custom-control-label tx-grey-900" for="staff">Involved Staff</label>
-                                </div>
-                              </div>
-                              <div class="col-md-6 mg-t-10 mg-md-t-5">
-                                <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" class="custom-control-input checked-item" id="hrbp">
-                                  <label class="custom-control-label tx-grey-900" for="hrbp">HRBP</label>
-                                </div>
-                              </div>
-                              <div class="col-md-6 mg-t-10 mg-md-t-5">
-                                <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" class="custom-control-input checked-item" id="1st">
-                                  <label class="custom-control-label tx-grey-900" for="1st">1st Level Supervisor</label>
-                                </div>
-                              </div>
-                              <div class="col-md-6 mg-t-10 mg-md-t-5">
-                                <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" class="custom-control-input checked-item" id="2nd">
-                                  <label class="custom-control-label tx-grey-900" for="2nd">2nd Level Supervisor</label>
-                                </div>
-                              </div>
-                              
-                            </div>
-    
-                          </div>
-                          <div class="form-group mb-2">
-                            <label for="formGroupExampleInput" class="d-block tx-bold mg-b-8 tx-medium tx-14 tx-neutral">Notify Others?</label>
-                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-12">Email Address</label>
-                             <input class="form-control" type="text" name="" placeholder="- Enter here - ">
-                          </div>
-                          <p class="tx-12 tx-grey-500 mb-0">Separate emails using a comma ( , )</p>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer bg-modal-footer">
-                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal"data-dismiss="modal" >Save Added Recognition</button>
+   <!--Remark Modal -->
+   <div class="modal fade" id="remarkModal" tabindex="-1" aria-labelledby="remarkModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+          <div>
+            <p class="tx-22 tx-semibold modal-title mb-0" id="remarkModalLabel">Add Recognition Remark</p>
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> 
+        <div class="modal-body pd-md-x-30 pd-x-20">
+          <div class="card bg-grey-200 mg-b-20">
+            <div class="card-body pd-15">
+              <div class="d-flex">
+                <div class="avatar avatar mg-t-2"><img src="../../assets/img/team2.png" class="rounded-circle" alt=""></div>
+                <div class="mg-l-10">
+                  <p class="mb-0">                
+                    <span class="tx-16">Bayo Adeosun<span class="tx-12 tx-secondary">(A29118)</span></span></p>
+                  <p class="tx-12 tx-secondary mb-0">Team Member, Card Services</p>
                 </div>
               </div>
             </div>
           </div>
+          <form action="">
+            <div class="form-group">
+              <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Sanction Type</label>
+              <select class="custom-select" id="sanctionType">
+                <option selected>Exemplary Performance</option>
+                <option value="Caution">Remarkable Stewardship</option>
+                <option value="Fixed">Exemplary Performance</option>
+                <option value="Caution">Excellent Service Delivery</option>
+                <option value="Caution">Exceptional Performance</option>
+              </select>
+            </div>
+            <div class="">
+            <div class="form-group">
+              <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Remark (body of recognition letter)</label>
+              <div id="toolbar-container">
+                <div id="editor-container" class="ht-150">  </div>
+              </div>
+            </div>
+          </div>
+
+          </form>
+        </div>
+        <div class="modal-footer bg-modal-footer">
+          <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal"data-dismiss="modal" >Save Added Sanction</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+   <!--Issue Recognition Modal -->
+   <div class="modal fade" id="issueModal" tabindex="-1" aria-labelledby="issueModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+          <div>
+            <p class="tx-22 tx-semibold modal-title mb-0" id="issueModalLabel">Manage Recognition Notification</p>
+            <p class="tx-secondary mb-0">This process issues inputted recognition to staff and notifiies selected stakeholders</p>
+          </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> 
+        <div class="modal-body pd-md-x-30 pd-x-20">
+          <form action="">
+            <div class="form-group">
+              <div class="">
+                <label for="formGroupExampleInput" class="d-block tx-bold mg-b-8 tx-medium tx-14 tx-grey-900">Who receives notification?</label>
+                <div class="form-row mg-b-20">
+                    <div class="col-md-6 mg-t-10 mg-md-t-5">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input checked-item" id="staff" checked>
+                        <label class="custom-control-label tx-grey-900" for="staff">Involved Staff</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mg-t-10 mg-md-t-5">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input checked-item" id="hrbp" checked>
+                        <label class="custom-control-label tx-grey-900" for="hrbp">HRBP</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mg-t-10 mg-md-t-5">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input checked-item" id="1st">
+                        <label class="custom-control-label tx-grey-900" for="1st">1st Level Supervisor</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mg-t-10 mg-md-t-5">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input checked-item" id="2nd">
+                        <label class="custom-control-label tx-grey-900" for="2nd">2nd Level Supervisor</label>
+                      </div>
+                    </div>
+                    
+                  </div>
+
+                </div>
+                <div class="form-group mb-2">
+                  <label for="formGroupExampleInput" class="d-block tx-bold mg-b-8 tx-medium tx-14 tx-neutral">Notify Others?</label>
+                <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-12">Email Address</label>
+                   <input class="form-control" type="text" name="" placeholder="- Enter here - ">
+                </div>
+                <p class="tx-12 tx-grey-500 mb-0">Separate emails using a comma ( , )</p>
+              </div>
+            </div>
+          </form>
+        <div class="modal-footer bg-modal-footer">
+          <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary btn-sm pd-x-30 tx-semibold" data-toggle="modal" data-target="#successModal"data-dismiss="modal" > Issue Recognition</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
           <!--success Modal -->
           <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
