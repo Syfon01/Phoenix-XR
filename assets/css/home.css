@@ -175,3 +175,18 @@ color: #D70900!important;
 .tx-label{
   color:#605E5C;
 }
+.card-height{
+  height: 100%;
+}
+.appraisal-card{
+  background-image: url('../img/Shape.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto;
+}
+.divider-text{
+  color: #4B5563!important;
+}
+.divider-text::before, .divider-text::after{
+  background-color: #D1D5DB!important;
+}

@@ -65,15 +65,16 @@
     <section class="secondary-bg">
       <div class="container py-5">
         <div class="col-lg-11 col-xl-10 col-md-12 col-12 mx-auto mg-t-20 mg-lg-t-50 pd-x-0">
-            <div class="card">
+            <div class="card appraisal-card">
               <div class="card-header pd-y-30 tx-center card-grey">
-                <p class="tx-48 tx-light form-group mg-b-10">Appraisal Data Verification</p>
-                <p class="tx-16 tx-bold">It’s time to verify and validate your UBA Information for the 2021 Appraisal.</p>
+                <p class="tx-40 tx-bold form-group mg-b-10">Appraisal Data Verification</p>
+                <p class="tx-16 tx-medium">It’s time to verify and validate your UBA Information for the 2021 Appraisal.</p>
               </div>
               <div class="card-body pd-lg-x-80 pd-md-x-40  pd-md-y-40 pd-x-20">
                 <div class="row">
                   <div class="col-md-7 col-12">
-                    <p class="tx-14 tx-bold mg-b-20">Hi Tunde,</p>
+                    <div class="card card-height bd-0">
+                      <p class="tx-14 tx-bold mg-b-20">Hi Tunde,</p>
                     <p class="mg-b-20">We have curated your data as shown below for your to verify and validate.</p>
                     <p class="mg-b-20">If your <span class="tx-bold">ALL</span> the information is correct, proceed by clicking on <span class="tx-green tx-bold">IT’S VALID</span> and submit.</p>
                     <p class="mg-b-20">If <span class="tx-bold">ANY</span> of the information is incorrect, proceed by clicking on <span class="tx-danger tx-bold">NEEDS AN UPDATE </span>to suggest the change.</p>
@@ -82,41 +83,42 @@
                       Please kindly consider this desktop view 
                     ============================================= -->
                     <div class="d-none d-md-block d-lg-block d-xl-block">
-                      <div class="card card-body pd-x-15 pd-y-20 mg-t-30">
+                      <div class="card card-body pd-x-15 pd-y-20 mg-t-20">
                         <p class="tx-semibold mb-0">Before you choose any of the option ensure to confirm your information. You will be responsible for any of the option selected.</p>
-                        <div class="mg-t-20">
+                        <div class="mg-t-15">
                           <button class="btn bg-green pd-lg-x-30 pd-y-4 mg-lg-r-20 wd-100p wd-md-40p tx-white tx-semibold" data-toggle="modal" data-target="#successModal">IT’S VALID</button>
                           <button class="btn btn-primary pd-lg-x-20 pd-y-4 wd-100p wd-lg-50p wd-md-55p mg-t-10 mg-md-t-0" data-toggle="modal" data-target="#updateModal">NEEDS AN UPDATE</button>
                         </div>
                       </div>
                     </div>
-                   
+                    </div>
                   </div>
                   <div class="col-md-5 col-12 mg-t-20 mg-md-t-0">
-                    <div class="card card-body card-grey pd-md-25 pd-20">
-                      <div class="form-group mg-b-10">
-                        <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Department</label>
+                    <div class="card card-body card-grey pd-md-25 pd-20 card-height">
+                      <div class="divider-text tx-12 tx-semibold">Your UBA Information</div>
+                      <div class="mg-b-15">
+                        <label for="" class="tx-label tx-uppercase mb-0 tx-11 tx-semibold">Department</label>
                         <p class="mb-0 tx-bold">CIO Group</p>
                       </div>
-                      <div class="form-group mg-b-10">
-                        <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">MIS CODE</label>
+                      <div class="mg-b-15">
+                        <label for="" class="tx-label tx-uppercase mb-0 tx-11 tx-semibold">MIS CODE</label>
                         <p class="mb-0 tx-bold">21312</p>
                       </div>
-                      <div class="form-group mg-b-10">
-                        <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Grade</label>
+                      <div class="mg-b-15">
+                        <label for="" class="tx-label tx-uppercase mb-0 tx-11 tx-semibold">Grade</label>
                         <p class="mb-0 tx-bold">Assistant General Manager</p>
                       </div>
-                      <div class="form-group mg-b-10">
-                        <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Job Role</label>
+                      <div class="mg-b-15">
+                        <label for="" class="tx-label tx-uppercase mb-0 tx-11 tx-semibold">Job Role</label>
                         <p class="mb-0 tx-bold">Team Member, Network Operations Nigeria
                         </p>
                       </div>
-                      <div class="form-group mg-b-10">
-                        <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Supervisor</label>
+                      <div class="mg-b-15">
+                        <label for="" class="tx-label tx-uppercase mb-0 tx-11 tx-semibold">Supervisor</label>
                         <p class="mb-0 tx-bold">Olugbenga Orunto</p>
                       </div>
-                      <div class="mg-b-5">
-                        <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Country</label>
+                      <div class="">
+                        <label for="" class="tx-label tx-uppercase mb-0 tx-11 tx-semibold">Country</label>
                         <p class="mb-0 tx-bold">Nigeria</p>
                       </div>
                     </div>
@@ -156,28 +158,28 @@
               <p>Kindly Update the affected fields with the correct information</p>
               <form action="">
                 <div class="form-group mg-b-10">
-                  <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Department</label>
+                  <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Department</label>
                   <input type="text" class="form-control" placeholder="CIO Group">
                 </div>
                 <div class="form-group mg-b-10">
-                  <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">MIS CODE</label>
+                  <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">MIS CODE</label>
                   <input type="text" class="form-control" placeholder="21312">
                 </div>
                 <div class="form-group mg-b-10">
-                  <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Grade</label>
+                  <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Grade</label>
                   <input type="text" class="form-control" placeholder="Assistant General Manager">
                 </div>
                 <div class="form-group mg-b-10">
-                  <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Job Role</label>
+                  <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Job Role</label>
                   <input type="text" class="form-control" placeholder="Team Member, Network Operations Nigeria">
                   </p>
                 </div>
                 <div class="form-group mg-b-10">
-                  <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Supervisor</label>
+                  <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Supervisor</label>
                   <input type="text" class="form-control" placeholder="Olugbenga Orunto">
                 </div>
                 <div class="">
-                  <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Country</label>
+                  <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Country</label>
                   <input type="text" class="form-control" placeholder="Nigeria">
                 </div>
               </form>
@@ -206,7 +208,7 @@
     </section>
     <section class="footer tx-white">
       <div class="container">
-        <p class="tx-14 mb-0 text-capitalize">&copy; 2020 UBA Group. All Rights Reserved.</p>
+        <p class="tx-14 mb-0 text-capitalize tx-white">&copy; 2020 UBA Group. All Rights Reserved.</p>
       </div>
     </section>
   
@@ -216,9 +218,6 @@
     <script src="./assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="./assets/js/dashforge.js"></script>
     <script src="./assets/lib/js-cookie/js.cookie.js"></script>
-    <script src="./assets/js/dashforge.settings.js"></script>
-    <script src="./assets/js/drop.js"></script>
-    <script src="./assets/js/dropzone.js"></script>
     <script>
       $('[data-toggle="tooltip"]').tooltip();
     </script>
