@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>HR Automation</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="./assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="./assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/dashforge.css">
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+  </head>
+  <body class="">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white bd navbar-header-fixed pd-y-0">
+          <div class="container">
+            <button class="navbar-toggler order-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <i data-feather="menu" class="wd-20 ht-20"></i>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active pb-1 pd-x-10">
+                  <a class="nav-link header-link" href="/staff/home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item pd-x-20">
+                  <a class="nav-link header-link dropdown-toggle" href="#" data-toggle="dropdown" >Self Service</a>
+                    <div class="dropdown-menu dropdown-menuu tx-13">
+                      <a href="" class="dropdown-item">Covid-19 Help Desk</a>
+                      <a href="" class="dropdown-item">Work Ethics</a>
+                      <a href="" class="dropdown-item">Leave Application</a>
+                      <a href="" class="dropdown-item">Exit</a>
+                    </div>
+                </li>
+                <li class="nav-item pd-x-20">
+                  <a class="nav-link header-link" href="#">Manage Profile</a>
+                </li>
+              </ul>
+
+              <ul class="navbar-nav ml-auto mr-5">
+                <a href="http://" class="btn btn-sm btn-outline tx-bold pd-y-2"><i data-feather="power" class="mr-2"></i>Sign out</a>
+              </ul>
+          </div>
+              
+              <a class="navbar-brand navbar-right tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/home.html"><img src="./assets/img/logo.png" class="img-fluid"/></a>
+              
+        </nav>    
+    </header>  
+    <section class="secondary-bg">
+      <div class="container py-5">
+        <div class="col-lg-11 col-xl-10 col-md-12 col-12 mx-auto mg-t-20 mg-lg-t-50 pd-x-0">
+            <div class="card">
+              <div class="card-header pd-y-30 tx-center card-grey">
+                <p class="tx-48 tx-light form-group mg-b-10">Appraisal Data Verification</p>
+                <p class="tx-16 tx-bold">It’s time to verify and validate your UBA Information for the 2021 Appraisal.</p>
+              </div>
+              <div class="card-body pd-lg-x-80 pd-md-x-40  pd-md-y-40 pd-x-20">
+                <div class="row">
+                  <div class="col-md-7 col-12">
+                    <p class="tx-14 tx-bold mg-b-20">Hi Tunde,</p>
+                    <p class="mg-b-20">We have curated your data as shown below for your to verify and validate.</p>
+                    <p class="mg-b-20">If your <span class="tx-bold">ALL</span> the information is correct, proceed by clicking on <span class="tx-green tx-bold">IT’S VALID</span> and submit.</p>
+                    <p class="mg-b-20">If <span class="tx-bold">ANY</span> of the information is incorrect, proceed by clicking on <span class="tx-danger tx-bold">NEEDS AN UPDATE </span>to suggest the change.</p>
+  
+                    <!--======================================
+                      Please kindly consider this desktop view 
+                    ============================================= -->
+                    <div class="d-none d-md-block d-lg-block d-xl-block">
+                      <div class="card card-body pd-x-15 pd-y-20 mg-t-30">
+                        <p class="tx-semibold mb-0">Before you choose any of the option ensure to confirm your information. You will be responsible for any of the option selected.</p>
+                        <div class="mg-t-20">
+                          <button class="btn bg-green pd-lg-x-30 pd-y-4 mg-lg-r-20 wd-100p wd-md-40p tx-white tx-semibold" data-toggle="modal" data-target="#successModal">IT’S VALID</button>
+                          <button class="btn btn-primary pd-lg-x-20 pd-y-4 wd-100p wd-lg-50p wd-md-55p mg-t-10 mg-md-t-0" data-toggle="modal" data-target="#updateModal">NEEDS AN UPDATE</button>
+                        </div>
+                      </div>
+                    </div>
+                   
+                  </div>
+                  <div class="col-md-5 col-12 mg-t-20 mg-md-t-0">
+                    <div class="card card-body card-grey pd-md-25 pd-20">
+                      <div class="form-group mg-b-10">
+                        <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Department</label>
+                        <p class="mb-0 tx-bold">CIO Group</p>
+                      </div>
+                      <div class="form-group mg-b-10">
+                        <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">MIS CODE</label>
+                        <p class="mb-0 tx-bold">21312</p>
+                      </div>
+                      <div class="form-group mg-b-10">
+                        <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Grade</label>
+                        <p class="mb-0 tx-bold">Assistant General Manager</p>
+                      </div>
+                      <div class="form-group mg-b-10">
+                        <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Job Role</label>
+                        <p class="mb-0 tx-bold">Team Member, Network Operations Nigeria
+                        </p>
+                      </div>
+                      <div class="form-group mg-b-10">
+                        <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Supervisor</label>
+                        <p class="mb-0 tx-bold">Olugbenga Orunto</p>
+                      </div>
+                      <div class="mg-b-5">
+                        <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Country</label>
+                        <p class="mb-0 tx-bold">Nigeria</p>
+                      </div>
+                    </div>
+                  </div>  
+                  
+                   <!--======================================
+                      Please kindly consider this mobile view
+                    ============================================= -->
+                    <div class="d-block d-md-none d-lg-none d-xl-none col-12">
+                      <div class="card card-body pd-x-15 pd-y-20 mg-t-30">
+                        <p class="tx-semibold mb-0">Before you choose any of the option ensure to confirm your information. You will be responsible for any of the option selected.</p>
+                        <div class="mg-t-20">
+                          <button class="btn bg-green pd-lg-x-30 pd-y-4 mg-lg-r-20 wd-100p wd-md-40p tx-white tx-semibold" data-toggle="modal" data-target="#successModal">IT’S VALID</button>
+                          <button class="btn btn-primary pd-lg-x-20 pd-y-4 wd-100p wd-lg-50p wd-md-55p mg-t-10 mg-md-t0" data-toggle="modal" data-target="#updateModal">NEEDS AN UPDATE</button>
+                        </div>
+                      </div>
+                    </div>
+                   
+                </div>
+                
+              </div>
+            </div>
+        </div>
+
+
+        <!-- Profile Modal -->
+      <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bd-b-0 card-grey">
+              <p class="tx-22 tx-bold modal-title" id="updateModalLabel">Update Details</p>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Kindly Update the affected fields with the correct information</p>
+              <form action="">
+                <div class="form-group mg-b-10">
+                  <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Department</label>
+                  <input type="text" class="form-control" placeholder="CIO Group">
+                </div>
+                <div class="form-group mg-b-10">
+                  <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">MIS CODE</label>
+                  <input type="text" class="form-control" placeholder="21312">
+                </div>
+                <div class="form-group mg-b-10">
+                  <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Grade</label>
+                  <input type="text" class="form-control" placeholder="Assistant General Manager">
+                </div>
+                <div class="form-group mg-b-10">
+                  <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Job Role</label>
+                  <input type="text" class="form-control" placeholder="Team Member, Network Operations Nigeria">
+                  </p>
+                </div>
+                <div class="form-group mg-b-10">
+                  <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Supervisor</label>
+                  <input type="text" class="form-control" placeholder="Olugbenga Orunto">
+                </div>
+                <div class="">
+                  <label for="" class="tx-label tx-uppercase mb-1 tx-10 tx-semibold">Country</label>
+                  <input type="text" class="form-control" placeholder="Nigeria">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer bg-light-blue">
+              <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary btn-sm pd-x-40" data-toggle="modal" data-target="#successModal" data-dismiss="modal">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>  
+      
+    <!-- Modal -->
+        <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-body tx-center p-5">
+                <img src="./assets/img/icon/Check.svg"  class="wd-100 ht-100" alt="" srcset="">
+                <p class="tx-24 tx-semibold mt-3">Thank you</p>
+                <p class="tx-16">Your feedback has been acknowledged.</p>
+            </div>
+          </div>
+        </div>  
+        </div>       
+      </div>
+    </section>
+    <section class="footer tx-white">
+      <div class="container">
+        <p class="tx-14 mb-0 text-capitalize">&copy; 2020 UBA Group. All Rights Reserved.</p>
+      </div>
+    </section>
+  
+    <script src="./assets/lib/jquery/jquery.min.js"></script>
+    <script src="./assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/lib/feather-icons/feather.min.js"></script>
+    <script src="./assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="./assets/js/dashforge.js"></script>
+    <script src="./assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="./assets/js/dashforge.settings.js"></script>
+    <script src="./assets/js/drop.js"></script>
+    <script src="./assets/js/dropzone.js"></script>
+    <script>
+      $('[data-toggle="tooltip"]').tooltip();
+    </script>
+
+
+  </body>
+</html>

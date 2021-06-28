@@ -138,6 +138,9 @@ body { -webkit-font-smoothing: antialiased; }
   .moody-text{
     font-size: 14px!important;
   }
+  .tx-48{
+    font-size: 42px!important;
+  }
 }
 .link:hover{
 color: #D70900!important;
@@ -155,3 +158,20 @@ color: #D70900!important;
   .link::selection>p{
   color: #D70900!important;
   }
+
+.card-grey{
+  background: #F2F2F2!important;
+}
+.tx-green{
+  color: #459301;
+}
+.bg-green{
+  background: #459301!important;
+}
+.bg-green:hover{
+  background: #2e6101!important;
+  color: #fff!important;
+}
+.tx-label{
+  color:#605E5C;
+}
