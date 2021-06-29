@@ -13,6 +13,7 @@
     <!-- Required External CSS -->
     <link href="./assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="./assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="./assets/lib/select2/css/select2.min.css" rel="stylesheet">
 
     <!-- Page CSS -->
     <link rel="stylesheet" href="./assets/css/custom.css">
@@ -64,7 +65,7 @@
     </header>  
     <section class="secondary-bg">
       <div class="container py-5">
-        <div class="col-lg-11 col-xl-10 col-md-12 col-12 mx-auto mg-t-20 mg-lg-t-50 pd-x-0">
+        <div class="col-lg-11 col-xl-9 col-md-12 col-12 mx-auto mg-t-20 mg-lg-t-50  pd-x-0">
             <div class="card appraisal-card">
               <div class="card-header pd-y-30 tx-center card-grey">
                 <p class="tx-40 tx-bold form-group mg-b-10">Appraisal Data Verification</p>
@@ -72,28 +73,28 @@
               </div>
               <div class="card-body pd-lg-x-80 pd-md-x-40  pd-md-y-40 pd-x-20">
                 <div class="row">
-                  <div class="col-md-7 col-12">
+                  <div class="col-md-6 col-12">
                     <div class="card card-height bd-0">
                       <p class="tx-16 tx-bold mg-b-20">Hi Tunde,</p>
-                    <p class="mg-b-20">We have curated your data as shown below for your to verify and validate.</p>
-                    <p class="mg-b-20">If <span class="tx-bold">ALL</span> the information is correct, proceed by clicking on <span class="tx-green tx-bold">IT’S VALID</span> and submit.</p>
-                    <p class="mg-b-20">If <span class="tx-bold">ANY</span> of the information is incorrect, proceed by clicking on <span class="tx-danger tx-bold">NEEDS AN UPDATE </span>to suggest the change.</p>
+                    <p class="mg-b-20 tx-14">We have curated your data as shown below for your to verify and validate.</p>
+                    <p class="mg-b-20 tx-14">If <span class="tx-bold">ALL</span> the information is correct, proceed by clicking on <span class="tx-green tx-bold">IT’S VALID</span> and submit.</p>
+                    <p class="mg-b-20 tx-14">If <span class="tx-bold">ANY</span> of the information is incorrect, proceed by clicking on <span class="tx-danger tx-bold">NEEDS AN UPDATE </span>to suggest the change.</p>
   
                     <!--======================================
                       Please kindly consider this desktop view 
                     ============================================= -->
                     <div class="d-none d-md-block d-lg-block d-xl-block">
                       <div class="card card-body pd-x-15 pd-y-20 mg-t-20">
-                        <p class="tx-semibold mb-0">Before you choose any of the option ensure to confirm your information. You will be responsible for any of the option selected.</p>
+                        <p class="tx-semibold mb-0 tx-14">Before you choose any of the option ensure to confirm your information. You will be responsible for any of the option selected.</p>
                         <div class="mg-t-15">
-                          <button class="btn bg-green pd-lg-x-30 pd-y-4 mg-lg-r-20 wd-100p wd-md-40p tx-white tx-semibold" data-toggle="modal" data-target="#successModal">IT’S VALID</button>
-                          <button class="btn btn-primary pd-lg-x-20 pd-y-4 wd-100p wd-lg-50p wd-md-55p mg-t-10 mg-md-t-0" data-toggle="modal" data-target="#updateModal">NEEDS AN UPDATE</button>
+                          <button class="btn bg-green pd-lg-x-20 pd-y-4 mg-lg-r-10 wd-100p wd-md-40p tx-white tx-semibold tx-14" data-toggle="modal" data-target="#successModal">IT’S VALID</button>
+                          <button class="btn btn-primary pd-lg-x-6 pd-y-4 wd-100p wd-lg-55p wd-md-55p mg-t-10 mg-md-t-0 tx-14" data-toggle="modal" data-target="#updateModal">NEEDS AN UPDATE</button>
                         </div>
                       </div>
                     </div>
                     </div>
                   </div>
-                  <div class="col-md-5 col-12 mg-t-20 mg-md-t-0">
+                  <div class="col-md-6 col-12 mg-t-20 mg-md-t-0">
                     <div class="card card-body card-grey pd-x-md-25 pd-lg-t-20 pd-20 card-height">
                       <div class="divider-text tx-12 tx-semibold">Your UBA Information</div>
                       <div class="mg-b-15">
@@ -149,61 +150,107 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header bd-b-0 card-grey">
-              <p class="tx-22 tx-bold modal-title" id="updateModalLabel">Update Details</p>
+              <p class="tx-22 tx-bold modal-title" id="updateModalLabel">Update Your Details</p>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <p>Kindly Update the affected fields with the correct information</p>
+              <p class="tx-14">Carefully choose and enter the right information on the fields you would like to change and update</p>
               <form action="">
                 <div class="form-group mg-b-10">
                   <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Department</label>
-                  <input type="text" class="form-control" placeholder="CIO Group">
+                  <select class="custom-select">
+                    <option selected>CIO</option>
+                    <option value="1">HR</option>
+                    <option value="2">CIO</option>
+                    <option value="3">Marketing</option>
+                  </select>
                 </div>
                 <div class="form-group mg-b-10">
                   <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">MIS CODE</label>
-                  <input type="text" class="form-control" placeholder="21312">
+                  <select id="code" class="form-control">
+                    <option value="1">27863</option>
+                    <option value="2">24084</option>
+                    <option value="3">21312</option> 
+                    <option value="4">23456</option>
+                  </select>
                 </div>
                 <div class="form-group mg-b-10">
                   <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Grade</label>
-                  <input type="text" class="form-control" placeholder="Assistant General Manager">
+                  <select class="custom-select">
+                    <option selected>Assistant Manager</option>
+                    <option value="1">Banking Officer</option>
+                    <option value="2">General Manager</option>
+                    <option value="3">Assistant Manager</option>
+                    <option value="3">Branch Manager</option>
+                  </select>
                 </div>
                 <div class="form-group mg-b-10">
                   <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Job Role</label>
-                  <input type="text" class="form-control" placeholder="Team Member, Network Operations Nigeria">
+                  <select id="job" class="form-control">
+                    <option value="1">Team Member, Network Operations Nigeria</option>
+                    <option value="2">Team Lead, CIO</option>
+                    <option value="3">Customer Service Representative</option> 
+                    <option value="4">Team Member,Automation Process, Nigeria</option>
+                  </select>
                   </p>
                 </div>
                 <div class="form-group mg-b-10">
                   <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Supervisor</label>
-                  <input type="text" class="form-control" placeholder="Olugbenga Orunto">
+                  <select id="supervisor" class="form-control">
+                    <option value="1">Olugbenga Orunto</option>
+                    <option value="2">Basil Bassey</option>
+                    <option value="3">Olumide Adekunle</option> 
+                    <option value="4">Ezekiel Enobong</option>
+                  </select>
                 </div>
                 <div class="">
                   <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Country</label>
-                  <input type="text" class="form-control" placeholder="Nigeria">
+                  <select class="custom-select">
+                    <option selected>Nigeria</option>
+                    <option value="1">Ghana</option>
+                    <option value="2">Nigeria</option>
+                    <option value="3">Cameroun</option>
+                    <option value="4">Burkina Faso</option>
+                    <option value="5">South Africa</option>
+                  </select>
                 </div>
               </form>
             </div>
             <div class="modal-footer bg-light-blue">
-              <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary btn-sm pd-x-40" data-toggle="modal" data-target="#successModal" data-dismiss="modal">Submit</button>
+              <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary btn-sm pd-x-40" data-toggle="modal" data-target="#successUpdateModal" data-dismiss="modal">Submit</button>
             </div>
           </div>
         </div>
       </div>  
       
-    <!-- Modal -->
+    <!--Valid Success Modal -->
         <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
             <div class="modal-content">
-              <div class="modal-body tx-center p-5">
+              <div class="modal-body tx-center p-4">
                 <img src="./assets/img/icon/Check.svg"  class="wd-100 ht-100" alt="" srcset="">
-                <p class="tx-24 tx-semibold mt-3">Thank you</p>
-                <p class="tx-16">Your feedback has been acknowledged.</p>
+                <p class="tx-24 tx-semibold mt-3">You're amazing</p>
+                <p class="tx-16">Thank you for validating your data! You are now set for your Appraisal.</p>
             </div>
           </div>
         </div>  
-        </div>       
+        </div> 
+        
+        <!--Update Success Modal -->
+        <div class="modal fade" id="successUpdateModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-body tx-center p-4">
+                <img src="./assets/img/icon/Check.svg"  class="wd-100 ht-100" alt="" srcset="">
+                <p class="tx-24 tx-semibold mt-3">Welldone!</p>
+                <p class="tx-16">Thank you,your update was received. You are one step closer, we will review and contact you soon.</p>
+            </div>
+          </div>
+        </div>  
+        </div> 
       </div>
     </section>
     <section class="footer tx-white">
@@ -218,8 +265,15 @@
     <script src="./assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="./assets/js/dashforge.js"></script>
     <script src="./assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="./assets/lib/select2/js/select2.min.js"></script>
+
     <script>
-      $('[data-toggle="tooltip"]').tooltip();
+      $(document).ready(function() {
+     $('#code,#job,#supervisor').select2({
+       width: '100%' ,
+       dropdownParent: $("#updateModal")
+     });
+   })
     </script>
 
 

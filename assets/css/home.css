@@ -138,8 +138,8 @@ body { -webkit-font-smoothing: antialiased; }
   .moody-text{
     font-size: 14px!important;
   }
-  .tx-48{
-    font-size: 42px!important;
+  .tx-40{
+    font-size:22px!important;
   }
 }
 .link:hover{
@@ -183,10 +183,14 @@ color: #D70900!important;
   background-repeat: no-repeat;
   background-position: right;
   background-size: auto;
+  /* width: 80%; */
 }
 .divider-text{
   color: #4B5563!important;
 }
 .divider-text::before, .divider-text::after{
   background-color: #D1D5DB!important;
+}
+.btn-outlined-primary:hover{
+  background: #cacaca!important;
 }
