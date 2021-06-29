@@ -65,10 +65,10 @@
     </header>  
     <section class="secondary-bg">
       <div class="container py-5">
-        <div class="col-lg-10 col-xl-9 col-md-12 col-12 mx-auto mg-t-20 mg-lg-t-50  pd-x-0 body-container">
+        <div class="col-lg-11 col-xl-9 col-md-12 col-12 mx-auto mg-t-20 mg-lg-t-50  pd-x-0 body-container">
             <div class="card appraisal-card">
               <div class="card-header pd-y-30 tx-center card-grey">
-                <p class="tx-40 tx-bold form-group mg-b-10">Appraisal Data Verification</p>
+                <p class="tx-40 tx-bold form-group col-md-6">Appraisal Data Verification</p>
                 <p class="tx-16 tx-medium">It’s time to verify and validate your UBA Information for the 2021 Appraisal.</p>
               </div>
               <div class="card-body pd-lg-x-80 pd-md-x-40  pd-md-y-40 pd-x-20">
@@ -88,7 +88,7 @@
                         <p class="tx-semibold mb-0 tx-14">Before you choose any of the option ensure to confirm your information. You will be responsible for any of the option selected.</p>
                         <div class="mg-t-15">
                           <button class="btn bg-green pd-lg-x-20 pd-y-4 mg-lg-r-10 wd-100p wd-md-40p tx-white tx-semibold tx-14" data-toggle="modal" data-target="#successModal">IT’S VALID</button>
-                          <button class="btn btn-primary pd-lg-x-6 pd-y-4 wd-100p wd-lg-55p wd-md-55p mg-t-10 mg-md-t-0 tx-14" data-toggle="modal" data-target="#updateModal">NEEDS AN UPDATE</button>
+                          <button class="btn btn-primary pd-lg-x-6 pd-md-x-4 pd-y-4 wd-100p wd-lg-55p wd-md-55p mg-t-10 mg-md-t-0 tx-14" data-toggle="modal" data-target="#updateModal">NEEDS AN UPDATE</button>
                         </div>
                       </div>
                     </div>
@@ -147,7 +147,7 @@
 
         <!-- Profile Modal -->
       <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header bd-b-0 card-grey">
               <p class="tx-22 tx-bold modal-title" id="updateModalLabel">Update Your Details</p>
@@ -158,64 +158,68 @@
             <div class="modal-body">
               <p class="tx-14">Carefully choose and enter the right information on the fields you would like to change and update</p>
               <form action="">
-                <div class="form-group mg-b-10">
-                  <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Department</label>
-                  <select class="custom-select">
-                    <option selected>CIO</option>
-                    <option value="1">HR</option>
-                    <option value="2">CIO</option>
-                    <option value="3">Marketing</option>
-                  </select>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Country</label>
+                    <select class="custom-select">
+                      <option selected>Nigeria</option>
+                      <option value="1">Ghana</option>
+                      <option value="2">Nigeria</option>
+                      <option value="3">Cameroun</option>
+                      <option value="4">Burkina Faso</option>
+                      <option value="5">South Africa</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Department</label>
+                    <select class="custom-select">
+                      <option selected>CIO</option>
+                      <option value="1">HR</option>
+                      <option value="2">CIO</option>
+                      <option value="3">Marketing</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">MIS CODE</label>
+                    <select id="code" class="form-control">
+                      <option value="1">27863</option>
+                      <option value="2">24084</option>
+                      <option value="3">21312</option> 
+                      <option value="4">23456</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Grade</label>
+                    <select class="custom-select">
+                      <option selected>Assistant Manager</option>
+                      <option value="1">Banking Officer</option>
+                      <option value="2">General Manager</option>
+                      <option value="3">Assistant Manager</option>
+                      <option value="3">Branch Manager</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Job Role</label>
+                    <select id="job" class="form-control">
+                      <option value="1">Team Member, Network Operations Nigeria</option>
+                      <option value="2">Team Lead, CIO</option>
+                      <option value="3">Customer Service Representative</option> 
+                      <option value="4">Team Member,Automation Process, Nigeria</option>
+                    </select>
+                    </p>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Supervisor</label>
+                    <select id="supervisor" class="form-control">
+                      <option value="1">Olugbenga Orunto</option>
+                      <option value="2">Basil Bassey</option>
+                      <option value="3">Olumide Adekunle</option> 
+                      <option value="4">Ezekiel Enobong</option>
+                    </select>
+                  </div>
+                  
                 </div>
-                <div class="form-group mg-b-10">
-                  <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">MIS CODE</label>
-                  <select id="code" class="form-control">
-                    <option value="1">27863</option>
-                    <option value="2">24084</option>
-                    <option value="3">21312</option> 
-                    <option value="4">23456</option>
-                  </select>
-                </div>
-                <div class="form-group mg-b-10">
-                  <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Grade</label>
-                  <select class="custom-select">
-                    <option selected>Assistant Manager</option>
-                    <option value="1">Banking Officer</option>
-                    <option value="2">General Manager</option>
-                    <option value="3">Assistant Manager</option>
-                    <option value="3">Branch Manager</option>
-                  </select>
-                </div>
-                <div class="form-group mg-b-10">
-                  <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Job Role</label>
-                  <select id="job" class="form-control">
-                    <option value="1">Team Member, Network Operations Nigeria</option>
-                    <option value="2">Team Lead, CIO</option>
-                    <option value="3">Customer Service Representative</option> 
-                    <option value="4">Team Member,Automation Process, Nigeria</option>
-                  </select>
-                  </p>
-                </div>
-                <div class="form-group mg-b-10">
-                  <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Supervisor</label>
-                  <select id="supervisor" class="form-control">
-                    <option value="1">Olugbenga Orunto</option>
-                    <option value="2">Basil Bassey</option>
-                    <option value="3">Olumide Adekunle</option> 
-                    <option value="4">Ezekiel Enobong</option>
-                  </select>
-                </div>
-                <div class="">
-                  <label for="" class="tx-label tx-uppercase mb-1 tx-11 tx-semibold">Country</label>
-                  <select class="custom-select">
-                    <option selected>Nigeria</option>
-                    <option value="1">Ghana</option>
-                    <option value="2">Nigeria</option>
-                    <option value="3">Cameroun</option>
-                    <option value="4">Burkina Faso</option>
-                    <option value="5">South Africa</option>
-                  </select>
-                </div>
+                
               </form>
             </div>
             <div class="modal-footer bg-light-blue">
