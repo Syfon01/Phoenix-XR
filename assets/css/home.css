@@ -194,3 +194,12 @@ color: #D70900!important;
 .btn-outlined-primary:hover{
   background: #cacaca!important;
 }
+@media screen and (min-width: 1900px) {
+  .body-container {
+   /* max-width: 1870px!important; */
+  }
+}@media screen and (min-width: 1600px) {
+  .body-container {
+    max-width: 830px!important;
+   }
+}
