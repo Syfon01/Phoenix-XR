@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Staff Module Management">
+    <title>Rewards and Sanction</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/img/favicon.png">
+
+
+    <!-- Required External CSS -->
+    <link href="../../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <link href="../../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="../../../assets/lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../../assets/css/dashforge.css">
+
+    <style>
+      *{
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+      }
+      body { -webkit-font-smoothing: antialiased; }
+      </style>
+
+  </head>
+  <body class="">
+    
+    <aside class="aside aside-fixed text-white">
+      <div class="aside-header aside-top ">
+        <a href="./index.html" class="aside-logo text-white">PhoenixHR</a>
+        <a href="" class="aside-menu-link text-white">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="aside-loggedin">
+          <div class="d-flex align-items-center justify-content-start">
+            <a href="" class="avatar"><img src="../../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <div class="aside-loggedin-user ml-2">
+              <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
+                <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
+                <div>
+                <i data-feather="chevron-down" class="ml-3"></i>
+                </div>
+              </a>
+              <p class="tx-12 mg-b-0 text-gray-700">Exit Admin</p>
+            </div>
+          </div>
+          
+          <div class="collapse" id="loggedinMenu">
+            <ul class="nav nav-aside mg-b-0">
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="edit"></i> <span>Edit Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="user"></i> <span>View Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="settings"></i> <span>Account Settings</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="help-circle"></i> <span>Help Center</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="log-out"></i> <span>Sign Out</span></a></li>
+            </ul>
+          </div>
+        </div><!-- aside-loggedin -->
+       
+        <ul class="nav nav-aside">
+          <li class="nav-item  p-14"><a href="../index.html" class="nav-link "><i data-feather="grid"></i><span>Dashboard</span></a></li>
+
+          <li class="nav-item  with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/dc.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Disciplinary Committee</span></a>
+            <ul>  
+             
+              <li><a href="../dc-requests.html" >DC Request</a></li>
+              <li><a href="../dc-sittings.html">DC Sittings</a></li>
+              <li><a href="../dc-panel.html">DC Panel Members</a></li>
+
+            </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/sanction.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Sanction</span></a>
+            <ul>  
+              <li><a href="../sanction-requests.html">Sanction Requests</a></li>
+              <li><a href="../active-sanction.html">Active Sanctions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/recognitiom.svg" class="wd-15 ht-15 mr-2" alt="" srcset=''>Recognition</span></a>
+            <ul>  
+              <li><a href="../recognition-request.html">Recognition Requests</a></li>
+              <li><a href="../issued-recognition.html">Issued Recognition</li>
+
+            </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/commendation.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Commendation</span></a>
+            <ul>  
+              <li><span></span><a href="./commendation/index.html">Commendation Requests</a></li>
+              <li><a href="../commendation/issued-recall.html">Issued Commendation</a></li>
+              <li><a href="../commendation/discarded-recall.html">Discarded Commendation</a></li>
+            </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/recall.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Recall</span></a>
+            <ul>  
+              <li><span></span><a href="./recall/index.html">Recall Requests</a></li>
+              <li><a href="../recall/issued-recall.html">Issued Recall</a></li>
+              <li><a href="../recall/discarded-recall.html">Discarded Recall</a></li>
+            </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/withdraw.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Withdrawal</span></a>
+            <ul>  
+              <li><span></span><a href="./withdrawal/index.html">Withdrawal Requests</a></li>
+              <li><a href="../withdrawal/issued-recall.html">Issued Withdrawal</a></li>
+              <li><a href="../withdrawal/discarded-recall.html">Discarded Withdrawal</a></li>
+            </ul>
+          </li>
+          <li class="nav-item active show with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/appeal.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Appeal</span></a>
+            <ul>  
+              <li class="active"><span></span><a href="./appeal/index.html">Appeal Requests</a></li>
+              <li><a href="../appeal/resolved-appeal.html">Resolved Appeals</a></li>
+            </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/grievance.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Grievances</span></a>
+              <ul>  
+                <li><span></span><a href="../grievance/index.html">Grievance Requests</a></li>
+                <li><a href="../grievance/resolved-grievance.html">Resolved Grievances</a></li>
+              </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/litigation.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Litigation</span></a>
+              <ul>  
+                <li><span></span><a href="../litigation/index.html">Litigation Requests</a></li>
+                <li><a href="../litigation/reviewed-litigation.html">Reviewed Litigations</a></li>
+              </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/Exit.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Exit</span></a>
+              <ul>  
+                <li><span></span><a href="./exit/index.html">Exit Requests</a></li>
+                <li><a href="../exit/active-exits.html">Active Exits</a></li>
+                <li><a href="../exit/completed-exits.html">Completed Exits</a></li>
+              </ul>
+          </li>
+         
+        </ul>
+      
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header">
+        <div class="d-flex justify-content-between w-100">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
+              <li class="breadcrumb-item"><a href="./index.html">Appeal</a></li>
+              <li class="breadcrumb-item"><a href="./index.html">Active Request</a> </li>
+              <li class="breadcrumb-item active" aria-current="page">Request Details</li>
+            </ol>
+          </nav>
+          <div>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/New.html"><img src="../../../assets/img/logo.png" class="img-fluid"/></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="content-body secondary-bg">
+        <div class="container pd-x-0">
+          <button onclick="goBack()" class="btn btn-back tx-14 tx-semibold pd-l-0 pd-y-0"><i data-feather="arrow-left"></i> Go Back</button>
+        <p class="tx-28 tx-bold mb-0 mg-t-10">Review Appeal Request</p>
+        <hr class="mg-t-5">
+        <div class="row mg-t-25">
+          <div class="col-md-8 col-12 order-2 order-md-1 mg-t-20 mg-md-t-0">
+            <div class="card">
+              <div class="card-header bg-grey-100 pd-y-15 pd-md-x-25 pd-x-20 pd-b-10">
+                <div class="d-flex justify-content-between">
+                  <p class="tx-14 mb-0 tx-semibold modal-title">Request Details</p>
+                  <div>
+                    <!-- <button class="btn btn-outlined-primary pd-y-3 tx-semibold">Edit</button> -->
+                  </div>
+                </div>
+              </div> 
+              <div class="card-body pd-md-x-25 pd-x-20">
+                <div class="mg-b-25">
+                  <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">INVOLVED Employee Details</label>
+                    <div class="mg-b-25 card card-body bg-grey-50 pd-15">
+                      <div class="row justify-content-between">
+                        <div class="col-md-6 col-12">
+                          <div class="d-flex">
+                            <div class="avatar avatar"><img src="../../../assets/img/activity3.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Tayo Taylor<span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-12 mg-t-10 mg-md-t-0">
+                          <a href="../view_work-history.html" class="d-block ml-auto btn btn-outlined-primary pd-x-10 pd-y-5 tx-grey-700 tx-12 tx-medium"> View Sanction History</a>
+                        </div>
+                      </div>
+                     </div>
+                </div>
+                
+                <div class="mg-b-25">
+                  <div class="row justify-content-between">
+                    <div class="col-md-6 col-12">
+                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">appellant Employee</label>
+                      <p class="tx-14 tx-grey-900 mb-0">Remarkable Stewardship</p>
+                    </div>
+                    <div class="col-md-3 col-12 mg-t-20 mg-md-t-0">
+                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">APPELLANT</label>
+                      <p class="tx-14 tx-grey-900 mb-0">Manager</p>
+                    </div>
+                    <div class="col-md-3 col-12 mg-t-20 mg-md-t-0">
+                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">SUBMITTED BY</label>
+                      <p class="tx-14 tx-grey-900 mb-0">Manager</p>
+                    </div>
+                  </div>
+                  
+                 </div>
+                <div class="mg-b-25">
+                  <div class="row justify-content-between">
+                    <div class="col-md-9 col-12">
+                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Title</label>
+                      <p class="tx-14 tx-grey-900 mb-0">Remarkable Stewardship</p>
+                    </div>
+                    <div class="col-md-3 col-12 mg-t-20 mg-md-t-0">
+                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Source</label>
+                      <p class="tx-14 tx-grey-900 mb-0">Manager</p>
+                    </div>
+                  </div>
+                  
+                 </div>
+                 <div class="mg-b-25">
+                    <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">justification</label>
+                    <p class="tx-14 tx-grey-900">Seamlessly morph interactive imperatives for interdependent manufactured products. Objectively synthesize highly efficient systems for frictionless initiatives. Synergistically promote process-centric scenarios before synergistic niches.</p>
+                  </div>
+                  
+                  <div class="mg-b-25">
+                    <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached reports</label>
+                    <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                      <div class="row justify-content-between">
+                        <div class="col-9 col-md-9">
+                          <div class="d-flex">
+                            <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                            <div>
+                              <p class="tx-14 tx-grey-900 mb-0">Recognition_report.pdf</p>
+                              <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3 col-md-2 pd-md-l-0">
+                          <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 float-md-right"> View</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">INVOLVED Employees (2)</label>
+                <div class="mg-b-25">
+                  <div class="row justify-content-between">
+                    <div class="col-md-6 col-12 mg-t-10 mg-md-t-0">
+                      <div class="card card-body pd-15">
+                        <a href="./view_work-history.html">
+                          <div class="d-flex">
+                            <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        </a>
+                        <div>
+                          <button class="btn btn-outlined-primary tx-semibold pd-y-5 mg-t-5" data-toggle="modal" data-target="#remarkModal">Add Remark</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12 mg-t-10 mg-md-t-0">
+                      <div class="card card-body pd-15">
+                        <a href="./view_work-history.html">
+                          <div class="d-flex">
+                            <div class="avatar avatar"><img src="../../../assets/img/admin.png" class="rounded-circle" alt=""></div>
+                            <div class="ml-3 pd-t-3">
+                              <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                              <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                            </div>
+                          </div>
+                        </a>
+                        <div class="d-flex">
+                          <span class="bg-gray-100 tx-grey-800 tx-semibold pd-x-10 pd-y-5 d-inline mg-t-5">Remark Added</span>
+                          <button class="btn tx-semibold pd-y-5 mg-t-5 tx-primary" data-toggle="modal" data-target="#editModal">Edit</button>
+                        </div>
+                         
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-sm pd-x-30 tx-semibold" data-toggle="modal" data-target="#issueModal"> Effect Recognition</button>
+                <!-- <button type="button" class="btn btn-primary btn-sm pd-x-30 tx-semibold" data-toggle="tooltip" data-placement="top" title="You are yet to add Recognition for all involved employees"> Issue Recognition</button> -->
+              </div>
+            </div>
+        </div>
+
+          <div class="col-md-4 col-12 order-1 order-md-2">
+            <div class="card card-body pd-y-0 pd-x-15 bg-transparent bd-0">
+              <div class="row bd-b pd-y-10">
+                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Status</p>
+                </div>
+               <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
+                <span class="badge bg-yellow tx-11 tx-semibold">REQUIRING ATTENTION</span>
+               </div>
+              </div>
+              <div class="row bd-b pd-y-10">
+                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Initiated on</p>
+                </div>
+                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
+                  <p class="tx-12 mb-0">Fri Feb 26, 2021</p>
+                </div> 
+              </div>
+              <div class="row bd-b pd-y-10">
+                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium pd-t-5">Intiated by</p>
+                </div>
+                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
+                  <div class="d-flex float-right">
+                    <div class="avatar avatar-sm mg-r-10 wd-25 ht-25 "><img src="../../../assets/img/admin.png" class="rounded-circle " alt=""></div>
+                    <div>
+                      <p class="tx-12 mb-0 pd-t-5">Toyin Sowore</p>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+              <div class="row bd-b pd-y-10">
+                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Approved on</p>
+                </div>
+                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
+                  <p class="tx-12 mb-0">Fri Feb 26, 2021</p>
+                </div> 
+              </div>
+              <div class="row bd-b pd-y-10">
+                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium pd-t-5">Approved by</p>
+                </div>
+                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
+                  <div class="d-flex float-right">
+                    <div class="avatar avatar-sm mg-r-10 wd-25 ht-25 "><img src="../../../assets/img/staff.png" class="rounded-circle " alt=""></div>
+                    <div>
+                      <p class="tx-12 mb-0 pd-t-5">Adams Ifeanyi</p>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+
+       
+
+           <!--Remark Modal -->
+           <div class="modal fade" id="remarkModal" tabindex="-1" aria-labelledby="remarkModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                  <div>
+                    <p class="tx-22 tx-semibold modal-title mb-0" id="remarkModalLabel">Add Recognition Remark</p>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> 
+                <div class="modal-body pd-md-x-30 pd-x-20">
+                  <div class="card bg-grey-200 mg-b-20">
+                    <div class="card-body pd-15">
+                      <div class="d-flex">
+                        <div class="avatar avatar mg-t-2"><img src="../../../assets/img/team2.png" class="rounded-circle" alt=""></div>
+                        <div class="mg-l-10">
+                          <p class="mb-0">                
+                            <span class="tx-16">Bayo Adeosun<span class="tx-12 tx-secondary">(A29118)</span></span></p>
+                          <p class="tx-12 tx-secondary mb-0">Team Member, Card Services</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <form action="">
+                    <div class="form-group">
+                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Recognition Title</label>
+                      <input type="text" class="form-control" placeholder="Exemplary Performance">
+                    </div>
+                    <div class="">
+                    <div class="form-group">
+                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Remark (body of recognition letter)</label>
+                      <div id="toolbar-container">
+                        <div id="editor-container" class="ht-150">  </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  </form>
+                </div>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal"data-dismiss="modal" >Save Remark</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+             <!--Edit Modal -->
+             <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                    <div>
+                      <p class="tx-22 tx-semibold modal-title mb-0" id="remarkModalLabel">Edit Recognition Remark</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div> 
+                  <div class="modal-body pd-md-x-30 pd-x-20">
+                    <div class="card bg-grey-200 mg-b-20">
+                      <div class="card-body pd-15">
+                        <div class="d-flex">
+                          <div class="avatar avatar mg-t-2"><img src="../../../assets/img/team2.png" class="rounded-circle" alt=""></div>
+                          <div class="mg-l-10">
+                            <p class="mb-0">                
+                              <span class="tx-16">Bayo Adeosun<span class="tx-12 tx-secondary">(A29118)</span></span></p>
+                            <p class="tx-12 tx-secondary mb-0">Team Member, Card Services</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <form action="">
+                      <div class="form-group">
+                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Recognition Title</label>
+                        <input type="text" class="form-control" placeholder="Exemplary Performance">
+                      </div>
+                      <div class="">
+                      <div class="form-group">
+                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Remark (body of recognition letter)</label>
+                        <div id="toolbar-container">
+                          <div id="editor-container" class="ht-150">  </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                    </form>
+                  </div>
+                  <div class="modal-footer bg-modal-footer">
+                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal"data-dismiss="modal" >Save Remark</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+
+           <!--Issue Recognition Modal -->
+           <div class="modal fade" id="issueModal" tabindex="-1" aria-labelledby="issueModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
+                  <div>
+                    <p class="tx-22 tx-semibold modal-title mb-0" id="issueModalLabel">Issue Recognition</p>
+                    <p class="tx-secondary mb-0">This process issues recognition to the involved employees</p>
+                  </div>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> 
+                <div class="modal-body pd-md-x-30 pd-x-20">
+                  <form action="">
+                    <div class="form-group">
+                      <div class="">
+                        <p class="tx-secondary tx-uppercase mg-b-15 tx-12 tx-medium">MANAGE NOTIFICATION SETTINGS</p>
+                        <label for="formGroupExampleInput" class="d-block tx-bold mg-b-8 tx-medium tx-14 tx-grey-900">Who is notified immediately?</label>
+                        <div class="form-group">
+                          <div class="form-row">
+                            <div class="col-md-4 mg-b-20 mg-md-b-10">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="select-all">
+                                <label class="custom-control-label tx-primary tx-medium" for="select-all">Select All</label>
+                              </div>
+                            </div>
+                            <div class="col-md-4 mg-b-20 mg-md-b-10">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="deselect-all">
+                                <label class="custom-control-label tx-primary tx-medium" for="deselect-all">Deselect All</label>
+                              </div>
+                            </div>
+                            <div class="col-md-6 mg-t-10 mg-md-t-5">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input checked-item" id="staff">
+                                <label class="custom-control-label tx-grey-900" for="staff">Involved Staff</label>
+                              </div>
+                            </div>
+                            <div class="col-md-6 mg-t-10 mg-md-t-5">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input checked-item" id="hrbp">
+                                <label class="custom-control-label tx-grey-900" for="hrbp">HRBP</label>
+                              </div>
+                            </div>
+                            <div class="col-md-6 mg-t-10 mg-md-t-5">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input checked-item" id="1st">
+                                <label class="custom-control-label tx-grey-900" for="1st">1st Level Supervisor</label>
+                              </div>
+                            </div>
+                            <div class="col-md-6 mg-t-10 mg-md-t-5">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input checked-item" id="2nd">
+                                <label class="custom-control-label tx-grey-900" for="2nd">2nd Level Supervisor</label>
+                              </div>
+                            </div>
+                            
+                          </div>
+  
+                        </div>
+                        <div class="form-group mb-2">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mg-b-8 tx-medium tx-14 tx-neutral">Notify Others?</label>
+                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-12">Email Address</label>
+                           <input class="form-control" type="text" name="" placeholder="- Enter here - ">
+                        </div>
+                        <p class="tx-12 tx-grey-500 mb-0">Separate emails using a comma ( , )</p>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary btn-sm pd-x-30 tx-semibold" data-toggle="modal" data-target="#successModal"data-dismiss="modal" > Issue Recognition</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Success Modal -->
+          <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header pd-y-10 bd-b-0">
+                  <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  <div class="d-flex">
+                    <div>
+                      <img src="../../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
+                    </div>
+                    <div class="mg-l-5">
+                      <p class="tx-22 tx-bold mb-0 pd-t-20">Recognition effected</p>
+                    </div>
+                  </div>
+                  <hr class="mg-t-10"/>
+                  <p class="tx-14">Notifications has been sent to selected stakeholders.  </p>
+                </div>
+                <div class="modal-footer bg-modal-footer">
+                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+         
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../../assets/js/dashforge.js"></script>
+    <script src="../../../assets/js/dashforge.aside.js"></script>
+    <script src="../../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../../../assets/lib/select2/js/select2.min.js"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+    <script>
+      $(document).ready( function () {
+   $('.display').DataTable({
+     "paging": true,
+     "info": true,
+     "responsive": true,
+     "aoColumnDefs": [{
+         "bSortable": false,
+         "aTargets": [-1]
+     }],
+     "searching": false,
+      "lengthChange": false,
+     "bInfo": true
+   });
+   
+   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+     $('.display:visible').each( function(e) {
+       $(this).DataTable().columns.adjust().responsive.recalc();
+     });
+   });
+   $('a[data-toggle="list"]').on('shown.bs.tab', function (e) {
+     $('.display:visible').each( function(e) {
+       $(this).DataTable().columns.adjust().responsive.recalc();
+     });
+   });
+
+   const quill = new Quill('#editor-container,#editor-containerr', {
+        modules: {
+    toolbar: [
+      ['bold', 'italic'],
+      ['link', 'blockquote', 'code-block', 'image'],
+      [{ list: 'ordered' }, { list: 'bullet' }]
+    ]
+  },
+  placeholder: "Write your summary",
+  theme: 'snow'
+      });
+  const quill2 = new Quill('#editor-containerr', {
+        modules: {
+    toolbar: [
+      ['bold', 'italic'],
+      ['link', 'blockquote', 'code-block', 'image'],
+      [{ list: 'ordered' }, { list: 'bullet' }]
+    ]
+  },
+  placeholder: "Write your summary",
+  theme: 'snow'
+      });
+ });
+
+ 
+      
+//select option toggle
+$('[class^=is]').hide();
+$("#sanctionType").change(function(){          
+    let value = $("#sanctionType option:selected").val();
+    let theDiv = $(".is" + value);
+    
+    theDiv.slideDown();
+    theDiv.siblings('[class^=is]').slideUp();
+});
+
+// checkbox \
+$("#select-all").click(function () {
+     $('.checked-item').not(this).prop('checked', this.checked);
+     $('#deselect-all').not(this).prop('checked', '');
+
+ });
+
+// checkbox \
+$("#deselect-all").click(function () {
+     $('.checked-item,#select-all').not(this).prop('checked', '');
+ });
+
+</script>
+<script>
+  $(document).ready(function() {
+     $('#employe').select2({
+       width: '100%' ,
+       dropdownParent: $("#remarkModal")
+     });
+     $('#redirect-panel').select2({
+       width: '100%' ,
+       dropdownParent: $("#redirectModal")
+     });
+     $('[data-toggle="tooltip"]').tooltip();
+ });
+</script>
+<script>
+  const goBack = () => {
+       window.history.back();
+     }
+     const meetingLink = () => {
+    let copyText = document.getElementById("teamsLink");
+    let textArea = document.createElement("textarea");
+      textArea.value = copyText.textContent;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("Copy");
+      textArea.remove();
+    alert("Copied the text: " + copyText.innerHTML);
+     }
+</script>
+
+  </body>
+</html>
