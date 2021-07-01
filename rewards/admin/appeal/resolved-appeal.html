@@ -121,8 +121,8 @@
           <li class="nav-item active show with-sub tx-14">
             <a href="" class="nav-link"><img src="../../../assets/img/icon/appeal.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Appeal</span></a>
             <ul>  
-              <li class="active"><span></span><a href="./index.html">Appeal Requests</a></li>
-              <li><a href="./resolved-appeal.html">Resolved Appeals</a></li>
+              <li><span></span><a href="./index.html">Appeal Requests</a></li>
+              <li  class="active"><a href="./resolved-appeal.html">Resolved Appeals</a></li>
             </ul>
           </li>
           <li class="nav-item with-sub tx-14">
@@ -159,7 +159,7 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
               <li class="breadcrumb-item"><a href="./index.html">Appeal</a></li>
-              <li class="breadcrumb-item breadcrumb-size pb-0 active text-capitalize tx-gray-500 " aria-current="page">Appeal Requests</li>
+              <li class="breadcrumb-item breadcrumb-size pb-0 active text-capitalize tx-gray-500 " aria-current="page">Resolved Appeals</li>
 
             </ol>
           </nav>
@@ -171,173 +171,186 @@
       
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
-          <div class="d-flex justify-content-between">
-          <p class="tx-28 tx-bold">Appeal Requests</p>
+          <div class="">
+          <p class="tx-28 tx-bold mg-b-0">Resolved Appeals</p>
+          <p class="tx-14 tx-gray mb-0">Here are appeals you have reviewed and closed.</p>
           <div>
-            <a href="./log-appeal.html" class="btn btn-primary pd-x-20">Log Appeal Request</a>
+            <hr class="mg-t-8 mg-b-30">
+            <!-- <a href="./log-appeal.html" class="btn btn-primary pd-x-20">Log Appeal Request</a> -->
           </div>
           </div>
-
-          <ul class="nav nav-line" id="myTab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active pd-x-20" id="home-tab" data-toggle="tab" href="#rec-home" role="tab" aria-controls="home" aria-selected="true">Requiring Attention</a>
-            </li>
-            
-          </ul>   
-          <div class="tab-content  bd-t-0 pd-y-20" id="myTabContent">
-            <div class="tab-pane fade show active" id="rec-home" role="tabpanel" aria-labelledby="home-tab">
-            <p class="tx-14 tx-gray mg-b-25">Requests from employees are directed here for you to review. Click to review and take action.</p>
-
-              <div class="table-section">
-                <div class="card">
-                  <div class="card-header pd-x-15 pd-y-10">
-                    <div class="row justify-content-between">
-                      <div class="col-md-6 col-12 col-lg-6 ">
-                        <p class="tx-14 mb-0 tx-medium pd-t-10">
-                          All Submitted Requests
-                        </p>
-                      </div>
-                      <div class="col-md-5 col-12">
-                        <div class="d-flex float-md-right">
-                          <div class="mg-r-15 mg-t-5">
-                            <button class="btn pd-0 mb-0">
-                              <span>
-                                <img src="../../../assets/img/icon/filter_b.svg" alt="" srcset="">
-                                  Filter
-                              </span>
-                            </button>
-                          </div>
-    
-                          <div class="search-form">
-                            <input type="search" class="form-control" placeholder="Search">
-                            <button class="btn" type="button"><i data-feather="search"></i></button>
-                          </div>
+            <div class="table-section">
+              <div class="card">
+                <div class="card-header pd-x-15 pd-y-10">
+                  <div class="row justify-content-between">
+                    <div class="col-md-6 col-12 col-lg-6 ">
+                      <p class="tx-14 mb-0 tx-medium pd-t-10">
+                        All Resolved Appeals
+                      </p>
+                    </div>
+                    <div class="col-md-5 col-12">
+                      <div class="d-flex float-md-right">
+                        <div class="mg-r-15 mg-t-5">
+                          <button class="btn pd-0 mb-0">
+                            <span>
+                              <img src="../../../assets/img/icon/filter_b.svg" alt="" srcset="">
+                                Filter
+                            </span>
+                          </button>
                         </div>
-                        
+  
+                        <div class="search-form">
+                          <input type="search" class="form-control" placeholder="Search">
+                          <button class="btn" type="button"><i data-feather="search"></i></button>
+                        </div>
                       </div>
+                      
                     </div>
                   </div>
-                  <div class="card-body pd-10">
-                    <table class="table display">
-                      <thead>
-                        <tr class="tx-uppercase tx-12 tx-semibold">
-                          <th>S/N</th>
-                          <th>SUBJECT</th>
-                          <th>EMPLOYEE</th>
-                          <th>SOURCE</th>
-                          <th>DATE REQUESTED</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>
-                            <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 270px;">Repeated Sanction</p>
-                          </td>
-                          <td>
-                            <div class="d-flex">
-                              <div class="avatar avatar-sm mg-r-10 "><img src="../../../assets/img/admin.png" class="rounded-circle " alt=""></div>
-                              <div>
-                                <p class="tx-12 mb-0">Alex Masawe</p>
-                                  <label for="" class="tx-12 mb-0 tx-grey-500"> Staff</label>
-                              </div>
-                            </div>
-                          </td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5">Staff</p></td>
-                          <td>
+                </div>
+                <div class="card-body pd-10">
+                  <table class="table display">
+                    <thead>
+                      <tr class="tx-uppercase tx-12 tx-semibold">
+                        <th>S/N</th>
+                        <th>SUBJECT</th>
+                        <th>EMPLOYEE</th>
+                        <th>SOURCE</th>
+                        <th>DATE REQUESTED</th>
+                        <th>DATE RESOLVED</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>
+                          <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 270px;">Repeated Sanction</p>
+                        </td>
+                        <td>
+                          <div class="d-flex">
+                            <div class="avatar avatar-sm mg-r-10 "><img src="../../../assets/img/admin.png" class="rounded-circle " alt=""></div>
                             <div>
-                              <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                              <p class="tx-12 mb-0">Alex Masawe</p>
+                                <label for="" class="tx-12 mb-0 tx-grey-500"> Staff</label>
                             </div>
-                          </td>
-                          <td>   
-                            <a href="./review-appeal-staff.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button">Review</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>
-                            <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 270px;">Formal Letter of Appeal - Misplaced Identity</p>
-                          </td>
-                          <td>
-                            <div class="d-flex">
-                              <div class="avatar avatar-sm mg-r-10 "><img src="../../../assets/img/birthday1.png" class="rounded-circle " alt=""></div>
-                              <div>
-                                <p class="tx-12 mb-0">Blessing Adewole</p>
-                                  <label for="" class="tx-12 mb-0 tx-grey-500">Ex-Staff</label>
-                              </div>
-                            </div>
-                          </td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5">Work Ethics</p></td>
-                          <td>
+                          </div>
+                        </td>
+                        <td class=""><p class="tx-12 mb-0 pd-t-5">Staff</p></td>
+                        <td>
+                          <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                          </div>
+                        </td>
+                        <td>   
+                          <a href="./view-resolved-appeal.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button">View</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>
+                          <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 270px;">Formal Letter of Appeal - Misplaced Identity</p>
+                        </td>
+                        <td>
+                          <div class="d-flex">
+                            <div class="avatar avatar-sm mg-r-10 "><img src="../../../assets/img/birthday1.png" class="rounded-circle " alt=""></div>
                             <div>
-                              <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                              <p class="tx-12 mb-0">Blessing Adewole</p>
+                                <label for="" class="tx-12 mb-0 tx-grey-500">Ex-Staff</label>
                             </div>
-                          </td>
-                          <td>   
-                            <a href="./review-appeal.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button">Review</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>
-                            <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 270px;">Pardonable Misgivings</p>
-                          </td>
-                          <td>
-                            <div class="d-flex">
-                              <div class="avatar avatar-sm mg-r-10 "><img src="../../../assets/img/birthday2.png" class="rounded-circle " alt=""></div>
-                              <div>
-                                <p class="tx-12 mb-0">Gowon Musa</p>
-                                  <label for="" class="tx-12 mb-0 tx-grey-500">Ex-Staff</label>
-                              </div>
-                            </div>
-                          </td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5">Work Ethics</p></td>
-                          <td>
+                          </div>
+                        </td>
+                        <td class=""><p class="tx-12 mb-0 pd-t-5">Work Ethics</p></td>
+                        <td>
+                          <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                          </div>
+                        </td>
+                        <td>   
+                          <a href="./view-resolved-appeal.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button">View</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>
+                          <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 270px;">Pardonable Misgivings</p>
+                        </td>
+                        <td>
+                          <div class="d-flex">
+                            <div class="avatar avatar-sm mg-r-10 "><img src="../../../assets/img/birthday2.png" class="rounded-circle " alt=""></div>
                             <div>
-                              <p class="tx-12 mb-0">Mar 4, 2021</p>
-                                <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                              <p class="tx-12 mb-0">Gowon Musa</p>
+                                <label for="" class="tx-12 mb-0 tx-grey-500">Ex-Staff</label>
                             </div>
-                          </td>
-                          <td>   
-                            <a href="./review-appeal.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button">Review</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">4</th>
-                          <td>
-                            <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 270px;">Misrepresentation of Information</p>
-                          </td>
-                          <td>
-                            <div class="d-flex">
-                              <div class="avatar avatar-sm mg-r-10 "><img src="../../../assets/img/staff.png" class="rounded-circle " alt=""></div>
-                              <div>
-                                <p class="tx-12 mb-0">Funke Hussien</p>
-                                  <label for="" class="tx-12 mb-0 tx-grey-500"> Ex-Staff</label>
-                              </div>
-                            </div>
-                          </td>
-                          <td class=""><p class="tx-12 mb-0 pd-t-5">Work Ethics</p></td>
-                          <td>
+                          </div>
+                        </td>
+                        <td class=""><p class="tx-12 mb-0 pd-t-5">Work Ethics</p></td>
+                        <td>
+                          <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                          </div>
+                        </td>
+                        <td>   
+                          <a href="./view-resolved-appeal.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button">View</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>
+                          <p class=" tx-medium tx-12 mb-0 pd-t-5" style="width: 270px;">Misrepresentation of Information</p>
+                        </td>
+                        <td>
+                          <div class="d-flex">
+                            <div class="avatar avatar-sm mg-r-10 "><img src="../../../assets/img/staff.png" class="rounded-circle " alt=""></div>
                             <div>
-                              <p class="tx-12 mb-0">Feb. 5, 2021</p>
-                                <label for="" class="tx-12 mb-0 tx-grey-500">  11:44pm</label>
+                              <p class="tx-12 mb-0">Funke Hussien</p>
+                                <label for="" class="tx-12 mb-0 tx-grey-500"> Ex-Staff</label>
                             </div>
-                          </td>
-                          <td>   
-                            <a href="./review-appeal.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button">Review</a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                          </div>
+                        </td>
+                        <td class=""><p class="tx-12 mb-0 pd-t-5">Work Ethics</p></td>
+                        <td>
+                          <div>
+                            <p class="tx-12 mb-0">Feb. 5, 2021</p>
+                              <label for="" class="tx-12 mb-0 tx-grey-500">  11:44pm</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div>
+                            <p class="tx-12 mb-0">Mar 4, 2021</p>
+                              <label for="" class="tx-12 mb-0 tx-grey-500"> 9:26am</label>
+                          </div>
+                        </td>
+                        <td>   
+                          <a href="./view-resolved-appeal.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold" type="button">View</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
-          </div>
-         
         </div>
       </div>
     </div>
