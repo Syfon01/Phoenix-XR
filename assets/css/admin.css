@@ -574,3 +574,6 @@ td label{
 .list-group-item{
   border: none!important;
 }
+#doNothing{
+  display: none;
+}
