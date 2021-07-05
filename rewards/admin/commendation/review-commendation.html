@@ -7,21 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Staff Module Management">
     <title>Rewards and Sanction</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/img/favicon.png">
 
 
     <!-- Required External CSS -->
-    <link href="../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-
-    <link href="../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
-    <link href="../../assets/lib/select2/css/select2.min.css" rel="stylesheet">
-
+    <link href="../../../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+
     <!-- Page CSS -->
-    <link rel="stylesheet" href="../../assets/css/admin.css">
-    <link rel="stylesheet" href="../../assets/css/dashforge.css">
+    <link rel="stylesheet" href="../../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../../assets/css/dashforge.css">
 
     <style>
       *{
@@ -45,7 +42,7 @@
       <div class="aside-body">
         <div class="aside-loggedin">
           <div class="d-flex align-items-center justify-content-start">
-            <a href="" class="avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></a>
+            <a href="" class="avatar"><img src="../../../assets/img/admin.png" class="rounded-circle" alt=""></a>
             <div class="aside-loggedin-user ml-2">
               <a href="#loggedinMenu" class="d-flex justify-content-between mg-b-2" data-toggle="collapse">
                 <h6 class="tx-bold mg-b-0 text-white p-14 pr-4">Jane Madu</h6>
@@ -60,7 +57,7 @@
           <div class="collapse" id="loggedinMenu">
             <ul class="nav nav-aside mg-b-0">
               <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="edit"></i> <span>Edit Completed</span></a></li>
-              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="user"></i> <span>View Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="user"></i> <span>Review Completed</span></a></li>
               <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="settings"></i> <span>Account Settings</span></a></li>
               <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="help-circle"></i> <span>Help Center</span></a></li>
               <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="log-out"></i> <span>Sign Out</span></a></li>
@@ -69,84 +66,89 @@
         </div><!-- aside-loggedin -->
        
         <ul class="nav nav-aside">
-          <li class="nav-item  p-14"><a href="./index.html" class="nav-link "><i data-feather="grid"></i><span>Dashboard</span></a></li>
+          <li class="nav-item  p-14"><a href="../index.html" class="nav-link "><i data-feather="grid"></i><span>Dashboard</span></a></li>
 
-          <li class="nav-item with-sub tx-14">
-            <a href="" class="nav-link"><img src="../../assets/img/icon/dc.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Disciplinary Committee</span></a>
+          <li class="nav-item  with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/dc.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Disciplinary Committee</span></a>
             <ul>  
              
-              <li><a href="./dc-requests.html" >DC Request</a></li>
-              <li><a href="./dc-sittings.html">DC Sittings</a></li>
-              <li><a href="./dc-panel.html">DC Panel Members</a></li>
+              <li><a href="../dc-requests.html" >DC Request</a></li>
+              <li><a href="../dc-sittings.html">DC Sittings</a></li>
+              <li><a href="../dc-panel.html">DC Panel Members</a></li>
 
             </ul>
           </li>
           <li class="nav-item with-sub tx-14">
-            <a href="" class="nav-link"><img src="../../assets/img/icon/sanction.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Sanction</span></a>
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/sanction.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Sanction</span></a>
             <ul>  
-              <li  class="active"><a href="./sanction-requests.html">Sanction Requests</a></li>
-              <li><a href="./issued-sanction.html">Issued Sanctions</a></li>
-              <li><a href="./discarded-sanction.html">Discarded Sanctions</a></li>
-            </ul>
-          </li>
-          <li class="nav-item with-sub tx-14 active show">
-            <a href="" class="nav-link"><img src="../../assets/img/icon/recognitiom.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Recognition</span></a>
-            <ul>  
-              <li   class="active"><a href="./recognition-requests.html">Recognition Requests</a></li>
-              <li><a href="./issued-recognition.html">Issued Recognitions</li>
+              <li><a href="../sanction-requests.html">Sanction Requests</a></li>
+              <li><a href="../active-sanction.html">Active Sanctions</a></li>
             </ul>
           </li>
           <li class="nav-item with-sub tx-14">
-            <a href="" class="nav-link"><img src="../../assets/img/icon/commendation.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Commendation</span></a>
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/recognitiom.svg" class="wd-15 ht-15 mr-2" alt="" srcset=''>Recognition</span></a>
             <ul>  
-             
-              <li><span></span><a href="./dc-requests.html">DC Request</a></li>
-              <li><a href="./dc-sittings.html">DC Sittings</a></li>
-              <li><a href="./dc-panel.html">DC Panel Members</a></li>
+              <li><a href="../recognition-requests.html">Recognition Requests</a></li>
+              <li><a href="../issued-recognition.html">Issued Recognition</li>
 
             </ul>
           </li>
-          <li class="nav-item with-sub tx-14">
-            <a href="" class="nav-link"><img src="../../assets/img/icon/recall.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Recall</span></a>
+          <li class="nav-item with-sub active show tx-14">
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/commendation.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Commendation</span></a>
             <ul>  
-             
-              <li><span></span><a href="./dc-requests.html">DC Request</a></li>
-              <li><a href="./dc-sittings.html">DC Sittings</a></li>
-              <li><a href="./dc-panel.html">DC Panel Members</a></li>
-
+              <li class="active"><a href="./index.html">Commendation Requests</a></li>
+              <li><a href="./issued-commendation.html">Issued Commendation</a></li>
+              <li><a href="./discarded-commendation.html">Discarded Commendation</a></li>
             </ul>
           </li>
           <li class="nav-item with-sub tx-14">
-            <a href="" class="nav-link"><img src="../../assets/img/icon/withdraw.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Withdraw</span></a>
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/recall.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Recall</span></a>
             <ul>  
-             
-              <li><span></span><a href="./dc-requests.html">DC Request</a></li>
-              <li><a href="./dc-sittings.html">DC Sittings</a></li>
-              <li><a href="./dc-panel.html">DC Panel Members</a></li>
-
+              <li><span></span><a href="./recall/index.html">Recall Requests</a></li>
+              <li><a href="../recall/issued-recall.html">Issued Recall</a></li>
+              <li><a href="../recall/discarded-recall.html">Discarded Recall</a></li>
             </ul>
           </li>
           <li class="nav-item with-sub tx-14">
-            <a href="" class="nav-link"><img src="../../assets/img/icon/appeal.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Appeal</span></a>
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/withdraw.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Withdrawal</span></a>
             <ul>  
-              <li><span></span><a href="./dc-requests.html">DC Request</a></li>
-              <li><a href="./dc-sittings.html">DC Sittings</a></li>
-              <li><a href="./dc-panel.html">DC Panel Members</a></li>
+              <li><span></span><a href="./withdrawal/index.html">Withdrawal Requests</a></li>
+              <li><a href="../withdrawal/issued-withdrawal.html">Issued Withdrawal</a></li>
+              <li><a href="../withdrawal/discarded-withdrawal.html">Discarded Withdrawal</a></li>
             </ul>
           </li>
           <li class="nav-item with-sub tx-14">
-            <a href="" class="nav-link"><img src="../../assets/img/icon/grievance.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Grievances</span></a>
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/appeal.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Appeal</span></a>
             <ul>  
-             
-              <li><span></span><a href="./dc-requests.html">DC Request</a></li>
-              <li><a href="./dc-sittings.html">DC Sittings</a></li>
-              <li><a href="./dc-panel.html">DC Panel Members</a></li>
-
+              <li><span></span><a href="../appeal/">Appeal Requests</a></li>
+              <li><a href="../appeal/resolved-appeal.html">Resolved Appeals</a></li>
             </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/grievance.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Grievances</span></a>
+              <ul>  
+                <li><span></span><a href="../grievance/index.html">Grievance Requests</a></li>
+                <li><a href="../grievance/resolved-grievance.html">Resolved Grievances</a></li>
+              </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/litigation.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Litigation</span></a>
+              <ul>  
+                <li><span></span><a href="../litigation/index.html">Litigation Requests</a></li>
+                <li><a href="../litigation/reviewed-litigation.html">Reviewed Litigations</a></li>
+              </ul>
+          </li>
+          <li class="nav-item with-sub tx-14">
+            <a href="" class="nav-link"><img src="../../../assets/img/icon/Exit.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Exit</span></a>
+              <ul>  
+                <li><span></span><a href="./exit/index.html">Exit Requests</a></li>
+                <li><a href="../exit/active-exits.html">Active Exits</a></li>
+                <li><a href="../exit/completed-exits.html">Completed Exits</a></li>
+              </ul>
           </li>
          
         </ul>
-        
+       
       </div>
     </aside>
 
@@ -155,13 +157,13 @@
         <div class="d-flex justify-content-between w-100">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
-              <li class="breadcrumb-item"><a href="./index.html">Recognition</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Review Recognition Request</li>
+              <li class="breadcrumb-item"><a href="./index.html">Commendation</a></li>
+              <li class="breadcrumb-item breadcrumb-size pb-0 active text-capitalize tx-gray-500 " aria-current="page">Commendation Requests</li>
 
             </ol>
           </nav>
           <div>
-            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/New.html"><img src="../../assets/img/logo.png" class="img-fluid"/></a>
+            <a class="navbar-brand tx-bold tx-spacing--2 order-1 logo-link ml-5" href="/staff/New.html"><img src="../../../assets/img/logo.png" class="img-fluid"/></a>
           </div>
         </div>
       </div>
@@ -169,7 +171,7 @@
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
           <button onclick="goBack()" class="btn btn-back tx-14 tx-semibold pd-l-0 pd-y-0"><i data-feather="arrow-left"></i> Go Back</button>
-        <p class="tx-28 tx-bold mb-0 mg-t-10">Review Recognition Request</p>
+        <p class="tx-28 tx-bold mb-0 mg-t-10">Review Commendation Request</p>
         <hr class="mg-t-5">
         <div class="row mg-t-25">
           <div class="col-md-8 col-12 order-2 order-md-1 mg-t-20 mg-md-t-0">
@@ -208,9 +210,9 @@
                       <div class="row justify-content-between">
                         <div class="col-9 col-md-9">
                           <div class="d-flex">
-                            <img src="../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                            <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
                             <div>
-                              <p class="tx-14 tx-grey-900 mb-0">Recognition_report.pdf</p>
+                              <p class="tx-14 tx-grey-900 mb-0">Commendation_report.pdf</p>
                               <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
                             </div>
                           </div>
@@ -226,9 +228,9 @@
                   <div class="row justify-content-between">
                     <div class="col-md-6 col-12 mg-t-10 mg-md-t-0">
                       <div class="card card-body pd-15">
-                        <a href="./view_work-history.html">
+                        <a href="../view_work-history.html">
                           <div class="d-flex">
-                            <div class="avatar avatar"><img src="../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                            <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
                             <div class="ml-3 pd-t-3">
                               <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
                               <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
@@ -242,9 +244,9 @@
                     </div>
                     <div class="col-md-6 col-12 mg-t-10 mg-md-t-0">
                       <div class="card card-body pd-15">
-                        <a href="./view_work-history.html">
+                        <a href="../view_work-history.html">
                           <div class="d-flex">
-                            <div class="avatar avatar"><img src="../../assets/img/admin.png" class="rounded-circle" alt=""></div>
+                            <div class="avatar avatar"><img src="../../../assets/img/admin.png" class="rounded-circle" alt=""></div>
                             <div class="ml-3 pd-t-3">
                               <p class="tx-14 mb-0">Funke Hussien <span class="tx-grey-500 tx-12">(A28922)</span></p>
                               <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
@@ -262,7 +264,7 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary btn-sm pd-x-30 tx-semibold" data-toggle="modal" data-target="#issueModal"> Effect Recognition</button>
+                <button type="button" class="btn btn-primary btn-sm pd-x-30 tx-semibold" data-toggle="modal" data-target="#issueModal"> Issue Commendation</button>
                 <!-- <button type="button" class="btn btn-primary btn-sm pd-x-30 tx-semibold" data-toggle="tooltip" data-placement="top" title="You are yet to add Recognition for all involved employees"> Issue Recognition</button> -->
               </div>
             </div>
@@ -292,7 +294,7 @@
                 </div>
                 <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
                   <div class="d-flex float-right">
-                    <div class="avatar avatar-sm mg-r-10 wd-25 ht-25 "><img src="../../assets/img/admin.png" class="rounded-circle " alt=""></div>
+                    <div class="avatar avatar-sm mg-r-10 wd-25 ht-25 "><img src="../../../assets/img/admin.png" class="rounded-circle " alt=""></div>
                     <div>
                       <p class="tx-12 mb-0 pd-t-5">Toyin Sowore</p>
                     </div>
@@ -313,7 +315,7 @@
                 </div>
                 <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
                   <div class="d-flex float-right">
-                    <div class="avatar avatar-sm mg-r-10 wd-25 ht-25 "><img src="../../assets/img/staff.png" class="rounded-circle " alt=""></div>
+                    <div class="avatar avatar-sm mg-r-10 wd-25 ht-25 "><img src="../../../assets/img/staff.png" class="rounded-circle " alt=""></div>
                     <div>
                       <p class="tx-12 mb-0 pd-t-5">Adams Ifeanyi</p>
                     </div>
@@ -332,7 +334,7 @@
               <div class="modal-content">
                 <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
                   <div>
-                    <p class="tx-22 tx-semibold modal-title mb-0" id="remarkModalLabel">Add Recognition Remark</p>
+                    <p class="tx-22 tx-semibold modal-title mb-0" id="remarkModalLabel">Add Commendation Remark</p>
                   </div>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -342,7 +344,7 @@
                   <div class="card bg-grey-200 mg-b-20">
                     <div class="card-body pd-15">
                       <div class="d-flex">
-                        <div class="avatar avatar mg-t-2"><img src="../../assets/img/team2.png" class="rounded-circle" alt=""></div>
+                        <div class="avatar avatar mg-t-2"><img src="../../../assets/img/team2.png" class="rounded-circle" alt=""></div>
                         <div class="mg-l-10">
                           <p class="mb-0">                
                             <span class="tx-16">Bayo Adeosun<span class="tx-12 tx-secondary">(A29118)</span></span></p>
@@ -353,17 +355,57 @@
                   </div>
                   <form action="">
                     <div class="form-group">
-                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Recognition Title</label>
+                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Commendation Title</label>
                       <input type="text" class="form-control" placeholder="Exemplary Performance">
                     </div>
-                    <div class="">
-                    <div class="form-group">
-                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Remark (body of recognition letter)</label>
-                      <div id="toolbar-container">
-                        <div id="editor-container" class="ht-150">  </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Financial Reward</label>
+                        <input type="text" class="form-control" placeholder="$"> 
+                      </div>
+                      <div class="form-group col-md-6">
+                        <div class="form-group">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Resolution Decision</label>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="card card-body radio-active pd-x-10 pd-y-7" >
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" onclick="switch_admin('show_1', 'show_2')" checked>
+                                  <label class="custom-control-label w-100 tx-13" for="customRadio2">With Promotion</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 mg-t-10 mg-md-t-0">
+                              <div class="card card-body radio-active pd-x-10 pd-y-7 ">
+                                <div class="custom-control custom-radio">
+                                  <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input"  onclick="switch_admin('show_1', 'show_2')" >
+                                  <label class="custom-control-label w-100 pd-x-0 tx-13" for="customRadio3">Without Promotion</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                     <!-- Toggle 1  -->
+                     <div id="withdrawAppeal">
+                      <div class="form-group">
+                        <label for="formGroupExampleInput" class="d-block tx-bold mb-0 tx-medium tx-14 tx-grey-900">Remark (body of commendation letter)</label>
+                        <div id="toolbar-container">
+                          <div id="editor-container" class="ht-150">  </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- toggle 2  -->
+                    <div id="doNothing">
+                      <div class="form-group">
+                        <label for="formGroupExampleInput" class="d-block tx-bold mb-0 tx-medium tx-14 tx-grey-900">Remark (body of commendation letter)</label>
+                        <div id="toolbar-container">
+                          <div id="editor-containerr" class="ht-150">  </div>
+                        </div>
+                      </div>
+                    </div>
 
                   </form>
                 </div>
@@ -381,7 +423,7 @@
                 <div class="modal-content">
                   <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
                     <div>
-                      <p class="tx-22 tx-semibold modal-title mb-0" id="remarkModalLabel">Edit Recognition Remark</p>
+                      <p class="tx-22 tx-semibold modal-title mb-0" id="remarkModalLabel">Edit Commendation Remark</p>
                     </div>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
@@ -391,7 +433,7 @@
                     <div class="card bg-grey-200 mg-b-20">
                       <div class="card-body pd-15">
                         <div class="d-flex">
-                          <div class="avatar avatar mg-t-2"><img src="../../assets/img/team2.png" class="rounded-circle" alt=""></div>
+                          <div class="avatar avatar mg-t-2"><img src="../../../assets/img/team2.png" class="rounded-circle" alt=""></div>
                           <div class="mg-l-10">
                             <p class="mb-0">                
                               <span class="tx-16">Bayo Adeosun<span class="tx-12 tx-secondary">(A29118)</span></span></p>
@@ -402,17 +444,57 @@
                     </div>
                     <form action="">
                       <div class="form-group">
-                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Recognition Title</label>
+                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Commendation Title</label>
                         <input type="text" class="form-control" placeholder="Exemplary Performance">
                       </div>
-                      <div class="">
-                      <div class="form-group">
-                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Remark (body of recognition letter)</label>
-                        <div id="toolbar-container">
-                          <div id="editor-container" class="ht-150">  </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Financial Reward</label>
+                          <input type="text" class="form-control" placeholder="$"> 
+                        </div>
+                        <div class="form-group col-md-6">
+                          <div class="form-group">
+                            <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Resolution Decision</label>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="card card-body radio-active pd-x-10 pd-y-7" >
+                                  <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input" onclick="switch_admin1('show_3', 'show_4')" checked>
+                                    <label class="custom-control-label w-100 tx-13" for="customRadio4">With Promotion</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6 mg-t-10 mg-md-t-0">
+                                <div class="card card-body radio-active pd-x-10 pd-y-7 ">
+                                  <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio5" name="customRadio" class="custom-control-input"  onclick="switch_admin1('show_3', 'show_4')" >
+                                    <label class="custom-control-label w-100 pd-x-0 tx-13" for="customRadio5">Without Promotion</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                       <!-- Toggle 1  -->
+                       <div id="withdrawAppeal">
+                        <div class="form-group">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-0 tx-medium tx-14 tx-grey-900">Remark (body of commendation letter)</label>
+                          <div id="toolbar-container">
+                            <div id="editor-container1" class="ht-150">  </div>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <!-- toggle 2  -->
+                      <div id="doNothing">
+                        <div class="form-group">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-0 tx-medium tx-14 tx-grey-900">Remark (body of mendation letter)</label>
+                          <div id="toolbar-container">
+                            <div id="editor-containerr2" class="ht-150">  </div>
+                          </div>
+                        </div>
+                      </div>
   
                     </form>
                   </div>
@@ -431,8 +513,8 @@
               <div class="modal-content">
                 <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
                   <div>
-                    <p class="tx-22 tx-semibold modal-title mb-0" id="issueModalLabel">Issue Recognition</p>
-                    <p class="tx-secondary mb-0">This process issues recognition to the involved employees</p>
+                    <p class="tx-22 tx-semibold modal-title mb-0" id="issueModalLabel">Issue Commendation</p>
+                    <p class="tx-secondary mb-0">This process issues commendation to the involved employees</p>
                   </div>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -443,7 +525,7 @@
                     <div class="form-group">
                       <div class="">
                         <p class="tx-secondary tx-uppercase mg-b-15 tx-12 tx-medium">MANAGE NOTIFICATION SETTINGS</p>
-                        <label for="formGroupExampleInput" class="d-block tx-bold mg-b-8 tx-medium tx-14 tx-grey-900">Who is notified immediately?</label>
+                        <label for="formGroupExampleInput" class="d-block tx-bold mg-b-8 tx-medium tx-14 tx-grey-900">Who receives notification?</label>
                         <div class="form-group">
                           <div class="form-row">
                             <div class="col-md-4 mg-b-20 mg-md-b-10">
@@ -517,14 +599,14 @@
                 <div class="modal-body">
                   <div class="d-flex">
                     <div>
-                      <img src="../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
+                      <img src="../../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
                     </div>
                     <div class="mg-l-5">
-                      <p class="tx-22 tx-bold mb-0 pd-t-20">Recognition effected</p>
+                      <p class="tx-22 tx-bold mb-0 pd-t-20">Commendation effected</p>
                     </div>
                   </div>
                   <hr class="mg-t-10"/>
-                  <p class="tx-14">Notifications has been sent to selected stakeholders.  </p>
+                  <p class="tx-14">Notifications has been sent to selected stakeholders </p>
                 </div>
                 <div class="modal-footer bg-modal-footer">
                   <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
@@ -539,70 +621,94 @@
     </div>
 
 
-    <script src="../../assets/lib/jquery/jquery.min.js"></script>
-    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../assets/lib/feather-icons/feather.min.js"></script>
-    <script src="../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="../../assets/js/dashforge.js"></script>
-    <script src="../../assets/js/dashforge.aside.js"></script>
-    <script src="../../assets/lib/js-cookie/js.cookie.js"></script>
-    <script src="../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
-    <script src="../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
-    <script src="../../assets/lib/select2/js/select2.min.js"></script>
+    <script src="../../../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../../../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../../../assets/js/dashforge.js"></script>
+    <script src="../../../assets/js/dashforge.aside.js"></script>
+    <script src="../../../assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="../../../assets/js/dashforge.settings.js"></script>
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
-<script>
-      $(document).ready( function () {
-   $('.display').DataTable({
-     "paging": true,
-     "info": true,
-     "responsive": true,
-     "aoColumnDefs": [{
-         "bSortable": false,
-         "aTargets": [-1]
-     }],
-     "searching": false,
-      "lengthChange": false,
-     "bInfo": true
-   });
    
-   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-     $('.display:visible').each( function(e) {
-       $(this).DataTable().columns.adjust().responsive.recalc();
-     });
-   });
-   $('a[data-toggle="list"]').on('shown.bs.tab', function (e) {
-     $('.display:visible').each( function(e) {
-       $(this).DataTable().columns.adjust().responsive.recalc();
-     });
-   });
-
-   const quill = new Quill('#editor-container,#editor-containerr', {
-        modules: {
+<script>
+  $(document).ready( function () {
+   const quill = new Quill('#editor-container', {
+    modules: {
     toolbar: [
       ['bold', 'italic'],
       ['link', 'blockquote', 'code-block', 'image'],
       [{ list: 'ordered' }, { list: 'bullet' }]
     ]
   },
-  placeholder: "Write your summary",
-  theme: 'snow'
+    placeholder: "Write your summary",
+    theme: 'snow'
       });
   const quill2 = new Quill('#editor-containerr', {
-        modules: {
+    modules: {
+    toolbar: [
+      ['bold', 'italic'],
+      ['link', 'blockquote', 'code-block', 'image'],
+      [{ list: 'ordered' }, { list: 'bullet' }]
+      ]
+   },
+    placeholder: "Write your summary",
+    theme: 'snow'
+  });
+  const quill3 = new Quill('#editor-container1', {
+    modules: {
     toolbar: [
       ['bold', 'italic'],
       ['link', 'blockquote', 'code-block', 'image'],
       [{ list: 'ordered' }, { list: 'bullet' }]
     ]
   },
-  placeholder: "Write your summary",
-  theme: 'snow'
+    placeholder: "Write your summary",
+    theme: 'snow'
       });
+  const quill4 = new Quill('#editor-containerr2', {
+    modules: {
+    toolbar: [
+      ['bold', 'italic'],
+      ['link', 'blockquote', 'code-block', 'image'],
+      [{ list: 'ordered' }, { list: 'bullet' }]
+      ]
+   },
+    placeholder: "Write your summary",
+    theme: 'snow'
+  });
  });
 
+ // radio switch 
+ function switch_admin(show_1, show_2){
+    let y = document.getElementById("withdrawAppeal");
+    let x = document.getElementById("doNothing")
+
+    if (x.style.display !== "block") {
+      x.style.display ="block"
+      y.style.display = "none";
+    } 
+    else{
+      x.style.display ="none"
+      y.style.display = 'block'
+    }
+  }
+ 
+  function switch_admin1(show_3, show_4){
+    let y = document.getElementById("withdrawAppeal");
+    let x = document.getElementById("doNothing")
+
+    if (x.style.display !== "block") {
+      x.style.display ="block"
+      y.style.display = "none";
+    } 
+    else{
+      x.style.display ="none"
+      y.style.display = 'block'
+    }
+  }
+ 
  
       
 //select option toggle
