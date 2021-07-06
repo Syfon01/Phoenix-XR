@@ -194,27 +194,13 @@
                       <div class="row">
                         <div class="col-lg-3 col-12  mg-md-t-0">
                           <p class="tx-24 mb-0">Appellant Details</p>
+                          <p class="tx-grey-600 mb-0">For Ex-Staff</p>
+
                         </div>
                         <div class="col-lg-9 col-12 mg-t-20 mg-md-t-0">
-                          <div class="form-row">
-                            <div class="form-group col-md-6">
-                              <label for="formGroupExampleInput" class="d-block tx-medium mb-1">First Name</label>
-                              <input type="text" class="form-control input-bg" placeholder="">
-                            </div>
-                            <div class="form-group col-md-6">
-                              <label for="formGroupExampleInput" class="d-block tx-medium mb-1">Last Name</label>
-                              <input type="text" class="form-control input-bg" placeholder="">
-                            </div>
-                          </div>
-                          <div class="form-row">
-                            <div class="form-group col-md-6">
-                              <label for="formGroupExampleInput" class="d-block tx-medium mb-1">Email Address</label>
-                              <input type="email" class="form-control input-bg" placeholder="">
-                            </div>
-                            <div class="form-group col-md-6">
-                              <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Phone Number <span class="tx-secondary"> (optional)</span></label>
-                              <input type="text" class="form-control input-bg" placeholder="">
-                            </div>
+                          <div class="form-group">
+                            <label for="formGroupExampleInput" class="d-block tx-medium mb-1">Employee ID</label>
+                            <input type="text" class="form-control input-bg" placeholder="">
                           </div>
                         </div>
                       </div>
@@ -225,12 +211,25 @@
                         </div>
                         <div class="col-lg-9 col-12 mg-t-20">
                           <div class="form-group">
+                            <button type="button" class="btn btn-outlined-primary w-100 tx-semibold" data-toggle="modal" data-target="#appealModal">Select Sanction to Appeal</button>
+                          </div>
+                          <div class="form-group">
                             <label for="formGroupExampleInput" class="d-block tx-medium mb-1">Title/Subject</label>
                             <input type="text" class="form-control input-bg" placeholder="">
                           </div>
                           <div class="form-group">
                             <label for="formGroupExampleInput" class="d-block tx-medium mb-1">Appeal Category</label>
-                            <input type="text" class="form-control input-bg" placeholder="">
+                            <select class="custom-select">
+                              <option selected>Choose Appeal Category</option>
+                              <option value="1">Gratuity</option>
+                              <option value="2">Terminal Benefit</option>
+                              <option value="3">Pension and NHF</option>
+                              <option value="4">Reinstatement</option>
+                              <option value="5">Mitigation of Terminal Sanction</option>
+                              <option value="6">Waiver of Outstanding Loan Balance</option>
+                              <option value="7">Payment of Outstanding Salaries</option>
+                              <option value="8">Others</option>
+                            </select>
                           </div>
                           <div class="form-group">
                             <label for="formGroupExampleInput" class="d-block tx-medium mb-1">Appeal Justification</label>
@@ -278,10 +277,13 @@
                         </div>
                         <div class="col-lg-9 col-12 mg-t-20">
                           <div class="form-group">
-                            <label for="formGroupExampleInput" class="d-block tx-medium mb-1">Appeal Title/Subject</label>
+                            <button type="button" class="btn btn-outlined-primary w-100 tx-semibold" data-toggle="modal" data-target="#appealModal">Select Sanction to Appeal</button>
+                          </div>
+                          <div class="form-group">
+                            <label for="formGroupExampleInput" class="d-block tx-medium mb-1">Title/Subject</label>
                             <input type="text" class="form-control input-bg" placeholder="">
                           </div>
-                          
+                         
                           <div class="form-group">
                             <label for="formGroupExampleInput" class="d-block tx-medium mb-1">Appeal Justification</label>
                             <div id="toolbar-container">
@@ -307,7 +309,7 @@
             </div>
           </div>
     
-          <!--Success Modal -->
+      <!--Success Modal -->
       <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
@@ -335,6 +337,92 @@
           </div>
         </div>
       </div>
+
+      <!--appeal Modal -->
+      <div class="modal fade" id="appealModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header pd-y-10">
+              <p class="modal-title tx-22 mb-0">Select a Sanction to Appeal</p>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+              <div class="search-form mg-b-25">
+                <input type="search" class="form-control" placeholder="Search">
+                <button class="btn" type="button"><i data-feather="search"></i></button>
+              </div>
+
+              <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">Your Recent Sanctions</label>
+              <div class="mg-b-15">
+                <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                  <div class="row justify-content-between">
+                    <div class="col-9 col-md-10">
+                      <div>
+                        <p class="tx-14 tx-grey-900 mb-0 tx-semibold">Poor ATM Managemnt</p>
+                        <label for="" class="tx-12 tx-grey-500 mb-0 tx-medium">Letter of Displeasure <span class="ml-4 tx-normal">Issued: <span class="tx-medium">Mar 4, 2021</span></label>
+                      </div>
+                    </div>
+                    <div class="col-3 col-md-2 pd-md-l-0">
+                      <a href="" class="btn btn-outlined-primary btn-sm pd-x-7 pd-y-4 tx-semibold mg-t-5 float-md-right tx-12"> Select Sanction</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mg-b-15">
+                <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                  <div class="row justify-content-between">
+                    <div class="col-9 col-md-10">
+                      <div>
+                        <p class="tx-14 tx-grey-900 mb-0 tx-semibold">Fraudulent Withdrawal of ₦300,000.00 on account of Osaruyi Eguasa</p>
+                        <label for="" class="tx-12 tx-grey-500 mb-0 tx-medium">2 Weeks Fixed Suspension <span class="ml-4 tx-normal">Issued: <span class="tx-medium">Mar 4, 2021</span></label>
+                      </div>
+                    </div>
+                    <div class="col-3 col-md-2 pd-md-l-0">
+                      <a href="" class="btn btn-outlined-primary btn-sm pd-x-7 pd-y-4 tx-semibold mg-t-5 float-md-right tx-12"> Select Sanction</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mg-b-15">
+                <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                  <div class="row justify-content-between">
+                    <div class="col-9 col-md-10">
+                      <div>
+                        <p class="tx-14 tx-grey-900 mb-0 tx-semibold">Report on Integrity Test at Ado Bayero Business Office / Breach of the Bank's Policy</p>
+                        <label for="" class="tx-12 tx-grey-500 mb-0 tx-medium">Caution Letter <span class="ml-4 tx-normal">Issued: <span class="tx-medium">Mar 4, 2021</span></label>
+                      </div>
+                    </div>
+                    <div class="col-3 col-md-2 pd-md-l-0">
+                      <a href="" class="btn btn-outlined-primary btn-sm pd-x-7 pd-y-4 tx-semibold mg-t-5 float-md-right tx-12"> Select Sanction</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mg-b-15">
+                <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                  <div class="row justify-content-between">
+                    <div class="col-9 col-md-10">
+                      <div>
+                        <p class="tx-14 tx-grey-900 mb-0 tx-semibold">Breach of Cash Movement Policy</p>
+                        <label for="" class="tx-12 tx-grey-500 mb-0 tx-medium">Warning Letter <span class="ml-4 tx-normal">Issued: <span class="tx-medium">Mar 4, 2021</span></label>
+                      </div>
+                    </div>
+                    <div class="col-3 col-md-2 pd-md-l-0">
+                      <a href="" class="btn btn-outlined-primary btn-sm pd-x-7 pd-y-4 tx-semibold mg-t-5 float-md-right tx-12"> Select Sanction</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer bg-modal-footer">
+              <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
   
         </div>
       </div>
