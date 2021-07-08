@@ -99,32 +99,32 @@
           <li class="nav-item with-sub tx-14">
             <a href="" class="nav-link"><img src="../../../assets/img/icon/commendation.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Commendation</span></a>
             <ul>  
-              <li><span></span><a href="../commendation/index.html">Commendation Requests</a></li>
+              <li><a href="../commendation/index.html">Commendation Requests</a></li>
               <li><a href="../commendation/issued-commendation.html">Issued Commendation</a></li>
               <li><a href="../commendation/discarded-commendation.html">Discarded Commendation</a></li>
             </ul>
           </li>
-          <li class="nav-item with-sub tx-14">
+          <li class="nav-item with-sub active show tx-14">
             <a href="" class="nav-link"><img src="../../../assets/img/icon/recall.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Recall</span></a>
             <ul>  
-              <li><span></span><a href="../recall/index.html">Recall Requests</a></li>
-              <li><a href="../recall/issued-recall.html">Issued Recall</a></li>
-              <li><a href="../recall/discarded-recall.html">Discarded Recall</a></li>
+              <li class="active"><a href="./index.html">Recall Requests</a></li>
+              <li><a href="./issued-recall.html">Issued Recall</a></li>
+              <li><a href="./discarded-recall.html">Discarded Recall</a></li>
             </ul>
           </li>
           <li class="nav-item with-sub tx-14">
             <a href="" class="nav-link"><img src="../../../assets/img/icon/withdraw.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Withdrawal</span></a>
             <ul>  
-              <li><span></span><a href="../withdrawal/index.html">Withdrawal Requests</a></li>
+              <li><span></span><a href="./withdrawal/index.html">Withdrawal Requests</a></li>
               <li><a href="../withdrawal/issued-withdrawal.html">Issued Withdrawal</a></li>
               <li><a href="../withdrawal/discarded-withdrawal.html">Discarded Withdrawal</a></li>
             </ul>
           </li>
-          <li class="nav-item active show with-sub tx-14">
+          <li class="nav-item with-sub tx-14">
             <a href="" class="nav-link"><img src="../../../assets/img/icon/appeal.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Appeal</span></a>
             <ul>  
-              <li class="active"><span></span><a href="./index.html">Appeal Requests</a></li>
-              <li><a href="./resolved-appeal.html">Resolved Appeals</a></li>
+              <li><span></span><a href="../appeal/">Appeal Requests</a></li>
+              <li><a href="../appeal/resolved-appeal.html">Resolved Appeals</a></li>
             </ul>
           </li>
           <li class="nav-item with-sub tx-14">
@@ -144,13 +144,14 @@
           <li class="nav-item with-sub tx-14">
             <a href="" class="nav-link"><img src="../../../assets/img/icon/Exit.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Exit</span></a>
               <ul>  
-                <li><span></span><a href="../exit/index.html">Exit Requests</a></li>
+                <li><span></span><a href="./exit/index.html">Exit Requests</a></li>
                 <li><a href="../exit/active-exits.html">Active Exits</a></li>
                 <li><a href="../exit/completed-exits.html">Completed Exits</a></li>
               </ul>
           </li>
          
         </ul>
+       
       
       </div>
     </aside>
@@ -251,15 +252,15 @@
                   <div class="row justify-content-between">
                     <div class="col-9 col-md-9">
                       <div class="d-flex">
-                        <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                          <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
                         <div>
                           <p class="tx-14 tx-grey-900 mb-0">Approval_for_recall.pdf</p>
                           <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
                         </div>
                       </div>
                     </div>
-                    <div class="col-3 col-md-2 pd-md-l-0">
-                      <a href="./view-open.html" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 float-md-right"> View</a>
+                    <div class="col-3 col-md-2 pd-md-l-0" id="show_1">
+                      <button onclick="selectMethod(2)" class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 float-md-right"> View</button>
                     </div>
                   </div>
                 </div>
@@ -567,7 +568,6 @@
       y.style.display = 'block'
     }
   }
-  
 
       
 //select option toggle
