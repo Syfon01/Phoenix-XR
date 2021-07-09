@@ -104,20 +104,20 @@
               <li><a href="../commendation/discarded-commendation.html">Discarded Commendation</a></li>
             </ul>
           </li>
-          <li class="nav-item with-sub active show tx-14">
+          <li class="nav-item with-sub tx-14">
             <a href="" class="nav-link"><img src="../../../assets/img/icon/recall.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Recall</span></a>
             <ul>  
-              <li><a href="./index.html">Recall Requests</a></li>
-              <li class="active"><a href="./issued-recall.html">Issued Recall</a></li>
-              <li><a href="./discarded-recall.html">Discarded Recall</a></li>
+              <li><a href="../recall/index.html">Recall Requests</a></li>
+              <li><a href="../recall/issued-recall.html">Issued Recall</a></li>
+              <li><a href="../recall/discarded-recall.html">Discarded Recall</a></li>
             </ul>
           </li>
-          <li class="nav-item with-sub tx-14">
+          <li class="nav-item with-sub active show tx-14">
             <a href="" class="nav-link"><img src="../../../assets/img/icon/withdraw.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Withdrawal</span></a>
             <ul>  
-              <li><span></span><a href="../withdrawal/index.html">Withdrawal Requests</a></li>
-              <li><a href="../withdrawal/issued-withdrawal.html">Issued Withdrawal</a></li>
-              <li><a href="../withdrawal/discarded-withdrawal.html">Discarded Withdrawal</a></li>
+              <li><a href="./index.html">Withdrawal Requests</a></li>
+              <li class="active"><a href="./issued-withdrawal.html">Issued Withdrawal</a></li>
+              <li><a href="./discarded-withdrawal.html">Discarded Withdrawal</a></li>
             </ul>
           </li>
           <li class="nav-item with-sub tx-14">
@@ -160,8 +160,8 @@
         <div class="d-flex justify-content-between w-100">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
-              <li class="breadcrumb-item"><a href="./index.html">Recall</a></li>
-              <li class="breadcrumb-item breadcrumb-size pb-0 active text-capitalize tx-gray-500 " aria-current="page">Issued Recall</li>
+              <li class="breadcrumb-item"><a href="./index.html">Withdrawal</a></li>
+              <li class="breadcrumb-item breadcrumb-size pb-0 active text-capitalize tx-gray-500 " aria-current="page">Effect Withdrawal</li>
 
             </ol>
           </nav>
@@ -174,7 +174,7 @@
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
           <button onclick="goBack()" class="btn btn-back tx-14 tx-semibold pd-l-0 pd-y-0"><i data-feather="arrow-left"></i> Go Back</button>
-          <p class="tx-32 tx-bold mb-0">Issue Recall</p>
+          <p class="tx-32 tx-bold mb-0">Issue Withdrawal</p>
         
           <div>
             <ul class="nav nav-line" id="myTab" role="tablist">
@@ -194,7 +194,7 @@
                     <form>
                       <div class="row">
                         <div class="col-lg-3 col-12  mg-md-t-0">
-                          <p class="tx-24 mb-0">Recall Details</p>
+                          <p class="tx-24 mb-0">Withdrawal Details</p>
                         </div>
                         <div class="col-lg-9 col-12 mg-t-20 mg-md-t-0">
                             <div class="form-group">
@@ -219,7 +219,7 @@
                       <hr>
                       <div class="row">
                         <div class="col-lg-3 col-12  mg-md-t-20">
-                          <p class="tx-24">Suspended Employees</p>
+                          <p class="tx-24">Employees Involved </p>
                         </div>
                         <div class="col-lg-9 col-12 mg-t-20">
                           <div class="form-row">
@@ -235,7 +235,7 @@
                                   <option value="4">Olu Pascal</option>
                                 </select>
                                 <p class="mb-0 tx-14 d-flex justify-content-between mg-t-10">
-                                  <span class="tx-grey-900 tx-semibold">Remark Added</span>
+                                  <span class="tx-grey-900 tx-semibold">Recognition Issuance Selected</span>
                                   <button class=" btn tx-primary tx-12 tx-semibold d-block pd-y-0" type="button" data-toggle="modal" data-target="#editModal">EDIT</button>
                                </p>
                               </div>
@@ -271,7 +271,7 @@
                 </div>
                 <div class="modal-footer bd-t-0 mg-t-30 pd-x-0">
                   <button type="button" class="btn btn-outlined-primary tx-semibold">Clear Contents</button>
-                  <button type="button" class="btn btn-primary pd-x-40 tx-semibold" data-toggle="modal" data-target="#issueModal" data-dismiss="modal">Effect Recall</button>
+                  <button type="button" class="btn btn-primary pd-x-40 tx-semibold" data-toggle="modal" data-target="#issueModal" data-dismiss="modal">Effect Withdrawal</button>
                 </div>
                 
               </div>
@@ -414,7 +414,7 @@
       <div class="modal-content">
         <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
           <div>
-            <p class="tx-22 tx-semibold modal-title mb-0" id="remarkModalLabel">Add Recall Remark</p>
+            <p class="tx-22 tx-semibold modal-title mb-0" id="remarkModalLabel">Select Issuance to Withdraw</p>
           </div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -435,17 +435,19 @@
           </div>
           <form action="">
             <div class="form-group">
-              <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Salary Impact</label>
-              <div class="card card-body radio-active pd-x-10 pd-y-10" >
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1">
-                  <label class="custom-control-label" for="customCheck1">Refund Withheld Salaries</label>
-                </div>
-              </div>
+              <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Issuance</label>
+              <select class="custom-select" id="sanctionType">
+                <option selected>Recognition - Exemplary performance</option>
+                <option value="Caution">Recognition - Long service award</option>
+                <option value="Fixed">Sanction - Repeated lateness to duty post</option>
+                <option value="Caution">Sanction - Alleged failure of integrity test</option>
+                <option value="Caution">Sanction - Misrepresentation of information</option>
+              </select>
             </div>
             
               <div class="form-group">
-                <label for="formGroupExampleInput" class="d-block tx-bold mb-0 tx-medium tx-14 tx-grey-900">Remark (body of recall letter)</label>
+                <label for="formGroupExampleInput" class="d-block tx-bold mb-0 tx-medium tx-14 tx-grey-900">Remarks/Comments</label>
+                <p class="tx-12 tx-grey-600 mb-1">Involved staff will receive this comment as an email</p>
                 <div id="toolbar-container">
                   <div id="editor-container" class="ht-150">  </div>
                 </div>
@@ -455,7 +457,7 @@
         </div>
         <div class="modal-footer bg-modal-footer">
           <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal"data-dismiss="modal" >Save Remark</button>
+          <button type="button" class="btn btn-primary btn-sm pd-x-50 tx-semibold" data-toggle="modal" data-target="#successModal"data-dismiss="modal" >Save</button>
         </div>
       </div>
     </div>
@@ -467,7 +469,7 @@
       <div class="modal-content">
         <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
           <div>
-            <p class="tx-22 tx-semibold modal-title mb-0" id="remarkModalLabel">Edit Recall Remark</p>
+            <p class="tx-22 tx-semibold modal-title mb-0" id="remarkModalLabel">Edit Issuance to Withdraw</p>
           </div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -488,26 +490,29 @@
           </div>
           <form action="">
             <div class="form-group">
-              <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14">Salary Impact</label>
-              <div class="card card-body radio-active pd-x-10 pd-y-10" >
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck2" checked>
-                  <label class="custom-control-label" for="customCheck2">Refund Withheld Salaries</label>
-                </div>
-              </div>
+              <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-medium tx-14 tx-grey-900">Issuance</label>
+              <select class="custom-select" id="sanctionType">
+                <option selected>Recognition - Exemplary performance</option>
+                <option value="Caution">Recognition - Long service award</option>
+                <option value="Fixed">Sanction - Repeated lateness to duty post</option>
+                <option value="Caution">Sanction - Alleged failure of integrity test</option>
+                <option value="Caution">Sanction - Misrepresentation of information</option>
+              </select>
             </div>
             
               <div class="form-group">
-                <label for="formGroupExampleInput" class="d-block tx-bold mb-0 tx-medium tx-14 tx-grey-900">Remark (body of recall letter)</label>
+                <label for="formGroupExampleInput" class="d-block tx-bold mb-0 tx-medium tx-14 tx-grey-900">Remarks/Comments</label>
+                <p class="tx-12 tx-grey-600 mb-1">Involved staff will receive this comment as an email</p>
                 <div id="toolbar-container">
-                  <div id="editor-container1" class="ht-150">  </div>
+                  <div id="editor-containerr" class="ht-150">  </div>
                 </div>
               </div>
+
           </form>
         </div>
         <div class="modal-footer bg-modal-footer">
           <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal"data-dismiss="modal" >Save Remark</button>
+          <button type="button" class="btn btn-primary btn-sm pd-x-50 tx-semibold" data-toggle="modal" data-target="#successModal"data-dismiss="modal" >Save</button>
         </div>
       </div>
     </div>
@@ -520,8 +525,8 @@
       <div class="modal-content">
         <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
           <div>
-            <p class="tx-22 tx-semibold modal-title mb-0" id="issueModalLabel">Manage Notification Settings</p>
-            <p class="tx-secondary mb-0">This process issues inputted recognition to staff and notifiies selected stakeholders</p>
+            <p class="tx-22 tx-semibold modal-title mb-0" id="issueModalLabel">Manage Withdrawal Notification</p>
+            <p class="tx-secondary mb-0">Select what stakeholders to notify</p>
           </div>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -572,7 +577,7 @@
           </form>
         <div class="modal-footer bg-modal-footer">
           <button type="button" class="btn btn-outlined-primary btn-sm pd-x-30 tx-semibold" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary btn-sm pd-x-30 tx-semibold" data-toggle="modal" data-target="#successModal"data-dismiss="modal" > Issue Recognition</button>
+          <button type="button" class="btn btn-primary btn-sm pd-x-30 tx-semibold" data-toggle="modal" data-target="#successModal"data-dismiss="modal" >Effect Withdrawal</button>
         </div>
       </div>
     </div>
@@ -594,7 +599,7 @@
                       <img src="../../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
                     </div>
                     <div class="mg-l-5">
-                      <p class="tx-22 tx-bold mb-0 pd-t-20">Recall Effected Successfully</p>
+                      <p class="tx-22 tx-bold mb-0 pd-t-20">Withdrawal Effected Successfully</p>
                     </div>
                   </div>
                   <hr class="mg-t-10"/>
