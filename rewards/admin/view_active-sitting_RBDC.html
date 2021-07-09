@@ -176,7 +176,7 @@
           <div class="d-flex justify-content-between">
              <p class="tx-28 tx-bold mb-0 mg-t-10">Sitting Details</p>
             <div>
-              <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#summaryModal">Send for Final Approval</button>
+              <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#summaryModal">Re-Submit Summary Report</button>
             </div>
           </div>
         <hr class="mg-t-5">
@@ -491,13 +491,13 @@
                           <p class="tx-14 tx-grey-600 bd-r mb-0">Panel Members - <span class="tx-bold">5</span></p>
                         </div>
                         <div class="col-md-2 col-6 pd-md-r-0 mg-t-10 mg-md-t-0">
-                          <p class="tx-14 tx-grey-600 bd-md-r mb-0">Pending -  <span class="tx-bold">5</span></p>
+                          <p class="tx-14 tx-grey-600 bd-md-r mb-0">Pending -  <span class="tx-bold">2</span></p>
                         </div>
                         <div class="col-md-2 col-6 pd-md-r-0 mg-t-10 mg-md-t-0">
-                          <p class="tx-14 tx-grey-600 bd-r mb-0">Accepted - <span class="tx-bold">0</span></p>
+                          <p class="tx-14 tx-grey-600 bd-r mb-0">Accepted - <span class="tx-bold">2</span></p>
                         </div>
                         <div class="col-md-2 col-6 pd-md-r-0 mg-t-10 mg-md-t-0">
-                          <p class="tx-14 tx-grey-600 mb-0">Disputed -   <span class="tx-bold">0</span></p>
+                          <p class="tx-14 tx-grey-600 mb-0">Disputed -   <span class="tx-bold">1</span></p>
                         </div>
                       </div>
                       
@@ -519,12 +519,13 @@
                           <div class="col-md-5 mg-md-t-8 mg-b-8 mg-md-b-0 mg-t-10">
                             <div class="d-flex justify-content-between">
                               <div>
-                                <span class="badge bg-green-50 tx-green tx-uppercase tx-semibold mg-r-10">Accepted</span>
+                                <span class="badge bg-red-50  tx-red-500 tx-uppercase tx-semibold mg-r-10">DISPUTED</span>
                               </div>
                               <span class="tx-12 tx-secondary mb-0">1 hago</span>
                             </div>
                           </div>
                         </div>
+                        <p class="tx-13 mg-b-10 tx-grey-600  mg-t-10 col-md-11 offset-md-1 pd-x-0">Synergistically seize resource maximizing web services before progressive data. Dramatically plagiarize interoperable portals whereas open-source ROI. Professionally provide access.</p>
                       </div>
                       <hr class="mg-y-5"/>
                       <div class="mg-b-10">
@@ -567,9 +568,9 @@
                           <div class="col-md-5 mg-md-t-8 mg-b-8 mg-md-b-0 mg-t-10">
                             <div class="d-flex justify-content-between">
                               <div>
-                                <span class="badge bg-green-50 tx-green tx-uppercase tx-semibold mg-r-10">Accepted</span>
+                                <span class="badge bg-yellow-75 tx-neutral tx-uppercase tx-semibold mg-r-10">pending</span>
                               </div>
-                              <span class="tx-12 tx-secondary mb-0">16h ago</span>
+                              <button type="button" class="btn tx-primary tx-semibold pd-y-0 pd-x-0 tx-12">Send Reminder</button>
                             </div>
                           </div>
                         </div>
@@ -592,9 +593,9 @@
                           <div class="col-md-5 mg-md-t-8 mg-b-8 mg-md-b-0 mg-t-10">
                             <div class="d-flex justify-content-between">
                               <div>
-                                <span class="badge bg-green-50 tx-green tx-uppercase tx-semibold mg-r-10">Accepted</span>
+                                <span class="badge bg-yellow-75 tx-neutral tx-uppercase tx-semibold mg-r-10">pending</span>
                               </div>
-                              <span class="tx-12 tx-secondary mb-0">17h ago</span>
+                              <button type="button" class="btn tx-primary tx-semibold pd-y-0 pd-x-0 tx-12">Send Reminder</button>
                             </div>
                           </div>
                         </div>
@@ -664,12 +665,12 @@
        
            <!--Summary Modal -->
            <div class="modal fade" id="summaryModal" tabindex="-1" aria-labelledby="summaryModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
                   <div>
-                    <p class="tx-22 tx-semibold modal-title" id="previewModalLabel">Send for Final Approval</p>
-                    <p class="tx-12 tx-secondary mb-0">Send DC Summary report to assigned authorizer.</p>
+                    <p class="tx-22 tx-semibold modal-title" id="previewModalLabel">Re-submit Summary Report</p>
+                    <p class="tx-12 tx-secondary mb-0">Once submitted, panel members will be notified for feedback..</p>
                   </div>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -679,18 +680,67 @@
                 <div class="modal-body pd-md-x-30 pd-x-20">
                   <form action="" method="post">
                     <div class="form-group">
-                      <label for="formGroupExampleInput" class="d-block tx-medium mb-1 tx-grey-600 tx-14">Assigned Authorizer</label>
-                      <div class="d-flex">
-                        <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
-                        <div class="mg-l-10 pd-t-3">
-                          <p class="tx-14 mb-0">Siaka Essien<span class="tx-secondary tx-12">(A28922)</span></p>
-                          <p class="tx-12 tx-secondary mb-0">DH, HRBP, North Bank</p>
-                        </div>
+                      <label for="formGroupExampleInput" class="d-block tx-medium mb-1 tx-grey-900 tx-14">Microsoft Word Online Report</label>
+                      <input type="text" class="form-control" placeholder="Paste report link here">
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput" class="d-block tx-medium mb-1 tx-grey-900 tx-14">Case Summary</label>
+                      <div id="toolbar-container">
+                        <div id="editor-container" class="ht-150">  </div>
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="formGroupExampleInput" class="d-block tx-medium mb-1 tx-grey-900 tx-14">Comments/Remarks</label>
-                      <textarea name="" id="" class="form-control" rows="3" placeholder="Describe the request here"></textarea>
+                      <label for="formGroupExampleInput" class="d-block tx-medium mb-1 tx-grey-900 tx-14">Infraction Policy</label>
+                      <input type="text" class="form-control" placeholder="-- Enter here --">
+                    </div>
+                    <div class="mg-b-20">
+                      <label for="formGroupExampleInput" class="d-block tx-semibold mb-0 tx-grey-600 tx-uppercase tx-12">Select outcome for DC Summary</label>
+                      <div class="card bg-gray-50 mg-b-10">
+                        <div class="card-body pd-x-15 pd-y-10">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="d-flex">
+                                <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                                <div class="ml-3 pd-t-3">
+                                  <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                  <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 mg-t-10 mg-md-t-0 pd-t-2">
+                              <select class="custom-select">
+                                <option selected>Select Outcome</option>
+                                <option value="1">Outcome 1</option>
+                                <option value="2">Outcome 2</option>
+                                <option value="3">Outcome 3</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card bg-gray-50 mg-b-10">
+                        <div class="card-body pd-x-15 pd-y-10">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="d-flex">
+                                <div class="avatar avatar"><img src="../../../assets/img/activity1.png" class="rounded-circle" alt=""></div>
+                                <div class="ml-3 pd-t-3">
+                                  <p class="tx-14 mb-0">Bayo Adeosun <span class="tx-grey-500 tx-12">(A28922)</span></p>
+                                  <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6 mg-t-10 mg-md-t-0 pd-t-2">
+                              <select class="custom-select">
+                                <option selected>Select Outcome</option>
+                                <option value="1">Outcome 1</option>
+                                <option value="2">Outcome 2</option>
+                                <option value="3">Outcome 3</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </form>
                   
@@ -698,7 +748,7 @@
                 </div>
                 <div class="modal-footer bg-modal-footer">
                   <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal" data-dismiss="modal">Submit Request</button>
+                  <button type="button" class="btn btn-primary btn-sm pd-x-20 tx-semibold" data-toggle="modal" data-target="#successModal" data-dismiss="modal">Submit Summary</button>
                 </div>
               </div>
             </div>
@@ -720,11 +770,11 @@
                         <img src="../../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
                       </div>
                       <div class="mg-l-10">
-                        <p class="tx-22 tx-bold mb-0 pd-t-20">DC Summary sent to Authorizer</p>
+                        <p class="tx-22 tx-bold mb-0 pd-t-20">Summary submitted successfully</p>
                       </div>
                     </div>
                     <hr class="mg-t-10"/>
-                    <p class="tx-14">The authorizer has been notified. Expect response soon. </p>
+                    <p class="tx-14">Selected panel members have been notified, expect responses soon. Manage responses and further approval in the ACTIVE tab. </p>
                   </div>
                   <div class="modal-footer bg-modal-footer">
                     <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
