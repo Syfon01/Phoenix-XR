@@ -136,8 +136,8 @@
           <li class="nav-item with-sub tx-14 active show">
             <a href="" class="nav-link"><img src="../../../assets/img/icon/litigation.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Litigation</span></a>
               <ul>  
-                <li class="active"><a href="./index.html">Litigation Requests</a></li>
-                <li><a href=".reviewed-litigation.html">Reviewed Litigations</a></li>
+                <li><a href="./index.html">Litigation Requests</a></li>
+                <li  class="active"><a href="./reviewed-litigation.html">Reviewed Litigations</a></li>
               </ul>
           </li>
           <li class="nav-item with-sub tx-14">
@@ -150,6 +150,7 @@
           </li>
          
         </ul>
+       
       </div>
     </aside>
 
@@ -159,8 +160,8 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
               <li class="breadcrumb-item"><a href="./index.html">Litigation</a></li>
-              <li class="breadcrumb-item"><a href="./index.html">Litigation Requests</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Request Details</li>
+              <li class="breadcrumb-item"><a href="./index.html">Reviewed Litigations</a></li>
+              <li class="breadcrumb-item active" aria-current="page">View Litigation</li>
             </ol>
           </nav>
           <div>
@@ -172,87 +173,98 @@
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
           <button onclick="goBack()" class="btn btn-back tx-14 tx-semibold pd-l-0 pd-y-0"><i data-feather="arrow-left"></i> Go Back</button>
-        <p class="tx-28 tx-bold mb-0 mg-t-10">Review Litigation Request</p>
+        <p class="tx-28 tx-bold mb-0 mg-t-10">View  Conluded Litigation</p>
         <hr class="mg-t-5">
         <div class="row mg-t-25">
           <div class="col-md-8 col-12 order-2 order-md-1 mg-t-20 mg-md-t-0">
-            <div class="card">
-              <div class="card-header bg-grey-100 pd-y-15 pd-md-x-25 pd-x-20 pd-b-10">
-                <div class="d-flex justify-content-between">
-                  <p class="tx-14 mb-0 tx-semibold modal-title">Request Details</p>
-                  <div>
-                    <!-- <button class="btn btn-outlined-primary pd-y-3 tx-semibold">Edit</button> -->
-                  </div>
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header bg-grey-100 pd-y-10 pd-md-x-25 pd-x-20 pd-b-10" id="headingOne">
+                  <div class="d-flex collapse-btn"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <p class="tx-12 font-weight-bold mb-0"><i class="fas fa-angle-down fa-2x mr-2 tx-muted"></i></p>
+                    <p class="tx-14 mb-0 tx-semibold modal-title">Request Details</p>
+                  </div>                   
                 </div>
-              </div> 
-              <div class="card-body pd-md-x-25 pd-x-20">
+            
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body pd-md-x-25 pd-x-20">
                 
-                <div class="mg-b-25">
-                  <div class="row justify-content-between">
-                    <div class="col-md-12 col-12 mg-t-10 mg-md-t-0">
-                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">TITLE / SUBJECT</label>
-                      <p class="tx-14 tx-grey-900 mb-0">Withdrawal of Credit Recovery suspension</p>
-                    </div>
+                    <div class="mg-b-25">
+                      <div class="row justify-content-between">
+                        <div class="col-md-12 col-12 mg-t-10 mg-md-t-0">
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">TITLE / SUBJECT</label>
+                          <p class="tx-14 tx-grey-900 mb-0">Withdrawal of Credit Recovery suspension</p>
+                        </div>
+                      </div>
+                     </div>
+                    
+                  <div class="mg-b-25">
+                    <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">JUSTIFICATION FOR RECALL</label>
+                    <p class="tx-14 tx-grey-900">Conveniently leverage other's user friendly benefits for progressive users. Objectively initiate leveraged channels after interoperable relationships. Proactively disseminate cross-media total linkage vis-a-vis vertical infrastructures. </p>
+                    <p class="tx-14 tx-grey-900">Uniquely iterate proactive functionalities with premium niche markets. Synergistically disseminate wireless bandwidth and business testing. </p>
                   </div>
-                 </div>
-                
-              <div class="mg-b-25">
-                <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">JUSTIFICATION FOR RECALL</label>
-                <p class="tx-14 tx-grey-900">Conveniently leverage other's user friendly benefits for progressive users. Objectively initiate leveraged channels after interoperable relationships. Proactively disseminate cross-media total linkage vis-a-vis vertical infrastructures. </p>
-                <p class="tx-14 tx-grey-900">Uniquely iterate proactive functionalities with premium niche markets. Synergistically disseminate wireless bandwidth and business testing. </p>
-              </div>
-                  
-              <div class="mg-b-25">
-                <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached FILES</label>
-                <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
-                  <div class="row justify-content-between">
-                    <div class="col-9 col-md-9">
-                      <div class="d-flex">
-                          <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
-                        <div>
-                          <p class="tx-14 tx-grey-900 mb-0">Court_Case_for_ExStaff_Onipede Awodele.pdf</p>
-                          <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                      
+                  <div class="mg-b-25">
+                    <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached FILES</label>
+                    <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                      <div class="row justify-content-between">
+                        <div class="col-9 col-md-9">
+                          <div class="d-flex">
+                              <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                            <div>
+                              <p class="tx-14 tx-grey-900 mb-0">Court_Case_for_ExStaff_Onipede Awodele.pdf</p>
+                              <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3 col-md-2 pd-md-l-0" id="show_1">
+                          <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 float-md-right"> View</button>
                         </div>
                       </div>
                     </div>
-                    <div class="col-3 col-md-2 pd-md-l-0" id="show_1">
-                      <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 float-md-right"> View</button>
-                    </div>
                   </div>
+                </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-            <div class="card mg-t-25">
-              <div class="card-body">
-                <div class="mg-b-25">
-                  <p class="tx-18 tx-semibold modal-title mb-0" id="appealModalLabel">Your Response</p>
-                  <p class="tx-grey-500 tx-12 mb-0">Return feedback to the Work Ethics Team</p>
-                </div>
-                <form action="">
-                  <div class="form-group">
-                    <label for="formGroupExampleInput" class="d-block tx-bold mb-0 tx-medium tx-14 tx-grey-900">Remarks/Comments</label>
-                      <p class="tx-grey-600 tx-12 mg-b-8">Litigation team will receive this comment as an email</p>
-                    <div id="toolbar-container">
-                      <div id="editor-container" class="ht-100">  </div>
-                    </div>
+              <div class="card mg-t-25">
+                <div class="card-header bg-grey-100 pd-y-10 pd-md-x-25 pd-x-20 pd-b-10" id="headingTwo">
+                  <div class="d-flex collapse-btn"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                    <p class="tx-12 font-weight-bold mb-0 panel-title"><i class="fas fa-angle-down fa-2x mr-2"></i></p>
+                    <p class="tx-14 mb-0 tx-semibold modal-title">Your Response</p>
                   </div>
-
-                    <div class="form-group">
-                      <label for="formGroupExampleInput2" class="d-block tx-medium mb-1">Attach Files. <span class="tx-grey-600 tx-12">Additional information for Litigation Team (optional)</span> </label>
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile">
-                        <label class="custom-file-label" for="customFile"><img src="../../../assets/img/icon/upload.svg" class="mr-2"> Drop files here</label>
+                </div>
+                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body pd-md-x-25 pd-x-20">
+                  <div class="mg-b-25">
+                    <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Remarks/Comment</label>
+                    <p class="tx-14 tx-grey-900">Conveniently leverage other's user friendly benefits for progressive users. Objectively initiate leveraged channels after interoperable relationships. Proactively disseminate cross-media total linkage vis-a-vis vertical infrastructures. </p>
+                    <p class="tx-14 tx-grey-900">Uniquely iterate proactive functionalities with premium niche markets. Synergistically disseminate wireless bandwidth and business testing. </p>
+                  </div>
+                      
+                  <div class="mg-b-25">
+                    <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached FILES</label>
+                    <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                      <div class="row justify-content-between">
+                        <div class="col-9 col-md-9">
+                          <div class="d-flex">
+                              <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                            <div>
+                              <p class="tx-14 tx-grey-900 mb-0">Evidence_of_threatening.pdf</p>
+                              <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3 col-md-2 pd-md-l-0" id="show_1">
+                          <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 float-md-right"> View</button>
+                        </div>
                       </div>
                     </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary btn-sm pd-x-30 tx-semibold" data-toggle="modal" data-target="#successModal"> Submit Response</button>
+                  </div>
+                </div>
+                </div>
               </div>
             </div>
-        </div>
+         </div>
 
           <div class="col-md-4 col-12 order-1 order-md-2">
             <div class="card card-body pd-y-0 pd-x-15 bg-transparent bd-0">
@@ -261,7 +273,7 @@
                   <p class="tx-12 tx-grey-500 mb-0 tx-medium">Status</p>
                 </div>
                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
-                <span class="badge bg-yellow tx-11 tx-semibold">REQUIRING ATTENTION</span>
+                <span class="badge bg-neutral tx-11 tx-semibold">CONCLUDED</span>
                </div>
               </div>
               <div class="row bd-b pd-y-10">
@@ -274,18 +286,32 @@
               </div>
               <div class="row bd-b pd-y-10">
                 <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
-                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Requested by</p>
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium pd-t-5">Requested by</p>
                 </div>
                 <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
                   <p class="tx-12 mb-0">Ada James</p>
                 </div> 
               </div>
-          </div>
+              <div class="row bd-b pd-y-10">
+                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Reviewed on</p>
+                </div>
+                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
+                  <p class="tx-12 mb-0">Fri Feb 26, 2021</p>
+                </div> 
+              </div>
+              <div class="row bd-b pd-y-10">
+                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Reviewed By</p>
+                </div>
+                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
+                  <p class="tx-12 mb-0">Toyin Sowore</p>
+                </div> 
+              </div>
+            </div>
           </div>
         </div>
 
-       
-        
           <!--Success Modal -->
           <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -309,7 +335,7 @@
                   <p class="tx-14">Notification and email has been sent to litigation team. Request has been sent to your reviewed litigations.</p>
                 </div>
                 <div class="modal-footer bg-modal-footer">
-                  <a href="./review-litigation-submit.html" type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</a>
+                  <a href="./review-litigation-submit.html" class="btn btn-outlined-primary btn-sm pd-x-40">Close</a>
                 </div>
               </div>
             </div>
