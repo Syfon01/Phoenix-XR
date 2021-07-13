@@ -16,7 +16,9 @@
 
     <link href="../../../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="../../../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="../../../assets/lib/select2/css/select2.min.css" rel="stylesheet">
 
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <!-- Page CSS -->
     <link rel="stylesheet" href="../../../assets/css/admin.css">
     <link rel="stylesheet" href="../../../assets/css/dashforge.css">
@@ -58,7 +60,7 @@
           <div class="collapse" id="loggedinMenu">
             <ul class="nav nav-aside mg-b-0">
               <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="edit"></i> <span>Edit Completed</span></a></li>
-              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="user"></i> <span>Review Completed</span></a></li>
+              <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="user"></i> <span>View Completed</span></a></li>
               <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="settings"></i> <span>Account Settings</span></a></li>
               <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="help-circle"></i> <span>Help Center</span></a></li>
               <li class="nav-item"><a href="" class="nav-link text-gray-700"><i data-feather="log-out"></i> <span>Sign Out</span></a></li>
@@ -124,18 +126,18 @@
               <li><a href="../appeal/resolved-appeal.html">Resolved Appeals</a></li>
             </ul>
           </li>
-          <li class="nav-item with-sub tx-14 active show">
+          <li class="nav-item with-sub tx-14">
             <a href="" class="nav-link"><img src="../../../assets/img/icon/grievance.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Grievances</span></a>
               <ul>  
-                <li><span></span><a href="./index.html">Grievance Requests</a></li>
-                <li class="active"><a href="./resolved-grievance.html">Resolved Grievances</a></li>
+                <li><span></span><a href="../grievance/index.html">Grievance Requests</a></li>
+                <li><a href="../grievance/resolved-grievance.html">Resolved Grievances</a></li>
               </ul>
           </li>
-          <li class="nav-item with-sub tx-14">
+          <li class="nav-item with-sub tx-14 active show">
             <a href="" class="nav-link"><img src="../../../assets/img/icon/litigation.svg" class="wd-15 ht-15 mr-2" alt="" srcset=""> <span>Litigation</span></a>
               <ul>  
-                <li><span></span><a href="../litigation/index.html">Litigation Requests</a></li>
-                <li><a href="../litigation/reviewed-litigation.html">Reviewed Litigations</a></li>
+                <li class="active"><a href="./index.html">Litigation Requests</a></li>
+                <li><a href=".reviewed-litigation.html">Reviewed Litigations</a></li>
               </ul>
           </li>
           <li class="nav-item with-sub tx-14">
@@ -156,9 +158,9 @@
         <div class="d-flex justify-content-between w-100">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-style1 pt-3 mg-b-0">
-              <li class="breadcrumb-item"><a href="./index.html">Grievances</a></li>
-              <li class="breadcrumb-item"><a href="./resolved-grievance.html">Resolved Grievances</a></li>
-              <li class="breadcrumb-item breadcrumb-size pb-0 active text-capitalize tx-gray-500 " aria-current="page">View Details</li>
+              <li class="breadcrumb-item"><a href="./index.html">Litigation</a></li>
+              <li class="breadcrumb-item"><a href="./index.html">Litigation Requests</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Request Details</li>
             </ol>
           </nav>
           <div>
@@ -170,12 +172,7 @@
       <div class="content-body secondary-bg">
         <div class="container pd-x-0">
           <button onclick="goBack()" class="btn btn-back tx-14 tx-semibold pd-l-0 pd-y-0"><i data-feather="arrow-left"></i> Go Back</button>
-          <div class="d-flex justify-content-between">
-             <p class="tx-28 tx-bold mb-0 mg-t-10">View Grievance Request</p>
-            <div>
-              <!-- <button type="button" class="btn btn-primary pd-x-30 mg-r-10"  data-toggle="modal" data-target="#withdrawModal">Withdraw</button> -->
-            </div>
-          </div>
+        <p class="tx-28 tx-bold mb-0 mg-t-10">Review Litigation Request</p>
         <hr class="mg-t-5">
         <div class="row mg-t-25">
           <div class="col-md-8 col-12 order-2 order-md-1 mg-t-20 mg-md-t-0">
@@ -190,44 +187,23 @@
             
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                   <div class="card-body pd-md-x-25 pd-x-20">
-                    <div class="mg-b-25">
-                      <label for="formGroupExampleInput" class="d-block tx-semibold mb-1 tx-grey-600 tx-uppercase tx-12">INVOLVED Employee</label>
-                        <div class="mg-b-25 card card-body bg-grey-50 pd-15">
-                          <div class="row justify-content-between">
-                            <div class="col-md-6 col-12">
-                              <div class="d-flex">
-                                <div class="avatar avatar"><img src="../../../assets/img/activity3.png" class="rounded-circle" alt=""></div>
-                                <div class="ml-3 pd-t-3">
-                                  <p class="tx-14 mb-0">Tayo Taylor<span class="tx-grey-500 tx-12">(A28922)</span></p>
-                                  <p class="tx-12 tx-grey-500 mb-0">Team Member, Operations Control</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-4 col-12 mg-t-10 mg-md-t-0">
-                              <a href="../view_work-history.html" class="d-block ml-auto btn btn-outlined-primary pd-x-10 pd-y-5 tx-grey-700 tx-12 tx-semibold float-md-right"> View Work Ethics History</a>
-                            </div>
-                          </div>
-                         </div>
-                    </div>
-                  
+                
                     <div class="mg-b-25">
                       <div class="row justify-content-between">
                         <div class="col-md-12 col-12 mg-t-10 mg-md-t-0">
-                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">TITLE</label>
-                          <p class="tx-14 tx-grey-900 mb-0">Remarkable Stewardship</p>
+                          <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">TITLE / SUBJECT</label>
+                          <p class="tx-14 tx-grey-900 mb-0">Withdrawal of Credit Recovery suspension</p>
                         </div>
                       </div>
                      </div>
-    
-                    
                     
                   <div class="mg-b-25">
-                    <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">DESCRIPTION</label>
+                    <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">JUSTIFICATION FOR RECALL</label>
                     <p class="tx-14 tx-grey-900">Conveniently leverage other's user friendly benefits for progressive users. Objectively initiate leveraged channels after interoperable relationships. Proactively disseminate cross-media total linkage vis-a-vis vertical infrastructures. </p>
                     <p class="tx-14 tx-grey-900">Uniquely iterate proactive functionalities with premium niche markets. Synergistically disseminate wireless bandwidth and business testing. </p>
                   </div>
                       
-                  <div class="mg-b-10">
+                  <div class="mg-b-25">
                     <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached FILES</label>
                     <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
                       <div class="row justify-content-between">
@@ -235,7 +211,7 @@
                           <div class="d-flex">
                               <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
                             <div>
-                              <p class="tx-14 tx-grey-900 mb-0">Evidence_of_threatening.pdf</p>
+                              <p class="tx-14 tx-grey-900 mb-0">Court_Case_for_ExStaff_Onipede Awodele.pdf</p>
                               <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
                             </div>
                           </div>
@@ -249,44 +225,41 @@
                 </div>
                 </div>
               </div>
-              <div class="card mg-t-15">
+              <div class="card mg-t-25">
                 <div class="card-header bg-grey-100 pd-y-10 pd-md-x-25 pd-x-20 pd-b-10" id="headingTwo">
                   <div class="d-flex collapse-btn"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
                     <p class="tx-12 font-weight-bold mb-0 panel-title"><i class="fas fa-angle-down fa-2x mr-2"></i></p>
-                    <p class="tx-14 mb-0 tx-semibold modal-title">Resolution</p>
+                    <p class="tx-14 mb-0 tx-semibold modal-title">Your Response</p>
                   </div>
                 </div>
                 <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
                   <div class="card-body pd-md-x-25 pd-x-20">
-                    <div class="mg-b-25">
-                        <div class="">
-                        <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Resolution comment</label>
-                      <p class="tx-14 tx-grey-900">Conveniently leverage other's user friendly benefits for progressive users. Objectively initiate leveraged channels after interoperable relationships. 
-                        Proactively disseminate cross-media total linkage vis-a-vis vertical infrastructures.  </p>
-                        </div>
-                    </div>
-                    
-                    <div class="mg-b-10">
-                      <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached FILES</label>
-                      <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
-                        <div class="row justify-content-between">
-                          <div class="col-9 col-md-9">
-                            <div class="d-flex">
-                                <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
-                              <div>
-                                <p class="tx-14 tx-grey-900 mb-0">Evidence_of_threatening.pdf</p>
-                                <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
-                              </div>
+                  <div class="mg-b-25">
+                    <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Remarks/Comment</label>
+                    <p class="tx-14 tx-grey-900">Conveniently leverage other's user friendly benefits for progressive users. Objectively initiate leveraged channels after interoperable relationships. Proactively disseminate cross-media total linkage vis-a-vis vertical infrastructures. </p>
+                    <p class="tx-14 tx-grey-900">Uniquely iterate proactive functionalities with premium niche markets. Synergistically disseminate wireless bandwidth and business testing. </p>
+                  </div>
+                      
+                  <div class="mg-b-25">
+                    <label for="formGroupExampleInput" class="d-block tx-bold mb-1 tx-grey-600 tx-uppercase tx-12">Attached FILES</label>
+                    <div class="card card-body pd-x-15 pd-y-9 bg-grey-50">
+                      <div class="row justify-content-between">
+                        <div class="col-9 col-md-9">
+                          <div class="d-flex">
+                              <img src="../../../assets/img/icon/pdf-file.svg" class="img-fluid mr-2" alt="" srcset="">
+                            <div>
+                              <p class="tx-14 tx-grey-900 mb-0">Court_Case_for_ExStaff_Onipede Awodele.pdf</p>
+                              <label for="" class="tx-12 tx-grey-500 mb-0">Mar 4, 2021 9:19 AM <span class="ml-4">453KB</span></label>
                             </div>
                           </div>
-                          <div class="col-3 col-md-2 pd-md-l-0" id="show_1">
-                            <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 float-md-right"> View</button>
-                          </div>
+                        </div>
+                        <div class="col-3 col-md-2 pd-md-l-0" id="show_1">
+                          <button class="btn btn-outlined-primary btn-sm pd-x-10 pd-y-4 tx-bold mg-t-5 float-md-right"> View</button>
                         </div>
                       </div>
                     </div>
-                  
                   </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -299,7 +272,7 @@
                   <p class="tx-12 tx-grey-500 mb-0 tx-medium">Status</p>
                 </div>
                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
-                <span class="badge badge-green tx-11 tx-semibold">RESOLVED</span>
+                <span class="badge badge-green tx-11 tx-semibold">REVIEWED</span>
                </div>
               </div>
               <div class="row bd-b pd-y-10">
@@ -312,95 +285,61 @@
               </div>
               <div class="row bd-b pd-y-10">
                 <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
-                  <p class="tx-12 tx-grey-500 mb-0 tx-medium pd-t-5">Resolved by</p>
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium pd-t-5">Requested by</p>
                 </div>
                 <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
-                  <p class="tx-12 mb-0">Toyin Sowore</p>
+                  <p class="tx-12 mb-0">Ada James</p>
                 </div> 
               </div>
               <div class="row bd-b pd-y-10">
                 <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
-                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Date Resolved</p>
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Reviewed on</p>
                 </div>
                 <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
                   <p class="tx-12 mb-0">Fri Feb 26, 2021</p>
+                </div> 
+              </div>
+              <div class="row bd-b pd-y-10">
+                <div class="col-md-6 col-5 mg-b-15 mg-md-b-0">
+                  <p class="tx-12 tx-grey-500 mb-0 tx-medium">Reviewed By</p>
+                </div>
+                <div class="col-md-6 col-7 mg-b-15 mg-md-b-0 tx-right">
+                  <p class="tx-12 mb-0">Toyin Sowore</p>
                 </div> 
               </div>
             </div>
           </div>
         </div>
 
-           <!--Delete memeber Modal  -->
-           <div class="modal fade" id="deleteMemberModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+          <!--Success Modal -->
+          <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
-                <div class="modal-header pd-t-25 pd-md-x-30 pd-x-20 pd-b-10">
-                  <div>
-                    <p class="tx-22 tx-semibold modal-title" id="excelModalLabel">Remove Panelist from Sitting</p>
-                  </div>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div> 
-  
-                <div class="modal-body pd-md-x-30 pd-x-20">
-                  <form action="" method="post">
-                  <div class="form-group">
-                    <p class="tx-12 tx-uppercase tx-semibold mg-b-8 tx-grey-600">YOU ARE ABOUT TO REMOVE THIS PANEL MEMBER</p>
-                    <div class="d-flex">
-                      <div class="avatar avatar-md mg-r-10 "><img src="../../../assets/img/activity3.png" class="rounded-circle " alt=""></div>
-                      <div>
-                        <p class="tx-14 mb-0 pd-t-3">Ahmed Hassan <span class="tx-12 tx-secondary">(A14922)</span></p>
-                          <label for="" class="tx-12 mb-0 tx-grey-500"> DH, HRBP, North Bank</label>
-                      </div>
+                <div class="modal-header pd-y-10 bd-b-0">
+                  <h5 class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  <div class="d-flex">
+                    <div>
+                      <img src="../../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
+                    </div>
+                    <div class="mg-l-5">
+                      <p class="tx-22 tx-bold mb-0 pd-t-20">Litigation Response Sent</p>
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label for=""></label>
-                    <textarea name="" id="" class="form-control" rows="4" placeholder="-- Enter here --"></textarea>
-                  </div>
-                </form>
+                  <hr class="mg-t-10"/>
+                  <p class="tx-14">Notification and email has been sent to litigation team. Request has been sent to your reviewed litigations.</p>
                 </div>
                 <div class="modal-footer bg-modal-footer">
-                  <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40 tx-semibold" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary btn-sm pd-x-40 tx-semibold" data-toggle="modal" data-target="#panelSuccessModal" data-dismiss="modal">Remove Panelist</button>
-
+                  <a href="./review-litigation-submit.html" class="btn btn-outlined-primary btn-sm pd-x-40">Close</a>
                 </div>
               </div>
             </div>
           </div>
-  
-        
-            <!--success  Modal -->
-            <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header pd-y-10 bd-b-0">
-                    <h5 class="modal-title"></h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="d-flex">
-                      <div>
-                        <img src="../../../assets/img/icon/Check.svg" alt="" srcset="" class="img-fluid wd-75 ht-75">
-                      </div>
-                      <div class="mg-l-10">
-                        <p class="tx-22 tx-bold mb-0 pd-t-20">Summary submitted successfully</p>
-                      </div>
-                    </div>
-                    <hr class="mg-t-10"/>
-                    <p class="tx-14">Selected panel members have been notified, expect responses soon. Manage responses and further approval in the ACTIVE tab. </p>
-                  </div>
-                  <div class="modal-footer bg-modal-footer">
-                    <button type="button" class="btn btn-outlined-primary btn-sm pd-x-40" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-        
-        
+      
         </div>
       </div>
     </div>
@@ -413,40 +352,17 @@
     <script src="../../../assets/js/dashforge.js"></script>
     <script src="../../../assets/js/dashforge.aside.js"></script>
     <script src="../../../assets/lib/js-cookie/js.cookie.js"></script>
-    <script src="../../../assets/js/dashforge.settings.js"></script>
     <script src="../../../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="../../../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
     <script src="../../../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="../../../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../../../assets/lib/select2/js/select2.min.js"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
-    <script src="../../../assets/js/drop.js"></script>
-    <script src="../../../assets/js/dropzone.js"></script>
-    <script>
+<script>
       $(document).ready( function () {
-   $('.display').DataTable({
-     "paging": true,
-     "info": true,
-     "responsive": true,
-     "aoColumnDefs": [{
-         "bSortable": false,
-         "aTargets": [-1]
-     }],
-     "searching": false,
-      "lengthChange": false,
-     "bInfo": true
-   });
    
-   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-     $('.display:visible').each( function(e) {
-       $(this).DataTable().columns.adjust().responsive.recalc();
-     });
-   });
-   $('a[data-toggle="list"]').on('shown.bs.tab', function (e) {
-     $('.display:visible').each( function(e) {
-       $(this).DataTable().columns.adjust().responsive.recalc();
-     });
-   });
-
+  
    const quill = new Quill('#editor-container', {
         modules: {
     toolbar: [
@@ -455,51 +371,65 @@
       [{ list: 'ordered' }, { list: 'bullet' }]
     ]
   },
-  placeholder: "Write your summary",
+  placeholder: "",
   theme: 'snow'
       });
+  const quill2 = new Quill('#editor-containerr', {
+        modules: {
+    toolbar: [
+      ['bold', 'italic'],
+      ['link', 'blockquote', 'code-block', 'image'],
+      [{ list: 'ordered' }, { list: 'bullet' }]
+    ]
+  },
+  placeholder: "Seamlessly morph interactive imperatives for interdependent manufactured products. Objectively synthesize highly efficient systems for frictionless initiatives. Synergistically promote process-centric scenarios before synergistic niches.",
+  theme: 'snow'
       });
-</script>
-<script>
-  $(document).ready(function() {
-     $('#employee').select2({
-       width: '100%' ,
-       dropdownParent: $("#addMemberModal")
-     });
-     $('#redirect-panel').select2({
-       width: '100%' ,
-       dropdownParent: $("#redirectModal")
-     });
  });
+
+//  radio switch 
+ function switch_admin(show_1, show_2){
+    let y = document.getElementById("withdrawAppeal");
+    let x = document.getElementById("doNothing")
+
+    if (x.style.display !== "block") {
+      x.style.display ="block"
+      y.style.display = "none";
+    } 
+    else{
+      x.style.display ="none"
+      y.style.display = 'block'
+    }
+  }
+
+      
+//select option toggle
+$('[class^=is]').hide();
+$("#sanctionType").change(function(){          
+    let value = $("#sanctionType option:selected").val();
+    let theDiv = $(".is" + value);
+    
+    theDiv.slideDown();
+    theDiv.siblings('[class^=is]').slideUp();
+});
+
+// checkbox \
+$("#select-all").click(function () {
+     $('.checked-item').not(this).prop('checked', this.checked);
+     $('#deselect-all').not(this).prop('checked', '');
+
+ });
+
+// checkbox \
+$("#deselect-all").click(function () {
+     $('.checked-item,#select-all').not(this).prop('checked', '');
+ });
+
 </script>
 <script>
   const goBack = () => {
        window.history.back();
      }
-     const meetingLink = () => {
-    let copyText = document.getElementById("teamsLink");
-    let textArea = document.createElement("textarea");
-      textArea.value = copyText.textContent;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand("Copy");
-      textArea.remove();
-    alert("Copied the text: " + copyText.innerHTML);
-     }
-</script>
-<script>
-  $(document).ready(function(){
-    // Add minus icon for collapse element which is open by default
-    $(".collapse.show").each(function(){
-      $(this).prev(".card-header").find(".fas").addClass("fa-angle-up").removeClass("fa-angle-down");
-    });
-    // Toggle plus minus icon on show hide of collapse element
-    $(".collapse").on('show.bs.collapse', function(){
-      $(this).prev(".card-header").find(".fas").removeClass("fa-angle-down").addClass("fa-angle-up");
-    }).on('hide.bs.collapse', function(){
-      $(this).prev(".card-header").find(".fas").removeClass("fa-angle-up").addClass("fa-angle-down");
-    });
-  });
 </script>
 
   </body>
